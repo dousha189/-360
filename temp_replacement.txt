@@ -1,0 +1,431 @@
+      <!-- 视频创作方式 Tabs -->
+      <div style="margin-bottom:14px">
+        <div style="font-size:13px;font-weight:700;color:#1e293b;margin-bottom:8px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px">
+          <div><span style="color:#6366f1;font-size:11px">■</span> 视频创作方式 <span style="color:#ef4444">*</span></div>
+          <span class="pill b" id="vgVideoStateBadge" style="font-size:11.5px;font-weight:700">当前状态1：视频快剪表单面板</span>
+        </div>
+        <div class="vg-method-tabs" id="vgMethodTabs">
+          <div class="vg-method-pill active" data-vmethod="quick" title="基于已有素材包，AI 自动混剪卡点">视频快剪</div>
+          <div class="vg-method-pill" data-vmethod="ai" title="输入画面提示词，AI 从零生成视频画面">AI生成视频</div>
+          <div class="vg-method-pill" data-vmethod="upload" title="上传本地制作好的成片进行分发投放">上传视频</div>
+        </div>
+      </div>
+
+      <!-- 计费提示 (根据Tab动态展示不同计费逻辑) -->
+      <div class="vg-alert-cost" id="vgBillingAlertBanner">
+        <span style="font-size:14px">⚠️</span>
+        <span id="vgBillingAlertText">提示：1分钟消耗50积分，不满1分钟按1分钟计费</span>
+      </div>
+
+      <!-- 3-State Mutually Exclusive Workspace + Right Phone Preview -->
+      <div class="vg-studio-grid" id="vgStudioGrid">
+        <!-- 状态1：Tab=视频快剪 -> 下方展示快剪表单面板 (默认展示) -->
+        <div id="vgStateQuickPanel" style="grid-column:span 2;background:#ffffff;border:1px solid #e2e8f0;border-radius:12px;padding:18px 20px">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid #f1f5f9">
+            <div style="display:flex;align-items:center;gap:8px">
+              <span style="width:8px;height:8px;border-radius:50%;background:#4f46e5;display:inline-block"></span>
+              <span style="font-size:14px;font-weight:750;color:#0f172a">智能视频快剪表单面板</span>
+              <span class="pill b" style="font-size:11px">多片段自动混剪成片</span>
+            </div>
+            <button class="vg-ai-pill-btn" id="vgSegmentAIBtn" type="button" style="padding:4px 10px;font-size:11.5px">✨ AI 一键生成快剪脚本</button>
+          </div>
+
+          <!-- 1. 素材分组 -->
+          <div class="fg" style="margin-bottom:14px">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
+              <span class="lb" style="margin-bottom:0"><span style="color:#ef4444">*</span> 素材分组</span>
+              <button type="button" id="vgOpenMaterialModalBtn" class="btn o" style="padding:2px 10px;font-size:12px;border-radius:6px;color:#2563eb;border-color:#93c5fd;background:#eff6ff">
+                🎬 预览素材包
+              </button>
+            </div>
+            <select class="ipt" id="vgMaterialGroup">
+              <option value="">请选择素材分组</option>
+              <option value="g1" selected>360安全大脑可视化防御大屏与终端实测 (42支片段)</option>
+              <option value="g2">现代化工业车间与全自动熔接片段 (36支片段)</option>
+              <option value="g3">勒索病毒动态诱捕与数据秒级回滚实拍 (28支片段)</option>
+              <option value="g4">大客户发货物流与装箱发运现场 (19支片段)</option>
+            </select>
+          </div>
+
+          <!-- 2. 快剪混剪模板 -->
+          <div class="fg" style="margin-bottom:14px">
+            <span class="lb"><span style="color:#ef4444">*</span> 快剪混剪模板</span>
+            <select class="ipt" id="vgQuickTemplateSelect" style="margin-bottom:8px">
+              <option value="">请选择快剪混剪模板</option>
+              <option value="hook3s" selected>黄金前3秒痛点暴击 + 核心卖点快剪 (高完播率)</option>
+              <option value="factory">源头工厂实景探厂 + 质检背书混剪</option>
+              <option value="compare">传统方案对比实测 + 客户案例快剪</option>
+            </select>
+            <!-- 模板小预览样片与说明卡片 -->
+            <div id="vgTemplatePreviewCard" style="display:flex;align-items:center;gap:12px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:8px 12px">
+              <div style="position:relative;width:96px;height:56px;border-radius:6px;overflow:hidden;flex-shrink:0;cursor:pointer" id="vgTplThumbBox" title="点击预览样片">
+                <img id="vgTplThumbImg" referrerpolicy="no-referrer" alt="样片预览" src="${socScreenImg}" style="width:100%;height:100%;object-fit:cover" />
+                <span style="position:absolute;inset:0;background:rgba(0,0,0,0.3);display:flex;align-items:center;justify-content:center;color:#fff;font-size:14px">▶</span>
+              </div>
+              <div style="flex:1;min-width:0">
+                <div id="vgTplNameText" style="font-size:12.5px;font-weight:700;color:#0f172a">黄金前3秒痛点暴击 + 核心卖点快剪</div>
+                <div id="vgTplDescText" style="font-size:11.5px;color:#64748b;margin-top:2px;line-height:1.4">开头痛点抓人暴击，前3秒迅速锁定用户注意力，适合抖音、快手等高完播短视频平台。</div>
+              </div>
+              <button type="button" id="vgPlayTemplateSampleBtn" class="btn o" style="font-size:11.5px;padding:3px 8px;border-radius:6px;white-space:nowrap">
+                播放样片
+              </button>
+            </div>
+          </div>
+
+          <!-- 3. 转场特效与卡点节奏 -->
+          <div class="fg" style="margin-bottom:14px">
+            <span class="lb"><span style="color:#ef4444">*</span> 转场特效与卡点节奏</span>
+            <select class="ipt" id="vgQuickTransitionSelect">
+              <option value="beat" selected>智能节拍卡点硬切 + 动感缩放</option>
+              <option value="smooth">商业平滑叠化 + 柔和推进</option>
+              <option value="tech">科技感闪白转场 + 数字流光</option>
+            </select>
+          </div>
+
+          <!-- 4. 口播配音与倍速配置 + BGM 选择 (同一行) -->
+          <div class="fg" style="margin-bottom:14px">
+            <span class="lb"><span style="color:#ef4444">*</span> 口播配音与倍速配置 (含背景音乐 BGM)</span>
+            <div style="display:flex;align-items:center;gap:12px;min-height:42px;padding:6px 12px;border:1px solid #e2e8f0;border-radius:8px;background:#f8fafc;flex-wrap:wrap">
+              <label style="display:flex;align-items:center;gap:5px;font-size:12.5px;color:#334155;cursor:pointer;white-space:nowrap">
+                <input type="checkbox" id="vgVoiceToggle" checked style="accent-color:#6366f1" /> 开启素材原声
+              </label>
+              <span style="color:#cbd5e1">|</span>
+              <div style="display:flex;align-items:center;gap:4px">
+                <span style="font-size:12px;color:#64748b;white-space:nowrap">口播倍速：</span>
+                <select class="ipt" id="vgSpeedSelect" style="height:28px;padding:0 8px;font-size:12px;width:76px">
+                  <option value="0.8">0.8X</option>
+                  <option value="1.0" selected>1.0X</option>
+                  <option value="1.2">1.2X</option>
+                  <option value="1.5">1.5X</option>
+                </select>
+              </div>
+              <span style="color:#cbd5e1">|</span>
+              <div style="display:flex;align-items:center;gap:6px;flex:1;min-width:200px">
+                <span style="font-size:12px;color:#64748b;white-space:nowrap">🎧 BGM：</span>
+                <select class="ipt" id="vgQuickBgmSelect" style="height:28px;padding:0 8px;font-size:12px;flex:1;min-width:140px">
+                  <option value="bgm1" selected>大气质感商务节奏 (Corporate Inspiring)</option>
+                  <option value="bgm2">现代科技脉冲节奏 (Tech Ambient Future)</option>
+                  <option value="bgm3">轻快科普种草节拍 (Upbeat Cheerful)</option>
+                  <option value="none">无背景音乐 (仅人声口播)</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. 文案内容 (快剪口播分镜脚本) -->
+          <div class="fg" style="margin-bottom:0">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
+              <span class="lb" style="margin-bottom:0"><span style="color:#ef4444">*</span> 文案内容 (快剪口播分镜脚本)</span>
+              <span style="font-size:11.5px;color:#94a3b8">请先选择素材分组，再点击「AI 一键生成」；正文内容来自上方「策划文案」</span>
+            </div>
+            <textarea class="ipt" id="vgSegmentScript" rows="4" style="line-height:1.65" placeholder="仅填写口播台词，画面取自素材分组">360安全科技自主研发云端安全大脑与自研AI杀毒双引擎。毫秒级识别未知勒索与木马威胁，拦截率高达99.98%，全方位守护企业与个人终端数据资产！</textarea>
+          </div>
+        </div>
+
+        <!-- 状态2：Tab=AI生成视频 -> 重构左侧侧边栏(6项)+右侧配置面板 -->
+        <div id="vgStateAiPanel" style="display:none;grid-column:span 2;grid-template-columns:140px minmax(0,1fr);gap:16px;align-items:start">
+          <!-- Left Vertical Nav (调整顺序：画面提示词置顶) -->
+          <div class="vg-vertical-nav" id="vgVNav">
+            <button type="button" class="vg-vnav-btn active" data-vtab="prompt">
+              <span>🎨</span> 画面提示词
+            </button>
+            <button type="button" class="vg-vnav-btn" data-vtab="basic">
+              <span>⚙️</span> 视频基础设置
+            </button>
+            <button type="button" class="vg-vnav-btn" data-vtab="voice">
+              <span>🎙️</span> 选择声音
+            </button>
+            <button type="button" class="vg-vnav-btn" data-vtab="subtitles">
+              <span>💬</span> 视频字幕
+            </button>
+            <button type="button" class="vg-vnav-btn" data-vtab="styles">
+              <span>🔤</span> 字幕样式
+            </button>
+            <button type="button" class="vg-vnav-btn" data-vtab="bgm">
+              <span>🎧</span> 背景音乐
+            </button>
+          </div>
+
+          <!-- Center Config Workspace (包含6大模块) -->
+          <div class="vg-center-panel" id="vgCenterPanel">
+            <!-- View 1: 画面提示词 (置顶核心模块) -->
+            <div id="vtabPromptView" style="display:block">
+              <!-- AI生成提示条 (替换文案) -->
+              <div class="vg-alert-cost" style="margin-top:0;margin-bottom:14px;background:#fff8ee;border:1px solid #fed7aa;color:#ea580c">
+                <span style="font-size:14px">⚠️</span>
+                <span>本视频由AI技术辅助生成，AI生成画面可能存在局限性或不准确性，仅供参考分享；AI生成按时长包计费</span>
+              </div>
+              <div style="font-size:13.5px;font-weight:750;color:#1e293b;margin-bottom:4px">画面提示词 (AI 视频视觉核心指令)</div>
+              <div style="font-size:12px;color:#94a3b8;margin-bottom:12px">描述画面主体、镜头运动、光影质感与艺术风格，AI 大模型从零生成纯原创商业级画面</div>
+              <div class="fg" style="margin-bottom:0">
+                <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
+                  <span class="lb" style="margin-bottom:0"><span style="color:#ef4444">*</span> 画面提示词</span>
+                  <span id="vgPromptCounter" style="font-size:11.5px;color:#64748b;font-weight:600">0 / 500</span>
+                </div>
+                <textarea class="ipt" id="vgPromptText" rows="5" maxlength="500" style="line-height:1.6" placeholder="描述画面、镜头、光影风格；可附带口播台词。示例：科技机房，网络安全大屏数据流缓慢流动，写实商业质感">科技机房，网络安全大屏数据流缓慢流动，写实商业质感，电影级冷色调布光，8K超精细网络拓扑粒子动态渲染，终端防护盾牌光效微光浮现</textarea>
+                <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:8px">
+                  <span style="font-size:11px;color:#64748b;align-self:center">快捷词标签：</span>
+                  <button type="button" class="chip-mini vg-prompt-tag" data-tag="8K电影级冷色调布光">8K电影级冷色调</button>
+                  <button type="button" class="chip-mini vg-prompt-tag" data-tag="高精细数据流缓慢流动">缓慢数据流</button>
+                  <button type="button" class="chip-mini vg-prompt-tag" data-tag="商业写实纪实质感">写实商业质感</button>
+                  <button type="button" class="chip-mini vg-prompt-tag" data-tag="特写慢动作推进镜头">特写推镜头</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- View 2: 视频基础设置 -->
+            <div id="vtabBasicView" style="display:none">
+              <div style="font-size:13.5px;font-weight:750;color:#1e293b;margin-bottom:4px">视频基础设置</div>
+              <div style="font-size:12px;color:#94a3b8;margin-bottom:14px">配置 AI 视频生成时长包、画幅比例与图生视频参考画面</div>
+
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px">
+                <div class="fg" style="margin-bottom:0">
+                  <span class="lb"><span style="color:#ef4444">*</span> 视频时长</span>
+                  <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+                    <label class="vg-choice-btn active" id="vgDuration10">
+                      <input type="radio" name="vgDuration" value="10" checked style="display:none" />
+                      <div style="font-weight:700">10 秒</div>
+                      <div style="font-size:11px;color:#64748b">320 积分 / 次</div>
+                    </label>
+                    <label class="vg-choice-btn" id="vgDuration15">
+                      <input type="radio" name="vgDuration" value="15" style="display:none" />
+                      <div style="font-weight:700">15 秒</div>
+                      <div style="font-size:11px;color:#64748b">480 积分 / 次</div>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="fg" style="margin-bottom:0">
+                  <span class="lb"><span style="color:#ef4444">*</span> 视频比例</span>
+                  <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+                    <label class="vg-choice-btn active" id="vgRatio916">
+                      <input type="radio" name="vgRatio" value="9:16" checked style="display:none" />
+                      <div style="font-weight:700">9:16 竖屏</div>
+                      <div style="font-size:11px;color:#64748b">短视频/抖音/快手</div>
+                    </label>
+                    <label class="vg-choice-btn" id="vgRatio169">
+                      <input type="radio" name="vgRatio" value="16:9" style="display:none" />
+                      <div style="font-weight:700">16:9 横屏</div>
+                      <div style="font-size:11px;color:#64748b">B站/视频号/PC大屏</div>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 画面参考图 (图生视频开关 + 上传框) -->
+              <div class="fg" style="margin-bottom:0;background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:12px 14px">
+                <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">
+                  <div>
+                    <span style="font-size:13px;font-weight:700;color:#0f172a">画面参考图 (图生视频)</span>
+                    <span style="font-size:11.5px;color:#64748b;margin-left:6px">开启后 AI 模型将以参考图为首帧生成运镜动态</span>
+                  </div>
+                  <label style="position:relative;display:inline-block;width:38px;height:22px;cursor:pointer">
+                    <input type="checkbox" id="vgImg2VidToggle" checked style="opacity:0;width:0;height:0" />
+                    <span id="vgImg2VidSlider" style="position:absolute;inset:0;background:#4f46e5;border-radius:999px;transition:0.2s">
+                      <span style="position:absolute;height:16px;width:16px;left:3px;bottom:3px;background:white;border-radius:50%;transition:0.2s;transform:translateX(16px)"></span>
+                    </span>
+                  </label>
+                </div>
+                <div id="vgImg2VidUploadArea" style="display:flex;align-items:center;gap:12px;border:1.5px dashed #cbd5e1;border-radius:8px;padding:10px 14px;background:#ffffff;cursor:pointer">
+                  <input type="file" id="vgRefImgInput" accept="image/*" style="display:none" />
+                  <img id="vgRefImgPreview" referrerpolicy="no-referrer" alt="参考图" src="${socScreenImg}" style="width:68px;height:48px;border-radius:6px;object-fit:cover;border:1px solid #e2e8f0" />
+                  <div style="flex:1;min-width:0">
+                    <div style="font-size:12.5px;font-weight:700;color:#1e293b" id="vgRefImgNameText">360安全大脑指挥大屏_首帧构图.png</div>
+                    <div style="font-size:11px;color:#64748b">支持 JPG/PNG，点击可更换本地参考图 (最大 10MB)</div>
+                  </div>
+                  <button type="button" class="btn o" id="vgTriggerUploadRefBtn" style="padding:4px 10px;font-size:11.5px;border-radius:6px">
+                    更换图片
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- View 3: 选择声音 (配音音色、口播倍速) -->
+            <div id="vtabVoiceView" style="display:none">
+              <div style="font-size:13px;font-weight:700;color:#1e293b;margin-bottom:6px">选择声音 (AI 拟真数字人配音)</div>
+              <div style="font-size:12px;color:#94a3b8;margin-bottom:12px">点击音色卡片即可切换试听，右侧手机预览实时生效</div>
+              <div class="vg-voice-grid" style="margin-bottom:14px">
+                <div class="vg-voice-card active" data-voice="知性干练商务女声">
+                  <div class="vg-voice-avatar">👩💼</div>
+                  <div style="flex:1;min-width:0">
+                    <div style="font-size:13px;font-weight:700;color:#1e293b">知性干练商务女声</div>
+                    <div style="font-size:11px;color:#64748b">适合企业宣发、产品测评</div>
+                  </div>
+                  <span class="chip-mini on">已选用</span>
+                </div>
+                <div class="vg-voice-card" data-voice="浑厚磁性纪录片男声">
+                  <div class="vg-voice-avatar">👨💼</div>
+                  <div style="flex:1;min-width:0">
+                    <div style="font-size:13px;font-weight:700;color:#1e293b">浑厚磁性纪录片男声</div>
+                    <div style="font-size:11px;color:#64748b">适合硬核科技、探厂背书</div>
+                  </div>
+                  <span class="chip-mini">选用</span>
+                </div>
+                <div class="vg-voice-card" data-voice="活力种草新媒体女声">
+                  <div class="vg-voice-avatar">👧✨</div>
+                  <div style="flex:1;min-width:0">
+                    <div style="font-size:13px;font-weight:700;color:#1e293b">活力种草新媒体女声</div>
+                    <div style="font-size:11px;color:#64748b">适合痛点种草、避坑科普</div>
+                  </div>
+                  <span class="chip-mini">选用</span>
+                </div>
+                <div class="vg-voice-card" data-voice="沉稳权威新闻播音男声">
+                  <div class="vg-voice-avatar">🎙️</div>
+                  <div style="flex:1;min-width:0">
+                    <div style="font-size:13px;font-weight:700;color:#1e293b">沉稳权威新闻播音男声</div>
+                    <div style="font-size:11px;color:#64748b">适合行业报告、合规解读</div>
+                  </div>
+                  <span class="chip-mini">选用</span>
+                </div>
+              </div>
+
+              <!-- 口播倍速控制 -->
+              <div style="display:flex;align-items:center;gap:12px;padding:10px 14px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px">
+                <span style="font-size:12.5px;font-weight:700;color:#334155">口播语速：</span>
+                <div style="display:flex;gap:8px" id="vgAiVoiceSpeedGroup">
+                  <button type="button" class="chip-mini" data-speed="0.8">0.8X</button>
+                  <button type="button" class="chip-mini on" data-speed="1.0">1.0X (标准)</button>
+                  <button type="button" class="chip-mini" data-speed="1.2">1.2X (快)</button>
+                  <button type="button" class="chip-mini" data-speed="1.5">1.5X (极速)</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- View 4: 视频字幕 (字幕开关、单语/双语、字幕断句) -->
+            <div id="vtabSubtitlesView" style="display:none">
+              <div style="font-size:13.5px;font-weight:750;color:#1e293b;margin-bottom:6px">视频字幕 (AI 画面与时间轴对齐)</div>
+              <div style="font-size:12px;color:#94a3b8;margin-bottom:12px">AI 大模型根据画面分镜与口播台词自动生成时间轴字幕</div>
+
+              <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;margin-bottom:12px">
+                <div>
+                  <span style="font-size:13px;font-weight:700;color:#0f172a">字幕总开关</span>
+                  <span style="font-size:11.5px;color:#64748b;margin-left:6px">关闭后成片不压制字幕轨</span>
+                </div>
+                <label style="position:relative;display:inline-block;width:38px;height:22px;cursor:pointer">
+                  <input type="checkbox" id="vgSubtitleToggle" checked style="opacity:0;width:0;height:0" />
+                  <span id="vgSubtitleSlider" style="position:absolute;inset:0;background:#4f46e5;border-radius:999px;transition:0.2s">
+                    <span style="position:absolute;height:16px;width:16px;left:3px;bottom:3px;background:white;border-radius:50%;transition:0.2s;transform:translateX(16px)"></span>
+                  </span>
+                </label>
+              </div>
+
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px">
+                <div class="fg" style="margin-bottom:0">
+                  <span class="lb"><span style="color:#ef4444">*</span> 语言模式 (单语 / 双语)</span>
+                  <select class="ipt" id="vgSubtitleLangMode">
+                    <option value="single" selected>单语字幕 (纯中文)</option>
+                    <option value="bilingual">双语字幕 (中英双语对照)</option>
+                    <option value="en">单语字幕 (纯英文)</option>
+                  </select>
+                </div>
+                <div class="fg" style="margin-bottom:0">
+                  <span class="lb"><span style="color:#ef4444">*</span> 字幕智能断句方式</span>
+                  <select class="ipt" id="vgAiSubtitleSplit">
+                    <option value="semantic" selected>AI 语义呼吸断句 (每行 ≤ 14字)</option>
+                    <option value="keyword">核心关键词高亮放大</option>
+                    <option value="fast">短句紧凑节奏 (每行 ≤ 8字)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="fg" style="margin-bottom:0">
+                <span class="lb"><span style="color:#ef4444">*</span> 口播配音台词 (同步生成字幕)</span>
+                <textarea class="ipt" id="vgAiSubtitleText" rows="3" style="line-height:1.65">360安全科技自主研发云端安全大脑与自研AI杀毒双引擎。毫秒级识别未知勒索与木马威胁，拦截率高达99.98%，全方位守护企业与个人终端数据资产！</textarea>
+              </div>
+            </div>
+
+            <!-- View 5: 字幕样式 (字体、颜色、字号) -->
+            <div id="vtabStylesView" style="display:none">
+              <div style="font-size:13px;font-weight:700;color:#1e293b;margin-bottom:6px">字幕样式 (高辨识度花字模板与参数)</div>
+              <div style="font-size:12px;color:#94a3b8;margin-bottom:12px">选择高辨识度花字模板，提升前 3 秒视觉停留率</div>
+
+              <!-- 字体、颜色、字号定制条 -->
+              <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:14px;background:#f8fafc;padding:10px 12px;border:1px solid #e2e8f0;border-radius:8px">
+                <div>
+                  <span style="font-size:11.5px;color:#64748b;font-weight:600;display:block;margin-bottom:4px">字幕字体</span>
+                  <select class="ipt" id="vgSubtitleFont" style="height:32px;font-size:12px">
+                    <option value="sans" selected>黑体 (粗体商业醒目)</option>
+                    <option value="douyin">抖音爆款黑体</option>
+                    <option value="song">宋体 (典雅企业背书)</option>
+                    <option value="rounded">圆体 (亲和种草科普)</option>
+                  </select>
+                </div>
+                <div>
+                  <span style="font-size:11.5px;color:#64748b;font-weight:600;display:block;margin-bottom:4px">字幕颜色</span>
+                  <select class="ipt" id="vgSubtitleColor" style="height:32px;font-size:12px">
+                    <option value="white" selected>经典纯白 (#ffffff)</option>
+                    <option value="yellow">亮眼明黄 (#facc15)</option>
+                    <option value="cyan">科技霓虹蓝 (#38bdf8)</option>
+                    <option value="green">智见绿 (#10b981)</option>
+                  </select>
+                </div>
+                <div>
+                  <span style="font-size:11.5px;color:#64748b;font-weight:600;display:block;margin-bottom:4px">字幕字号</span>
+                  <select class="ipt" id="vgSubtitleSize" style="height:32px;font-size:12px">
+                    <option value="sm">小号 (适合多行)</option>
+                    <option value="md" selected>中号 (标准推荐)</option>
+                    <option value="lg">大号 (短视频突出)</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- 4 款视觉花字预设卡片 -->
+              <div class="vg-style-grid">
+                <div class="vg-style-chip active" data-style="default">
+                  <div style="font-size:13.5px;font-weight:800;color:#ffffff;background:rgba(15,23,42,0.78);padding:8px;border-radius:6px">经典白字半透黑底</div>
+                  <div style="font-size:11px;color:#64748b;margin-top:4px">清晰易读 · 商务通用</div>
+                </div>
+                <div class="vg-style-chip" data-style="yellow">
+                  <div style="font-size:13.5px;font-weight:800;color:#facc15;background:#1e293b;padding:8px;border-radius:6px;text-shadow:0 1px 2px #000">抖音热播黄黑描边</div>
+                  <div style="font-size:11px;color:#64748b;margin-top:4px">短视频爆款 · 极具冲击力</div>
+                </div>
+                <div class="vg-style-chip" data-style="karaoke">
+                  <div style="font-size:13.5px;font-weight:800;color:#38bdf8;background:rgba(0,0,0,0.7);padding:8px;border-radius:6px">双色卡拉OK渐变</div>
+                  <div style="font-size:11px;color:#64748b;margin-top:4px">逐字音轨高亮 · 视线聚焦</div>
+                </div>
+                <div class="vg-style-chip" data-style="minimal">
+                  <div style="font-size:13.5px;font-weight:800;color:#ffffff;background:#334155;padding:8px;border-radius:6px">商业极简无框字体</div>
+                  <div style="font-size:11px;color:#64748b;margin-top:4px">高级雅致 · 品牌宣传适用</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- View 6: 背景音乐 (保留现有商用BGM列表) -->
+            <div id="vtabBgmView" style="display:none">
+              <div style="font-size:13px;font-weight:700;color:#1e293b;margin-bottom:6px">背景音乐 (BGM)</div>
+              <div style="font-size:12px;color:#94a3b8;margin-bottom:12px">精选商用版权音乐库，自动根据人声口播做智能闪避</div>
+              <div style="display:grid;gap:8px">
+                <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 14px;border:1px solid #e2e8f0;border-radius:8px;background:#f8fafc">
+                  <div style="display:flex;align-items:center;gap:8px">
+                    <span style="font-size:16px">🎵</span>
+                    <div>
+                      <div style="font-size:13px;font-weight:700;color:#1e293b">大气质感商务节奏 (Corporate Inspiring)</div>
+                      <div style="font-size:11px;color:#64748b">BPM: 110 · 沉稳专业</div>
+                    </div>
+                  </div>
+                  <button class="chip-mini on" id="bgmBtn1" type="button">当前选用</button>
+                </div>
+                <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 14px;border:1px solid #e2e8f0;border-radius:8px;background:#fff">
+                  <div style="display:flex;align-items:center;gap:8px">
+                    <span style="font-size:16px">🎵</span>
+                    <div>
+                      <div style="font-size:13px;font-weight:700;color:#1e293b">现代科技脉冲节奏 (Tech Ambient Future)</div>
+                      <div style="font-size:11px;color:#64748b">BPM: 124 · 极具高级感</div>
+                    </div>
+                  </div>
+                  <button class="chip-mini" type="button">选用</button>
+                </div>
+                <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 14px;border:1px solid #e2e8f0;border-radius:8px;background:#fff">
+                  <div style="display:flex;align-items:center;gap:8px">
+                    <span style="font-size:16px">🎵</span>
+                    <div>
+                      <div style="font-size:13px;font-weight:700;color:#1e293b">轻快科普种草节拍 (Upbeat Cheerful)</div>
+                      <div style="font-size:11px;color:#64748b">BPM: 118 · 抓人吸睛</div>
+                    </div>
+                  </div>
+                  <button class="chip-mini" type="button">选用</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>

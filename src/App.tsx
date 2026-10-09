@@ -13,7 +13,7 @@ const syncLongTails = (...args: any[]) => (window as any).syncLongTails?.(...arg
 const getEntities = (...args: any[]) => (window as any).getEntities?.(...args) || [];
 const filterArticleRows = (...args: any[]) => (window as any).filterArticleRows?.(...args);
 
-const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,#10b981,#059669);display:flex;align-items:center;justify-content:center;color:#ffffff;box-shadow:0 4px 12px rgba(16,185,129,0.35);flex-shrink:0"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div><div class="brand-text"><b>360智见GEO</b><small>AI Search Visibility</small></div></div><div class="nt">监测与分析</div><nav class="nav"><a class="on" data-p="dash" title="首页概览"><span class="nav-icon">◐</span><span class="nav-text">首页概览</span></a><a class="" data-p="inc" title="收录查询"><span class="nav-icon">▽</span><span class="nav-text">收录查询</span></a></nav><div class="nt">GEO 内容增长</div><nav class="nav"><a class="" data-p="kb" title="企业知识库"><span class="nav-icon">◍</span><span class="nav-text">企业知识库</span></a><a class="" data-p="kw" title="关键词挖掘"><span class="nav-icon">⌕</span><span class="nav-text">关键词挖掘</span></a><a class="" data-p="gen" title="内容创作"><span class="nav-icon">✎</span><span class="nav-text">内容创作</span></a><a class="" data-p="videographic" title="视频/图文"><span class="nav-icon">🎞</span><span class="nav-text">视频/图文</span></a><a class="" data-p="articles" title="发布记录"><span class="nav-icon">▣</span><span class="nav-text">发布记录</span></a><a class="" data-p="pub" title="文章发布"><span class="nav-icon">➤</span><span class="nav-text">文章发布</span></a></nav><div class="nt">服务与账户</div><nav class="nav"><a class="" data-p="agent" title="我的套餐"><span class="nav-icon">💎</span><span class="nav-text">我的套餐</span><span style="margin-left:auto;font-size:11px;background:rgba(16,185,129,0.2);color:#34d399;padding:1px 6px;border-radius:6px;font-weight:700">VIP</span></a></nav><div class="sidebar-footer"><div class="sidebar-status"><span class="status-dot" style="background:#10b981;box-shadow:0 0 8px #10b981"></span><div><b>360 GEO 引擎</b><small>企业安全云 · 在线</small></div></div><span class="sidebar-version">v2.0</span></div></aside><main><header><div class="header-left"><button class="header-icon-btn" id="sidebarToggle" type="button" aria-label="收起或展开侧边栏" title="收起/展开侧边栏">☰</button><div class="header-title-block"><div class="header-kicker" id="headerKicker">首页</div><div class="header-title-row"><h1 id="ht">首页概览</h1><span class="header-subtitle" id="headerSubtitle">全网AI搜索场景覆盖与GEO增长数据总览</span></div></div></div>
+const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,#10b981,#059669);display:flex;align-items:center;justify-content:center;color:#ffffff;box-shadow:0 4px 14px rgba(16,185,129,0.38);flex-shrink:0"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div><div class="brand-text"><div style="display:flex;align-items:center;gap:6px"><b>360智见</b><span style="font-size:9.5px;padding:1px 5px;border-radius:4px;background:rgba(16,185,129,0.22);color:#34d399;font-weight:800;border:1px solid rgba(52,211,153,0.3)">GEO</span></div><small>AI 搜索运营中枢</small></div></div><div class="nt">监测与分析</div><nav class="nav"><a class="on" data-p="dash" title="首页概览"><span class="nav-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></span><span class="nav-text">首页概览</span><span class="nav-live-dot" style="margin-left:auto;width:6px;height:6px;border-radius:50%;background:#34d399;box-shadow:0 0 6px #34d399"></span></a><a class="" data-p="inc" title="收录查询"><span class="nav-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><path d="m11 8 2 3-3 2"/></svg></span><span class="nav-text">收录查询</span></a></nav><div class="nt">GEO 内容增长</div><nav class="nav"><a class="" data-p="kb" title="企业知识库"><span class="nav-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10M6 10h10"/></svg></span><span class="nav-text">企业知识库</span></a><a class="" data-p="kw" title="关键词挖掘"><span class="nav-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="7.5" cy="15.5" r="5.5"/><path d="m21 2-9.6 9.6M15.5 7.5l3 3"/></svg></span><span class="nav-text">关键词挖掘</span></a><a class="" data-p="gen" title="内容创作"><span class="nav-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></span><span class="nav-text">内容创作</span></a><a class="" data-p="videographic" title="视频/图文"><span class="nav-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/></svg></span><span class="nav-text">视频/图文</span></a><a class="" data-p="articles" title="发布记录"><span class="nav-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/><path d="m9 14 2 2 4-4"/></svg></span><span class="nav-text">发布记录</span></a><a class="" data-p="pub" title="文章发布"><span class="nav-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></span><span class="nav-text">文章发布</span></a></nav><div class="nt">服务与账户</div><nav class="nav"><a class="" data-p="agent" title="我的套餐"><span class="nav-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="6 3 18 3 22 9 12 22 2 9"/><line x1="12" y1="22" x2="12" y2="9"/><line x1="2" y1="9" x2="22" y2="9"/></svg></span><span class="nav-text">我的套餐</span><span style="margin-left:auto;font-size:11px;background:rgba(16,185,129,0.22);color:#34d399;padding:1px 6px;border-radius:6px;font-weight:700">VIP</span></a></nav><div class="sidebar-footer"><div class="sidebar-status"><span class="status-dot" style="background:#10b981;box-shadow:0 0 8px #10b981"></span><div><b>360智见引擎</b><small>企业安全云 · 在线</small></div></div><span class="sidebar-version">v2.0</span></div></aside><main><header><div class="header-left"><button class="header-icon-btn" id="sidebarToggle" type="button" aria-label="收起或展开侧边栏" title="收起/展开侧边栏">☰</button><div class="header-title-block"><div class="header-kicker" id="headerKicker">首页</div><div class="header-title-row"><h1 id="ht">首页概览</h1><span class="header-subtitle" id="headerSubtitle">全网AI搜索场景覆盖与GEO增长数据总览</span></div></div></div>
 <div class="hr"><div class="theme-switcher-wrap" id="themeSwitcherWrap">
 <button class="theme-btn" id="themeSwitchBtn" type="button" aria-haspopup="true" aria-expanded="false" title="切换系统配色主题">
 <span class="theme-icon">🎨</span>
@@ -54,16 +54,28 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
 </div><span class="system-online"><i></i>系统在线</span><span class="tag" id="headerCompanyTag">360安全科技</span><span class="trial-text">试点期至 2026-07-30</span><div class="av">程</div></div></header>
 <div class="wrap">
 <div class="page on" id="dash">
-  <div id="dashMainView">
-
   <!-- Top Welcome & Tutorial Bar -->
-  <div class="dash-welcome-bar">
-    <div class="dash-welcome-left">
+  <div class="dash-welcome-bar" style="display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:18px">
+    <div class="dash-welcome-left" style="display:flex;align-items:center;gap:10px">
+      <div class="dash-hub-badge" style="display:inline-flex;align-items:center;gap:7px;background:#ecfdf5;border:1px solid #a7f3d0;padding:6px 13px;border-radius:9px;font-size:12.5px;color:#047857;font-weight:650">
+        <span style="width:7px;height:7px;border-radius:50%;background:#10b981;box-shadow:0 0 8px #10b981"></span>
+        <span>360智见 · 企业GEO智能监测中枢</span>
+      </div>
+      <button class="dash-sync-btn" id="dashSyncBtn" type="button" title="点击立即同步全网AI搜索最新信源" style="cursor:pointer;background:#ffffff;border:1px solid #cbd5e1;border-radius:9px;padding:6px 12px;font-size:12px;color:#334155;display:inline-flex;align-items:center;gap:6px;font-weight:600;box-shadow:0 1px 2px rgba(0,0,0,0.04);transition:all .16s">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" id="dashSyncIcon"><path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"/></svg>
+        <span>同步最新信源</span>
+      </button>
       <button class="dash-tutorial-btn" id="dashTutorialBtn" type="button">
         <span>📄</span> 系统教程
       </button>
     </div>
-    <div class="dash-welcome-right">
+    <div class="dash-welcome-right" style="display:flex;align-items:center;gap:12px">
+      <div class="dash-time-range-group" id="dashTimeRangeGroup" style="display:inline-flex;background:#f1f5f9;border-radius:8px;padding:3px;gap:2px">
+        <button type="button" class="dash-time-btn" data-range="today" style="border:0;background:none;padding:4px 10px;border-radius:6px;font-size:12px;color:#64748b;cursor:pointer;font-weight:600">今日</button>
+        <button type="button" class="dash-time-btn" data-range="7d" style="border:0;background:none;padding:4px 10px;border-radius:6px;font-size:12px;color:#64748b;cursor:pointer;font-weight:600">近7天</button>
+        <button type="button" class="dash-time-btn on" data-range="30d" style="border:0;background:#ffffff;padding:4px 10px;border-radius:6px;font-size:12px;color:#0f172a;cursor:pointer;font-weight:700;box-shadow:0 1px 3px rgba(0,0,0,0.06)">近30天</button>
+        <button type="button" class="dash-time-btn" data-range="90d" style="border:0;background:none;padding:4px 10px;border-radius:6px;font-size:12px;color:#64748b;cursor:pointer;font-weight:600">近90天</button>
+      </div>
       <div class="dash-notice-trigger-wrap">
         <button class="dash-notice-btn" id="dashNoticeBtn" title="查看通知消息" type="button">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -104,338 +116,146 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
     </div>
   </div>
 
-  <!-- Section 1: 数据总览 (Top 3 KPI Cards) -->
-  <div class="dash-section">
-    <div class="dash-section-head">
-      <div class="dash-section-title">
-        <span class="dash-title-bar">▌</span>
-        <span>数据总览</span>
-      </div>
-      <button class="dash-report-pill" id="dashReportBtn" type="button">数据报表</button>
-    </div>
-    <div class="dash-kpi-grid-3">
-      <!-- Card 1: 文章数量 -->
-      <div class="dash-kpi-card" data-kpi="articles" style="cursor:pointer">
-        <div class="dash-kpi-icon-wrap rose">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-            <polyline points="14 2 14 8 20 8"></polyline>
-            <line x1="16" y1="13" x2="8" y2="13"></line>
-            <line x1="16" y1="17" x2="8" y2="17"></line>
-            <polyline points="10 9 9 9 8 9"></polyline>
-          </svg>
-        </div>
-        <div class="dash-kpi-info">
-          <div class="dash-kpi-label">文章数量</div>
-          <div class="dash-kpi-val" id="dashKpiArticles">1011</div>
-        </div>
-      </div>
-
-      <!-- Card 2: 发布数量 -->
-      <div class="dash-kpi-card" data-kpi="publishes" style="cursor:pointer">
-        <div class="dash-kpi-icon-wrap purple">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="10"></circle>
-            <path d="M2 12h20"></path>
-            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-          </svg>
-        </div>
-        <div class="dash-kpi-info">
-          <div class="dash-kpi-label">发布数量</div>
-          <div class="dash-kpi-val" id="dashKpiPublishes">1485</div>
-        </div>
-      </div>
-
-      <!-- Card 3: 排名数量 -->
-      <div class="dash-kpi-card" data-kpi="ranks" style="cursor:pointer">
-        <div class="dash-kpi-icon-wrap blue">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M18 20V10"></path>
-            <path d="M12 20V4"></path>
-            <path d="M6 20v-6"></path>
-          </svg>
-        </div>
-        <div class="dash-kpi-info">
-          <div class="dash-kpi-label">排名数量</div>
-          <div class="dash-kpi-val" id="dashKpiRanks">13436</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Section 2: 热门AI工具关键词数量统计 -->
-  <div class="dash-section">
-    <div class="dash-section-head">
-      <div class="dash-section-title">
-        <span class="dash-title-bar">▌</span>
-        <span>热门AI工具关键词数量统计</span>
-      </div>
-    </div>
-    <div class="dash-card">
-      <table class="dash-ai-tools-table">
-        <thead>
-          <tr>
-            <th style="width:280px;text-align:left">工具名称</th>
-            <th style="text-align:left">AI搜索场景覆盖</th>
-            <th style="text-align:right;padding-right:24px">蒸馏关键词数量</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              <div class="dash-tool-cell">
-                <div class="dash-tool-logo doubao-logo">豆</div>
-                <span class="dash-tool-name">豆包</span>
-              </div>
-            </td>
-            <td class="dash-num-cell">54828</td>
-            <td class="dash-num-cell bold-num">2238</td>
-          </tr>
-          <tr>
-            <td>
-              <div class="dash-tool-cell">
-                <div class="dash-tool-logo ernie-logo">文</div>
-                <span class="dash-tool-name">文心一言</span>
-              </div>
-            </td>
-            <td class="dash-num-cell">54828</td>
-            <td class="dash-num-cell bold-num">2240</td>
-          </tr>
-          <tr>
-            <td>
-              <div class="dash-tool-cell">
-                <div class="dash-tool-logo deepseek-logo">深</div>
-                <span class="dash-tool-name">DeepSeek</span>
-              </div>
-            </td>
-            <td class="dash-num-cell">54828</td>
-            <td class="dash-num-cell bold-num">2254</td>
-          </tr>
-          <tr>
-            <td>
-              <div class="dash-tool-cell">
-                <div class="dash-tool-logo kimi-logo">K</div>
-                <span class="dash-tool-name">Kimi</span>
-              </div>
-            </td>
-            <td class="dash-num-cell">54828</td>
-            <td class="dash-num-cell bold-num">2256</td>
-          </tr>
-          <tr>
-            <td>
-              <div class="dash-tool-cell">
-                <div class="dash-tool-logo yuanbao-logo">元</div>
-                <span class="dash-tool-name">腾讯元宝</span>
-              </div>
-            </td>
-            <td class="dash-num-cell">54828</td>
-            <td class="dash-num-cell bold-num">2224</td>
-          </tr>
-          <tr>
-            <td>
-              <div class="dash-tool-cell">
-                <div class="dash-tool-logo qianwen-logo">通</div>
-                <span class="dash-tool-name">通义千问</span>
-              </div>
-            </td>
-            <td class="dash-num-cell">54828</td>
-            <td class="dash-num-cell bold-num">2224</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-
-  <!-- Section 3: 最新发布文章 + 热门关键词排名 (左右双栏) -->
-  <div class="dash-bottom-grid">
-    <!-- Left: 最新发布文章 -->
-    <div class="dash-section" style="margin-bottom:0">
-      <div class="dash-section-head">
-        <div class="dash-section-title">
-          <span class="dash-title-bar">▌</span>
-          <span>最新发布文章</span>
-        </div>
-      </div>
-      <div class="dash-card">
-        <table class="dash-recent-articles-table">
-          <tbody>
-            <tr>
-              <td class="dash-article-title-cell" title="2026企业级终端安全防病毒软件推荐指南">2026企业级终端安全防病毒软件推荐指南</td>
-              <td class="dash-platform-cell"><span class="dash-media-badge sohu-badge">搜狐号</span></td>
-              <td class="dash-time-cell">2025-12-02 16:01:39</td>
-            </tr>
-            <tr>
-              <td class="dash-article-title-cell" title="2026网络安全等级保护2.0测评必备厂商对比">2026网络安全等级保护2.0测评必备厂商对比</td>
-              <td class="dash-platform-cell"><span class="dash-media-badge baijia-badge">百家号</span></td>
-              <td class="dash-time-cell">2025-11-27 15:15:35</td>
-            </tr>
-            <tr>
-              <td class="dash-article-title-cell" title="360安全大脑赋能企业勒索病毒防护深度实测">360安全大脑赋能企业勒索病毒防护深度实测</td>
-              <td class="dash-platform-cell"><span class="dash-media-badge baijia-badge">百家号</span></td>
-              <td class="dash-time-cell">2025-11-27 15:14:08</td>
-            </tr>
-            <tr>
-              <td class="dash-article-title-cell" title="360天擎终端安全管理系统企业部署选型手册">360天擎终端安全管理系统企业部署选型手册</td>
-              <td class="dash-platform-cell"><span class="dash-media-badge baijia-badge">百家号</span></td>
-              <td class="dash-time-cell">2025-11-18 11:47:46</td>
-            </tr>
-            <tr>
-              <td class="dash-article-title-cell" title="2026企业级AI安全大模型安全厂商推荐榜">2026企业级AI安全大模型安全厂商推荐榜</td>
-              <td class="dash-platform-cell"><span class="dash-media-badge toutiao-badge">头条号</span></td>
-              <td class="dash-time-cell">2025-11-18 11:47:29</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <!-- Right: 热门关键词排名 -->
-    <div class="dash-section" style="margin-bottom:0">
-      <div class="dash-section-head">
-        <div class="dash-section-title">
-          <span class="dash-title-bar">▌</span>
-          <span>热门关键词排名</span>
-        </div>
-      </div>
-      <div class="dash-card">
-        <table class="dash-keyword-rank-table">
-          <thead>
-            <tr>
-              <th style="width:34%;text-align:left">核心关键词</th>
-              <th style="width:46%;text-align:left">扩展词</th>
-              <th style="width:20%;text-align:center">排名平台</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="bold-text">360安全卫士</td>
-              <td class="sub-text">极速版无弹窗纯净办公</td>
-              <td class="rank-platform-cell"><div class="dash-rank-avatar doubao-av" title="豆包 AI 搜索">豆</div></td>
-            </tr>
-            <tr>
-              <td class="bold-text">终端安全防护</td>
-              <td class="sub-text">企业EDR勒索病毒防护</td>
-              <td class="rank-platform-cell"><div class="dash-rank-avatar doubao-av" title="豆包 AI 搜索">豆</div></td>
-            </tr>
-            <tr>
-              <td class="bold-text">勒索病毒拦截</td>
-              <td class="sub-text">云端主动解密与实时诱捕</td>
-              <td class="rank-platform-cell"><div class="dash-rank-avatar doubao-av" title="豆包 AI 搜索">豆</div></td>
-            </tr>
-            <tr>
-              <td class="bold-text">AI安全大模型</td>
-              <td class="sub-text">360智脑安全运营智能体</td>
-              <td class="rank-platform-cell"><div class="dash-rank-avatar doubao-av" title="豆包 AI 搜索">豆</div></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ================= 系统教程弹窗 ================= -->
-<div class="modal-backdrop" id="dashTutorialModal">
-  <div class="modal" style="max-width:600px">
-    <div class="modal-head">
-      <div class="modal-title">GEO AI 搜索可见性优化 · 新手快速入门</div>
-      <button class="modal-close" id="dashTutorialClose" type="button">×</button>
-    </div>
-    <div class="modal-body" style="max-height:65vh;overflow-y:auto">
-      <div style="margin-bottom:14px">
-        <h4 style="font-size:14.5px;color:var(--primary-dark);margin:0 0 6px">1. 什么是 GEO (Generative Engine Optimization)？</h4>
-        <p style="font-size:12.5px;color:var(--text);line-height:1.6;margin:0">
-          GEO 针对生成式 AI 搜索（豆包、DeepSeek、腾讯元宝、Kimi、文心一言、通义千问等）进行内容与信源优化，确保当潜在客户在 AI 工具提问时，您的品牌与产品能被精准识别并作为首位事实推荐。
-        </p>
-      </div>
-      <div style="margin-bottom:14px">
-        <h4 style="font-size:14.5px;color:var(--primary-dark);margin:0 0 6px">2. 核心操作三步走</h4>
-        <ol style="font-size:12.5px;color:#475569;line-height:1.7;padding-left:18px;margin:0">
-          <li><b>知识库沉淀：</b>进入「企业知识库」，上传品牌资料、产品手册与信任资质。</li>
-          <li><b>关键词与创作：</b>在「关键词挖掘」生成高潜长尾问题，使用「内容创作」一键生成深度答疑文章。</li>
-          <li><b>多渠道分发：</b>通过「文章发布」，将内容分发至自媒体矩阵、高权重公共媒体与 B2B 联盟。</li>
-        </ol>
-      </div>
-      <div class="box" style="margin-bottom:0">
-        <b>自动化保障：</b>系统已启用 Agent 智能链路，自动把控广告违规与行业红线，实现全自动化持续收录。
-      </div>
-    </div>
-    <div class="modal-foot">
-      <button class="btn p" id="dashTutorialDone" type="button">开始使用</button>
-    </div>
-  </div>
-</div>
-
-
-  </div>
-
-  <!-- Detailed Data Report View (数据报表详情页) -->
+  <!-- Detailed Data Report View (数据报表详情) -->
   <div id="dashReportView">
-    <!-- Top Report Header Banner -->
-    <div class="report-header-banner">
-      <div class="report-banner-title-box">
-        <div class="report-banner-badge">GEO AI SEARCH VISIBILITY REPORT</div>
-        <h1 class="report-banner-title">360安全科技股份有限公司报表</h1>
+    <div class="dash-section-head" style="margin-bottom:12px">
+      <div class="dash-section-title">
+        <span class="dash-title-bar">▌</span>
+        <span>数据报表</span>
       </div>
-      <div class="report-banner-actions">
-        <span class="report-update-time">最后更新: 2026-10-05 02:04:08</span>
-        <button class="btn o report-back-btn" id="dashBackToMainBtn" type="button">‹ 返回概览</button>
+      <div class="dash-section-meta" style="color:var(--muted);font-size:12px">
+        <span>360安全科技股份有限公司 · 全量收录明细分析</span>
       </div>
     </div>
 
-    <!-- Top Row: Company Info Card + 4 Big Stat Cards -->
+
+    <!-- Top Row: Company Info Card + Unified KPI Stats -->
     <div class="report-top-row">
       <!-- Company Card -->
       <div class="report-company-card">
-        <div class="report-ai-avatar-wrap">
-          <div class="report-ai-icon">AI</div>
-          <span class="report-ai-label">AI名片</span>
+        <div style="display:flex;align-items:flex-start;gap:14px">
+          <div class="report-ai-avatar-wrap">
+            <div class="report-ai-icon">AI</div>
+            <span class="report-ai-label">AI名片</span>
+          </div>
+          <div class="report-company-info">
+            <div class="report-company-name">360安全科技股份有限公司</div>
+            <div class="report-company-item">
+              <span class="report-item-icon">📞</span>
+              <span>电话: 400-0305-360</span>
+            </div>
+            <div class="report-company-item">
+              <span class="report-item-icon">✉️</span>
+              <span>邮箱: kefu@360.cn</span>
+            </div>
+            <div class="report-company-item">
+              <span class="report-item-icon">🌐</span>
+              <span>网址: www.360.cn</span>
+            </div>
+          </div>
         </div>
-        <div class="report-company-info">
-          <div class="report-company-name">360安全科技股份有限公司</div>
-          <div class="report-company-item">
-            <span class="report-item-icon">📞</span>
-            <span>电话: 400-0305-360</span>
-          </div>
-          <div class="report-company-item">
-            <span class="report-item-icon">✉️</span>
-            <span>邮箱: kefu@360.cn</span>
-          </div>
-          <div class="report-company-item">
-            <span class="report-item-icon">🌐</span>
-            <span>网址: www.360.cn</span>
-          </div>
+        <div style="display:flex;align-items:center;justify-content:space-between;padding-top:10px;border-top:1px dashed var(--line);margin-top:8px;font-size:11.5px;color:#64748b">
+          <span style="display:inline-flex;align-items:center;gap:5px;color:#047857;font-weight:600">
+            <span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:#10b981"></span>
+            官方主体认证有效
+          </span>
+          <span style="color:#94a3b8">360安全大脑托管</span>
         </div>
       </div>
 
-      <!-- 4 Stat Cards -->
-      <div class="report-4kpi-grid">
-        <div class="report-kpi-card">
-          <div class="report-kpi-icon-wrap gold">📚</div>
-          <div class="report-kpi-info">
-            <div class="report-kpi-label">核心关键词(个)</div>
-            <div class="report-kpi-val">31</div>
+      <!-- Unified KPI Cluster: 核心关键词/蒸馏关键词/品牌关键词/总收录条数 + 文章数量/发布数量/排名数量 -->
+      <div class="report-kpis-cluster">
+        <!-- 4 Stat Cards: 核心关键词 / 蒸馏关键词 / 品牌关键词 / 总收录条数 -->
+        <div class="report-4kpi-grid">
+          <div class="report-kpi-card" title="核心关键词数量">
+            <div class="report-kpi-icon-wrap gold">📚</div>
+            <div class="report-kpi-info">
+              <div class="report-kpi-label">核心关键词(个)</div>
+              <div class="report-kpi-val">31</div>
+            </div>
+          </div>
+          <div class="report-kpi-card" title="蒸馏关键词总量">
+            <div class="report-kpi-icon-wrap teal">🔍</div>
+            <div class="report-kpi-info">
+              <div class="report-kpi-label">蒸馏关键词</div>
+              <div class="report-kpi-val">13436</div>
+            </div>
+          </div>
+          <div class="report-kpi-card" title="品牌关键词数量">
+            <div class="report-kpi-icon-wrap rose">🏷️</div>
+            <div class="report-kpi-info">
+              <div class="report-kpi-label">品牌关键词</div>
+              <div class="report-kpi-val">132</div>
+            </div>
+          </div>
+          <div class="report-kpi-card" title="全网总收录条数">
+            <div class="report-kpi-icon-wrap pink">📈</div>
+            <div class="report-kpi-info">
+              <div class="report-kpi-label">总收录条数</div>
+              <div class="report-kpi-val">68396</div>
+            </div>
           </div>
         </div>
-        <div class="report-kpi-card">
-          <div class="report-kpi-icon-wrap orange">🔍</div>
-          <div class="report-kpi-info">
-            <div class="report-kpi-label">蒸馏关键词</div>
-            <div class="report-kpi-val">13436</div>
+
+        <!-- 3 Stat Cards: 文章数量 / 发布数量 / 排名数量 (上移至上方统一展示) -->
+        <div class="dash-kpi-grid-3">
+          <!-- Card 1: 文章数量 -->
+          <div class="dash-kpi-card" data-kpi="articles" style="cursor:pointer" title="点击查看文章列表">
+            <div class="dash-kpi-icon-wrap rose">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+            </div>
+            <div class="dash-kpi-info" style="flex:1">
+              <div style="display:flex;align-items:center;justify-content:space-between">
+                <div class="dash-kpi-label">文章数量</div>
+                <span class="dash-kpi-trend up" style="font-size:11px;font-weight:700;color:#10b981;background:#ecfdf5;padding:1px 6px;border-radius:4px">↑ 12.8%</span>
+              </div>
+              <div class="dash-kpi-val" id="dashKpiArticles">1011</div>
+              <div style="font-size:11.5px;color:#94a3b8;margin-top:2px">月度新产出 181 篇 · 8 平台矩阵</div>
+            </div>
           </div>
-        </div>
-        <div class="report-kpi-card">
-          <div class="report-kpi-icon-wrap rose">🏷️</div>
-          <div class="report-kpi-info">
-            <div class="report-kpi-label">品牌关键词</div>
-            <div class="report-kpi-val">132</div>
+
+          <!-- Card 2: 发布数量 -->
+          <div class="dash-kpi-card" data-kpi="publishes" style="cursor:pointer" title="点击前往发布中心">
+            <div class="dash-kpi-icon-wrap purple">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M2 12h20"></path>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
+            </div>
+            <div class="dash-kpi-info" style="flex:1">
+              <div style="display:flex;align-items:center;justify-content:space-between">
+                <div class="dash-kpi-label">发布数量</div>
+                <span class="dash-kpi-trend up" style="font-size:11px;font-weight:700;color:#10b981;background:#ecfdf5;padding:1px 6px;border-radius:4px">↑ 24.3%</span>
+              </div>
+              <div class="dash-kpi-val" id="dashKpiPublishes">1485</div>
+              <div style="font-size:11.5px;color:#94a3b8;margin-top:2px">权威媒体/B2B联盟多点触达</div>
+            </div>
           </div>
-        </div>
-        <div class="report-kpi-card">
-          <div class="report-kpi-icon-wrap pink">📈</div>
-          <div class="report-kpi-info">
-            <div class="report-kpi-label">总收录条数</div>
-            <div class="report-kpi-val">68396</div>
+
+          <!-- Card 3: 排名数量 -->
+          <div class="dash-kpi-card" data-kpi="ranks" style="cursor:pointer" title="点击定位至排名与收录明细">
+            <div class="dash-kpi-icon-wrap blue">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 20V10"></path>
+                <path d="M12 20V4"></path>
+                <path d="M6 20v-6"></path>
+              </svg>
+            </div>
+            <div class="dash-kpi-info" style="flex:1">
+              <div style="display:flex;align-items:center;justify-content:space-between">
+                <div class="dash-kpi-label">排名数量</div>
+                <span class="dash-kpi-trend up" style="font-size:11px;font-weight:700;color:#10b981;background:#ecfdf5;padding:1px 6px;border-radius:4px">↑ 18.5%</span>
+              </div>
+              <div class="dash-kpi-val" id="dashKpiRanks">13436</div>
+              <div style="font-size:11.5px;color:#94a3b8;margin-top:2px">全网 AI 首位事实权威推荐</div>
+            </div>
           </div>
         </div>
       </div>
@@ -492,16 +312,16 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
               <circle cx="80" cy="80" r="60" fill="none" stroke="#10b981" stroke-width="24"
                 stroke-dasharray="62.8 314" stroke-dashoffset="-62.8" />
               <!-- DeepSeek 16.78% -->
-              <circle cx="80" cy="80" r="60" fill="none" stroke="#f59e0b" stroke-width="24"
+              <circle cx="80" cy="80" r="60" fill="none" stroke="#3b82f6" stroke-width="24"
                 stroke-dasharray="63.2 314" stroke-dashoffset="-125.6" />
               <!-- Kimi 16.79% -->
-              <circle cx="80" cy="80" r="60" fill="none" stroke="#f97316" stroke-width="24"
+              <circle cx="80" cy="80" r="60" fill="none" stroke="#059669" stroke-width="24"
                 stroke-dasharray="63.2 314" stroke-dashoffset="-188.8" />
               <!-- Yuanbao 16.55% -->
               <circle cx="80" cy="80" r="60" fill="none" stroke="#8b5cf6" stroke-width="24"
                 stroke-dasharray="62.3 314" stroke-dashoffset="-252" />
               <!-- Qianwen 16.55% -->
-              <circle cx="80" cy="80" r="60" fill="none" stroke="#ea580c" stroke-width="24"
+              <circle cx="80" cy="80" r="60" fill="none" stroke="#14b8a6" stroke-width="24"
                 stroke-dasharray="62.3 314" stroke-dashoffset="-314.3" />
             </svg>
             <div class="report-donut-center-text">
@@ -512,10 +332,10 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
           <div class="report-donut-legend">
             <div class="report-legend-item"><span class="report-legend-dot" style="background:#06b6d4"></span> 豆包: 2238 (16.66%)</div>
             <div class="report-legend-item"><span class="report-legend-dot" style="background:#10b981"></span> 文心一言: 2240 (16.67%)</div>
-            <div class="report-legend-item"><span class="report-legend-dot" style="background:#f59e0b"></span> DeepSeek: 2254 (16.78%)</div>
-            <div class="report-legend-item"><span class="report-legend-dot" style="background:#f97316"></span> Kimi: 2256 (16.79%)</div>
+            <div class="report-legend-item"><span class="report-legend-dot" style="background:#3b82f6"></span> DeepSeek: 2254 (16.78%)</div>
+            <div class="report-legend-item"><span class="report-legend-dot" style="background:#059669"></span> Kimi: 2256 (16.79%)</div>
             <div class="report-legend-item"><span class="report-legend-dot" style="background:#8b5cf6"></span> 腾讯元宝: 2224 (16.55%)</div>
-            <div class="report-legend-item"><span class="report-legend-dot" style="background:#ea580c"></span> 通义千问: 2224 (16.55%)</div>
+            <div class="report-legend-item"><span class="report-legend-dot" style="background:#14b8a6"></span> 通义千问: 2224 (16.55%)</div>
           </div>
         </div>
       </div>
@@ -629,6 +449,219 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
     </div>
   </div>
 
+  <div id="dashMainView" style="margin-top:28px">
+    <!-- Section: 热门AI工具关键词数量统计 -->
+    <div class="dash-section">
+    <div class="dash-section-head">
+      <div class="dash-section-title">
+        <span class="dash-title-bar">▌</span>
+        <span>热门AI工具关键词数量统计</span>
+      </div>
+      <span style="font-size:12px;color:var(--muted)">点击任意引擎行可穿透联动查看下发明细</span>
+    </div>
+    <div class="dash-card">
+      <table class="dash-ai-tools-table">
+        <thead>
+          <tr>
+            <th style="width:260px;text-align:left">工具名称</th>
+            <th style="text-align:left">AI搜索场景覆盖</th>
+            <th style="text-align:right">蒸馏关键词数量</th>
+            <th style="width:130px;text-align:right;padding-right:24px">报表明细联动</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-plat="豆包" title="点击联动筛选「豆包」搜索明细">
+            <td>
+              <div class="dash-tool-cell">
+                <div class="dash-tool-logo doubao-logo">豆</div>
+                <span class="dash-tool-name">豆包</span>
+              </div>
+            </td>
+            <td class="dash-num-cell">54828</td>
+            <td class="dash-num-cell bold-num">2238</td>
+            <td style="text-align:right;padding-right:24px"><span class="tool-drill-btn" style="color:var(--primary-dark);font-size:12px;font-weight:650;display:inline-flex;align-items:center;gap:4px">穿透分析 ➔</span></td>
+          </tr>
+          <tr data-plat="文心一言" title="点击联动筛选「文心一言」搜索明细">
+            <td>
+              <div class="dash-tool-cell">
+                <div class="dash-tool-logo ernie-logo">文</div>
+                <span class="dash-tool-name">文心一言</span>
+              </div>
+            </td>
+            <td class="dash-num-cell">54828</td>
+            <td class="dash-num-cell bold-num">2240</td>
+            <td style="text-align:right;padding-right:24px"><span class="tool-drill-btn" style="color:var(--primary-dark);font-size:12px;font-weight:650;display:inline-flex;align-items:center;gap:4px">穿透分析 ➔</span></td>
+          </tr>
+          <tr data-plat="DeepSeek" title="点击联动筛选「DeepSeek」搜索明细">
+            <td>
+              <div class="dash-tool-cell">
+                <div class="dash-tool-logo deepseek-logo">深</div>
+                <span class="dash-tool-name">DeepSeek</span>
+              </div>
+            </td>
+            <td class="dash-num-cell">54828</td>
+            <td class="dash-num-cell bold-num">2254</td>
+            <td style="text-align:right;padding-right:24px"><span class="tool-drill-btn" style="color:var(--primary-dark);font-size:12px;font-weight:650;display:inline-flex;align-items:center;gap:4px">穿透分析 ➔</span></td>
+          </tr>
+          <tr data-plat="Kimi" title="点击联动筛选「Kimi」搜索明细">
+            <td>
+              <div class="dash-tool-cell">
+                <div class="dash-tool-logo kimi-logo">K</div>
+                <span class="dash-tool-name">Kimi</span>
+              </div>
+            </td>
+            <td class="dash-num-cell">54828</td>
+            <td class="dash-num-cell bold-num">2256</td>
+            <td style="text-align:right;padding-right:24px"><span class="tool-drill-btn" style="color:var(--primary-dark);font-size:12px;font-weight:650;display:inline-flex;align-items:center;gap:4px">穿透分析 ➔</span></td>
+          </tr>
+          <tr data-plat="腾讯元宝" title="点击联动筛选「腾讯元宝」搜索明细">
+            <td>
+              <div class="dash-tool-cell">
+                <div class="dash-tool-logo yuanbao-logo">元</div>
+                <span class="dash-tool-name">腾讯元宝</span>
+              </div>
+            </td>
+            <td class="dash-num-cell">54828</td>
+            <td class="dash-num-cell bold-num">2224</td>
+            <td style="text-align:right;padding-right:24px"><span class="tool-drill-btn" style="color:var(--primary-dark);font-size:12px;font-weight:650;display:inline-flex;align-items:center;gap:4px">穿透分析 ➔</span></td>
+          </tr>
+          <tr data-plat="通义千问" title="点击联动筛选「通义千问」搜索明细">
+            <td>
+              <div class="dash-tool-cell">
+                <div class="dash-tool-logo qianwen-logo">通</div>
+                <span class="dash-tool-name">通义千问</span>
+              </div>
+            </td>
+            <td class="dash-num-cell">54828</td>
+            <td class="dash-num-cell bold-num">2224</td>
+            <td style="text-align:right;padding-right:24px"><span class="tool-drill-btn" style="color:var(--primary-dark);font-size:12px;font-weight:650;display:inline-flex;align-items:center;gap:4px">穿透分析 ➔</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Section 3: 最新发布文章 + 热门关键词排名 (左右双栏) -->
+  <div class="dash-bottom-grid">
+    <!-- Left: 最新发布文章 -->
+    <div class="dash-section" style="margin-bottom:0">
+      <div class="dash-section-head">
+        <div class="dash-section-title">
+          <span class="dash-title-bar">▌</span>
+          <span>最新发布文章</span>
+        </div>
+      </div>
+      <div class="dash-card">
+        <table class="dash-recent-articles-table">
+          <tbody>
+            <tr>
+              <td class="dash-article-title-cell" title="2026企业级终端安全防病毒软件推荐指南">2026企业级终端安全防病毒软件推荐指南</td>
+              <td class="dash-platform-cell"><span class="dash-media-badge sohu-badge">搜狐号</span></td>
+              <td class="dash-time-cell">2025-12-02 16:01:39</td>
+            </tr>
+            <tr>
+              <td class="dash-article-title-cell" title="2026网络安全等级保护2.0测评必备厂商对比">2026网络安全等级保护2.0测评必备厂商对比</td>
+              <td class="dash-platform-cell"><span class="dash-media-badge baijia-badge">百家号</span></td>
+              <td class="dash-time-cell">2025-11-27 15:15:35</td>
+            </tr>
+            <tr>
+              <td class="dash-article-title-cell" title="360安全大脑赋能企业勒索病毒防护深度实测">360安全大脑赋能企业勒索病毒防护深度实测</td>
+              <td class="dash-platform-cell"><span class="dash-media-badge baijia-badge">百家号</span></td>
+              <td class="dash-time-cell">2025-11-27 15:14:08</td>
+            </tr>
+            <tr>
+              <td class="dash-article-title-cell" title="360天擎终端安全管理系统企业部署选型手册">360天擎终端安全管理系统企业部署选型手册</td>
+              <td class="dash-platform-cell"><span class="dash-media-badge baijia-badge">百家号</span></td>
+              <td class="dash-time-cell">2025-11-18 11:47:46</td>
+            </tr>
+            <tr>
+              <td class="dash-article-title-cell" title="2026企业级AI安全大模型安全厂商推荐榜">2026企业级AI安全大模型安全厂商推荐榜</td>
+              <td class="dash-platform-cell"><span class="dash-media-badge toutiao-badge">头条号</span></td>
+              <td class="dash-time-cell">2025-11-18 11:47:29</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Right: 热门关键词排名 -->
+    <div class="dash-section" style="margin-bottom:0">
+      <div class="dash-section-head">
+        <div class="dash-section-title">
+          <span class="dash-title-bar">▌</span>
+          <span>热门关键词排名</span>
+        </div>
+      </div>
+      <div class="dash-card">
+        <table class="dash-keyword-rank-table">
+          <thead>
+            <tr>
+              <th style="width:34%;text-align:left">核心关键词</th>
+              <th style="width:46%;text-align:left">扩展词</th>
+              <th style="width:20%;text-align:center">排名平台</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-kw="360安全卫士" style="cursor:pointer" title="点击联动筛选「360安全卫士」搜索明细">
+              <td class="bold-text">360安全卫士</td>
+              <td class="sub-text">极速版无弹窗纯净办公</td>
+              <td class="rank-platform-cell"><div class="dash-rank-avatar doubao-av" title="豆包 AI 搜索">豆</div></td>
+            </tr>
+            <tr data-kw="终端安全防护" style="cursor:pointer" title="点击联动筛选「终端安全防护」搜索明细">
+              <td class="bold-text">终端安全防护</td>
+              <td class="sub-text">企业EDR勒索病毒防护</td>
+              <td class="rank-platform-cell"><div class="dash-rank-avatar doubao-av" title="豆包 AI 搜索">豆</div></td>
+            </tr>
+            <tr data-kw="勒索病毒拦截" style="cursor:pointer" title="点击联动筛选「勒索病毒拦截」搜索明细">
+              <td class="bold-text">勒索病毒拦截</td>
+              <td class="sub-text">云端主动解密与实时诱捕</td>
+              <td class="rank-platform-cell"><div class="dash-rank-avatar doubao-av" title="豆包 AI 搜索">豆</div></td>
+            </tr>
+            <tr data-kw="AI安全大模型" style="cursor:pointer" title="点击联动筛选「AI安全大模型」搜索明细">
+              <td class="bold-text">AI安全大模型</td>
+              <td class="sub-text">360智脑安全运营智能体</td>
+              <td class="rank-platform-cell"><div class="dash-rank-avatar doubao-av" title="豆包 AI 搜索">豆</div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+
+  <!-- ================= 系统教程弹窗 ================= -->
+<div class="modal-backdrop" id="dashTutorialModal">
+  <div class="modal" style="max-width:600px">
+    <div class="modal-head">
+      <div class="modal-title">GEO AI 搜索可见性优化 · 新手快速入门</div>
+      <button class="modal-close" id="dashTutorialClose" type="button">×</button>
+    </div>
+    <div class="modal-body" style="max-height:65vh;overflow-y:auto">
+      <div style="margin-bottom:14px">
+        <h4 style="font-size:14.5px;color:var(--primary-dark);margin:0 0 6px">1. 什么是 GEO (Generative Engine Optimization)？</h4>
+        <p style="font-size:12.5px;color:var(--text);line-height:1.6;margin:0">
+          GEO 针对生成式 AI 搜索（豆包、DeepSeek、腾讯元宝、Kimi、文心一言、通义千问等）进行内容与信源优化，确保当潜在客户在 AI 工具提问时，您的品牌与产品能被精准识别并作为首位事实推荐。
+        </p>
+      </div>
+      <div style="margin-bottom:14px">
+        <h4 style="font-size:14.5px;color:var(--primary-dark);margin:0 0 6px">2. 核心操作三步走</h4>
+        <ol style="font-size:12.5px;color:#475569;line-height:1.7;padding-left:18px;margin:0">
+          <li><b>知识库沉淀：</b>进入「企业知识库」，上传品牌资料、产品手册与信任资质。</li>
+          <li><b>关键词与创作：</b>在「关键词挖掘」生成高潜长尾问题，使用「内容创作」一键生成深度答疑文章。</li>
+          <li><b>多渠道分发：</b>通过「文章发布」，将内容分发至自媒体矩阵、高权重公共媒体与 B2B 联盟。</li>
+        </ol>
+      </div>
+      <div class="box" style="margin-bottom:0">
+        <b>自动化保障：</b>系统已启用 Agent 智能链路，自动把控广告违规与行业红线，实现全自动化持续收录。
+      </div>
+    </div>
+    <div class="modal-foot">
+      <button class="btn p" id="dashTutorialDone" type="button">开始使用</button>
+    </div>
+  </div>
+</div>
+
   <!-- Screenshot Preview Modal (截图查看弹窗) -->
   <div class="modal-backdrop" id="reportScreenshotModal">
     <div class="modal" style="max-width:580px">
@@ -660,7 +693,7 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
         <button class="btn p" id="reportScreenshotDone" type="button">完成查看</button>
       </div>
     </div>
-  </div>
+</div>
 <div class="page" id="kb">
 <div class="kb-stack">
 <div class="card">
@@ -1020,21 +1053,7 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
       </div>
     </div>
 
-    <!-- 字段行 3: 多维关联图谱 -->
-    <div class="fg" style="margin-bottom:18px">
-      <span class="lb" style="display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:#334155;margin-bottom:6px">
-        graph_json 多维关联图谱
-        <span class="flow-source" style="font-size:11px;background:#ecfdf5;color:#059669;padding:1px 6px;border-radius:4px;font-weight:normal;border:1px solid #a7f3d0">人群画像实时联动</span>
-      </span>
-      <select class="ipt" id="genGraphJsonSelect" style="height:40px;border:1px solid #cbd5e1;font-weight:500;width:100%;box-sizing:border-box">
-        <option selected>1. 外卖袋 ｜ 餐饮连锁采购总监 ｜ 外卖高峰期汤汁防洒漏与定制品牌LOGO保温袋集中采购 ｜ 普通外卖袋保温差易破袋漏汤导致差评</option>
-        <option>2. 食品级无纺布袋 ｜ 生鲜冷链供应链主管 ｜ 绿色环保认证 / 检测报告 ｜ 缺乏食品接触级安全检测报告</option>
-        <option>3. 奶茶保温袋 ｜ 现制茶饮品牌区域督导 ｜ 45分钟保冰防漏 / 铝箔锁温 ｜ 起订量门槛过高、提手承重不足</option>
-        <option>4. 360安全卫士 ｜ 企业网络管理员 / IT运维主管 ｜ 公司全员电脑防病毒与系统流氓软件一键清理 ｜ 弹窗广告多影响办公、全网更新补丁难集中下发</option>
-        <option>5. 终端安全防护 ｜ 信息安全总监 / CISO ｜ 分支机构分散办公电脑勒索病毒统一管控 ｜ 未知威胁发现慢、跨平台终端缺乏一体化安全资产看板</option>
-      </select>
-    </div>
-    <!-- 字段行 4: Slot B 定制红线 -->
+    <!-- 字段行 3: Slot B 定制红线 -->
     <div class="fg" style="margin-bottom:20px">
       <span class="lb" style="display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:#334155;margin-bottom:6px">
         Slot B 定制红线（客户绝对禁令，凌驾所有规则）
@@ -1341,21 +1360,22 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
           <span class="pill b" id="vgVideoStateBadge" style="font-size:11.5px;font-weight:700">当前状态1：视频快剪表单面板</span>
         </div>
         <div class="vg-method-tabs" id="vgMethodTabs">
-          <div class="vg-method-pill active" data-vmethod="quick">视频快剪</div>
-          <div class="vg-method-pill" data-vmethod="ai">AI生成视频</div>
-          <div class="vg-method-pill" data-vmethod="upload">上传视频</div>
+          <div class="vg-method-pill active" data-vmethod="quick" title="基于已有素材包，AI 自动混剪卡点">视频快剪</div>
+          <div class="vg-method-pill" data-vmethod="ai" title="输入画面提示词，AI 从零生成视频画面">AI生成视频</div>
+          <div class="vg-method-pill" data-vmethod="upload" title="上传本地已有成片直接分发">上传视频</div>
         </div>
       </div>
 
-      <!-- 计费提示 -->
-      <div class="vg-alert-cost">
-        <span style="font-size:14px">⚠️</span>
-        <span>提示：1分钟消耗50积分，不满1分钟按1分钟计费</span>
+      <!-- 计费提示 (根据Tab动态切换专属文案) -->
+      <div class="vg-alert-cost" id="vgAlertCost">
+        <span style="font-size:14px" id="vgCostIcon">⚠️</span>
+        <span id="vgCostText">提示：1分钟消耗50积分，不满1分钟按1分钟计费</span>
       </div>
 
       <!-- 3-State Mutually Exclusive Workspace + Right Phone Preview -->
       <div class="vg-studio-grid" id="vgStudioGrid">
         <!-- 状态1：Tab=视频快剪 -> 下方展示快剪表单面板 (默认展示) -->
+        <!-- 最终模块顺序：素材分组 → 混剪模板 → 转场卡点 → 口播配音+倍速+BGM → 口播脚本 -->
         <div id="vgStateQuickPanel" style="grid-column:span 2;background:#ffffff;border:1px solid #e2e8f0;border-radius:12px;padding:18px 20px">
           <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid #f1f5f9">
             <div style="display:flex;align-items:center;gap:8px">
@@ -1366,45 +1386,76 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
             <button class="vg-ai-pill-btn" id="vgSegmentAIBtn" type="button" style="padding:4px 10px;font-size:11.5px">✨ AI 一键生成快剪脚本</button>
           </div>
 
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px">
-            <div class="fg" style="margin-bottom:0">
-              <span class="lb"><span style="color:#ef4444">*</span> 素材分组</span>
-              <select class="ipt" id="vgMaterialGroup">
-                <option value="">请选择素材分组</option>
-                <option value="g1" selected>360安全大脑可视化防御大屏与终端实测 (42支片段)</option>
-                <option value="g2">现代化工业车间与全自动熔接片段 (36支片段)</option>
-                <option value="g3">勒索病毒动态诱捕与数据秒级回滚实拍 (28支片段)</option>
-                <option value="g4">大客户发货物流与装箱发运现场 (19支片段)</option>
-              </select>
+          <!-- 1. 素材分组 -->
+          <div class="fg" style="margin-bottom:14px">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
+              <span class="lb" style="margin-bottom:0"><span style="color:#ef4444">*</span> 素材分组</span>
+              <button type="button" id="vgPreviewMaterialBtn" class="btn o" style="padding:3px 10px;font-size:11.5px;border-radius:6px;color:#4f46e5;border-color:#c7d2fe;background:#eef2ff;display:inline-flex;align-items:center;gap:4px">
+                <span>👁️</span> 预览素材包
+              </button>
             </div>
-            <div class="fg" style="margin-bottom:0">
-              <span class="lb"><span style="color:#ef4444">*</span> 快剪混剪模板</span>
-              <select class="ipt" id="vgQuickTemplateSelect">
-                <option value="hook3s" selected>黄金前3秒痛点暴击 + 核心卖点快剪 (高完播率)</option>
-                <option value="factory">源头工厂实景探厂 + 质检背书混剪</option>
-                <option value="compare">传统方案对比实测 + 客户案例快剪</option>
-              </select>
+            <select class="ipt" id="vgMaterialGroup">
+              <option value="">-- 请选择素材分组 --</option>
+              <option value="g1" selected>360安全大脑可视化防御大屏与终端实测 (42支片段)</option>
+              <option value="g2">现代化工业车间与全自动熔接片段 (36支片段)</option>
+              <option value="g3">勒索病毒动态诱捕与数据秒级回滚实拍 (28支片段)</option>
+              <option value="g4">大客户发货物流与装箱发运现场 (19支片段)</option>
+            </select>
+          </div>
+
+          <!-- 2. 快剪混剪模板 -->
+          <div class="fg" style="margin-bottom:14px">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
+              <span class="lb" style="margin-bottom:0"><span style="color:#ef4444">*</span> 快剪混剪模板</span>
+              <span style="font-size:11.5px;color:#64748b" id="vgTemplateHintBadge">🎬 点击小样片可查看分镜详情</span>
+            </div>
+            <select class="ipt" id="vgQuickTemplateSelect">
+              <option value="">-- 请选择混剪模板 --</option>
+              <option value="hook3s" selected>黄金前3秒痛点暴击 + 核心卖点快剪 (高完播率)</option>
+              <option value="factory">源头工厂实景探厂 + 质检背书混剪</option>
+              <option value="compare">传统方案对比实测 + 客户案例快剪</option>
+            </select>
+
+            <!-- 模板小预览样片 + 简短说明 -->
+            <div id="vgTemplatePreviewCard" style="margin-top:8px;padding:10px 12px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;display:flex;align-items:center;gap:12px;cursor:pointer" title="点击查看此模板样片分镜详情">
+              <div style="position:relative;width:86px;height:52px;border-radius:6px;overflow:hidden;flex-shrink:0;background:#0f172a;border:1px solid #cbd5e1">
+                <img id="vgTemplateThumbImg" referrerPolicy="no-referrer" alt="样片缩略图" src="${socScreenImg}" style="width:100%;height:100%;object-fit:cover;opacity:0.9" />
+                <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.3)">
+                  <span style="background:rgba(255,255,255,0.92);color:#4f46e5;width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:bold">▶</span>
+                </div>
+              </div>
+              <div style="flex:1;min-width:0">
+                <div style="display:flex;align-items:center;gap:6px;margin-bottom:2px">
+                  <span id="vgTemplateNameText" style="font-size:12.5px;font-weight:700;color:#0f172a">黄金 3 秒模板</span>
+                  <span class="pill b" style="font-size:10.5px" id="vgTemplateTagText">高完播率</span>
+                </div>
+                <div id="vgTemplateDescText" style="font-size:11.5px;color:#64748b;line-height:1.4">开头痛点抓人，核心利益点极速抛出，适合抖音/快手短视频信息流爆款</div>
+              </div>
+              <span style="font-size:11.5px;color:#4f46e5;font-weight:600;white-space:nowrap">查看样片 ↗</span>
             </div>
           </div>
 
+          <!-- 3. 转场特效与卡点节奏 (保留不变) -->
+          <div class="fg" style="margin-bottom:14px">
+            <span class="lb"><span style="color:#ef4444">*</span> 转场特效与卡点节奏</span>
+            <select class="ipt" id="vgQuickTransitionSelect">
+              <option value="beat" selected>智能节拍卡点硬切 + 动感缩放</option>
+              <option value="smooth">商业平滑叠化 + 柔和推进</option>
+              <option value="tech">科技感闪白转场 + 数字流光</option>
+            </select>
+          </div>
+
+          <!-- 4. 口播配音与倍速配置 + BGM选择 (加到同一行) -->
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px">
             <div class="fg" style="margin-bottom:0">
-              <span class="lb"><span style="color:#ef4444">*</span> 转场特效与卡点节奏</span>
-              <select class="ipt" id="vgQuickTransitionSelect">
-                <option value="beat" selected>智能节拍卡点硬切 + 动感缩放</option>
-                <option value="smooth">商业平滑叠化 + 柔和推进</option>
-                <option value="tech">科技感闪白转场 + 数字流光</option>
-              </select>
-            </div>
-            <div class="fg" style="margin-bottom:0">
               <span class="lb"><span style="color:#ef4444">*</span> 口播配音与倍速配置</span>
-              <div style="display:flex;align-items:center;gap:12px;height:40px;padding:0 12px;border:1px solid #e2e8f0;border-radius:8px;background:#f8fafc">
+              <div style="display:flex;align-items:center;gap:10px;height:40px;padding:0 12px;border:1px solid #e2e8f0;border-radius:8px;background:#f8fafc">
                 <label style="display:flex;align-items:center;gap:5px;font-size:12.5px;color:#334155;cursor:pointer;white-space:nowrap">
                   <input type="checkbox" id="vgVoiceToggle" checked style="accent-color:#6366f1" /> 开启素材原声
                 </label>
                 <span style="color:#cbd5e1">|</span>
-                <span style="font-size:12px;color:#64748b;white-space:nowrap">口播倍速：</span>
-                <select class="ipt" id="vgSpeedSelect" style="height:28px;padding:0 8px;font-size:12px;width:80px">
+                <span style="font-size:12px;color:#64748b;white-space:nowrap">倍速：</span>
+                <select class="ipt" id="vgSpeedSelect" style="height:28px;padding:0 8px;font-size:12px;width:76px">
                   <option value="0.8">0.8X</option>
                   <option value="1.0" selected>1.0X</option>
                   <option value="1.2">1.2X</option>
@@ -1412,159 +1463,355 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
                 </select>
               </div>
             </div>
+            <div class="fg" style="margin-bottom:0">
+              <span class="lb"><span style="color:#ef4444">*</span> 背景音乐 (BGM) 选择</span>
+              <div style="display:flex;align-items:center;gap:8px;height:40px;padding:0 10px;border:1px solid #e2e8f0;border-radius:8px;background:#f8fafc">
+                <label style="display:flex;align-items:center;gap:5px;font-size:12.5px;color:#334155;cursor:pointer;white-space:nowrap">
+                  <input type="checkbox" id="vgQuickBgmToggle" checked style="accent-color:#6366f1" /> 开启BGM
+                </label>
+                <select class="ipt" id="vgQuickBgmSelect" style="height:28px;padding:0 6px;font-size:12px;flex:1;min-width:0">
+                  <option value="bgm1" selected>大气质感商务节奏 (Corporate)</option>
+                  <option value="bgm2">现代科技脉冲节奏 (Tech Ambient)</option>
+                  <option value="bgm3">轻快科普种草节拍 (Upbeat Cheerful)</option>
+                  <option value="none">无背景音乐 (纯原声/纯口播)</option>
+                </select>
+                <button type="button" id="vgQuickBgmAuditionBtn" class="btn o" style="height:28px;padding:0 8px;font-size:11.5px;border-radius:6px;white-space:nowrap" title="试听当前选中的BGM">
+                  🎵 试听
+                </button>
+              </div>
+            </div>
           </div>
 
+          <!-- 5. 文案内容 (快剪口播分镜脚本) -->
           <div class="fg" style="margin-bottom:0">
             <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
               <span class="lb" style="margin-bottom:0"><span style="color:#ef4444">*</span> 文案内容 (快剪口播分镜脚本)</span>
-              <span style="font-size:11.5px;color:#94a3b8">请先选择素材分组，再点击「AI 一键生成」；正文内容来自上方「策划文案」</span>
+              <span style="font-size:11.5px;color:#94a3b8">仅填写口播台词，画面取自素材分组；正文内容来自上方「策划文案」</span>
             </div>
-            <textarea class="ipt" id="vgSegmentScript" rows="4" style="line-height:1.65" placeholder="请输入快剪分镜口播文案...">360安全科技自主研发云端安全大脑与自研AI杀毒双引擎。毫秒级识别未知勒索与木马威胁，拦截率高达99.98%，全方位守护企业与个人终端数据资产！</textarea>
+            <textarea class="ipt" id="vgSegmentScript" rows="4" style="line-height:1.65" placeholder="仅填写口播台词，画面取自素材分组">360安全科技自主研发云端安全大脑与自研AI杀毒双引擎。毫秒级识别未知勒索与木马威胁，拦截率高达99.98%，全方位守护企业与个人终端数据资产！</textarea>
           </div>
         </div>
 
-        <!-- 状态2：Tab=AI生成视频 -> 下方展示AI视频配置面板（截图内BGM、字幕配置） -->
-        <div id="vgStateAiPanel" style="display:none;grid-column:span 2;grid-template-columns:140px minmax(0,1fr);gap:16px;align-items:start">
-          <!-- Left Vertical Nav (1:1 匹配截图) -->
-          <div class="vg-vertical-nav" id="vgVNav">
-            <button type="button" class="vg-vnav-btn" data-vtab="subtitles">
-              <span>💬</span> 视频字幕
-            </button>
-            <button type="button" class="vg-vnav-btn" data-vtab="voice">
-              <span>🎙️</span> 选择声音
-            </button>
-            <button type="button" class="vg-vnav-btn" data-vtab="styles">
-              <span>🔤</span> 字幕样式
-            </button>
-            <button type="button" class="vg-vnav-btn active" data-vtab="bgm">
-              <span>🎧</span> 背景音乐
-            </button>
+        <!-- 状态2：Tab=AI生成视频 -> 下方展示AI视频配置面板 (重构左侧菜单 + 面板) -->
+        <div id="vgStateAiPanel" style="display:none;grid-column:span 2;background:#ffffff;border:1px solid #e2e8f0;border-radius:12px;padding:18px 20px">
+          <!-- AI生成提示条 (顶部橙色条专属替换文案) -->
+          <div class="vg-ai-disclaimer-banner" style="background:#fffbeb;border:1px solid #fde68a;color:#92400e;padding:10px 14px;border-radius:8px;font-size:12.5px;display:flex;align-items:center;gap:8px;margin-bottom:14px">
+            <span style="font-size:15px">⚠️</span>
+            <span style="font-weight:600">本视频由AI技术辅助生成，AI生成画面可能存在局限性或不准确性，仅供参考分享；AI生成按时长包计费</span>
           </div>
-          <!-- Center Config Workspace (1:1 匹配截图) -->
-          <div class="vg-center-panel" id="vgCenterPanel">
-            <!-- View 1: 视频字幕 -->
-            <div id="vtabSubtitlesView" style="display:none">
-              <div style="font-size:13.5px;font-weight:750;color:#1e293b;margin-bottom:6px">视频字幕 (AI 画面与时间轴对齐)</div>
-              <div style="font-size:12px;color:#94a3b8;margin-bottom:12px">AI 大模型根据画面分镜与口播台词自动生成时间轴字幕</div>
-              <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px">
+
+          <div style="display:grid;grid-template-columns:145px minmax(0,1fr);gap:16px;align-items:start">
+            <!-- Left Vertical Nav (调整后菜单顺序：1.画面提示词置顶 2.基础设置 3.声音 4.字幕 5.样式 6.BGM) -->
+            <div class="vg-vertical-nav" id="vgVNav">
+              <button type="button" class="vg-vnav-btn active" data-vtab="prompt">
+                <span>🎨</span> 画面提示词
+              </button>
+              <button type="button" class="vg-vnav-btn" data-vtab="basic">
+                <span>⚙️</span> 视频基础设置
+              </button>
+              <button type="button" class="vg-vnav-btn" data-vtab="voice">
+                <span>🎙️</span> 选择声音
+              </button>
+              <button type="button" class="vg-vnav-btn" data-vtab="subtitles">
+                <span>💬</span> 视频字幕
+              </button>
+              <button type="button" class="vg-vnav-btn" data-vtab="styles">
+                <span>🔤</span> 字幕样式
+              </button>
+              <button type="button" class="vg-vnav-btn" data-vtab="bgm">
+                <span>🎧</span> 背景音乐
+              </button>
+            </div>
+
+            <!-- Right Center Config Workspace -->
+            <div class="vg-center-panel" id="vgCenterPanel">
+              <!-- View 1: 画面提示词 (新增，放在最顶部，默认展示) -->
+              <div id="vtabPromptView" style="display:block">
+                <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
+                  <div style="font-size:13.5px;font-weight:750;color:#1e293b">画面提示词</div>
+                  <button type="button" id="vgAiPromptPolishBtn" class="vg-ai-pill-btn" style="padding:3px 10px;font-size:11.5px">
+                    ✨ AI 一键润色镜头提示词
+                  </button>
+                </div>
+                <div style="font-size:12px;color:#94a3b8;margin-bottom:12px">描述画面视觉特征、镜头运动与质感风格；AI 将从零渲染生成连续视频画面</div>
+
+                <div class="fg" style="margin-bottom:10px">
+                  <div class="vg-textarea-counter-wrap">
+                    <textarea class="ipt" id="vgAiPromptInput" rows="5" maxlength="500" style="line-height:1.65" placeholder="描述画面、镜头、光影风格；可附带口播台词。示例：科技机房，网络安全大屏数据流缓慢流动，写实商业质感">科技机房，网络安全大屏数据流缓慢流动，写实商业质感，超清4K分辨率，电影级光影，景深微距特写，冷色调极客氛围。</textarea>
+                    <span class="vg-textarea-counter" id="vgAiPromptCounter">57 / 500</span>
+                  </div>
+                </div>
+
+                <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:14px">
+                  <span style="font-size:11.5px;color:#64748b">快捷镜头词：</span>
+                  <button type="button" class="chip-mini vg-prompt-tag" data-tag="科技机房数据大屏，数字光效流淌">科技机房大屏</button>
+                  <button type="button" class="chip-mini vg-prompt-tag" data-tag="商务办公室，决策人员操作终端实测">商务终端实测</button>
+                  <button type="button" class="chip-mini vg-prompt-tag" data-tag="数字代码雨流光转场，极具未来科技感">数字流光转场</button>
+                  <button type="button" class="chip-mini vg-prompt-tag" data-tag="微距芯片运转光效，电影级真实质感">微距芯片特写</button>
+                  <button type="button" class="chip-mini vg-prompt-tag" data-tag="写实商业广告级光影，4K超清电影画质">商业广告画质</button>
+                </div>
+
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+                  <div class="fg" style="margin-bottom:0">
+                    <span class="lb"><span style="color:#ef4444">*</span> AI 视频生成模型</span>
+                    <select class="ipt" id="vgAiModelSelect">
+                      <option value="wanxiang" selected>360智见·万象视频大模型 v2.5 (推荐)</option>
+                      <option value="kling">Kling 可灵高动态商业实景模型</option>
+                      <option value="sora">Sora-Turbo 电影级物理世界仿真模型</option>
+                    </select>
+                  </div>
+                  <div class="fg" style="margin-bottom:0">
+                    <span class="lb">画质渲染级别</span>
+                    <select class="ipt" id="vgAiRenderQuality">
+                      <option value="4k" selected>4K 电影级画质 (光线追踪)</option>
+                      <option value="1080p">1080P 超清商业质感</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <!-- View 2: 视频基础设置 (时长、9:16/16:9、图生图开关) -->
+              <div id="vtabBasicView" style="display:none">
+                <div style="font-size:13.5px;font-weight:750;color:#1e293b;margin-bottom:6px">视频基础设置</div>
+                <div style="font-size:12px;color:#94a3b8;margin-bottom:14px">配置视频时长规格、画幅宽高比与画面参考底图</div>
+
+                <!-- 视频时长：10秒 / 15秒 -->
+                <div class="fg" style="margin-bottom:14px">
+                  <span class="lb"><span style="color:#ef4444">*</span> 视频时长</span>
+                  <div style="display:flex;gap:10px" id="vgDurationOptions">
+                    <button type="button" class="btn active vg-duration-pill" data-duration="10" style="flex:1;padding:10px 14px;border:1.5px solid #4f46e5;background:#eef2ff;color:#4f46e5;font-weight:700;border-radius:8px">
+                      ⏱️ 10 秒 <span style="font-size:11.5px;font-weight:normal;opacity:0.85">(消耗 320 积分)</span>
+                    </button>
+                    <button type="button" class="btn o vg-duration-pill" data-duration="15" style="flex:1;padding:10px 14px;border:1px solid #cbd5e1;background:#ffffff;color:#334155;border-radius:8px">
+                      ⏱️ 15 秒 <span style="font-size:11.5px;font-weight:normal;opacity:0.85">(消耗 480 积分)</span>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- 视频比例：9:16 竖屏 / 16:9 横屏 -->
+                <div class="fg" style="margin-bottom:14px">
+                  <span class="lb"><span style="color:#ef4444">*</span> 视频比例</span>
+                  <div style="display:flex;gap:10px" id="vgRatioOptions">
+                    <button type="button" class="btn active vg-ratio-pill" data-ratio="9:16" style="flex:1;padding:10px 14px;border:1.5px solid #4f46e5;background:#eef2ff;color:#4f46e5;font-weight:700;border-radius:8px">
+                      📱 9:16 竖屏 <span style="font-size:11px;font-weight:normal;opacity:0.85">(抖音 / 快手 / 小红书 / 视频号)</span>
+                    </button>
+                    <button type="button" class="btn o vg-ratio-pill" data-ratio="16:9" style="flex:1;padding:10px 14px;border:1px solid #cbd5e1;background:#ffffff;color:#334155;border-radius:8px">
+                      🖥️ 16:9 横屏 <span style="font-size:11px;font-weight:normal;opacity:0.85">(B站 / 今日头条 / 展厅大屏)</span>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- 画面参考图 (图生视频开关 + 上传框) -->
                 <div class="fg" style="margin-bottom:0">
-                  <span class="lb"><span style="color:#ef4444">*</span> AI 视频生成模型</span>
-                  <select class="ipt" id="vgAiModelSelect">
-                    <option value="wanxiang" selected>360智见·万象视频大模型 v2.5</option>
-                    <option value="kling">Kling 可灵高动态商业实景模型</option>
-                    <option value="sora">Sora-Turbo 电影级光影模型</option>
-                  </select>
+                  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
+                    <span class="lb" style="margin-bottom:0"><span style="color:#ef4444">*</span> 画面参考图 (图生视频)</span>
+                    <label style="display:flex;align-items:center;gap:6px;font-size:12.5px;color:#334155;cursor:pointer">
+                      <input type="checkbox" id="vgImg2VidToggle" checked style="accent-color:#6366f1" /> 开启图生视频 (Image-to-Video)
+                    </label>
+                  </div>
+
+                  <div id="vgImg2VidUploadWrap" style="border:1.5px dashed #c7d2fe;border-radius:10px;background:#f8fafc;padding:14px 16px">
+                    <div style="display:flex;align-items:center;gap:14px">
+                      <div style="position:relative;width:96px;height:64px;border-radius:6px;overflow:hidden;border:1px solid #cbd5e1;flex-shrink:0;background:#0f172a">
+                        <img id="vgImg2VidThumb" referrerPolicy="no-referrer" alt="参考图" src="${socScreenImg}" style="width:100%;height:100%;object-fit:cover" />
+                        <span style="position:absolute;bottom:2px;right:2px;background:rgba(0,0,0,0.7);color:#fff;font-size:9.5px;padding:1px 4px;border-radius:3px">已选用</span>
+                      </div>
+                      <div style="flex:1;min-width:0">
+                        <div style="font-size:12.5px;font-weight:700;color:#0f172a;margin-bottom:3px" id="vgImg2VidFileName">360安全大脑可视化防御大屏_底图.jpg</div>
+                        <div style="font-size:11.5px;color:#64748b;margin-bottom:8px">支持 JPG / PNG / WEBP，建议分辨率 ≥ 1080P</div>
+                        <div style="display:flex;align-items:center;gap:8px">
+                          <button type="button" id="vgChangeRefImgBtn" class="btn o" style="padding:3px 10px;font-size:11.5px;border-radius:6px">更换参考图</button>
+                          <span style="font-size:11.5px;color:#64748b">参考图相似权重：<b>75%</b></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+              </div>
+
+              <!-- View 3: 选择声音 (配音音色、口播倍速) -->
+              <div id="vtabVoiceView" style="display:none">
+                <div style="font-size:13px;font-weight:700;color:#1e293b;margin-bottom:6px">选择声音 (AI 拟真数字人配音)</div>
+                <div style="font-size:12px;color:#94a3b8;margin-bottom:12px">点击音色卡片即可切换试听，右侧手机预览实时生效</div>
+
+                <div class="vg-voice-grid" style="margin-bottom:14px">
+                  <div class="vg-voice-card active" data-voice="知性干练商务女声">
+                    <div class="vg-voice-avatar">👩💼</div>
+                    <div style="flex:1;min-width:0">
+                      <div style="font-size:13px;font-weight:700;color:#1e293b">知性干练商务女声</div>
+                      <div style="font-size:11px;color:#64748b">适合企业宣发、产品测评</div>
+                    </div>
+                    <span class="chip-mini on">已选用</span>
+                  </div>
+                  <div class="vg-voice-card" data-voice="浑厚磁性纪录片男声">
+                    <div class="vg-voice-avatar">👨💼</div>
+                    <div style="flex:1;min-width:0">
+                      <div style="font-size:13px;font-weight:700;color:#1e293b">浑厚磁性纪录片男声</div>
+                      <div style="font-size:11px;color:#64748b">适合硬核科技、探厂背书</div>
+                    </div>
+                    <span class="chip-mini">选用</span>
+                  </div>
+                  <div class="vg-voice-card" data-voice="活力种草新媒体女声">
+                    <div class="vg-voice-avatar">👧✨</div>
+                    <div style="flex:1;min-width:0">
+                      <div style="font-size:13px;font-weight:700;color:#1e293b">活力种草新媒体女声</div>
+                      <div style="font-size:11px;color:#64748b">适合痛点种草、避坑科普</div>
+                    </div>
+                    <span class="chip-mini">选用</span>
+                  </div>
+                  <div class="vg-voice-card" data-voice="沉稳权威新闻播音男声">
+                    <div class="vg-voice-avatar">🎙️</div>
+                    <div style="flex:1;min-width:0">
+                      <div style="font-size:13px;font-weight:700;color:#1e293b">沉稳权威新闻播音男声</div>
+                      <div style="font-size:11px;color:#64748b">适合行业报告、合规解读</div>
+                    </div>
+                    <span class="chip-mini">选用</span>
+                  </div>
+                </div>
+
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:12px 14px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px">
+                  <div class="fg" style="margin-bottom:0">
+                    <span class="lb"><span style="color:#ef4444">*</span> 口播倍速调节</span>
+                    <select class="ipt" id="vgAiVoiceSpeed" style="height:34px">
+                      <option value="0.8">0.8X (深沉舒缓)</option>
+                      <option value="1.0" selected>1.0X (标准推荐语速)</option>
+                      <option value="1.2">1.2X (快节奏短视频)</option>
+                      <option value="1.5">1.5X (极速高能带货)</option>
+                    </select>
+                  </div>
+                  <div class="fg" style="margin-bottom:0">
+                    <span class="lb">人声母带级处理</span>
+                    <select class="ipt" style="height:34px">
+                      <option value="studio" selected>智能降噪与人声清晰度增强</option>
+                      <option value="natural">自然原声音场保留</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <!-- View 4: 视频字幕 (字幕开关、单语/双语、字幕断句) -->
+              <div id="vtabSubtitlesView" style="display:none">
+                <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
+                  <div style="font-size:13.5px;font-weight:750;color:#1e293b">视频字幕设置</div>
+                  <label style="display:flex;align-items:center;gap:6px;font-size:12.5px;color:#334155;cursor:pointer">
+                    <input type="checkbox" id="vgSubtitleToggle" checked style="accent-color:#6366f1" /> 开启视频字幕
+                  </label>
+                </div>
+                <div style="font-size:12px;color:#94a3b8;margin-bottom:12px">AI 大模型根据口播音频音轨毫秒级对齐字幕时间轴</div>
+
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px">
+                  <div class="fg" style="margin-bottom:0">
+                    <span class="lb"><span style="color:#ef4444">*</span> 单语 / 双语选择</span>
+                    <select class="ipt" id="vgSubtitleLangSelect">
+                      <option value="single" selected>单语字幕 (标准中文)</option>
+                      <option value="bilingual">双语对照 (中英双语对照)</option>
+                    </select>
+                  </div>
+                  <div class="fg" style="margin-bottom:0">
+                    <span class="lb"><span style="color:#ef4444">*</span> 字幕智能断句方式</span>
+                    <select class="ipt" id="vgAiSubtitleSplit">
+                      <option value="semantic" selected>AI 语义呼吸断句 (每行 ≤ 14字)</option>
+                      <option value="keyword">核心关键词高亮放大</option>
+                      <option value="rhythm">逐行匀速断句</option>
+                    </select>
+                  </div>
+                </div>
+
                 <div class="fg" style="margin-bottom:0">
-                  <span class="lb"><span style="color:#ef4444">*</span> 字幕智能断句方式</span>
-                  <select class="ipt" id="vgAiSubtitleSplit">
-                    <option value="semantic" selected>AI 语义呼吸断句 (每行 ≤ 14字)</option>
-                    <option value="keyword">核心关键词高亮放大</option>
-                    <option value="bilingual">中英双语对照字幕</option>
-                  </select>
+                  <span class="lb">口播与字幕内容 (实时对齐)</span>
+                  <textarea class="ipt" id="vgAiSubtitleText" rows="4" style="line-height:1.65">360安全科技自主研发云端安全大脑与自研AI杀毒双引擎。毫秒级识别未知勒索与木马威胁，拦截率高达99.98%，全方位守护企业与个人终端数据资产！</textarea>
                 </div>
               </div>
-              <div class="fg" style="margin-bottom:0">
-                <span class="lb"><span style="color:#ef4444">*</span> AI 视频画面提示词与字幕文本</span>
-                <textarea class="ipt" id="vgAiSubtitleText" rows="4" style="line-height:1.65">360安全科技自主研发云端安全大脑与自研AI杀毒双引擎。毫秒级识别未知勒索与木马威胁，拦截率高达99.98%，全方位守护企业与个人终端数据资产！</textarea>
-              </div>
-            </div>
-            <!-- View 2: 选择声音 -->
-            <div id="vtabVoiceView" style="display:none">
-              <div style="font-size:13px;font-weight:700;color:#1e293b;margin-bottom:6px">选择声音 (AI 拟真数字人配音)</div>
-              <div style="font-size:12px;color:#94a3b8;margin-bottom:12px">点击音色卡片即可切换试听，右侧手机预览实时生效</div>
-              <div class="vg-voice-grid">
-                <div class="vg-voice-card active" data-voice="知性干练商务女声">
-                  <div class="vg-voice-avatar">👩💼</div>
-                  <div style="flex:1;min-width:0">
-                    <div style="font-size:13px;font-weight:700;color:#1e293b">知性干练商务女声</div>
-                    <div style="font-size:11px;color:#64748b">适合企业宣发、产品测评</div>
+
+              <!-- View 5: 字幕样式 (字体、颜色、字号) -->
+              <div id="vtabStylesView" style="display:none">
+                <div style="font-size:13px;font-weight:700;color:#1e293b;margin-bottom:6px">字幕样式 (花字排版与视觉定制)</div>
+                <div style="font-size:12px;color:#94a3b8;margin-bottom:12px">选择高辨识度花字模板，提升短视频前 3 秒视觉停留率</div>
+
+                <div class="vg-style-grid" style="margin-bottom:14px">
+                  <div class="vg-style-chip active" data-style="default">
+                    <div style="font-size:13.5px;font-weight:800;color:#ffffff;background:rgba(15,23,42,0.78);padding:8px;border-radius:6px">经典白字半透黑底</div>
+                    <div style="font-size:11px;color:#64748b;margin-top:4px">清晰易读 · 商务通用</div>
                   </div>
-                  <span class="chip-mini on">已选用</span>
-                </div>
-                <div class="vg-voice-card" data-voice="浑厚磁性纪录片男声">
-                  <div class="vg-voice-avatar">👨💼</div>
-                  <div style="flex:1;min-width:0">
-                    <div style="font-size:13px;font-weight:700;color:#1e293b">浑厚磁性纪录片男声</div>
-                    <div style="font-size:11px;color:#64748b">适合硬核科技、探厂背书</div>
+                  <div class="vg-style-chip" data-style="yellow">
+                    <div style="font-size:13.5px;font-weight:800;color:#facc15;background:#1e293b;padding:8px;border-radius:6px;text-shadow:0 1px 2px #000">抖音热播黄黑描边</div>
+                    <div style="font-size:11px;color:#64748b;margin-top:4px">短视频爆款 · 极具冲击力</div>
                   </div>
-                  <span class="chip-mini">选用</span>
-                </div>
-                <div class="vg-voice-card" data-voice="活力种草新媒体女声">
-                  <div class="vg-voice-avatar">👧✨</div>
-                  <div style="flex:1;min-width:0">
-                    <div style="font-size:13px;font-weight:700;color:#1e293b">活力种草新媒体女声</div>
-                    <div style="font-size:11px;color:#64748b">适合痛点种草、避坑科普</div>
+                  <div class="vg-style-chip" data-style="karaoke">
+                    <div style="font-size:13.5px;font-weight:800;color:#38bdf8;background:rgba(0,0,0,0.7);padding:8px;border-radius:6px">双色卡拉OK渐变</div>
+                    <div style="font-size:11px;color:#64748b;margin-top:4px">逐字音轨高亮 · 视线聚焦</div>
                   </div>
-                  <span class="chip-mini">选用</span>
-                </div>
-                <div class="vg-voice-card" data-voice="沉稳权威新闻播音男声">
-                  <div class="vg-voice-avatar">🎙️</div>
-                  <div style="flex:1;min-width:0">
-                    <div style="font-size:13px;font-weight:700;color:#1e293b">沉稳权威新闻播音男声</div>
-                    <div style="font-size:11px;color:#64748b">适合行业报告、合规解读</div>
+                  <div class="vg-style-chip" data-style="minimal">
+                    <div style="font-size:13.5px;font-weight:800;color:#ffffff;background:#334155;padding:8px;border-radius:6px">商业极简无框字体</div>
+                    <div style="font-size:11px;color:#64748b;margin-top:4px">高级雅致 · 品牌宣传适用</div>
                   </div>
-                  <span class="chip-mini">选用</span>
                 </div>
-              </div>
-            </div>
-            <!-- View 3: 字幕样式 -->
-            <div id="vtabStylesView" style="display:none">
-              <div style="font-size:13px;font-weight:700;color:#1e293b;margin-bottom:6px">字幕样式 (高辨识度花字模板)</div>
-              <div style="font-size:12px;color:#94a3b8;margin-bottom:12px">选择高辨识度花字模板，提升前 3 秒视觉停留率</div>
-              <div class="vg-style-grid">
-                <div class="vg-style-chip active" data-style="default">
-                  <div style="font-size:13.5px;font-weight:800;color:#ffffff;background:rgba(15,23,42,0.78);padding:8px;border-radius:6px">经典白字半透黑底</div>
-                  <div style="font-size:11px;color:#64748b;margin-top:4px">清晰易读 · 商务通用</div>
-                </div>
-                <div class="vg-style-chip" data-style="yellow">
-                  <div style="font-size:13.5px;font-weight:800;color:#facc15;background:#1e293b;padding:8px;border-radius:6px;text-shadow:0 1px 2px #000">抖音热播黄黑描边</div>
-                  <div style="font-size:11px;color:#64748b;margin-top:4px">短视频爆款 · 极具冲击力</div>
-                </div>
-                <div class="vg-style-chip" data-style="karaoke">
-                  <div style="font-size:13.5px;font-weight:800;color:#38bdf8;background:rgba(0,0,0,0.7);padding:8px;border-radius:6px">双色卡拉OK渐变</div>
-                  <div style="font-size:11px;color:#64748b;margin-top:4px">逐字音轨高亮 · 视线聚焦</div>
-                </div>
-                <div class="vg-style-chip" data-style="minimal">
-                  <div style="font-size:13.5px;font-weight:800;color:#ffffff;background:#334155;padding:8px;border-radius:6px">商业极简无框字体</div>
-                  <div style="font-size:11px;color:#64748b;margin-top:4px">高级雅致 · 品牌宣传适用</div>
+
+                <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;padding:12px 14px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px">
+                  <div class="fg" style="margin-bottom:0">
+                    <span class="lb">字体选择</span>
+                    <select class="ipt" id="vgSubtitleFont" style="height:32px">
+                      <option value="pingfang" selected>苹方黑体 (标准)</option>
+                      <option value="source">思源黑体 Heavy</option>
+                      <option value="douyin">抖音热潮超粗黑</option>
+                    </select>
+                  </div>
+                  <div class="fg" style="margin-bottom:0">
+                    <span class="lb">字号大小</span>
+                    <select class="ipt" id="vgSubtitleSize" style="height:32px">
+                      <option value="20">20px (精简)</option>
+                      <option value="24" selected>24px (标准推荐)</option>
+                      <option value="28">28px (醒目大字)</option>
+                      <option value="32">32px (超大标题)</option>
+                    </select>
+                  </div>
+                  <div class="fg" style="margin-bottom:0">
+                    <span class="lb">文字颜色</span>
+                    <select class="ipt" id="vgSubtitleColor" style="height:32px">
+                      <option value="#ffffff" selected>纯白 (#ffffff)</option>
+                      <option value="#facc15">爆款黄 (#facc15)</option>
+                      <option value="#38bdf8">科技青 (#38bdf8)</option>
+                      <option value="#10b981">翡翠绿 (#10b981)</option>
+                    </select>
+                  </div>
                 </div>
               </div>
-            </div>
-            <!-- View 4: 背景音乐 (默认激活，1:1还原用户上传截图) -->
-            <div id="vtabBgmView" style="display:block">
-              <div style="font-size:13px;font-weight:700;color:#1e293b;margin-bottom:6px">背景音乐 (BGM)</div>
-              <div style="font-size:12px;color:#94a3b8;margin-bottom:12px">精选商用版权音乐库，自动根据人声口播做智能闪避</div>
-              <div style="display:grid;gap:8px">
-                <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 14px;border:1px solid #e2e8f0;border-radius:8px;background:#f8fafc">
-                  <div style="display:flex;align-items:center;gap:8px">
-                    <span style="font-size:16px">🎵</span>
-                    <div>
-                      <div style="font-size:13px;font-weight:700;color:#1e293b">大气质感商务节奏 (Corporate Inspiring)</div>
-                      <div style="font-size:11px;color:#64748b">BPM: 110 · 沉稳专业</div>
+
+              <!-- View 6: 背景音乐 (保留现有 BGM 列表) -->
+              <div id="vtabBgmView" style="display:none">
+                <div style="font-size:13px;font-weight:700;color:#1e293b;margin-bottom:6px">背景音乐 (BGM)</div>
+                <div style="font-size:12px;color:#94a3b8;margin-bottom:12px">精选商用版权音乐库，自动根据人声口播做智能闪避</div>
+                <div style="display:grid;gap:8px">
+                  <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 14px;border:1px solid #e2e8f0;border-radius:8px;background:#f8fafc">
+                    <div style="display:flex;align-items:center;gap:8px">
+                      <span style="font-size:16px">🎵</span>
+                      <div>
+                        <div style="font-size:13px;font-weight:700;color:#1e293b">大气质感商务节奏 (Corporate Inspiring)</div>
+                        <div style="font-size:11px;color:#64748b">BPM: 110 · 沉稳专业</div>
+                      </div>
                     </div>
+                    <button class="chip-mini on" id="bgmBtn1" type="button">当前选用</button>
                   </div>
-                  <button class="chip-mini on" id="bgmBtn1" type="button">当前选用</button>
-                </div>
-                <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 14px;border:1px solid #e2e8f0;border-radius:8px;background:#fff">
-                  <div style="display:flex;align-items:center;gap:8px">
-                    <span style="font-size:16px">🎵</span>
-                    <div>
-                      <div style="font-size:13px;font-weight:700;color:#1e293b">现代科技脉冲节奏 (Tech Ambient Future)</div>
-                      <div style="font-size:11px;color:#64748b">BPM: 124 · 极具高级感</div>
+                  <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 14px;border:1px solid #e2e8f0;border-radius:8px;background:#fff">
+                    <div style="display:flex;align-items:center;gap:8px">
+                      <span style="font-size:16px">🎵</span>
+                      <div>
+                        <div style="font-size:13px;font-weight:700;color:#1e293b">现代科技脉冲节奏 (Tech Ambient Future)</div>
+                        <div style="font-size:11px;color:#64748b">BPM: 124 · 极具高级感</div>
+                      </div>
                     </div>
+                    <button class="chip-mini" type="button">选用</button>
                   </div>
-                  <button class="chip-mini" type="button">选用</button>
-                </div>
-                <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 14px;border:1px solid #e2e8f0;border-radius:8px;background:#fff">
-                  <div style="display:flex;align-items:center;gap:8px">
-                    <span style="font-size:16px">🎵</span>
-                    <div>
-                      <div style="font-size:13px;font-weight:700;color:#1e293b">轻快科普种草节拍 (Upbeat Cheerful)</div>
-                      <div style="font-size:11px;color:#64748b">BPM: 118 · 抓人吸睛</div>
+                  <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 14px;border:1px solid #e2e8f0;border-radius:8px;background:#fff">
+                    <div style="display:flex;align-items:center;gap:8px">
+                      <span style="font-size:16px">🎵</span>
+                      <div>
+                        <div style="font-size:13px;font-weight:700;color:#1e293b">轻快科普种草节拍 (Upbeat Cheerful)</div>
+                        <div style="font-size:11px;color:#64748b">BPM: 118 · 抓人吸睛</div>
+                      </div>
                     </div>
+                    <button class="chip-mini" type="button">选用</button>
                   </div>
-                  <button class="chip-mini" type="button">选用</button>
                 </div>
               </div>
             </div>
@@ -1710,8 +1957,8 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
               </div>
             </div>
           </div>
-          <div style="font-size:11.5px;color:#94a3b8;margin-top:10px;text-align:center">
-            📱 移动端 9:16 短视频实机渲染预览（实时所见即所得）
+          <div style="font-size:11.5px;color:#94a3b8;margin-top:10px;text-align:center" id="vgPhoneBottomLabel">
+            📱 快剪实时渲染预览
           </div>
         </div>
       </div>
@@ -1725,7 +1972,7 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
       </div>
       <div style="display:flex;align-items:center;gap:10px">
         <button class="btn" id="vgStartRenderBtn" type="button" style="background:linear-gradient(135deg,#4f46e5,#7c3aed);color:#fff;border:none;box-shadow:0 4px 14px rgba(99,102,241,0.32)">
-          <span>🎬</span> 一键合成短视频 (高清MP4)
+          <span>🎬</span> 一键合成短视频 (高清 MP4)
         </button>
         <button class="btn o" id="vgSaveDraftBtn" type="button">📥 保存至文库</button>
         <button class="btn o" id="vgDispatchBtn" type="button" style="border-color:#6366f1;color:#4f46e5;font-weight:700">🚀 一键分发全网矩阵</button>
@@ -2031,27 +2278,27 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
 <div class="article-tabs" id="articleTabs"><button class="article-tab on" data-article-tab="auto" type="button">自动化文章 <span class="article-tab-count">941</span></button><button class="article-tab" data-article-tab="uploaded" type="button">上传的文章 <span class="article-tab-count" id="uploadedArticleCount">6</span></button></div>
 <div class="article-table-panel on" data-article-panel="auto">
 <div class="article-table-wrap"><table class="article-table" id="autoArticleTable"><colgroup><col style="width:36%"/><col style="width:13%"/><col style="width:15%"/><col style="width:15%"/><col style="width:13%"/><col style="width:8%"/></colgroup><thead><tr><th>标题</th><th>创作类型</th><th>已发布平台</th><th>生成时间</th><th>提交时间</th><th>操作</th></tr></thead><tbody>
-<tr data-title="企业级终端安全软件怎么选？2026年360安全卫士与EDR采购实用指南"><td class="article-title">企业级终端安全软件怎么选？2026年360安全卫士与EDR采购实用指南</td><td><span class="article-type-pill">采购指南类</span></td><td><span class="article-publish-none">未发布</span></td><td>2026-07-17 17:38:44</td><td>—</td><td><div class="article-actions"><button class="article-link article-view">查看</button><button class="article-link danger article-delete">删除</button></div></td></tr>
-<tr data-title="服务器防勒索病毒实战指南：360安全大脑主动防御与数据恢复"><td class="article-title">服务器防勒索病毒实战指南：360安全大脑主动防御与数据恢复</td><td><span class="article-type-pill">采购指南类</span></td><td><span class="article-publish-review">审核中</span></td><td>2026-07-17 17:38:43</td><td>2026-07-17 18:02:18</td><td><div class="article-actions"><button class="article-link article-view">查看</button><button class="article-link danger article-delete">删除</button></div></td></tr>
-<tr data-title="2026年网络安全等保2.0合规方案：主流安全厂商防御能力对照"><td class="article-title">2026年网络安全等保2.0合规方案：主流安全厂商防御能力对照</td><td><span class="article-type-pill">排行·盘点类</span></td><td><span class="article-publish-none">未发布</span></td><td>2026-07-17 17:38:43</td><td>—</td><td><div class="article-actions"><button class="article-link article-view">查看</button><button class="article-link danger article-delete">删除</button></div></td></tr>
-<tr data-title="企业终端防病毒测评报告怎么看？核心检出率与漏报率核验要点"><td class="article-title">企业终端防病毒测评报告怎么看？核心检出率与漏报率核验要点</td><td><span class="article-type-pill">行业问答类</span></td><td><span class="article-publish-none">未发布</span></td><td>2026-07-17 17:38:07</td><td>—</td><td><div class="article-actions"><button class="article-link article-view">查看</button><button class="article-link danger article-delete">删除</button></div></td></tr>
-<tr data-title="企业网络安全防护层级解析：终端杀毒、网关防护与态势感知架构"><td class="article-title">企业网络安全防护层级解析：终端杀毒、网关防护与态势感知架构</td><td><span class="article-type-pill">知识科普类</span></td><td><span class="article-publish-none">未发布</span></td><td>2026-07-17 17:38:07</td><td>—</td><td><div class="article-actions"><button class="article-link article-view">查看</button><button class="article-link danger article-delete">删除</button></div></td></tr>
-<tr data-title="等级保护三级测评整改机构怎么选：资质、案例与产品服务清单"><td class="article-title">等级保护三级测评整改机构怎么选：资质、案例与产品服务清单</td><td><span class="article-type-pill">推荐·解法类</span></td><td><span class="article-publish-none">未发布</span></td><td>2026-07-17 17:38:06</td><td>—</td><td><div class="article-actions"><button class="article-link article-view">查看</button><button class="article-link danger article-delete">删除</button></div></td></tr>
-<tr data-title="360天擎集中管控平台部署周期多长？从测试打样到全网推行排期指南"><td class="article-title">360天擎集中管控平台部署周期多长？从测试打样到全网推行排期指南</td><td><span class="article-type-pill">采购指南类</span></td><td><span class="article-publish-none">未发布</span></td><td>2026-07-17 17:38:05</td><td>—</td><td><div class="article-actions"><button class="article-link article-view">查看</button><button class="article-link danger article-delete">删除</button></div></td></tr>
-<tr data-title="360安全大模型与传统杀毒引擎区别：AI自动化告警研判评测"><td class="article-title">360安全大模型与传统杀毒引擎区别：AI自动化告警研判评测</td><td><span class="article-type-pill">评测·基准类</span></td><td><span class="article-publish-none">未发布</span></td><td>2026-07-17 17:38:05</td><td>—</td><td><div class="article-actions"><button class="article-link article-view">查看</button><button class="article-link danger article-delete">删除</button></div></td></tr>
-<tr data-title="金融机构核心业务系统防勒索：微隔离与底层只读诱捕怎么选"><td class="article-title">金融机构核心业务系统防勒索：微隔离与底层只读诱捕怎么选</td><td><span class="article-type-pill">场景解决方案</span></td><td><span class="article-publish-none">未发布</span></td><td>2026-07-17 17:37:32</td><td>—</td><td><div class="article-actions"><button class="article-link article-view">查看</button><button class="article-link danger article-delete">删除</button></div></td></tr>
-<tr data-title="食品级无纺布袋检测报告怎么读 采购方核验要点"><td class="article-title">国家等级保护安全产品认证证书怎么读：企业采购合规要点</td><td><span class="article-type-pill">行业问答类</span></td><td><span class="article-publish-done">知乎</span></td><td>2026-07-16 14:12:20</td><td>2026-07-16 15:08:00</td><td><div class="article-actions"><button class="article-link article-view">查看</button><button class="article-link danger article-delete">删除</button></div></td></tr>
-<tr data-title="2026年数字安全防护选型：五家主流网络安全厂商技术参数对照"><td class="article-title">2026年数字安全防护选型：五家主流网络安全厂商技术参数对照</td><td><span class="article-type-pill">排行·盘点类</span></td><td><span class="article-publish-done">头条号</span></td><td>2026-07-02 09:48:10</td><td>2026-07-02 10:24:00</td><td><div class="article-actions"><button class="article-link article-view">查看</button><button class="article-link danger article-delete">删除</button></div></td></tr><tr data-title="食品级无纺布袋检测报告解读"><td class="article-title">食品级无纺布袋检测报告解读</td><td><span class="article-type-pill">行业问答类</span></td><td><span class="article-publish-done">知乎</span></td><td>2026-07-04 14:36:18</td><td>2026-07-04 15:08:00</td><td><div class="article-actions"><button class="article-link article-view">查看</button><button class="article-link danger article-delete">删除</button></div></td></tr><tr data-title="外卖袋一般用什么材质"><td class="article-title">外卖袋一般用什么材质</td><td><span class="article-type-pill">知识科普类</span></td><td><span class="article-publish-done">客户产品官网</span></td><td>2026-07-08 09:10:32</td><td>2026-07-08 09:41:00</td><td><div class="article-actions"><button class="article-link article-view">查看</button><button class="article-link danger article-delete">删除</button></div></td></tr><tr data-title="奶茶保温袋保温层工艺对照"><td class="article-title">奶茶保温袋保温层工艺对照</td><td><span class="article-type-pill">评测·基准类</span></td><td><span class="article-publish-done">百家号</span></td><td>2026-07-12 11:20:14</td><td>2026-07-12 11:56:00</td><td><div class="article-actions"><button class="article-link article-view">查看</button><button class="article-link danger article-delete">删除</button></div></td></tr><tr data-title="无纺布卷材克重公差实测"><td class="article-title">无纺布卷材克重公差实测</td><td><span class="article-type-pill">评测·基准类</span></td><td><span class="article-publish-done">B2B联盟站群</span></td><td>2026-07-13 13:58:26</td><td>2026-07-13 14:30:00</td><td><div class="article-actions"><button class="article-link article-view">查看</button><button class="article-link danger article-delete">删除</button></div></td></tr></tbody></table><div class="article-empty" id="autoArticleEmpty">没有匹配当前关键词的自动化文章</div></div>
+<tr data-title="企业级终端安全软件怎么选？2026年360安全卫士与EDR采购实用指南"><td class="article-title">企业级终端安全软件怎么选？2026年360安全卫士与EDR采购实用指南</td><td><span class="article-type-pill">采购指南类</span></td><td><span class="article-publish-none">未发布</span></td><td>2026-07-17 17:38:44</td><td>—</td><td><div class="article-actions"><button class="article-link article-view">查看</button></div></td></tr>
+<tr data-title="服务器防勒索病毒实战指南：360安全大脑主动防御与数据恢复"><td class="article-title">服务器防勒索病毒实战指南：360安全大脑主动防御与数据恢复</td><td><span class="article-type-pill">采购指南类</span></td><td><span class="article-publish-review">审核中</span></td><td>2026-07-17 17:38:43</td><td>2026-07-17 18:02:18</td><td><div class="article-actions"><button class="article-link article-view">查看</button></div></td></tr>
+<tr data-title="2026年网络安全等保2.0合规方案：主流安全厂商防御能力对照"><td class="article-title">2026年网络安全等保2.0合规方案：主流安全厂商防御能力对照</td><td><span class="article-type-pill">排行·盘点类</span></td><td><span class="article-publish-none">未发布</span></td><td>2026-07-17 17:38:43</td><td>—</td><td><div class="article-actions"><button class="article-link article-view">查看</button></div></td></tr>
+<tr data-title="企业终端防病毒测评报告怎么看？核心检出率与漏报率核验要点"><td class="article-title">企业终端防病毒测评报告怎么看？核心检出率与漏报率核验要点</td><td><span class="article-type-pill">行业问答类</span></td><td><span class="article-publish-none">未发布</span></td><td>2026-07-17 17:38:07</td><td>—</td><td><div class="article-actions"><button class="article-link article-view">查看</button></div></td></tr>
+<tr data-title="企业网络安全防护层级解析：终端杀毒、网关防护与态势感知架构"><td class="article-title">企业网络安全防护层级解析：终端杀毒、网关防护与态势感知架构</td><td><span class="article-type-pill">知识科普类</span></td><td><span class="article-publish-none">未发布</span></td><td>2026-07-17 17:38:07</td><td>—</td><td><div class="article-actions"><button class="article-link article-view">查看</button></div></td></tr>
+<tr data-title="等级保护三级测评整改机构怎么选：资质、案例与产品服务清单"><td class="article-title">等级保护三级测评整改机构怎么选：资质、案例与产品服务清单</td><td><span class="article-type-pill">推荐·解法类</span></td><td><span class="article-publish-none">未发布</span></td><td>2026-07-17 17:38:06</td><td>—</td><td><div class="article-actions"><button class="article-link article-view">查看</button></div></td></tr>
+<tr data-title="360天擎集中管控平台部署周期多长？从测试打样到全网推行排期指南"><td class="article-title">360天擎集中管控平台部署周期多长？从测试打样到全网推行排期指南</td><td><span class="article-type-pill">采购指南类</span></td><td><span class="article-publish-none">未发布</span></td><td>2026-07-17 17:38:05</td><td>—</td><td><div class="article-actions"><button class="article-link article-view">查看</button></div></td></tr>
+<tr data-title="360安全大模型与传统杀毒引擎区别：AI自动化告警研判评测"><td class="article-title">360安全大模型与传统杀毒引擎区别：AI自动化告警研判评测</td><td><span class="article-type-pill">评测·基准类</span></td><td><span class="article-publish-none">未发布</span></td><td>2026-07-17 17:38:05</td><td>—</td><td><div class="article-actions"><button class="article-link article-view">查看</button></div></td></tr>
+<tr data-title="金融机构核心业务系统防勒索：微隔离与底层只读诱捕怎么选"><td class="article-title">金融机构核心业务系统防勒索：微隔离与底层只读诱捕怎么选</td><td><span class="article-type-pill">场景解决方案</span></td><td><span class="article-publish-none">未发布</span></td><td>2026-07-17 17:37:32</td><td>—</td><td><div class="article-actions"><button class="article-link article-view">查看</button></div></td></tr>
+<tr data-title="食品级无纺布袋检测报告怎么读 采购方核验要点"><td class="article-title">国家等级保护安全产品认证证书怎么读：企业采购合规要点</td><td><span class="article-type-pill">行业问答类</span></td><td><span class="article-publish-done">知乎</span></td><td>2026-07-16 14:12:20</td><td>2026-07-16 15:08:00</td><td><div class="article-actions"><button class="article-link article-view">查看</button></div></td></tr>
+<tr data-title="2026年数字安全防护选型：五家主流网络安全厂商技术参数对照"><td class="article-title">2026年数字安全防护选型：五家主流网络安全厂商技术参数对照</td><td><span class="article-type-pill">排行·盘点类</span></td><td><span class="article-publish-done">头条号</span></td><td>2026-07-02 09:48:10</td><td>2026-07-02 10:24:00</td><td><div class="article-actions"><button class="article-link article-view">查看</button></div></td></tr><tr data-title="食品级无纺布袋检测报告解读"><td class="article-title">食品级无纺布袋检测报告解读</td><td><span class="article-type-pill">行业问答类</span></td><td><span class="article-publish-done">知乎</span></td><td>2026-07-04 14:36:18</td><td>2026-07-04 15:08:00</td><td><div class="article-actions"><button class="article-link article-view">查看</button></div></td></tr><tr data-title="外卖袋一般用什么材质"><td class="article-title">外卖袋一般用什么材质</td><td><span class="article-type-pill">知识科普类</span></td><td><span class="article-publish-done">客户产品官网</span></td><td>2026-07-08 09:10:32</td><td>2026-07-08 09:41:00</td><td><div class="article-actions"><button class="article-link article-view">查看</button></div></td></tr><tr data-title="奶茶保温袋保温层工艺对照"><td class="article-title">奶茶保温袋保温层工艺对照</td><td><span class="article-type-pill">评测·基准类</span></td><td><span class="article-publish-done">百家号</span></td><td>2026-07-12 11:20:14</td><td>2026-07-12 11:56:00</td><td><div class="article-actions"><button class="article-link article-view">查看</button></div></td></tr><tr data-title="无纺布卷材克重公差实测"><td class="article-title">无纺布卷材克重公差实测</td><td><span class="article-type-pill">评测·基准类</span></td><td><span class="article-publish-done">B2B联盟站群</span></td><td>2026-07-13 13:58:26</td><td>2026-07-13 14:30:00</td><td><div class="article-actions"><button class="article-link article-view">查看</button></div></td></tr></tbody></table><div class="article-empty" id="autoArticleEmpty">没有匹配当前关键词的自动化文章</div></div>
 <div class="article-pagination"><span>共 941 条</span><select class="page-select"><option>10条/页</option><option>20条/页</option><option>50条/页</option></select><button class="page-num" disabled="">‹</button><button class="page-num on">1</button><button class="page-num">2</button><button class="page-num">3</button><button class="page-num">4</button><button class="page-num">5</button><button class="page-num">6</button><span class="page-ellipsis">…</span><button class="page-num">95</button><button class="page-num">›</button><span>前往</span><input class="ipt" style="width:54px;padding:5px 7px;text-align:center" value="1"/><span>页</span></div>
 </div>
 <div class="article-table-panel" data-article-panel="uploaded">
 <div class="article-table-wrap"><table class="article-table" id="uploadedArticleTable"><colgroup><col style="width:36%"/><col style="width:13%"/><col style="width:15%"/><col style="width:15%"/><col style="width:13%"/><col style="width:8%"/></colgroup><thead><tr><th>标题</th><th>创作类型</th><th>已发布平台</th><th>生成时间</th><th>提交时间</th><th>操作</th></tr></thead><tbody>
-<tr data-title="360安全科技企业介绍2026"><td class="article-title">360安全科技股份有限公司企业介绍 2026</td><td><span class="article-type-pill">人工上传</span></td><td><span class="article-publish-done">客户产品官网</span></td><td>2026-07-14 09:22:10</td><td>2026-07-14 10:03:00</td><td><div class="article-actions"><button class="article-link article-view">查看</button><button class="article-link danger article-delete">删除</button></div></td></tr>
-<tr data-title="360天擎终端安全客户端安装与合规基线检查标准说明"><td class="article-title">360天擎终端安全客户端安装与合规基线检查标准说明</td><td><span class="article-type-pill">人工上传</span></td><td><span class="article-publish-none">未发布</span></td><td>2026-07-13 16:08:22</td><td>—</td><td><div class="article-actions"><button class="article-link article-view">查看</button><button class="article-link danger article-delete">删除</button></div></td></tr>
-<tr data-title="ISO9001质量管理体系资质解读"><td class="article-title">ISO9001 质量管理体系资质解读</td><td><span class="article-type-pill">人工上传</span></td><td><span class="article-publish-none">未发布</span></td><td>2026-07-12 11:30:48</td><td>—</td><td><div class="article-actions"><button class="article-link article-view">查看</button><button class="article-link danger article-delete">删除</button></div></td></tr>
-<tr data-title="大型央国企数字安全态势感知平台建设案例与交付说明"><td class="article-title">大型央国企数字安全态势感知平台建设案例与交付说明</td><td><span class="article-type-pill">人工上传</span></td><td><span class="article-publish-none">未发布</span></td><td>2026-07-11 10:18:03</td><td>—</td><td><div class="article-actions"><button class="article-link article-view">查看</button><button class="article-link danger article-delete">删除</button></div></td></tr>
-<tr data-title="360安全实验室国际权威安全测评认证报告说明"><td class="article-title">360安全实验室国际权威安全测评认证报告说明</td><td><span class="article-type-pill">人工上传</span></td><td><span class="article-publish-done">百家号</span></td><td>2026-07-09 15:46:32</td><td>2026-07-09 16:20:00</td><td><div class="article-actions"><button class="article-link article-view">查看</button><button class="article-link danger article-delete">删除</button></div></td></tr>
-<tr data-title="无纺布袋常见采购问题FAQ"><td class="article-title">企业终端安全管理系统常见部署问题 FAQ</td><td><span class="article-type-pill">人工上传</span></td><td><span class="article-publish-none">未发布</span></td><td>2026-07-08 13:12:51</td><td>—</td><td><div class="article-actions"><button class="article-link article-view">查看</button><button class="article-link danger article-delete">删除</button></div></td></tr>
+<tr data-title="360安全科技企业介绍2026"><td class="article-title">360安全科技股份有限公司企业介绍 2026</td><td><span class="article-type-pill">人工上传</span></td><td><span class="article-publish-done">客户产品官网</span></td><td>2026-07-14 09:22:10</td><td>2026-07-14 10:03:00</td><td><div class="article-actions"><button class="article-link article-view">查看</button></div></td></tr>
+<tr data-title="360天擎终端安全客户端安装与合规基线检查标准说明"><td class="article-title">360天擎终端安全客户端安装与合规基线检查标准说明</td><td><span class="article-type-pill">人工上传</span></td><td><span class="article-publish-none">未发布</span></td><td>2026-07-13 16:08:22</td><td>—</td><td><div class="article-actions"><button class="article-link article-view">查看</button></div></td></tr>
+<tr data-title="ISO9001质量管理体系资质解读"><td class="article-title">ISO9001 质量管理体系资质解读</td><td><span class="article-type-pill">人工上传</span></td><td><span class="article-publish-none">未发布</span></td><td>2026-07-12 11:30:48</td><td>—</td><td><div class="article-actions"><button class="article-link article-view">查看</button></div></td></tr>
+<tr data-title="大型央国企数字安全态势感知平台建设案例与交付说明"><td class="article-title">大型央国企数字安全态势感知平台建设案例与交付说明</td><td><span class="article-type-pill">人工上传</span></td><td><span class="article-publish-none">未发布</span></td><td>2026-07-11 10:18:03</td><td>—</td><td><div class="article-actions"><button class="article-link article-view">查看</button></div></td></tr>
+<tr data-title="360安全实验室国际权威安全测评认证报告说明"><td class="article-title">360安全实验室国际权威安全测评认证报告说明</td><td><span class="article-type-pill">人工上传</span></td><td><span class="article-publish-done">百家号</span></td><td>2026-07-09 15:46:32</td><td>2026-07-09 16:20:00</td><td><div class="article-actions"><button class="article-link article-view">查看</button></div></td></tr>
+<tr data-title="无纺布袋常见采购问题FAQ"><td class="article-title">企业终端安全管理系统常见部署问题 FAQ</td><td><span class="article-type-pill">人工上传</span></td><td><span class="article-publish-none">未发布</span></td><td>2026-07-08 13:12:51</td><td>—</td><td><div class="article-actions"><button class="article-link article-view">查看</button></div></td></tr>
 </tbody></table><div class="article-empty" id="uploadedArticleEmpty">没有匹配当前关键词的上传文章</div></div>
 <div class="article-pagination"><span>共 <b id="uploadedTotal">6</b> 条</span><select class="page-select"><option>10条/页</option></select><button class="page-num" disabled="">‹</button><button class="page-num on">1</button><button class="page-num" disabled="">›</button></div>
 </div>
@@ -3456,9 +3703,546 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
       </div>
     </div>
   </div>
-</div>`;function f(){if(!window.__appInitialized){window.__appInitialized=!0;try{let e={dash:[`首页概览`,`全网AI搜索场景覆盖与GEO增长数据总览`],inc:[`收录查询`,`精准检测文章在各大AI大模型的收录状态与信源偏好`],kb:[`企业知识库`,`维护企业事实、主体资质、核心业务与产品知识源`],persona:[`人群画像`,`从核心产品反推人群特征、搜索场景与采购决策考量`],kw:[`关键词挖掘`,`基于知识库与语义Agent智能挖掘长尾词与高潜搜索词条`],gen:[`内容创作与用户需求画像建模`,`填写或选择下方「核心关键词 + 长尾关键词」，点击右侧绿色 AI Agent 图标即可智能反推「用户画像 → 搜索场景 → 用户痛点 → 多维关联图谱」，并在当前页面直接生成标准 3000 字深度长文。`],videographic:[`视频/图文`,`多模态AI短视频与新媒体图文内容生成中心`],articles:[`发布记录`,`统一沉淀全量自动化生成文章与人工上传文档`],pub:[`文章发布`,`选择私人媒体库或权威矩阵媒体一键分发投稿`],agent:[`我的套餐`,`企业服务套餐余量、功能配额明细与账户余额充值`]};window.__geoSwitchPage=function(t){if(!t)return;let n=document.getElementById(t);if(!n)return;document.querySelectorAll(`.page`).forEach(e=>e.classList.remove(`on`)),n.classList.add(`on`),document.querySelectorAll(`.nav a`).forEach(e=>{let n=e.dataset.p===t;e.classList.toggle(`on`,n),e.setAttribute(`aria-current`,n?`page`:`false`)});let r=e[t]||[`360智见GEO`,`企业AI搜索可见性优化平台`],i=document.getElementById(`headerKicker`),a=document.getElementById(`ht`),o=document.getElementById(`headerSubtitle`);i&&(i.textContent=[`dash`,`inc`].includes(t)?`监测与分析`:[`agent`].includes(t)?`服务与账户`:`GEO 内容增长`,i.style.display=t===`gen`?`none`:``),a&&(a.textContent=r[0]),o&&(o.textContent=r[1]),location.hash.slice(1)!==t&&history.replaceState(null,``,`#`+t),window.scrollTo({top:0,behavior:`instant`})},document.querySelectorAll(`.nav a[data-p]`).forEach(e=>{e.onclick=t=>{t.preventDefault(),window.__geoSwitchPage(e.dataset.p)}}),document.querySelectorAll(`.chip`).forEach(e=>e.onclick=()=>{if(e.parentNode.dataset.multi){e.classList.toggle(`on`);return}[...e.parentNode.children].forEach(e=>e.classList.remove(`on`)),e.classList.add(`on`)}),document.querySelectorAll(`table`).forEach(e=>{if(e.parentElement.classList.contains(`table-scroll`))return;let t=document.createElement(`div`);t.className=`table-scroll`,(e.rows[0]?e.rows[0].cells.length:0)>=7&&t.classList.add(`wide`),e.parentNode.insertBefore(t,e),t.appendChild(e)});let t=document.querySelector(`.toast`)||(()=>{let e=document.createElement(`div`);return e.className=`toast`,document.body.appendChild(e),e})(),n;function r(e){t.textContent=e,t.classList.add(`show`),clearTimeout(n),n=setTimeout(()=>t.classList.remove(`show`),1800)}window.showToast=r;document.querySelectorAll(`.geo-step[data-jump]`).forEach(e=>e.onclick=()=>{let t=e.dataset.jump,n=document.querySelector(`.nav a[data-p="`+t+`"]`);n&&n.click()});let i=document.getElementById(`enterpriseName`),a=document.getElementById(`creditCode`),o=document.getElementById(`industryName`),s=document.getElementById(`businessAddress`),c=document.getElementById(`companyContact`),l=document.getElementById(`companyContactPhone`),u=document.getElementById(`companyContactEmail`),d=document.getElementById(`companyCompletion`),f=document.getElementById(`slotC`),p=document.getElementById(`licenseFileInput`),m=document.getElementById(`licenseFileName`),h=!0,g=!0;function _(){let e=[i,a,o,s,c,l,u].every(e=>e&&e.value.trim()),t=/^[0-9+()\-\s]{6,24}$/.test(l.value.trim()),n=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(u.value.trim());return e&&t&&n&&h}function v(){let e=_();return d.textContent=e?`● 已完成主体认证`:`● 基本信息待完善`,d.style.color=e?`#12835a`:`#a86b10`,d.style.background=e?`#e9f8f1`:`#fff5e3`,d.style.borderColor=e?`#d4eedf`:`#f4ddaf`,f&&(f.value=i.value.trim()),e}[i,a,o,s,c,l,u].forEach(e=>e&&e.addEventListener(`input`,()=>{g=!1,v(),d.textContent=`● 基本信息待保存`,d.style.color=`#a86b10`,d.style.background=`#fff5e3`,d.style.borderColor=`#f4ddaf`})),document.getElementById(`saveCompanyInfo`).onclick=()=>{if(!v()){r(`请补全企业信息、联系人电话/邮箱与营业执照`);return}g=!0,v(),r(`企业基本信息已保存，并同步到内容创作`)},document.getElementById(`licenseUploadBtn`).onclick=()=>p.click(),p.onchange=()=>{let e=p.files&&p.files[0];e&&(m.textContent=e.name,h=!0,g=!1,v(),d.textContent=`● 基本信息待保存`,d.style.color=`#a86b10`,d.style.background=`#fff5e3`,d.style.borderColor=`#f4ddaf`,r(`营业执照已更新，请保存基本信息`))};let y=document.getElementById(`kbUploadModal`),b=document.getElementById(`kbFileInput`),x=document.getElementById(`kbTable`),S=document.getElementById(`kbDocType`),C=document.getElementById(`kbModalTitle`),w=null;function T(){y.classList.remove(`show`),w=null}function ee(e){if(!v()||!g){r(`请先完善并保存企业基本信息`),document.querySelector(`.nav a[data-p="kb"]`).click();return}w=e||null,b.value=``,S.value=e?e.querySelector(`.doc-type`).textContent.trim():``,C.textContent=e?`替换知识库文档`:`上传企业文档`,y.classList.add(`show`)}function E(e){e.querySelector(`.kb-replace`).onclick=()=>ee(e),e.querySelector(`.kb-delete`).onclick=()=>{let t=e.querySelector(`.doc-name`).textContent.trim();(typeof window.confirm===`function`?window.confirm(`确认删除「`+t+`」？`):!0)&&(e.remove(),r(`文档已删除`))}}document.getElementById(`kbUploadTop`).onclick=()=>ee(null),document.querySelectorAll(`#kbTable tr`).forEach((e,t)=>{t>0&&E(e)}),document.getElementById(`kbModalClose`).onclick=T,document.getElementById(`kbModalCancel`).onclick=T,y.addEventListener(`click`,e=>{e.target===y&&T()}),document.addEventListener(`keydown`,e=>{e.key===`Escape`&&y.classList.contains(`show`)&&T()}),document.getElementById(`kbModalConfirm`).onclick=()=>{let e=b.files&&b.files[0],t=S.value;if(!t){r(`请选择文件类型`),S.focus();return}if(!e){r(`请选择要上传的文档`),b.focus();return}if(w)w.querySelector(`.doc-name`).textContent=e.name,w.querySelector(`.doc-type`).textContent=t,r(`文档已替换并重新进入知识库处理`);else{let n=x.insertRow(-1);n.innerHTML=`<td class="doc-name"></td><td class="doc-type"></td><td><div class="op-actions"><button class="action-btn kb-replace"><span class="action-icon">↥</span>上传</button><button class="action-btn danger kb-delete"><span class="action-icon">⌫</span>删除</button></div></td>`,n.querySelector(`.doc-name`).textContent=e.name,n.querySelector(`.doc-type`).textContent=t,E(n),r(`文档已加入企业知识库`)}T()};let te=document.getElementById(`keywordEntities`),D=document.getElementById(`personaCoreKeywordSelect`),ne=document.getElementById(`personaLongTailSelect`),O=document.getElementById(`coreKeywordSelect`),re=document.getElementById(`longTailSelect`);function ie(){return[...new Set((te?.value||``).split(/\n+/).map(e=>e.trim()).filter(Boolean))]}window.getEntities=ie;function ae(){let e=ie(),t=document.getElementById(`entityCountPill`);if(t&&(t.textContent=e.length+` 个核心实体`),O){let t=O.value;O.innerHTML=``,e.forEach(e=>{let t=document.createElement(`option`);t.value=t.textContent=e,O.appendChild(t)}),e.includes(t)&&(O.value=t)}if(D){let t=D.value;D.innerHTML=``,e.forEach(e=>{let t=document.createElement(`option`);t.value=t.textContent=e,D.appendChild(t)}),e.includes(t)&&(D.value=t)}let n=document.getElementById(`kwEntityFilter`);if(n){let t=n.value;n.innerHTML=`<option value="">全部核心实体</option>`,e.forEach(e=>{let t=document.createElement(`option`);t.value=t.textContent=e,n.appendChild(t)}),e.includes(t)&&(n.value=t)}k()}function k(){let e=O?.value||D?.value||``,t=[...document.querySelectorAll(`#longTailTable tr`)].slice(1).filter(t=>t.cells[1]&&t.cells[1].textContent.trim()===e).map(e=>e.cells[0]?.textContent.trim()).filter(Boolean);if(re){if(re.innerHTML=``,t.length)t.forEach(e=>{let t=document.createElement(`option`);t.value=t.textContent=e,re.appendChild(t)});else{let e=document.createElement(`option`);e.textContent=`暂无匹配长尾词`,e.disabled=!0,e.selected=!0,re.appendChild(e)}}if(ne){if(ne.innerHTML=``,t.length)t.forEach(e=>{let t=document.createElement(`option`);t.value=t.textContent=e,ne.appendChild(t)});else{let e=document.createElement(`option`);e.textContent=`暂无匹配长尾词`,e.disabled=!0,e.selected=!0,ne.appendChild(e)}}}window.syncLongTails=k;te?.addEventListener(`input`,()=>{document.getElementById(`persona`)?.classList.remove(`agent-generated`),ae(),typeof applyKwFilters==`function`&&applyKwFilters()}),O?.addEventListener(`change`,()=>{D&&(D.value=O.value),k(),typeof updateGenerationSummary==`function`&&updateGenerationSummary()}),D?.addEventListener(`change`,()=>{O&&(O.value=D.value),k(),typeof updateGenerationSummary==`function`&&updateGenerationSummary()}),ae(),v();let oe=document.getElementById(`personaAgentBtn`),se=document.getElementById(`persona`);oe&&(oe.onclick=()=>{oe.classList.add(`running`),oe.setAttribute(`aria-busy`,`true`),setTimeout(()=>{se?.classList.add(`agent-generated`),oe.classList.remove(`running`),oe.removeAttribute(`aria-busy`),r(`人群画像 Agent 已完成分析`)},650)});let ce=document.getElementById(`prefixSuffixAgent`);ce&&(ce.onclick=()=>{if(!ie().length){r(`请先填写至少一个核心实体`);return}ce.classList.add(`running`),ce.setAttribute(`aria-busy`,`true`);let e=document.getElementById(`agentLastRun`);e&&(e.textContent=`Agent 挖掘中…`),setTimeout(()=>{ce.classList.remove(`running`),ce.removeAttribute(`aria-busy`),e&&(e.textContent=`刚刚已挖掘`),r(`长尾词挖掘 Agent 已完成智能拓词与质检`)},700)});let le=document.getElementById(`mediaLibraryTabs`);le&&(le.addEventListener(`click`,e=>{let t=e.target.closest(`.media-library-tab`);if(!t)return;let n=t.dataset.library;le.querySelectorAll(`.media-library-tab`).forEach(e=>e.classList.toggle(`on`,e===t)),document.querySelectorAll(`#pub .media-library-panel`).forEach(e=>e.classList.toggle(`on`,e.dataset.libraryPanel===n))}),document.querySelectorAll(`#pub .library-alt-table .alt-price`).forEach((e,t)=>e.textContent=(t*11+7)%51));let ue=document.getElementById(`articleTabs`),de=document.getElementById(`articleSearchInput`),fe=`auto`;function pe(){return document.querySelector(`[data-article-panel="`+fe+`"]`)}function me(){let e=pe();if(!e)return;let t=(de?.value||``).trim().toLowerCase(),n=0;e.querySelectorAll(`tbody tr`).forEach(e=>{let r=!t||(e.dataset.title||``).toLowerCase().includes(t);e.style.display=r?``:`none`,r&&n++});let r=e.querySelector(`.article-empty`);r&&r.classList.toggle(`show`,n===0)}window.filterArticleRows=me;ue&&ue.addEventListener(`click`,e=>{let t=e.target.closest(`.article-tab`);t&&(fe=t.dataset.articleTab,ue.querySelectorAll(`.article-tab`).forEach(e=>e.classList.toggle(`on`,e===t)),document.querySelectorAll(`.article-table-panel`).forEach(e=>e.classList.toggle(`on`,e.dataset.articlePanel===fe)),me())}),document.getElementById(`articleSearchBtn`)?.addEventListener(`click`,me),de?.addEventListener(`keydown`,e=>{e.key===`Enter`&&me()}),document.getElementById(`articleSearchReset`)?.addEventListener(`click`,()=>{de.value=``,me()}),document.getElementById(`articles`)?.addEventListener(`click`,e=>{let t=e.target.closest(`.article-view`);if(t){r(`正在打开文章：「`+t.closest(`tr`).querySelector(`.article-title`).textContent.trim()+`」`);return}let n=e.target.closest(`.article-delete`);if(n){let e=n.closest(`tr`),t=e.querySelector(`.article-title`).textContent.trim();(typeof window.confirm===`function`?window.confirm(`确认删除文章「`+t+`」？`):!0)&&(e.remove(),r(`文章已删除`),me(),_e())}});let he=document.getElementById(`articleAddModal`);function ge(e){he?.classList.toggle(`show`,e)}document.getElementById(`articleAddBtn`)?.addEventListener(`click`,()=>ge(!0)),document.getElementById(`articleAddClose`)?.addEventListener(`click`,()=>ge(!1)),document.getElementById(`articleAddCancel`)?.addEventListener(`click`,()=>ge(!1)),he?.addEventListener(`click`,e=>{e.target===he&&ge(!1)});function _e(){let e=document.querySelectorAll(`#uploadedArticleTable tbody tr`).length,t=document.getElementById(`uploadedArticleCount`),n=document.getElementById(`uploadedTotal`);t&&(t.textContent=e),n&&(n.textContent=e)}document.getElementById(`articleAddConfirm`)?.addEventListener(`click`,()=>{let e=document.getElementById(`articleAddTitle`).value.trim();if(!e){r(`请填写文章标题`);return}let t=document.getElementById(`articleAddType`).value,n=document.querySelector(`#uploadedArticleTable tbody`),i=document.createElement(`tr`);i.dataset.title=e;let a=new Date(Math.min(Date.now(),new Date(`2026-07-30T23:59:59`).getTime()));i.innerHTML=`<td class="article-title"></td><td><span class="article-type-pill"></span></td><td><span class="article-publish-none">未发布</span></td><td>`+(a.getFullYear()+`-`+String(a.getMonth()+1).padStart(2,`0`)+`-`+String(a.getDate()).padStart(2,`0`)+` `+String(a.getHours()).padStart(2,`0`)+`:`+String(a.getMinutes()).padStart(2,`0`)+`:`+String(a.getSeconds()).padStart(2,`0`))+`</td><td>—</td><td><div class="article-actions"><button class="article-link article-view">查看</button><button class="article-link danger article-delete">删除</button></div></td>`,i.querySelector(`.article-title`).textContent=e,i.querySelector(`.article-type-pill`).textContent=t,n.prepend(i),document.getElementById(`articleAddTitle`).value=``,document.getElementById(`articleAddContent`).value=``,ge(!1),_e(),r(`文章已添加到「上传的文章」`)}),_e();let ve=document.getElementById(`pubFilterPanel`),ye=document.getElementById(`pubMediaTable`);if(ve&&ye){let e=[...ye.tBodies[0].rows],t=document.getElementById(`pubVisibleCount`),n=document.getElementById(`pubFootCount`),i=document.getElementById(`pubFilterCount`),a=document.getElementById(`pubEmpty`);e.forEach((e,t)=>{let n=(t*7+13)%51;e.dataset.priceValue=String(n),e.querySelector(`.pub-price`).textContent=n});function o(){let e={};return ve.querySelectorAll(`.pub-filter-row`).forEach(t=>{let n=t.querySelector(`.pub-filter-option.on`);e[t.dataset.key]=n?n.dataset.value:`不限`}),e}function s(e,t,n){if(!n||n===`不限`||t===`sort`)return!0;if(t===`price`){let t=Number(e.dataset.priceValue||0);return n===`0~50`?t>=0&&t<=50:n===`50~200`?t>50&&t<=200:n===`200~500`?t>200&&t<=500:n===`500~1000`?t>500&&t<=1e3:n===`1000~2000`?t>1e3&&t<=2e3:n===`2000~5000`?t>2e3&&t<=5e3:n!==`5000以上`||t>5e3}return t===`geo`?n===`所有`||(e.dataset.geo||``).split(`,`).includes(n):(e.dataset[t]||``)===n}function c(t){let n=ye.tBodies[0],r=e.filter(e=>e.style.display!==`none`),i=e.filter(e=>e.style.display===`none`),a={价格升序:[`priceValue`,1],价格降序:[`priceValue`,-1],AI收录率升序:[`ai`,1],AI收录率降序:[`ai`,-1],出稿率升序:[`output`,1],出稿率降序:[`output`,-1],出稿时间升序:[`days`,1],出稿时间降序:[`days`,-1],活跃度升序:[`active`,1],活跃度降序:[`active`,-1]};if(a[t]){let[e,n]=a[t];r.sort((t,r)=>(Number(t.dataset[e])-Number(r.dataset[e]))*n)}[...r,...i].forEach(e=>n.appendChild(e))}function l(){let r=o(),l=(document.querySelector(`[data-media-search="private"] .media-library-search-input`)?.value||``).trim().toLowerCase(),u=0;e.forEach(e=>{let t=(e.querySelector(`.media-name`)?.textContent||``).trim().toLowerCase(),n=Object.entries(r).every(([t,n])=>s(e,t,n))&&(!l||t.includes(l));e.style.display=n?``:`none`,n&&u++}),c(r.sort),t.textContent=u,n.textContent=u,i.textContent=u+` 家媒体`,a.classList.toggle(`show`,u===0)}window.__applyPrivateMediaFilters=l,ve.addEventListener(`click`,e=>{let t=e.target.closest(`.pub-filter-option`);t&&(t.closest(`.pub-filter-row`).querySelectorAll(`.pub-filter-option`).forEach(e=>e.classList.remove(`on`)),t.classList.add(`on`),l())}),document.getElementById(`pubFilterReset`).onclick=()=>{ve.querySelectorAll(`.pub-filter-row`).forEach(e=>{e.querySelectorAll(`.pub-filter-option`).forEach(e=>e.classList.remove(`on`));let t=e.querySelector(`.pub-filter-option[data-value="不限"]`)||e.querySelector(`.pub-filter-option`);t&&t.classList.add(`on`)}),l(),r(`媒体筛选条件已重置`)},l()}document.querySelectorAll(`#pub .media-library-search`).forEach(e=>{let t=e.closest(`.media-library-panel`),n=e.dataset.mediaSearch,r=e.querySelector(`.media-library-search-input`),i=e.querySelector(`.media-library-search-query`),a=e.querySelector(`.media-library-search-reset`);function o(){if(n===`private`){window.__applyPrivateMediaFilters?.();return}let e=(r.value||``).trim().toLowerCase(),i=t.querySelector(`.pub-resource-table`);if(!i)return;let a=0;[...i.tBodies[0].rows].forEach(t=>{let n=(t.querySelector(`.media-name`)?.textContent||``).trim().toLowerCase(),r=!e||n.includes(e);t.style.display=r?``:`none`,r&&a++});let o=t.querySelector(`.pub-resource-meta b`);o&&(o.textContent=a)}i.addEventListener(`click`,o),a.addEventListener(`click`,()=>{r.value=``,o()}),r.addEventListener(`keydown`,e=>{e.key===`Enter`&&o()})}),document.getElementById(`articleCount`);let be=document.getElementById(`startRankingTest`),A=document.getElementById(`rankingResults`),j=document.getElementById(`rankTaskStatus`),xe=document.getElementById(`openDiagnosticReport`),Se=document.getElementById(`diagnosticReportTemplate`);be&&A&&be.addEventListener(`click`,()=>{A.classList.remove(`show`),be.disabled=!0,be.textContent=`检测中…`,j&&(j.className=`rank-task-status running`,j.textContent=`正在调用 6 个 AI 平台并生成排名诊断…`),setTimeout(()=>{A.classList.add(`show`),be.disabled=!1,be.textContent=`重新检测`,j&&(j.className=`rank-task-status done`,j.textContent=`检测完成 · 36 条结果 · 诊断报告已生成`),r(`排名检测完成，诊断报告已生成`),A.scrollIntoView({behavior:`smooth`,block:`start`})},720)});function Ce(){let e=Array.from(document.querySelectorAll(`style`)).map(e=>e.textContent||``).join(`
+
+  <!-- Modal 1: 素材包预览弹窗 -->
+  <div class="modal-backdrop" id="vgMaterialPreviewModal">
+    <div class="modal" style="max-width:680px">
+      <div class="modal-head">
+        <div class="modal-title" style="display:flex;align-items:center;gap:8px">
+          <span>🎬</span>
+          <span id="vgMaterialModalTitle">素材包片段预览：360安全大脑可视化防御大屏与终端实测</span>
+        </div>
+        <button class="modal-close" id="vgMaterialModalClose" type="button">×</button>
+      </div>
+      <div class="modal-body" style="padding:16px 20px">
+        <div style="display:flex;align-items:center;justify-content:space-between;background:#f8fafc;padding:10px 14px;border-radius:8px;border:1px solid #e2e8f0;margin-bottom:14px">
+          <div style="font-size:12.5px;color:#334155">
+            共包含 <b style="color:#4f46e5" id="vgMaterialModalClipCount">42 支超清片段</b> ｜ 总时长 08:32 ｜ 格式: 1080P/60fps MP4
+          </div>
+          <span class="pill b" style="font-size:11px">✓ 已通过AI质量与画质初筛</span>
+        </div>
+        
+        <div style="grid-template-columns:repeat(3,1fr);gap:12px;max-height:360px;overflow-y:auto;padding:2px;display:grid" id="vgMaterialClipsGrid">
+          <div class="vg-mat-card" style="border:1.5px solid #4f46e5;border-radius:8px;background:#eff6ff;padding:8px;cursor:pointer">
+            <div style="position:relative;border-radius:6px;overflow:hidden;height:84px;background:#0f172a">
+              <img referrerPolicy="no-referrer" alt="片段1" src="${socScreenImg}" style="width:100%;height:100%;object-fit:cover" />
+              <span style="position:absolute;bottom:4px;right:4px;background:rgba(0,0,0,0.7);color:#fff;font-size:10px;padding:1px 5px;border-radius:4px">00:14</span>
+              <span style="position:absolute;top:4px;left:4px;background:#4f46e5;color:#fff;font-size:9.5px;padding:1px 4px;border-radius:3px">片段 #01</span>
+            </div>
+            <div style="font-size:12px;font-weight:700;color:#0f172a;margin-top:6px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">SOC态势感知中心实拍</div>
+            <div style="font-size:11px;color:#64748b;margin-top:2px">4K HDR · 运镜推进</div>
+          </div>
+          <div class="vg-mat-card" style="border:1px solid #e2e8f0;border-radius:8px;background:#ffffff;padding:8px;cursor:pointer">
+            <div style="position:relative;border-radius:6px;overflow:hidden;height:84px;background:#0f172a">
+              <img referrerPolicy="no-referrer" alt="片段2" src="${endpointDefenseImg}" style="width:100%;height:100%;object-fit:cover" />
+              <span style="position:absolute;bottom:4px;right:4px;background:rgba(0,0,0,0.7);color:#fff;font-size:10px;padding:1px 5px;border-radius:4px">00:18</span>
+              <span style="position:absolute;top:4px;left:4px;background:#64748b;color:#fff;font-size:9.5px;padding:1px 4px;border-radius:3px">片段 #02</span>
+            </div>
+            <div style="font-size:12px;font-weight:700;color:#0f172a;margin-top:6px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">终端主动拦截实测录屏</div>
+            <div style="font-size:11px;color:#64748b;margin-top:2px">1080P · 告警弹窗特写</div>
+          </div>
+          <div class="vg-mat-card" style="border:1px solid #e2e8f0;border-radius:8px;background:#ffffff;padding:8px;cursor:pointer">
+            <div style="position:relative;border-radius:6px;overflow:hidden;height:84px;background:#0f172a">
+              <img referrerPolicy="no-referrer" alt="片段3" src="${complianceBadgeImg}" style="width:100%;height:100%;object-fit:cover" />
+              <span style="position:absolute;bottom:4px;right:4px;background:rgba(0,0,0,0.7);color:#fff;font-size:10px;padding:1px 5px;border-radius:4px">00:22</span>
+              <span style="position:absolute;top:4px;left:4px;background:#64748b;color:#fff;font-size:9.5px;padding:1px 4px;border-radius:3px">片段 #03</span>
+            </div>
+            <div style="font-size:12px;font-weight:700;color:#0f172a;margin-top:6px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">等保三级资质证书特写</div>
+            <div style="font-size:11px;color:#64748b;margin-top:2px">1080P · 权威背书印章</div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-foot" style="display:flex;justify-content:flex-end;gap:10px;padding:12px 20px;border-top:1px solid #f1f5f9">
+        <button class="btn o" id="vgMaterialModalCancel" type="button">关闭</button>
+        <button class="btn" id="vgMaterialModalConfirm" type="button" style="background:#4f46e5;color:#fff">选用此素材分组</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2: 模板样片分镜预览弹窗 -->
+  <div class="modal-backdrop" id="vgTemplatePreviewModal">
+    <div class="modal" style="max-width:620px">
+      <div class="modal-head">
+        <div class="modal-title" style="display:flex;align-items:center;gap:8px">
+          <span>🎬</span>
+          <span id="vgTemplateModalTitle">混剪模板样片详情：黄金前3秒痛点暴击模板</span>
+        </div>
+        <button class="modal-close" id="vgTemplateModalClose" type="button">×</button>
+      </div>
+      <div class="modal-body" style="padding:16px 20px">
+        <div style="position:relative;border-radius:10px;overflow:hidden;height:180px;background:#0f172a;margin-bottom:14px;display:flex;align-items:center;justify-content:center">
+          <img id="vgTemplateModalImg" referrerPolicy="no-referrer" alt="样片大图" src="${socScreenImg}" style="width:100%;height:100%;object-fit:cover;opacity:0.75" />
+          <div style="position:absolute;display:flex;flex-direction:column;align-items:center;gap:6px">
+            <span style="background:rgba(255,255,255,0.92);color:#4f46e5;width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:bold;box-shadow:0 4px 12px rgba(0,0,0,0.3)">▶</span>
+            <span style="color:#ffffff;font-size:12px;font-weight:700;text-shadow:0 1px 4px #000">点击播放模板样片演示 (15秒)</span>
+          </div>
+        </div>
+        
+        <div style="font-size:13px;font-weight:750;color:#0f172a;margin-bottom:8px">模板分镜节奏与时间轴设计：</div>
+        <div style="display:grid;gap:8px;font-size:12px;color:#334155">
+          <div style="display:flex;align-items:center;gap:10px;padding:8px 12px;background:#f8fafc;border-radius:6px;border:1px solid #e2e8f0">
+            <span class="pill b" style="font-size:10.5px">00:00 - 00:03</span>
+            <b style="color:#0f172a">第1幕：痛点暴击</b>
+            <span style="color:#64748b">黄黑描边花字 + 警报音效 + 快速切镜，留存率提升45%</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;padding:8px 12px;background:#f8fafc;border-radius:6px;border:1px solid #e2e8f0">
+            <span class="pill b" style="font-size:10.5px">00:03 - 00:10</span>
+            <b style="color:#0f172a">第2幕：核心卖点卡点</b>
+            <span style="color:#64748b">3支实测片段节拍快剪 + 缩放转场 + 核心参数突出</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;padding:8px 12px;background:#f8fafc;border-radius:6px;border:1px solid #e2e8f0">
+            <span class="pill b" style="font-size:10.5px">00:10 - 00:15</span>
+            <b style="color:#0f172a">第3幕：背书与行动号召</b>
+            <span style="color:#64748b">企业资质认证浮现 + 品牌Slogan定格 + 引导点击</span>
+          </div>
+        </div>
+      </div>
+      <div class="modal-foot" style="display:flex;justify-content:flex-end;gap:10px;padding:12px 20px;border-top:1px solid #f1f5f9">
+        <button class="btn o" id="vgTemplateModalCancel" type="button">关闭</button>
+        <button class="btn" id="vgTemplateModalConfirm" type="button" style="background:#4f46e5;color:#fff">应用此混剪模板</button>
+      </div>
+    </div>
+  </div>
+</div>`;function f(){if(!window.__appInitialized){window.__appInitialized=!0;try{let e={dash:[`首页概览`,`全网AI搜索场景覆盖与GEO增长数据总览`],inc:[`收录查询`,`精准检测文章在各大AI大模型的收录状态与信源偏好`],kb:[`企业知识库`,`维护企业事实、主体资质、核心业务与产品知识源`],persona:[`人群画像`,`从核心产品反推人群特征、搜索场景与采购决策考量`],kw:[`关键词挖掘`,`基于知识库与语义Agent智能挖掘长尾词与高潜搜索词条`],gen:[`内容创作与用户需求画像建模`,`填写或选择下方「核心关键词 + 长尾关键词」，点击右侧绿色 AI Agent 图标即可智能反推「用户画像 → 搜索场景 → 用户痛点」，并在当前页面直接生成标准 3000 字深度长文。`],videographic:[`视频/图文`,`多模态AI短视频与新媒体图文内容生成中心`],articles:[`发布记录`,`统一沉淀全量自动化生成文章与人工上传文档`],pub:[`文章发布`,`选择私人媒体库或权威矩阵媒体一键分发投稿`],agent:[`我的套餐`,`企业服务套餐余量、功能配额明细与账户余额充值`]};window.__geoSwitchPage=function(t){if(!t)return;let n=document.getElementById(t);if(!n)return;document.querySelectorAll(`.page`).forEach(e=>e.classList.remove(`on`)),n.classList.add(`on`),document.querySelectorAll(`.nav a`).forEach(e=>{let n=e.dataset.p===t;e.classList.toggle(`on`,n),e.setAttribute(`aria-current`,n?`page`:`false`)});let r=e[t]||[`360智见GEO`,`企业AI搜索可见性优化平台`],i=document.getElementById(`headerKicker`),a=document.getElementById(`ht`),o=document.getElementById(`headerSubtitle`);i&&(i.textContent=[`dash`,`inc`].includes(t)?`监测与分析`:[`agent`].includes(t)?`服务与账户`:`GEO 内容增长`,i.style.display=t===`gen`?`none`:``),a&&(a.textContent=r[0]),o&&(o.textContent=r[1]),location.hash.slice(1)!==t&&history.replaceState(null,``,`#`+t),window.scrollTo({top:0,behavior:`instant`})},document.querySelectorAll(`.nav a[data-p]`).forEach(e=>{e.onclick=t=>{t.preventDefault(),window.__geoSwitchPage(e.dataset.p)}}),document.querySelectorAll(`.chip`).forEach(e=>e.onclick=()=>{if(e.parentNode.dataset.multi){e.classList.toggle(`on`);return}[...e.parentNode.children].forEach(e=>e.classList.remove(`on`)),e.classList.add(`on`)}),document.querySelectorAll(`table`).forEach(e=>{if(e.parentElement.classList.contains(`table-scroll`))return;let t=document.createElement(`div`);t.className=`table-scroll`,(e.rows[0]?e.rows[0].cells.length:0)>=7&&t.classList.add(`wide`),e.parentNode.insertBefore(t,e),t.appendChild(e)});let t=document.querySelector(`.toast`)||(()=>{let e=document.createElement(`div`);return e.className=`toast`,document.body.appendChild(e),e})(),n;function r(e){t.textContent=e,t.classList.add(`show`),clearTimeout(n),n=setTimeout(()=>t.classList.remove(`show`),1800)}window.showToast=r;document.querySelectorAll(`.geo-step[data-jump]`).forEach(e=>e.onclick=()=>{let t=e.dataset.jump,n=document.querySelector(`.nav a[data-p="`+t+`"]`);n&&n.click()});let i=document.getElementById(`enterpriseName`),a=document.getElementById(`creditCode`),o=document.getElementById(`industryName`),s=document.getElementById(`businessAddress`),c=document.getElementById(`companyContact`),l=document.getElementById(`companyContactPhone`),u=document.getElementById(`companyContactEmail`),d=document.getElementById(`companyCompletion`),f=document.getElementById(`slotC`),p=document.getElementById(`licenseFileInput`),m=document.getElementById(`licenseFileName`),h=!0,g=!0;function _(){let e=[i,a,o,s,c,l,u].every(e=>e&&e.value.trim()),t=/^[0-9+()\-\s]{6,24}$/.test(l.value.trim()),n=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(u.value.trim());return e&&t&&n&&h}function v(){let e=_();return d.textContent=e?`● 已完成主体认证`:`● 基本信息待完善`,d.style.color=e?`#12835a`:`#a86b10`,d.style.background=e?`#e9f8f1`:`#fff5e3`,d.style.borderColor=e?`#d4eedf`:`#f4ddaf`,f&&(f.value=i.value.trim()),e}[i,a,o,s,c,l,u].forEach(e=>e&&e.addEventListener(`input`,()=>{g=!1,v(),d.textContent=`● 基本信息待保存`,d.style.color=`#a86b10`,d.style.background=`#fff5e3`,d.style.borderColor=`#f4ddaf`})),document.getElementById(`saveCompanyInfo`).onclick=()=>{if(!v()){r(`请补全企业信息、联系人电话/邮箱与营业执照`);return}g=!0,v(),r(`企业基本信息已保存，并同步到内容创作`)},document.getElementById(`licenseUploadBtn`).onclick=()=>p.click(),p.onchange=()=>{let e=p.files&&p.files[0];e&&(m.textContent=e.name,h=!0,g=!1,v(),d.textContent=`● 基本信息待保存`,d.style.color=`#a86b10`,d.style.background=`#fff5e3`,d.style.borderColor=`#f4ddaf`,r(`营业执照已更新，请保存基本信息`))};let y=document.getElementById(`kbUploadModal`),b=document.getElementById(`kbFileInput`),x=document.getElementById(`kbTable`),S=document.getElementById(`kbDocType`),C=document.getElementById(`kbModalTitle`),w=null;function T(){y.classList.remove(`show`),w=null}function ee(e){if(!v()||!g){r(`请先完善并保存企业基本信息`),document.querySelector(`.nav a[data-p="kb"]`).click();return}w=e||null,b.value=``,S.value=e?e.querySelector(`.doc-type`).textContent.trim():``,C.textContent=e?`替换知识库文档`:`上传企业文档`,y.classList.add(`show`)}function E(e){e.querySelector(`.kb-replace`).onclick=()=>ee(e),e.querySelector(`.kb-delete`).onclick=()=>{let t=e.querySelector(`.doc-name`).textContent.trim();(typeof window.confirm===`function`?window.confirm(`确认删除「`+t+`」？`):!0)&&(e.remove(),r(`文档已删除`))}}document.getElementById(`kbUploadTop`).onclick=()=>ee(null),document.querySelectorAll(`#kbTable tr`).forEach((e,t)=>{t>0&&E(e)}),document.getElementById(`kbModalClose`).onclick=T,document.getElementById(`kbModalCancel`).onclick=T,y.addEventListener(`click`,e=>{e.target===y&&T()}),document.addEventListener(`keydown`,e=>{e.key===`Escape`&&y.classList.contains(`show`)&&T()}),document.getElementById(`kbModalConfirm`).onclick=()=>{let e=b.files&&b.files[0],t=S.value;if(!t){r(`请选择文件类型`),S.focus();return}if(!e){r(`请选择要上传的文档`),b.focus();return}if(w)w.querySelector(`.doc-name`).textContent=e.name,w.querySelector(`.doc-type`).textContent=t,r(`文档已替换并重新进入知识库处理`);else{let n=x.insertRow(-1);n.innerHTML=`<td class="doc-name"></td><td class="doc-type"></td><td><div class="op-actions"><button class="action-btn kb-replace"><span class="action-icon">↥</span>上传</button><button class="action-btn danger kb-delete"><span class="action-icon">⌫</span>删除</button></div></td>`,n.querySelector(`.doc-name`).textContent=e.name,n.querySelector(`.doc-type`).textContent=t,E(n),r(`文档已加入企业知识库`)}T()};let te=document.getElementById(`keywordEntities`),D=document.getElementById(`personaCoreKeywordSelect`),ne=document.getElementById(`personaLongTailSelect`),O=document.getElementById(`coreKeywordSelect`),re=document.getElementById(`longTailSelect`);function ie(){return[...new Set((te?.value||``).split(/\n+/).map(e=>e.trim()).filter(Boolean))]}window.getEntities=ie;function ae(){let e=ie(),t=document.getElementById(`entityCountPill`);if(t&&(t.textContent=e.length+` 个核心实体`),O){let t=O.value;O.innerHTML=``,e.forEach(e=>{let t=document.createElement(`option`);t.value=t.textContent=e,O.appendChild(t)}),e.includes(t)&&(O.value=t)}if(D){let t=D.value;D.innerHTML=``,e.forEach(e=>{let t=document.createElement(`option`);t.value=t.textContent=e,D.appendChild(t)}),e.includes(t)&&(D.value=t)}let n=document.getElementById(`kwEntityFilter`);if(n){let t=n.value;n.innerHTML=`<option value="">全部核心实体</option>`,e.forEach(e=>{let t=document.createElement(`option`);t.value=t.textContent=e,n.appendChild(t)}),e.includes(t)&&(n.value=t)}k()}function k(){let e=O?.value||D?.value||``,t=[...document.querySelectorAll(`#longTailTable tr`)].slice(1).filter(t=>t.cells[1]&&t.cells[1].textContent.trim()===e).map(e=>e.cells[0]?.textContent.trim()).filter(Boolean);if(re){if(re.innerHTML=``,t.length)t.forEach(e=>{let t=document.createElement(`option`);t.value=t.textContent=e,re.appendChild(t)});else{let e=document.createElement(`option`);e.textContent=`暂无匹配长尾词`,e.disabled=!0,e.selected=!0,re.appendChild(e)}}if(ne){if(ne.innerHTML=``,t.length)t.forEach(e=>{let t=document.createElement(`option`);t.value=t.textContent=e,ne.appendChild(t)});else{let e=document.createElement(`option`);e.textContent=`暂无匹配长尾词`,e.disabled=!0,e.selected=!0,ne.appendChild(e)}}}window.syncLongTails=k;te?.addEventListener(`input`,()=>{document.getElementById(`persona`)?.classList.remove(`agent-generated`),ae(),typeof applyKwFilters==`function`&&applyKwFilters()}),O?.addEventListener(`change`,()=>{D&&(D.value=O.value),k(),typeof updateGenerationSummary==`function`&&updateGenerationSummary()}),D?.addEventListener(`change`,()=>{O&&(O.value=D.value),k(),typeof updateGenerationSummary==`function`&&updateGenerationSummary()}),ae(),v();let oe=document.getElementById(`personaAgentBtn`),se=document.getElementById(`persona`);oe&&(oe.onclick=()=>{oe.classList.add(`running`),oe.setAttribute(`aria-busy`,`true`),setTimeout(()=>{se?.classList.add(`agent-generated`),oe.classList.remove(`running`),oe.removeAttribute(`aria-busy`),r(`人群画像 Agent 已完成分析`)},650)});let ce=document.getElementById(`prefixSuffixAgent`);ce&&(ce.onclick=()=>{if(!ie().length){r(`请先填写至少一个核心实体`);return}ce.classList.add(`running`),ce.setAttribute(`aria-busy`,`true`);let e=document.getElementById(`agentLastRun`);e&&(e.textContent=`Agent 挖掘中…`),setTimeout(()=>{ce.classList.remove(`running`),ce.removeAttribute(`aria-busy`),e&&(e.textContent=`刚刚已挖掘`),r(`长尾词挖掘 Agent 已完成智能拓词与质检`)},700)});let le=document.getElementById(`mediaLibraryTabs`);le&&(le.addEventListener(`click`,e=>{let t=e.target.closest(`.media-library-tab`);if(!t)return;let n=t.dataset.library;le.querySelectorAll(`.media-library-tab`).forEach(e=>e.classList.toggle(`on`,e===t)),document.querySelectorAll(`#pub .media-library-panel`).forEach(e=>e.classList.toggle(`on`,e.dataset.libraryPanel===n))}),document.querySelectorAll(`#pub .library-alt-table .alt-price`).forEach((e,t)=>e.textContent=(t*11+7)%51));let ue=document.getElementById(`articleTabs`),de=document.getElementById(`articleSearchInput`),fe=`auto`;function pe(){return document.querySelector(`[data-article-panel="`+fe+`"]`)}function me(){let e=pe();if(!e)return;let t=(de?.value||``).trim().toLowerCase(),n=0;e.querySelectorAll(`tbody tr`).forEach(e=>{let r=!t||(e.dataset.title||``).toLowerCase().includes(t);e.style.display=r?``:`none`,r&&n++});let r=e.querySelector(`.article-empty`);r&&r.classList.toggle(`show`,n===0)}window.filterArticleRows=me;ue&&ue.addEventListener(`click`,e=>{let t=e.target.closest(`.article-tab`);t&&(fe=t.dataset.articleTab,ue.querySelectorAll(`.article-tab`).forEach(e=>e.classList.toggle(`on`,e===t)),document.querySelectorAll(`.article-table-panel`).forEach(e=>e.classList.toggle(`on`,e.dataset.articlePanel===fe)),me())}),document.getElementById(`articleSearchBtn`)?.addEventListener(`click`,me),de?.addEventListener(`keydown`,e=>{e.key===`Enter`&&me()}),document.getElementById(`articleSearchReset`)?.addEventListener(`click`,()=>{de.value=``,me()}),document.getElementById(`articles`)?.addEventListener(`click`,e=>{let t=e.target.closest(`.article-view`);if(t){r(`正在打开文章：「`+t.closest(`tr`).querySelector(`.article-title`).textContent.trim()+`」`);return}let n=e.target.closest(`.article-delete`);if(n){let e=n.closest(`tr`),t=e.querySelector(`.article-title`).textContent.trim();(typeof window.confirm===`function`?window.confirm(`确认删除文章「`+t+`」？`):!0)&&(e.remove(),r(`文章已删除`),me(),_e())}});let he=document.getElementById(`articleAddModal`);function ge(e){he?.classList.toggle(`show`,e)}document.getElementById(`articleAddBtn`)?.addEventListener(`click`,()=>ge(!0)),document.getElementById(`articleAddClose`)?.addEventListener(`click`,()=>ge(!1)),document.getElementById(`articleAddCancel`)?.addEventListener(`click`,()=>ge(!1)),he?.addEventListener(`click`,e=>{e.target===he&&ge(!1)});function _e(){let e=document.querySelectorAll(`#uploadedArticleTable tbody tr`).length,t=document.getElementById(`uploadedArticleCount`),n=document.getElementById(`uploadedTotal`);t&&(t.textContent=e),n&&(n.textContent=e)}document.getElementById(`articleAddConfirm`)?.addEventListener(`click`,()=>{let e=document.getElementById(`articleAddTitle`).value.trim();if(!e){r(`请填写文章标题`);return}let t=document.getElementById(`articleAddType`).value,n=document.querySelector(`#uploadedArticleTable tbody`),i=document.createElement(`tr`);i.dataset.title=e;let a=new Date(Math.min(Date.now(),new Date(`2026-07-30T23:59:59`).getTime()));i.innerHTML=`<td class="article-title"></td><td><span class="article-type-pill"></span></td><td><span class="article-publish-none">未发布</span></td><td>`+(a.getFullYear()+`-`+String(a.getMonth()+1).padStart(2,`0`)+`-`+String(a.getDate()).padStart(2,`0`)+` `+String(a.getHours()).padStart(2,`0`)+`:`+String(a.getMinutes()).padStart(2,`0`)+`:`+String(a.getSeconds()).padStart(2,`0`))+`</td><td>—</td><td><div class="article-actions"><button class="article-link article-view">查看</button></div></td>`,i.querySelector(`.article-title`).textContent=e,i.querySelector(`.article-type-pill`).textContent=t,n.prepend(i),document.getElementById(`articleAddTitle`).value=``,document.getElementById(`articleAddContent`).value=``,ge(!1),_e(),r(`文章已添加到「上传的文章」`)}),_e();let ve=document.getElementById(`pubFilterPanel`),ye=document.getElementById(`pubMediaTable`);if(ve&&ye){let e=[...ye.tBodies[0].rows],t=document.getElementById(`pubVisibleCount`),n=document.getElementById(`pubFootCount`),i=document.getElementById(`pubFilterCount`),a=document.getElementById(`pubEmpty`);e.forEach((e,t)=>{let n=(t*7+13)%51;e.dataset.priceValue=String(n),e.querySelector(`.pub-price`).textContent=n});function o(){let e={};return ve.querySelectorAll(`.pub-filter-row`).forEach(t=>{let n=t.querySelector(`.pub-filter-option.on`);e[t.dataset.key]=n?n.dataset.value:`不限`}),e}function s(e,t,n){if(!n||n===`不限`||t===`sort`)return!0;if(t===`price`){let t=Number(e.dataset.priceValue||0);return n===`0~50`?t>=0&&t<=50:n===`50~200`?t>50&&t<=200:n===`200~500`?t>200&&t<=500:n===`500~1000`?t>500&&t<=1e3:n===`1000~2000`?t>1e3&&t<=2e3:n===`2000~5000`?t>2e3&&t<=5e3:n!==`5000以上`||t>5e3}return t===`geo`?n===`所有`||(e.dataset.geo||``).split(`,`).includes(n):(e.dataset[t]||``)===n}function c(t){let n=ye.tBodies[0],r=e.filter(e=>e.style.display!==`none`),i=e.filter(e=>e.style.display===`none`),a={价格升序:[`priceValue`,1],价格降序:[`priceValue`,-1],AI收录率升序:[`ai`,1],AI收录率降序:[`ai`,-1],出稿率升序:[`output`,1],出稿率降序:[`output`,-1],出稿时间升序:[`days`,1],出稿时间降序:[`days`,-1],活跃度升序:[`active`,1],活跃度降序:[`active`,-1]};if(a[t]){let[e,n]=a[t];r.sort((t,r)=>(Number(t.dataset[e])-Number(r.dataset[e]))*n)}[...r,...i].forEach(e=>n.appendChild(e))}function l(){let r=o(),l=(document.querySelector(`[data-media-search="private"] .media-library-search-input`)?.value||``).trim().toLowerCase(),u=0;e.forEach(e=>{let t=(e.querySelector(`.media-name`)?.textContent||``).trim().toLowerCase(),n=Object.entries(r).every(([t,n])=>s(e,t,n))&&(!l||t.includes(l));e.style.display=n?``:`none`,n&&u++}),c(r.sort),t.textContent=u,n.textContent=u,i.textContent=u+` 家媒体`,a.classList.toggle(`show`,u===0)}window.__applyPrivateMediaFilters=l,ve.addEventListener(`click`,e=>{let t=e.target.closest(`.pub-filter-option`);t&&(t.closest(`.pub-filter-row`).querySelectorAll(`.pub-filter-option`).forEach(e=>e.classList.remove(`on`)),t.classList.add(`on`),l())}),document.getElementById(`pubFilterReset`).onclick=()=>{ve.querySelectorAll(`.pub-filter-row`).forEach(e=>{e.querySelectorAll(`.pub-filter-option`).forEach(e=>e.classList.remove(`on`));let t=e.querySelector(`.pub-filter-option[data-value="不限"]`)||e.querySelector(`.pub-filter-option`);t&&t.classList.add(`on`)}),l(),r(`媒体筛选条件已重置`)},l()}document.querySelectorAll(`#pub .media-library-search`).forEach(e=>{let t=e.closest(`.media-library-panel`),n=e.dataset.mediaSearch,r=e.querySelector(`.media-library-search-input`),i=e.querySelector(`.media-library-search-query`),a=e.querySelector(`.media-library-search-reset`);function o(){if(n===`private`){window.__applyPrivateMediaFilters?.();return}let e=(r.value||``).trim().toLowerCase(),i=t.querySelector(`.pub-resource-table`);if(!i)return;let a=0;[...i.tBodies[0].rows].forEach(t=>{let n=(t.querySelector(`.media-name`)?.textContent||``).trim().toLowerCase(),r=!e||n.includes(e);t.style.display=r?``:`none`,r&&a++});let o=t.querySelector(`.pub-resource-meta b`);o&&(o.textContent=a)}i.addEventListener(`click`,o),a.addEventListener(`click`,()=>{r.value=``,o()}),r.addEventListener(`keydown`,e=>{e.key===`Enter`&&o()})}),document.getElementById(`articleCount`);let be=document.getElementById(`startRankingTest`),A=document.getElementById(`rankingResults`),j=document.getElementById(`rankTaskStatus`),xe=document.getElementById(`openDiagnosticReport`),Se=document.getElementById(`diagnosticReportTemplate`);be&&A&&be.addEventListener(`click`,()=>{A.classList.remove(`show`),be.disabled=!0,be.textContent=`检测中…`,j&&(j.className=`rank-task-status running`,j.textContent=`正在调用 6 个 AI 平台并生成排名诊断…`),setTimeout(()=>{A.classList.add(`show`),be.disabled=!1,be.textContent=`重新检测`,j&&(j.className=`rank-task-status done`,j.textContent=`检测完成 · 36 条结果 · 诊断报告已生成`),r(`排名检测完成，诊断报告已生成`),A.scrollIntoView({behavior:`smooth`,block:`start`})},720)});function Ce(){let e=Array.from(document.querySelectorAll(`style`)).map(e=>e.textContent||``).join(`
 `)||``,t=Se?.innerHTML||``;return`<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AI搜索可见性诊断报告 · 360智见GEO</title><link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap"><style>`+e+`
-body.report-window{display:block;min-height:100vh;background:#f3f7f5;padding:0;color:#1f2937}.report-window-top{position:sticky;top:0;z-index:30;height:64px;padding:0 34px;display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid #e6ece9}.report-window-brand{display:flex;align-items:center;gap:11px;font-size:16px;font-weight:800}.report-window-logo{width:30px;height:30px;border-radius:10px;display:grid;place-items:center;background:linear-gradient(145deg,#10b981,#059669);color:#fff}.report-window-meta{font-size:12px;color:#64748b}.report-window-actions{display:flex;align-items:center;gap:10px}.report-print{border:1px solid #dfe5e2;background:#fff;color:#526069;border-radius:9px;padding:7px 13px;font:inherit;font-size:12px;font-weight:650;cursor:pointer}.report-document-wrap{max-width:1320px;margin:0 auto;padding:24px 28px 48px}.report-document-title{margin-bottom:18px}.report-document-title h1{font-size:24px;line-height:1.25;margin-bottom:5px}.report-document-title p{font-size:12.5px;color:#64748b}.report-document-wrap>.card{margin-bottom:16px}.report-window .geo-step{cursor:default}.report-window .chip{cursor:default}@media print{.report-window-top{display:none}.report-document-wrap{max-width:none;padding:0}.card{box-shadow:none!important;break-inside:avoid}}</style></head><body class="report-window"><div class="report-window-top"><div><div class="report-window-brand"><span class="report-window-logo">◎</span>360智见GEO · AI搜索可见性诊断报告</div><div class="report-window-meta">AI搜索收录检测报告 · 第3期 · 2026-07-14</div></div><div class="report-window-actions"><button class="report-print" onclick="window.print()">打印 / 导出 PDF</button></div></div><div class="report-document-wrap"><div class="report-document-title"><h1>AI 搜索可见性诊断报告</h1><p>基于本次 6 个问题 × 6 个 AI 平台的排名 / 品牌曝光检测结果自动生成</p></div>`+t+`</div></body></html>`}xe&&Se&&xe.addEventListener(`click`,()=>{let blob=new Blob([Ce()],{type:`text/html;charset=utf-8`}),url=URL.createObjectURL(blob),a=document.createElement(`a`);a.href=url,a.download=`360智见GEO_AI收录检测报告.html`,document.body.appendChild(a),a.click(),a.remove(),URL.revokeObjectURL(url),r(`已生成并下载收录检测报告`)});let we=document.getElementById(`incModeSwitch`),M=document.getElementById(`incQueryInput`),N=document.getElementById(`incModeHint`),Te=document.getElementById(`incTaskStatus`),Ee=document.getElementById(`startInclusionQuery`),De=document.getElementById(`incUrlResult`),Oe=document.getElementById(`incKeywordResult`),ke=document.getElementById(`incKeywordBadge`),Ae=document.getElementById(`incUrlBadge`),je=document.getElementById(`incMainView`),Me=document.getElementById(`incHistoryView`),Ne=document.getElementById(`incHistoryLink`),Pe=document.getElementById(`incHistoryBack`),Fe={url:`https://www.toutiao.com/article/7482915630...`,keyword:`360终端安全防护`},Ie=`url`;function Le(){De?.classList.remove(`show`),Oe?.classList.remove(`show`),Te&&(Te.className=`inc-task-status`,Te.textContent=`请选择检测类型并提交查询`),Ee&&(Ee.disabled=!1,Ee.innerHTML=`<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><span>立即查询</span>`)}function Re(e,t=!1){[`url`,`keyword`].includes(e)&&(Fe[Ie]=M.value,Ie=e,we&&(we.value=e),M.value=Fe[e],e===`url`?(M.placeholder=`请输入文章 URL`,N.textContent=`URL模式：通过文章链接反查各 AI 平台是否已将该内容纳入可引用信源池。`):(M.placeholder=`请输入行业词、品类词或文章标题`,N.textContent=`关键词模式：统计 AI 回答常引用的信源渠道，并按引用次数形成渠道效果排行。`),t||Le())}we?.addEventListener(`change`,()=>Re(we.value)),document.getElementById(`incPlatformGrid`)?.addEventListener(`click`,e=>{let t=e.target.closest(`.inc-platform-card`);t&&(t.classList.toggle(`on`),document.querySelectorAll(`#incPlatformGrid .inc-platform-card.on`).length||(t.classList.add(`on`),r(`至少保留一个 AI 平台`)))}),Ee?.addEventListener(`click`,()=>{let e=M.value.trim();if(!e){M.focus(),r(Ie===`url`?`请输入待检测 URL`:`请输入查询关键词`);return}let t=[...document.querySelectorAll(`#incPlatformGrid .inc-platform-card.on`)].map(e=>e.dataset.incPlatform);if(!t.length){r(`请至少选择一个 AI 平台`);return}Fe[Ie]=e,De?.classList.remove(`show`),Oe?.classList.remove(`show`),Ee.disabled=!0,Ee.innerHTML=`<span style="display:inline-flex;align-items:center;gap:6px">⏳ 查询中…</span>`,Te.className=`inc-task-status running`,Te.textContent=Ie===`url`?`正在查询 `+t.length+` 个 AI 平台的收录状态…`:`正在统计 `+t.length+` 个 AI 平台的信源引用渠道…`,setTimeout(()=>{Ee.disabled=!1,Ee.innerHTML=`<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"/></svg><span>重新查询</span>`,Te.className=`inc-task-status done`,Ie===`url`?(Ae&&(Ae.textContent=`已检测 `+t.length+` 个平台`),document.querySelectorAll(`#incUrlResult tbody tr`).forEach(e=>e.style.display=t.includes(e.dataset.platform)?``:`none`),De.classList.add(`show`),Te.textContent=`URL 查询完成 · 已生成平台收录状态`,De.scrollIntoView({behavior:`smooth`,block:`start`})):(ke&&(ke.textContent=`关键词：`+e),Oe.classList.add(`show`),Te.textContent=`关键词查询完成 · 已生成 AI 收录渠道效果`,Be(`all`),Oe.scrollIntoView({behavior:`smooth`,block:`start`}))},620)}),document.querySelectorAll(`.inc-view-link`).forEach(e=>e.addEventListener(`click`,()=>r(e.dataset.platform+`：已打开收录详情（原型）`)));function ze(e){je?.classList.toggle(`hidden`,e),Me?.classList.toggle(`show`,e);let t=document.getElementById(`ht`),n=document.getElementById(`headerSubtitle`);e?(t&&(t.textContent=`收录查询 · 历史记录`),n&&(n.textContent=`查看过往AI收录检测任务与结果`)):(t&&(t.textContent=`收录查询`),n&&(n.textContent=`验证文章与关键词是否进入AI可引用信源池`),window.scrollTo({top:0,behavior:`smooth`}))}Ne?.addEventListener(`click`,()=>ze(!0)),Pe?.addEventListener(`click`,()=>ze(!1)),document.querySelectorAll(`.inc-history-report`).forEach(e=>e.addEventListener(`click`,()=>{let t=e.closest(`tr`);if(e.classList.contains(`muted`)){r(`该任务仍在查询中，请稍后查看`);return}let n=t.dataset.historyMode||`url`,i=t.dataset.historyQuery||``;ze(!1),Fe[n]=i,Re(n,!0),M.value=i,Te.className=`inc-task-status done`,n===`url`?(De.classList.add(`show`),Oe.classList.remove(`show`)):(Oe.classList.add(`show`),De.classList.remove(`show`),ke&&(ke.textContent=`关键词：`+i),Be(`all`)),setTimeout(()=>document.querySelector(n===`url`?`#incUrlResult`:`#incKeywordResult`)?.scrollIntoView({behavior:`smooth`,block:`start`}),30)}));function Be(e){let t=[...document.querySelectorAll(`#incChannelTable tbody tr`)],n=0;t.forEach(t=>{let r=e===`all`||(t.dataset.platforms||``).split(`,`).includes(e);if(t.style.display=r?``:`none`,r){n++;let e=t.querySelector(`.inc-rank-cell`);e&&(n===1?e.innerHTML=`<span class="rank-medal gold">1</span>`:n===2?e.innerHTML=`<span class="rank-medal silver">2</span>`:n===3?e.innerHTML=`<span class="rank-medal bronze">3</span>`:e.textContent=n)}})}document.getElementById(`incChannelTabs`)?.addEventListener(`click`,e=>{let t=e.target.closest(`.inc-channel-tab`);t&&(document.querySelectorAll(`#incChannelTabs .inc-channel-tab`).forEach(e=>e.classList.toggle(`on`,e===t)),Be(t.dataset.channelPlatform))}),Be(`all`)}catch(e){console.error(`Error in core script 5:`,e)}try{(()=>{let e=document.getElementById(`pub`),t=document.getElementById(`pubArticlePickerModal`);if(!e||!t)return;let n=t.querySelector(`#pubPickerTableBody`),r=t.querySelector(`#pubPickerSearch`),i=t.querySelector(`#pubPickerEmpty`),a=t.querySelector(`#pubPickerConfirm`),o=t.querySelector(`#pubPickerSelectedTitle`),s=t.querySelector(`#pubPickerMediaName`),c=`auto`,l=null,u=null,d=``;function f(e){let t=document.getElementById(e===`auto`?`autoArticleTable`:`uploadedArticleTable`);return t?[...t.tBodies[0].rows]:[]}function p(){let e=f(`auto`).length,n=f(`uploaded`).length;t.querySelector(`#pubPickerAutoCount`).textContent=e,t.querySelector(`#pubPickerUploadedCount`).textContent=n}function m(){l=null,o.textContent=`暂未选择文章`,a.disabled=!0}function h(e){let t=e.querySelectorAll(`td`);return{title:(t[0]?.textContent||e.dataset.title||``).trim(),type:(t[1]?.textContent||``).trim(),published:(t[2]?.textContent||``).trim(),generated:(t[3]?.textContent||``).trim(),submitted:(t[4]?.textContent||``).trim(),sourceRow:e}}function g(){let e=(r.value||``).trim().toLowerCase();n.innerHTML=``;let t=0;f(c).forEach(r=>{let i=h(r);if(e&&!i.title.toLowerCase().includes(e))return;t++;let s=document.createElement(`tr`);s.className=`pub-picker-row`,s.dataset.articleTitle=i.title,s.innerHTML=`<td class="article-title"></td><td><span class="article-type-pill"></span></td><td></td><td></td><td></td><td><span class="pub-picker-radio" aria-hidden="true"></span></td>`,s.children[0].textContent=i.title,s.querySelector(`.article-type-pill`).textContent=i.type,s.children[2].textContent=i.published,s.children[3].textContent=i.generated,s.children[4].textContent=i.submitted,s.addEventListener(`click`,()=>{n.querySelectorAll(`tr`).forEach(e=>e.classList.remove(`selected`)),s.classList.add(`selected`),l=i,o.textContent=i.title,a.disabled=!1}),n.appendChild(s)}),i.classList.toggle(`show`,t===0)}function _(e){t.classList.toggle(`show`,e),e||(u=null,d=``,m())}function v(e){u=e,d=e.closest(`tr`)?.querySelector(`.media-name`)?.textContent.trim()||`当前媒体`,e.closest(`.media-library-panel`)?.dataset.libraryPanel,s.textContent=d,c=`auto`,r.value=``,t.querySelectorAll(`[data-picker-tab]`).forEach(e=>e.classList.toggle(`on`,e.dataset.pickerTab===`auto`)),m(),p(),g(),_(!0)}e.addEventListener(`click`,e=>{let t=e.target.closest(`.pub-submit`);t&&(e.preventDefault(),e.stopPropagation(),e.stopImmediatePropagation&&e.stopImmediatePropagation(),v(t))},!0),t.querySelector(`#pubPickerClose`).addEventListener(`click`,()=>_(!1)),t.querySelector(`#pubPickerCancel`).addEventListener(`click`,()=>_(!1)),t.addEventListener(`click`,e=>{e.target===t&&_(!1)}),t.querySelector(`#pubPickerTabs`).addEventListener(`click`,e=>{let n=e.target.closest(`[data-picker-tab]`);n&&(c=n.dataset.pickerTab,t.querySelectorAll(`[data-picker-tab]`).forEach(e=>e.classList.toggle(`on`,e===n)),m(),g())}),t.querySelector(`#pubPickerSearchBtn`).addEventListener(`click`,()=>{m(),g()}),t.querySelector(`#pubPickerSearchReset`).addEventListener(`click`,()=>{r.value=``,m(),g()}),r.addEventListener(`keydown`,e=>{e.key===`Enter`&&(m(),g())}),a.addEventListener(`click`,()=>{if(!l)return;let e=new Date(Math.min(Date.now(),new Date(`2026-07-30T23:59:59`).getTime())),t=e.getFullYear(),n=String(e.getMonth()+1).padStart(2,`0`),r=String(e.getDate()).padStart(2,`0`),i=String(e.getHours()).padStart(2,`0`),a=String(e.getMinutes()).padStart(2,`0`),o=String(e.getSeconds()).padStart(2,`0`),s=t+`-`+n+`-`+r+` `+i+`:`+a+`:`+o,c=l.sourceRow;if(c){let e=c.querySelectorAll(`td`);e[2]&&(e[2].innerHTML=`<span class="article-publish-review">审核中</span>`),e[4]&&(e[4].textContent=s),c.dataset.pendingMedia=d,c.dataset.submitTime=s}u&&(u.classList.add(`done`),u.textContent=`已投稿`);let f=l.title,p=d;_(!1),showToast(`「`+f+`」已提交至「`+p+`」，文章状态更新为审核中`)})})()}catch(e){console.error(`Error in picker script 6:`,e)}try{(()=>{document.querySelectorAll(`button:not([type])`).forEach(e=>e.type=`button`);let e=[...document.querySelectorAll(`.nav a[data-p]`)],t={dash:[`首页`,`全网AI搜索场景覆盖与GEO增长数据总览`],inc:[`检测分析`,`验证文章与关键词是否进入AI可引用信源池`],kb:[`GEO 内容增长`,`维护企业事实、资质、案例与问答知识源`],persona:[`GEO 内容增长`,`从核心产品反推人群、场景与购买考量`],kw:[`GEO 内容增长`,`生成并筛选面向AI搜索场景的长尾问题词库`],gen:[``,`填写或选择下方「核心关键词 + 长尾关键词」，点击右侧绿色 AI Agent 图标即可智能反推「用户画像 → 搜索场景 → 用户痛点 → 多维关联图谱」，并在当前页面直接生成标准 3000 字深度长文。`],videographic:[`GEO 内容增长`,`使用多模态AI模型，生成短视频或新媒体图文。内容基于大模型训练数据生成，可能存在局限性或不准确性。`],articles:[`GEO 内容增长`,`统一管理自动化文章与人工上传内容`],pub:[`GEO 内容增长`,`按媒体属性与GEO适配度选择信源并投稿`],agent:[`账户中心`,`查看企业服务套餐余量、功能配额明细与账户余额充值`]},n=document.getElementById(`headerKicker`),r=document.getElementById(`headerSubtitle`),htEl=document.getElementById(`ht`);function i(i){let a=t[i]||[`360智见GEO`,`AI 搜索可见性优化平台`];n&&(n.textContent=a[0],n.style.display=i===`gen`?`none`:``),i===`gen`&&htEl&&(htEl.textContent=`内容创作与用户需求画像建模`),r&&(r.textContent=a[1]),e.forEach(e=>e.setAttribute(`aria-current`,e.dataset.p===i?`page`:`false`))}e.forEach(e=>{e.setAttribute(`tabindex`,`0`),e.setAttribute(`role`,`button`),e.title=e.textContent.trim(),e.addEventListener(`click`,()=>{i(e.dataset.p),history.replaceState(null,``,`#`+e.dataset.p)}),e.addEventListener(`keydown`,t=>{(t.key===`Enter`||t.key===` `)&&(t.preventDefault(),e.click())})});let a=location.hash.slice(1),o=e.find(e=>e.dataset.p===a);if(o)o.click();else{let t=e.find(e=>e.classList.contains(`on`));t&&i(t.dataset.p)}function s(){let e=document.getElementById(`videographic`);if(!e)return;let t=e.querySelectorAll(`.vg-tab-btn`),n=document.getElementById(`vgVideoPanel`),r=document.getElementById(`vgGraphicPanel`),topVid=document.getElementById(`vgVideoTopActions`),topGrp=document.getElementById(`vgGraphicTopActions`);t.forEach(e=>{e.addEventListener(`click`,()=>{t.forEach(e=>e.classList.remove(`on`)),e.classList.add(`on`);let i=e.dataset.vgMode===`video`;n&&(n.style.display=i?`block`:`none`),r&&(r.style.display=i?`none`:`block`),topVid&&(topVid.style.display=i?`flex`:`none`),topGrp&&(topGrp.style.display=i?`none`:`flex`)})});let i=document.querySelectorAll(`#vgMethodTabs .vg-method-pill`),stQuick=document.getElementById(`vgStateQuickPanel`),stAi=document.getElementById(`vgStateAiPanel`),stUpload=document.getElementById(`vgStateUploadPanel`);i.forEach(e=>{e.addEventListener(`click`,()=>{i.forEach(e=>e.classList.remove(`active`)),e.classList.add(`active`);let t=e.dataset.vmethod;stQuick&&(stQuick.style.display=t===`quick`?`block`:`none`),stAi&&(stAi.style.display=t===`ai`?`grid`:`none`),stUpload&&(stUpload.style.display=t===`upload`?`block`:`none`),t===`ai`?showToast(`已切换至状态2：AI生成视频配置面板（BGM、字幕配置）`):t===`upload`?showToast(`已切换至状态3：上传视频面板（拖拽上传、进度与预览）`):showToast(`已切换至状态1：视频快剪表单面板`)})});let a=document.querySelectorAll(`#vgVNav .vg-vnav-btn`),o={subtitles:document.getElementById(`vtabSubtitlesView`),voice:document.getElementById(`vtabVoiceView`),styles:document.getElementById(`vtabStylesView`),bgm:document.getElementById(`vtabBgmView`)};a.forEach(e=>{e.addEventListener(`click`,()=>{a.forEach(e=>e.classList.remove(`active`)),e.classList.add(`active`);let t=e.dataset.vtab;Object.entries(o).forEach(([e,n])=>{n&&(n.style.display=e===t?`block`:`none`)})})});let s={"360安全卫士":{longTail:`360安全卫士极速版与企业版区别测评`,creativeType:`测评推荐类`,title:`2026版360安全卫士深度测评与企业部署方案`,tags:`#360安全卫士 #终端安全 #勒索病毒防御 #网络安全`,content:`360安全科技自主研发云端安全大脑与自研AI杀毒双引擎。毫秒级识别未知勒索与木马威胁，拦截率高达99.98%，全方位守护企业与个人终端数据资产！`,bgImage:`${socScreenImg}`},终端安全防护:{longTail:`企业终端安全防护系统如何选型部署`,creativeType:`排行类`,title:`2026企业级终端安全EDR厂商推荐与选型对比`,tags:`#终端安全防护 #EDR端点响应 #企业网络防护 #360安全`,content:`360天擎终端安全管理系统，集防病毒、终端准入合规、补丁分发、微隔离管控于一体。支持十万级终端集中下发策略，满足等级保护三级安全合规标准！`,bgImage:`${endpointDefenseImg}`},勒索病毒拦截:{longTail:`服务器如何彻底防范勒索病毒加密勒索`,creativeType:`痛点解决方案类`,title:`针对LockBit/BlackCat勒索病毒的实时防御白皮书`,tags:`#勒索病毒拦截 #360安全大脑 #诱饵防御 #数据备份`,content:`360首创文件主动解密防护与底层只读诱饵陷阱。动态阻断进程未授权加密行为，自带云端文件热备份秒级无损回滚，让勒索攻击无所遁形！`,bgImage:`${complianceBadgeImg}`},AI安全大模型:{longTail:`企业私有化部署AI大模型安全风控方案`,creativeType:`避坑科普类`,title:`360智脑安全大模型如何赋能企业安全运营SOC`,tags:`#AI安全大模型 #360智脑 #数字安全 #智能告警研判`,content:`依托数百亿级安全知识库与攻击样本微调训练。360安全大模型实现海量安全告警秒级智能降噪研判，自动生成处置工单与SOAR联动阻断响应！`,bgImage:`${socScreenImg}`},网络安全等级保护:{longTail:`等级保护2.0三级测评整改必备安全产品清单`,creativeType:`探厂实测类`,title:`2026最新网络安全等保2.0三级合规建设与整改指南`,tags:`#等级保护 #合规测评 #下一代防火墙 #360企业安全`,content:`360提供等保2.0全流程一体化咨询测评与合规套件支撑，涵盖下一代防火墙、日志审计、堡垒机与数据库审计，最快15个工作日完成达标整改！`,bgImage:`${enterpriseCertImg}`}},c=document.getElementById(`vgVideoCoreKeyword`),l=document.getElementById(`vgVideoLongTail`),u=document.getElementById(`vgVideoCreativeType`),d=document.getElementById(`vgVideoTitle`),f=document.getElementById(`vgVideoTags`),p=document.getElementById(`vgVideoContent`),m=document.getElementById(`vgSegmentScript`),h=document.getElementById(`vgTitleCounter`),g=document.getElementById(`vgTagsCounter`),_=document.getElementById(`vgContentCounter`),v=document.getElementById(`vgPhoneVideoCanvas`),y=document.getElementById(`vgPhoneTitleText`),b=document.getElementById(`vgPhoneTagsText`),x=document.getElementById(`vgPhoneSubtitleLayer`),S=document.getElementById(`vgPhoneMusicText`),C=document.getElementById(`vgPhonePlayBtn`);function w(){let e=d?.value.trim()||`请输入视频标题`,t=f?.value.trim()||`#热门话题`,n=p?.value.trim()||`请输入正文口播内容`;y&&(y.textContent=e),b&&(b.textContent=t),x&&(x.textContent=n.slice(0,36)+(n.length>36?`...`:``)),h&&(h.textContent=e.length+` / 30`);let r=t.split(/\s+/).filter(Boolean).length;g&&(g.textContent=Math.min(r,5)+` / 5`),_&&(_.textContent=n.length+` / 150`)}function T(e){let t=s[e]||s[`360安全卫士`];l&&(l.value=t.longTail),u&&(u.value=t.creativeType),d&&(d.value=t.title),f&&(f.value=t.tags),p&&(p.value=t.content),m&&(m.value=t.content),v&&(v.style.backgroundImage=`url("`+t.bgImage+`")`),w()}c?.addEventListener(`change`,()=>{T(c.value),showToast(`已根据「`+c.value+`」自动更新全案文案与分镜`)}),d?.addEventListener(`input`,w),f?.addEventListener(`input`,w),p?.addEventListener(`input`,()=>{m&&(m.value=p.value),w()}),m?.addEventListener(`input`,()=>{p&&(p.value=m.value),w()});function ee(e){T(c?.value||`360安全卫士`),showToast(e||`✨ AI 智能引擎已一秒秒级生成爆款标题、话题标签与口播分镜`)}document.getElementById(`vgSuperSyncBtn`)?.addEventListener(`click`,()=>ee(`✨ 智能全案秒级生成完毕！已同步至手机模拟器`)),document.getElementById(`vgKeywordAIBtn`)?.addEventListener(`click`,()=>ee()),document.getElementById(`vgCopyAIBtn`)?.addEventListener(`click`,()=>ee()),document.getElementById(`vgSegmentAIBtn`)?.addEventListener(`click`,()=>ee()),document.getElementById(`vgClipBtn`)?.addEventListener(`click`,()=>{showToast(`已从「企业知识库」剪藏最新事实与产品技术参数`)}),document.querySelectorAll(`.vg-voice-card`).forEach(e=>{e.addEventListener(`click`,()=>{document.querySelectorAll(`.vg-voice-card`).forEach(e=>{e.classList.remove(`active`);let t=e.querySelector(`.chip-mini`);t&&(t.classList.remove(`on`),t.textContent=`选用`)}),e.classList.add(`active`);let t=e.querySelector(`.chip-mini`);t&&(t.classList.add(`on`),t.textContent=`已选用`);let n=e.dataset.voice||`知性干练商务女声`;S&&(S.textContent=`原声 - 360智见GEO智能播音 · `+n),showToast(`已选用【`+n+`】作为口播音色，手机端已实时生效`)})}),document.querySelectorAll(`.vg-style-chip`).forEach(e=>{e.addEventListener(`click`,()=>{document.querySelectorAll(`.vg-style-chip`).forEach(e=>e.classList.remove(`active`)),e.classList.add(`active`);let t=e.dataset.style;x&&(x.className=`vg-phone-subtitle-preview`+(t===`yellow`?` style-yellow`:t===`karaoke`?` style-karaoke`:``)),showToast(`字幕样式已切换，手机画面已实时呈现`)})}),document.getElementById(`vtabBgmView`)?.addEventListener(`click`,e=>{let t=e.target.closest(`.chip-mini`);t&&(document.querySelectorAll(`#vtabBgmView .chip-mini`).forEach(e=>{e.classList.remove(`on`),e.textContent=`选用`}),t.classList.add(`on`),t.textContent=`当前选用`,showToast(`背景音乐已切换并与解说音轨完成智能音量闪避配置`))});let E=!1,te=null;C?.addEventListener(`click`,()=>{if(E=!E,E){C.textContent=`❚❚`,C.style.background=`rgba(99, 102, 241, 0.85)`,showToast(`▶ 正在模拟短视频口播演示与音波跳动`);let e=0,t=(p?.value||`360安全科技自主研发云端安全大脑与自研AI杀毒双引擎，毫秒级识别未知勒索与木马威胁。`).split(`，`);te=setInterval(()=>{E&&x&&t.length&&(x.textContent=t[e%t.length],e++)},1800)}else C.textContent=`▶`,C.style.background=`rgba(0, 0, 0, 0.45)`,clearInterval(te),w()}),document.getElementById(`vgLikeBtn`)?.addEventListener(`click`,()=>{let e=document.querySelector(`#vgLikeBtn .vg-phone-action-icon`),t=document.getElementById(`vgLikeCount`);e&&(e.style.transform=`scale(1.35)`,setTimeout(()=>{e.style.transform=``},200)),t&&(t.textContent=`11.5w`),showToast(`❤️ 模拟点赞交互成功！`)});let D=document.getElementById(`vgStartRenderBtn`);D?.addEventListener(`click`,()=>{let e=D.innerHTML;D.disabled=!0,D.innerHTML=`<span>🎬 正在云端渲染 1080P 短视频…</span>`,setTimeout(()=>{D.disabled=!1,D.innerHTML=e,showToast(`短视频合成成功！已生成 1080P 竖屏 MP4 文件与配套字幕轨`)},900)}),document.getElementById(`vgSaveDraftBtn`)?.addEventListener(`click`,()=>{showToast(`当前短视频文案、音色与分镜脚本已成功沉淀至「发布记录」`)}),document.getElementById(`vgDispatchBtn`)?.addEventListener(`click`,()=>{let e=document.querySelector(`.nav a[data-p="pub"]`);e&&(e.click(),showToast(`已携带当前短视频跳转至「文章发布」中心`))}),document.getElementById(`vgResetAllBtn`)?.addEventListener(`click`,()=>{T(`360安全卫士`),showToast(`已重置回默认推荐配置`)}),w()}s(),c();function c(){let e=document.getElementById(`themeSwitcherWrap`),t=document.getElementById(`themeSwitchBtn`),n=document.getElementById(`currentThemeName`);if(!e||!t)return;let r={blue:`极光科技蓝`,green:`清新碧翠绿`,purple:`深空星曜紫`,slate:`商务钛金灰`};function i(t,i=!1){r[t]||(t=`blue`),document.documentElement.setAttribute(`data-theme`,t),document.body.setAttribute(`data-theme`,t);try{localStorage.setItem(`geo_theme`,t)}catch{}n&&(n.textContent=r[t]),e.querySelectorAll(`.theme-item`).forEach(e=>{e.dataset.theme===t?e.classList.add(`on`):e.classList.remove(`on`)}),i&&typeof showToast==`function`&&showToast(`已切换至「`+r[t]+`」配色方案`)}t.addEventListener(`click`,n=>{n.stopPropagation();let r=e.classList.toggle(`open`);t.setAttribute(`aria-expanded`,r?`true`:`false`)}),e.querySelectorAll(`.theme-item`).forEach(n=>{n.addEventListener(`click`,r=>{r.stopPropagation();let a=n.dataset.theme;i(a,!0),e.classList.remove(`open`),t.setAttribute(`aria-expanded`,`false`)})}),document.addEventListener(`click`,n=>{e.contains(n.target)||(e.classList.remove(`open`),t.setAttribute(`aria-expanded`,`false`))});let a=`blue`;try{a=localStorage.getItem(`geo_theme`)||`blue`}catch{}i(a,!1)}window.addEventListener(`hashchange`,()=>{let t=location.hash.slice(1),n=e.find(e=>e.dataset.p===t);n&&!n.classList.contains(`on`)&&n.click()});let l=document.getElementById(`sidebarToggle`),u=`geo-sidebar-collapsed`;function d(e){document.body.classList.toggle(`sidebar-collapsed`,e),l&&(l.setAttribute(`aria-expanded`,e?`false`:`true`),l.title=e?`展开侧边栏 (点击恢复完整菜单)`:`收起侧边栏 (点击折叠为图标栏)`);try{localStorage.setItem(u,e?`1`:`0`)}catch{}window.dispatchEvent(new Event(`resize`))}try{d(localStorage.getItem(u)===`1`)}catch{d(!1)}l?.addEventListener(`click`,e=>{e.preventDefault();let t=document.body.classList.contains(`sidebar-collapsed`);d(!t),typeof showToast==`function`&&showToast(t?`已展开侧边导航栏`:`已收起侧边导航栏`)});let f=document.getElementById(`headerCompanyTag`),m=document.getElementById(`enterpriseName`);function h(){if(!f||!m)return;let e=m.value.trim()||`未命名企业`;f.textContent=e,f.title=e}m?.addEventListener(`input`,h),h();let g=document.querySelector(`.toast`);g&&(g.setAttribute(`role`,`status`),g.setAttribute(`aria-live`,`polite`),g.setAttribute(`aria-atomic`,`true`));let _=typeof window.showToast===`function`?window.showToast:function(msg){if(g){g.textContent=msg;g.classList.add(`show`);clearTimeout(window.__toastTimer);window.__toastTimer=setTimeout(()=>g.classList.remove(`show`),1800)}};window.showToast=function(e,t=`success`){g&&(g.classList.remove(`toast-warn`,`toast-error`),t===`warn`&&g.classList.add(`toast-warn`),t===`error`&&g.classList.add(`toast-error`)),_(e)},document.querySelectorAll(`.chip,.geo-step[data-jump]`).forEach(e=>{e.hasAttribute(`tabindex`)||(e.tabIndex=0),e.hasAttribute(`role`)||e.setAttribute(`role`,`button`),e.addEventListener(`keydown`,t=>{(t.key===`Enter`||t.key===` `)&&(t.preventDefault(),e.click())})}),document.querySelectorAll(`.chip`).forEach(e=>{let t=()=>e.setAttribute(`aria-pressed`,e.classList.contains(`on`)?`true`:`false`);e.addEventListener(`click`,()=>setTimeout(t,0)),t()});let v=document.getElementById(`privateAccountTable`),y=document.getElementById(`privateAccountKeyword`),b=document.getElementById(`privateAccountPlatform`),x=document.getElementById(`privateAccountStatus`),S=document.getElementById(`privateAccountCount`),C=document.getElementById(`privateAccountEmpty`);function w(){if(!v)return;let e=(y?.value||``).trim().toLowerCase(),t=b?.value||``,n=x?.value||``,r=0;[...v.tBodies[0].rows].forEach(i=>{let a=(i.querySelector(`.media-name`)?.textContent||``).toLowerCase(),o=(!e||a.includes(e))&&(!t||i.dataset.platform===t)&&(!n||i.dataset.status===n);i.style.display=o?``:`none`,o&&r++}),S&&(S.textContent=r),C&&C.classList.toggle(`show`,r===0)}document.getElementById(`privateAccountQuery`)?.addEventListener(`click`,w),document.getElementById(`privateAccountReset`)?.addEventListener(`click`,()=>{y&&(y.value=``),b&&(b.value=``),x&&(x.value=``),w()}),y?.addEventListener(`keydown`,e=>{e.key===`Enter`&&w()}),document.getElementById(`privatePlatformGrid`)?.addEventListener(`click`,e=>{let t=e.target.closest(`.private-platform-card`);if(t){if(t.classList.contains(`add`)){showToast(`已打开新增媒体授权入口（原型）`);return}b&&(b.value=t.dataset.privatePlatform||``,w()),document.getElementById(`privateAccountTable`)?.scrollIntoView({behavior:`smooth`,block:`center`})}}),document.getElementById(`privateDownloadAuth`)?.addEventListener(`click`,()=>showToast(`授权软件将在正式环境提供安全下载`)),document.querySelectorAll(`.private-account-auth`).forEach(e=>e.addEventListener(`click`,()=>showToast(`已进入账号授权流程（原型）`))),w();function T(){document.querySelectorAll(`#longTailTable .btn-bring-to-gen`).forEach(e=>{e.onclick=t=>{t.preventDefault(),t.stopPropagation();let n=e.closest(`tr`),r=n?.dataset.kw||n?.cells[0]?.textContent.trim(),i=n?.dataset.entity||n?.cells[1]?.textContent.trim(),a=document.getElementById(`coreKeywordSelect`),o=document.getElementById(`longTailSelect`);a&&i&&([...a.options].some(e=>e.value===i)||a.add(new Option(i,i)),a.value=i),typeof syncLongTails==`function`&&syncLongTails(),o&&r&&([...o.options].some(e=>e.value===r)||o.add(new Option(r,r)),o.value=r),typeof he==`function`&&he(),typeof window.__geoSwitchPage==`function`?window.__geoSwitchPage(`gen`):document.querySelector(`.nav a[data-p="gen"]`)?.click(),showToast(`已带入「`+r+`」至内容创作`)}})}T();let ee=document.getElementById(`longTailTable`),E=document.getElementById(`kwSearchInput`),te=document.getElementById(`kwEntityFilter`),D=document.getElementById(`kwIntentFilter`),ne=document.getElementById(`kwResultCount`),O=document.getElementById(`kwEmpty`);function re(){return ee?[...ee.rows].slice(1):[]}function ie(){let e=(E?.value||``).trim().toLowerCase(),t=te?.value||``,n=D?.value||``,r=0;re().forEach(i=>{let a=i.textContent.toLowerCase(),o=(!e||a.includes(e))&&(!t||i.cells[1]?.textContent.trim()===t)&&(!n||i.cells[2]?.textContent.trim()===n);i.style.display=o?``:`none`,o&&r++}),ne&&(ne.textContent=r+` 条`),O?.classList.toggle(`show`,r===0)}window.applyKwFilters=ie;[E,te,D].forEach(e=>e?.addEventListener(e===E?`input`:`change`,ie)),document.getElementById(`kwFilterReset`)?.addEventListener(`click`,()=>{E&&(E.value=``),te&&(te.value=``),D&&(D.value=``),ie()}),ie();function ae(){let e=typeof getEntities==`function`?getEntities().length:3,t=document.getElementById(`entityCountPill`);t&&(t.textContent=e+` 个核心实体`)}document.getElementById(`keywordEntities`)?.addEventListener(`input`,ae);let k=document.getElementById(`prefixSuffixAgent`);k&&(k.onclick=()=>{k.classList.add(`running`);let e=document.getElementById(`agentLastRun`);e&&(e.textContent=`Agent 正在进行语义深度挖掘与质量清洗…`),setTimeout(()=>{k.classList.remove(`running`),e&&(e.textContent=`已完成智能挖掘 · 数据已同步`),ae(),showToast(`360 智见 Agent 已完成智能长尾词挖掘，数据已同步至内容创作！`)},650)}),ae();let oe=document.getElementById(`summaryCore`),se=document.getElementById(`summaryPersona`),ce=document.getElementById(`summaryLength`),le=document.getElementById(`summaryIllustration`),ue=document.getElementById(`summaryReady`),de=document.getElementById(`articleCount`),fe=document.getElementById(`illustrationModeSelect`),pe=document.getElementById(`illustrationStyleSelect`),me=document.getElementById(`illustrationStatusPill`);window.updateGenerationSummary=he;function he(){let e=document.getElementById(`coreKeywordSelect`)?.value||`—`,t=document.getElementById(`genArticleType`)?.value||document.getElementById(`genUserPersonaSelect`)?.value?.split(`/`)[0]?.trim()||`排行推荐`;oe&&(oe.textContent=e),se&&(se.textContent=t);let n=de?.value||`2`;ce&&(ce.textContent=`标准3000 × `+n+`篇`),document.querySelectorAll(`.article-count-quick-chips .chip-mini`).forEach(e=>{e.classList.toggle(`on`,e.dataset.c===n)});let r=fe?.value||`auto_3`,i=document.querySelectorAll(`#illustrationPreviewRow .illustration-preview-thumb`);if(r===`none`)le&&(le.textContent=`纯文本 (无配图)`,le.style.color=`#64748b`),me&&(me.textContent=`○ 纯文本无图`,me.className=`pill n`),i.forEach(e=>e.classList.remove(`active`));else{let e=`AI智能配图 (3张/篇)`;r===`hero_1`&&(e=`单图极速配图 (1张/篇)`),r===`dense_5`&&(e=`深度图文混排 (5张/篇)`),le&&(le.textContent=e,le.style.color=`var(--primary)`),me&&(me.textContent=`✓ 已开启智能配图`,me.className=`pill g`),i.forEach((e,t)=>{r===`hero_1`?e.classList.toggle(`active`,t===0):e.classList.add(`active`)})}let a=Number(n)>=1&&Number(n)<=20&&e&&document.getElementById(`longTailSelect`)?.value;ue&&(ue.textContent=a?`● 可生成`:`● 参数待完善`,ue.style.color=a?`#18815c`:`#a86b10`)}document.querySelectorAll(`.article-count-quick-chips .chip-mini`).forEach(e=>{e.addEventListener(`click`,()=>{de&&(de.value=e.dataset.c),he()})}),de?.addEventListener(`change`,he),fe?.addEventListener(`change`,he),pe?.addEventListener(`change`,he),document.getElementById(`longTailSelect`)?.addEventListener(`change`,he),document.getElementById(`coreKeywordSelect`)?.addEventListener(`change`,()=>setTimeout(he,0)),document.getElementById(`genUserPersonaSelect`)?.addEventListener(`change`,he),document.getElementById(`genSearchScenarioSelect`)?.addEventListener(`change`,he),document.getElementById(`genUserPainPointsSelect`)?.addEventListener(`change`,he),he(),document.addEventListener(`keydown`,e=>{(e.ctrlKey||e.metaKey)&&e.key===`Enter`&&document.getElementById(`gen`)?.classList.contains(`on`)&&(e.preventDefault(),document.getElementById(`generateArticleBtn`)?.click())});let ge=document.getElementById(`generateArticleBtn`);ge?.addEventListener(`click`,()=>{if(ge.disabled)return;let e=de?.value||`2`,t=ge.innerHTML;ge.disabled=!0,ge.innerHTML=`<span>正在批量创建 `+e+` 篇任务…</span>`,setTimeout(()=>{ge.disabled=!1,ge.innerHTML=t,showToast(`已成功发起 `+e+` 篇深度长文生成任务（标准3000字）`)},850)});let _e;document.getElementById(`articleSearchInput`)?.addEventListener(`input`,()=>{clearTimeout(_e),_e=setTimeout(()=>{typeof filterArticleRows==`function`&&filterArticleRows()},140)});let ve=document.getElementById(`articleViewDrawer`),ye=document.getElementById(`drawerArticleTitle`),be=document.getElementById(`drawerArticleType`),A=document.getElementById(`drawerArticleStatus`),j=document.getElementById(`drawerArticleGenerated`),xe=document.getElementById(`drawerArticleSubmitted`),Se=document.getElementById(`drawerArticlePreview`),Ce=``;function we(e){ve?.classList.toggle(`show`,e),ve?.setAttribute(`aria-hidden`,e?`false`:`true`),document.body.classList.toggle(`modal-open`,e||document.querySelector(`.modal-backdrop.show`))}function M(e){if(!e)return;let t=e.querySelectorAll(`td`);Ce=(t[0]?.textContent||`文章预览`).trim(),ye.textContent=Ce,be.textContent=(t[1]?.textContent||`—`).trim(),A.textContent=(t[2]?.textContent||`—`).trim(),j.textContent=(t[3]?.textContent||`—`).trim(),xe.textContent=(t[4]?.textContent||`—`).trim(),Se.innerHTML=``;let n=document.createElement(`h2`);n.textContent=`内容预览`;let r=document.createElement(`p`);r.className=`preview-note`,r.textContent=`当前高保真原型以文章列表元数据为主。正式接入文章生成 API 后，此区域可直接渲染 content HTML 全文。`;let i=document.createElement(`p`);i.textContent=`当前文章：`+Ce+`。这里已预留完整正文预览区，后续接入 WF_ARTICLE_GENERATE 返回的 content 字段即可直接展示。`,Se.append(n,r,i),we(!0)}document.getElementById(`articles`)?.addEventListener(`click`,e=>{let t=e.target.closest(`.article-view`);t&&M(t.closest(`tr`))}),document.getElementById(`articleDrawerClose`)?.addEventListener(`click`,()=>we(!1)),document.getElementById(`articleDrawerDone`)?.addEventListener(`click`,()=>we(!1)),ve?.addEventListener(`click`,e=>{e.target===ve&&we(!1)}),document.getElementById(`articleCopyTitle`)?.addEventListener(`click`,async()=>{try{await navigator.clipboard.writeText(Ce),showToast(`文章标题已复制`)}catch{showToast(`浏览器未开放剪贴板权限`,`warn`)}}),document.addEventListener(`keydown`,e=>{e.key===`Escape`&&ve?.classList.contains(`show`)&&we(!1)});function N(e,t=50){let n=0;for(let t of e)n=n*31+t.charCodeAt(0)>>>0;return n%(t+1)}document.querySelectorAll(`#pubMediaTable tbody tr`).forEach(e=>{let t=N(e.querySelector(`.media-name`)?.textContent.trim()||e.rowIndex.toString(),50);e.dataset.priceValue=String(t);let n=e.querySelector(`.pub-price`);n&&(n.textContent=t)}),document.querySelectorAll(`#pub .library-alt-table .alt-price`).forEach((e,t)=>{e.textContent=N(e.closest(`tr`)?.textContent||String(t),50)}),window.__applyPrivateMediaFilters?.();let Te=new MutationObserver(()=>{let e=!!document.querySelector(`.modal-backdrop.show,.drawer-backdrop.show`);document.body.classList.toggle(`modal-open`,e)});document.querySelectorAll(`.modal-backdrop,.drawer-backdrop`).forEach(e=>Te.observe(e,{attributes:!0,attributeFilter:[`class`]})),document.addEventListener(`keydown`,e=>{e.key===`Escape`&&document.querySelectorAll(`.modal-backdrop.show`).forEach(e=>{let t=e.querySelector(`.modal-close`);t&&t.click()})}),window.getPersonaPayload=()=>({cname:document.getElementById(`enterpriseName`)?.value.trim()||``,industry:document.getElementById(`industryName`)?.value.trim()||``,core_entities:typeof getEntities==`function`?getEntities():[]}),window.getKeywordPayload=()=>({industry:document.getElementById(`industryName`)?.value.trim()||``,core_entities:typeof getEntities==`function`?getEntities():[]}),window.getArticlePayload=()=>({cname:document.getElementById(`slotC`)?.value.trim()||``,core_keyword:document.getElementById(`coreKeywordSelect`)?.value||``,long_tail_keyword:document.getElementById(`longTailSelect`)?.value||``,user_persona:document.getElementById(`genUserPersonaSelect`)?.value||``,search_scenario:document.getElementById(`genSearchScenarioSelect`)?.value||``,user_pain_points:document.getElementById(`genUserPainPointsSelect`)?.value||``,article_length:3e3,article_count:Number(document.getElementById(`articleCount`)?.value||2),illustration_mode:document.getElementById(`illustrationModeSelect`)?.value||`auto_3`,illustration_style:document.getElementById(`illustrationStyleSelect`)?.value||`photo`,redline:document.getElementById(`redlineInput`)?.value.trim()||``});function Ee(){
+body.report-window{display:block;min-height:100vh;background:#f3f7f5;padding:0;color:#1f2937}.report-window-top{position:sticky;top:0;z-index:30;height:64px;padding:0 34px;display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid #e6ece9}.report-window-brand{display:flex;align-items:center;gap:11px;font-size:16px;font-weight:800}.report-window-logo{width:30px;height:30px;border-radius:10px;display:grid;place-items:center;background:linear-gradient(145deg,#10b981,#059669);color:#fff}.report-window-meta{font-size:12px;color:#64748b}.report-window-actions{display:flex;align-items:center;gap:10px}.report-print{border:1px solid #dfe5e2;background:#fff;color:#526069;border-radius:9px;padding:7px 13px;font:inherit;font-size:12px;font-weight:650;cursor:pointer}.report-document-wrap{max-width:1320px;margin:0 auto;padding:24px 28px 48px}.report-document-title{margin-bottom:18px}.report-document-title h1{font-size:24px;line-height:1.25;margin-bottom:5px}.report-document-title p{font-size:12.5px;color:#64748b}.report-document-wrap>.card{margin-bottom:16px}.report-window .geo-step{cursor:default}.report-window .chip{cursor:default}@media print{.report-window-top{display:none}.report-document-wrap{max-width:none;padding:0}.card{box-shadow:none!important;break-inside:avoid}}</style></head><body class="report-window"><div class="report-window-top"><div><div class="report-window-brand"><span class="report-window-logo">◎</span>360智见GEO · AI搜索可见性诊断报告</div><div class="report-window-meta">AI搜索收录检测报告 · 第3期 · 2026-07-14</div></div><div class="report-window-actions"><button class="report-print" onclick="window.print()">打印 / 导出 PDF</button></div></div><div class="report-document-wrap"><div class="report-document-title"><h1>AI 搜索可见性诊断报告</h1><p>基于本次 6 个问题 × 6 个 AI 平台的排名 / 品牌曝光检测结果自动生成</p></div>`+t+`</div></body></html>`}xe&&Se&&xe.addEventListener(`click`,()=>{let blob=new Blob([Ce()],{type:`text/html;charset=utf-8`}),url=URL.createObjectURL(blob),a=document.createElement(`a`);a.href=url,a.download=`360智见GEO_AI收录检测报告.html`,document.body.appendChild(a),a.click(),a.remove(),URL.revokeObjectURL(url),r(`已生成并下载收录检测报告`)});let we=document.getElementById(`incModeSwitch`),M=document.getElementById(`incQueryInput`),N=document.getElementById(`incModeHint`),Te=document.getElementById(`incTaskStatus`),Ee=document.getElementById(`startInclusionQuery`),De=document.getElementById(`incUrlResult`),Oe=document.getElementById(`incKeywordResult`),ke=document.getElementById(`incKeywordBadge`),Ae=document.getElementById(`incUrlBadge`),je=document.getElementById(`incMainView`),Me=document.getElementById(`incHistoryView`),Ne=document.getElementById(`incHistoryLink`),Pe=document.getElementById(`incHistoryBack`),Fe={url:`https://www.toutiao.com/article/7482915630...`,keyword:`360终端安全防护`},Ie=`url`;function Le(){De?.classList.remove(`show`),Oe?.classList.remove(`show`),Te&&(Te.className=`inc-task-status`,Te.textContent=`请选择检测类型并提交查询`),Ee&&(Ee.disabled=!1,Ee.innerHTML=`<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><span>立即查询</span>`)}function Re(e,t=!1){[`url`,`keyword`].includes(e)&&(Fe[Ie]=M.value,Ie=e,we&&(we.value=e),M.value=Fe[e],e===`url`?(M.placeholder=`请输入文章 URL`,N.textContent=`URL模式：通过文章链接反查各 AI 平台是否已将该内容纳入可引用信源池。`):(M.placeholder=`请输入行业词、品类词或文章标题`,N.textContent=`关键词模式：统计 AI 回答常引用的信源渠道，并按引用次数形成渠道效果排行。`),t||Le())}we?.addEventListener(`change`,()=>Re(we.value)),document.getElementById(`incPlatformGrid`)?.addEventListener(`click`,e=>{let t=e.target.closest(`.inc-platform-card`);t&&(t.classList.toggle(`on`),document.querySelectorAll(`#incPlatformGrid .inc-platform-card.on`).length||(t.classList.add(`on`),r(`至少保留一个 AI 平台`)))}),Ee?.addEventListener(`click`,()=>{let e=M.value.trim();if(!e){M.focus(),r(Ie===`url`?`请输入待检测 URL`:`请输入查询关键词`);return}let t=[...document.querySelectorAll(`#incPlatformGrid .inc-platform-card.on`)].map(e=>e.dataset.incPlatform);if(!t.length){r(`请至少选择一个 AI 平台`);return}Fe[Ie]=e,De?.classList.remove(`show`),Oe?.classList.remove(`show`),Ee.disabled=!0,Ee.innerHTML=`<span style="display:inline-flex;align-items:center;gap:6px">⏳ 查询中…</span>`,Te.className=`inc-task-status running`,Te.textContent=Ie===`url`?`正在查询 `+t.length+` 个 AI 平台的收录状态…`:`正在统计 `+t.length+` 个 AI 平台的信源引用渠道…`,setTimeout(()=>{Ee.disabled=!1,Ee.innerHTML=`<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"/></svg><span>重新查询</span>`,Te.className=`inc-task-status done`,Ie===`url`?(Ae&&(Ae.textContent=`已检测 `+t.length+` 个平台`),document.querySelectorAll(`#incUrlResult tbody tr`).forEach(e=>e.style.display=t.includes(e.dataset.platform)?``:`none`),De.classList.add(`show`),Te.textContent=`URL 查询完成 · 已生成平台收录状态`,De.scrollIntoView({behavior:`smooth`,block:`start`})):(ke&&(ke.textContent=`关键词：`+e),Oe.classList.add(`show`),Te.textContent=`关键词查询完成 · 已生成 AI 收录渠道效果`,Be(`all`),Oe.scrollIntoView({behavior:`smooth`,block:`start`}))},620)}),document.querySelectorAll(`.inc-view-link`).forEach(e=>e.addEventListener(`click`,()=>r(e.dataset.platform+`：已打开收录详情（原型）`)));function ze(e){je?.classList.toggle(`hidden`,e),Me?.classList.toggle(`show`,e);let t=document.getElementById(`ht`),n=document.getElementById(`headerSubtitle`);e?(t&&(t.textContent=`收录查询 · 历史记录`),n&&(n.textContent=`查看过往AI收录检测任务与结果`)):(t&&(t.textContent=`收录查询`),n&&(n.textContent=`验证文章与关键词是否进入AI可引用信源池`),window.scrollTo({top:0,behavior:`smooth`}))}Ne?.addEventListener(`click`,()=>ze(!0)),Pe?.addEventListener(`click`,()=>ze(!1)),document.querySelectorAll(`.inc-history-report`).forEach(e=>e.addEventListener(`click`,()=>{let t=e.closest(`tr`);if(e.classList.contains(`muted`)){r(`该任务仍在查询中，请稍后查看`);return}let n=t.dataset.historyMode||`url`,i=t.dataset.historyQuery||``;ze(!1),Fe[n]=i,Re(n,!0),M.value=i,Te.className=`inc-task-status done`,n===`url`?(De.classList.add(`show`),Oe.classList.remove(`show`)):(Oe.classList.add(`show`),De.classList.remove(`show`),ke&&(ke.textContent=`关键词：`+i),Be(`all`)),setTimeout(()=>document.querySelector(n===`url`?`#incUrlResult`:`#incKeywordResult`)?.scrollIntoView({behavior:`smooth`,block:`start`}),30)}));function Be(e){let t=[...document.querySelectorAll(`#incChannelTable tbody tr`)],n=0;t.forEach(t=>{let r=e===`all`||(t.dataset.platforms||``).split(`,`).includes(e);if(t.style.display=r?``:`none`,r){n++;let e=t.querySelector(`.inc-rank-cell`);e&&(n===1?e.innerHTML=`<span class="rank-medal gold">1</span>`:n===2?e.innerHTML=`<span class="rank-medal silver">2</span>`:n===3?e.innerHTML=`<span class="rank-medal bronze">3</span>`:e.textContent=n)}})}document.getElementById(`incChannelTabs`)?.addEventListener(`click`,e=>{let t=e.target.closest(`.inc-channel-tab`);t&&(document.querySelectorAll(`#incChannelTabs .inc-channel-tab`).forEach(e=>e.classList.toggle(`on`,e===t)),Be(t.dataset.channelPlatform))}),Be(`all`)}catch(e){console.error(`Error in core script 5:`,e)}try{(()=>{let e=document.getElementById(`pub`),t=document.getElementById(`pubArticlePickerModal`);if(!e||!t)return;let n=t.querySelector(`#pubPickerTableBody`),r=t.querySelector(`#pubPickerSearch`),i=t.querySelector(`#pubPickerEmpty`),a=t.querySelector(`#pubPickerConfirm`),o=t.querySelector(`#pubPickerSelectedTitle`),s=t.querySelector(`#pubPickerMediaName`),c=`auto`,l=null,u=null,d=``;function f(e){let t=document.getElementById(e===`auto`?`autoArticleTable`:`uploadedArticleTable`);return t?[...t.tBodies[0].rows]:[]}function p(){let e=f(`auto`).length,n=f(`uploaded`).length;t.querySelector(`#pubPickerAutoCount`).textContent=e,t.querySelector(`#pubPickerUploadedCount`).textContent=n}function m(){l=null,o.textContent=`暂未选择文章`,a.disabled=!0}function h(e){let t=e.querySelectorAll(`td`);return{title:(t[0]?.textContent||e.dataset.title||``).trim(),type:(t[1]?.textContent||``).trim(),published:(t[2]?.textContent||``).trim(),generated:(t[3]?.textContent||``).trim(),submitted:(t[4]?.textContent||``).trim(),sourceRow:e}}function g(){let e=(r.value||``).trim().toLowerCase();n.innerHTML=``;let t=0;f(c).forEach(r=>{let i=h(r);if(e&&!i.title.toLowerCase().includes(e))return;t++;let s=document.createElement(`tr`);s.className=`pub-picker-row`,s.dataset.articleTitle=i.title,s.innerHTML=`<td class="article-title"></td><td><span class="article-type-pill"></span></td><td></td><td></td><td></td><td><span class="pub-picker-radio" aria-hidden="true"></span></td>`,s.children[0].textContent=i.title,s.querySelector(`.article-type-pill`).textContent=i.type,s.children[2].textContent=i.published,s.children[3].textContent=i.generated,s.children[4].textContent=i.submitted,s.addEventListener(`click`,()=>{n.querySelectorAll(`tr`).forEach(e=>e.classList.remove(`selected`)),s.classList.add(`selected`),l=i,o.textContent=i.title,a.disabled=!1}),n.appendChild(s)}),i.classList.toggle(`show`,t===0)}function _(e){t.classList.toggle(`show`,e),e||(u=null,d=``,m())}function v(e){u=e,d=e.closest(`tr`)?.querySelector(`.media-name`)?.textContent.trim()||`当前媒体`,e.closest(`.media-library-panel`)?.dataset.libraryPanel,s.textContent=d,c=`auto`,r.value=``,t.querySelectorAll(`[data-picker-tab]`).forEach(e=>e.classList.toggle(`on`,e.dataset.pickerTab===`auto`)),m(),p(),g(),_(!0)}e.addEventListener(`click`,e=>{let t=e.target.closest(`.pub-submit`);t&&(e.preventDefault(),e.stopPropagation(),e.stopImmediatePropagation&&e.stopImmediatePropagation(),v(t))},!0),t.querySelector(`#pubPickerClose`).addEventListener(`click`,()=>_(!1)),t.querySelector(`#pubPickerCancel`).addEventListener(`click`,()=>_(!1)),t.addEventListener(`click`,e=>{e.target===t&&_(!1)}),t.querySelector(`#pubPickerTabs`).addEventListener(`click`,e=>{let n=e.target.closest(`[data-picker-tab]`);n&&(c=n.dataset.pickerTab,t.querySelectorAll(`[data-picker-tab]`).forEach(e=>e.classList.toggle(`on`,e===n)),m(),g())}),t.querySelector(`#pubPickerSearchBtn`).addEventListener(`click`,()=>{m(),g()}),t.querySelector(`#pubPickerSearchReset`).addEventListener(`click`,()=>{r.value=``,m(),g()}),r.addEventListener(`keydown`,e=>{e.key===`Enter`&&(m(),g())}),a.addEventListener(`click`,()=>{if(!l)return;let e=new Date(Math.min(Date.now(),new Date(`2026-07-30T23:59:59`).getTime())),t=e.getFullYear(),n=String(e.getMonth()+1).padStart(2,`0`),r=String(e.getDate()).padStart(2,`0`),i=String(e.getHours()).padStart(2,`0`),a=String(e.getMinutes()).padStart(2,`0`),o=String(e.getSeconds()).padStart(2,`0`),s=t+`-`+n+`-`+r+` `+i+`:`+a+`:`+o,c=l.sourceRow;if(c){let e=c.querySelectorAll(`td`);e[2]&&(e[2].innerHTML=`<span class="article-publish-review">审核中</span>`),e[4]&&(e[4].textContent=s),c.dataset.pendingMedia=d,c.dataset.submitTime=s}u&&(u.classList.add(`done`),u.textContent=`已投稿`);let f=l.title,p=d;_(!1),showToast(`「`+f+`」已提交至「`+p+`」，文章状态更新为审核中`)})})()}catch(e){console.error(`Error in picker script 6:`,e)}try{(()=>{document.querySelectorAll(`button:not([type])`).forEach(e=>e.type=`button`);let e=[...document.querySelectorAll(`.nav a[data-p]`)],t={dash:[`首页`,`全网AI搜索场景覆盖与GEO增长数据总览`],inc:[`检测分析`,`验证文章与关键词是否进入AI可引用信源池`],kb:[`GEO 内容增长`,`维护企业事实、资质、案例与问答知识源`],persona:[`GEO 内容增长`,`从核心产品反推人群、场景与购买考量`],kw:[`GEO 内容增长`,`生成并筛选面向AI搜索场景的长尾问题词库`],gen:[``,`填写或选择下方「核心关键词 + 长尾关键词」，点击右侧绿色 AI Agent 图标即可智能反推「用户画像 → 搜索场景 → 用户痛点」，并在当前页面直接生成标准 3000 字深度长文。`],videographic:[`GEO 内容增长`,`使用多模态AI模型，生成短视频或新媒体图文。内容基于大模型训练数据生成，可能存在局限性或不准确性。`],articles:[`GEO 内容增长`,`统一管理自动化文章与人工上传内容`],pub:[`GEO 内容增长`,`按媒体属性与GEO适配度选择信源并投稿`],agent:[`账户中心`,`查看企业服务套餐余量、功能配额明细与账户余额充值`]},n=document.getElementById(`headerKicker`),r=document.getElementById(`headerSubtitle`),htEl=document.getElementById(`ht`);function i(i){let a=t[i]||[`360智见GEO`,`AI 搜索可见性优化平台`];n&&(n.textContent=a[0],n.style.display=i===`gen`?`none`:``),i===`gen`&&htEl&&(htEl.textContent=`内容创作与用户需求画像建模`),r&&(r.textContent=a[1]),e.forEach(e=>e.setAttribute(`aria-current`,e.dataset.p===i?`page`:`false`))}e.forEach(e=>{e.setAttribute(`tabindex`,`0`),e.setAttribute(`role`,`button`),e.title=e.textContent.trim(),e.addEventListener(`click`,()=>{i(e.dataset.p),history.replaceState(null,``,`#`+e.dataset.p)}),e.addEventListener(`keydown`,t=>{(t.key===`Enter`||t.key===` `)&&(t.preventDefault(),e.click())})});let a=location.hash.slice(1),o=e.find(e=>e.dataset.p===a);if(o)o.click();else{let t=e.find(e=>e.classList.contains(`on`));t&&i(t.dataset.p)}function s(){
+  const tabBtns = document.querySelectorAll(".vg-tab-btn");
+  const tabPanels = document.querySelectorAll(".vg-tab-panel");
+  tabBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      tabBtns.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      const target = btn.getAttribute("data-tab");
+      tabPanels.forEach(p => {
+        p.classList.remove("active");
+        if (p.id === target) p.classList.add("active");
+      });
+    });
+  });
+
+  const methodTabs = document.querySelectorAll("#vgMethodTabs .vg-method-pill");
+  const stQuick = document.getElementById("vgStateQuickPanel");
+  const stAi = document.getElementById("vgStateAiPanel");
+  const alertCost = document.getElementById("vgAlertCost");
+  const phoneBottomLabel = document.getElementById("vgPhoneBottomLabel");
+
+  methodTabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      methodTabs.forEach(t => t.classList.remove("active"));
+      tab.classList.add("active");
+      const mode = tab.getAttribute("data-vmethod");
+      if (mode === "quick") {
+        if (stQuick) stQuick.style.display = "block";
+        if (stAi) stAi.style.display = "none";
+        if (alertCost) {
+          alertCost.innerHTML = '⚡ <strong>快剪计费规则</strong>：1 分钟消耗 50 积分，不满 1 分钟按 1 分钟计费；快剪生成失败不扣积分。';
+        }
+        if (phoneBottomLabel) {
+          phoneBottomLabel.textContent = "📱 快剪实时渲染预览";
+        }
+      } else {
+        if (stQuick) stQuick.style.display = "none";
+        if (stAi) stAi.style.display = "block";
+        if (alertCost) {
+          alertCost.innerHTML = '⚡ <strong>AI生成计费规则</strong>：AI生成按时长包计费，10秒320积分 /15秒480积分；生成失败不扣费。本视频由AI技术辅助生成，AI生成画面可能存在局限性或不准确性，仅供参考分享。';
+        }
+        if (phoneBottomLabel) {
+          phoneBottomLabel.textContent = "📱 AI 生成画面预演";
+        }
+      }
+    });
+  });
+
+  const quickMatSelect = document.getElementById("vgQuickMaterialSelect");
+  const quickTplSelect = document.getElementById("vgQuickTemplateSelect");
+  const quickStartBtn = document.getElementById("vgQuickStartBtn");
+
+  function checkQuickFormValidity() {
+    const matVal = quickMatSelect ? quickMatSelect.value : "";
+    const tplVal = quickTplSelect ? quickTplSelect.value : "";
+    const isValid = matVal !== "" && tplVal !== "";
+    if (quickStartBtn) {
+      if (isValid) {
+        quickStartBtn.removeAttribute("disabled");
+        quickStartBtn.style.opacity = "1";
+        quickStartBtn.style.cursor = "pointer";
+        quickStartBtn.title = "素材与模板配置完成，点击一键渲染";
+      } else {
+        quickStartBtn.setAttribute("disabled", "true");
+        quickStartBtn.style.opacity = "0.45";
+        quickStartBtn.style.cursor = "not-allowed";
+        quickStartBtn.title = "请先选择素材分组和混剪模板";
+      }
+    }
+  }
+
+  if (quickMatSelect) quickMatSelect.addEventListener("change", checkQuickFormValidity);
+  if (quickTplSelect) quickTplSelect.addEventListener("change", () => {
+    const val = quickTplSelect.value;
+    const nameEl = document.getElementById("vgTemplateNameText");
+    const tagEl = document.getElementById("vgTemplateTagText");
+    const descEl = document.getElementById("vgTemplateDescText");
+    const thumbEl = document.getElementById("vgTemplateThumbImg");
+    if (val === "gold3s") {
+      if (nameEl) nameEl.textContent = "黄金3秒钩子爆款模板";
+      if (tagEl) tagEl.textContent = "推荐用于抖音/快手短视频";
+      if (descEl) descEl.textContent = "0-3秒抛出安全痛点，8秒核心功能卡点展示，最后3秒行动号召与信任背书。";
+    } else if (val === "techreview") {
+      if (nameEl) nameEl.textContent = "科技大片硬核评测模板";
+      if (tagEl) tagEl.textContent = "适合B站/视频号深度种草";
+      if (descEl) descEl.textContent = "大画幅镜头切换，实测参数雷达图卡点，权威专家背书与技术参数拉满。";
+    } else if (val === "casepromo") {
+      if (nameEl) nameEl.textContent = "政企标杆案例实战模板";
+      if (tagEl) tagEl.textContent = "适合商务洽谈与矩阵分发";
+      if (descEl) descEl.textContent = "稳重沉浸大底色，客户实测痛点与交付成果快剪对比，建立高品牌信任感。";
+    } else if (val === "fastflow") {
+      if (nameEl) nameEl.textContent = "快节奏高密度干货模板";
+      if (tagEl) tagEl.textContent = "适合信息流高点击广告";
+      if (descEl) descEl.textContent = "1.5倍节奏快切，核心关键词大字打点，密集信息轰炸提升完播率。";
+    }
+    checkQuickFormValidity();
+  });
+
+  checkQuickFormValidity();
+
+  const matPreviewModal = document.getElementById("vgMaterialPreviewModal");
+  const tplPreviewModal = document.getElementById("vgTemplatePreviewModal");
+
+  const openMatModalBtn = document.getElementById("vgOpenMaterialPreviewBtn");
+  if (openMatModalBtn) {
+    openMatModalBtn.addEventListener("click", () => {
+      if (matPreviewModal) matPreviewModal.classList.add("show");
+    });
+  }
+
+  const closeMatModalBtn = document.getElementById("vgCloseMatPreviewModalBtn");
+  const cancelMatModalBtn = document.getElementById("vgCancelMatPreviewModalBtn");
+  const confirmMatModalBtn = document.getElementById("vgConfirmMatPreviewModalBtn");
+  [closeMatModalBtn, cancelMatModalBtn].forEach(b => {
+    if (b) b.addEventListener("click", () => {
+      if (matPreviewModal) matPreviewModal.classList.remove("show");
+    });
+  });
+  if (confirmMatModalBtn) {
+    confirmMatModalBtn.addEventListener("click", () => {
+      if (matPreviewModal) matPreviewModal.classList.remove("show");
+      f("已确认素材分组并应用到当前快剪工程", "success");
+    });
+  }
+
+  const matCards = document.querySelectorAll(".vg-mat-card");
+  matCards.forEach(card => {
+    card.addEventListener("click", () => {
+      const title = card.getAttribute("data-mtitle");
+      f("已播放素材片段预览：" + title, "info");
+    });
+  });
+
+  const openTplModalBtn = document.getElementById("vgTemplatePreviewCard");
+  if (openTplModalBtn) {
+    openTplModalBtn.addEventListener("click", () => {
+      if (tplPreviewModal) tplPreviewModal.classList.add("show");
+    });
+  }
+
+  const closeTplModalBtn = document.getElementById("vgCloseTplPreviewModalBtn");
+  const cancelTplModalBtn = document.getElementById("vgCancelTplPreviewModalBtn");
+  const confirmTplModalBtn = document.getElementById("vgConfirmTplPreviewModalBtn");
+  [closeTplModalBtn, cancelTplModalBtn].forEach(b => {
+    if (b) b.addEventListener("click", () => {
+      if (tplPreviewModal) tplPreviewModal.classList.remove("show");
+    });
+  });
+  if (confirmTplModalBtn) {
+    confirmTplModalBtn.addEventListener("click", () => {
+      if (tplPreviewModal) tplPreviewModal.classList.remove("show");
+      f("已选定混剪模板并应用到剪辑轨", "success");
+    });
+  }
+
+  const playDemoBtn = document.getElementById("vgPlayDemoVideoBtn");
+  if (playDemoBtn) {
+    playDemoBtn.addEventListener("click", () => {
+      f("正在全屏模拟播放该混剪模板样片 (15秒)", "info");
+    });
+  }
+
+  const quickBgmSelect = document.getElementById("vgQuickBgmSelect");
+  const quickBgmAudition = document.getElementById("vgQuickBgmAudition");
+  if (quickBgmAudition && quickBgmSelect) {
+    quickBgmAudition.addEventListener("click", () => {
+      const selOpt = quickBgmSelect.options[quickBgmSelect.selectedIndex];
+      const name = selOpt ? selOpt.text : "科技轻快背景乐";
+      f("正在试听背景音乐：" + name, "info");
+    });
+  }
+
+  const vnavBtns = document.querySelectorAll(".vg-vnav-btn");
+  const vtabViews = document.querySelectorAll(".vg-vtab-view");
+  vnavBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      vnavBtns.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      const targetId = btn.getAttribute("data-vpanel");
+      vtabViews.forEach(view => {
+        view.classList.remove("active");
+        if (view.id === targetId) view.classList.add("active");
+      });
+    });
+  });
+
+  const promptInput = document.getElementById("vgAiPromptInput");
+  const promptCounter = document.getElementById("vgPromptCounter");
+  if (promptInput && promptCounter) {
+    promptInput.addEventListener("input", () => {
+      promptCounter.textContent = promptInput.value.length + "/500";
+    });
+  }
+
+  const promptChips = document.querySelectorAll(".vg-prompt-chip");
+  promptChips.forEach(chip => {
+    chip.addEventListener("click", () => {
+      if (promptInput) {
+        const text = chip.textContent.replace("+ ", "");
+        if (promptInput.value.trim().length > 0) {
+          promptInput.value += "，" + text;
+        } else {
+          promptInput.value = text;
+        }
+        if (promptCounter) promptCounter.textContent = promptInput.value.length + "/500";
+        f("已填入画面提示词标签：" + text, "info");
+      }
+    });
+  });
+
+  const polishBtn = document.getElementById("vgAiPromptPolishBtn");
+  if (polishBtn && promptInput) {
+    polishBtn.addEventListener("click", () => {
+      const cur = promptInput.value.trim();
+      const enhanced = cur ? cur + "，4K超高清渲染，电影级景深光影，运镜平滑推拉，商业写实质感" : "科技机房与360网络安全指挥大屏，实时态势数据流缓缓流动，科技蓝与橙黄警示光效交织，4K超清写实商业质感";
+      promptInput.value = enhanced;
+      if (promptCounter) promptCounter.textContent = promptInput.value.length + "/500";
+      f("AI 画面提示词润色增强成功！", "success");
+    });
+  }
+
+  const durationPills = document.querySelectorAll(".vg-duration-pill");
+  durationPills.forEach(pill => {
+    pill.addEventListener("click", () => {
+      durationPills.forEach(p => {
+        p.classList.remove("active");
+        p.style.borderColor = "#e2e8f0";
+        p.style.background = "#fff";
+      });
+      pill.classList.add("active");
+      pill.style.borderColor = "#2563eb";
+      pill.style.background = "#eff6ff";
+      const dur = pill.getAttribute("data-dur");
+      f("已设定生成视频时长为：" + dur + " 秒", "info");
+    });
+  });
+
+  const ratioPills = document.querySelectorAll(".vg-ratio-pill");
+  ratioPills.forEach(pill => {
+    pill.addEventListener("click", () => {
+      ratioPills.forEach(p => {
+        p.classList.remove("active");
+        p.style.borderColor = "#e2e8f0";
+        p.style.background = "#fff";
+      });
+      pill.classList.add("active");
+      pill.style.borderColor = "#2563eb";
+      pill.style.background = "#eff6ff";
+      const ratio = pill.getAttribute("data-ratio");
+      f("已设定画幅比例为：" + (ratio === "9:16" ? "9:16 竖屏（抖音/视频号）" : "16:9 横屏（B站/PC端）"), "info");
+    });
+  });
+
+  const imgRefToggle = document.getElementById("vgImgRefToggle");
+  const imgRefArea = document.getElementById("vgImgRefArea");
+  if (imgRefToggle && imgRefArea) {
+    imgRefToggle.addEventListener("change", () => {
+      if (imgRefToggle.checked) {
+        imgRefArea.style.display = "block";
+        f("已开启「图生视频」参考画面模式", "info");
+      } else {
+        imgRefArea.style.display = "none";
+        f("已切换为「纯文本生成视频」模式", "info");
+      }
+    });
+  }
+
+  const imgRefPickLibBtn = document.getElementById("vgImgRefPickLibBtn");
+  if (imgRefPickLibBtn) {
+    imgRefPickLibBtn.addEventListener("click", () => {
+      f("已从素材库载入默认高清主图作为参考底图", "info");
+    });
+  }
+
+  const speedSlider = document.getElementById("vgVoiceSpeedSlider");
+  const speedVal = document.getElementById("vgVoiceSpeedVal");
+  if (speedSlider && speedVal) {
+    speedSlider.addEventListener("input", () => {
+      speedVal.textContent = speedSlider.value + "x";
+    });
+  }
+
+  const voiceCards = document.querySelectorAll(".vg-voice-card");
+  voiceCards.forEach(card => {
+    card.addEventListener("click", () => {
+      voiceCards.forEach(c => {
+        c.style.borderColor = "#e2e8f0";
+        c.style.background = "#fff";
+        const dot = c.querySelector(".voice-radio-dot");
+        if (dot) dot.style.display = "none";
+      });
+      card.style.borderColor = "#2563eb";
+      card.style.background = "#eff6ff";
+      const myDot = card.querySelector(".voice-radio-dot");
+      if (myDot) myDot.style.display = "block";
+      const vname = card.getAttribute("data-vname");
+      f("已选用配音音色：" + vname, "info");
+    });
+  });
+
+  const subTypePills = document.querySelectorAll(".vg-sub-type-pill");
+  subTypePills.forEach(pill => {
+    pill.addEventListener("click", () => {
+      subTypePills.forEach(p => {
+        p.style.borderColor = "#cbd5e1";
+        p.style.color = "#475569";
+        p.style.background = "#fff";
+      });
+      pill.style.borderColor = "#2563eb";
+      pill.style.color = "#2563eb";
+      pill.style.background = "#eff6ff";
+      const lang = pill.getAttribute("data-lang");
+      f("已切换字幕语言模式：" + (lang === "dual" ? "中英双语字幕" : "标准单语中文"), "info");
+    });
+  });
+
+  const subStyleCards = document.querySelectorAll(".vg-substyle-card");
+  subStyleCards.forEach(card => {
+    card.addEventListener("click", () => {
+      subStyleCards.forEach(c => {
+        c.style.borderColor = "#e2e8f0";
+        c.style.boxShadow = "none";
+        const tag = c.querySelector(".substyle-badge");
+        if (tag) tag.style.display = "none";
+      });
+      card.style.borderColor = "#2563eb";
+      card.style.boxShadow = "0 2px 8px rgba(37,99,235,0.15)";
+      const myTag = card.querySelector(".substyle-badge");
+      if (myTag) myTag.style.display = "block";
+      const sname = card.getAttribute("data-sname");
+      f("已选用字幕视觉样式：" + sname, "info");
+    });
+  });
+
+  const bgmAuditionBtns = document.querySelectorAll(".bgm-audition-btn");
+  bgmAuditionBtns.forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const bname = btn.getAttribute("data-bgm");
+      f("正在试听背景音乐：" + bname + " (已同步音量设置)", "info");
+    });
+  });
+
+  const bgmSelectBtns = document.querySelectorAll(".bgm-select-btn");
+  bgmSelectBtns.forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const bname = btn.getAttribute("data-bgm");
+      bgmSelectBtns.forEach(b => {
+        b.className = "btn s o bgm-select-btn";
+        b.textContent = "选用";
+      });
+      btn.className = "btn s primary bgm-select-btn";
+      btn.textContent = "✓ 当前选用";
+      f("已成功设置背景音乐为：" + bname, "success");
+    });
+  });
+
+  const quickStartAction = document.getElementById("vgQuickStartBtn");
+  if (quickStartAction) {
+    quickStartAction.addEventListener("click", () => {
+      f("正在为您开始云端多轨快剪智能渲染...", "info");
+      setTimeout(() => {
+        f("快剪合成进度 65%... 正在渲染转场特效与音画卡点", "info");
+        setTimeout(() => {
+          f("视频快剪合成完成！已输出高清短视频MP4", "success");
+        }, 1200);
+      }, 1000);
+    });
+  }
+
+  const aiStartAction = document.getElementById("vgAiStartGenerateBtn");
+  if (aiStartAction) {
+    aiStartAction.addEventListener("click", () => {
+      f("正在向AI视频大模型发送生成任务，预计耗时约45秒...", "info");
+      setTimeout(() => {
+        f("AI视频分镜生成中，画面连贯度与提示词对齐校验完毕...", "info");
+        setTimeout(() => {
+          f("AI视频生成完成！已入库并准备分发", "success");
+        }, 1500);
+      }, 1200);
+    });
+  }
+
+  const bottomGlobalBtn = document.getElementById("vgBottomGlobalGenerateBtn");
+  if (bottomGlobalBtn) {
+    bottomGlobalBtn.addEventListener("click", () => {
+      f("正在一键合成高清 MP4 短视频并封装字幕与音轨...", "info");
+      setTimeout(() => {
+        f("高清 MP4 渲染完成！已保存至企业媒体库，可随时全网矩阵分发", "success");
+      }, 1400);
+    });
+  }
+
+  const saveLibBtn = document.getElementById("vgBottomSaveLibBtn");
+  if (saveLibBtn) {
+    saveLibBtn.addEventListener("click", () => {
+      f("已将当前工程及分镜脚本保存至企业文库草稿箱", "success");
+    });
+  }
+
+  const matrixPublishBtn = document.getElementById("vgBottomMatrixPublishBtn");
+  if (matrixPublishBtn) {
+    matrixPublishBtn.addEventListener("click", () => {
+      f("已将视频排期推送到【矩阵发布】待审核列表（抖音/快手/视频号/B站）", "success");
+    });
+  }
+
+  const phonePlayBtn = document.querySelector(".vg-phone-play-btn");
+  if (phonePlayBtn) {
+    let isPlaying = false;
+    phonePlayBtn.addEventListener("click", () => {
+      isPlaying = !isPlaying;
+      if (isPlaying) {
+        phonePlayBtn.innerHTML = "⏸";
+        f("手机预览窗口：开始模拟播放视频", "info");
+      } else {
+        phonePlayBtn.innerHTML = "▶";
+        f("手机预览窗口：已暂停播放", "info");
+      }
+    });
+  }
+
+  const phoneLikeBtn = document.querySelector(".vg-phone-action");
+  if (phoneLikeBtn) {
+    phoneLikeBtn.addEventListener("click", () => {
+      f("模拟点赞成功 +1", "info");
+    });
+  }
+
+  const uploadBox = document.getElementById("vgUploadArea");
+  if (uploadBox) {
+    uploadBox.addEventListener("click", () => {
+      f("模拟打开系统文件选择框：支持拖拽或选择 MP4/PNG 素材", "info");
+    });
+  }
+}
+function c(){let e=document.getElementById(`themeSwitcherWrap`),t=document.getElementById(`themeSwitchBtn`),n=document.getElementById(`currentThemeName`);if(!e||!t)return;let r={blue:`极光科技蓝`,green:`清新碧翠绿`,purple:`深空星曜紫`,slate:`商务钛金灰`};function i(t,i=!1){r[t]||(t=`blue`),document.documentElement.setAttribute(`data-theme`,t),document.body.setAttribute(`data-theme`,t);try{localStorage.setItem(`geo_theme`,t)}catch{}n&&(n.textContent=r[t]),e.querySelectorAll(`.theme-item`).forEach(e=>{e.dataset.theme===t?e.classList.add(`on`):e.classList.remove(`on`)}),i&&typeof showToast==`function`&&showToast(`已切换至「`+r[t]+`」配色方案`)}t.addEventListener(`click`,n=>{n.stopPropagation();let r=e.classList.toggle(`open`);t.setAttribute(`aria-expanded`,r?`true`:`false`)}),e.querySelectorAll(`.theme-item`).forEach(n=>{n.addEventListener(`click`,r=>{r.stopPropagation();let a=n.dataset.theme;i(a,!0),e.classList.remove(`open`),t.setAttribute(`aria-expanded`,`false`)})}),document.addEventListener(`click`,n=>{e.contains(n.target)||(e.classList.remove(`open`),t.setAttribute(`aria-expanded`,`false`))});let a=`blue`;try{a=localStorage.getItem(`geo_theme`)||`blue`}catch{}i(a,!1)}window.addEventListener(`hashchange`,()=>{let t=location.hash.slice(1),n=e.find(e=>e.dataset.p===t);n&&!n.classList.contains(`on`)&&n.click()});let l=document.getElementById(`sidebarToggle`),u=`geo-sidebar-collapsed`;function d(e){document.body.classList.toggle(`sidebar-collapsed`,e),l&&(l.setAttribute(`aria-expanded`,e?`false`:`true`),l.title=e?`展开侧边栏 (点击恢复完整菜单)`:`收起侧边栏 (点击折叠为图标栏)`);try{localStorage.setItem(u,e?`1`:`0`)}catch{}window.dispatchEvent(new Event(`resize`))}try{d(localStorage.getItem(u)===`1`)}catch{d(!1)}l?.addEventListener(`click`,e=>{e.preventDefault();let t=document.body.classList.contains(`sidebar-collapsed`);d(!t),typeof showToast==`function`&&showToast(t?`已展开侧边导航栏`:`已收起侧边导航栏`)});let f=document.getElementById(`headerCompanyTag`),m=document.getElementById(`enterpriseName`);function h(){if(!f||!m)return;let e=m.value.trim()||`未命名企业`;f.textContent=e,f.title=e}m?.addEventListener(`input`,h),h();let g=document.querySelector(`.toast`);g&&(g.setAttribute(`role`,`status`),g.setAttribute(`aria-live`,`polite`),g.setAttribute(`aria-atomic`,`true`));let _=typeof window.showToast===`function`?window.showToast:function(msg){if(g){g.textContent=msg;g.classList.add(`show`);clearTimeout(window.__toastTimer);window.__toastTimer=setTimeout(()=>g.classList.remove(`show`),1800)}};window.showToast=function(e,t=`success`){g&&(g.classList.remove(`toast-warn`,`toast-error`),t===`warn`&&g.classList.add(`toast-warn`),t===`error`&&g.classList.add(`toast-error`)),_(e)},document.querySelectorAll(`.chip,.geo-step[data-jump]`).forEach(e=>{e.hasAttribute(`tabindex`)||(e.tabIndex=0),e.hasAttribute(`role`)||e.setAttribute(`role`,`button`),e.addEventListener(`keydown`,t=>{(t.key===`Enter`||t.key===` `)&&(t.preventDefault(),e.click())})}),document.querySelectorAll(`.chip`).forEach(e=>{let t=()=>e.setAttribute(`aria-pressed`,e.classList.contains(`on`)?`true`:`false`);e.addEventListener(`click`,()=>setTimeout(t,0)),t()});let v=document.getElementById(`privateAccountTable`),y=document.getElementById(`privateAccountKeyword`),b=document.getElementById(`privateAccountPlatform`),x=document.getElementById(`privateAccountStatus`),S=document.getElementById(`privateAccountCount`),C=document.getElementById(`privateAccountEmpty`);function w(){if(!v)return;let e=(y?.value||``).trim().toLowerCase(),t=b?.value||``,n=x?.value||``,r=0;[...v.tBodies[0].rows].forEach(i=>{let a=(i.querySelector(`.media-name`)?.textContent||``).toLowerCase(),o=(!e||a.includes(e))&&(!t||i.dataset.platform===t)&&(!n||i.dataset.status===n);i.style.display=o?``:`none`,o&&r++}),S&&(S.textContent=r),C&&C.classList.toggle(`show`,r===0)}document.getElementById(`privateAccountQuery`)?.addEventListener(`click`,w),document.getElementById(`privateAccountReset`)?.addEventListener(`click`,()=>{y&&(y.value=``),b&&(b.value=``),x&&(x.value=``),w()}),y?.addEventListener(`keydown`,e=>{e.key===`Enter`&&w()}),document.getElementById(`privatePlatformGrid`)?.addEventListener(`click`,e=>{let t=e.target.closest(`.private-platform-card`);if(t){if(t.classList.contains(`add`)){showToast(`已打开新增媒体授权入口（原型）`);return}b&&(b.value=t.dataset.privatePlatform||``,w()),document.getElementById(`privateAccountTable`)?.scrollIntoView({behavior:`smooth`,block:`center`})}}),document.getElementById(`privateDownloadAuth`)?.addEventListener(`click`,()=>showToast(`授权软件将在正式环境提供安全下载`)),document.querySelectorAll(`.private-account-auth`).forEach(e=>e.addEventListener(`click`,()=>showToast(`已进入账号授权流程（原型）`))),w();function T(){document.querySelectorAll(`#longTailTable .btn-bring-to-gen`).forEach(e=>{e.onclick=t=>{t.preventDefault(),t.stopPropagation();let n=e.closest(`tr`),r=n?.dataset.kw||n?.cells[0]?.textContent.trim(),i=n?.dataset.entity||n?.cells[1]?.textContent.trim(),a=document.getElementById(`coreKeywordSelect`),o=document.getElementById(`longTailSelect`);a&&i&&([...a.options].some(e=>e.value===i)||a.add(new Option(i,i)),a.value=i),typeof syncLongTails==`function`&&syncLongTails(),o&&r&&([...o.options].some(e=>e.value===r)||o.add(new Option(r,r)),o.value=r),typeof he==`function`&&he(),typeof window.__geoSwitchPage==`function`?window.__geoSwitchPage(`gen`):document.querySelector(`.nav a[data-p="gen"]`)?.click(),showToast(`已带入「`+r+`」至内容创作`)}})}T();let ee=document.getElementById(`longTailTable`),E=document.getElementById(`kwSearchInput`),te=document.getElementById(`kwEntityFilter`),D=document.getElementById(`kwIntentFilter`),ne=document.getElementById(`kwResultCount`),O=document.getElementById(`kwEmpty`);function re(){return ee?[...ee.rows].slice(1):[]}function ie(){let e=(E?.value||``).trim().toLowerCase(),t=te?.value||``,n=D?.value||``,r=0;re().forEach(i=>{let a=i.textContent.toLowerCase(),o=(!e||a.includes(e))&&(!t||i.cells[1]?.textContent.trim()===t)&&(!n||i.cells[2]?.textContent.trim()===n);i.style.display=o?``:`none`,o&&r++}),ne&&(ne.textContent=r+` 条`),O?.classList.toggle(`show`,r===0)}window.applyKwFilters=ie;[E,te,D].forEach(e=>e?.addEventListener(e===E?`input`:`change`,ie)),document.getElementById(`kwFilterReset`)?.addEventListener(`click`,()=>{E&&(E.value=``),te&&(te.value=``),D&&(D.value=``),ie()}),ie();function ae(){let e=typeof getEntities==`function`?getEntities().length:3,t=document.getElementById(`entityCountPill`);t&&(t.textContent=e+` 个核心实体`)}document.getElementById(`keywordEntities`)?.addEventListener(`input`,ae);let k=document.getElementById(`prefixSuffixAgent`);k&&(k.onclick=()=>{k.classList.add(`running`);let e=document.getElementById(`agentLastRun`);e&&(e.textContent=`Agent 正在进行语义深度挖掘与质量清洗…`),setTimeout(()=>{k.classList.remove(`running`),e&&(e.textContent=`已完成智能挖掘 · 数据已同步`),ae(),showToast(`360 智见 Agent 已完成智能长尾词挖掘，数据已同步至内容创作！`)},650)}),ae();let oe=document.getElementById(`summaryCore`),se=document.getElementById(`summaryPersona`),ce=document.getElementById(`summaryLength`),le=document.getElementById(`summaryIllustration`),ue=document.getElementById(`summaryReady`),de=document.getElementById(`articleCount`),fe=document.getElementById(`illustrationModeSelect`),pe=document.getElementById(`illustrationStyleSelect`),me=document.getElementById(`illustrationStatusPill`);window.updateGenerationSummary=he;function he(){let e=document.getElementById(`coreKeywordSelect`)?.value||`—`,t=document.getElementById(`genArticleType`)?.value||document.getElementById(`genUserPersonaSelect`)?.value?.split(`/`)[0]?.trim()||`排行推荐`;oe&&(oe.textContent=e),se&&(se.textContent=t);let n=de?.value||`2`;ce&&(ce.textContent=`标准3000 × `+n+`篇`),document.querySelectorAll(`.article-count-quick-chips .chip-mini`).forEach(e=>{e.classList.toggle(`on`,e.dataset.c===n)});let r=fe?.value||`auto_3`,i=document.querySelectorAll(`#illustrationPreviewRow .illustration-preview-thumb`);if(r===`none`)le&&(le.textContent=`纯文本 (无配图)`,le.style.color=`#64748b`),me&&(me.textContent=`○ 纯文本无图`,me.className=`pill n`),i.forEach(e=>e.classList.remove(`active`));else{let e=`AI智能配图 (3张/篇)`;r===`hero_1`&&(e=`单图极速配图 (1张/篇)`),r===`dense_5`&&(e=`深度图文混排 (5张/篇)`),le&&(le.textContent=e,le.style.color=`var(--primary)`),me&&(me.textContent=`✓ 已开启智能配图`,me.className=`pill g`),i.forEach((e,t)=>{r===`hero_1`?e.classList.toggle(`active`,t===0):e.classList.add(`active`)})}let a=Number(n)>=1&&Number(n)<=20&&e&&document.getElementById(`longTailSelect`)?.value;ue&&(ue.textContent=a?`● 可生成`:`● 参数待完善`,ue.style.color=a?`#18815c`:`#a86b10`)}document.querySelectorAll(`.article-count-quick-chips .chip-mini`).forEach(e=>{e.addEventListener(`click`,()=>{de&&(de.value=e.dataset.c),he()})}),de?.addEventListener(`change`,he),fe?.addEventListener(`change`,he),pe?.addEventListener(`change`,he),document.getElementById(`longTailSelect`)?.addEventListener(`change`,he),document.getElementById(`coreKeywordSelect`)?.addEventListener(`change`,()=>setTimeout(he,0)),document.getElementById(`genUserPersonaSelect`)?.addEventListener(`change`,he),document.getElementById(`genSearchScenarioSelect`)?.addEventListener(`change`,he),document.getElementById(`genUserPainPointsSelect`)?.addEventListener(`change`,he),he(),document.addEventListener(`keydown`,e=>{(e.ctrlKey||e.metaKey)&&e.key===`Enter`&&document.getElementById(`gen`)?.classList.contains(`on`)&&(e.preventDefault(),document.getElementById(`generateArticleBtn`)?.click())});let ge=document.getElementById(`generateArticleBtn`);ge?.addEventListener(`click`,()=>{if(ge.disabled)return;let e=de?.value||`2`,t=ge.innerHTML;ge.disabled=!0,ge.innerHTML=`<span>正在批量创建 `+e+` 篇任务…</span>`,setTimeout(()=>{ge.disabled=!1,ge.innerHTML=t,showToast(`已成功发起 `+e+` 篇深度长文生成任务（标准3000字）`)},850)});let _e;document.getElementById(`articleSearchInput`)?.addEventListener(`input`,()=>{clearTimeout(_e),_e=setTimeout(()=>{typeof filterArticleRows==`function`&&filterArticleRows()},140)});let ve=document.getElementById(`articleViewDrawer`),ye=document.getElementById(`drawerArticleTitle`),be=document.getElementById(`drawerArticleType`),A=document.getElementById(`drawerArticleStatus`),j=document.getElementById(`drawerArticleGenerated`),xe=document.getElementById(`drawerArticleSubmitted`),Se=document.getElementById(`drawerArticlePreview`),Ce=``;function we(e){ve?.classList.toggle(`show`,e),ve?.setAttribute(`aria-hidden`,e?`false`:`true`),document.body.classList.toggle(`modal-open`,e||document.querySelector(`.modal-backdrop.show`))}function M(e){if(!e)return;let t=e.querySelectorAll(`td`);Ce=(t[0]?.textContent||`文章预览`).trim(),ye.textContent=Ce,be.textContent=(t[1]?.textContent||`—`).trim(),A.textContent=(t[2]?.textContent||`—`).trim(),j.textContent=(t[3]?.textContent||`—`).trim(),xe.textContent=(t[4]?.textContent||`—`).trim(),Se.innerHTML=``;let n=document.createElement(`h2`);n.textContent=`内容预览`;let r=document.createElement(`p`);r.className=`preview-note`,r.textContent=`当前高保真原型以文章列表元数据为主。正式接入文章生成 API 后，此区域可直接渲染 content HTML 全文。`;let i=document.createElement(`p`);i.textContent=`当前文章：`+Ce+`。这里已预留完整正文预览区，后续接入 WF_ARTICLE_GENERATE 返回的 content 字段即可直接展示。`,Se.append(n,r,i),we(!0)}document.getElementById(`articles`)?.addEventListener(`click`,e=>{let t=e.target.closest(`.article-view`);t&&M(t.closest(`tr`))}),document.getElementById(`articleDrawerClose`)?.addEventListener(`click`,()=>we(!1)),document.getElementById(`articleDrawerDone`)?.addEventListener(`click`,()=>we(!1)),ve?.addEventListener(`click`,e=>{e.target===ve&&we(!1)}),document.getElementById(`articleCopyTitle`)?.addEventListener(`click`,async()=>{try{await navigator.clipboard.writeText(Ce),showToast(`文章标题已复制`)}catch{showToast(`浏览器未开放剪贴板权限`,`warn`)}}),document.addEventListener(`keydown`,e=>{e.key===`Escape`&&ve?.classList.contains(`show`)&&we(!1)});function N(e,t=50){let n=0;for(let t of e)n=n*31+t.charCodeAt(0)>>>0;return n%(t+1)}document.querySelectorAll(`#pubMediaTable tbody tr`).forEach(e=>{let t=N(e.querySelector(`.media-name`)?.textContent.trim()||e.rowIndex.toString(),50);e.dataset.priceValue=String(t);let n=e.querySelector(`.pub-price`);n&&(n.textContent=t)}),document.querySelectorAll(`#pub .library-alt-table .alt-price`).forEach((e,t)=>{e.textContent=N(e.closest(`tr`)?.textContent||String(t),50)}),window.__applyPrivateMediaFilters?.();let Te=new MutationObserver(()=>{let e=!!document.querySelector(`.modal-backdrop.show,.drawer-backdrop.show`);document.body.classList.toggle(`modal-open`,e)});document.querySelectorAll(`.modal-backdrop,.drawer-backdrop`).forEach(e=>Te.observe(e,{attributes:!0,attributeFilter:[`class`]})),document.addEventListener(`keydown`,e=>{e.key===`Escape`&&document.querySelectorAll(`.modal-backdrop.show`).forEach(e=>{let t=e.querySelector(`.modal-close`);t&&t.click()})}),window.getPersonaPayload=()=>({cname:document.getElementById(`enterpriseName`)?.value.trim()||``,industry:document.getElementById(`industryName`)?.value.trim()||``,core_entities:typeof getEntities==`function`?getEntities():[]}),window.getKeywordPayload=()=>({industry:document.getElementById(`industryName`)?.value.trim()||``,core_entities:typeof getEntities==`function`?getEntities():[]}),window.getArticlePayload=()=>({cname:document.getElementById(`slotC`)?.value.trim()||``,core_keyword:document.getElementById(`coreKeywordSelect`)?.value||``,long_tail_keyword:document.getElementById(`longTailSelect`)?.value||``,user_persona:document.getElementById(`genUserPersonaSelect`)?.value||``,search_scenario:document.getElementById(`genSearchScenarioSelect`)?.value||``,user_pain_points:document.getElementById(`genUserPainPointsSelect`)?.value||``,article_length:3e3,article_count:Number(document.getElementById(`articleCount`)?.value||2),illustration_mode:document.getElementById(`illustrationModeSelect`)?.value||`auto_3`,illustration_style:document.getElementById(`illustrationStyleSelect`)?.value||`photo`,redline:document.getElementById(`redlineInput`)?.value.trim()||``});function Ee(){
   let coreEl=document.getElementById(`coreKeywordSelect`),
       longEl=document.getElementById(`longTailSelect`),
       roleEl=document.getElementById(`personaRoleSelect`),
@@ -3899,7 +4683,7 @@ body.report-window{display:block;min-height:100vh;background:#f3f7f5;padding:0;c
               <div class="table-op-links">${i}</div>
             </td>
           </tr>
-        `}).join(``)}l?.addEventListener(`click`,e=>{let n=e.target.closest(`.sitepub-platform-card`);if(!n||e.target.closest(`.add-auth-card-btn`))return;let r=n.dataset.platform;t===r?(t=``,n.classList.remove(`selected-filter`),i&&(i.value=``)):(l.querySelectorAll(`.sitepub-platform-card`).forEach(e=>e.classList.remove(`selected-filter`)),t=r,n.classList.add(`selected-filter`),i&&(i.value=r)),u()}),o?.addEventListener(`click`,u),r?.addEventListener(`input`,u),i?.addEventListener(`change`,()=>{t=i.value,l?.querySelectorAll(`.sitepub-platform-card`).forEach(e=>{e.classList.toggle(`selected-filter`,e.dataset.platform===t)}),u()}),a?.addEventListener(`change`,u),s?.addEventListener(`click`,()=>{r&&(r.value=``),i&&(i.value=``),a&&(a.value=``),t=``,l?.querySelectorAll(`.sitepub-platform-card`).forEach(e=>e.classList.remove(`selected-filter`)),u(),showToast(`已重置筛选条件`)}),n?.addEventListener(`click`,t=>{let n=t.target.closest(`button[data-action]`);if(!n)return;let r=n.dataset.action,i=Number(n.dataset.id),a=e.find(e=>e.id===i);if(a){if(r===`publish`)showToast(`已选取【${a.name}】(${a.platform})，正在准备文章投稿通道...`),setTimeout(()=>{let e=document.querySelector(`.nav a[data-p="pub"]`);e&&e.click()},600);else if(r===`auth`)a.status=`已授权`,a.time=new Date().toISOString().replace(`T`,` `).slice(0,19),u(),showToast(`【${a.name}】官方授权成功！现可直接分发文章。`);else if(r===`edit`){let e=prompt(`编辑【${a.platform}】账号名称：`,a.name);e&&e.trim()&&(a.name=e.trim(),a.time=new Date().toISOString().replace(`T`,` `).slice(0,19),u(),showToast(`账号名称已更新`))}else r===`delete`&&(typeof window.confirm===`function`?window.confirm(`确定解除【${a.name}】(${a.platform})的授权绑定吗？`):!0)&&(e=e.filter(e=>e.id!==i),u(),showToast(`已解除【${a.name}】的授权`))}});let d=document.getElementById(`sitepubMediaTabs`);d?.addEventListener(`click`,e=>{let t=e.target.closest(`.sitepub-tab`);if(!t)return;let n=t.dataset.sitepubTab;d.querySelectorAll(`.sitepub-tab`).forEach(e=>e.classList.remove(`on`)),t.classList.add(`on`);let r={private:document.getElementById(`sitepubPanelPrivate`),public:document.getElementById(`sitepubPanelPublic`),authority:document.getElementById(`sitepubPanelAuthority`),b2b:document.getElementById(`sitepubPanelB2B`),multimodal:document.getElementById(`sitepubPanelMultimodal`)};Object.keys(r).forEach(e=>{r[e]&&r[e].classList.toggle(`on`,e===n)})});let f=document.getElementById(`sitepubAddModal`);[document.getElementById(`sitepubOpenAddModalBtn`),document.getElementById(`addAuthFromCardBtn`)].forEach(e=>e?.addEventListener(`click`,()=>{f?.classList.add(`show`)})),document.getElementById(`sitepubAddClose`)?.addEventListener(`click`,()=>f?.classList.remove(`show`)),document.getElementById(`sitepubAddCancel`)?.addEventListener(`click`,()=>f?.classList.remove(`show`)),document.getElementById(`sitepubAddConfirm`)?.addEventListener(`click`,()=>{let t=document.getElementById(`sitepubNewPlatform`)?.value||`公众号`,n=(document.getElementById(`sitepubNewAccountName`)?.value||``).trim();if(!n){showToast(`请输入授权账号名称`,`warn`);return}let r={id:Date.now(),name:n,platform:t,status:`已授权`,time:new Date().toISOString().replace(`T`,` `).slice(0,19)};e.unshift(r),u(),f?.classList.remove(`show`),document.getElementById(`sitepubNewAccountName`)&&(document.getElementById(`sitepubNewAccountName`).value=``),showToast(`【${n}】(${t}) 授权绑定成功！`)});let p=document.getElementById(`sitepubDownloadModal`);document.getElementById(`downloadAuthSoftwareBtn`)?.addEventListener(`click`,()=>{p?.classList.add(`show`)}),document.getElementById(`sitepubDownloadClose`)?.addEventListener(`click`,()=>p?.classList.remove(`show`)),document.getElementById(`sitepubDownloadDone`)?.addEventListener(`click`,()=>p?.classList.remove(`show`));let m=document.getElementById(`sitepubGuideModal`);document.getElementById(`sitepubGuideBtn`)?.addEventListener(`click`,()=>{m?.classList.add(`show`)}),document.getElementById(`sitepubGuideClose`)?.addEventListener(`click`,()=>m?.classList.remove(`show`)),document.getElementById(`sitepubGuideDone`)?.addEventListener(`click`,()=>m?.classList.remove(`show`)),u()}Ee(),De();function Oe(){let e=document.getElementById(`dashNoticeBtn`),t=document.getElementById(`dashNoticePopover`),n=document.getElementById(`dashNoticeBadge`),r=document.getElementById(`dashNoticeCountText`),i=document.getElementById(`dashNoticeReadAll`),a=document.getElementById(`dashNoticeClear`),o=document.getElementById(`dashNoticeList`);e?.addEventListener(`click`,e=>{e.stopPropagation(),t?.classList.toggle(`show`)}),document.addEventListener(`click`,n=>{!t?.contains(n.target)&&n.target!==e&&t?.classList.remove(`show`)}),i?.addEventListener(`click`,()=>{o?.querySelectorAll(`.dash-notice-item`).forEach(e=>{e.classList.remove(`unread`)}),n&&(n.style.display=`none`),r&&(r.textContent=`(0)`),showToast(`所有通知已标记为已读`)}),a?.addEventListener(`click`,()=>{o&&(o.innerHTML=`<div style="text-align:center;padding:24px;color:#94a3b8;font-size:12px">暂无新通知</div>`),n&&(n.style.display=`none`),r&&(r.textContent=`(0)`),showToast(`通知已清空`)});let s=document.getElementById(`dashTutorialBtn`),c=document.getElementById(`dashTutorialModal`),l=document.getElementById(`dashTutorialClose`),u=document.getElementById(`dashTutorialDone`);s?.addEventListener(`click`,()=>{c?.classList.add(`show`)}),l?.addEventListener(`click`,()=>c?.classList.remove(`show`)),u?.addEventListener(`click`,()=>c?.classList.remove(`show`)),document.querySelectorAll(`.dash-kpi-card`).forEach(e=>{e.addEventListener(`click`,()=>{let t=e.dataset.kpi;t===`articles`?document.querySelector(`.nav a[data-p="articles"]`)?.click():t===`publishes`?document.querySelector(`.nav a[data-p="pub"]`)?.click():t===`ranks`&&document.querySelector(`.nav a[data-p="inc"]`)?.click()})}),document.querySelectorAll(`.dash-recent-articles-table tbody tr`).forEach(e=>{e.style.cursor=`pointer`,e.addEventListener(`click`,()=>{let t=e.querySelector(`.dash-article-title-cell`)?.textContent.trim();showToast(`已选择文章【`+t+`】`)})});let d=document.getElementById(`dashMainView`),f=document.getElementById(`dashReportView`),p=document.getElementById(`dashReportBtn`),m=document.getElementById(`dashBackToMainBtn`),h=document.getElementById(`ht`),g=document.getElementById(`headerSubtitle`);p?.addEventListener(`click`,()=>{d?.classList.add(`hidden`),f?.classList.add(`show`),h&&(h.textContent=`数据报表`),g&&(g.textContent=`360安全科技股份有限公司 · 全网AI搜索数据分析报表`),window.scrollTo({top:0,behavior:`smooth`}),showToast(`已打开企业数据报表`)}),m?.addEventListener(`click`,()=>{f?.classList.remove(`show`),d?.classList.remove(`hidden`),h&&(h.textContent=`首页概览`),g&&(g.textContent=`全网AI搜索场景覆盖与GEO增长数据总览`),window.scrollTo({top:0,behavior:`smooth`})});let _=[{core:`360安全卫士`,query:`360安全卫士极速版与企业版区别评测`,platform:`Kimi`,source:`移动端`,time:`2026-09-30 10:50:15`},{core:`360安全卫士`,query:`Windows11装哪个杀毒软件好360安全卫士实测`,platform:`Kimi`,source:`PC端`,time:`2026-10-02 02:56:13`},{core:`终端安全防护`,query:`企业级终端安全EDR厂商推荐与选型对比`,platform:`Kimi`,source:`PC端`,time:`2026-09-30 22:16:51`},{core:`终端安全防护`,query:`360天擎终端安全管理系统部署方案`,platform:`Kimi`,source:`移动端`,time:`2026-10-05 02:09:09`},{core:`勒索病毒拦截`,query:`服务器防勒索病毒哪家强360安全拦截率`,platform:`豆包`,source:`移动端`,time:`2026-10-04 18:22:10`},{core:`AI安全大模型`,query:`360智脑安全大模型如何赋能企业安全运营`,platform:`DeepSeek`,source:`PC端`,time:`2026-10-05 01:14:32`},{core:`网络安全等级保护`,query:`等保2.0三级测评整改必备安全产品清单`,platform:`文心一言`,source:`PC端`,time:`2026-10-04 14:10:05`},{core:`终端安全防护`,query:`金融企业终端杀毒与桌面管理合规选型`,platform:`腾讯元宝`,source:`移动端`,time:`2026-10-03 19:25:40`},{core:`勒索病毒拦截`,query:`LockBit勒索病毒专杀与文件主动防护工具`,platform:`通义千问`,source:`移动端`,time:`2026-10-03 16:30:18`}],v=[{core:`360安全科技`,query:`360安全科技股份有限公司企业安全实力怎么样`,platform:`豆包`,source:`移动端`,time:`2026-10-04 15:20:11`},{core:`360安全科技`,query:`360安全大脑与数字安全国家队能力解析`,platform:`Kimi`,source:`PC端`,time:`2026-10-03 19:42:08`},{core:`三六零`,query:`三六零数字安全集团政企客户标杆案例`,platform:`文心一言`,source:`PC端`,time:`2026-10-02 11:15:30`},{core:`360天擎`,query:`360天擎终端安全管理系统企业版采购报价`,platform:`DeepSeek`,source:`移动端`,time:`2026-10-05 02:00:19`},{core:`360安全科技`,query:`360安全科技AI大模型安全测评报告`,platform:`腾讯元宝`,source:`移动端`,time:`2026-10-04 09:12:33`},{core:`360智脑`,query:`360智脑大模型安全与垂直行业落地应用`,platform:`通义千问`,source:`PC端`,time:`2026-10-03 21:05:44`}],y=`keyword`,b=`all`,x=`all`,S=document.getElementById(`reportTableBody`),C=document.getElementById(`reportCoreKeywordSelect`),w=document.getElementById(`reportResultSummary`);function T(){if(!S)return;let e=y===`keyword`?_:v,t=C?.value||``,n=e.filter(e=>{let n=!t||e.core===t,r=b===`all`||e.platform===b,i=x===`all`||e.source===x;return n&&r&&i});if(w&&(w.textContent=`共匹配 `+n.length+` 条高权重搜索记录`),!n.length){S.innerHTML=`<tr><td colspan="6" style="text-align:center;padding:36px;color:#94a3b8;font-size:13px">暂无匹配的搜索记录</td></tr>`;return}S.innerHTML=n.map(e=>`
+        `}).join(``)}l?.addEventListener(`click`,e=>{let n=e.target.closest(`.sitepub-platform-card`);if(!n||e.target.closest(`.add-auth-card-btn`))return;let r=n.dataset.platform;t===r?(t=``,n.classList.remove(`selected-filter`),i&&(i.value=``)):(l.querySelectorAll(`.sitepub-platform-card`).forEach(e=>e.classList.remove(`selected-filter`)),t=r,n.classList.add(`selected-filter`),i&&(i.value=r)),u()}),o?.addEventListener(`click`,u),r?.addEventListener(`input`,u),i?.addEventListener(`change`,()=>{t=i.value,l?.querySelectorAll(`.sitepub-platform-card`).forEach(e=>{e.classList.toggle(`selected-filter`,e.dataset.platform===t)}),u()}),a?.addEventListener(`change`,u),s?.addEventListener(`click`,()=>{r&&(r.value=``),i&&(i.value=``),a&&(a.value=``),t=``,l?.querySelectorAll(`.sitepub-platform-card`).forEach(e=>e.classList.remove(`selected-filter`)),u(),showToast(`已重置筛选条件`)}),n?.addEventListener(`click`,t=>{let n=t.target.closest(`button[data-action]`);if(!n)return;let r=n.dataset.action,i=Number(n.dataset.id),a=e.find(e=>e.id===i);if(a){if(r===`publish`)showToast(`已选取【${a.name}】(${a.platform})，正在准备文章投稿通道...`),setTimeout(()=>{let e=document.querySelector(`.nav a[data-p="pub"]`);e&&e.click()},600);else if(r===`auth`)a.status=`已授权`,a.time=new Date().toISOString().replace(`T`,` `).slice(0,19),u(),showToast(`【${a.name}】官方授权成功！现可直接分发文章。`);else if(r===`edit`){let e=prompt(`编辑【${a.platform}】账号名称：`,a.name);e&&e.trim()&&(a.name=e.trim(),a.time=new Date().toISOString().replace(`T`,` `).slice(0,19),u(),showToast(`账号名称已更新`))}else r===`delete`&&(typeof window.confirm===`function`?window.confirm(`确定解除【${a.name}】(${a.platform})的授权绑定吗？`):!0)&&(e=e.filter(e=>e.id!==i),u(),showToast(`已解除【${a.name}】的授权`))}});let d=document.getElementById(`sitepubMediaTabs`);d?.addEventListener(`click`,e=>{let t=e.target.closest(`.sitepub-tab`);if(!t)return;let n=t.dataset.sitepubTab;d.querySelectorAll(`.sitepub-tab`).forEach(e=>e.classList.remove(`on`)),t.classList.add(`on`);let r={private:document.getElementById(`sitepubPanelPrivate`),public:document.getElementById(`sitepubPanelPublic`),authority:document.getElementById(`sitepubPanelAuthority`),b2b:document.getElementById(`sitepubPanelB2B`),multimodal:document.getElementById(`sitepubPanelMultimodal`)};Object.keys(r).forEach(e=>{r[e]&&r[e].classList.toggle(`on`,e===n)})});let f=document.getElementById(`sitepubAddModal`);[document.getElementById(`sitepubOpenAddModalBtn`),document.getElementById(`addAuthFromCardBtn`)].forEach(e=>e?.addEventListener(`click`,()=>{f?.classList.add(`show`)})),document.getElementById(`sitepubAddClose`)?.addEventListener(`click`,()=>f?.classList.remove(`show`)),document.getElementById(`sitepubAddCancel`)?.addEventListener(`click`,()=>f?.classList.remove(`show`)),document.getElementById(`sitepubAddConfirm`)?.addEventListener(`click`,()=>{let t=document.getElementById(`sitepubNewPlatform`)?.value||`公众号`,n=(document.getElementById(`sitepubNewAccountName`)?.value||``).trim();if(!n){showToast(`请输入授权账号名称`,`warn`);return}let r={id:Date.now(),name:n,platform:t,status:`已授权`,time:new Date().toISOString().replace(`T`,` `).slice(0,19)};e.unshift(r),u(),f?.classList.remove(`show`),document.getElementById(`sitepubNewAccountName`)&&(document.getElementById(`sitepubNewAccountName`).value=``),showToast(`【${n}】(${t}) 授权绑定成功！`)});let p=document.getElementById(`sitepubDownloadModal`);document.getElementById(`downloadAuthSoftwareBtn`)?.addEventListener(`click`,()=>{p?.classList.add(`show`)}),document.getElementById(`sitepubDownloadClose`)?.addEventListener(`click`,()=>p?.classList.remove(`show`)),document.getElementById(`sitepubDownloadDone`)?.addEventListener(`click`,()=>p?.classList.remove(`show`));let m=document.getElementById(`sitepubGuideModal`);document.getElementById(`sitepubGuideBtn`)?.addEventListener(`click`,()=>{m?.classList.add(`show`)}),document.getElementById(`sitepubGuideClose`)?.addEventListener(`click`,()=>m?.classList.remove(`show`)),document.getElementById(`sitepubGuideDone`)?.addEventListener(`click`,()=>m?.classList.remove(`show`)),u()}Ee(),De();function Oe(){let e=document.getElementById(`dashNoticeBtn`),t=document.getElementById(`dashNoticePopover`),n=document.getElementById(`dashNoticeBadge`),r=document.getElementById(`dashNoticeCountText`),i=document.getElementById(`dashNoticeReadAll`),a=document.getElementById(`dashNoticeClear`),o=document.getElementById(`dashNoticeList`);e?.addEventListener(`click`,e=>{e.stopPropagation(),t?.classList.toggle(`show`)}),document.addEventListener(`click`,n=>{!t?.contains(n.target)&&n.target!==e&&t?.classList.remove(`show`)}),i?.addEventListener(`click`,()=>{o?.querySelectorAll(`.dash-notice-item`).forEach(e=>{e.classList.remove(`unread`)}),n&&(n.style.display=`none`),r&&(r.textContent=`(0)`),showToast(`所有通知已标记为已读`)}),a?.addEventListener(`click`,()=>{o&&(o.innerHTML=`<div style="text-align:center;padding:24px;color:#94a3b8;font-size:12px">暂无新通知</div>`),n&&(n.style.display=`none`),r&&(r.textContent=`(0)`),showToast(`通知已清空`)});let s=document.getElementById(`dashTutorialBtn`),c=document.getElementById(`dashTutorialModal`),l=document.getElementById(`dashTutorialClose`),u=document.getElementById(`dashTutorialDone`);s?.addEventListener(`click`,()=>{c?.classList.add(`show`)}),l?.addEventListener(`click`,()=>c?.classList.remove(`show`)),u?.addEventListener(`click`,()=>c?.classList.remove(`show`)),document.querySelectorAll(`.dash-kpi-card`).forEach(e=>{e.addEventListener(`click`,()=>{let t=e.dataset.kpi;t===`articles`?document.querySelector(`.nav a[data-p="articles"]`)?.click():t===`publishes`?document.querySelector(`.nav a[data-p="pub"]`)?.click():t===`ranks`&&document.querySelector(`.nav a[data-p="inc"]`)?.click()})}),document.querySelectorAll(`.dash-recent-articles-table tbody tr`).forEach(e=>{e.style.cursor=`pointer`,e.addEventListener(`click`,()=>{let t=e.querySelector(`.dash-article-title-cell`)?.textContent.trim();showToast(`已选择文章【`+t+`】`)})});let syncBtn=document.getElementById(`dashSyncBtn`),syncIcon=document.getElementById(`dashSyncIcon`);syncBtn?.addEventListener(`click`,()=>{syncIcon&&(syncIcon.style.transition=`transform .7s ease`,syncIcon.style.transform=`rotate(360deg)`),syncBtn.disabled=!0,showToast(`⚡「360智见」正在向豆包、DeepSeek、Kimi等6大AI信源节点拉取实时索引...`),setTimeout(()=>{syncIcon&&(syncIcon.style.transform=`none`),syncBtn.disabled=!1,showToast(`✓「360智见」实时数据同步完成！各平台收录状态已更新`)},700)}),document.querySelectorAll(`.dash-time-btn`).forEach(e=>{e.addEventListener(`click`,()=>{document.querySelectorAll(`.dash-time-btn`).forEach(e=>{e.classList.remove(`on`),e.style.background=`none`,e.style.color=`#64748b`,e.style.fontWeight=`600`,e.style.boxShadow=`none`}),e.classList.add(`on`),e.style.background=`#ffffff`,e.style.color=`#0f172a`,e.style.fontWeight=`700`,e.style.boxShadow=`0 1px 3px rgba(0,0,0,0.06)`;let t=e.dataset.range,n=t===`today`?`今日`:t===`7d`?`近7天`:t===`90d`?`近90天`:`近30天`;showToast(`「360智见」已切换统计周期至【${n}】，大盘指标已同步`)})}),document.querySelectorAll(`.dash-ai-tools-table tbody tr`).forEach(e=>{e.addEventListener(`click`,()=>{let t=e.dataset.plat;if(!t)return;document.querySelectorAll(`.dash-ai-tools-table tbody tr`).forEach(e=>e.classList.remove(`selected-plat-row`)),e.classList.add(`selected-plat-row`);let n=document.querySelector(`.report-plat-tab[data-plat="${t}"]`);n&&n.click();let r=document.getElementById(`reportDataTable`);r?.scrollIntoView({behavior:`smooth`,block:`center`}),showToast(`「360智见」已为您联动筛选【${t}】的搜索场景与蒸馏明细`)})}),document.querySelectorAll(`.dash-keyword-rank-table tbody tr`).forEach(e=>{e.addEventListener(`click`,()=>{let t=e.dataset.kw;if(!t)return;let n=document.getElementById(`reportCoreKeywordSelect`);n&&(n.value=t,T());let r=document.getElementById(`reportDataTable`);r?.scrollIntoView({behavior:`smooth`,block:`center`}),showToast(`「360智见」已为您筛选核心词【${t}】关联搜索记录`)})});let _=[{core:`360安全卫士`,query:`360安全卫士极速版与企业版区别评测`,platform:`Kimi`,source:`移动端`,time:`2026-09-30 10:50:15`},{core:`360安全卫士`,query:`Windows11装哪个杀毒软件好360安全卫士实测`,platform:`Kimi`,source:`PC端`,time:`2026-10-02 02:56:13`},{core:`终端安全防护`,query:`企业级终端安全EDR厂商推荐与选型对比`,platform:`Kimi`,source:`PC端`,time:`2026-09-30 22:16:51`},{core:`终端安全防护`,query:`360天擎终端安全管理系统部署方案`,platform:`Kimi`,source:`移动端`,time:`2026-10-05 02:09:09`},{core:`勒索病毒拦截`,query:`服务器防勒索病毒哪家强360安全拦截率`,platform:`豆包`,source:`移动端`,time:`2026-10-04 18:22:10`},{core:`AI安全大模型`,query:`360智脑安全大模型如何赋能企业安全运营`,platform:`DeepSeek`,source:`PC端`,time:`2026-10-05 01:14:32`},{core:`网络安全等级保护`,query:`等保2.0三级测评整改必备安全产品清单`,platform:`文心一言`,source:`PC端`,time:`2026-10-04 14:10:05`},{core:`终端安全防护`,query:`金融企业终端杀毒与桌面管理合规选型`,platform:`腾讯元宝`,source:`移动端`,time:`2026-10-03 19:25:40`},{core:`勒索病毒拦截`,query:`LockBit勒索病毒专杀与文件主动防护工具`,platform:`通义千问`,source:`移动端`,time:`2026-10-03 16:30:18`}],v=[{core:`360安全科技`,query:`360安全科技股份有限公司企业安全实力怎么样`,platform:`豆包`,source:`移动端`,time:`2026-10-04 15:20:11`},{core:`360安全科技`,query:`360安全大脑与数字安全国家队能力解析`,platform:`Kimi`,source:`PC端`,time:`2026-10-03 19:42:08`},{core:`三六零`,query:`三六零数字安全集团政企客户标杆案例`,platform:`文心一言`,source:`PC端`,time:`2026-10-02 11:15:30`},{core:`360天擎`,query:`360天擎终端安全管理系统企业版采购报价`,platform:`DeepSeek`,source:`移动端`,time:`2026-10-05 02:00:19`},{core:`360安全科技`,query:`360安全科技AI大模型安全测评报告`,platform:`腾讯元宝`,source:`移动端`,time:`2026-10-04 09:12:33`},{core:`360智脑`,query:`360智脑大模型安全与垂直行业落地应用`,platform:`通义千问`,source:`PC端`,time:`2026-10-03 21:05:44`}],y=`keyword`,b=`all`,x=`all`,S=document.getElementById(`reportTableBody`),C=document.getElementById(`reportCoreKeywordSelect`),w=document.getElementById(`reportResultSummary`);function T(){if(!S)return;let e=y===`keyword`?_:v,t=C?.value||``,n=e.filter(e=>{let n=!t||e.core===t,r=b===`all`||e.platform===b,i=x===`all`||e.source===x;return n&&r&&i});if(w&&(w.textContent=`共匹配 `+n.length+` 条高权重搜索记录`),!n.length){S.innerHTML=`<tr><td colspan="6" style="text-align:center;padding:36px;color:#94a3b8;font-size:13px">暂无匹配的搜索记录</td></tr>`;return}S.innerHTML=n.map(e=>`
           <tr>
             <td style="font-weight:700;color:#1e293b">${e.core}</td>
             <td style="color:#334155;font-weight:500">${e.query}</td>
@@ -3909,7 +4693,7 @@ body.report-window{display:block;min-height:100vh;background:#f3f7f5;padding:0;c
             <td style="text-align:right">
               <div class="table-op-links">
                 <button class="table-op-link" data-report-act="shot" data-query="${e.query}" data-plat="${e.platform}" data-time="${e.time}">截图</button>
-                <button class="table-op-link" data-report-act="link" data-query="${e.query}" style="color:#ea580c">链接</button>
+                <button class="table-op-link" data-report-act="link" data-query="${e.query}" style="color:var(--primary-dark);font-weight:600">链接</button>
               </div>
             </td>
           </tr>
