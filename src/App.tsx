@@ -3805,443 +3805,613 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
   </div>
 </div>`;function f(){if(!window.__appInitialized){window.__appInitialized=!0;try{let e={dash:[`首页概览`,`全网AI搜索场景覆盖与GEO增长数据总览`],inc:[`收录查询`,`精准检测文章在各大AI大模型的收录状态与信源偏好`],kb:[`企业知识库`,`维护企业事实、主体资质、核心业务与产品知识源`],persona:[`人群画像`,`从核心产品反推人群特征、搜索场景与采购决策考量`],kw:[`关键词挖掘`,`基于知识库与语义Agent智能挖掘长尾词与高潜搜索词条`],gen:[`内容创作与用户需求画像建模`,`填写或选择下方「核心关键词 + 长尾关键词」，点击右侧绿色 AI Agent 图标即可智能反推「用户画像 → 搜索场景 → 用户痛点」，并在当前页面直接生成标准 3000 字深度长文。`],videographic:[`视频/图文`,`多模态AI短视频与新媒体图文内容生成中心`],articles:[`发布记录`,`统一沉淀全量自动化生成文章与人工上传文档`],pub:[`文章发布`,`选择私人媒体库或权威矩阵媒体一键分发投稿`],agent:[`我的套餐`,`企业服务套餐余量、功能配额明细与账户余额充值`]};window.__geoSwitchPage=function(t){if(!t)return;let n=document.getElementById(t);if(!n)return;document.querySelectorAll(`.page`).forEach(e=>e.classList.remove(`on`)),n.classList.add(`on`),document.querySelectorAll(`.nav a`).forEach(e=>{let n=e.dataset.p===t;e.classList.toggle(`on`,n),e.setAttribute(`aria-current`,n?`page`:`false`)});let r=e[t]||[`360智见GEO`,`企业AI搜索可见性优化平台`],i=document.getElementById(`headerKicker`),a=document.getElementById(`ht`),o=document.getElementById(`headerSubtitle`);i&&(i.textContent=[`dash`,`inc`].includes(t)?`监测与分析`:[`agent`].includes(t)?`服务与账户`:`GEO 内容增长`,i.style.display=t===`gen`?`none`:``),a&&(a.textContent=r[0]),o&&(o.textContent=r[1]),location.hash.slice(1)!==t&&history.replaceState(null,``,`#`+t),window.scrollTo({top:0,behavior:`instant`})},document.querySelectorAll(`.nav a[data-p]`).forEach(e=>{e.onclick=t=>{t.preventDefault(),window.__geoSwitchPage(e.dataset.p)}}),document.querySelectorAll(`.chip`).forEach(e=>e.onclick=()=>{if(e.parentNode.dataset.multi){e.classList.toggle(`on`);return}[...e.parentNode.children].forEach(e=>e.classList.remove(`on`)),e.classList.add(`on`)}),document.querySelectorAll(`table`).forEach(e=>{if(e.parentElement.classList.contains(`table-scroll`))return;let t=document.createElement(`div`);t.className=`table-scroll`,(e.rows[0]?e.rows[0].cells.length:0)>=7&&t.classList.add(`wide`),e.parentNode.insertBefore(t,e),t.appendChild(e)});let t=document.querySelector(`.toast`)||(()=>{let e=document.createElement(`div`);return e.className=`toast`,document.body.appendChild(e),e})(),n;function r(e){t.textContent=e,t.classList.add(`show`),clearTimeout(n),n=setTimeout(()=>t.classList.remove(`show`),1800)}window.showToast=r;document.querySelectorAll(`.geo-step[data-jump]`).forEach(e=>e.onclick=()=>{let t=e.dataset.jump,n=document.querySelector(`.nav a[data-p="`+t+`"]`);n&&n.click()});let i=document.getElementById(`enterpriseName`),a=document.getElementById(`creditCode`),o=document.getElementById(`industryName`),s=document.getElementById(`businessAddress`),c=document.getElementById(`companyContact`),l=document.getElementById(`companyContactPhone`),u=document.getElementById(`companyContactEmail`),d=document.getElementById(`companyCompletion`),f=document.getElementById(`slotC`),p=document.getElementById(`licenseFileInput`),m=document.getElementById(`licenseFileName`),h=!0,g=!0;function _(){let e=[i,a,o,s,c,l,u].every(e=>e&&e.value.trim()),t=/^[0-9+()\-\s]{6,24}$/.test(l.value.trim()),n=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(u.value.trim());return e&&t&&n&&h}function v(){let e=_();return d.textContent=e?`● 已完成主体认证`:`● 基本信息待完善`,d.style.color=e?`#12835a`:`#a86b10`,d.style.background=e?`#e9f8f1`:`#fff5e3`,d.style.borderColor=e?`#d4eedf`:`#f4ddaf`,f&&(f.value=i.value.trim()),e}[i,a,o,s,c,l,u].forEach(e=>e&&e.addEventListener(`input`,()=>{g=!1,v(),d.textContent=`● 基本信息待保存`,d.style.color=`#a86b10`,d.style.background=`#fff5e3`,d.style.borderColor=`#f4ddaf`})),document.getElementById(`saveCompanyInfo`).onclick=()=>{if(!v()){r(`请补全企业信息、联系人电话/邮箱与营业执照`);return}g=!0,v(),r(`企业基本信息已保存，并同步到内容创作`)},document.getElementById(`licenseUploadBtn`).onclick=()=>p.click(),p.onchange=()=>{let e=p.files&&p.files[0];e&&(m.textContent=e.name,h=!0,g=!1,v(),d.textContent=`● 基本信息待保存`,d.style.color=`#a86b10`,d.style.background=`#fff5e3`,d.style.borderColor=`#f4ddaf`,r(`营业执照已更新，请保存基本信息`))};let y=document.getElementById(`kbUploadModal`),b=document.getElementById(`kbFileInput`),x=document.getElementById(`kbTable`),S=document.getElementById(`kbDocType`),C=document.getElementById(`kbModalTitle`),w=null;function T(){y.classList.remove(`show`),w=null}function ee(e){if(!v()||!g){r(`请先完善并保存企业基本信息`),document.querySelector(`.nav a[data-p="kb"]`).click();return}w=e||null,b.value=``,S.value=e?e.querySelector(`.doc-type`).textContent.trim():``,C.textContent=e?`替换知识库文档`:`上传企业文档`,y.classList.add(`show`)}function E(e){e.querySelector(`.kb-replace`).onclick=()=>ee(e),e.querySelector(`.kb-delete`).onclick=()=>{let t=e.querySelector(`.doc-name`).textContent.trim();(typeof window.confirm===`function`?window.confirm(`确认删除「`+t+`」？`):!0)&&(e.remove(),r(`文档已删除`))}}document.getElementById(`kbUploadTop`).onclick=()=>ee(null),document.querySelectorAll(`#kbTable tr`).forEach((e,t)=>{t>0&&E(e)}),document.getElementById(`kbModalClose`).onclick=T,document.getElementById(`kbModalCancel`).onclick=T,y.addEventListener(`click`,e=>{e.target===y&&T()}),document.addEventListener(`keydown`,e=>{e.key===`Escape`&&y.classList.contains(`show`)&&T()}),document.getElementById(`kbModalConfirm`).onclick=()=>{let e=b.files&&b.files[0],t=S.value;if(!t){r(`请选择文件类型`),S.focus();return}if(!e){r(`请选择要上传的文档`),b.focus();return}if(w)w.querySelector(`.doc-name`).textContent=e.name,w.querySelector(`.doc-type`).textContent=t,r(`文档已替换并重新进入知识库处理`);else{let n=x.insertRow(-1);n.innerHTML=`<td class="doc-name"></td><td class="doc-type"></td><td><div class="op-actions"><button class="action-btn kb-replace"><span class="action-icon">↥</span>上传</button><button class="action-btn danger kb-delete"><span class="action-icon">⌫</span>删除</button></div></td>`,n.querySelector(`.doc-name`).textContent=e.name,n.querySelector(`.doc-type`).textContent=t,E(n),r(`文档已加入企业知识库`)}T()};let te=document.getElementById(`keywordEntities`),D=document.getElementById(`personaCoreKeywordSelect`),ne=document.getElementById(`personaLongTailSelect`),O=document.getElementById(`coreKeywordSelect`),re=document.getElementById(`longTailSelect`);function ie(){return[...new Set((te?.value||``).split(/\n+/).map(e=>e.trim()).filter(Boolean))]}window.getEntities=ie;function ae(){let e=ie(),t=document.getElementById(`entityCountPill`);if(t&&(t.textContent=e.length+` 个核心实体`),O){let t=O.value;O.innerHTML=``,e.forEach(e=>{let t=document.createElement(`option`);t.value=t.textContent=e,O.appendChild(t)}),e.includes(t)&&(O.value=t)}if(D){let t=D.value;D.innerHTML=``,e.forEach(e=>{let t=document.createElement(`option`);t.value=t.textContent=e,D.appendChild(t)}),e.includes(t)&&(D.value=t)}let n=document.getElementById(`kwEntityFilter`);if(n){let t=n.value;n.innerHTML=`<option value="">全部核心实体</option>`,e.forEach(e=>{let t=document.createElement(`option`);t.value=t.textContent=e,n.appendChild(t)}),e.includes(t)&&(n.value=t)}k()}function k(){let e=O?.value||D?.value||``,t=[...document.querySelectorAll(`#longTailTable tr`)].slice(1).filter(t=>t.cells[1]&&t.cells[1].textContent.trim()===e).map(e=>e.cells[0]?.textContent.trim()).filter(Boolean);if(re){if(re.innerHTML=``,t.length)t.forEach(e=>{let t=document.createElement(`option`);t.value=t.textContent=e,re.appendChild(t)});else{let e=document.createElement(`option`);e.textContent=`暂无匹配长尾词`,e.disabled=!0,e.selected=!0,re.appendChild(e)}}if(ne){if(ne.innerHTML=``,t.length)t.forEach(e=>{let t=document.createElement(`option`);t.value=t.textContent=e,ne.appendChild(t)});else{let e=document.createElement(`option`);e.textContent=`暂无匹配长尾词`,e.disabled=!0,e.selected=!0,ne.appendChild(e)}}}window.syncLongTails=k;te?.addEventListener(`input`,()=>{document.getElementById(`persona`)?.classList.remove(`agent-generated`),ae(),typeof applyKwFilters==`function`&&applyKwFilters()}),O?.addEventListener(`change`,()=>{D&&(D.value=O.value),k(),typeof updateGenerationSummary==`function`&&updateGenerationSummary()}),D?.addEventListener(`change`,()=>{O&&(O.value=D.value),k(),typeof updateGenerationSummary==`function`&&updateGenerationSummary()}),ae(),v();let oe=document.getElementById(`personaAgentBtn`),se=document.getElementById(`persona`);oe&&(oe.onclick=()=>{oe.classList.add(`running`),oe.setAttribute(`aria-busy`,`true`),setTimeout(()=>{se?.classList.add(`agent-generated`),oe.classList.remove(`running`),oe.removeAttribute(`aria-busy`),r(`人群画像 Agent 已完成分析`)},650)});let ce=document.getElementById(`prefixSuffixAgent`);ce&&(ce.onclick=()=>{if(!ie().length){r(`请先填写至少一个核心实体`);return}ce.classList.add(`running`),ce.setAttribute(`aria-busy`,`true`);let e=document.getElementById(`agentLastRun`);e&&(e.textContent=`Agent 挖掘中…`),setTimeout(()=>{ce.classList.remove(`running`),ce.removeAttribute(`aria-busy`),e&&(e.textContent=`刚刚已挖掘`),r(`长尾词挖掘 Agent 已完成智能拓词与质检`)},700)});let le=document.getElementById(`mediaLibraryTabs`);le&&(le.addEventListener(`click`,e=>{let t=e.target.closest(`.media-library-tab`);if(!t)return;let n=t.dataset.library;le.querySelectorAll(`.media-library-tab`).forEach(e=>e.classList.toggle(`on`,e===t)),document.querySelectorAll(`#pub .media-library-panel`).forEach(e=>e.classList.toggle(`on`,e.dataset.libraryPanel===n))}),document.querySelectorAll(`#pub .library-alt-table .alt-price`).forEach((e,t)=>e.textContent=(t*11+7)%51));let ue=document.getElementById(`articleTabs`),de=document.getElementById(`articleSearchInput`),fe=`auto`;function pe(){return document.querySelector(`[data-article-panel="`+fe+`"]`)}function me(){let e=pe();if(!e)return;let t=(de?.value||``).trim().toLowerCase(),n=0;e.querySelectorAll(`tbody tr`).forEach(e=>{let r=!t||(e.dataset.title||``).toLowerCase().includes(t);e.style.display=r?``:`none`,r&&n++});let r=e.querySelector(`.article-empty`);r&&r.classList.toggle(`show`,n===0)}window.filterArticleRows=me;ue&&ue.addEventListener(`click`,e=>{let t=e.target.closest(`.article-tab`);t&&(fe=t.dataset.articleTab,ue.querySelectorAll(`.article-tab`).forEach(e=>e.classList.toggle(`on`,e===t)),document.querySelectorAll(`.article-table-panel`).forEach(e=>e.classList.toggle(`on`,e.dataset.articlePanel===fe)),me())}),document.getElementById(`articleSearchBtn`)?.addEventListener(`click`,me),de?.addEventListener(`keydown`,e=>{e.key===`Enter`&&me()}),document.getElementById(`articleSearchReset`)?.addEventListener(`click`,()=>{de.value=``,me()}),document.getElementById(`articles`)?.addEventListener(`click`,e=>{let t=e.target.closest(`.article-view`);if(t){r(`正在打开文章：「`+t.closest(`tr`).querySelector(`.article-title`).textContent.trim()+`」`);return}let n=e.target.closest(`.article-delete`);if(n){let e=n.closest(`tr`),t=e.querySelector(`.article-title`).textContent.trim();(typeof window.confirm===`function`?window.confirm(`确认删除文章「`+t+`」？`):!0)&&(e.remove(),r(`文章已删除`),me(),_e())}});let he=document.getElementById(`articleAddModal`);function ge(e){he?.classList.toggle(`show`,e)}document.getElementById(`articleAddBtn`)?.addEventListener(`click`,()=>ge(!0)),document.getElementById(`articleAddClose`)?.addEventListener(`click`,()=>ge(!1)),document.getElementById(`articleAddCancel`)?.addEventListener(`click`,()=>ge(!1)),he?.addEventListener(`click`,e=>{e.target===he&&ge(!1)});function _e(){let e=document.querySelectorAll(`#uploadedArticleTable tbody tr`).length,t=document.getElementById(`uploadedArticleCount`),n=document.getElementById(`uploadedTotal`);t&&(t.textContent=e),n&&(n.textContent=e)}document.getElementById(`articleAddConfirm`)?.addEventListener(`click`,()=>{let e=document.getElementById(`articleAddTitle`).value.trim();if(!e){r(`请填写文章标题`);return}let t=document.getElementById(`articleAddType`).value,n=document.querySelector(`#uploadedArticleTable tbody`),i=document.createElement(`tr`);i.dataset.title=e;let a=new Date(Math.min(Date.now(),new Date(`2026-07-30T23:59:59`).getTime()));i.innerHTML=`<td class="article-title"></td><td><span class="article-type-pill"></span></td><td><span class="article-publish-none">未发布</span></td><td>`+(a.getFullYear()+`-`+String(a.getMonth()+1).padStart(2,`0`)+`-`+String(a.getDate()).padStart(2,`0`)+` `+String(a.getHours()).padStart(2,`0`)+`:`+String(a.getMinutes()).padStart(2,`0`)+`:`+String(a.getSeconds()).padStart(2,`0`))+`</td><td>—</td><td><div class="article-actions"><button class="article-link article-view">查看</button></div></td>`,i.querySelector(`.article-title`).textContent=e,i.querySelector(`.article-type-pill`).textContent=t,n.prepend(i),document.getElementById(`articleAddTitle`).value=``,document.getElementById(`articleAddContent`).value=``,ge(!1),_e(),r(`文章已添加到「上传的文章」`)}),_e();let ve=document.getElementById(`pubFilterPanel`),ye=document.getElementById(`pubMediaTable`);if(ve&&ye){let e=[...ye.tBodies[0].rows],t=document.getElementById(`pubVisibleCount`),n=document.getElementById(`pubFootCount`),i=document.getElementById(`pubFilterCount`),a=document.getElementById(`pubEmpty`);e.forEach((e,t)=>{let n=(t*7+13)%51;e.dataset.priceValue=String(n),e.querySelector(`.pub-price`).textContent=n});function o(){let e={};return ve.querySelectorAll(`.pub-filter-row`).forEach(t=>{let n=t.querySelector(`.pub-filter-option.on`);e[t.dataset.key]=n?n.dataset.value:`不限`}),e}function s(e,t,n){if(!n||n===`不限`||t===`sort`)return!0;if(t===`price`){let t=Number(e.dataset.priceValue||0);return n===`0~50`?t>=0&&t<=50:n===`50~200`?t>50&&t<=200:n===`200~500`?t>200&&t<=500:n===`500~1000`?t>500&&t<=1e3:n===`1000~2000`?t>1e3&&t<=2e3:n===`2000~5000`?t>2e3&&t<=5e3:n!==`5000以上`||t>5e3}return t===`geo`?n===`所有`||(e.dataset.geo||``).split(`,`).includes(n):(e.dataset[t]||``)===n}function c(t){let n=ye.tBodies[0],r=e.filter(e=>e.style.display!==`none`),i=e.filter(e=>e.style.display===`none`),a={价格升序:[`priceValue`,1],价格降序:[`priceValue`,-1],AI收录率升序:[`ai`,1],AI收录率降序:[`ai`,-1],出稿率升序:[`output`,1],出稿率降序:[`output`,-1],出稿时间升序:[`days`,1],出稿时间降序:[`days`,-1],活跃度升序:[`active`,1],活跃度降序:[`active`,-1]};if(a[t]){let[e,n]=a[t];r.sort((t,r)=>(Number(t.dataset[e])-Number(r.dataset[e]))*n)}[...r,...i].forEach(e=>n.appendChild(e))}function l(){let r=o(),l=(document.querySelector(`[data-media-search="private"] .media-library-search-input`)?.value||``).trim().toLowerCase(),u=0;e.forEach(e=>{let t=(e.querySelector(`.media-name`)?.textContent||``).trim().toLowerCase(),n=Object.entries(r).every(([t,n])=>s(e,t,n))&&(!l||t.includes(l));e.style.display=n?``:`none`,n&&u++}),c(r.sort),t.textContent=u,n.textContent=u,i.textContent=u+` 家媒体`,a.classList.toggle(`show`,u===0)}window.__applyPrivateMediaFilters=l,ve.addEventListener(`click`,e=>{let t=e.target.closest(`.pub-filter-option`);t&&(t.closest(`.pub-filter-row`).querySelectorAll(`.pub-filter-option`).forEach(e=>e.classList.remove(`on`)),t.classList.add(`on`),l())}),document.getElementById(`pubFilterReset`).onclick=()=>{ve.querySelectorAll(`.pub-filter-row`).forEach(e=>{e.querySelectorAll(`.pub-filter-option`).forEach(e=>e.classList.remove(`on`));let t=e.querySelector(`.pub-filter-option[data-value="不限"]`)||e.querySelector(`.pub-filter-option`);t&&t.classList.add(`on`)}),l(),r(`媒体筛选条件已重置`)},l()}document.querySelectorAll(`#pub .media-library-search`).forEach(e=>{let t=e.closest(`.media-library-panel`),n=e.dataset.mediaSearch,r=e.querySelector(`.media-library-search-input`),i=e.querySelector(`.media-library-search-query`),a=e.querySelector(`.media-library-search-reset`);function o(){if(n===`private`){window.__applyPrivateMediaFilters?.();return}let e=(r.value||``).trim().toLowerCase(),i=t.querySelector(`.pub-resource-table`);if(!i)return;let a=0;[...i.tBodies[0].rows].forEach(t=>{let n=(t.querySelector(`.media-name`)?.textContent||``).trim().toLowerCase(),r=!e||n.includes(e);t.style.display=r?``:`none`,r&&a++});let o=t.querySelector(`.pub-resource-meta b`);o&&(o.textContent=a)}i.addEventListener(`click`,o),a.addEventListener(`click`,()=>{r.value=``,o()}),r.addEventListener(`keydown`,e=>{e.key===`Enter`&&o()})}),document.getElementById(`articleCount`);let be=document.getElementById(`startRankingTest`),A=document.getElementById(`rankingResults`),j=document.getElementById(`rankTaskStatus`),xe=document.getElementById(`openDiagnosticReport`),Se=document.getElementById(`diagnosticReportTemplate`);be&&A&&be.addEventListener(`click`,()=>{A.classList.remove(`show`),be.disabled=!0,be.textContent=`检测中…`,j&&(j.className=`rank-task-status running`,j.textContent=`正在调用 6 个 AI 平台并生成排名诊断…`),setTimeout(()=>{A.classList.add(`show`),be.disabled=!1,be.textContent=`重新检测`,j&&(j.className=`rank-task-status done`,j.textContent=`检测完成 · 36 条结果 · 诊断报告已生成`),r(`排名检测完成，诊断报告已生成`),A.scrollIntoView({behavior:`smooth`,block:`start`})},720)});function Ce(){let e=Array.from(document.querySelectorAll(`style`)).map(e=>e.textContent||``).join(`
 `)||``,t=Se?.innerHTML||``;return`<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AI搜索可见性诊断报告 · 360智见GEO</title><link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap"><style>`+e+`
-body.report-window{display:block;min-height:100vh;background:#f3f7f5;padding:0;color:#1f2937}.report-window-top{position:sticky;top:0;z-index:30;height:64px;padding:0 34px;display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid #e6ece9}.report-window-brand{display:flex;align-items:center;gap:11px;font-size:16px;font-weight:800}.report-window-logo{width:30px;height:30px;border-radius:10px;display:grid;place-items:center;background:linear-gradient(145deg,#10b981,#059669);color:#fff}.report-window-meta{font-size:12px;color:#64748b}.report-window-actions{display:flex;align-items:center;gap:10px}.report-print{border:1px solid #dfe5e2;background:#fff;color:#526069;border-radius:9px;padding:7px 13px;font:inherit;font-size:12px;font-weight:650;cursor:pointer}.report-document-wrap{max-width:1320px;margin:0 auto;padding:24px 28px 48px}.report-document-title{margin-bottom:18px}.report-document-title h1{font-size:24px;line-height:1.25;margin-bottom:5px}.report-document-title p{font-size:12.5px;color:#64748b}.report-document-wrap>.card{margin-bottom:16px}.report-window .geo-step{cursor:default}.report-window .chip{cursor:default}@media print{.report-window-top{display:none}.report-document-wrap{max-width:none;padding:0}.card{box-shadow:none!important;break-inside:avoid}}</style></head><body class="report-window"><div class="report-window-top"><div><div class="report-window-brand"><span class="report-window-logo">◎</span>360智见GEO · AI搜索可见性诊断报告</div><div class="report-window-meta">AI搜索收录检测报告 · 第3期 · 2026-07-14</div></div><div class="report-window-actions"><button class="report-print" onclick="window.print()">打印 / 导出 PDF</button></div></div><div class="report-document-wrap"><div class="report-document-title"><h1>AI 搜索可见性诊断报告</h1><p>基于本次 6 个问题 × 6 个 AI 平台的排名 / 品牌曝光检测结果自动生成</p></div>`+t+`</div></body></html>`}xe&&Se&&xe.addEventListener(`click`,()=>{let blob=new Blob([Ce()],{type:`text/html;charset=utf-8`}),url=URL.createObjectURL(blob),a=document.createElement(`a`);a.href=url,a.download=`360智见GEO_AI收录检测报告.html`,document.body.appendChild(a),a.click(),a.remove(),URL.revokeObjectURL(url),r(`已生成并下载收录检测报告`)});let we=document.getElementById(`incModeSwitch`),M=document.getElementById(`incQueryInput`),N=document.getElementById(`incModeHint`),Te=document.getElementById(`incTaskStatus`),Ee=document.getElementById(`startInclusionQuery`),De=document.getElementById(`incUrlResult`),Oe=document.getElementById(`incKeywordResult`),ke=document.getElementById(`incKeywordBadge`),Ae=document.getElementById(`incUrlBadge`),je=document.getElementById(`incMainView`),Me=document.getElementById(`incHistoryView`),Ne=document.getElementById(`incHistoryLink`),Pe=document.getElementById(`incHistoryBack`),Fe={url:`https://www.toutiao.com/article/7482915630...`,keyword:`360终端安全防护`},Ie=`url`;function Le(){De?.classList.remove(`show`),Oe?.classList.remove(`show`),Te&&(Te.className=`inc-task-status`,Te.textContent=`请选择检测类型并提交查询`),Ee&&(Ee.disabled=!1,Ee.innerHTML=`<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><span>立即查询</span>`)}function Re(e,t=!1){[`url`,`keyword`].includes(e)&&(Fe[Ie]=M.value,Ie=e,we&&(we.value=e),M.value=Fe[e],e===`url`?(M.placeholder=`请输入文章 URL`,N.textContent=`URL模式：通过文章链接反查各 AI 平台是否已将该内容纳入可引用信源池。`):(M.placeholder=`请输入行业词、品类词或文章标题`,N.textContent=`关键词模式：统计 AI 回答常引用的信源渠道，并按引用次数形成渠道效果排行。`),t||Le())}we?.addEventListener(`change`,()=>Re(we.value)),document.getElementById(`incPlatformGrid`)?.addEventListener(`click`,e=>{let t=e.target.closest(`.inc-platform-card`);t&&(t.classList.toggle(`on`),document.querySelectorAll(`#incPlatformGrid .inc-platform-card.on`).length||(t.classList.add(`on`),r(`至少保留一个 AI 平台`)))}),Ee?.addEventListener(`click`,()=>{let e=M.value.trim();if(!e){M.focus(),r(Ie===`url`?`请输入待检测 URL`:`请输入查询关键词`);return}let t=[...document.querySelectorAll(`#incPlatformGrid .inc-platform-card.on`)].map(e=>e.dataset.incPlatform);if(!t.length){r(`请至少选择一个 AI 平台`);return}Fe[Ie]=e,De?.classList.remove(`show`),Oe?.classList.remove(`show`),Ee.disabled=!0,Ee.innerHTML=`<span style="display:inline-flex;align-items:center;gap:6px">⏳ 查询中…</span>`,Te.className=`inc-task-status running`,Te.textContent=Ie===`url`?`正在查询 `+t.length+` 个 AI 平台的收录状态…`:`正在统计 `+t.length+` 个 AI 平台的信源引用渠道…`,setTimeout(()=>{Ee.disabled=!1,Ee.innerHTML=`<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"/></svg><span>重新查询</span>`,Te.className=`inc-task-status done`,Ie===`url`?(Ae&&(Ae.textContent=`已检测 `+t.length+` 个平台`),document.querySelectorAll(`#incUrlResult tbody tr`).forEach(e=>e.style.display=t.includes(e.dataset.platform)?``:`none`),De.classList.add(`show`),Te.textContent=`URL 查询完成 · 已生成平台收录状态`,De.scrollIntoView({behavior:`smooth`,block:`start`})):(ke&&(ke.textContent=`关键词：`+e),Oe.classList.add(`show`),Te.textContent=`关键词查询完成 · 已生成 AI 收录渠道效果`,Be(`all`),Oe.scrollIntoView({behavior:`smooth`,block:`start`}))},620)}),document.querySelectorAll(`.inc-view-link`).forEach(e=>e.addEventListener(`click`,()=>r(e.dataset.platform+`：已打开收录详情（原型）`)));function ze(e){je?.classList.toggle(`hidden`,e),Me?.classList.toggle(`show`,e);let t=document.getElementById(`ht`),n=document.getElementById(`headerSubtitle`);e?(t&&(t.textContent=`收录查询 · 历史记录`),n&&(n.textContent=`查看过往AI收录检测任务与结果`)):(t&&(t.textContent=`收录查询`),n&&(n.textContent=`验证文章与关键词是否进入AI可引用信源池`),window.scrollTo({top:0,behavior:`smooth`}))}Ne?.addEventListener(`click`,()=>ze(!0)),Pe?.addEventListener(`click`,()=>ze(!1)),document.querySelectorAll(`.inc-history-report`).forEach(e=>e.addEventListener(`click`,()=>{let t=e.closest(`tr`);if(e.classList.contains(`muted`)){r(`该任务仍在查询中，请稍后查看`);return}let n=t.dataset.historyMode||`url`,i=t.dataset.historyQuery||``;ze(!1),Fe[n]=i,Re(n,!0),M.value=i,Te.className=`inc-task-status done`,n===`url`?(De.classList.add(`show`),Oe.classList.remove(`show`)):(Oe.classList.add(`show`),De.classList.remove(`show`),ke&&(ke.textContent=`关键词：`+i),Be(`all`)),setTimeout(()=>document.querySelector(n===`url`?`#incUrlResult`:`#incKeywordResult`)?.scrollIntoView({behavior:`smooth`,block:`start`}),30)}));function Be(e){let t=[...document.querySelectorAll(`#incChannelTable tbody tr`)],n=0;t.forEach(t=>{let r=e===`all`||(t.dataset.platforms||``).split(`,`).includes(e);if(t.style.display=r?``:`none`,r){n++;let e=t.querySelector(`.inc-rank-cell`);e&&(n===1?e.innerHTML=`<span class="rank-medal gold">1</span>`:n===2?e.innerHTML=`<span class="rank-medal silver">2</span>`:n===3?e.innerHTML=`<span class="rank-medal bronze">3</span>`:e.textContent=n)}})}document.getElementById(`incChannelTabs`)?.addEventListener(`click`,e=>{let t=e.target.closest(`.inc-channel-tab`);t&&(document.querySelectorAll(`#incChannelTabs .inc-channel-tab`).forEach(e=>e.classList.toggle(`on`,e===t)),Be(t.dataset.channelPlatform))}),Be(`all`)}catch(e){console.error(`Error in core script 5:`,e)}try{(()=>{let e=document.getElementById(`pub`),t=document.getElementById(`pubArticlePickerModal`);if(!e||!t)return;let n=t.querySelector(`#pubPickerTableBody`),r=t.querySelector(`#pubPickerSearch`),i=t.querySelector(`#pubPickerEmpty`),a=t.querySelector(`#pubPickerConfirm`),o=t.querySelector(`#pubPickerSelectedTitle`),s=t.querySelector(`#pubPickerMediaName`),c=`auto`,l=null,u=null,d=``;function f(e){let t=document.getElementById(e===`auto`?`autoArticleTable`:`uploadedArticleTable`);return t?[...t.tBodies[0].rows]:[]}function p(){let e=f(`auto`).length,n=f(`uploaded`).length;t.querySelector(`#pubPickerAutoCount`).textContent=e,t.querySelector(`#pubPickerUploadedCount`).textContent=n}function m(){l=null,o.textContent=`暂未选择文章`,a.disabled=!0}function h(e){let t=e.querySelectorAll(`td`);return{title:(t[0]?.textContent||e.dataset.title||``).trim(),type:(t[1]?.textContent||``).trim(),published:(t[2]?.textContent||``).trim(),generated:(t[3]?.textContent||``).trim(),submitted:(t[4]?.textContent||``).trim(),sourceRow:e}}function g(){let e=(r.value||``).trim().toLowerCase();n.innerHTML=``;let t=0;f(c).forEach(r=>{let i=h(r);if(e&&!i.title.toLowerCase().includes(e))return;t++;let s=document.createElement(`tr`);s.className=`pub-picker-row`,s.dataset.articleTitle=i.title,s.innerHTML=`<td class="article-title"></td><td><span class="article-type-pill"></span></td><td></td><td></td><td></td><td><span class="pub-picker-radio" aria-hidden="true"></span></td>`,s.children[0].textContent=i.title,s.querySelector(`.article-type-pill`).textContent=i.type,s.children[2].textContent=i.published,s.children[3].textContent=i.generated,s.children[4].textContent=i.submitted,s.addEventListener(`click`,()=>{n.querySelectorAll(`tr`).forEach(e=>e.classList.remove(`selected`)),s.classList.add(`selected`),l=i,o.textContent=i.title,a.disabled=!1}),n.appendChild(s)}),i.classList.toggle(`show`,t===0)}function _(e){t.classList.toggle(`show`,e),e||(u=null,d=``,m())}function v(e){u=e,d=e.closest(`tr`)?.querySelector(`.media-name`)?.textContent.trim()||`当前媒体`,e.closest(`.media-library-panel`)?.dataset.libraryPanel,s.textContent=d,c=`auto`,r.value=``,t.querySelectorAll(`[data-picker-tab]`).forEach(e=>e.classList.toggle(`on`,e.dataset.pickerTab===`auto`)),m(),p(),g(),_(!0)}e.addEventListener(`click`,e=>{let t=e.target.closest(`.pub-submit`);t&&(e.preventDefault(),e.stopPropagation(),e.stopImmediatePropagation&&e.stopImmediatePropagation(),v(t))},!0),t.querySelector(`#pubPickerClose`).addEventListener(`click`,()=>_(!1)),t.querySelector(`#pubPickerCancel`).addEventListener(`click`,()=>_(!1)),t.addEventListener(`click`,e=>{e.target===t&&_(!1)}),t.querySelector(`#pubPickerTabs`).addEventListener(`click`,e=>{let n=e.target.closest(`[data-picker-tab]`);n&&(c=n.dataset.pickerTab,t.querySelectorAll(`[data-picker-tab]`).forEach(e=>e.classList.toggle(`on`,e===n)),m(),g())}),t.querySelector(`#pubPickerSearchBtn`).addEventListener(`click`,()=>{m(),g()}),t.querySelector(`#pubPickerSearchReset`).addEventListener(`click`,()=>{r.value=``,m(),g()}),r.addEventListener(`keydown`,e=>{e.key===`Enter`&&(m(),g())}),a.addEventListener(`click`,()=>{if(!l)return;let e=new Date(Math.min(Date.now(),new Date(`2026-07-30T23:59:59`).getTime())),t=e.getFullYear(),n=String(e.getMonth()+1).padStart(2,`0`),r=String(e.getDate()).padStart(2,`0`),i=String(e.getHours()).padStart(2,`0`),a=String(e.getMinutes()).padStart(2,`0`),o=String(e.getSeconds()).padStart(2,`0`),s=t+`-`+n+`-`+r+` `+i+`:`+a+`:`+o,c=l.sourceRow;if(c){let e=c.querySelectorAll(`td`);e[2]&&(e[2].innerHTML=`<span class="article-publish-review">审核中</span>`),e[4]&&(e[4].textContent=s),c.dataset.pendingMedia=d,c.dataset.submitTime=s}u&&(u.classList.add(`done`),u.textContent=`已投稿`);let f=l.title,p=d;_(!1),showToast(`「`+f+`」已提交至「`+p+`」，文章状态更新为审核中`)})})()}catch(e){console.error(`Error in picker script 6:`,e)}try{(()=>{document.querySelectorAll(`button:not([type])`).forEach(e=>e.type=`button`);let e=[...document.querySelectorAll(`.nav a[data-p]`)],t={dash:[`首页`,`全网AI搜索场景覆盖与GEO增长数据总览`],inc:[`检测分析`,`验证文章与关键词是否进入AI可引用信源池`],kb:[`GEO 内容增长`,`维护企业事实、资质、案例与问答知识源`],persona:[`GEO 内容增长`,`从核心产品反推人群、场景与购买考量`],kw:[`GEO 内容增长`,`生成并筛选面向AI搜索场景的长尾问题词库`],gen:[``,`填写或选择下方「核心关键词 + 长尾关键词」，点击右侧绿色 AI Agent 图标即可智能反推「用户画像 → 搜索场景 → 用户痛点」，并在当前页面直接生成标准 3000 字深度长文。`],videographic:[`GEO 内容增长`,`使用多模态AI模型，生成短视频或新媒体图文。内容基于大模型训练数据生成，可能存在局限性或不准确性。`],articles:[`GEO 内容增长`,`统一管理自动化文章与人工上传内容`],pub:[`GEO 内容增长`,`按媒体属性与GEO适配度选择信源并投稿`],agent:[`账户中心`,`查看企业服务套餐余量、功能配额明细与账户余额充值`]},n=document.getElementById(`headerKicker`),r=document.getElementById(`headerSubtitle`),htEl=document.getElementById(`ht`);function i(i){let a=t[i]||[`360智见GEO`,`AI 搜索可见性优化平台`];n&&(n.textContent=a[0],n.style.display=i===`gen`?`none`:``),i===`gen`&&htEl&&(htEl.textContent=`内容创作与用户需求画像建模`),r&&(r.textContent=a[1]),e.forEach(e=>e.setAttribute(`aria-current`,e.dataset.p===i?`page`:`false`))}e.forEach(e=>{e.setAttribute(`tabindex`,`0`),e.setAttribute(`role`,`button`),e.title=e.textContent.trim(),e.addEventListener(`click`,()=>{i(e.dataset.p),history.replaceState(null,``,`#`+e.dataset.p)}),e.addEventListener(`keydown`,t=>{(t.key===`Enter`||t.key===` `)&&(t.preventDefault(),e.click())})});let a=location.hash.slice(1),o=e.find(e=>e.dataset.p===a);if(o)o.click();else{let t=e.find(e=>e.classList.contains(`on`));t&&i(t.dataset.p)}function s(){
-  const tabBtns = document.querySelectorAll(".vg-tab-btn");
-  const tabPanels = document.querySelectorAll(".vg-tab-panel");
-  tabBtns.forEach(btn => {
+body.report-window{display:block;min-height:100vh;background:#f3f7f5;padding:0;color:#1f2937}.report-window-top{position:sticky;top:0;z-index:30;height:64px;padding:0 34px;display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid #e6ece9}.report-window-brand{display:flex;align-items:center;gap:11px;font-size:16px;font-weight:800}.report-window-logo{width:30px;height:30px;border-radius:10px;display:grid;place-items:center;background:linear-gradient(145deg,#10b981,#059669);color:#fff}.report-window-meta{font-size:12px;color:#64748b}.report-window-actions{display:flex;align-items:center;gap:10px}.report-print{border:1px solid #dfe5e2;background:#fff;color:#526069;border-radius:9px;padding:7px 13px;font:inherit;font-size:12px;font-weight:650;cursor:pointer}.report-document-wrap{max-width:1320px;margin:0 auto;padding:24px 28px 48px}.report-document-title{margin-bottom:18px}.report-document-title h1{font-size:24px;line-height:1.25;margin-bottom:5px}.report-document-title p{font-size:12.5px;color:#64748b}.report-document-wrap>.card{margin-bottom:16px}.report-window .geo-step{cursor:default}.report-window .chip{cursor:default}@media print{.report-window-top{display:none}.report-document-wrap{max-width:none;padding:0}.card{box-shadow:none!important;break-inside:avoid}}</style></head><body class="report-window"><div class="report-window-top"><div><div class="report-window-brand"><span class="report-window-logo">◎</span>360智见GEO · AI搜索可见性诊断报告</div><div class="report-window-meta">AI搜索收录检测报告 · 第3期 · 2026-07-14</div></div><div class="report-window-actions"><button class="report-print" onclick="window.print()">打印 / 导出 PDF</button></div></div><div class="report-document-wrap"><div class="report-document-title"><h1>AI 搜索可见性诊断报告</h1><p>基于本次 6 个问题 × 6 个 AI 平台的排名 / 品牌曝光检测结果自动生成</p></div>`+t+`</div></body></html>`}xe&&Se&&xe.addEventListener(`click`,()=>{let blob=new Blob([Ce()],{type:`text/html;charset=utf-8`}),url=URL.createObjectURL(blob),a=document.createElement(`a`);a.href=url,a.download=`360智见GEO_AI收录检测报告.html`,document.body.appendChild(a),a.click(),a.remove(),URL.revokeObjectURL(url),r(`已生成并下载收录检测报告`)});let we=document.getElementById(`incModeSwitch`),M=document.getElementById(`incQueryInput`),N=document.getElementById(`incModeHint`),Te=document.getElementById(`incTaskStatus`),Ee=document.getElementById(`startInclusionQuery`),De=document.getElementById(`incUrlResult`),Oe=document.getElementById(`incKeywordResult`),ke=document.getElementById(`incKeywordBadge`),Ae=document.getElementById(`incUrlBadge`),je=document.getElementById(`incMainView`),Me=document.getElementById(`incHistoryView`),Ne=document.getElementById(`incHistoryLink`),Pe=document.getElementById(`incHistoryBack`),Fe={url:`https://www.toutiao.com/article/7482915630...`,keyword:`360终端安全防护`},Ie=`url`;function Le(){De?.classList.remove(`show`),Oe?.classList.remove(`show`),Te&&(Te.className=`inc-task-status`,Te.textContent=`请选择检测类型并提交查询`),Ee&&(Ee.disabled=!1,Ee.innerHTML=`<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><span>立即查询</span>`)}function Re(e,t=!1){[`url`,`keyword`].includes(e)&&(Fe[Ie]=M.value,Ie=e,we&&(we.value=e),M.value=Fe[e],e===`url`?(M.placeholder=`请输入文章 URL`,N.textContent=`URL模式：通过文章链接反查各 AI 平台是否已将该内容纳入可引用信源池。`):(M.placeholder=`请输入行业词、品类词或文章标题`,N.textContent=`关键词模式：统计 AI 回答常引用的信源渠道，并按引用次数形成渠道效果排行。`),t||Le())}we?.addEventListener(`change`,()=>Re(we.value)),document.getElementById(`incPlatformGrid`)?.addEventListener(`click`,e=>{let t=e.target.closest(`.inc-platform-card`);t&&(t.classList.toggle(`on`),document.querySelectorAll(`#incPlatformGrid .inc-platform-card.on`).length||(t.classList.add(`on`),r(`至少保留一个 AI 平台`)))}),Ee?.addEventListener(`click`,()=>{let e=M.value.trim();if(!e){M.focus(),r(Ie===`url`?`请输入待检测 URL`:`请输入查询关键词`);return}let t=[...document.querySelectorAll(`#incPlatformGrid .inc-platform-card.on`)].map(e=>e.dataset.incPlatform);if(!t.length){r(`请至少选择一个 AI 平台`);return}Fe[Ie]=e,De?.classList.remove(`show`),Oe?.classList.remove(`show`),Ee.disabled=!0,Ee.innerHTML=`<span style="display:inline-flex;align-items:center;gap:6px">⏳ 查询中…</span>`,Te.className=`inc-task-status running`,Te.textContent=Ie===`url`?`正在查询 `+t.length+` 个 AI 平台的收录状态…`:`正在统计 `+t.length+` 个 AI 平台的信源引用渠道…`,setTimeout(()=>{Ee.disabled=!1,Ee.innerHTML=`<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"/></svg><span>重新查询</span>`,Te.className=`inc-task-status done`,Ie===`url`?(Ae&&(Ae.textContent=`已检测 `+t.length+` 个平台`),document.querySelectorAll(`#incUrlResult tbody tr`).forEach(e=>e.style.display=t.includes(e.dataset.platform)?``:`none`),De.classList.add(`show`),Te.textContent=`URL 查询完成 · 已生成平台收录状态`,De.scrollIntoView({behavior:`smooth`,block:`start`})):(ke&&(ke.textContent=`关键词：`+e),Oe.classList.add(`show`),Te.textContent=`关键词查询完成 · 已生成 AI 收录渠道效果`,Be(`all`),Oe.scrollIntoView({behavior:`smooth`,block:`start`}))},620)}),document.querySelectorAll(`.inc-view-link`).forEach(e=>e.addEventListener(`click`,()=>r(e.dataset.platform+`：已打开收录详情（原型）`)));function ze(e){je?.classList.toggle(`hidden`,e),Me?.classList.toggle(`show`,e);let t=document.getElementById(`ht`),n=document.getElementById(`headerSubtitle`);e?(t&&(t.textContent=`收录查询 · 历史记录`),n&&(n.textContent=`查看过往AI收录检测任务与结果`)):(t&&(t.textContent=`收录查询`),n&&(n.textContent=`验证文章与关键词是否进入AI可引用信源池`),window.scrollTo({top:0,behavior:`smooth`}))}Ne?.addEventListener(`click`,()=>ze(!0)),Pe?.addEventListener(`click`,()=>ze(!1)),document.querySelectorAll(`.inc-history-report`).forEach(e=>e.addEventListener(`click`,()=>{let t=e.closest(`tr`);if(e.classList.contains(`muted`)){r(`该任务仍在查询中，请稍后查看`);return}let n=t.dataset.historyMode||`url`,i=t.dataset.historyQuery||``;ze(!1),Fe[n]=i,Re(n,!0),M.value=i,Te.className=`inc-task-status done`,n===`url`?(De.classList.add(`show`),Oe.classList.remove(`show`)):(Oe.classList.add(`show`),De.classList.remove(`show`),ke&&(ke.textContent=`关键词：`+i),Be(`all`)),setTimeout(()=>document.querySelector(n===`url`?`#incUrlResult`:`#incKeywordResult`)?.scrollIntoView({behavior:`smooth`,block:`start`}),30)}));function Be(e){let t=[...document.querySelectorAll(`#incChannelTable tbody tr`)],n=0;t.forEach(t=>{let r=e===`all`||(t.dataset.platforms||``).split(`,`).includes(e);if(t.style.display=r?``:`none`,r){n++;let e=t.querySelector(`.inc-rank-cell`);e&&(n===1?e.innerHTML=`<span class="rank-medal gold">1</span>`:n===2?e.innerHTML=`<span class="rank-medal silver">2</span>`:n===3?e.innerHTML=`<span class="rank-medal bronze">3</span>`:e.textContent=n)}})}document.getElementById(`incChannelTabs`)?.addEventListener(`click`,e=>{let t=e.target.closest(`.inc-channel-tab`);t&&(document.querySelectorAll(`#incChannelTabs .inc-channel-tab`).forEach(e=>e.classList.toggle(`on`,e===t)),Be(t.dataset.channelPlatform))}),Be(`all`)}catch(e){console.error(`Error in core script 5:`,e)}try{(()=>{let e=document.getElementById(`pub`),t=document.getElementById(`pubArticlePickerModal`);if(!e||!t)return;let n=t.querySelector(`#pubPickerTableBody`),r=t.querySelector(`#pubPickerSearch`),i=t.querySelector(`#pubPickerEmpty`),a=t.querySelector(`#pubPickerConfirm`),o=t.querySelector(`#pubPickerSelectedTitle`),s=t.querySelector(`#pubPickerMediaName`),c=`auto`,l=null,u=null,d=``;function f(e){let t=document.getElementById(e===`auto`?`autoArticleTable`:`uploadedArticleTable`);return t?[...t.tBodies[0].rows]:[]}function p(){let e=f(`auto`).length,n=f(`uploaded`).length;t.querySelector(`#pubPickerAutoCount`).textContent=e,t.querySelector(`#pubPickerUploadedCount`).textContent=n}function m(){l=null,o.textContent=`暂未选择文章`,a.disabled=!0}function h(e){let t=e.querySelectorAll(`td`);return{title:(t[0]?.textContent||e.dataset.title||``).trim(),type:(t[1]?.textContent||``).trim(),published:(t[2]?.textContent||``).trim(),generated:(t[3]?.textContent||``).trim(),submitted:(t[4]?.textContent||``).trim(),sourceRow:e}}function g(){let e=(r.value||``).trim().toLowerCase();n.innerHTML=``;let t=0;f(c).forEach(r=>{let i=h(r);if(e&&!i.title.toLowerCase().includes(e))return;t++;let s=document.createElement(`tr`);s.className=`pub-picker-row`,s.dataset.articleTitle=i.title,s.innerHTML=`<td class="article-title"></td><td><span class="article-type-pill"></span></td><td></td><td></td><td></td><td><span class="pub-picker-radio" aria-hidden="true"></span></td>`,s.children[0].textContent=i.title,s.querySelector(`.article-type-pill`).textContent=i.type,s.children[2].textContent=i.published,s.children[3].textContent=i.generated,s.children[4].textContent=i.submitted,s.addEventListener(`click`,()=>{n.querySelectorAll(`tr`).forEach(e=>e.classList.remove(`selected`)),s.classList.add(`selected`),l=i,o.textContent=i.title,a.disabled=!1}),n.appendChild(s)}),i.classList.toggle(`show`,t===0)}function _(e){t.classList.toggle(`show`,e),e||(u=null,d=``,m())}function v(e){u=e,d=e.closest(`tr`)?.querySelector(`.media-name`)?.textContent.trim()||`当前媒体`,e.closest(`.media-library-panel`)?.dataset.libraryPanel,s.textContent=d,c=`auto`,r.value=``,t.querySelectorAll(`[data-picker-tab]`).forEach(e=>e.classList.toggle(`on`,e.dataset.pickerTab===`auto`)),m(),p(),g(),_(!0)}e.addEventListener(`click`,e=>{let t=e.target.closest(`.pub-submit`);t&&(e.preventDefault(),e.stopPropagation(),e.stopImmediatePropagation&&e.stopImmediatePropagation(),v(t))},!0),t.querySelector(`#pubPickerClose`).addEventListener(`click`,()=>_(!1)),t.querySelector(`#pubPickerCancel`).addEventListener(`click`,()=>_(!1)),t.addEventListener(`click`,e=>{e.target===t&&_(!1)}),t.querySelector(`#pubPickerTabs`).addEventListener(`click`,e=>{let n=e.target.closest(`[data-picker-tab]`);n&&(c=n.dataset.pickerTab,t.querySelectorAll(`[data-picker-tab]`).forEach(e=>e.classList.toggle(`on`,e===n)),m(),g())}),t.querySelector(`#pubPickerSearchBtn`).addEventListener(`click`,()=>{m(),g()}),t.querySelector(`#pubPickerSearchReset`).addEventListener(`click`,()=>{r.value=``,m(),g()}),r.addEventListener(`keydown`,e=>{e.key===`Enter`&&(m(),g())}),a.addEventListener(`click`,()=>{if(!l)return;let e=new Date(Math.min(Date.now(),new Date(`2026-07-30T23:59:59`).getTime())),t=e.getFullYear(),n=String(e.getMonth()+1).padStart(2,`0`),r=String(e.getDate()).padStart(2,`0`),i=String(e.getHours()).padStart(2,`0`),a=String(e.getMinutes()).padStart(2,`0`),o=String(e.getSeconds()).padStart(2,`0`),s=t+`-`+n+`-`+r+` `+i+`:`+a+`:`+o,c=l.sourceRow;if(c){let e=c.querySelectorAll(`td`);e[2]&&(e[2].innerHTML=`<span class="article-publish-review">审核中</span>`),e[4]&&(e[4].textContent=s),c.dataset.pendingMedia=d,c.dataset.submitTime=s}u&&(u.classList.add(`done`),u.textContent=`已投稿`);let f=l.title,p=d;_(!1),showToast(`「`+f+`」已提交至「`+p+`」，文章状态更新为审核中`)})})()}catch(e){console.error(`Error in picker script 6:`,e)}try{(()=>{document.querySelectorAll(`button:not([type])`).forEach(e=>e.type=`button`);let e=[...document.querySelectorAll(`.nav a[data-p]`)],t={dash:[`首页`,`全网AI搜索场景覆盖与GEO增长数据总览`],inc:[`检测分析`,`验证文章与关键词是否进入AI可引用信源池`],kb:[`GEO 内容增长`,`维护企业事实、资质、案例与问答知识源`],persona:[`GEO 内容增长`,`从核心产品反推人群、场景与购买考量`],kw:[`GEO 内容增长`,`生成并筛选面向AI搜索场景的长尾问题词库`],gen:[``,`填写或选择下方「核心关键词 + 长尾关键词」，点击右侧绿色 AI Agent 图标即可智能反推「用户画像 → 搜索场景 → 用户痛点」，并在当前页面直接生成标准 3000 字深度长文。`],videographic:[`GEO 内容增长`,`使用多模态AI模型，生成短视频或新媒体图文。内容基于大模型训练数据生成，可能存在局限性或不准确性。`],articles:[`GEO 内容增长`,`统一管理自动化文章与人工上传内容`],pub:[`GEO 内容增长`,`按媒体属性与GEO适配度选择信源并投稿`],agent:[`账户中心`,`查看企业服务套餐余量、功能配额明细与账户余额充值`]},n=document.getElementById(`headerKicker`),r=document.getElementById(`headerSubtitle`),htEl=document.getElementById(`ht`);function i(i){let a=t[i]||[`360智见GEO`,`AI 搜索可见性优化平台`];n&&(n.textContent=a[0],n.style.display=i===`gen`?`none`:``),i===`gen`&&htEl&&(htEl.textContent=`内容创作与用户需求画像建模`),r&&(r.textContent=a[1]),e.forEach(e=>e.setAttribute(`aria-current`,e.dataset.p===i?`page`:`false`))}e.forEach(e=>{e.setAttribute(`tabindex`,`0`),e.setAttribute(`role`,`button`),e.title=e.textContent.trim(),e.addEventListener(`click`,()=>{i(e.dataset.p),history.replaceState(null,``,`#`+e.dataset.p)}),e.addEventListener(`keydown`,t=>{(t.key===`Enter`||t.key===` `)&&(t.preventDefault(),e.click())})});let a=location.hash.slice(1),o=e.find(e=>e.dataset.p===a);if(o)o.click();else{let t=e.find(e=>e.classList.contains(`on`));t&&i(t.dataset.p)}function s() {
+  const root = document.getElementById("videographic");
+  if (!root) return;
+
+  // 1. 顶部 Tab 切换：视频创作 vs 图文创作
+  const modeBtns = root.querySelectorAll(".vg-tab-btn");
+  const vidPanel = document.getElementById("vgVideoPanel");
+  const grpPanel = document.getElementById("vgGraphicPanel");
+  const topVidActions = document.getElementById("vgVideoTopActions");
+  const topGrpActions = document.getElementById("vgGraphicTopActions");
+
+  function switchVgMode(mode) {
+    modeBtns.forEach(btn => {
+      const isActive = btn.dataset.vgMode === mode;
+      btn.classList.toggle("on", isActive);
+      btn.classList.toggle("active", isActive);
+    });
+    if (vidPanel) vidPanel.style.display = mode === "video" ? "block" : "none";
+    if (grpPanel) grpPanel.style.display = mode === "graphic" ? "block" : "none";
+    if (topVidActions) topVidActions.style.display = mode === "video" ? "flex" : "none";
+    if (topGrpActions) topGrpActions.style.display = mode === "graphic" ? "flex" : "none";
+  }
+
+  modeBtns.forEach(btn => {
     btn.addEventListener("click", () => {
-      tabBtns.forEach(b => b.classList.remove("active"));
-      btn.classList.add("active");
-      const target = btn.getAttribute("data-tab");
-      tabPanels.forEach(p => {
-        p.classList.remove("active");
-        if (p.id === target) p.classList.add("active");
-      });
+      const mode = btn.dataset.vgMode || "video";
+      switchVgMode(mode);
+      if (typeof showToast === "function") {
+        showToast(mode === "video" ? "已切换至「视频创作」工作区" : "已切换至「图文创作」工作区");
+      }
     });
   });
 
+  // 2. 视频创作方式 Tabs：视频快剪 vs AI生成视频 vs 上传视频
   const methodTabs = document.querySelectorAll("#vgMethodTabs .vg-method-pill");
   const stQuick = document.getElementById("vgStateQuickPanel");
   const stAi = document.getElementById("vgStateAiPanel");
+  const stUpload = document.getElementById("vgStateUploadPanel");
+  const badge = document.getElementById("vgVideoStateBadge");
   const alertCost = document.getElementById("vgAlertCost");
   const phoneBottomLabel = document.getElementById("vgPhoneBottomLabel");
 
+  function switchVideoMethod(method) {
+    methodTabs.forEach(t => {
+      const isActive = t.dataset.vmethod === method;
+      t.classList.toggle("active", isActive);
+      t.classList.toggle("on", isActive);
+    });
+
+    if (stQuick) stQuick.style.display = method === "quick" ? "block" : "none";
+    if (stAi) stAi.style.display = method === "ai" ? "block" : "none";
+    if (stUpload) stUpload.style.display = method === "upload" ? "block" : "none";
+
+    if (badge) {
+      badge.textContent = method === "ai"
+        ? "当前状态2：AI生成视频配置面板（BGM、字幕配置）"
+        : method === "upload"
+        ? "当前状态3：上传视频面板（拖拽上传、进度与预览）"
+        : "当前状态1：视频快剪表单面板";
+    }
+
+    if (alertCost) {
+      if (method === "quick") {
+        alertCost.innerHTML = '<span style="font-size:14px" id="vgCostIcon">⚡</span><span id="vgCostText"><strong>快剪计费规则</strong>：1 分钟消耗 50 积分，不满 1 分钟按 1 分钟计费；快剪生成失败不扣积分。</span>';
+      } else if (method === "ai") {
+        alertCost.innerHTML = '<span style="font-size:14px" id="vgCostIcon">⚡</span><span id="vgCostText"><strong>AI生成计费规则</strong>：AI生成按时长包计费，10秒320积分 /15秒480积分；生成失败不扣费。本视频由AI技术辅助生成，AI生成画面可能存在局限性或不准确性，仅供参考分享。</span>';
+      } else if (method === "upload") {
+        alertCost.innerHTML = '<span style="font-size:14px" id="vgCostIcon">⚡</span><span id="vgCostText"><strong>本地成片上传</strong>：上传本地已有成片不消耗积分，支持一键质检与全网矩阵分发。</span>';
+      }
+    }
+
+    if (phoneBottomLabel) {
+      phoneBottomLabel.textContent = method === "quick"
+        ? "📱 快剪实时渲染预览"
+        : method === "ai"
+        ? "📱 AI 生成画面预演"
+        : "📱 本地视频上传预览";
+    }
+  }
+
   methodTabs.forEach(tab => {
     tab.addEventListener("click", () => {
-      methodTabs.forEach(t => t.classList.remove("active"));
-      tab.classList.add("active");
-      const mode = tab.getAttribute("data-vmethod");
-      if (mode === "quick") {
-        if (stQuick) stQuick.style.display = "block";
-        if (stAi) stAi.style.display = "none";
-        if (alertCost) {
-          alertCost.innerHTML = '⚡ <strong>快剪计费规则</strong>：1 分钟消耗 50 积分，不满 1 分钟按 1 分钟计费；快剪生成失败不扣积分。';
-        }
-        if (phoneBottomLabel) {
-          phoneBottomLabel.textContent = "📱 快剪实时渲染预览";
-        }
-      } else {
-        if (stQuick) stQuick.style.display = "none";
-        if (stAi) stAi.style.display = "block";
-        if (alertCost) {
-          alertCost.innerHTML = '⚡ <strong>AI生成计费规则</strong>：AI生成按时长包计费，10秒320积分 /15秒480积分；生成失败不扣费。本视频由AI技术辅助生成，AI生成画面可能存在局限性或不准确性，仅供参考分享。';
-        }
-        if (phoneBottomLabel) {
-          phoneBottomLabel.textContent = "📱 AI 生成画面预演";
-        }
+      const m = tab.dataset.vmethod || "quick";
+      switchVideoMethod(m);
+      if (typeof showToast === "function") {
+        showToast(m === "ai" ? "已切换至「AI 生成视频」配置面板" : m === "upload" ? "已切换至「上传视频」面板" : "已切换至「视频快剪」表单面板");
       }
     });
   });
 
-  const quickMatSelect = document.getElementById("vgQuickMaterialSelect");
-  const quickTplSelect = document.getElementById("vgQuickTemplateSelect");
-  const quickStartBtn = document.getElementById("vgQuickStartBtn");
+  // 3. AI生成视频: 垂直左侧导航切换 (画面提示词, 基础设置, 选择声音, 视频字幕, 字幕样式, 背景音乐)
+  const vnavBtns = document.querySelectorAll("#vgVNav .vg-vnav-btn");
+  const vtabViews = {
+    prompt: document.getElementById("vtabPromptView"),
+    basic: document.getElementById("vtabBasicView"),
+    voice: document.getElementById("vtabVoiceView"),
+    subtitles: document.getElementById("vtabSubtitlesView"),
+    styles: document.getElementById("vtabStylesView"),
+    bgm: document.getElementById("vtabBgmView")
+  };
 
-  function checkQuickFormValidity() {
-    const matVal = quickMatSelect ? quickMatSelect.value : "";
-    const tplVal = quickTplSelect ? quickTplSelect.value : "";
-    const isValid = matVal !== "" && tplVal !== "";
-    if (quickStartBtn) {
-      if (isValid) {
-        quickStartBtn.removeAttribute("disabled");
-        quickStartBtn.style.opacity = "1";
-        quickStartBtn.style.cursor = "pointer";
-        quickStartBtn.title = "素材与模板配置完成，点击一键渲染";
-      } else {
-        quickStartBtn.setAttribute("disabled", "true");
-        quickStartBtn.style.opacity = "0.45";
-        quickStartBtn.style.cursor = "not-allowed";
-        quickStartBtn.title = "请先选择素材分组和混剪模板";
+  function switchAiVNav(tabKey) {
+    vnavBtns.forEach(btn => {
+      const isActive = btn.dataset.vtab === tabKey;
+      btn.classList.toggle("active", isActive);
+    });
+    Object.entries(vtabViews).forEach(([k, viewEl]) => {
+      if (viewEl) {
+        viewEl.style.display = k === tabKey ? "block" : "none";
       }
-    }
+    });
   }
 
-  if (quickMatSelect) quickMatSelect.addEventListener("change", checkQuickFormValidity);
-  if (quickTplSelect) quickTplSelect.addEventListener("change", () => {
-    const val = quickTplSelect.value;
-    const nameEl = document.getElementById("vgTemplateNameText");
-    const tagEl = document.getElementById("vgTemplateTagText");
-    const descEl = document.getElementById("vgTemplateDescText");
-    const thumbEl = document.getElementById("vgTemplateThumbImg");
-    if (val === "gold3s") {
-      if (nameEl) nameEl.textContent = "黄金3秒钩子爆款模板";
-      if (tagEl) tagEl.textContent = "推荐用于抖音/快手短视频";
-      if (descEl) descEl.textContent = "0-3秒抛出安全痛点，8秒核心功能卡点展示，最后3秒行动号召与信任背书。";
-    } else if (val === "techreview") {
-      if (nameEl) nameEl.textContent = "科技大片硬核评测模板";
-      if (tagEl) tagEl.textContent = "适合B站/视频号深度种草";
-      if (descEl) descEl.textContent = "大画幅镜头切换，实测参数雷达图卡点，权威专家背书与技术参数拉满。";
-    } else if (val === "casepromo") {
-      if (nameEl) nameEl.textContent = "政企标杆案例实战模板";
-      if (tagEl) tagEl.textContent = "适合商务洽谈与矩阵分发";
-      if (descEl) descEl.textContent = "稳重沉浸大底色，客户实测痛点与交付成果快剪对比，建立高品牌信任感。";
-    } else if (val === "fastflow") {
-      if (nameEl) nameEl.textContent = "快节奏高密度干货模板";
-      if (tagEl) tagEl.textContent = "适合信息流高点击广告";
-      if (descEl) descEl.textContent = "1.5倍节奏快切，核心关键词大字打点，密集信息轰炸提升完播率。";
-    }
-    checkQuickFormValidity();
+  vnavBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const k = btn.dataset.vtab || "prompt";
+      switchAiVNav(k);
+      const titleMap = {
+        prompt: "画面提示词配置",
+        basic: "视频基础设置",
+        voice: "选择声音与语速",
+        subtitles: "视频字幕与语言",
+        styles: "字幕排版样式",
+        bgm: "背景音乐与音量"
+      };
+      if (typeof showToast === "function") {
+        showToast("已切换至：" + (titleMap[k] || k));
+      }
+    });
   });
 
-  checkQuickFormValidity();
-
+  // 4. 快剪素材预览弹窗 & 混剪模板样片详情弹窗
   const matPreviewModal = document.getElementById("vgMaterialPreviewModal");
   const tplPreviewModal = document.getElementById("vgTemplatePreviewModal");
 
-  const openMatModalBtn = document.getElementById("vgOpenMaterialPreviewBtn");
-  if (openMatModalBtn) {
-    openMatModalBtn.addEventListener("click", () => {
+  // 素材预览弹窗交互
+  const previewMatBtn = document.getElementById("vgPreviewMaterialBtn");
+  if (previewMatBtn) {
+    previewMatBtn.addEventListener("click", () => {
       if (matPreviewModal) matPreviewModal.classList.add("show");
     });
   }
-
-  const closeMatModalBtn = document.getElementById("vgCloseMatPreviewModalBtn");
-  const cancelMatModalBtn = document.getElementById("vgCancelMatPreviewModalBtn");
-  const confirmMatModalBtn = document.getElementById("vgConfirmMatPreviewModalBtn");
-  [closeMatModalBtn, cancelMatModalBtn].forEach(b => {
+  const matCloseBtn = document.getElementById("vgMaterialModalClose");
+  const matCancelBtn = document.getElementById("vgMaterialModalCancel");
+  const matConfirmBtn = document.getElementById("vgMaterialModalConfirm");
+  [matCloseBtn, matCancelBtn].forEach(b => {
     if (b) b.addEventListener("click", () => {
       if (matPreviewModal) matPreviewModal.classList.remove("show");
     });
   });
-  if (confirmMatModalBtn) {
-    confirmMatModalBtn.addEventListener("click", () => {
+  if (matConfirmBtn) {
+    matConfirmBtn.addEventListener("click", () => {
       if (matPreviewModal) matPreviewModal.classList.remove("show");
-      f("已确认素材分组并应用到当前快剪工程", "success");
+      if (typeof showToast === "function") showToast("✓ 已确认应用当前素材分组至剪辑工程");
+    });
+  }
+  if (matPreviewModal) {
+    matPreviewModal.addEventListener("click", e => {
+      if (e.target === matPreviewModal) matPreviewModal.classList.remove("show");
+    });
+    matPreviewModal.querySelectorAll(".vg-mat-card").forEach(card => {
+      card.addEventListener("click", () => {
+        matPreviewModal.querySelectorAll(".vg-mat-card").forEach(c => {
+          c.style.border = "1px solid #e2e8f0";
+          c.style.background = "#ffffff";
+        });
+        card.style.border = "1.5px solid #4f46e5";
+        card.style.background = "#eff6ff";
+        if (typeof showToast === "function") showToast("▶ 正在播放素材片段预览");
+      });
     });
   }
 
-  const matCards = document.querySelectorAll(".vg-mat-card");
-  matCards.forEach(card => {
-    card.addEventListener("click", () => {
-      const title = card.getAttribute("data-mtitle");
-      f("已播放素材片段预览：" + title, "info");
-    });
-  });
-
-  const openTplModalBtn = document.getElementById("vgTemplatePreviewCard");
-  if (openTplModalBtn) {
-    openTplModalBtn.addEventListener("click", () => {
+  // 混剪模板样片弹窗交互
+  const tplPreviewCard = document.getElementById("vgTemplatePreviewCard");
+  if (tplPreviewCard) {
+    tplPreviewCard.addEventListener("click", () => {
       if (tplPreviewModal) tplPreviewModal.classList.add("show");
     });
   }
-
-  const closeTplModalBtn = document.getElementById("vgCloseTplPreviewModalBtn");
-  const cancelTplModalBtn = document.getElementById("vgCancelTplPreviewModalBtn");
-  const confirmTplModalBtn = document.getElementById("vgConfirmTplPreviewModalBtn");
-  [closeTplModalBtn, cancelTplModalBtn].forEach(b => {
+  const tplCloseBtn = document.getElementById("vgTemplateModalClose");
+  const tplCancelBtn = document.getElementById("vgTemplateModalCancel");
+  const tplConfirmBtn = document.getElementById("vgTemplateModalConfirm");
+  [tplCloseBtn, tplCancelBtn].forEach(b => {
     if (b) b.addEventListener("click", () => {
       if (tplPreviewModal) tplPreviewModal.classList.remove("show");
     });
   });
-  if (confirmTplModalBtn) {
-    confirmTplModalBtn.addEventListener("click", () => {
+  if (tplConfirmBtn) {
+    tplConfirmBtn.addEventListener("click", () => {
       if (tplPreviewModal) tplPreviewModal.classList.remove("show");
-      f("已选定混剪模板并应用到剪辑轨", "success");
+      if (typeof showToast === "function") showToast("✓ 已选定混剪模板并应用至卡点轨道");
+    });
+  }
+  if (tplPreviewModal) {
+    tplPreviewModal.addEventListener("click", e => {
+      if (e.target === tplPreviewModal) tplPreviewModal.classList.remove("show");
     });
   }
 
-  const playDemoBtn = document.getElementById("vgPlayDemoVideoBtn");
-  if (playDemoBtn) {
-    playDemoBtn.addEventListener("click", () => {
-      f("正在全屏模拟播放该混剪模板样片 (15秒)", "info");
-    });
-  }
-
-  const quickBgmSelect = document.getElementById("vgQuickBgmSelect");
-  const quickBgmAudition = document.getElementById("vgQuickBgmAudition");
-  if (quickBgmAudition && quickBgmSelect) {
-    quickBgmAudition.addEventListener("click", () => {
-      const selOpt = quickBgmSelect.options[quickBgmSelect.selectedIndex];
-      const name = selOpt ? selOpt.text : "科技轻快背景乐";
-      f("正在试听背景音乐：" + name, "info");
-    });
-  }
-
-  const vnavBtns = document.querySelectorAll(".vg-vnav-btn");
-  const vtabViews = document.querySelectorAll(".vg-vtab-view");
-  vnavBtns.forEach(btn => {
-    btn.addEventListener("click", () => {
-      vnavBtns.forEach(b => b.classList.remove("active"));
-      btn.classList.add("active");
-      const targetId = btn.getAttribute("data-vpanel");
-      vtabViews.forEach(view => {
-        view.classList.remove("active");
-        if (view.id === targetId) view.classList.add("active");
-      });
-    });
-  });
-
-  const promptInput = document.getElementById("vgAiPromptInput");
-  const promptCounter = document.getElementById("vgPromptCounter");
-  if (promptInput && promptCounter) {
-    promptInput.addEventListener("input", () => {
-      promptCounter.textContent = promptInput.value.length + "/500";
-    });
-  }
-
-  const promptChips = document.querySelectorAll(".vg-prompt-chip");
-  promptChips.forEach(chip => {
-    chip.addEventListener("click", () => {
-      if (promptInput) {
-        const text = chip.textContent.replace("+ ", "");
-        if (promptInput.value.trim().length > 0) {
-          promptInput.value += "，" + text;
-        } else {
-          promptInput.value = text;
-        }
-        if (promptCounter) promptCounter.textContent = promptInput.value.length + "/500";
-        f("已填入画面提示词标签：" + text, "info");
-      }
-    });
-  });
-
-  const polishBtn = document.getElementById("vgAiPromptPolishBtn");
-  if (polishBtn && promptInput) {
-    polishBtn.addEventListener("click", () => {
-      const cur = promptInput.value.trim();
-      const enhanced = cur ? cur + "，4K超高清渲染，电影级景深光影，运镜平滑推拉，商业写实质感" : "科技机房与360网络安全指挥大屏，实时态势数据流缓缓流动，科技蓝与橙黄警示光效交织，4K超清写实商业质感";
-      promptInput.value = enhanced;
-      if (promptCounter) promptCounter.textContent = promptInput.value.length + "/500";
-      f("AI 画面提示词润色增强成功！", "success");
-    });
-  }
-
-  const durationPills = document.querySelectorAll(".vg-duration-pill");
-  durationPills.forEach(pill => {
-    pill.addEventListener("click", () => {
-      durationPills.forEach(p => {
-        p.classList.remove("active");
-        p.style.borderColor = "#e2e8f0";
-        p.style.background = "#fff";
-      });
-      pill.classList.add("active");
-      pill.style.borderColor = "#2563eb";
-      pill.style.background = "#eff6ff";
-      const dur = pill.getAttribute("data-dur");
-      f("已设定生成视频时长为：" + dur + " 秒", "info");
-    });
-  });
-
-  const ratioPills = document.querySelectorAll(".vg-ratio-pill");
-  ratioPills.forEach(pill => {
-    pill.addEventListener("click", () => {
-      ratioPills.forEach(p => {
-        p.classList.remove("active");
-        p.style.borderColor = "#e2e8f0";
-        p.style.background = "#fff";
-      });
-      pill.classList.add("active");
-      pill.style.borderColor = "#2563eb";
-      pill.style.background = "#eff6ff";
-      const ratio = pill.getAttribute("data-ratio");
-      f("已设定画幅比例为：" + (ratio === "9:16" ? "9:16 竖屏（抖音/视频号）" : "16:9 横屏（B站/PC端）"), "info");
-    });
-  });
-
-  const imgRefToggle = document.getElementById("vgImgRefToggle");
-  const imgRefArea = document.getElementById("vgImgRefArea");
-  if (imgRefToggle && imgRefArea) {
-    imgRefToggle.addEventListener("change", () => {
-      if (imgRefToggle.checked) {
-        imgRefArea.style.display = "block";
-        f("已开启「图生视频」参考画面模式", "info");
-      } else {
-        imgRefArea.style.display = "none";
-        f("已切换为「纯文本生成视频」模式", "info");
+  // 5. 混剪模板下拉选择联动预览卡片
+  const tplSelect = document.getElementById("vgQuickTemplateSelect");
+  if (tplSelect) {
+    tplSelect.addEventListener("change", () => {
+      const val = tplSelect.value;
+      const nameEl = document.getElementById("vgTemplateNameText");
+      const tagEl = document.getElementById("vgTemplateTagText");
+      const descEl = document.getElementById("vgTemplateDescText");
+      if (val === "hook3s") {
+        if (nameEl) nameEl.textContent = "黄金 3 秒模板";
+        if (tagEl) tagEl.textContent = "高完播率";
+        if (descEl) descEl.textContent = "开头痛点抓人，核心利益点极速抛出，适合抖音/快手短视频信息流爆款";
+      } else if (val === "factory") {
+        if (nameEl) nameEl.textContent = "源头工厂探厂实测";
+        if (tagEl) tagEl.textContent = "品质背书";
+        if (descEl) descEl.textContent = "车间流水线特写 + 权威证书印章展示，快速建立政企大客户信任度";
+      } else if (val === "compare") {
+        if (nameEl) nameEl.textContent = "竞品对比实测模板";
+        if (tagEl) tagEl.textContent = "硬核说服";
+        if (descEl) descEl.textContent = "传统劣质痛点 vs 优质方案实测，多轨画中画对比，强化选型动机";
       }
     });
   }
 
-  const imgRefPickLibBtn = document.getElementById("vgImgRefPickLibBtn");
-  if (imgRefPickLibBtn) {
-    imgRefPickLibBtn.addEventListener("click", () => {
-      f("已从素材库载入默认高清主图作为参考底图", "info");
+  // 6. 核心数据字典与文案联动
+  let sData = {
+    "360安全卫士": {
+      longTail: "360安全卫士极速版与企业版区别测评",
+      creativeType: "测评推荐类",
+      title: "2026版360安全卫士深度测评与企业部署方案",
+      tags: "#360安全卫士 #终端安全 #勒索病毒防御 #网络安全",
+      content: "360安全科技自主研发云端安全大脑与自研AI杀毒双引擎。毫秒级识别未知勒索与木马威胁，拦截率高达99.98%，全方位守护企业与个人终端数据资产！",
+      bgImage: socScreenImg
+    },
+    "终端安全防护": {
+      longTail: "企业终端安全防护系统如何选型部署",
+      creativeType: "排行类",
+      title: "2026企业级终端安全EDR厂商推荐与选型对比",
+      tags: "#终端安全防护 #EDR端点响应 #企业网络防护 #360安全",
+      content: "360天擎终端安全管理系统，集防病毒、终端准入合规、补丁分发、微隔离管控于一体。支持十万级终端集中下发策略，满足等级保护三级安全合规标准！",
+      bgImage: endpointDefenseImg
+    },
+    "勒索病毒拦截": {
+      longTail: "服务器如何彻底防范勒索病毒加密勒索",
+      creativeType: "痛点解决方案类",
+      title: "针对LockBit/BlackCat勒索病毒的实时防御白皮书",
+      tags: "#勒索病毒拦截 #360安全大脑 #诱饵防御 #数据备份",
+      content: "360首创文件主动解密防护与底层只读诱饵陷阱。动态阻断进程未授权加密行为，自带云端文件热备份秒级无损回滚，让勒索攻击无所遁形！",
+      bgImage: complianceBadgeImg
+    },
+    "AI安全大模型": {
+      longTail: "企业私有化部署AI大模型安全风控方案",
+      creativeType: "避坑科普类",
+      title: "360智脑安全大模型如何赋能企业安全运营SOC",
+      tags: "#AI安全大模型 #360智脑 #数字安全 #智能告警研判",
+      content: "依托数百亿级安全知识库与攻击样本微调训练。360安全大模型实现海量安全告警秒级智能降噪研判，自动生成处置工单与SOAR联动阻断响应！",
+      bgImage: socScreenImg
+    },
+    "网络安全等级保护": {
+      longTail: "等级保护2.0三级测评整改必备安全产品清单",
+      creativeType: "探厂实测类",
+      title: "2026最新网络安全等保2.0三级合规建设与整改指南",
+      tags: "#等级保护 #合规测评 #下一代防火墙 #360企业安全",
+      content: "360提供等保2.0全流程一体化咨询测评与合规套件支撑，涵盖下一代防火墙、日志审计、堡垒机与数据库审计，最快15个工作日完成达标整改！",
+      bgImage: enterpriseCertImg
+    }
+  };
+
+  const coreKw = document.getElementById("vgVideoCoreKeyword");
+  const longTail = document.getElementById("vgVideoLongTail");
+  const creativeType = document.getElementById("vgVideoCreativeType");
+  const vidTitle = document.getElementById("vgVideoTitle");
+  const vidTags = document.getElementById("vgVideoTags");
+  const vidContent = document.getElementById("vgVideoContent");
+  const segScript = document.getElementById("vgSegmentScript");
+  const titleCounter = document.getElementById("vgTitleCounter");
+  const tagsCounter = document.getElementById("vgTagsCounter");
+  const contentCounter = document.getElementById("vgContentCounter");
+  const phoneCanvas = document.getElementById("vgPhoneVideoCanvas");
+  const phoneTitle = document.getElementById("vgPhoneTitleText");
+  const phoneTags = document.getElementById("vgPhoneTagsText");
+  const phoneSubtitle = document.getElementById("vgPhoneSubtitleLayer");
+  const phoneMusic = document.getElementById("vgPhoneMusicText");
+  const phonePlayBtn = document.getElementById("vgPhonePlayBtn");
+
+  function updateVideoPreviews() {
+    const t = vidTitle ? vidTitle.value.trim() || "请输入视频标题" : "";
+    const tags = vidTags ? vidTags.value.trim() || "#热门话题" : "";
+    const c = vidContent ? vidContent.value.trim() || "请输入正文口播内容" : "";
+
+    if (phoneTitle) phoneTitle.textContent = t;
+    if (phoneTags) phoneTags.textContent = tags;
+    if (phoneSubtitle) phoneSubtitle.textContent = c.slice(0, 36) + (c.length > 36 ? "..." : "");
+    if (titleCounter) titleCounter.textContent = t.length + " / 30";
+
+    const tagCount = tags.split(/\\s+/).filter(Boolean).length;
+    if (tagsCounter) tagsCounter.textContent = Math.min(tagCount, 5) + " / 5";
+    if (contentCounter) contentCounter.textContent = c.length + " / 150";
+  }
+
+  function applyKeywordPreset(kw) {
+    const item = sData[kw] || sData["360安全卫士"];
+    if (longTail) longTail.value = item.longTail;
+    if (creativeType) creativeType.value = item.creativeType;
+    if (vidTitle) vidTitle.value = item.title;
+    if (vidTags) vidTags.value = item.tags;
+    if (vidContent) vidContent.value = item.content;
+    if (segScript) segScript.value = item.content;
+    if (phoneCanvas && item.bgImage) phoneCanvas.style.backgroundImage = 'url("' + item.bgImage + '")';
+    updateVideoPreviews();
+  }
+
+  if (coreKw) {
+    coreKw.addEventListener("change", () => {
+      applyKeywordPreset(coreKw.value);
+      if (typeof showToast === "function") showToast("已根据「" + coreKw.value + "」自动更新全案文案与分镜");
+    });
+  }
+  if (vidTitle) vidTitle.addEventListener("input", updateVideoPreviews);
+  if (vidTags) vidTags.addEventListener("input", updateVideoPreviews);
+  if (vidContent) {
+    vidContent.addEventListener("input", () => {
+      if (segScript) segScript.value = vidContent.value;
+      updateVideoPreviews();
+    });
+  }
+  if (segScript) {
+    segScript.addEventListener("input", () => {
+      if (vidContent) vidContent.value = segScript.value;
+      updateVideoPreviews();
     });
   }
 
-  const speedSlider = document.getElementById("vgVoiceSpeedSlider");
-  const speedVal = document.getElementById("vgVoiceSpeedVal");
-  if (speedSlider && speedVal) {
-    speedSlider.addEventListener("input", () => {
-      speedVal.textContent = speedSlider.value + "x";
+  function triggerAiGen(msg) {
+    applyKeywordPreset(coreKw ? coreKw.value : "360安全卫士");
+    if (typeof showToast === "function") showToast(msg || "✨ AI 智能引擎已秒级生成爆款标题、话题标签与口播分镜");
+  }
+
+  const superSyncBtn = document.getElementById("vgSuperSyncBtn");
+  if (superSyncBtn) superSyncBtn.addEventListener("click", () => triggerAiGen("✨ 智能全案秒级生成完毕！已同步至手机模拟器"));
+  const kwAiBtn = document.getElementById("vgKeywordAIBtn");
+  if (kwAiBtn) kwAiBtn.addEventListener("click", () => triggerAiGen());
+  const copyAiBtn = document.getElementById("vgCopyAIBtn");
+  if (copyAiBtn) copyAiBtn.addEventListener("click", () => triggerAiGen());
+  const segAiBtn = document.getElementById("vgSegmentAIBtn");
+  if (segAiBtn) segAiBtn.addEventListener("click", () => triggerAiGen());
+  const clipBtn = document.getElementById("vgClipBtn");
+  if (clipBtn) clipBtn.addEventListener("click", () => {
+    if (typeof showToast === "function") showToast("已从「企业知识库」剪藏最新事实与产品技术参数");
+  });
+  const resetAllBtn = document.getElementById("vgResetAllBtn");
+  if (resetAllBtn) resetAllBtn.addEventListener("click", () => {
+    applyKeywordPreset("360安全卫士");
+    if (typeof showToast === "function") showToast("已重置回默认推荐配置");
+  });
+
+  // 7. AI生成视频: 画面提示词、快捷镜头词、润色增强
+  const aiPromptIpt = document.getElementById("vgAiPromptInput");
+  const aiPromptCounter = document.getElementById("vgAiPromptCounter");
+  if (aiPromptIpt && aiPromptCounter) {
+    aiPromptIpt.addEventListener("input", () => {
+      aiPromptCounter.textContent = aiPromptIpt.value.length + " / 500";
+    });
+  }
+  document.querySelectorAll(".vg-prompt-tag").forEach(tagBtn => {
+    tagBtn.addEventListener("click", () => {
+      const tagText = tagBtn.dataset.tag || tagBtn.textContent.trim();
+      if (aiPromptIpt) {
+        const cur = aiPromptIpt.value.trim();
+        aiPromptIpt.value = cur ? cur.replace(/[,，]$/, "") + "，" + tagText : tagText;
+        if (aiPromptCounter) aiPromptCounter.textContent = aiPromptIpt.value.length + " / 500";
+        if (typeof showToast === "function") showToast("已添加镜头词标签：" + tagText);
+      }
+    });
+  });
+  const aiPolishBtn = document.getElementById("vgAiPromptPolishBtn");
+  if (aiPolishBtn && aiPromptIpt) {
+    aiPolishBtn.addEventListener("click", () => {
+      const cur = aiPromptIpt.value.trim();
+      aiPromptIpt.value = (cur ? cur + "，" : "") + "电影级工业光影渲染，4K超精细景深，运镜平稳推进，真实微距纹理质感";
+      if (aiPromptCounter) aiPromptCounter.textContent = aiPromptIpt.value.length + " / 500";
+      if (typeof showToast === "function") showToast("✨ AI 已一键润色镜头提示词并增强画面渲染参数");
     });
   }
 
-  const voiceCards = document.querySelectorAll(".vg-voice-card");
-  voiceCards.forEach(card => {
+  // 8. AI生成视频: 时长包、画幅比例、图生视频
+  document.querySelectorAll(".vg-duration-pill").forEach(pill => {
+    pill.addEventListener("click", () => {
+      document.querySelectorAll(".vg-duration-pill").forEach(p => {
+        p.classList.remove("active");
+        p.style.borderColor = "#cbd5e1";
+        p.style.background = "#fff";
+        p.style.color = "#334155";
+      });
+      pill.classList.add("active");
+      pill.style.borderColor = "#4f46e5";
+      pill.style.background = "#eef2ff";
+      pill.style.color = "#4f46e5";
+      const dur = pill.dataset.duration || "10";
+      if (typeof showToast === "function") showToast("已设定生成视频时长为：" + dur + " 秒");
+    });
+  });
+  document.querySelectorAll(".vg-ratio-pill").forEach(pill => {
+    pill.addEventListener("click", () => {
+      document.querySelectorAll(".vg-ratio-pill").forEach(p => {
+        p.classList.remove("active");
+        p.style.borderColor = "#cbd5e1";
+        p.style.background = "#fff";
+        p.style.color = "#334155";
+      });
+      pill.classList.add("active");
+      pill.style.borderColor = "#4f46e5";
+      pill.style.background = "#eef2ff";
+      pill.style.color = "#4f46e5";
+      const ratio = pill.dataset.ratio || "9:16";
+      if (typeof showToast === "function") showToast("已设定画幅比例为：" + (ratio === "9:16" ? "9:16 竖屏（抖音/视频号）" : "16:9 横屏（B站/PC端）"));
+    });
+  });
+  const img2VidToggle = document.getElementById("vgImg2VidToggle");
+  const img2VidUploadWrap = document.getElementById("vgImg2VidUploadWrap");
+  if (img2VidToggle && img2VidUploadWrap) {
+    img2VidToggle.addEventListener("change", () => {
+      img2VidUploadWrap.style.display = img2VidToggle.checked ? "block" : "none";
+      if (typeof showToast === "function") showToast(img2VidToggle.checked ? "已开启「图生视频」参考画面模式" : "已切换为「纯文本生成视频」模式");
+    });
+  }
+  const changeRefImgBtn = document.getElementById("vgChangeRefImgBtn");
+  if (changeRefImgBtn) {
+    changeRefImgBtn.addEventListener("click", () => {
+      if (typeof showToast === "function") showToast("已从知识库中重新选用高清质检主图作为参考底图");
+    });
+  }
+
+  // 9. AI生成视频: 声音选择与语速调节
+  document.querySelectorAll(".vg-voice-card").forEach(card => {
     card.addEventListener("click", () => {
-      voiceCards.forEach(c => {
+      document.querySelectorAll(".vg-voice-card").forEach(c => {
+        c.classList.remove("active");
         c.style.borderColor = "#e2e8f0";
         c.style.background = "#fff";
         const dot = c.querySelector(".voice-radio-dot");
         if (dot) dot.style.display = "none";
+        const chip = c.querySelector(".chip-mini");
+        if (chip) { chip.classList.remove("on"); chip.textContent = "选用"; }
       });
-      card.style.borderColor = "#2563eb";
-      card.style.background = "#eff6ff";
-      const myDot = card.querySelector(".voice-radio-dot");
-      if (myDot) myDot.style.display = "block";
-      const vname = card.getAttribute("data-vname");
-      f("已选用配音音色：" + vname, "info");
+      card.classList.add("active");
+      card.style.borderColor = "#4f46e5";
+      card.style.background = "#eef2ff";
+      const dot = card.querySelector(".voice-radio-dot");
+      if (dot) dot.style.display = "block";
+      const chip = card.querySelector(".chip-mini");
+      if (chip) { chip.classList.add("on"); chip.textContent = "已选用"; }
+      const voice = card.dataset.voice || "知性干练商务女声";
+      if (phoneMusic) phoneMusic.textContent = "原声 - 360智见GEO智能播音 · " + voice;
+      if (typeof showToast === "function") showToast("已选用【" + voice + "】作为口播音色，手机端已实时生效");
     });
   });
-
-  const subTypePills = document.querySelectorAll(".vg-sub-type-pill");
-  subTypePills.forEach(pill => {
-    pill.addEventListener("click", () => {
-      subTypePills.forEach(p => {
-        p.style.borderColor = "#cbd5e1";
-        p.style.color = "#475569";
-        p.style.background = "#fff";
-      });
-      pill.style.borderColor = "#2563eb";
-      pill.style.color = "#2563eb";
-      pill.style.background = "#eff6ff";
-      const lang = pill.getAttribute("data-lang");
-      f("已切换字幕语言模式：" + (lang === "dual" ? "中英双语字幕" : "标准单语中文"), "info");
+  const aiVoiceSpeedSelect = document.getElementById("vgAiVoiceSpeed");
+  if (aiVoiceSpeedSelect) {
+    aiVoiceSpeedSelect.addEventListener("change", () => {
+      if (typeof showToast === "function") showToast("口播倍速已设为：" + aiVoiceSpeedSelect.options[aiVoiceSpeedSelect.selectedIndex].text);
     });
-  });
+  }
 
-  const subStyleCards = document.querySelectorAll(".vg-substyle-card");
-  subStyleCards.forEach(card => {
+  // 10. AI生成视频: 视频字幕单语/双语与样式卡片
+  const subLangSelect = document.getElementById("vgSubtitleLangSelect");
+  if (subLangSelect) {
+    subLangSelect.addEventListener("change", () => {
+      if (typeof showToast === "function") showToast("已切换字幕语言模式：" + subLangSelect.options[subLangSelect.selectedIndex].text);
+    });
+  }
+  const subSplitSelect = document.getElementById("vgAiSubtitleSplit");
+  if (subSplitSelect) {
+    subSplitSelect.addEventListener("change", () => {
+      if (typeof showToast === "function") showToast("已配置断句模式：" + subSplitSelect.options[subSplitSelect.selectedIndex].text);
+    });
+  }
+  document.querySelectorAll(".vg-style-chip").forEach(card => {
     card.addEventListener("click", () => {
-      subStyleCards.forEach(c => {
-        c.style.borderColor = "#e2e8f0";
-        c.style.boxShadow = "none";
-        const tag = c.querySelector(".substyle-badge");
-        if (tag) tag.style.display = "none";
+      document.querySelectorAll(".vg-style-chip").forEach(c => {
+        c.classList.remove("active");
       });
-      card.style.borderColor = "#2563eb";
-      card.style.boxShadow = "0 2px 8px rgba(37,99,235,0.15)";
-      const myTag = card.querySelector(".substyle-badge");
-      if (myTag) myTag.style.display = "block";
-      const sname = card.getAttribute("data-sname");
-      f("已选用字幕视觉样式：" + sname, "info");
+      card.classList.add("active");
+      const sType = card.dataset.style || "default";
+      if (phoneSubtitle) {
+        phoneSubtitle.className = "vg-phone-subtitle-preview" + (sType === "yellow" ? " style-yellow" : sType === "karaoke" ? " style-karaoke" : "");
+      }
+      if (typeof showToast === "function") showToast("字幕样式已切换，手机画面已实时呈现");
     });
   });
 
-  const bgmAuditionBtns = document.querySelectorAll(".bgm-audition-btn");
-  bgmAuditionBtns.forEach(btn => {
-    btn.addEventListener("click", (e) => {
+  // 11. BGM 选择与试听
+  document.querySelectorAll(".bgm-audition-btn").forEach(btn => {
+    btn.addEventListener("click", e => {
       e.stopPropagation();
-      const bname = btn.getAttribute("data-bgm");
-      f("正在试听背景音乐：" + bname + " (已同步音量设置)", "info");
+      const bname = btn.dataset.bgm || "商务质感节奏";
+      if (typeof showToast === "function") showToast("正在试听背景音乐：" + bname + " (已同步音量设置)");
     });
   });
-
-  const bgmSelectBtns = document.querySelectorAll(".bgm-select-btn");
-  bgmSelectBtns.forEach(btn => {
-    btn.addEventListener("click", (e) => {
+  const quickBgmAuditionBtn = document.getElementById("vgQuickBgmAuditionBtn");
+  if (quickBgmAuditionBtn) {
+    quickBgmAuditionBtn.addEventListener("click", () => {
+      const bgmSel = document.getElementById("vgQuickBgmSelect");
+      const opt = bgmSel ? bgmSel.options[bgmSel.selectedIndex] : null;
+      if (typeof showToast === "function") showToast("正在试听背景音乐：" + (opt ? opt.text : "大气质感商务节奏"));
+    });
+  }
+  document.querySelectorAll("#vtabBgmView .chip-mini").forEach(btn => {
+    btn.addEventListener("click", e => {
       e.stopPropagation();
-      const bname = btn.getAttribute("data-bgm");
-      bgmSelectBtns.forEach(b => {
-        b.className = "btn s o bgm-select-btn";
+      const bgmName = btn.closest("div")?.querySelector("div > div")?.textContent || "商用背景音乐";
+      document.querySelectorAll("#vtabBgmView .chip-mini").forEach(b => {
+        b.classList.remove("on");
         b.textContent = "选用";
       });
-      btn.className = "btn s primary bgm-select-btn";
-      btn.textContent = "✓ 当前选用";
-      f("已成功设置背景音乐为：" + bname, "success");
+      btn.classList.add("on");
+      btn.textContent = "当前选用";
+      if (typeof showToast === "function") showToast("背景音乐已选用并与解说音轨完成智能闪避配置");
     });
   });
 
-  const quickStartAction = document.getElementById("vgQuickStartBtn");
-  if (quickStartAction) {
-    quickStartAction.addEventListener("click", () => {
-      f("正在为您开始云端多轨快剪智能渲染...", "info");
-      setTimeout(() => {
-        f("快剪合成进度 65%... 正在渲染转场特效与音画卡点", "info");
+  // 12. 底部渲染与分发按钮
+  const renderBtns = [document.getElementById("vgStartRenderBtn"), document.getElementById("vgBottomGlobalGenerateBtn")];
+  renderBtns.forEach(btn => {
+    if (btn) {
+      btn.addEventListener("click", () => {
+        const oldHtml = btn.innerHTML;
+        btn.setAttribute("disabled", "true");
+        btn.innerHTML = "<span>🎬 正在云端渲染 1080P 短视频…</span>";
         setTimeout(() => {
-          f("视频快剪合成完成！已输出高清短视频MP4", "success");
-        }, 1200);
-      }, 1000);
-    });
-  }
+          btn.removeAttribute("disabled");
+          btn.innerHTML = oldHtml;
+          if (typeof showToast === "function") showToast("短视频合成成功！已生成 1080P 竖屏 MP4 文件与配套字幕轨");
+        }, 900);
+      });
+    }
+  });
+  const saveBtns = [document.getElementById("vgSaveDraftBtn"), document.getElementById("vgBottomSaveLibBtn")];
+  saveBtns.forEach(btn => {
+    if (btn) {
+      btn.addEventListener("click", () => {
+        if (typeof showToast === "function") showToast("当前短视频文案、音色与分镜脚本已成功沉淀至「发布记录」");
+      });
+    }
+  });
+  const dispatchBtns = [document.getElementById("vgDispatchBtn"), document.getElementById("vgBottomMatrixPublishBtn")];
+  dispatchBtns.forEach(btn => {
+    if (btn) {
+      btn.addEventListener("click", () => {
+        const pubNav = document.querySelector('.nav a[data-p="pub"]');
+        if (pubNav) pubNav.click();
+        if (typeof showToast === "function") showToast("已携带当前短视频跳转至「文章发布」中心");
+      });
+    }
+  });
 
-  const aiStartAction = document.getElementById("vgAiStartGenerateBtn");
-  if (aiStartAction) {
-    aiStartAction.addEventListener("click", () => {
-      f("正在向AI视频大模型发送生成任务，预计耗时约45秒...", "info");
-      setTimeout(() => {
-        f("AI视频分镜生成中，画面连贯度与提示词对齐校验完毕...", "info");
-        setTimeout(() => {
-          f("AI视频生成完成！已入库并准备分发", "success");
-        }, 1500);
-      }, 1200);
-    });
-  }
+  // 13. 手机模拟器播放与点赞
+  let isPhonePlaying = false;
+  let playInterval = null;
+  const playButtons = [document.getElementById("vgPhonePlayBtn"), document.querySelector(".vg-phone-play-btn")];
+  playButtons.forEach(btn => {
+    if (btn) {
+      btn.addEventListener("click", () => {
+        isPhonePlaying = !isPhonePlaying;
+        if (isPhonePlaying) {
+          btn.textContent = "❚❚";
+          btn.style.background = "rgba(99, 102, 241, 0.85)";
+          if (typeof showToast === "function") showToast("▶ 正在模拟短视频口播演示与音波跳动");
+          let idx = 0;
+          const phrases = (vidContent?.value || "360安全科技自主研发云端安全大脑与自研AI杀毒双引擎，毫秒级识别未知勒索与木马威胁。").split("，");
+          playInterval = setInterval(() => {
+            if (isPhonePlaying && phoneSubtitle && phrases.length) {
+              phoneSubtitle.textContent = phrases[idx % phrases.length];
+              idx++;
+            }
+          }, 1800);
+        } else {
+          btn.textContent = "▶";
+          btn.style.background = "rgba(0, 0, 0, 0.45)";
+          if (playInterval) clearInterval(playInterval);
+          updateVideoPreviews();
+        }
+      });
+    }
+  });
+  const likeBtns = [document.getElementById("vgLikeBtn"), document.querySelector(".vg-phone-action")];
+  likeBtns.forEach(btn => {
+    if (btn) {
+      btn.addEventListener("click", () => {
+        const icon = btn.querySelector(".vg-phone-action-icon");
+        const likeCount = document.getElementById("vgLikeCount");
+        if (icon) {
+          icon.style.transform = "scale(1.35)";
+          setTimeout(() => { icon.style.transform = ""; }, 200);
+        }
+        if (likeCount) likeCount.textContent = "11.5w";
+        if (typeof showToast === "function") showToast("❤️ 模拟点赞交互成功！");
+      });
+    }
+  });
 
-  const bottomGlobalBtn = document.getElementById("vgBottomGlobalGenerateBtn");
-  if (bottomGlobalBtn) {
-    bottomGlobalBtn.addEventListener("click", () => {
-      f("正在一键合成高清 MP4 短视频并封装字幕与音轨...", "info");
-      setTimeout(() => {
-        f("高清 MP4 渲染完成！已保存至企业媒体库，可随时全网矩阵分发", "success");
-      }, 1400);
-    });
-  }
-
-  const saveLibBtn = document.getElementById("vgBottomSaveLibBtn");
-  if (saveLibBtn) {
-    saveLibBtn.addEventListener("click", () => {
-      f("已将当前工程及分镜脚本保存至企业文库草稿箱", "success");
-    });
-  }
-
-  const matrixPublishBtn = document.getElementById("vgBottomMatrixPublishBtn");
-  if (matrixPublishBtn) {
-    matrixPublishBtn.addEventListener("click", () => {
-      f("已将视频排期推送到【矩阵发布】待审核列表（抖音/快手/视频号/B站）", "success");
-    });
-  }
-
-  const phonePlayBtn = document.querySelector(".vg-phone-play-btn");
-  if (phonePlayBtn) {
-    let isPlaying = false;
-    phonePlayBtn.addEventListener("click", () => {
-      isPlaying = !isPlaying;
-      if (isPlaying) {
-        phonePlayBtn.innerHTML = "⏸";
-        f("手机预览窗口：开始模拟播放视频", "info");
-      } else {
-        phonePlayBtn.innerHTML = "▶";
-        f("手机预览窗口：已暂停播放", "info");
-      }
-    });
-  }
-
-  const phoneLikeBtn = document.querySelector(".vg-phone-action");
-  if (phoneLikeBtn) {
-    phoneLikeBtn.addEventListener("click", () => {
-      f("模拟点赞成功 +1", "info");
-    });
-  }
-
-  const uploadBox = document.getElementById("vgUploadArea");
-  if (uploadBox) {
-    uploadBox.addEventListener("click", () => {
-      f("模拟打开系统文件选择框：支持拖拽或选择 MP4/PNG 素材", "info");
-    });
-  }
+  // 初始化预览与默认状态
+  updateVideoPreviews();
 }
+s();
+
+c();
 function c(){let e=document.getElementById(`themeSwitcherWrap`),t=document.getElementById(`themeSwitchBtn`),n=document.getElementById(`currentThemeName`);if(!e||!t)return;let r={blue:`极光科技蓝`,green:`清新碧翠绿`,purple:`深空星曜紫`,slate:`商务钛金灰`};function i(t,i=!1){r[t]||(t=`blue`),document.documentElement.setAttribute(`data-theme`,t),document.body.setAttribute(`data-theme`,t);try{localStorage.setItem(`geo_theme`,t)}catch{}n&&(n.textContent=r[t]),e.querySelectorAll(`.theme-item`).forEach(e=>{e.dataset.theme===t?e.classList.add(`on`):e.classList.remove(`on`)}),i&&typeof showToast==`function`&&showToast(`已切换至「`+r[t]+`」配色方案`)}t.addEventListener(`click`,n=>{n.stopPropagation();let r=e.classList.toggle(`open`);t.setAttribute(`aria-expanded`,r?`true`:`false`)}),e.querySelectorAll(`.theme-item`).forEach(n=>{n.addEventListener(`click`,r=>{r.stopPropagation();let a=n.dataset.theme;i(a,!0),e.classList.remove(`open`),t.setAttribute(`aria-expanded`,`false`)})}),document.addEventListener(`click`,n=>{e.contains(n.target)||(e.classList.remove(`open`),t.setAttribute(`aria-expanded`,`false`))});let a=`blue`;try{a=localStorage.getItem(`geo_theme`)||`blue`}catch{}i(a,!1)}window.addEventListener(`hashchange`,()=>{let t=location.hash.slice(1),n=e.find(e=>e.dataset.p===t);n&&!n.classList.contains(`on`)&&n.click()});let l=document.getElementById(`sidebarToggle`),u=`geo-sidebar-collapsed`;function d(e){document.body.classList.toggle(`sidebar-collapsed`,e),l&&(l.setAttribute(`aria-expanded`,e?`false`:`true`),l.title=e?`展开侧边栏 (点击恢复完整菜单)`:`收起侧边栏 (点击折叠为图标栏)`);try{localStorage.setItem(u,e?`1`:`0`)}catch{}window.dispatchEvent(new Event(`resize`))}try{d(localStorage.getItem(u)===`1`)}catch{d(!1)}l?.addEventListener(`click`,e=>{e.preventDefault();let t=document.body.classList.contains(`sidebar-collapsed`);d(!t),typeof showToast==`function`&&showToast(t?`已展开侧边导航栏`:`已收起侧边导航栏`)});let f=document.getElementById(`headerCompanyTag`),m=document.getElementById(`enterpriseName`);function h(){if(!f||!m)return;let e=m.value.trim()||`未命名企业`;f.textContent=e,f.title=e}m?.addEventListener(`input`,h),h();let g=document.querySelector(`.toast`);g&&(g.setAttribute(`role`,`status`),g.setAttribute(`aria-live`,`polite`),g.setAttribute(`aria-atomic`,`true`));let _=typeof window.showToast===`function`?window.showToast:function(msg){if(g){g.textContent=msg;g.classList.add(`show`);clearTimeout(window.__toastTimer);window.__toastTimer=setTimeout(()=>g.classList.remove(`show`),1800)}};window.showToast=function(e,t=`success`){g&&(g.classList.remove(`toast-warn`,`toast-error`),t===`warn`&&g.classList.add(`toast-warn`),t===`error`&&g.classList.add(`toast-error`)),_(e)},document.querySelectorAll(`.chip,.geo-step[data-jump]`).forEach(e=>{e.hasAttribute(`tabindex`)||(e.tabIndex=0),e.hasAttribute(`role`)||e.setAttribute(`role`,`button`),e.addEventListener(`keydown`,t=>{(t.key===`Enter`||t.key===` `)&&(t.preventDefault(),e.click())})}),document.querySelectorAll(`.chip`).forEach(e=>{let t=()=>e.setAttribute(`aria-pressed`,e.classList.contains(`on`)?`true`:`false`);e.addEventListener(`click`,()=>setTimeout(t,0)),t()});let v=document.getElementById(`privateAccountTable`),y=document.getElementById(`privateAccountKeyword`),b=document.getElementById(`privateAccountPlatform`),x=document.getElementById(`privateAccountStatus`),S=document.getElementById(`privateAccountCount`),C=document.getElementById(`privateAccountEmpty`);function w(){if(!v)return;let e=(y?.value||``).trim().toLowerCase(),t=b?.value||``,n=x?.value||``,r=0;[...v.tBodies[0].rows].forEach(i=>{let a=(i.querySelector(`.media-name`)?.textContent||``).toLowerCase(),o=(!e||a.includes(e))&&(!t||i.dataset.platform===t)&&(!n||i.dataset.status===n);i.style.display=o?``:`none`,o&&r++}),S&&(S.textContent=r),C&&C.classList.toggle(`show`,r===0)}document.getElementById(`privateAccountQuery`)?.addEventListener(`click`,w),document.getElementById(`privateAccountReset`)?.addEventListener(`click`,()=>{y&&(y.value=``),b&&(b.value=``),x&&(x.value=``),w()}),y?.addEventListener(`keydown`,e=>{e.key===`Enter`&&w()}),document.getElementById(`privatePlatformGrid`)?.addEventListener(`click`,e=>{let t=e.target.closest(`.private-platform-card`);if(t){if(t.classList.contains(`add`)){showToast(`已打开新增媒体授权入口（原型）`);return}b&&(b.value=t.dataset.privatePlatform||``,w()),document.getElementById(`privateAccountTable`)?.scrollIntoView({behavior:`smooth`,block:`center`})}}),document.getElementById(`privateDownloadAuth`)?.addEventListener(`click`,()=>showToast(`授权软件将在正式环境提供安全下载`)),document.querySelectorAll(`.private-account-auth`).forEach(e=>e.addEventListener(`click`,()=>showToast(`已进入账号授权流程（原型）`))),w();function T(){document.querySelectorAll(`#longTailTable .btn-bring-to-gen`).forEach(e=>{e.onclick=t=>{t.preventDefault(),t.stopPropagation();let n=e.closest(`tr`),r=n?.dataset.kw||n?.cells[0]?.textContent.trim(),i=n?.dataset.entity||n?.cells[1]?.textContent.trim(),a=document.getElementById(`coreKeywordSelect`),o=document.getElementById(`longTailSelect`);a&&i&&([...a.options].some(e=>e.value===i)||a.add(new Option(i,i)),a.value=i),typeof syncLongTails==`function`&&syncLongTails(),o&&r&&([...o.options].some(e=>e.value===r)||o.add(new Option(r,r)),o.value=r),typeof he==`function`&&he(),typeof window.__geoSwitchPage==`function`?window.__geoSwitchPage(`gen`):document.querySelector(`.nav a[data-p="gen"]`)?.click(),showToast(`已带入「`+r+`」至内容创作`)}})}T();let ee=document.getElementById(`longTailTable`),E=document.getElementById(`kwSearchInput`),te=document.getElementById(`kwEntityFilter`),D=document.getElementById(`kwIntentFilter`),ne=document.getElementById(`kwResultCount`),O=document.getElementById(`kwEmpty`);function re(){return ee?[...ee.rows].slice(1):[]}function ie(){let e=(E?.value||``).trim().toLowerCase(),t=te?.value||``,n=D?.value||``,r=0;re().forEach(i=>{let a=i.textContent.toLowerCase(),o=(!e||a.includes(e))&&(!t||i.cells[1]?.textContent.trim()===t)&&(!n||i.cells[2]?.textContent.trim()===n);i.style.display=o?``:`none`,o&&r++}),ne&&(ne.textContent=r+` 条`),O?.classList.toggle(`show`,r===0)}window.applyKwFilters=ie;[E,te,D].forEach(e=>e?.addEventListener(e===E?`input`:`change`,ie)),document.getElementById(`kwFilterReset`)?.addEventListener(`click`,()=>{E&&(E.value=``),te&&(te.value=``),D&&(D.value=``),ie()}),ie();function ae(){let e=typeof getEntities==`function`?getEntities().length:3,t=document.getElementById(`entityCountPill`);t&&(t.textContent=e+` 个核心实体`)}document.getElementById(`keywordEntities`)?.addEventListener(`input`,ae);let k=document.getElementById(`prefixSuffixAgent`);k&&(k.onclick=()=>{k.classList.add(`running`);let e=document.getElementById(`agentLastRun`);e&&(e.textContent=`Agent 正在进行语义深度挖掘与质量清洗…`),setTimeout(()=>{k.classList.remove(`running`),e&&(e.textContent=`已完成智能挖掘 · 数据已同步`),ae(),showToast(`360 智见 Agent 已完成智能长尾词挖掘，数据已同步至内容创作！`)},650)}),ae();let oe=document.getElementById(`summaryCore`),se=document.getElementById(`summaryPersona`),ce=document.getElementById(`summaryLength`),le=document.getElementById(`summaryIllustration`),ue=document.getElementById(`summaryReady`),de=document.getElementById(`articleCount`),fe=document.getElementById(`illustrationModeSelect`),pe=document.getElementById(`illustrationStyleSelect`),me=document.getElementById(`illustrationStatusPill`);window.updateGenerationSummary=he;function he(){let e=document.getElementById(`coreKeywordSelect`)?.value||`—`,t=document.getElementById(`genArticleType`)?.value||document.getElementById(`genUserPersonaSelect`)?.value?.split(`/`)[0]?.trim()||`排行推荐`;oe&&(oe.textContent=e),se&&(se.textContent=t);let n=de?.value||`2`;ce&&(ce.textContent=`标准3000 × `+n+`篇`),document.querySelectorAll(`.article-count-quick-chips .chip-mini`).forEach(e=>{e.classList.toggle(`on`,e.dataset.c===n)});let r=fe?.value||`auto_3`,i=document.querySelectorAll(`#illustrationPreviewRow .illustration-preview-thumb`);if(r===`none`)le&&(le.textContent=`纯文本 (无配图)`,le.style.color=`#64748b`),me&&(me.textContent=`○ 纯文本无图`,me.className=`pill n`),i.forEach(e=>e.classList.remove(`active`));else{let e=`AI智能配图 (3张/篇)`;r===`hero_1`&&(e=`单图极速配图 (1张/篇)`),r===`dense_5`&&(e=`深度图文混排 (5张/篇)`),le&&(le.textContent=e,le.style.color=`var(--primary)`),me&&(me.textContent=`✓ 已开启智能配图`,me.className=`pill g`),i.forEach((e,t)=>{r===`hero_1`?e.classList.toggle(`active`,t===0):e.classList.add(`active`)})}let a=Number(n)>=1&&Number(n)<=20&&e&&document.getElementById(`longTailSelect`)?.value;ue&&(ue.textContent=a?`● 可生成`:`● 参数待完善`,ue.style.color=a?`#18815c`:`#a86b10`)}document.querySelectorAll(`.article-count-quick-chips .chip-mini`).forEach(e=>{e.addEventListener(`click`,()=>{de&&(de.value=e.dataset.c),he()})}),de?.addEventListener(`change`,he),fe?.addEventListener(`change`,he),pe?.addEventListener(`change`,he),document.getElementById(`longTailSelect`)?.addEventListener(`change`,he),document.getElementById(`coreKeywordSelect`)?.addEventListener(`change`,()=>setTimeout(he,0)),document.getElementById(`genUserPersonaSelect`)?.addEventListener(`change`,he),document.getElementById(`genSearchScenarioSelect`)?.addEventListener(`change`,he),document.getElementById(`genUserPainPointsSelect`)?.addEventListener(`change`,he),he(),document.addEventListener(`keydown`,e=>{(e.ctrlKey||e.metaKey)&&e.key===`Enter`&&document.getElementById(`gen`)?.classList.contains(`on`)&&(e.preventDefault(),document.getElementById(`generateArticleBtn`)?.click())});let ge=document.getElementById(`generateArticleBtn`);ge?.addEventListener(`click`,()=>{if(ge.disabled)return;let e=de?.value||`2`,t=ge.innerHTML;ge.disabled=!0,ge.innerHTML=`<span>正在批量创建 `+e+` 篇任务…</span>`,setTimeout(()=>{ge.disabled=!1,ge.innerHTML=t,showToast(`已成功发起 `+e+` 篇深度长文生成任务（标准3000字）`)},850)});let _e;document.getElementById(`articleSearchInput`)?.addEventListener(`input`,()=>{clearTimeout(_e),_e=setTimeout(()=>{typeof filterArticleRows==`function`&&filterArticleRows()},140)});let ve=document.getElementById(`articleViewDrawer`),ye=document.getElementById(`drawerArticleTitle`),be=document.getElementById(`drawerArticleType`),A=document.getElementById(`drawerArticleStatus`),j=document.getElementById(`drawerArticleGenerated`),xe=document.getElementById(`drawerArticleSubmitted`),Se=document.getElementById(`drawerArticlePreview`),Ce=``;function we(e){ve?.classList.toggle(`show`,e),ve?.setAttribute(`aria-hidden`,e?`false`:`true`),document.body.classList.toggle(`modal-open`,e||document.querySelector(`.modal-backdrop.show`))}function M(e){if(!e)return;let t=e.querySelectorAll(`td`);Ce=(t[0]?.textContent||`文章预览`).trim(),ye.textContent=Ce,be.textContent=(t[1]?.textContent||`—`).trim(),A.textContent=(t[2]?.textContent||`—`).trim(),j.textContent=(t[3]?.textContent||`—`).trim(),xe.textContent=(t[4]?.textContent||`—`).trim(),Se.innerHTML=``;let n=document.createElement(`h2`);n.textContent=`内容预览`;let r=document.createElement(`p`);r.className=`preview-note`,r.textContent=`当前高保真原型以文章列表元数据为主。正式接入文章生成 API 后，此区域可直接渲染 content HTML 全文。`;let i=document.createElement(`p`);i.textContent=`当前文章：`+Ce+`。这里已预留完整正文预览区，后续接入 WF_ARTICLE_GENERATE 返回的 content 字段即可直接展示。`,Se.append(n,r,i),we(!0)}document.getElementById(`articles`)?.addEventListener(`click`,e=>{let t=e.target.closest(`.article-view`);t&&M(t.closest(`tr`))}),document.getElementById(`articleDrawerClose`)?.addEventListener(`click`,()=>we(!1)),document.getElementById(`articleDrawerDone`)?.addEventListener(`click`,()=>we(!1)),ve?.addEventListener(`click`,e=>{e.target===ve&&we(!1)}),document.getElementById(`articleCopyTitle`)?.addEventListener(`click`,async()=>{try{await navigator.clipboard.writeText(Ce),showToast(`文章标题已复制`)}catch{showToast(`浏览器未开放剪贴板权限`,`warn`)}}),document.addEventListener(`keydown`,e=>{e.key===`Escape`&&ve?.classList.contains(`show`)&&we(!1)});function N(e,t=50){let n=0;for(let t of e)n=n*31+t.charCodeAt(0)>>>0;return n%(t+1)}document.querySelectorAll(`#pubMediaTable tbody tr`).forEach(e=>{let t=N(e.querySelector(`.media-name`)?.textContent.trim()||e.rowIndex.toString(),50);e.dataset.priceValue=String(t);let n=e.querySelector(`.pub-price`);n&&(n.textContent=t)}),document.querySelectorAll(`#pub .library-alt-table .alt-price`).forEach((e,t)=>{e.textContent=N(e.closest(`tr`)?.textContent||String(t),50)}),window.__applyPrivateMediaFilters?.();let Te=new MutationObserver(()=>{let e=!!document.querySelector(`.modal-backdrop.show,.drawer-backdrop.show`);document.body.classList.toggle(`modal-open`,e)});document.querySelectorAll(`.modal-backdrop,.drawer-backdrop`).forEach(e=>Te.observe(e,{attributes:!0,attributeFilter:[`class`]})),document.addEventListener(`keydown`,e=>{e.key===`Escape`&&document.querySelectorAll(`.modal-backdrop.show`).forEach(e=>{let t=e.querySelector(`.modal-close`);t&&t.click()})}),window.getPersonaPayload=()=>({cname:document.getElementById(`enterpriseName`)?.value.trim()||``,industry:document.getElementById(`industryName`)?.value.trim()||``,core_entities:typeof getEntities==`function`?getEntities():[]}),window.getKeywordPayload=()=>({industry:document.getElementById(`industryName`)?.value.trim()||``,core_entities:typeof getEntities==`function`?getEntities():[]}),window.getArticlePayload=()=>({cname:document.getElementById(`slotC`)?.value.trim()||``,core_keyword:document.getElementById(`coreKeywordSelect`)?.value||``,long_tail_keyword:document.getElementById(`longTailSelect`)?.value||``,user_persona:document.getElementById(`genUserPersonaSelect`)?.value||``,search_scenario:document.getElementById(`genSearchScenarioSelect`)?.value||``,user_pain_points:document.getElementById(`genUserPainPointsSelect`)?.value||``,article_length:3e3,article_count:Number(document.getElementById(`articleCount`)?.value||2),illustration_mode:document.getElementById(`illustrationModeSelect`)?.value||`auto_3`,illustration_style:document.getElementById(`illustrationStyleSelect`)?.value||`photo`,redline:document.getElementById(`redlineInput`)?.value.trim()||``});function Ee(){
   let coreEl=document.getElementById(`coreKeywordSelect`),
       longEl=document.getElementById(`longTailSelect`),
