@@ -1,0 +1,45 @@
+# Netlify 部署配置
+# 这份文件放在仓库根目录，Netlify 导入项目时会自动读取，
+# 从而无需在后台手动填写构建配置（后台配置容易在站点重建时丢失）。
+
+[build]
+  # package.json 中的 build 脚本
+  command = "npm run build"
+  # Vite 默认输出目录
+  publish = "dist"
+
+[build.environment]
+  # 固定 Node 主版本，避免 Netlify 默认版本变化导致构建行为不一致
+  NODE_VERSION = "22"
+
+# ---------------------------------------------------------------------------
+# SPA 回退
+# 本项目是 React 单页应用，直接访问子路径或刷新页面时，
+# 需要回退到 index.html 交给前端路由处理，否则会 404。
+# 此规则必须放在所有 redirect 规则的最后。
+# ---------------------------------------------------------------------------
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# ---------------------------------------------------------------------------
+# 安全响应头
+# ---------------------------------------------------------------------------
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+# ---------------------------------------------------------------------------
+# 静态资源缓存
+# Vite 产出的文件名带内容 hash，内容变化时文件名也会变化，
+# 因此可以安全地设置长期强缓存。
+# ---------------------------------------------------------------------------
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
