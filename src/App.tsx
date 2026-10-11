@@ -61,7 +61,7 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
 </div>
 </button>
 </div>
-</div><span class="system-online"><i></i>系统在线</span><span class="tag" id="headerCompanyTag">360安全科技</span><span class="trial-text">试点期至 2026-07-30</span><div class="av">程</div></div></header>
+</div><span class="system-online"><i></i>系统在线</span><span class="tag" id="headerCompanyTag">360安全科技</span><span class="trial-text" style="color:#047857;background:#ecfdf5;border:1px solid #a7f3d0;padding:2px 8px;border-radius:4px;font-weight:600">正式运营期</span><div class="av">程</div></div></header>
 <div class="wrap">
 <div class="page on" id="dash">
   <!-- Top Welcome & Tutorial Bar -->
@@ -139,7 +139,80 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
     </div>
 
 
-    <!-- Top Row: Company Info Card + Unified KPI Stats -->
+    <!-- Section 1: 北极星效果指标 (200题基准) -->
+    <div style="margin-bottom:16px">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
+        <div style="display:flex;align-items:center;gap:8px">
+          <span class="dash-title-bar" style="color:#0ea5e9">▌</span>
+          <span style="font-size:13.5px;font-weight:700;color:#0f172a">效果指标（200题基准 · 北极星度量）</span>
+          <span style="font-size:11.5px;color:#64748b;background:#f1f5f9;padding:2px 8px;border-radius:4px;border:1px solid #e2e8f0">检测规模：2,400次 (200题 × 6大平台 × 前后各1期)</span>
+        </div>
+        <span style="font-size:11.5px;color:#94a3b8">注：与下方「内容运营规模（累计量）」明确区分，聚焦真实被引用与可见增量</span>
+      </div>
+      <div class="report-4kpi-grid" style="grid-template-columns:repeat(4, 1fr)">
+        <!-- Polaris Card 1: AI推荐可见率 -->
+        <div class="report-kpi-card" style="border-top:3px solid #10b981">
+          <div class="report-kpi-icon-wrap teal" style="background:#ecfdf5;color:#059669">🎯</div>
+          <div class="report-kpi-info" style="flex:1">
+            <div style="display:flex;align-items:center;justify-content:space-between">
+              <div class="report-kpi-label" style="font-weight:600">AI推荐可见率</div>
+              <span class="dash-kpi-trend up" style="font-size:11px;font-weight:700;color:#10b981;background:#ecfdf5;padding:1px 6px;border-radius:4px">+30pt</span>
+            </div>
+            <div class="report-kpi-val" style="color:#0f172a">61%</div>
+            <div style="font-size:11px;color:#64748b;margin-top:2px">基线 31% · +30pt（200题基准）</div>
+          </div>
+        </div>
+        <!-- Polaris Card 2: 前三推荐率 -->
+        <div class="report-kpi-card" style="border-top:3px solid #3b82f6">
+          <div class="report-kpi-icon-wrap blue" style="background:#eff6ff;color:#2563eb">🥇</div>
+          <div class="report-kpi-info" style="flex:1">
+            <div style="display:flex;align-items:center;justify-content:space-between">
+              <div class="report-kpi-label" style="font-weight:600">前三推荐率</div>
+              <span class="dash-kpi-trend up" style="font-size:11px;font-weight:700;color:#2563eb;background:#eff6ff;padding:1px 6px;border-radius:4px">+26pt</span>
+            </div>
+            <div class="report-kpi-val" style="color:#0f172a">38%</div>
+            <div style="font-size:11px;color:#64748b;margin-top:2px">基线 12% · +26pt（被引用问题口径）</div>
+          </div>
+        </div>
+        <!-- Polaris Card 3: 竞品提及率 -->
+        <div class="report-kpi-card" style="border-top:3px solid #f59e0b">
+          <div class="report-kpi-icon-wrap gold" style="background:#fffbeb;color:#d97706">🛡️</div>
+          <div class="report-kpi-info" style="flex:1">
+            <div style="display:flex;align-items:center;justify-content:space-between">
+              <div class="report-kpi-label" style="font-weight:600">竞品提及率</div>
+              <span class="dash-kpi-trend down" style="font-size:11px;font-weight:700;color:#10b981;background:#ecfdf5;padding:1px 6px;border-radius:4px">↓ 33pt</span>
+            </div>
+            <div class="report-kpi-val" style="color:#0f172a">32%</div>
+            <div style="font-size:11px;color:#64748b;margin-top:2px">基线 65% · ↓33pt（越低越好）</div>
+          </div>
+        </div>
+        <!-- Polaris Card 4: 效果报告产出 -->
+        <div class="report-kpi-card" style="border-top:3px solid #8b5cf6">
+          <div class="report-kpi-icon-wrap purple" style="background:#f5f3ff;color:#7c3aed">⚡</div>
+          <div class="report-kpi-info" style="flex:1">
+            <div style="display:flex;align-items:center;justify-content:space-between">
+              <div class="report-kpi-label" style="font-weight:600">效果报告产出</div>
+              <span class="dash-kpi-trend up" style="font-size:11px;font-weight:700;color:#7c3aed;background:#f5f3ff;padding:1px 6px;border-radius:4px">提升2倍</span>
+            </div>
+            <div class="report-kpi-val" style="color:#0f172a">1天/份</div>
+            <div style="font-size:11px;color:#64748b;margin-top:2px">基线 2天 · 效率提升2倍</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 2: 内容运营规模 (累计量) -->
+    <div style="margin-bottom:8px">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
+        <div style="display:flex;align-items:center;gap:8px">
+          <span class="dash-title-bar" style="color:#6366f1">▌</span>
+          <span style="font-size:13.5px;font-weight:700;color:#0f172a">内容运营规模（累计量 · 知识与发布底座）</span>
+        </div>
+        <span style="font-size:11.5px;color:#64748b">全生命周期沉淀资产总量，支撑 AI 引擎多维交叉检索</span>
+      </div>
+    </div>
+
+    <!-- Top Row: Company Info Card + Unified Operation Stats -->
     <div class="report-top-row">
       <!-- Company Card -->
       <div class="report-company-card">
@@ -261,10 +334,10 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
             <div class="dash-kpi-info" style="flex:1">
               <div style="display:flex;align-items:center;justify-content:space-between">
                 <div class="dash-kpi-label">AI首位推荐排名数</div>
-                <span class="dash-kpi-trend up" style="font-size:11px;font-weight:700;color:#10b981;background:#ecfdf5;padding:1px 6px;border-radius:4px">↑ 18.5%</span>
+                <span class="dash-kpi-trend up" style="font-size:11px;font-weight:700;color:#10b981;background:#ecfdf5;padding:1px 6px;border-radius:4px">+197%</span>
               </div>
               <div class="dash-kpi-val" id="dashKpiRanks">18420</div>
-              <div style="font-size:11.5px;color:#94a3b8;margin-top:2px">全网 AI 首位事实权威推荐词频</div>
+              <div style="font-size:11.5px;color:#94a3b8;margin-top:2px">基线 6,200 → 18,420 条 (+197%) · 全网权威推荐</div>
             </div>
           </div>
         </div>
@@ -797,44 +870,71 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
       </div>
       <div class="modal-body" style="padding:18px">
         <div style="display:flex;flex-direction:column;gap:12px">
+          <!-- Metric 1: AI推荐可见率 -->
           <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px">
             <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px">
-              <b style="font-size:13px;color:#0f172a">1. AI 搜索品牌可见率 (Visibility Rate)</b>
-              <span class="pill g" style="font-size:11px">实测指标: 94.2%</span>
+              <b style="font-size:13px;color:#0f172a">1. AI推荐可见率</b>
+              <span class="pill g" style="font-size:11px;font-weight:700">31% → 61% (+30pt)</span>
             </div>
-            <div style="font-size:12px;color:#475569;margin-bottom:6px">定义：在行业基准题库下，各大AI回答正向引用或推荐 360 的比例。</div>
-            <div style="background:#ffffff;border:1px dashed #cbd5e1;padding:8px 12px;border-radius:6px;font-family:monospace;font-size:12px;color:#0369a1">
-              可见率 = (正向首推及引用命中问题数 ÷ 测评总问题数 200题) × 100%
+            <div style="background:#ffffff;border:1px dashed #cbd5e1;padding:8px 12px;border-radius:6px;font-family:monospace;font-size:12px;color:#0369a1;margin-bottom:6px">
+              可见率 = 正向/中性引用问题数 ÷ 总测试问题数（200） × 100%
+            </div>
+            <div style="font-size:12px;color:#334155;font-weight:600;margin-bottom:4px">
+              数值核验：62 ÷ 200 = 31% → 122 ÷ 200 = 61%
+            </div>
+            <div style="font-size:11.5px;color:#64748b;line-height:1.5">
+              副标注说明：负向提及不计入“可见”；分母固定 200 题防虚高；前后对比非严格 A/B。
             </div>
           </div>
+
+          <!-- Metric 2: 前三推荐率 -->
           <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px">
             <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px">
-              <b style="font-size:13px;color:#0f172a">2. 首位事实权威推荐率 (Top-1 Recommendation)</b>
-              <span class="pill b" style="font-size:11px">实测指标: 82.5%</span>
+              <b style="font-size:13px;color:#0f172a">2. 前三推荐率</b>
+              <span class="pill b" style="font-size:11px;font-weight:700">12% → 38% (+26pt)</span>
             </div>
-            <div style="font-size:12px;color:#475569;margin-bottom:6px">定义：AI 搜索生成的结果中，首个推荐品牌或首段信源引用归属 360 的比例。</div>
-            <div style="background:#ffffff;border:1px dashed #cbd5e1;padding:8px 12px;border-radius:6px;font-family:monospace;font-size:12px;color:#0369a1">
-              首位推荐率 = (首段第一推荐品牌命中数 ÷ 触达回答总数) × 100%
+            <div style="background:#ffffff;border:1px dashed #cbd5e1;padding:8px 12px;border-radius:6px;font-family:monospace;font-size:12px;color:#0369a1;margin-bottom:6px">
+              前三推荐率 = 进入前3位问题数 ÷ 被引用问题数 × 100%
+            </div>
+            <div style="font-size:12px;color:#334155;font-weight:600;margin-bottom:4px">
+              数值核验：约 7 ÷ 62 = 12% → 46 ÷ 122 = 38%
+            </div>
+            <div style="font-size:11.5px;color:#64748b;line-height:1.5">
+              副标注说明：分母自变（62→122），绝对题数 7→46 才是真实增量，主动暴露口径争议。
             </div>
           </div>
+
+          <!-- Metric 3: 竞品提及率 -->
           <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px">
             <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px">
-              <b style="font-size:13px;color:#0f172a">3. 高权重信源采纳率 (Source Adoption)</b>
-              <span class="pill purple" style="font-size:11px">实测指标: 78.4%</span>
+              <b style="font-size:13px;color:#0f172a">3. 竞品提及率</b>
+              <span class="pill gold" style="font-size:11px;font-weight:700">65% → 32% (↓33pt)</span>
             </div>
-            <div style="font-size:12px;color:#475569;margin-bottom:6px">定义：大模型回答底部附带参考资料链接中，企业矩阵媒体与官网链接的占比。</div>
-            <div style="background:#ffffff;border:1px dashed #cbd5e1;padding:8px 12px;border-radius:6px;font-family:monospace;font-size:12px;color:#0369a1">
-              信源采纳率 = (采纳360自建与矩阵文章链接数 ÷ 呈现的外链参考总数) × 100%
+            <div style="background:#ffffff;border:1px dashed #cbd5e1;padding:8px 12px;border-radius:6px;font-family:monospace;font-size:12px;color:#0369a1;margin-bottom:6px">
+              竞品提及率 = 至少提及1个竞品的问题数 ÷ 总问题数（200） × 100%
+            </div>
+            <div style="font-size:12px;color:#334155;font-weight:600;margin-bottom:4px">
+              数值核验：130 ÷ 200 = 65% → 64 ÷ 200 = 32%
+            </div>
+            <div style="font-size:11.5px;color:#64748b;line-height:1.5">
+              副标注说明：越低越好；属趋势参考，相关非因果。
             </div>
           </div>
+
+          <!-- Metric 4: 效果报告产出效率 -->
           <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px">
             <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px">
-              <b style="font-size:13px;color:#0f172a">4. 意图覆盖完整度 (Intent Coverage)</b>
-              <span class="pill teal" style="font-size:11px">实测指标: 96.0%</span>
+              <b style="font-size:13px;color:#0f172a">4. 效果报告产出效率</b>
+              <span class="pill purple" style="font-size:11px;font-weight:700">2天/份 → 1天/份 (提升2倍)</span>
             </div>
-            <div style="font-size:12px;color:#475569;margin-bottom:6px">定义：覆盖「评测对比、采购选型、技术方案、等保合规」四维商业决策意图的广度。</div>
-            <div style="background:#ffffff;border:1px dashed #cbd5e1;padding:8px 12px;border-radius:6px;font-family:monospace;font-size:12px;color:#0369a1">
-              覆盖完整度 = (已覆盖意图场景数 ÷ 行业全集意图数) × 100%
+            <div style="background:#ffffff;border:1px dashed #cbd5e1;padding:8px 12px;border-radius:6px;font-family:monospace;font-size:12px;color:#0369a1;margin-bottom:6px">
+              定义：单份诊断报告所需人工工时
+            </div>
+            <div style="font-size:12px;color:#334155;font-weight:600;margin-bottom:4px">
+              数值核验：2天/份 → 1天/份
+            </div>
+            <div style="font-size:11.5px;color:#64748b;line-height:1.5">
+              副标注说明：效率来自自动化，人工复核收窄到分歧样本。
             </div>
           </div>
         </div>
@@ -854,8 +954,8 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
       <div class="modal-body" style="padding:18px">
         <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;padding:12px 16px;margin-bottom:14px;display:flex;align-items:center;justify-content:space-between">
           <div>
-            <div style="font-weight:700;color:#166534;font-size:14px">验收结论：综合达成率 118.4% · 评定为【卓越】</div>
-            <div style="font-size:12px;color:#15803d;margin-top:2px">度量周期：2026-07-01 ~ 2026-10-06 · 测评对象：6大主流AI平台</div>
+            <div style="font-weight:700;color:#166534;font-size:14px">验收结论：核心指标全部达标 / 超额达成</div>
+            <div style="font-size:12px;color:#15803d;margin-top:2px">度量周期：2026-07-01 ~ 2026-10-06 · 支撑数据：检测规模 2,400次 = 200题 × 6平台 × 优化前后各1期</div>
           </div>
           <span style="font-size:24px">🏆</span>
         </div>
@@ -871,42 +971,52 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
           </thead>
           <tbody>
             <tr style="border-bottom:1px solid #f1f5f9">
-              <td style="padding:8px 10px;font-weight:600">品牌总可见率 (200题)</td>
-              <td style="padding:8px 10px;color:#64748b">48.5%</td>
-              <td style="padding:8px 10px;font-weight:700;color:#0f766e">94.2%</td>
-              <td style="padding:8px 10px;color:#16a34a">+45.7%</td>
+              <td style="padding:8px 10px;font-weight:600">品牌可见率（200题）</td>
+              <td style="padding:8px 10px;color:#64748b">31% (62/200)</td>
+              <td style="padding:8px 10px;font-weight:700;color:#0f766e">61% (122/200)</td>
+              <td style="padding:8px 10px;font-weight:700;color:#16a34a">+30pt</td>
               <td style="padding:8px 10px"><span class="pill g" style="font-size:10px">超额完成</span></td>
             </tr>
             <tr style="border-bottom:1px solid #f1f5f9">
-              <td style="padding:8px 10px;font-weight:600">AI首推排名词数</td>
-              <td style="padding:8px 10px;color:#64748b">6,200 条</td>
-              <td style="padding:8px 10px;font-weight:700;color:#0f766e">18,420 条</td>
-              <td style="padding:8px 10px;color:#16a34a">+197%</td>
+              <td style="padding:8px 10px;font-weight:600">前三推荐率</td>
+              <td style="padding:8px 10px;color:#64748b">12% (约7/62)</td>
+              <td style="padding:8px 10px;font-weight:700;color:#0f766e">38% (46/122)</td>
+              <td style="padding:8px 10px;font-weight:700;color:#16a34a">+26pt</td>
               <td style="padding:8px 10px"><span class="pill g" style="font-size:10px">超额完成</span></td>
             </tr>
             <tr style="border-bottom:1px solid #f1f5f9">
-              <td style="padding:8px 10px;font-weight:600">蒸馏关键词库总量</td>
-              <td style="padding:8px 10px;color:#64748b">5,000 个</td>
-              <td style="padding:8px 10px;font-weight:700;color:#0f766e">11,528 个</td>
-              <td style="padding:8px 10px;color:#16a34a">+130%</td>
+              <td style="padding:8px 10px;font-weight:600">竞品提及率</td>
+              <td style="padding:8px 10px;color:#64748b">65% (130/200)</td>
+              <td style="padding:8px 10px;font-weight:700;color:#0f766e">32% (64/200)</td>
+              <td style="padding:8px 10px;font-weight:700;color:#16a34a">↓33pt (下降)</td>
+              <td style="padding:8px 10px"><span class="pill g" style="font-size:10px">卓越改善</span></td>
+            </tr>
+            <tr style="border-bottom:1px solid #f1f5f9">
+              <td style="padding:8px 10px;font-weight:600">效果报告产出</td>
+              <td style="padding:8px 10px;color:#64748b">2天/份</td>
+              <td style="padding:8px 10px;font-weight:700;color:#0f766e">1天/份</td>
+              <td style="padding:8px 10px;font-weight:700;color:#16a34a">提升2倍</td>
               <td style="padding:8px 10px"><span class="pill g" style="font-size:10px">达标</span></td>
             </tr>
-            <tr style="border-bottom:1px solid #f1f5f9">
-              <td style="padding:8px 10px;font-weight:600">矩阵文章总收录</td>
-              <td style="padding:8px 10px;color:#64748b">28,000 条</td>
-              <td style="padding:8px 10px;font-weight:700;color:#0f766e">68,396 条</td>
-              <td style="padding:8px 10px;color:#16a34a">+144%</td>
-              <td style="padding:8px 10px"><span class="pill g" style="font-size:10px">超额完成</span></td>
+            <tr style="border-bottom:1px solid #f1f5f9;background:#fafafa">
+              <td style="padding:8px 10px;font-weight:600;color:#64748b">AI首推排名词数（内容累计）</td>
+              <td style="padding:8px 10px;color:#94a3b8">6,200 条</td>
+              <td style="padding:8px 10px;font-weight:600;color:#334155">18,420 条</td>
+              <td style="padding:8px 10px;color:#16a34a">+197%</td>
+              <td style="padding:8px 10px"><span class="pill b" style="font-size:10px">资产沉淀</span></td>
             </tr>
           </tbody>
         </table>
         <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:12px;font-size:12px;color:#475569;line-height:1.7">
           <b>复盘与归因总结：</b><br/>
-          依托「度量→归因→排期→再度量」持续迭代机制，本期重点强化了360天擎、企业EDR和勒索病毒拦截等核心高商业价值词汇，在Kimi和DeepSeek等深度推理模型中的首位引用率提升至85%以上。下一步排期将进一步拓展车联网与大模型安全长尾词矩阵。
+          通过「度量→归因→排期→再度量」闭环，在 200 题基准下实现了可见率由 31% 跃升至 61%（+30pt），前三推荐绝对题数由 7 题大幅增至 46 题（38%）；竞品提及率有效压降 33pt；报告产出周期缩短至 1 天/份。全量 2,400 次检测明细已生成 SHA256 存证并开放 CSV 原始数据下载，支持客户独立验算。
         </div>
       </div>
-      <div class="modal-foot" style="display:flex;align-items:center;justify-content:space-between">
-        <span style="font-size:11.5px;color:#94a3b8">报告签发方：360数字安全运营中心 · 算法与GEO评测组</span>
+      <div class="modal-foot" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px">
+        <div style="font-size:11.5px;color:#64748b;line-height:1.4">
+          <div>报告签发方：360数字安全运营中心 · 算法与GEO评测组</div>
+          <div style="color:#047857;font-weight:600">客户复核：360政企业务线专家组已核验 200 题口径与原始明细 (可复算)</div>
+        </div>
         <button class="btn p" id="reportAuditResultDone" type="button" style="font-size:12px;padding:6px 16px">确认验收</button>
       </div>
     </div>
