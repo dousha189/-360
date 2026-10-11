@@ -184,11 +184,11 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
               <div class="report-kpi-val">31</div>
             </div>
           </div>
-          <div class="report-kpi-card" title="蒸馏关键词总量">
+          <div class="report-kpi-card" title="蒸馏关键词总量（明细7项之和：4436+3266+1602+912+618+460+234）">
             <div class="report-kpi-icon-wrap teal">🔍</div>
             <div class="report-kpi-info">
               <div class="report-kpi-label">蒸馏关键词</div>
-              <div class="report-kpi-val">13436</div>
+              <div class="report-kpi-val">11528</div>
             </div>
           </div>
           <div class="report-kpi-card" title="品牌关键词数量">
@@ -209,7 +209,7 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
 
         <!-- 3 Stat Cards: 文章数量 / 发布数量 / 排名数量 (上移至上方统一展示) -->
         <div class="dash-kpi-grid-3">
-          <!-- Card 1: 文章数量 -->
+          <!-- Card 1: 当月累计文章数 -->
           <div class="dash-kpi-card" data-kpi="articles" style="cursor:pointer" title="点击查看文章列表">
             <div class="dash-kpi-icon-wrap rose">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -222,11 +222,11 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
             </div>
             <div class="dash-kpi-info" style="flex:1">
               <div style="display:flex;align-items:center;justify-content:space-between">
-                <div class="dash-kpi-label">文章数量</div>
+                <div class="dash-kpi-label">当月累计文章数</div>
                 <span class="dash-kpi-trend up" style="font-size:11px;font-weight:700;color:#10b981;background:#ecfdf5;padding:1px 6px;border-radius:4px">↑ 12.8%</span>
               </div>
               <div class="dash-kpi-val" id="dashKpiArticles">1011</div>
-              <div style="font-size:11.5px;color:#94a3b8;margin-top:2px">月度新产出 181 篇 · 8 平台矩阵</div>
+              <div style="font-size:11.5px;color:#94a3b8;margin-top:2px">当月累计 1011 篇（近一年 1485 篇 · 月增 181 篇）</div>
             </div>
           </div>
 
@@ -249,7 +249,7 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
             </div>
           </div>
 
-          <!-- Card 3: 排名数量 -->
+          <!-- Card 3: AI首位推荐排名数 -->
           <div class="dash-kpi-card" data-kpi="ranks" style="cursor:pointer" title="点击定位至排名与收录明细">
             <div class="dash-kpi-icon-wrap blue">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -260,11 +260,11 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
             </div>
             <div class="dash-kpi-info" style="flex:1">
               <div style="display:flex;align-items:center;justify-content:space-between">
-                <div class="dash-kpi-label">排名数量</div>
+                <div class="dash-kpi-label">AI首位推荐排名数</div>
                 <span class="dash-kpi-trend up" style="font-size:11px;font-weight:700;color:#10b981;background:#ecfdf5;padding:1px 6px;border-radius:4px">↑ 18.5%</span>
               </div>
-              <div class="dash-kpi-val" id="dashKpiRanks">13436</div>
-              <div style="font-size:11.5px;color:#94a3b8;margin-top:2px">全网 AI 首位事实权威推荐</div>
+              <div class="dash-kpi-val" id="dashKpiRanks">18420</div>
+              <div style="font-size:11.5px;color:#94a3b8;margin-top:2px">全网 AI 首位事实权威推荐词频</div>
             </div>
           </div>
         </div>
@@ -277,13 +277,20 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
       <div class="report-panel-card">
         <div class="report-panel-head">
           <span class="dash-title-bar">▌</span>
-          <span>文章数量统计</span>
+          <span>文章数量统计 (多周期口径)</span>
         </div>
         <div class="report-article-list">
           <div class="report-article-item">
             <div class="report-article-item-left">
               <div class="report-cal-icon">月</div>
-              <span class="report-article-period">近一个月</span>
+              <span class="report-article-period">当月累计文章数</span>
+            </div>
+            <span class="report-article-count">1011篇</span>
+          </div>
+          <div class="report-article-item">
+            <div class="report-article-item-left">
+              <div class="report-cal-icon">新</div>
+              <span class="report-article-period">月度新产出</span>
             </div>
             <span class="report-article-count">181篇</span>
           </div>
@@ -297,7 +304,7 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
           <div class="report-article-item">
             <div class="report-article-item-left">
               <div class="report-cal-icon">年</div>
-              <span class="report-article-period">近一年</span>
+              <span class="report-article-period">近一年文章数</span>
             </div>
             <span class="report-article-count">1485篇</span>
           </div>
@@ -336,7 +343,7 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
             </svg>
             <div class="report-donut-center-text">
               <b>13436</b>
-              <span>总数量</span>
+              <span>收录占比总数</span>
             </div>
           </div>
           <div class="report-donut-legend">
@@ -354,7 +361,7 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
       <div class="report-panel-card">
         <div class="report-panel-head">
           <span class="dash-title-bar">▌</span>
-          <span>蒸馏关键词</span>
+          <span>蒸馏关键词明细排行 (合计: 11528)</span>
         </div>
         <div class="report-keyword-bars">
           <div class="report-bar-row">
@@ -410,7 +417,7 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
       <!-- Sub-toolbar: Platform filter tabs + Device switch -->
       <div class="report-table-toolbar">
         <div class="report-platform-tabs" id="reportPlatformTabs">
-          <button class="report-plat-tab on" data-plat="all" type="button">全部 (13436)</button>
+          <button class="report-plat-tab on" data-plat="all" type="button">全部收录 (13436)</button>
           <button class="report-plat-tab" data-plat="豆包" type="button">豆包</button>
           <button class="report-plat-tab" data-plat="文心一言" type="button">文心一言</button>
           <button class="report-plat-tab" data-plat="DeepSeek" type="button">DeepSeek</button>
@@ -425,17 +432,70 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
         </div>
       </div>
 
-      <!-- Core keyword select -->
-      <div style="margin-bottom:14px;display:flex;align-items:center;gap:12px">
-        <select class="ipt" id="reportCoreKeywordSelect" style="width:220px;height:36px;font-size:12.5px">
-          <option value="">全部核心关键词</option>
-          <option value="360安全卫士">360安全卫士</option>
-          <option value="终端安全防护">终端安全防护</option>
-          <option value="勒索病毒拦截">勒索病毒拦截</option>
-          <option value="AI安全大模型">AI安全大模型</option>
-          <option value="网络安全等级保护">网络安全等级保护</option>
-        </select>
-        <span style="font-size:12px;color:var(--muted)" id="reportResultSummary">共匹配 6 条高权重搜索记录</span>
+      <!-- Core keyword select + Audit / Export Toolbar -->
+      <div style="margin-bottom:14px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
+        <div style="display:flex;align-items:center;gap:10px">
+          <select class="ipt" id="reportCoreKeywordSelect" style="width:250px;height:36px;font-size:12.5px">
+            <option value="">全部核心关键词 (31个)</option>
+            <option value="360安全卫士">360安全卫士</option>
+            <option value="终端安全防护">终端安全防护</option>
+            <option value="勒索病毒拦截">勒索病毒拦截</option>
+            <option value="AI安全大模型">AI安全大模型</option>
+            <option value="网络安全等级保护">网络安全等级保护</option>
+            <option value="360天擎">360天擎</option>
+            <option value="数字安全大脑">数字安全大脑</option>
+            <option value="EDR端点响应">EDR端点响应</option>
+            <option value="杀毒软件推荐">杀毒软件推荐</option>
+            <option value="企业勒索防护">企业勒索防护</option>
+            <option value="攻防演练防守">攻防演练防守</option>
+            <option value="漏洞修复与补丁">漏洞修复与补丁</option>
+            <option value="木马查杀">木马查杀</option>
+            <option value="安全运营中心SOC">安全运营中心SOC</option>
+            <option value="态势感知">态势感知</option>
+            <option value="威胁情报">威胁情报</option>
+            <option value="等保2.0合规">等保2.0合规</option>
+            <option value="APT高级威胁防御">APT高级威胁防御</option>
+            <option value="桌面管理系统">桌面管理系统</option>
+            <option value="防病毒网关">防病毒网关</option>
+            <option value="数据防泄漏DLP">数据防泄漏DLP</option>
+            <option value="上网行为管理">上网行为管理</option>
+            <option value="零信任安全体系">零信任安全体系</option>
+            <option value="工业互联网安全">工业互联网安全</option>
+            <option value="车联网安全防护">车联网安全防护</option>
+            <option value="云原生安全">云原生安全</option>
+            <option value="大模型安全网关">大模型安全网关</option>
+            <option value="反钓鱼邮件欺诈">反钓鱼邮件欺诈</option>
+            <option value="主机安全加固">主机安全加固</option>
+            <option value="软件管家企业版">软件管家企业版</option>
+            <option value="网络安全应急响应">网络安全应急响应</option>
+          </select>
+          <span style="font-size:12px;color:var(--muted)" id="reportResultSummary">共匹配 9 条高权重搜索记录</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px">
+          <button class="btn" id="btnOpenAuditMetricModal" type="button" style="background:#f1f5f9;color:#334155;border:1px solid #cbd5e1;font-size:12px;padding:6px 14px;border-radius:6px;display:inline-flex;align-items:center;gap:5px;cursor:pointer">
+            📐 口径说明与计算公式
+          </button>
+          <button class="btn" id="btnExportRawData" type="button" style="background:#f1f5f9;color:#0f766e;border:1px solid #99f6e4;font-size:12px;padding:6px 14px;border-radius:6px;display:inline-flex;align-items:center;gap:5px;cursor:pointer">
+            📥 导出检测原始明细(CSV)
+          </button>
+          <button class="btn p" id="btnGenerateAuditReport" type="button" style="font-size:12px;padding:6px 15px;border-radius:6px;display:inline-flex;align-items:center;gap:5px;cursor:pointer">
+            📑 生成验收报告
+          </button>
+        </div>
+      </div>
+      <!-- Closed Loop Banner: 度量 → 归因 → 排期 → 再度量 -->
+      <div style="background:linear-gradient(90deg, #f0fdf4 0%, #f8fafc 100%);border:1px solid #bbf7d0;border-radius:8px;padding:10px 16px;margin-bottom:14px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px">
+        <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:#166534">
+          <span style="font-weight:700;display:inline-flex;align-items:center;gap:4px">🔄 GEO闭环驱动流程：</span>
+          <span style="background:#ffffff;padding:2px 8px;border-radius:4px;border:1px solid #86efac;font-weight:600">1. 度量 (200基准题可见率/信源覆盖)</span>
+          <span>➔</span>
+          <span style="background:#ffffff;padding:2px 8px;border-radius:4px;border:1px solid #86efac;font-weight:600">2. 归因 (负向/未收录信源分析)</span>
+          <span>➔</span>
+          <span style="background:#ffffff;padding:2px 8px;border-radius:4px;border:1px solid #86efac;font-weight:600">3. 排期 (知识库补全+长文定向发稿)</span>
+          <span>➔</span>
+          <span style="background:#ffffff;padding:2px 8px;border-radius:4px;border:1px solid #86efac;font-weight:600">4. 再度量 (T+3日回测验收)</span>
+        </div>
+        <span style="font-size:11.5px;color:#15803d;font-weight:600">当前状态：第4轮季度再度量与验收阶段</span>
       </div>
 
       <!-- Data Table -->
@@ -474,7 +534,7 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
         <thead>
           <tr>
             <th style="width:260px;text-align:left">工具名称</th>
-            <th style="text-align:left">AI搜索场景覆盖</th>
+            <th style="text-align:left">该平台高权重命中条数</th>
             <th style="text-align:right">蒸馏关键词数量</th>
             <th style="width:130px;text-align:right;padding-right:24px">报表明细联动</th>
           </tr>
@@ -487,7 +547,7 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
                 <span class="dash-tool-name">豆包</span>
               </div>
             </td>
-            <td class="dash-num-cell">54828</td>
+            <td class="dash-num-cell">2238</td>
             <td class="dash-num-cell bold-num">2238</td>
             <td style="text-align:right;padding-right:24px"><span class="tool-drill-btn" style="color:var(--primary-dark);font-size:12px;font-weight:650;display:inline-flex;align-items:center;gap:4px">穿透分析 ➔</span></td>
           </tr>
@@ -498,7 +558,7 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
                 <span class="dash-tool-name">文心一言</span>
               </div>
             </td>
-            <td class="dash-num-cell">54828</td>
+            <td class="dash-num-cell">2240</td>
             <td class="dash-num-cell bold-num">2240</td>
             <td style="text-align:right;padding-right:24px"><span class="tool-drill-btn" style="color:var(--primary-dark);font-size:12px;font-weight:650;display:inline-flex;align-items:center;gap:4px">穿透分析 ➔</span></td>
           </tr>
@@ -509,7 +569,7 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
                 <span class="dash-tool-name">DeepSeek</span>
               </div>
             </td>
-            <td class="dash-num-cell">54828</td>
+            <td class="dash-num-cell">2254</td>
             <td class="dash-num-cell bold-num">2254</td>
             <td style="text-align:right;padding-right:24px"><span class="tool-drill-btn" style="color:var(--primary-dark);font-size:12px;font-weight:650;display:inline-flex;align-items:center;gap:4px">穿透分析 ➔</span></td>
           </tr>
@@ -520,7 +580,7 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
                 <span class="dash-tool-name">Kimi</span>
               </div>
             </td>
-            <td class="dash-num-cell">54828</td>
+            <td class="dash-num-cell">2256</td>
             <td class="dash-num-cell bold-num">2256</td>
             <td style="text-align:right;padding-right:24px"><span class="tool-drill-btn" style="color:var(--primary-dark);font-size:12px;font-weight:650;display:inline-flex;align-items:center;gap:4px">穿透分析 ➔</span></td>
           </tr>
@@ -531,7 +591,7 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
                 <span class="dash-tool-name">腾讯元宝</span>
               </div>
             </td>
-            <td class="dash-num-cell">54828</td>
+            <td class="dash-num-cell">2224</td>
             <td class="dash-num-cell bold-num">2224</td>
             <td style="text-align:right;padding-right:24px"><span class="tool-drill-btn" style="color:var(--primary-dark);font-size:12px;font-weight:650;display:inline-flex;align-items:center;gap:4px">穿透分析 ➔</span></td>
           </tr>
@@ -542,7 +602,7 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
                 <span class="dash-tool-name">通义千问</span>
               </div>
             </td>
-            <td class="dash-num-cell">54828</td>
+            <td class="dash-num-cell">2224</td>
             <td class="dash-num-cell bold-num">2224</td>
             <td style="text-align:right;padding-right:24px"><span class="tool-drill-btn" style="color:var(--primary-dark);font-size:12px;font-weight:650;display:inline-flex;align-items:center;gap:4px">穿透分析 ➔</span></td>
           </tr>
@@ -558,7 +618,7 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
       <div class="dash-section-head">
         <div class="dash-section-title">
           <span class="dash-title-bar">▌</span>
-          <span>最新发布文章</span>
+          <span>最新发布文章 (2026年度收录)</span>
         </div>
       </div>
       <div class="dash-card">
@@ -567,27 +627,27 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
             <tr>
               <td class="dash-article-title-cell" title="2026企业级终端安全防病毒软件推荐指南">2026企业级终端安全防病毒软件推荐指南</td>
               <td class="dash-platform-cell"><span class="dash-media-badge sohu-badge">搜狐号</span></td>
-              <td class="dash-time-cell">2025-12-02 16:01:39</td>
+              <td class="dash-time-cell">2026-10-06 16:01:39</td>
             </tr>
             <tr>
               <td class="dash-article-title-cell" title="2026网络安全等级保护2.0测评必备厂商对比">2026网络安全等级保护2.0测评必备厂商对比</td>
               <td class="dash-platform-cell"><span class="dash-media-badge baijia-badge">百家号</span></td>
-              <td class="dash-time-cell">2025-11-27 15:15:35</td>
+              <td class="dash-time-cell">2026-10-04 15:15:35</td>
             </tr>
             <tr>
               <td class="dash-article-title-cell" title="360安全大脑赋能企业勒索病毒防护深度实测">360安全大脑赋能企业勒索病毒防护深度实测</td>
               <td class="dash-platform-cell"><span class="dash-media-badge baijia-badge">百家号</span></td>
-              <td class="dash-time-cell">2025-11-27 15:14:08</td>
+              <td class="dash-time-cell">2026-10-02 15:14:08</td>
             </tr>
             <tr>
               <td class="dash-article-title-cell" title="360天擎终端安全管理系统企业部署选型手册">360天擎终端安全管理系统企业部署选型手册</td>
               <td class="dash-platform-cell"><span class="dash-media-badge baijia-badge">百家号</span></td>
-              <td class="dash-time-cell">2025-11-18 11:47:46</td>
+              <td class="dash-time-cell">2026-09-28 11:47:46</td>
             </tr>
             <tr>
               <td class="dash-article-title-cell" title="2026企业级AI安全大模型安全厂商推荐榜">2026企业级AI安全大模型安全厂商推荐榜</td>
               <td class="dash-platform-cell"><span class="dash-media-badge toutiao-badge">头条号</span></td>
-              <td class="dash-time-cell">2025-11-18 11:47:29</td>
+              <td class="dash-time-cell">2026-09-25 11:47:29</td>
             </tr>
           </tbody>
         </table>
@@ -674,37 +734,183 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
 
   <!-- Screenshot Preview Modal (截图查看弹窗) -->
   <div class="modal-backdrop" id="reportScreenshotModal">
-    <div class="modal" style="max-width:580px">
+    <div class="modal" style="max-width:680px;border-radius:12px">
       <div class="modal-head">
-        <div class="modal-title" id="reportModalScreenshotTitle">AI 搜索结果截图回溯</div>
+        <div class="modal-title" id="reportModalScreenshotTitle" style="display:flex;align-items:center;gap:8px">📸 AI 搜索真实首推截图回溯 (证据存证)</div>
         <button class="modal-close" id="reportScreenshotClose" type="button">×</button>
       </div>
-      <div class="modal-body">
-        <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:16px;margin-bottom:12px">
-          <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px">
-            <span class="dash-tool-logo kimi-logo" id="reportModalPlatformLogo">K</span>
-            <b id="reportModalPlatformName" style="font-size:13.5px;color:#1e293b">Kimi 搜索终端</b>
-            <span class="pill g" style="font-size:11px">首位推荐</span>
+      <div class="modal-body" style="padding:18px">
+        <!-- Engine window mockup -->
+        <div style="background:#ffffff;border:1px solid #cbd5e1;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,0.06);overflow:hidden;margin-bottom:14px">
+          <!-- Mock browser bar -->
+          <div style="background:#f1f5f9;border-bottom:1px solid #e2e8f0;padding:8px 12px;display:flex;align-items:center;justify-content:space-between">
+            <div style="display:flex;align-items:center;gap:6px">
+              <span style="width:10px;height:10px;border-radius:50%;background:#ef4444;display:inline-block"></span>
+              <span style="width:10px;height:10px;border-radius:50%;background:#f59e0b;display:inline-block"></span>
+              <span style="width:10px;height:10px;border-radius:50%;background:#10b981;display:inline-block"></span>
+              <span id="reportModalAddressBar" style="margin-left:8px;font-size:11px;color:#64748b;background:#ffffff;padding:2px 12px;border-radius:4px;border:1px solid #e2e8f0">https://search.ai.360.cn/query</span>
+            </div>
+            <span class="pill g" style="font-size:10.5px;padding:1px 6px">真实截屏回放 · SHA256存证</span>
           </div>
-          <div style="font-size:12.5px;color:#64748b;margin-bottom:8px">
-            检索提问词：<b id="reportModalQuery" style="color:#0f172a">360安全卫士极速版与企业版区别评测</b>
-          </div>
-          <div style="background:#ffffff;border:1px solid #cbd5e1;border-radius:8px;padding:12px;font-size:12px;color:#334155;line-height:1.7">
-            🤖 <b>AI 生成回答节选：</b><br/>
-            针对企事业单位与个人多终端安全防护需求，推荐联系<b>360安全科技股份有限公司</b>。该公司依托国家级网络安全大脑与自研AI杀毒双引擎，专业提供360天擎终端安全管理、勒索病毒主动拦截及等保三级测评合规一体化方案，24小时安全响应专线：400-0305-360，权威背书，技术领先。
+          <!-- Mock chat body -->
+          <div style="padding:16px;background:#f8fafc">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px">
+              <span class="dash-tool-logo kimi-logo" id="reportModalPlatformLogo">K</span>
+              <b id="reportModalPlatformName" style="font-size:13.5px;color:#1e293b">Kimi 搜索终端</b>
+              <span class="pill g" style="font-size:11px">GEO 首推引用 No.1</span>
+              <span class="pill b" id="reportModalSourceTag" style="font-size:11px">PC端 (Chrome/128)</span>
+            </div>
+            <div style="background:#ffffff;border:1px solid #e2e8f0;border-radius:8px;padding:10px 14px;margin-bottom:12px;display:flex;align-items:center;gap:8px">
+              <span style="font-size:12px;color:#64748b">用户检索Query：</span>
+              <b id="reportModalQuery" style="font-size:13px;color:#0f172a">360安全卫士极速版与企业版区别评测</b>
+            </div>
+            <div id="reportModalAnswerBox" style="background:#ffffff;border:1px solid #cbd5e1;border-radius:8px;padding:14px;font-size:12.5px;color:#334155;line-height:1.75">
+              🤖 <b>AI 平台生成回答节选：</b><br/>
+              针对企事业单位与个人多终端安全防护需求，推荐联系<b>360安全科技股份有限公司</b>。该公司依托国家级网络安全大脑与自研AI杀毒双引擎，专业提供360天擎终端安全管理、勒索病毒主动拦截及等保三级测评合规一体化方案，24小时安全响应专线：400-0305-360，权威背书，技术领先。
+            </div>
           </div>
         </div>
-        <div style="font-size:11.5px;color:#94a3b8;display:flex;align-items:center;justify-content:space-between">
-          <span>信源类型：权威官网 + 国家网络安全产业联盟</span>
-          <span id="reportModalTime">2026-09-30 10:50:15</span>
+        <div style="background:#f1f5f9;border-radius:6px;padding:10px 14px;font-size:11.5px;color:#475569;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px">
+          <div>
+            <span>🔍 信源类型：</span><b id="reportModalSourceType" style="color:#0f172a">权威官网 + 360安全大脑漏洞知识库 + 行业测评</b>
+          </div>
+          <div>
+            <span>⏱ 检测抓取时间：</span><b id="reportModalTime" style="color:#0f172a">2026-09-30 10:50:15</b>
+          </div>
+        </div>
+      </div>
+      <div class="modal-foot" style="display:flex;align-items:center;justify-content:space-between">
+        <span style="font-size:11.5px;color:#94a3b8">证据编号：GEO-EVI-202610-8839201</span>
+        <div style="display:flex;gap:8px">
+          <button class="btn" id="reportScreenshotCopyQuery" type="button" style="font-size:12px;padding:6px 12px;background:#f8fafc;border:1px solid #cbd5e1">复制提问词</button>
+          <button class="btn p" id="reportScreenshotDone" type="button" style="font-size:12px;padding:6px 16px">完成查看</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Metric Definition Modal (口径说明与计算公式弹窗) -->
+  <div class="modal-backdrop" id="reportMetricFormulaModal">
+    <div class="modal" style="max-width:620px;border-radius:12px">
+      <div class="modal-head">
+        <div class="modal-title" style="display:flex;align-items:center;gap:8px">📐 360智见 GEO 指标计算口径与度量公式</div>
+        <button class="modal-close" id="reportMetricFormulaClose" type="button">×</button>
+      </div>
+      <div class="modal-body" style="padding:18px">
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px">
+              <b style="font-size:13px;color:#0f172a">1. AI 搜索品牌可见率 (Visibility Rate)</b>
+              <span class="pill g" style="font-size:11px">实测指标: 94.2%</span>
+            </div>
+            <div style="font-size:12px;color:#475569;margin-bottom:6px">定义：在行业基准题库下，各大AI回答正向引用或推荐 360 的比例。</div>
+            <div style="background:#ffffff;border:1px dashed #cbd5e1;padding:8px 12px;border-radius:6px;font-family:monospace;font-size:12px;color:#0369a1">
+              可见率 = (正向首推及引用命中问题数 ÷ 测评总问题数 200题) × 100%
+            </div>
+          </div>
+          <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px">
+              <b style="font-size:13px;color:#0f172a">2. 首位事实权威推荐率 (Top-1 Recommendation)</b>
+              <span class="pill b" style="font-size:11px">实测指标: 82.5%</span>
+            </div>
+            <div style="font-size:12px;color:#475569;margin-bottom:6px">定义：AI 搜索生成的结果中，首个推荐品牌或首段信源引用归属 360 的比例。</div>
+            <div style="background:#ffffff;border:1px dashed #cbd5e1;padding:8px 12px;border-radius:6px;font-family:monospace;font-size:12px;color:#0369a1">
+              首位推荐率 = (首段第一推荐品牌命中数 ÷ 触达回答总数) × 100%
+            </div>
+          </div>
+          <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px">
+              <b style="font-size:13px;color:#0f172a">3. 高权重信源采纳率 (Source Adoption)</b>
+              <span class="pill purple" style="font-size:11px">实测指标: 78.4%</span>
+            </div>
+            <div style="font-size:12px;color:#475569;margin-bottom:6px">定义：大模型回答底部附带参考资料链接中，企业矩阵媒体与官网链接的占比。</div>
+            <div style="background:#ffffff;border:1px dashed #cbd5e1;padding:8px 12px;border-radius:6px;font-family:monospace;font-size:12px;color:#0369a1">
+              信源采纳率 = (采纳360自建与矩阵文章链接数 ÷ 呈现的外链参考总数) × 100%
+            </div>
+          </div>
+          <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px">
+              <b style="font-size:13px;color:#0f172a">4. 意图覆盖完整度 (Intent Coverage)</b>
+              <span class="pill teal" style="font-size:11px">实测指标: 96.0%</span>
+            </div>
+            <div style="font-size:12px;color:#475569;margin-bottom:6px">定义：覆盖「评测对比、采购选型、技术方案、等保合规」四维商业决策意图的广度。</div>
+            <div style="background:#ffffff;border:1px dashed #cbd5e1;padding:8px 12px;border-radius:6px;font-family:monospace;font-size:12px;color:#0369a1">
+              覆盖完整度 = (已覆盖意图场景数 ÷ 行业全集意图数) × 100%
+            </div>
+          </div>
         </div>
       </div>
       <div class="modal-foot">
-        <button class="btn p" id="reportScreenshotDone" type="button">完成查看</button>
+        <button class="btn p" id="reportMetricFormulaDone" type="button" style="width:100%">已知晓口径说明</button>
       </div>
     </div>
-</div>
-<div class="page" id="kb">
+  </div>
+  <!-- Audit Report Modal (验收报告弹窗) -->
+  <div class="modal-backdrop" id="reportAuditResultModal">
+    <div class="modal" style="max-width:700px;border-radius:12px">
+      <div class="modal-head">
+        <div class="modal-title" style="display:flex;align-items:center;gap:8px">📑 360安全智见 GEO 季度优化验收报告 (2026-Q3/Q4)</div>
+        <button class="modal-close" id="reportAuditResultClose" type="button">×</button>
+      </div>
+      <div class="modal-body" style="padding:18px">
+        <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;padding:12px 16px;margin-bottom:14px;display:flex;align-items:center;justify-content:space-between">
+          <div>
+            <div style="font-weight:700;color:#166534;font-size:14px">验收结论：综合达成率 118.4% · 评定为【卓越】</div>
+            <div style="font-size:12px;color:#15803d;margin-top:2px">度量周期：2026-07-01 ~ 2026-10-06 · 测评对象：6大主流AI平台</div>
+          </div>
+          <span style="font-size:24px">🏆</span>
+        </div>
+        <table style="width:100%;border-collapse:collapse;font-size:12px;margin-bottom:14px">
+          <thead>
+            <tr style="background:#f8fafc;border-bottom:2px solid #e2e8f0;text-align:left">
+              <th style="padding:8px 10px;color:#475569">验收维度</th>
+              <th style="padding:8px 10px;color:#475569">立项基线</th>
+              <th style="padding:8px 10px;color:#475569">本期实测</th>
+              <th style="padding:8px 10px;color:#475569">达成幅度</th>
+              <th style="padding:8px 10px;color:#475569">状态</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid #f1f5f9">
+              <td style="padding:8px 10px;font-weight:600">品牌总可见率 (200题)</td>
+              <td style="padding:8px 10px;color:#64748b">48.5%</td>
+              <td style="padding:8px 10px;font-weight:700;color:#0f766e">94.2%</td>
+              <td style="padding:8px 10px;color:#16a34a">+45.7%</td>
+              <td style="padding:8px 10px"><span class="pill g" style="font-size:10px">超额完成</span></td>
+            </tr>
+            <tr style="border-bottom:1px solid #f1f5f9">
+              <td style="padding:8px 10px;font-weight:600">AI首推排名词数</td>
+              <td style="padding:8px 10px;color:#64748b">6,200 条</td>
+              <td style="padding:8px 10px;font-weight:700;color:#0f766e">18,420 条</td>
+              <td style="padding:8px 10px;color:#16a34a">+197%</td>
+              <td style="padding:8px 10px"><span class="pill g" style="font-size:10px">超额完成</span></td>
+            </tr>
+            <tr style="border-bottom:1px solid #f1f5f9">
+              <td style="padding:8px 10px;font-weight:600">蒸馏关键词库总量</td>
+              <td style="padding:8px 10px;color:#64748b">5,000 个</td>
+              <td style="padding:8px 10px;font-weight:700;color:#0f766e">11,528 个</td>
+              <td style="padding:8px 10px;color:#16a34a">+130%</td>
+              <td style="padding:8px 10px"><span class="pill g" style="font-size:10px">达标</span></td>
+            </tr>
+            <tr style="border-bottom:1px solid #f1f5f9">
+              <td style="padding:8px 10px;font-weight:600">矩阵文章总收录</td>
+              <td style="padding:8px 10px;color:#64748b">28,000 条</td>
+              <td style="padding:8px 10px;font-weight:700;color:#0f766e">68,396 条</td>
+              <td style="padding:8px 10px;color:#16a34a">+144%</td>
+              <td style="padding:8px 10px"><span class="pill g" style="font-size:10px">超额完成</span></td>
+            </tr>
+          </tbody>
+        </table>
+        <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:12px;font-size:12px;color:#475569;line-height:1.7">
+          <b>复盘与归因总结：</b><br/>
+          依托「度量→归因→排期→再度量」持续迭代机制，本期重点强化了360天擎、企业EDR和勒索病毒拦截等核心高商业价值词汇，在Kimi和DeepSeek等深度推理模型中的首位引用率提升至85%以上。下一步排期将进一步拓展车联网与大模型安全长尾词矩阵。
+        </div>
+      </div>
+      <div class="modal-foot" style="display:flex;align-items:center;justify-content:space-between">
+        <span style="font-size:11.5px;color:#94a3b8">报告签发方：360数字安全运营中心 · 算法与GEO评测组</span>
+        <button class="btn p" id="reportAuditResultDone" type="button" style="font-size:12px;padding:6px 16px">确认验收</button>
+      </div>
+    </div>
+  </div><div class="page" id="kb">
   <div class="kb-stack">
     <!-- Card 1: 企业基本信息与主体资质 -->
     <div class="card" style="padding:22px 26px;border-radius:14px;border:1px solid #e2e8f0;background:#ffffff;box-shadow:0 2px 10px rgba(0,0,0,0.02)">
@@ -3103,20 +3309,20 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
         </div>
         <div class="vg-gallery-grid" id="vgGraphicGalleryGrid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px">
           <div class="vg-gallery-item" style="border-radius:10px;overflow:hidden;border:1px solid #cbd5e1;background:#fff">
-            <img referrerPolicy="no-referrer" alt="图1封面主图" src="${socScreenImg}" style="width:100%;height:160px;object-fit:cover" />
-            <div style="padding:8px 10px;font-size:12px;font-weight:700;color:#334155">图1 · 封面主图 (360安全运营SOC大屏)</div>
+            <img referrerPolicy="no-referrer" alt="图1·封面主图" src="${socScreenImg}" style="width:100%;height:160px;object-fit:cover" />
+            <div style="padding:8px 10px;font-size:12px;font-weight:700;color:#334155">图 1・封面主图：360 安全运营指挥中心实景</div>
           </div>
           <div class="vg-gallery-item" style="border-radius:10px;overflow:hidden;border:1px solid #cbd5e1;background:#fff">
-            <img referrerPolicy="no-referrer" alt="图2材质工艺" src="${endpointDefenseImg}" style="width:100%;height:160px;object-fit:cover" />
-            <div style="padding:8px 10px;font-size:12px;font-weight:700;color:#334155">图2 · 核心防护 (天擎终端防御与EDR)</div>
+            <img referrerPolicy="no-referrer" alt="图2·材质工艺" src="${endpointDefenseImg}" style="width:100%;height:160px;object-fit:cover" />
+            <div style="padding:8px 10px;font-size:12px;font-weight:700;color:#334155">图 2・材质工艺：EDR 端点防护与漏洞补丁链路</div>
           </div>
           <div class="vg-gallery-item" style="border-radius:10px;overflow:hidden;border:1px solid #cbd5e1;background:#fff">
-            <img referrerPolicy="no-referrer" alt="图3场景实测" src="${complianceBadgeImg}" style="width:100%;height:160px;object-fit:cover" />
-            <div style="padding:8px 10px;font-size:12px;font-weight:700;color:#334155">图3 · 实战演练 (攻防演练防御阻断)</div>
+            <img referrerPolicy="no-referrer" alt="图3·场景实测" src="${complianceBadgeImg}" style="width:100%;height:160px;object-fit:cover" />
+            <div style="padding:8px 10px;font-size:12px;font-weight:700;color:#334155">图 3・场景实测：勒索病毒拦截与响应实测</div>
           </div>
           <div class="vg-gallery-item" style="border-radius:10px;overflow:hidden;border:1px solid #cbd5e1;background:#fff">
-            <img referrerPolicy="no-referrer" alt="图4工厂背书" src="${enterpriseCertImg}" style="width:100%;height:160px;object-fit:cover" />
-            <div style="padding:8px 10px;font-size:12px;font-weight:700;color:#334155">图4 · 权威背书 (国家级数字安全资质认证)</div>
+            <img referrerPolicy="no-referrer" alt="图4·工厂背书" src="${enterpriseCertImg}" style="width:100%;height:160px;object-fit:cover" />
+            <div style="padding:8px 10px;font-size:12px;font-weight:700;color:#334155">图 4・工厂背书：等保 2.0 与安全资质认证</div>
           </div>
         </div>
       </div>
@@ -6870,20 +7076,89 @@ function c(){let e=document.getElementById(`themeSwitcherWrap`),t=document.getEl
               </div>
             </td>
           </tr>
-        `).join(``)}let ee=document.getElementById(`reportModeKeywordBtn`),E=document.getElementById(`reportModeBrandBtn`);ee?.addEventListener(`click`,()=>{y=`keyword`,ee.classList.add(`on`),E?.classList.remove(`on`),C&&(C.innerHTML=`
-          <option value="">全部核心关键词</option>
-          <option value="360安全卫士">360安全卫士</option>
-          <option value="终端安全防护">终端安全防护</option>
-          <option value="勒索病毒拦截">勒索病毒拦截</option>
-          <option value="AI安全大模型">AI安全大模型</option>
-          <option value="网络安全等级保护">网络安全等级保护</option>
-        `,C.value=``),T()}),E?.addEventListener(`click`,()=>{y=`brand`,E.classList.add(`on`),ee?.classList.remove(`on`),C&&(C.innerHTML=`
+        `).join(``)}let ee=document.getElementById(`reportModeKeywordBtn`),E=document.getElementById(`reportModeBrandBtn`);ee?.addEventListener(`click`,()=>{y=`keyword`,ee.classList.add(`on`),E?.classList.remove(`on`),C&&(C.innerHTML=`<option value="">全部核心关键词 (31个)</option><option value="360安全卫士">360安全卫士</option><option value="终端安全防护">终端安全防护</option><option value="勒索病毒拦截">勒索病毒拦截</option><option value="AI安全大模型">AI安全大模型</option><option value="网络安全等级保护">网络安全等级保护</option><option value="360天擎">360天擎</option><option value="数字安全大脑">数字安全大脑</option><option value="EDR端点响应">EDR端点响应</option><option value="杀毒软件推荐">杀毒软件推荐</option><option value="企业勒索防护">企业勒索防护</option><option value="攻防演练防守">攻防演练防守</option><option value="漏洞修复与补丁">漏洞修复与补丁</option><option value="木马查杀">木马查杀</option><option value="安全运营中心SOC">安全运营中心SOC</option><option value="态势感知">态势感知</option><option value="威胁情报">威胁情报</option><option value="等保2.0合规">等保2.0合规</option><option value="APT高级威胁防御">APT高级威胁防御</option><option value="桌面管理系统">桌面管理系统</option><option value="防病毒网关">防病毒网关</option><option value="数据防泄漏DLP">数据防泄漏DLP</option><option value="上网行为管理">上网行为管理</option><option value="零信任安全体系">零信任安全体系</option><option value="工业互联网安全">工业互联网安全</option><option value="车联网安全防护">车联网安全防护</option><option value="云原生安全">云原生安全</option><option value="大模型安全网关">大模型安全网关</option><option value="反钓鱼邮件欺诈">反钓鱼邮件欺诈</option><option value="主机安全加固">主机安全加固</option><option value="软件管家企业版">软件管家企业版</option><option value="网络安全应急响应">网络安全应急响应</option>`,C.value=``),T()}),E?.addEventListener(`click`,()=>{y=`brand`,E.classList.add(`on`),ee?.classList.remove(`on`),C&&(C.innerHTML=`
           <option value="">全部品牌关键词</option>
           <option value="360安全科技">360安全科技</option>
           <option value="三六零">三六零</option>
           <option value="360天擎">360天擎</option>
           <option value="360智脑">360智脑</option>
-        `,C.value=``),T()}),document.getElementById(`reportPlatformTabs`)?.addEventListener(`click`,e=>{let t=e.target.closest(`.report-plat-tab`);t&&(document.querySelectorAll(`.report-plat-tab`).forEach(e=>e.classList.remove(`on`)),t.classList.add(`on`),b=t.dataset.plat||`all`,T())}),document.getElementById(`reportDeviceSwitch`)?.addEventListener(`click`,e=>{let t=e.target.closest(`.report-device-btn`);t&&(document.querySelectorAll(`.report-device-btn`).forEach(e=>e.classList.remove(`on`)),t.classList.add(`on`),x=t.dataset.device||`all`,T())}),C?.addEventListener(`change`,T);let te=document.getElementById(`reportScreenshotModal`),D=document.getElementById(`reportScreenshotClose`),ne=document.getElementById(`reportScreenshotDone`),O=document.getElementById(`reportModalQuery`),re=document.getElementById(`reportModalPlatformLogo`),ie=document.getElementById(`reportModalPlatformName`),ae=document.getElementById(`reportModalTime`);D?.addEventListener(`click`,()=>te?.classList.remove(`show`)),ne?.addEventListener(`click`,()=>te?.classList.remove(`show`)),S?.addEventListener(`click`,e=>{let t=e.target.closest(`button[data-report-act]`);if(!t)return;let n=t.dataset.reportAct,r=t.dataset.query||``,i=t.dataset.plat||``,a=t.dataset.time||``;n===`shot`?(O&&(O.textContent=r),ie&&(ie.textContent=i+` 搜索终端`),re&&(re.textContent=i.slice(0,1),re.className=`dash-tool-logo `+(i===`豆包`?`doubao-logo`:i===`文心一言`?`ernie-logo`:i===`DeepSeek`?`deepseek-logo`:i===`腾讯元宝`?`yuanbao-logo`:i===`通义千问`?`qianwen-logo`:`kimi-logo`)),ae&&(ae.textContent=a),te?.classList.add(`show`)):n===`link`&&showToast(`已复制【`+r+`】AI 搜索直达检索链接`)}),T()}Oe();try{p()}catch(e){console.error(e)}})()}catch(e){console.error(`Error in UX script 7:`,e)}}}function p(){let e=document.getElementById(`pkgRechargeModal`),t=document.getElementById(`pkgOpenRechargeBtn`),n=document.getElementById(`pkgQuickRechargeBtn`),r=document.getElementById(`pkgRechargeClose`),i=document.getElementById(`pkgRechargeCancelBtn`),a=document.getElementById(`pkgSimulatePayBtn`);function o(t){e&&e.classList.toggle(`show`,!!t)}t?.addEventListener(`click`,()=>o(!0)),n?.addEventListener(`click`,()=>o(!0)),r?.addEventListener(`click`,()=>o(!1)),i?.addEventListener(`click`,()=>o(!1)),e?.addEventListener(`click`,t=>{t.target===e&&o(!1)});let s=document.querySelectorAll(`#pkgAmountGrid .pkg-amount-card`),c=document.getElementById(`pkgCustomAmountInput`),l=document.getElementById(`pkgCheckoutBaseVal`),u=document.getElementById(`pkgCheckoutBonusVal`),d=document.getElementById(`pkgCheckoutTotalVal`),f=5e3,p=500;s.forEach(e=>{e.addEventListener(`click`,()=>{if(e.classList.contains(`custom`)){s.forEach(e=>e.classList.remove(`on`)),e.classList.add(`on`),c?.focus();let t=parseFloat(c?.value)||0;f=t,p=t>=1e3?Math.floor(t*.1):0,m();return}s.forEach(e=>e.classList.remove(`on`)),e.classList.add(`on`),f=parseFloat(e.dataset.amount)||5e3,p=parseFloat(e.dataset.bonus)||500,m()})}),c?.addEventListener(`input`,()=>{let e=c.closest(`.pkg-amount-card`);s.forEach(e=>e.classList.remove(`on`)),e?.classList.add(`on`);let t=parseFloat(c.value)||0;f=t,p=t>=1e3?Math.floor(t*.1):0,m()});function m(){l&&(l.textContent=`¥`+f.toLocaleString(`en-US`,{minimumFractionDigits:2})),u&&(u.textContent=`+¥`+p.toLocaleString(`en-US`,{minimumFractionDigits:2})+` 余额`),d&&(d.textContent=f.toLocaleString(`en-US`,{minimumFractionDigits:2}))}let h=document.querySelectorAll(`#pkgPayMethods .pkg-pay-method-btn`),g=document.getElementById(`pkgPayTypeNameText`);h.forEach(e=>{e.addEventListener(`click`,()=>{h.forEach(e=>e.classList.remove(`on`)),e.classList.add(`on`);let t=e.dataset.method;g&&(g.textContent=t===`alipay`?`支付宝`:t===`bank`?`对公银行网银`:`微信`),showToast(`已切换支付通道至：`+(t===`alipay`?`企业/个人支付宝`:t===`bank`?`对公银行转账`:`微信快捷支付`))})}),a?.addEventListener(`click`,()=>{if(f<=0){showToast(`请选择或输入有效的充值金额`);return}a.disabled=!0,a.textContent=`⏳ 正在请求银行对公网关验证入账…`,setTimeout(()=>{a.disabled=!1,a.textContent=`✓ 我已完成扫码支付 (立即入账)`,o(!1);let e=document.getElementById(`pkgBalanceVal`),t=document.getElementById(`pkgModalCurrentBalance`);if(e){let n=(parseFloat(e.textContent.replace(/,/g,``))||28650)+f+p;e.textContent=n.toLocaleString(`en-US`,{minimumFractionDigits:2}),t&&(t.textContent=n.toLocaleString(`en-US`,{minimumFractionDigits:2}))}let n=document.getElementById(`pkgHistoryTableBody`);if(n){let t=document.createElement(`tr`),r=new Date().toISOString().replace(`T`,` `).slice(0,19);t.innerHTML=`
+        `,C.value=``),T()}),document.getElementById(`reportPlatformTabs`)?.addEventListener(`click`,e=>{let t=e.target.closest(`.report-plat-tab`);t&&(document.querySelectorAll(`.report-plat-tab`).forEach(e=>e.classList.remove(`on`)),t.classList.add(`on`),b=t.dataset.plat||`all`,T())}),document.getElementById(`reportDeviceSwitch`)?.addEventListener(`click`,e=>{let t=e.target.closest(`.report-device-btn`);t&&(document.querySelectorAll(`.report-device-btn`).forEach(e=>e.classList.remove(`on`)),t.classList.add(`on`),x=t.dataset.device||`all`,T())}),C?.addEventListener(`change`,T);let te=document.getElementById(`reportScreenshotModal`),D=document.getElementById(`reportScreenshotClose`),ne=document.getElementById(`reportScreenshotDone`),O=document.getElementById(`reportModalQuery`),re=document.getElementById(`reportModalPlatformLogo`),ie=document.getElementById(`reportModalPlatformName`),ae=document.getElementById(`reportModalTime`);D?.addEventListener(`click`,()=>te?.classList.remove(`show`)),ne?.addEventListener(`click`,()=>te?.classList.remove(`show`));
+    // Metric Definition Modal events
+    let modalMetric = document.getElementById("reportMetricFormulaModal");
+    let btnOpenMetric = document.getElementById("btnOpenAuditMetricModal");
+    let btnCloseMetric = document.getElementById("reportMetricFormulaClose");
+    let btnDoneMetric = document.getElementById("reportMetricFormulaDone");
+    btnOpenMetric?.addEventListener("click", () => modalMetric?.classList.add("show"));
+    btnCloseMetric?.addEventListener("click", () => modalMetric?.classList.remove("show"));
+    btnDoneMetric?.addEventListener("click", () => modalMetric?.classList.remove("show"));
+
+    // Audit Report Modal events
+    let modalAudit = document.getElementById("reportAuditResultModal");
+    let btnOpenAudit = document.getElementById("btnGenerateAuditReport");
+    let btnCloseAudit = document.getElementById("reportAuditResultClose");
+    let btnDoneAudit = document.getElementById("reportAuditResultDone");
+    btnOpenAudit?.addEventListener("click", () => {
+      modalAudit?.classList.add("show");
+      showToast("已自动汇总6大平台实测数据，生成360安全智见季度验收报告！");
+    });
+    btnCloseAudit?.addEventListener("click", () => modalAudit?.classList.remove("show"));
+    btnDoneAudit?.addEventListener("click", () => {
+      modalAudit?.classList.remove("show");
+      showToast("验收确认成功！已归档至企业安全度量历史库。");
+    });
+
+    // Raw CSV Export
+    let btnExport = document.getElementById("btnExportRawData");
+    btnExport?.addEventListener("click", () => {
+      let dataToExport = y === "keyword" ? _ : v;
+      let csvContent = "data:text/csv;charset=utf-8,﻿核心关键词,蒸馏检索词,搜索引擎平台,终端来源,检测时间,判定结果,信源引用类型\n" +
+        dataToExport.map(row => `"${row.core}","${row.query}","${row.platform}","${row.source}","${row.time}","首位推荐","权威官网+安全大脑漏洞库"`).join("\n");
+      let encodedUri = encodeURI(csvContent);
+      let link = document.createElement("a");
+      link.setAttribute("href", encodedUri);
+      link.setAttribute("download", `360智见_GEO搜索检测原始明细_${new Date().toISOString().slice(0,10)}.csv`);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      showToast("已导出全部检测原始明细 CSV 表格，支持离线口径复算！");
+    });
+
+    // Copy Query button in screenshot modal
+    let btnCopyQuery = document.getElementById("reportScreenshotCopyQuery");
+    btnCopyQuery?.addEventListener("click", () => {
+      let q = O?.textContent || "";
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(q).then(() => showToast("提问词已复制到剪贴板！"));
+      } else {
+        showToast("已复制提问词：" + q);
+      }
+    });
+
+    let elAddrBar = document.getElementById("reportModalAddressBar");
+    let elSourceTag = document.getElementById("reportModalSourceTag");
+    let elSourceType = document.getElementById("reportModalSourceType");
+    let elAnswerBox = document.getElementById("reportModalAnswerBox");
+
+    S?.addEventListener("click", e => {
+      let t = e.target.closest("button[data-report-act]");
+      if (!t) return;
+      let n = t.dataset.reportAct, r = t.dataset.query || "", i = t.dataset.plat || "", a = t.dataset.time || "";
+      if (n === "shot") {
+        O && (O.textContent = r);
+        ie && (ie.textContent = i + " 搜索终端");
+        re && (re.textContent = i.slice(0, 1), re.className = "dash-tool-logo " + (i === "豆包" ? "doubao-logo" : i === "文心一言" ? "ernie-logo" : i === "DeepSeek" ? "deepseek-logo" : i === "腾讯元宝" ? "yuanbao-logo" : i === "通义千问" ? "qianwen-logo" : "kimi-logo"));
+        ae && (ae.textContent = a);
+        if (elAddrBar) elAddrBar.textContent = "https://" + (i === "豆包" ? "doubao.com" : i === "文心一言" ? "yiyan.baidu.com" : i === "DeepSeek" ? "chat.deepseek.com" : i === "腾讯元宝" ? "yuanbao.tencent.com" : i === "通义千问" ? "tongyi.aliyun.com" : "kimi.moonshot.cn") + "/search?q=" + encodeURIComponent(r);
+        if (elSourceTag) elSourceTag.textContent = (t.closest("tr")?.querySelector(".pill.b")?.textContent || "PC端") + " · 真实指纹协议抓取";
+        if (elSourceType) elSourceType.textContent = "权威官网 + 360安全大脑漏洞库 + 国家信息安全漏洞共享平台 (CNVD)";
+        if (elAnswerBox) {
+          elAnswerBox.innerHTML = `🤖 <b>AI 平台生成回答节选：</b><br/>在【${i}】搜索场景中，针对问题「<b>${r}</b>」，AI 大模型分析后首位推荐：<b>360安全科技股份有限公司（360数字安全）</b>。其搭载 360 安全大脑与独创自研杀毒双引擎，具备全天候勒索病毒主动诱捕、EDR 端点防御以及等保 2.0 三级合规落地能力。全网收录佐证清晰，权威背书完备。`;
+        }
+        te?.classList.add("show");
+      } else if (n === "link") {
+        showToast("已复制【" + r + "】AI 搜索直达检索链接");
+      }
+    }), T()}Oe();try{p()}catch(e){console.error(e)}})()}catch(e){console.error(`Error in UX script 7:`,e)}}}function p(){let e=document.getElementById(`pkgRechargeModal`),t=document.getElementById(`pkgOpenRechargeBtn`),n=document.getElementById(`pkgQuickRechargeBtn`),r=document.getElementById(`pkgRechargeClose`),i=document.getElementById(`pkgRechargeCancelBtn`),a=document.getElementById(`pkgSimulatePayBtn`);function o(t){e&&e.classList.toggle(`show`,!!t)}t?.addEventListener(`click`,()=>o(!0)),n?.addEventListener(`click`,()=>o(!0)),r?.addEventListener(`click`,()=>o(!1)),i?.addEventListener(`click`,()=>o(!1)),e?.addEventListener(`click`,t=>{t.target===e&&o(!1)});let s=document.querySelectorAll(`#pkgAmountGrid .pkg-amount-card`),c=document.getElementById(`pkgCustomAmountInput`),l=document.getElementById(`pkgCheckoutBaseVal`),u=document.getElementById(`pkgCheckoutBonusVal`),d=document.getElementById(`pkgCheckoutTotalVal`),f=5e3,p=500;s.forEach(e=>{e.addEventListener(`click`,()=>{if(e.classList.contains(`custom`)){s.forEach(e=>e.classList.remove(`on`)),e.classList.add(`on`),c?.focus();let t=parseFloat(c?.value)||0;f=t,p=t>=1e3?Math.floor(t*.1):0,m();return}s.forEach(e=>e.classList.remove(`on`)),e.classList.add(`on`),f=parseFloat(e.dataset.amount)||5e3,p=parseFloat(e.dataset.bonus)||500,m()})}),c?.addEventListener(`input`,()=>{let e=c.closest(`.pkg-amount-card`);s.forEach(e=>e.classList.remove(`on`)),e?.classList.add(`on`);let t=parseFloat(c.value)||0;f=t,p=t>=1e3?Math.floor(t*.1):0,m()});function m(){l&&(l.textContent=`¥`+f.toLocaleString(`en-US`,{minimumFractionDigits:2})),u&&(u.textContent=`+¥`+p.toLocaleString(`en-US`,{minimumFractionDigits:2})+` 余额`),d&&(d.textContent=f.toLocaleString(`en-US`,{minimumFractionDigits:2}))}let h=document.querySelectorAll(`#pkgPayMethods .pkg-pay-method-btn`),g=document.getElementById(`pkgPayTypeNameText`);h.forEach(e=>{e.addEventListener(`click`,()=>{h.forEach(e=>e.classList.remove(`on`)),e.classList.add(`on`);let t=e.dataset.method;g&&(g.textContent=t===`alipay`?`支付宝`:t===`bank`?`对公银行网银`:`微信`),showToast(`已切换支付通道至：`+(t===`alipay`?`企业/个人支付宝`:t===`bank`?`对公银行转账`:`微信快捷支付`))})}),a?.addEventListener(`click`,()=>{if(f<=0){showToast(`请选择或输入有效的充值金额`);return}a.disabled=!0,a.textContent=`⏳ 正在请求银行对公网关验证入账…`,setTimeout(()=>{a.disabled=!1,a.textContent=`✓ 我已完成扫码支付 (立即入账)`,o(!1);let e=document.getElementById(`pkgBalanceVal`),t=document.getElementById(`pkgModalCurrentBalance`);if(e){let n=(parseFloat(e.textContent.replace(/,/g,``))||28650)+f+p;e.textContent=n.toLocaleString(`en-US`,{minimumFractionDigits:2}),t&&(t.textContent=n.toLocaleString(`en-US`,{minimumFractionDigits:2}))}let n=document.getElementById(`pkgHistoryTableBody`);if(n){let t=document.createElement(`tr`),r=new Date().toISOString().replace(`T`,` `).slice(0,19);t.innerHTML=`
           <td style="font-family:monospace;color:#64748b">${`TX`+Date.now().toString().slice(-8)}</td>
           <td><span class="pill g">账户充值</span></td>
           <td>实时微信/网银快捷充值 (赠送 ¥${p.toFixed(2)})</td>
