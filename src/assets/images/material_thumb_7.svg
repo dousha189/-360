@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" width="100%" height="100%">
+    <rect width="320" height="220" fill="#0284c7"/>
+    <rect x="30" y="30" width="260" height="140" rx="10" fill="#0f172a" stroke="#38bdf8" stroke-width="3"/>
+    <!-- Screen monitor -->
+    <rect x="50" y="45" width="120" height="90" fill="#1e293b" rx="4"/>
+    <circle cx="110" cy="90" r="26" fill="none" stroke="#22c55e" stroke-width="3"/>
+    <line x1="110" y1="64" x2="110" y2="116" stroke="#22c55e" stroke-width="2"/>
+    <line x1="84" y1="90" x2="136" y2="90" stroke="#22c55e" stroke-width="2"/>
+    <text x="220" y="80" font-family="sans-serif" font-size="13" font-weight="bold" fill="#38bdf8">CCTV 探伤</text>
+    <text x="220" y="105" font-family="sans-serif" font-size="11" fill="#e0f2fe">高清视频成像</text>
+    <text x="160" y="202" font-family="sans-serif" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">市政管道内部机器人CCTV高清窥镜实测</text>
+  </svg>

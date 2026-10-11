@@ -5,6 +5,16 @@ import socScreenImg from "./assets/images/soc_command_screen_1791307592467.jpg";
 import endpointDefenseImg from "./assets/images/endpoint_defense_system_1791307607976.jpg";
 import complianceBadgeImg from "./assets/images/compliance_certification_badge_1791307619569.jpg";
 import enterpriseCertImg from "./assets/images/enterprise_auth_certificate_1791307629833.jpg";
+import matImg1 from "./assets/images/material_thumb_1.svg";
+import matImg2 from "./assets/images/material_thumb_2.svg";
+import matImg3 from "./assets/images/material_thumb_3.svg";
+import matImg4 from "./assets/images/material_thumb_4.svg";
+import matImg5 from "./assets/images/material_thumb_5.svg";
+import matImg6 from "./assets/images/material_thumb_6.svg";
+import matImg7 from "./assets/images/material_thumb_7.svg";
+import matImg8 from "./assets/images/material_thumb_8.svg";
+import matImg9 from "./assets/images/material_thumb_9.svg";
+import matImg10 from "./assets/images/material_thumb_10.svg";
 
 const showToast = (...args: any[]) => (window as any).showToast?.(...args);
 const applyKwFilters = (...args: any[]) => (window as any).applyKwFilters?.(...args);
@@ -13,7 +23,7 @@ const syncLongTails = (...args: any[]) => (window as any).syncLongTails?.(...arg
 const getEntities = (...args: any[]) => (window as any).getEntities?.(...args) || [];
 const filterArticleRows = (...args: any[]) => (window as any).filterArticleRows?.(...args);
 
-const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,#10b981,#059669);display:flex;align-items:center;justify-content:center;color:#ffffff;box-shadow:0 4px 14px rgba(16,185,129,0.38);flex-shrink:0"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div><div class="brand-text"><div style="display:flex;align-items:center;gap:6px"><b>360智见</b><span style="font-size:9.5px;padding:1px 5px;border-radius:4px;background:rgba(16,185,129,0.22);color:#34d399;font-weight:800;border:1px solid rgba(52,211,153,0.3)">GEO</span></div><small>AI 搜索运营中枢</small></div></div><div class="nt">监测与分析</div><nav class="nav"><a class="on" data-p="dash" title="首页概览"><span class="nav-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></span><span class="nav-text">首页概览</span><span class="nav-live-dot" style="margin-left:auto;width:6px;height:6px;border-radius:50%;background:#34d399;box-shadow:0 0 6px #34d399"></span></a><a class="" data-p="inc" title="收录查询"><span class="nav-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><path d="m11 8 2 3-3 2"/></svg></span><span class="nav-text">收录查询</span></a></nav><div class="nt">GEO 内容增长</div><nav class="nav"><a class="" data-p="kb" title="企业知识库"><span class="nav-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10M6 10h10"/></svg></span><span class="nav-text">企业知识库</span></a><a class="" data-p="kw" title="关键词挖掘"><span class="nav-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="7.5" cy="15.5" r="5.5"/><path d="m21 2-9.6 9.6M15.5 7.5l3 3"/></svg></span><span class="nav-text">关键词挖掘</span></a><a class="" data-p="gen" title="内容创作"><span class="nav-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></span><span class="nav-text">内容创作</span></a><a class="" data-p="videographic" title="视频/图文"><span class="nav-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/></svg></span><span class="nav-text">视频/图文</span></a><a class="" data-p="articles" title="发布记录"><span class="nav-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/><path d="m9 14 2 2 4-4"/></svg></span><span class="nav-text">发布记录</span></a><a class="" data-p="pub" title="文章发布"><span class="nav-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></span><span class="nav-text">文章发布</span></a></nav><div class="nt">服务与账户</div><nav class="nav"><a class="" data-p="agent" title="我的套餐"><span class="nav-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="6 3 18 3 22 9 12 22 2 9"/><line x1="12" y1="22" x2="12" y2="9"/><line x1="2" y1="9" x2="22" y2="9"/></svg></span><span class="nav-text">我的套餐</span><span style="margin-left:auto;font-size:11px;background:rgba(16,185,129,0.22);color:#34d399;padding:1px 6px;border-radius:6px;font-weight:700">VIP</span></a></nav><div class="sidebar-footer"><div class="sidebar-status"><span class="status-dot" style="background:#10b981;box-shadow:0 0 8px #10b981"></span><div><b>360智见引擎</b><small>企业安全云 · 在线</small></div></div><span class="sidebar-version">v2.0</span></div></aside><main><header><div class="header-left"><button class="header-icon-btn" id="sidebarToggle" type="button" aria-label="收起或展开侧边栏" title="收起/展开侧边栏">☰</button><div class="header-title-block"><div class="header-kicker" id="headerKicker">首页</div><div class="header-title-row"><h1 id="ht">首页概览</h1><span class="header-subtitle" id="headerSubtitle">全网AI搜索场景覆盖与GEO增长数据总览</span></div></div></div>
+const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,#10b981,#059669);display:flex;align-items:center;justify-content:center;color:#ffffff;box-shadow:0 4px 14px rgba(16,185,129,0.38);flex-shrink:0"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div><div class="brand-text"><div style="display:flex;align-items:center;gap:6px"><b>360智见</b><span style="font-size:9.5px;padding:1px 5px;border-radius:4px;background:rgba(16,185,129,0.22);color:#34d399;font-weight:800;border:1px solid rgba(52,211,153,0.3)">GEO</span></div><small>AI 搜索运营中枢</small></div></div><div class="nt">监测与分析</div><nav class="nav"><a class="on" data-p="dash" title="首页概览"><span class="nav-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></span><span class="nav-text">首页概览</span><span class="nav-live-dot" style="margin-left:auto;width:6px;height:6px;border-radius:50%;background:#34d399;box-shadow:0 0 6px #34d399"></span></a><a class="" data-p="inc" title="收录查询"><span class="nav-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><path d="m11 8 2 3-3 2"/></svg></span><span class="nav-text">收录查询</span></a></nav><div class="nt">GEO 内容增长</div><nav class="nav"><a class="" data-p="kb" title="企业知识库"><span class="nav-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10M6 10h10"/></svg></span><span class="nav-text">企业知识库</span></a><a class="" data-p="kw" title="关键词挖掘"><span class="nav-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="7.5" cy="15.5" r="5.5"/><path d="m21 2-9.6 9.6M15.5 7.5l3 3"/></svg></span><span class="nav-text">关键词挖掘</span></a><a class="" data-p="gen" title="内容创作"><span class="nav-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></span><span class="nav-text">内容创作</span></a><a class="" data-p="videographic" title="视频/图文"><span class="nav-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/></svg></span><span class="nav-text">视频/图文</span></a><a class="" data-p="articles" title="发布记录"><span class="nav-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/><path d="m9 14 2 2 4-4"/></svg></span><span class="nav-text">发布记录</span></a><a class="" data-p="pub" title="文章发布"><span class="nav-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></span><span class="nav-text">文章发布</span></a></nav><div class="nt">设置</div><nav class="nav"><a class="" data-p="material" title="素材库"><span class="nav-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></span><span class="nav-text">素材库</span></a></nav><div class="nt">服务与账户</div><nav class="nav"><a class="" data-p="agent" title="我的套餐"><span class="nav-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="6 3 18 3 22 9 12 22 2 9"/><line x1="12" y1="22" x2="12" y2="9"/><line x1="2" y1="9" x2="22" y2="9"/></svg></span><span class="nav-text">我的套餐</span><span style="margin-left:auto;font-size:11px;background:rgba(16,185,129,0.22);color:#34d399;padding:1px 6px;border-radius:6px;font-weight:700">VIP</span></a></nav><div class="sidebar-footer"><div class="sidebar-status"><span class="status-dot" style="background:#10b981;box-shadow:0 0 8px #10b981"></span><div><b>360智见引擎</b><small>企业安全云 · 在线</small></div></div><span class="sidebar-version">v2.0</span></div></aside><main><header><div class="header-left"><button class="header-icon-btn" id="sidebarToggle" type="button" aria-label="收起或展开侧边栏" title="收起/展开侧边栏">☰</button><div class="header-title-block"><div class="header-kicker" id="headerKicker">首页</div><div class="header-title-row"><h1 id="ht">首页概览</h1><span class="header-subtitle" id="headerSubtitle">全网AI搜索场景覆盖与GEO增长数据总览</span></div></div></div>
 <div class="hr"><div class="theme-switcher-wrap" id="themeSwitcherWrap">
 <button class="theme-btn" id="themeSwitchBtn" type="button" aria-haspopup="true" aria-expanded="false" title="切换系统配色主题">
 <span class="theme-icon">🎨</span>
@@ -695,43 +705,431 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
     </div>
 </div>
 <div class="page" id="kb">
-<div class="kb-stack">
-<div class="card">
-<div class="ct">企业基本信息 <span class="completion" id="companyCompletion">● 已完成主体认证</span></div>
-<div class="cs">企业主体信息是知识库的基础数据。请先完成必填信息，再上传公司介绍、产品手册、信任背书、合作案例、FAQ问答等企业文档。</div>
-<div class="info-grid">
-<div class="fg"><span class="lb">企业名称 <span class="req">*</span></span><input class="ipt" id="enterpriseName" value="360安全科技股份有限公司"/></div>
-<div class="fg"><span class="lb">统一社会信用代码 <span class="req">*</span></span><input class="ipt" id="creditCode" value="91120000786520775B"/></div>
-<div class="fg"><span class="lb">所属行业 <span class="req">*</span></span><input class="ipt" id="industryName" value="互联网安全与数字安全软件服务"/></div>
-<div class="fg"><span class="lb">企业官网</span><input class="ipt" id="officialSite" value="https://www.360.cn"/></div>
-<div class="fg"><span class="lb">企业联系人 <span class="req">*</span></span><input class="ipt" id="companyContact" value="程经理"/></div>
-<div class="fg"><span class="lb">联系人电话 <span class="req">*</span></span><input class="ipt" id="companyContactPhone" type="tel" value="138 0000 2026"/></div>
-<div class="fg span2"><span class="lb">地址 <span class="req">*</span></span><input class="ipt" id="businessAddress" value="北京市朝阳区酒仙桥路6号院电子城国际电子总部"/></div>
-<div class="fg"><span class="lb">联系人邮箱 <span class="req">*</span></span><input class="ipt" id="companyContactEmail" type="email" value="security@360.cn"/></div>
-<div class="fg span3"><span class="lb">企业营业执照 <span class="req">*</span></span><div class="file-field"><div class="file-name" id="licenseFileName">营业执照_360安全科技股份有限公司.pdf</div><button class="btn o" id="licenseUploadBtn" type="button">重新上传</button><input accept=".pdf,.jpg,.jpeg,.png" hidden="" id="licenseFileInput" type="file"/></div></div>
+  <div class="kb-stack">
+    <!-- Card 1: 企业基本信息与主体资质 -->
+    <div class="card" style="padding:22px 26px;border-radius:14px;border:1px solid #e2e8f0;background:#ffffff;box-shadow:0 2px 10px rgba(0,0,0,0.02)">
+      <div class="ct" style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
+        <div style="display:flex;align-items:center;gap:10px">
+          <span style="font-size:16.5px;font-weight:750;color:#1e293b">企业基本信息与主体资质</span>
+          <span class="completion" id="companyCompletion">● 已完成主体认证</span>
+        </div>
+        <span style="font-size:12px;color:#64748b">作为各大生成式 AI 搜索事实库推荐基准</span>
+      </div>
+      <div class="cs" style="font-size:13px;color:#64748b;margin-bottom:18px;line-height:1.6">
+        企业主体认证信息将作为 GEO 事实核验与问答引用的权威锚点，确保生成的长文、图文及视频内容具备法定实体真实性背书。
+      </div>
+      <div class="info-grid">
+        <div class="fg">
+          <label class="lbl" for="enterpriseName">企业主体全称 <span class="req">*</span></label>
+          <input class="ipt" id="enterpriseName" value="360安全科技股份有限公司" placeholder="请输入企业主体名称" />
+        </div>
+        <div class="fg">
+          <label class="lbl" for="creditCode">统一社会信用代码 <span class="req">*</span></label>
+          <input class="ipt" id="creditCode" value="91120000786520775B" placeholder="18位统一社会信用代码" />
+        </div>
+        <div class="fg">
+          <label class="lbl" for="industryName">所属行业领域 <span class="req">*</span></label>
+          <input class="ipt" id="industryName" value="网络安全与企业数字化防护" placeholder="例如：网络安全、企业软件服务" />
+        </div>
+        <div class="fg span2">
+          <label class="lbl" for="businessAddress">经营注册地址 <span class="req">*</span></label>
+          <input class="ipt" id="businessAddress" value="北京市朝阳区酒仙桥路6号院电子城国际电子总部" placeholder="请输入经营办公地址" />
+        </div>
+        <div class="fg">
+          <label class="lbl" for="companyContact">业务联系人 <span class="req">*</span></label>
+          <input class="ipt" id="companyContact" value="程经理" placeholder="联系人姓名" />
+        </div>
+        <div class="fg">
+          <label class="lbl" for="companyContactPhone">联系电话 <span class="req">*</span></label>
+          <input class="ipt" id="companyContactPhone" value="400-0305-360" placeholder="电话号码" />
+        </div>
+        <div class="fg">
+          <label class="lbl" for="companyContactEmail">企业联系邮箱 <span class="req">*</span></label>
+          <input class="ipt" id="companyContactEmail" value="kefu@360.cn" placeholder="电子邮箱" />
+        </div>
+        <div class="fg span3">
+          <label class="lbl">营业执照 / 经营资质文件 <span class="req">*</span></label>
+          <div class="file-field">
+            <div class="file-name" id="licenseFileName">360安全科技股份有限公司_营业执照正本_已核验.pdf</div>
+            <input type="file" id="licenseFileInput" style="display:none" accept=".pdf,.jpg,.jpeg,.png" />
+            <button type="button" class="action-btn" id="licenseUploadBtn"><span class="action-icon">↥</span>重新上传资质</button>
+          </div>
+        </div>
+      </div>
+      <div class="info-actions">
+        <span style="font-size:12px;color:#94a3b8;margin-right:auto">已对接全国企业信用信息公示系统，修改后自动实时同步至 AI 搜索引流库</span>
+        <button type="button" class="btn p" id="saveCompanyInfo" style="padding:8px 22px;font-size:13px;font-weight:600">保存主体信息并同步知识库</button>
+      </div>
+    </div>
+
+    <!-- Card 2: 企业核心知识文档管理 -->
+    <div class="card" style="padding:22px 26px;border-radius:14px;border:1px solid #e2e8f0;background:#ffffff;box-shadow:0 2px 10px rgba(0,0,0,0.02)">
+      <div class="ct" style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
+        <div style="display:flex;align-items:center;gap:10px">
+          <span style="font-size:16.5px;font-weight:750;color:#1e293b">企业核心知识文档</span>
+          <span class="pill b" style="font-size:11.5px">已入库 5 份核心文档</span>
+        </div>
+        <button type="button" class="btn p" id="kbUploadTop" style="padding:7px 16px;font-size:12.5px;font-weight:600;display:inline-flex;align-items:center;gap:6px">
+          <span style="font-size:15px;line-height:1">+</span> 上传企业文档
+        </button>
+      </div>
+      <div class="cs" style="font-size:13px;color:#64748b;margin-bottom:18px;line-height:1.6">
+        上传企业技术白皮书、解决方案、产品手册及问答 FAQ，系统将自动进行语义向量切片并对齐各大主流 AI 搜索信源池，为长尾文章生成与问答推荐提供可信源。
+      </div>
+      <div style="overflow-x:auto">
+        <table class="tbl" id="kbTable">
+          <thead>
+            <tr>
+              <th style="min-width:280px">文档名称</th>
+              <th style="min-width:110px">文档分类</th>
+              <th style="min-width:140px">更新时间</th>
+              <th style="min-width:150px">向量切片状态</th>
+              <th style="text-align:right;min-width:130px">操作</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="doc-name"><span style="font-weight:600;color:#1e293b">360安全科技企业介绍与核心产品矩阵白皮书 (2026版).pdf</span></td>
+              <td><span class="doc-type pill b">企业介绍</span></td>
+              <td style="color:#64748b;font-size:12.5px">2026-06-18 10:24</td>
+              <td><span class="pill g" style="font-size:11.5px">● 已切片入库 (142段)</span></td>
+              <td style="text-align:right">
+                <div class="op-actions" style="justify-content:flex-end">
+                  <button class="action-btn kb-replace" type="button"><span class="action-icon">↥</span>替换</button>
+                  <button class="action-btn danger kb-delete" type="button"><span class="action-icon">⌫</span>删除</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="doc-name"><span style="font-weight:600;color:#1e293b">360数字安全大脑威胁情报与主动防御技术架构说明.docx</span></td>
+              <td><span class="doc-type pill b">技术方案</span></td>
+              <td style="color:#64748b;font-size:12.5px">2026-06-25 15:40</td>
+              <td><span class="pill g" style="font-size:11.5px">● 已切片入库 (98段)</span></td>
+              <td style="text-align:right">
+                <div class="op-actions" style="justify-content:flex-end">
+                  <button class="action-btn kb-replace" type="button"><span class="action-icon">↥</span>替换</button>
+                  <button class="action-btn danger kb-delete" type="button"><span class="action-icon">⌫</span>删除</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="doc-name"><span style="font-weight:600;color:#1e293b">2026企业网络安全等级保护2.0合规整改与建设指南.pdf</span></td>
+              <td><span class="doc-type pill b">行业解决方案</span></td>
+              <td style="color:#64748b;font-size:12.5px">2026-07-02 09:15</td>
+              <td><span class="pill g" style="font-size:11.5px">● 已切片入库 (210段)</span></td>
+              <td style="text-align:right">
+                <div class="op-actions" style="justify-content:flex-end">
+                  <button class="action-btn kb-replace" type="button"><span class="action-icon">↥</span>替换</button>
+                  <button class="action-btn danger kb-delete" type="button"><span class="action-icon">⌫</span>删除</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="doc-name"><span style="font-weight:600;color:#1e293b">360安全卫士企业版勒索病毒防御与应急处置手册.pdf</span></td>
+              <td><span class="doc-type pill b">产品手册</span></td>
+              <td style="color:#64748b;font-size:12.5px">2026-07-08 14:32</td>
+              <td><span class="pill g" style="font-size:11.5px">● 已切片入库 (86段)</span></td>
+              <td style="text-align:right">
+                <div class="op-actions" style="justify-content:flex-end">
+                  <button class="action-btn kb-replace" type="button"><span class="action-icon">↥</span>替换</button>
+                  <button class="action-btn danger kb-delete" type="button"><span class="action-icon">⌫</span>删除</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="doc-name"><span style="font-weight:600;color:#1e293b">360政企安全客户服务与技术支持常见问题解答(FAQ).xlsx</span></td>
+              <td><span class="doc-type pill b">问答FAQ</span></td>
+              <td style="color:#64748b;font-size:12.5px">2026-07-12 16:50</td>
+              <td><span class="pill g" style="font-size:11.5px">● 已切片入库 (165段)</span></td>
+              <td style="text-align:right">
+                <div class="op-actions" style="justify-content:flex-end">
+                  <button class="action-btn kb-replace" type="button"><span class="action-icon">↥</span>替换</button>
+                  <button class="action-btn danger kb-delete" type="button"><span class="action-icon">⌫</span>删除</button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- 上传 / 替换企业文档弹窗 -->
+  <div class="modal-backdrop" id="kbUploadModal">
+    <div class="modal">
+      <div class="modal-head">
+        <div class="modal-title" id="kbModalTitle">上传企业文档</div>
+        <button type="button" class="modal-close" id="kbModalClose" aria-label="关闭">×</button>
+      </div>
+      <div class="modal-body">
+        <div class="fg" style="margin-bottom:14px">
+          <label class="lbl" for="kbDocType">文档分类 <span class="req">*</span></label>
+          <select class="ipt" id="kbDocType">
+            <option value="">请选择文档分类</option>
+            <option value="企业介绍">企业介绍</option>
+            <option value="技术方案">技术方案</option>
+            <option value="产品手册">产品手册</option>
+            <option value="行业解决方案">行业解决方案</option>
+            <option value="问答FAQ">问答FAQ</option>
+            <option value="资质证书">资质证书</option>
+          </select>
+        </div>
+        <div class="fg">
+          <label class="lbl">选择文档文件 <span class="req">*</span></label>
+          <div class="upload-drop">
+            <input type="file" id="kbFileInput" accept=".pdf,.doc,.docx,.xls,.xlsx,.txt,.md" />
+            <div class="modal-tip">支持 PDF、DOCX、XLSX、TXT、MD 等格式，单个文件不超过 100MB。文档入库后将自动进行向量切片并与 GEO 推荐大模型深度对齐。</div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-foot">
+        <button type="button" class="btn s" id="kbModalCancel">取消</button>
+        <button type="button" class="btn p" id="kbModalConfirm">确认提交入库</button>
+      </div>
+    </div>
+  </div>
 </div>
-<div class="info-actions"><span class="hint" style="margin:0">保存后，企业名称将作为内容创作页 Slot C 主推实体的数据源。</span><button class="btn" id="saveCompanyInfo">保存基本信息</button></div>
-</div>
-<div class="card">
-<div class="ct">知识库文档 <button class="btn" id="kbUploadTop">＋ 上传文档</button></div>
-<div class="cs">文档按业务类型入库，用于后续画像、关键词、内容生成与事实校验。</div>
-<div class="table-scroll"><table id="kbTable"><tr><th>文档</th><th>类型</th><th style="width:220px">操作</th></tr>
-<tr><td class="doc-name">360安全大脑与数字安全产品全景图2026.pdf</td><td class="doc-type">产品手册</td><td><div class="op-actions"><button class="action-btn kb-replace"><span class="action-icon">↥</span>上传</button><button class="action-btn danger kb-delete"><span class="action-icon">⌫</span>删除</button></div></td></tr>
-<tr><td class="doc-name">ISO9001+高新技术企业认证.pdf</td><td class="doc-type">信任背书</td><td><div class="op-actions"><button class="action-btn kb-replace"><span class="action-icon">↥</span>上传</button><button class="action-btn danger kb-delete"><span class="action-icon">⌫</span>删除</button></div></td></tr>
-<tr><td class="doc-name">客户高频问答整理.docx</td><td class="doc-type">FAQ问答</td><td><div class="op-actions"><button class="action-btn kb-replace"><span class="action-icon">↥</span>上传</button><button class="action-btn danger kb-delete"><span class="action-icon">⌫</span>删除</button></div></td></tr>
-<tr><td class="doc-name">4000绿色环保体系检测报告.pdf</td><td class="doc-type">信任背书</td><td><div class="op-actions"><button class="action-btn kb-replace"><span class="action-icon">↥</span>上传</button><button class="action-btn danger kb-delete"><span class="action-icon">⌫</span>删除</button></div></td></tr>
-<tr><td class="doc-name">合作案例与交付履历.xlsx</td><td class="doc-type">合作案例</td><td><div class="op-actions"><button class="action-btn kb-replace"><span class="action-icon">↥</span>上传</button><button class="action-btn danger kb-delete"><span class="action-icon">⌫</span>删除</button></div></td></tr>
-</table></div></div>
-</div>
-<div class="modal-backdrop" id="kbUploadModal">
-<div aria-labelledby="kbModalTitle" aria-modal="true" class="modal" role="dialog">
-<div class="modal-head"><div class="modal-title" id="kbModalTitle">上传企业文档</div><button class="modal-close" id="kbModalClose" type="button">×</button></div>
-<div class="modal-body">
-<div class="fg"><span class="lb">文件类型 <span class="req">*</span></span><select class="ipt" id="kbDocType"><option value="">请选择文件类型</option><option>公司介绍</option><option>产品手册</option><option>信任背书</option><option>合作案例</option><option>FAQ问答</option><option>其他</option></select></div>
-<div class="fg" style="margin-bottom:0"><span class="lb">选择文件 <span class="req">*</span></span><div class="upload-drop"><input accept=".pdf,.doc,.docx,.xls,.xlsx,.txt,.md" id="kbFileInput" type="file"/><div class="modal-tip">支持 PDF、Word、Excel、TXT、Markdown；单文件建议不超过 50MB。</div></div></div>
-</div>
-<div class="modal-foot"><button class="btn o" id="kbModalCancel" type="button">取消</button><button class="btn" id="kbModalConfirm" type="button">确认上传</button></div>
-</div></div>
+<div class="page" id="material">
+
+  <!-- 1:1 复刻截图素材库界面 -->
+  <div style="background:#ffffff;border-radius:12px;padding:20px 24px;border:1px solid #e2e8f0;margin-bottom:20px">
+    <!-- Header -->
+    <div style="margin-bottom:16px">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
+        <h1 style="font-size:18px;font-weight:750;color:#0f172a;margin:0">素材库</h1>
+        <span style="font-size:16px;color:#64748b;cursor:pointer" title="消息通知" onclick="window.showToast&&window.showToast('暂无新系统通知')">🔔</span>
+      </div>
+      <p style="font-size:12.5px;color:#64748b;margin:0;line-height:1.5">
+        上传本地图片素材，用于文章配图等场景。素材库总量：100.00GB，当前剩余容量99.97GB，已使用31.0MB。(含创作历史图文/视频容量)
+      </p>
+    </div>
+
+    <!-- Mode Tabs: 图片 / 视频 -->
+    <div style="display:flex;align-items:center;gap:24px;border-bottom:1px solid #f1f5f9;margin-bottom:18px">
+      <div class="mat-top-tab active" data-mattab="image" id="matTabImage" style="padding-bottom:10px;font-size:13.5px;font-weight:700;color:#6366f1;border-bottom:2.5px solid #6366f1;cursor:pointer;transition:all 0.16s">
+        图片
+      </div>
+      <div class="mat-top-tab" data-mattab="video" id="matTabVideo" style="padding-bottom:10px;font-size:13.5px;font-weight:500;color:#64748b;border-bottom:2.5px solid transparent;cursor:pointer;transition:all 0.16s">
+        视频
+      </div>
+    </div>
+
+    <!-- Main Content: Left Groups + Right Material Gallery -->
+    <div style="display:flex;gap:22px;align-items:flex-start">
+      <!-- Left Column: 素材分组 (Width ~160px) -->
+      <div style="width:160px;flex-shrink:0">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">
+          <span style="font-size:13px;font-weight:700;color:#1e293b">素材分组</span>
+          <button type="button" id="matNewGroupBtn" style="font-size:12px;color:#6366f1;border:none;background:none;cursor:pointer;padding:0;display:inline-flex;align-items:center;gap:3px;font-weight:600">
+            <span>+</span> <span>新建分组</span>
+          </button>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:4px" id="matGroupList">
+          <div class="mat-group-item active" data-matgroup="all" style="padding:7px 12px;border-radius:6px;background:#f5f3ff;color:#6366f1;font-size:12.5px;font-weight:700;cursor:pointer">
+            所有
+          </div>
+          <div class="mat-group-item" data-matgroup="drainage" style="padding:7px 12px;border-radius:6px;color:#64748b;font-size:12.5px;cursor:pointer">
+            管道疏通与清洗 (10)
+          </div>
+          <div class="mat-group-item" data-matgroup="factory" style="padding:7px 12px;border-radius:6px;color:#64748b;font-size:12.5px;cursor:pointer">
+            工业车间实景 (8)
+          </div>
+          <div class="mat-group-item" data-matgroup="cert" style="padding:7px 12px;border-radius:6px;color:#64748b;font-size:12.5px;cursor:pointer">
+            资质与案例 (7)
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Media Gallery + Actions + Pagination -->
+      <div style="flex:1;min-width:0">
+        <!-- Toolbar -->
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:10px">
+          <div style="display:flex;align-items:center;gap:12px">
+            <label style="display:inline-flex;align-items:center;gap:6px;font-size:12.5px;color:#334155;cursor:pointer">
+              <input type="checkbox" id="matSelectAll" style="accent-color:#6366f1;width:15px;height:15px" />
+              <span>全选</span>
+            </label>
+            <button type="button" id="matBatchGroupBtn" class="btn" style="background:#ede9fe;color:#7c3aed;border:none;padding:5px 14px;border-radius:6px;font-size:12.5px;cursor:pointer;font-weight:600">
+              批量分组
+            </button>
+            <button type="button" id="matBatchDeleteBtn" class="btn" style="background:#ede9fe;color:#7c3aed;border:none;padding:5px 14px;border-radius:6px;font-size:12.5px;cursor:pointer;font-weight:600">
+              批量删除
+            </button>
+          </div>
+
+          <button type="button" id="matUploadBtn" class="btn" style="background:#6366f1;color:#ffffff;border:none;padding:7px 18px;border-radius:6px;font-size:13px;font-weight:600;display:inline-flex;align-items:center;gap:6px;cursor:pointer">
+            <span>📤</span>
+            <span>上传素材</span>
+          </button>
+          <input type="file" id="matFileInput" multiple accept="image/*,video/*" style="display:none" />
+        </div>
+
+        <!-- 10 Material Cards (一比一匹配截图的 10 张卡片) -->
+        <div id="matCardsGrid" style="display:grid;grid-template-columns:repeat(auto-fill, minmax(130px, 1fr));gap:12px;margin-bottom:24px">
+          <!-- Card 1 -->
+          <div class="mat-card-item" data-id="1" data-size="831.3KB" data-title="管道疏通前后对比图" data-img="${matImg1}" style="position:relative;border-radius:8px;overflow:hidden;background:#f8fafc;border:1px solid #e2e8f0;cursor:pointer;transition:transform 0.16s,box-shadow 0.16s">
+            <div style="position:relative;width:100%;height:100px;background:#1e293b;overflow:hidden">
+              <img referrerPolicy="no-referrer" alt="管道疏通前后对比图" src="${matImg1}" style="width:100%;height:100%;object-fit:cover" />
+              <input type="checkbox" class="mat-item-check" data-id="1" style="position:absolute;top:6px;left:6px;accent-color:#6366f1;width:15px;height:15px;z-index:5" />
+              <span style="position:absolute;top:4px;right:4px;background:rgba(0,0,0,0.55);color:#fff;font-size:9.5px;padding:1px 5px;border-radius:3px">2025-08-26</span>
+            </div>
+            <div style="position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,0.45);padding:2px 6px;display:flex;align-items:center;justify-content:space-between">
+              <span style="font-size:10.5px;color:#ffffff;font-weight:600">831.3KB</span>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="mat-card-item" data-id="2" data-size="1.0MB" data-title="师傅浴室管道排污作业" data-img="${matImg2}" style="position:relative;border-radius:8px;overflow:hidden;background:#f8fafc;border:1px solid #e2e8f0;cursor:pointer;transition:transform 0.16s,box-shadow 0.16s">
+            <div style="position:relative;width:100%;height:100px;background:#1e293b;overflow:hidden">
+              <img referrerPolicy="no-referrer" alt="师傅浴室管道排污作业" src="${matImg2}" style="width:100%;height:100%;object-fit:cover" />
+              <input type="checkbox" class="mat-item-check" data-id="2" style="position:absolute;top:6px;left:6px;accent-color:#6366f1;width:15px;height:15px;z-index:5" />
+              <span style="position:absolute;top:4px;right:4px;background:rgba(0,0,0,0.55);color:#fff;font-size:9.5px;padding:1px 5px;border-radius:3px">2025-08-26</span>
+            </div>
+            <div style="position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,0.45);padding:2px 6px;display:flex;align-items:center;justify-content:space-between">
+              <span style="font-size:10.5px;color:#ffffff;font-weight:600">1.0MB</span>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="mat-card-item" data-id="3" data-size="1.1MB" data-title="管道保洁与药剂清洗实拍" data-img="${matImg3}" style="position:relative;border-radius:8px;overflow:hidden;background:#f8fafc;border:1px solid #e2e8f0;cursor:pointer;transition:transform 0.16s,box-shadow 0.16s">
+            <div style="position:relative;width:100%;height:100px;background:#1e293b;overflow:hidden">
+              <img referrerPolicy="no-referrer" alt="管道保洁与药剂清洗实拍" src="${matImg3}" style="width:100%;height:100%;object-fit:cover" />
+              <input type="checkbox" class="mat-item-check" data-id="3" style="position:absolute;top:6px;left:6px;accent-color:#6366f1;width:15px;height:15px;z-index:5" />
+              <span style="position:absolute;top:4px;right:4px;background:rgba(0,0,0,0.55);color:#fff;font-size:9.5px;padding:1px 5px;border-radius:3px">2025-08-26</span>
+            </div>
+            <div style="position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,0.45);padding:2px 6px;display:flex;align-items:center;justify-content:space-between">
+              <span style="font-size:10.5px;color:#ffffff;font-weight:600">1.1MB</span>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="mat-card-item" data-id="4" data-size="1.5MB" data-title="工业泵房大型管道阀门检修" data-img="${matImg4}" style="position:relative;border-radius:8px;overflow:hidden;background:#f8fafc;border:1px solid #e2e8f0;cursor:pointer;transition:transform 0.16s,box-shadow 0.16s">
+            <div style="position:relative;width:100%;height:100px;background:#1e293b;overflow:hidden">
+              <img referrerPolicy="no-referrer" alt="工业泵房大型管道阀门检修" src="${matImg4}" style="width:100%;height:100%;object-fit:cover" />
+              <input type="checkbox" class="mat-item-check" data-id="4" style="position:absolute;top:6px;left:6px;accent-color:#6366f1;width:15px;height:15px;z-index:5" />
+              <span style="position:absolute;top:4px;right:4px;background:rgba(0,0,0,0.55);color:#fff;font-size:9.5px;padding:1px 5px;border-radius:3px">2025-08-26</span>
+            </div>
+            <div style="position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,0.45);padding:2px 6px;display:flex;align-items:center;justify-content:space-between">
+              <span style="font-size:10.5px;color:#ffffff;font-weight:600">1.5MB</span>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="mat-card-item" data-id="5" data-size="349.8KB" data-title="机械施工设备与工业现场" data-img="${matImg5}" style="position:relative;border-radius:8px;overflow:hidden;background:#f8fafc;border:1px solid #e2e8f0;cursor:pointer;transition:transform 0.16s,box-shadow 0.16s">
+            <div style="position:relative;width:100%;height:100px;background:#1e293b;overflow:hidden">
+              <img referrerPolicy="no-referrer" alt="机械施工设备与工业现场" src="${matImg5}" style="width:100%;height:100%;object-fit:cover" />
+              <input type="checkbox" class="mat-item-check" data-id="5" style="position:absolute;top:6px;left:6px;accent-color:#6366f1;width:15px;height:15px;z-index:5" />
+              <span style="position:absolute;top:4px;right:4px;background:rgba(0,0,0,0.55);color:#fff;font-size:9.5px;padding:1px 5px;border-radius:3px">2025-08-26</span>
+            </div>
+            <div style="position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,0.45);padding:2px 6px;display:flex;align-items:center;justify-content:space-between">
+              <span style="font-size:10.5px;color:#ffffff;font-weight:600">349.8KB</span>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="mat-card-item" data-id="6" data-size="1.4MB" data-title="地下车库路面排污钻探抢修" data-img="${matImg6}" style="position:relative;border-radius:8px;overflow:hidden;background:#f8fafc;border:1px solid #e2e8f0;cursor:pointer;transition:transform 0.16s,box-shadow 0.16s">
+            <div style="position:relative;width:100%;height:100px;background:#1e293b;overflow:hidden">
+              <img referrerPolicy="no-referrer" alt="地下车库路面排污钻探抢修" src="${matImg6}" style="width:100%;height:100%;object-fit:cover" />
+              <input type="checkbox" class="mat-item-check" data-id="6" style="position:absolute;top:6px;left:6px;accent-color:#6366f1;width:15px;height:15px;z-index:5" />
+              <span style="position:absolute;top:4px;right:4px;background:rgba(0,0,0,0.55);color:#fff;font-size:9.5px;padding:1px 5px;border-radius:3px">2025-08-26</span>
+            </div>
+            <div style="position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,0.45);padding:2px 6px;display:flex;align-items:center;justify-content:space-between">
+              <span style="font-size:10.5px;color:#ffffff;font-weight:600">1.4MB</span>
+            </div>
+          </div>
+
+          <!-- Card 7 -->
+          <div class="mat-card-item" data-id="7" data-size="1.7MB" data-title="CCTV市政管道机器人探伤检测" data-img="${matImg7}" style="position:relative;border-radius:8px;overflow:hidden;background:#f8fafc;border:1px solid #e2e8f0;cursor:pointer;transition:transform 0.16s,box-shadow 0.16s">
+            <div style="position:relative;width:100%;height:100px;background:#1e293b;overflow:hidden">
+              <img referrerPolicy="no-referrer" alt="CCTV市政管道机器人探伤检测" src="${matImg7}" style="width:100%;height:100%;object-fit:cover" />
+              <input type="checkbox" class="mat-item-check" data-id="7" style="position:absolute;top:6px;left:6px;accent-color:#6366f1;width:15px;height:15px;z-index:5" />
+              <span style="position:absolute;top:4px;right:4px;background:rgba(0,0,0,0.55);color:#fff;font-size:9.5px;padding:1px 5px;border-radius:3px">2025-08-26</span>
+            </div>
+            <div style="position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,0.45);padding:2px 6px;display:flex;align-items:center;justify-content:space-between">
+              <span style="font-size:10.5px;color:#ffffff;font-weight:600">1.7MB</span>
+            </div>
+          </div>
+
+          <!-- Card 8 -->
+          <div class="mat-card-item" data-id="8" data-size="155.2KB" data-title="室外狭窄雨水立管与外墙排查" data-img="${matImg8}" style="position:relative;border-radius:8px;overflow:hidden;background:#f8fafc;border:1px solid #e2e8f0;cursor:pointer;transition:transform 0.16s,box-shadow 0.16s">
+            <div style="position:relative;width:100%;height:100px;background:#1e293b;overflow:hidden">
+              <img referrerPolicy="no-referrer" alt="室外狭窄雨水立管与外墙排查" src="${matImg8}" style="width:100%;height:100%;object-fit:cover" />
+              <input type="checkbox" class="mat-item-check" data-id="8" style="position:absolute;top:6px;left:6px;accent-color:#6366f1;width:15px;height:15px;z-index:5" />
+              <span style="position:absolute;top:4px;right:4px;background:rgba(0,0,0,0.55);color:#fff;font-size:9.5px;padding:1px 5px;border-radius:3px">2025-08-26</span>
+            </div>
+            <div style="position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,0.45);padding:2px 6px;display:flex;align-items:center;justify-content:space-between">
+              <span style="font-size:10.5px;color:#ffffff;font-weight:600">155.2KB</span>
+            </div>
+          </div>
+
+          <!-- Card 9 (Row 2, matching screenshot) -->
+          <div class="mat-card-item" data-id="9" data-size="1.5MB" data-title="商业后厨隔油池无害化清掏" data-img="${matImg9}" style="position:relative;border-radius:8px;overflow:hidden;background:#f8fafc;border:1px solid #e2e8f0;cursor:pointer;transition:transform 0.16s,box-shadow 0.16s">
+            <div style="position:relative;width:100%;height:100px;background:#1e293b;overflow:hidden">
+              <img referrerPolicy="no-referrer" alt="商业后厨隔油池无害化清掏" src="${matImg9}" style="width:100%;height:100%;object-fit:cover" />
+              <input type="checkbox" class="mat-item-check" data-id="9" style="position:absolute;top:6px;left:6px;accent-color:#6366f1;width:15px;height:15px;z-index:5" />
+              <span style="position:absolute;top:4px;right:4px;background:rgba(0,0,0,0.55);color:#fff;font-size:9.5px;padding:1px 5px;border-radius:3px">2025-08-26</span>
+            </div>
+            <div style="position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,0.45);padding:2px 6px;display:flex;align-items:center;justify-content:space-between">
+              <span style="font-size:10.5px;color:#ffffff;font-weight:600">1.5MB</span>
+            </div>
+          </div>
+
+          <!-- Card 10 (Row 2, matching screenshot) -->
+          <div class="mat-card-item" data-id="10" data-size="1.2MB" data-title="厨房水槽下水存水弯防漏检修" data-img="${matImg10}" style="position:relative;border-radius:8px;overflow:hidden;background:#f8fafc;border:1px solid #e2e8f0;cursor:pointer;transition:transform 0.16s,box-shadow 0.16s">
+            <div style="position:relative;width:100%;height:100px;background:#1e293b;overflow:hidden">
+              <img referrerPolicy="no-referrer" alt="厨房水槽下水存水弯防漏检修" src="${matImg10}" style="width:100%;height:100%;object-fit:cover" />
+              <input type="checkbox" class="mat-item-check" data-id="10" style="position:absolute;top:6px;left:6px;accent-color:#6366f1;width:15px;height:15px;z-index:5" />
+              <span style="position:absolute;top:4px;right:4px;background:rgba(0,0,0,0.55);color:#fff;font-size:9.5px;padding:1px 5px;border-radius:3px">2025-08-26</span>
+            </div>
+            <div style="position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,0.45);padding:2px 6px;display:flex;align-items:center;justify-content:space-between">
+              <span style="font-size:10.5px;color:#ffffff;font-weight:600">1.2MB</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pagination matching screenshot -->
+        <div style="display:flex;align-items:center;justify-content:center;gap:14px;margin-top:28px;font-size:12.5px;color:#64748b;flex-wrap:wrap">
+          <span id="matTotalCountText">共 25 条</span>
+          <select class="ipt" id="matPageSizeSelect" style="height:28px;padding:0 8px;font-size:12px;width:92px">
+            <option value="10" selected>10条/页</option>
+            <option value="20">20条/页</option>
+            <option value="50">50条/页</option>
+          </select>
+          <div style="display:flex;align-items:center;gap:6px">
+            <button type="button" class="mat-page-btn" id="matPrevPage" style="width:28px;height:28px;border:1px solid #e2e8f0;background:#fff;border-radius:4px;cursor:pointer;display:flex;align-items:center;justify-content:center">&lt;</button>
+            <button type="button" class="mat-page-btn active" data-page="1" style="width:28px;height:28px;border:none;background:#6366f1;color:#fff;font-weight:700;border-radius:4px;cursor:pointer;display:flex;align-items:center;justify-content:center">1</button>
+            <button type="button" class="mat-page-btn" data-page="2" style="width:28px;height:28px;border:1px solid #e2e8f0;background:#fff;color:#334155;border-radius:4px;cursor:pointer;display:flex;align-items:center;justify-content:center">2</button>
+            <button type="button" class="mat-page-btn" data-page="3" style="width:28px;height:28px;border:1px solid #e2e8f0;background:#fff;color:#334155;border-radius:4px;cursor:pointer;display:flex;align-items:center;justify-content:center">3</button>
+            <button type="button" class="mat-page-btn" id="matNextPage" style="width:28px;height:28px;border:1px solid #e2e8f0;background:#fff;border-radius:4px;cursor:pointer;display:flex;align-items:center;justify-content:center">&gt;</button>
+          </div>
+          <div style="display:flex;align-items:center;gap:6px">
+            <span>前往</span>
+            <input type="number" id="matJumpInput" value="1" min="1" max="3" style="width:42px;height:28px;text-align:center;border:1px solid #e2e8f0;border-radius:4px;font-size:12px" />
+            <span>页</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="matLightboxModal" style="display:none;align-items:center;justify-content:center">
+    <div class="modal" style="max-width:680px;width:90%;background:#ffffff;border-radius:12px;overflow:hidden;box-shadow:0 20px 48px rgba(0,0,0,0.25)">
+      <div style="padding:14px 18px;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;justify-content:space-between">
+        <div style="font-size:14px;font-weight:700;color:#0f172a" id="matModalTitle">素材大图预览</div>
+        <button type="button" class="modal-close" id="matModalCloseBtn" style="font-size:18px;cursor:pointer;background:none;border:none;color:#94a3b8">×</button>
+      </div>
+      <div style="padding:18px;background:#090d16;display:flex;align-items:center;justify-content:center;min-height:300px">
+        <img id="matModalImg" referrerPolicy="no-referrer" src="" alt="大图预览" style="max-width:100%;max-height:420px;object-fit:contain;border-radius:6px" />
+      </div>
+      <div style="padding:12px 18px;background:#f8fafc;border-top:1px solid #e2e8f0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px">
+        <div style="font-size:12px;color:#64748b" id="matModalMeta">分辨率: 1920×1080 · 格式: SVG/PNG · 上传时间: 2025-08-26</div>
+        <div style="display:flex;gap:8px">
+          <button type="button" class="btn o" id="matModalCopyUrlBtn" style="font-size:12px;padding:4px 10px">📋 复制直链</button>
+          <button type="button" class="btn" id="matModalApplyArticleBtn" style="background:#6366f1;color:#fff;font-size:12px;padding:4px 12px;border:none;border-radius:6px">用于文章配图</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 <div class="page" id="kw">
   <!-- Top Title & Agent Card -->
@@ -1244,8 +1642,8 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
     </div>
     <div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid #f1f5f9;padding-top:14px;flex-wrap:wrap;gap:12px">
       <div class="vg-tab-bar" style="background:#f1f5f9">
-        <button class="vg-tab-btn on" data-vg-mode="video" type="button" style="padding:7px 20px;font-size:13.5px">视频创作</button>
-        <button class="vg-tab-btn" data-vg-mode="graphic" type="button" style="padding:7px 20px;font-size:13.5px">图文创作</button>
+        <button class="vg-tab-btn on" data-vg-mode="video" onclick="window.__switchVgMode&&window.__switchVgMode('video')" type="button" style="padding:7px 20px;font-size:13.5px">视频创作</button>
+        <button class="vg-tab-btn" data-vg-mode="graphic" onclick="window.__switchVgMode&&window.__switchVgMode('graphic')" type="button" style="padding:7px 20px;font-size:13.5px">图文创作</button>
       </div>
       <div id="vgVideoTopActions" style="display:flex;align-items:center;gap:10px">
         <button class="vg-ai-pill-btn" id="vgSuperSyncBtn" type="button" title="智能根据核心词一次性策划全案与手机画面">
@@ -1310,13 +1708,19 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
         </div>
       </div>
 
-      <!-- ■ 视频文案 -->
+      <!-- ■ 视频文案 (图一样式) -->
       <div class="vg-sub-header-row" style="margin-top:14px">
         <div class="vg-sub-header-title">
           <span style="color:#6366f1;font-size:11px">■</span>
           <span>视频文案</span>
         </div>
-        <button class="vg-ai-pill-btn" id="vgCopyAIBtn" type="button">✨ AI 一键生成</button>
+        <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+          <button class="vg-clip-btn" id="vgVideoPolishBtn" type="button">✦ AI 润色</button>
+          <button class="vg-clip-btn" id="vgVideoEmojiBtn" type="button">☺ 插入表情</button>
+          <button class="vg-clip-btn" id="vgVideoCopyBtn" type="button">📋 复制正文</button>
+          <button class="vg-clip-btn" id="vgVideoClearBtn" type="button">⌫ 清空</button>
+          <button class="vg-ai-pill-btn" id="vgCopyAIBtn" type="button">✨ AI 一键生成</button>
+        </div>
       </div>
 
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px">
@@ -1330,8 +1734,14 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
         <div class="fg" style="margin-bottom:0">
           <span class="lb"><span style="color:#ef4444">*</span> 话题标签</span>
           <div class="vg-input-counter-wrap">
-            <input class="ipt" id="vgVideoTags" placeholder="请输入话题标签" value="#360安全卫士 #终端安全 #勒索病毒防御 #网络安全" />
-            <span class="vg-counter" id="vgTagsCounter">3/5</span>
+            <input class="ipt" id="vgVideoTags" placeholder="请输入话题标签并按回车添加" />
+            <span class="vg-counter" id="vgTagsCounter">4 / 5</span>
+          </div>
+          <div id="vgVideoTagPills" style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px">
+            <span class="vg-graphic-tag-chip" data-tag="360安全卫士" style="display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:6px;background:#eff6ff;color:#2563eb;font-size:12px;font-weight:600">#360安全卫士 <i class="vg-remove-vid-tag" style="cursor:pointer;font-style:normal;opacity:0.75">×</i></span>
+            <span class="vg-graphic-tag-chip" data-tag="终端安全" style="display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:6px;background:#eff6ff;color:#2563eb;font-size:12px;font-weight:600">#终端安全 <i class="vg-remove-vid-tag" style="cursor:pointer;font-style:normal;opacity:0.75">×</i></span>
+            <span class="vg-graphic-tag-chip" data-tag="勒索病毒防御" style="display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:6px;background:#eff6ff;color:#2563eb;font-size:12px;font-weight:600">#勒索病毒防御 <i class="vg-remove-vid-tag" style="cursor:pointer;font-style:normal;opacity:0.75">×</i></span>
+            <span class="vg-graphic-tag-chip" data-tag="网络安全" style="display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:6px;background:#eff6ff;color:#2563eb;font-size:12px;font-weight:600">#网络安全 <i class="vg-remove-vid-tag" style="cursor:pointer;font-style:normal;opacity:0.75">×</i></span>
           </div>
           <div style="font-size:11.5px;color:#94a3b8;margin-top:4px">提示：最多输入5个话题标签，每个标签用回车分类</div>
         </div>
@@ -1360,9 +1770,9 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
           <span class="pill b" id="vgVideoStateBadge" style="font-size:11.5px;font-weight:700">当前状态1：视频快剪表单面板</span>
         </div>
         <div class="vg-method-tabs" id="vgMethodTabs">
-          <div class="vg-method-pill active" data-vmethod="quick" title="基于已有素材包，AI 自动混剪卡点">视频快剪</div>
-          <div class="vg-method-pill" data-vmethod="ai" title="输入画面提示词，AI 从零生成视频画面">AI生成视频</div>
-          <div class="vg-method-pill" data-vmethod="upload" title="上传本地已有成片直接分发">上传视频</div>
+          <div class="vg-method-pill active" data-vmethod="quick" onclick="window.__switchVideoMethod&&window.__switchVideoMethod('quick')" title="基于已有素材包，AI 自动混剪卡点">视频快剪</div>
+          <div class="vg-method-pill" data-vmethod="ai" onclick="window.__switchVideoMethod&&window.__switchVideoMethod('ai')" title="输入画面提示词，AI 从零生成视频画面">AI生成视频</div>
+          <div class="vg-method-pill" data-vmethod="upload" onclick="window.__switchVideoMethod&&window.__switchVideoMethod('upload')" title="上传本地已有成片直接分发">上传视频</div>
         </div>
       </div>
 
@@ -1376,450 +1786,814 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
       <div class="vg-studio-grid" id="vgStudioGrid">
         <!-- 状态1：Tab=视频快剪 -> 下方展示快剪表单面板 (默认展示) -->
         <!-- 最终模块顺序：素材分组 → 混剪模板 → 转场卡点 → 口播配音+倍速+BGM → 口播脚本 -->
-        <div id="vgStateQuickPanel" style="grid-column:span 2;background:#ffffff;border:1px solid #e2e8f0;border-radius:12px;padding:18px 20px">
-          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid #f1f5f9">
-            <div style="display:flex;align-items:center;gap:8px">
-              <span style="width:8px;height:8px;border-radius:50%;background:#4f46e5;display:inline-block"></span>
-              <span style="font-size:14px;font-weight:750;color:#0f172a">智能视频快剪表单面板</span>
-              <span class="pill b" style="font-size:11px">多片段自动混剪成片</span>
+        <div id="vgStateQuickPanel" style="background:#ffffff;border:1px solid #e2e8f0;border-radius:12px;padding:0">
+          <!-- Quick Layout: Left 5 Function Keys + Right Content Panel -->
+          <div class="vg-quick-layout" style="display:flex;border:1px solid #e2e8f0;border-radius:10px;background:#ffffff;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,0.03)">
+            <!-- Left Vertical Nav with 5 Function Keys requested by user -->
+            <div class="vg-vnav-bar" id="vgQuickSubNav" style="width:72px;background:#ffffff;border-right:1px solid #eef2f6;display:flex;flex-direction:column;flex-shrink:0;align-items:center;padding:12px 0;gap:4px">
+              <div class="vg-vnav-item active" data-vsub="subtitle" onclick="window.__switchQuickSubNav&&window.__switchQuickSubNav('subtitle')" style="width:60px;padding:10px 4px;text-align:center;cursor:pointer;border-radius:8px;background:#f5f3ff;border:1px solid #c7d2fe;display:flex;flex-direction:column;align-items:center;gap:4px;transition:all 0.16s" title="视频字幕">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><line x1="8" y1="9" x2="16" y2="9"/><line x1="8" y1="13" x2="13" y2="13"/></svg>
+                <span style="font-size:11.5px;font-weight:600;color:#6366f1;white-space:nowrap">视频字幕</span>
+              </div>
+              <div class="vg-vnav-item" data-vsub="voice" onclick="window.__switchQuickSubNav&&window.__switchQuickSubNav('voice')" style="width:60px;padding:10px 4px;text-align:center;cursor:pointer;border-radius:8px;display:flex;flex-direction:column;align-items:center;gap:4px;transition:all 0.16s" title="选择声音">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="22"/></svg>
+                <span style="font-size:11.5px;color:#64748b;white-space:nowrap">选择声音</span>
+              </div>
+              <div class="vg-vnav-item" data-vsub="style" onclick="window.__switchQuickSubNav&&window.__switchQuickSubNav('style')" style="width:60px;padding:10px 4px;text-align:center;cursor:pointer;border-radius:8px;display:flex;flex-direction:column;align-items:center;gap:4px;transition:all 0.16s" title="字母样式">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 7 4 4 20 4 20 7"/><line x1="9" y1="20" x2="15" y2="20"/><line x1="12" y1="4" x2="12" y2="20"/></svg>
+                <span style="font-size:11.5px;color:#64748b;white-space:nowrap">字母样式</span>
+              </div>
+              <div class="vg-vnav-item" data-vsub="bgm" onclick="window.__switchQuickSubNav&&window.__switchQuickSubNav('bgm')" style="width:60px;padding:10px 4px;text-align:center;cursor:pointer;border-radius:8px;display:flex;flex-direction:column;align-items:center;gap:4px;transition:all 0.16s" title="背景音乐">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+                <span style="font-size:11.5px;color:#64748b;white-space:nowrap">背景音乐</span>
+              </div>
             </div>
-            <button class="vg-ai-pill-btn" id="vgSegmentAIBtn" type="button" style="padding:4px 10px;font-size:11.5px">✨ AI 一键生成快剪脚本</button>
-          </div>
+            <!-- Right Content Panels that switch based on clicked function key -->
+            <div class="vg-vcontent-panel" style="flex:1;min-width:0;padding:16px 18px">
+              <!-- ================= 1. 视频快剪核心面板 ================= -->
+              <div id="vgSubPanelCut" class="vg-sub-panel" style="display:none">
+                <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+                  <div style="font-size:13px;font-weight:700;color:#1e293b;display:flex;align-items:center;gap:6px">
+                    <span style="color:#6366f1;font-size:11px">■</span>
+                    <span>快剪素材与模板配置</span>
+                  </div>
+                  <span style="font-size:11.5px;color:#64748b">基于已有素材包快速智能拼接与节奏卡点</span>
+                </div>
 
-          <!-- 1. 素材分组 -->
-          <div class="fg" style="margin-bottom:14px">
-            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
-              <span class="lb" style="margin-bottom:0"><span style="color:#ef4444">*</span> 素材分组</span>
-              <button type="button" id="vgPreviewMaterialBtn" class="btn o" style="padding:3px 10px;font-size:11.5px;border-radius:6px;color:#4f46e5;border-color:#c7d2fe;background:#eef2ff;display:inline-flex;align-items:center;gap:4px">
-                <span>👁️</span> 预览素材包
-              </button>
-            </div>
-            <select class="ipt" id="vgMaterialGroup">
-              <option value="">-- 请选择素材分组 --</option>
-              <option value="g1" selected>360安全大脑可视化防御大屏与终端实测 (42支片段)</option>
-              <option value="g2">现代化工业车间与全自动熔接片段 (36支片段)</option>
-              <option value="g3">勒索病毒动态诱捕与数据秒级回滚实拍 (28支片段)</option>
-              <option value="g4">大客户发货物流与装箱发运现场 (19支片段)</option>
-            </select>
-          </div>
+                <!-- 1. 素材分组 -->
+                <div class="fg" style="margin-bottom:14px">
+                  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
+                    <span class="lb" style="margin-bottom:0"><span style="color:#ef4444">*</span> 素材分组</span>
+                    <button type="button" id="vgPreviewMaterialBtn" class="btn o" style="padding:3px 10px;font-size:11.5px;border-radius:6px;color:#4f46e5;border-color:#c7d2fe;background:#eef2ff;display:inline-flex;align-items:center;gap:4px">
+                      <span>👁️</span> 预览素材包
+                    </button>
+                  </div>
+                  <select class="ipt" id="vgMaterialGroup">
+                    <option value="">-- 请选择素材分组 --</option>
+                    <option value="g1" selected>360安全大脑可视化防御大屏与终端实测 (42支片段)</option>
+                    <option value="g2">现代化工业车间与全自动熔接片段 (36支片段)</option>
+                    <option value="g3">勒索病毒动态诱捕与数据秒级回滚实拍 (28支片段)</option>
+                    <option value="g4">大客户发货物流与装箱发运现场 (19支片段)</option>
+                  </select>
+                </div>
 
-          <!-- 2. 快剪混剪模板 -->
-          <div class="fg" style="margin-bottom:14px">
-            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
-              <span class="lb" style="margin-bottom:0"><span style="color:#ef4444">*</span> 快剪混剪模板</span>
-              <span style="font-size:11.5px;color:#64748b" id="vgTemplateHintBadge">🎬 点击小样片可查看分镜详情</span>
-            </div>
-            <select class="ipt" id="vgQuickTemplateSelect">
-              <option value="">-- 请选择混剪模板 --</option>
-              <option value="hook3s" selected>黄金前3秒痛点暴击 + 核心卖点快剪 (高完播率)</option>
-              <option value="factory">源头工厂实景探厂 + 质检背书混剪</option>
-              <option value="compare">传统方案对比实测 + 客户案例快剪</option>
-            </select>
+                <!-- 2. 快剪混剪模板 -->
+                <div class="fg" style="margin-bottom:14px">
+                  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
+                    <span class="lb" style="margin-bottom:0"><span style="color:#ef4444">*</span> 快剪混剪模板</span>
+                    <span style="font-size:11.5px;color:#64748b" id="vgTemplateHintBadge">🎬 点击样片卡片可查看分镜详情</span>
+                  </div>
+                  <select class="ipt" id="vgQuickTemplateSelect">
+                    <option value="">-- 请选择混剪模板 --</option>
+                    <option value="hook3s" selected>黄金前3秒痛点暴击 + 核心卖点快剪 (高完播率推荐)</option>
+                    <option value="factory">源头工厂实景探厂 + 质检背书混剪</option>
+                    <option value="compare">传统方案对比实测 + 客户案例快剪</option>
+                  </select>
+                  <!-- 模板小预览样片 -->
+                  <div id="vgTemplatePreviewCard" style="margin-top:8px;padding:10px 12px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;display:flex;align-items:center;gap:12px;cursor:pointer" title="点击查看此模板样片分镜详情">
+                    <div style="position:relative;width:86px;height:52px;border-radius:6px;overflow:hidden;flex-shrink:0;background:#0f172a;border:1px solid #cbd5e1">
+                      <img id="vgTemplateThumbImg" referrerPolicy="no-referrer" alt="样片缩略图" src="${socScreenImg}" style="width:100%;height:100%;object-fit:cover;opacity:0.9" />
+                      <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.3)">
+                        <span style="background:rgba(255,255,255,0.92);color:#4f46e5;width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:bold">▶</span>
+                      </div>
+                    </div>
+                    <div style="flex:1;min-width:0">
+                      <div style="display:flex;align-items:center;gap:6px;margin-bottom:2px">
+                        <span id="vgTemplateNameText" style="font-size:12.5px;font-weight:700;color:#0f172a">黄金 3 秒高转化模板</span>
+                        <span class="pill b" style="font-size:10.5px" id="vgTemplateTagText">高完播率</span>
+                      </div>
+                      <div id="vgTemplateDescText" style="font-size:11.5px;color:#64748b;line-height:1.4">开头痛点抓人，核心利益点极速抛出，适合短视频信息流爆款</div>
+                    </div>
+                    <span style="font-size:11.5px;color:#4f46e5;font-weight:600;white-space:nowrap">查看样片 ↗</span>
+                  </div>
+                </div>
 
-            <!-- 模板小预览样片 + 简短说明 -->
-            <div id="vgTemplatePreviewCard" style="margin-top:8px;padding:10px 12px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;display:flex;align-items:center;gap:12px;cursor:pointer" title="点击查看此模板样片分镜详情">
-              <div style="position:relative;width:86px;height:52px;border-radius:6px;overflow:hidden;flex-shrink:0;background:#0f172a;border:1px solid #cbd5e1">
-                <img id="vgTemplateThumbImg" referrerPolicy="no-referrer" alt="样片缩略图" src="${socScreenImg}" style="width:100%;height:100%;object-fit:cover;opacity:0.9" />
-                <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.3)">
-                  <span style="background:rgba(255,255,255,0.92);color:#4f46e5;width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:bold">▶</span>
+                <!-- 3. 转场特效与卡点节奏 -->
+                <div class="fg" style="margin-bottom:14px">
+                  <span class="lb"><span style="color:#ef4444">*</span> 转场特效与卡点节奏</span>
+                  <select class="ipt" id="vgQuickTransitionSelect">
+                    <option value="beat" selected>智能节拍卡点硬切 + 动感缩放 (爆款推荐)</option>
+                    <option value="smooth">商业平滑叠化 + 柔和推进</option>
+                    <option value="tech">科技感闪白转场 + 数字流光</option>
+                  </select>
+                </div>
+
+                <!-- 4. 快剪分段脚本与片段素材包 -->
+                <div style="margin-bottom:0">
+                  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
+                    <span class="lb" style="margin-bottom:0"><span style="color:#ef4444">*</span> 口播文案分镜台词</span>
+                    <span style="font-size:11.5px;color:#94a3b8">台词驱动自动卡点剪辑，片段画面自动取自素材分组</span>
+                  </div>
+                  <textarea class="ipt" id="vgSegmentScript" rows="3" style="line-height:1.65;margin-bottom:12px" placeholder="仅填写口播台词，画面取自素材分组">360安全科技自主研发云端安全大脑与自研AI杀毒双引擎。毫秒级识别未知勒索与木马威胁，拦截率高达99.98%，全方位守护企业与个人终端数据资产！</textarea>
+
+                  <!-- 4段分句素材切片可视化 -->
+                  <div style="font-size:12px;font-weight:700;color:#475569;margin-bottom:8px">🎞️ 自动切片混剪分段预览 (共 4 个卡点镜头)：</div>
+                  <div style="display:flex;flex-direction:column;gap:8px">
+                    <div class="vg-sentence-row" style="border:1.5px solid #e2e8f0;border-radius:8px;padding:8px 10px;display:flex;align-items:center;gap:10px;background:#f8fafc">
+                      <span style="font-size:11.5px;font-weight:700;color:#6366f1;background:#e0e7ff;padding:2px 6px;border-radius:4px;white-space:nowrap">镜头 1</span>
+                      <div style="position:relative;width:56px;height:38px;border-radius:4px;overflow:hidden;flex-shrink:0">
+                        <img referrerPolicy="no-referrer" alt="片段1" src="${socScreenImg}" style="width:100%;height:100%;object-fit:cover" />
+                        <span style="position:absolute;bottom:2px;right:2px;background:rgba(0,0,0,0.6);color:#fff;font-size:9px;padding:0 3px;border-radius:2px">00:03</span>
+                      </div>
+                      <div style="flex:1;min-width:0;font-size:12px;color:#334155;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">【黄金Hook】360安全科技自主研发云端安全大脑...</div>
+                      <button type="button" class="btn o" style="padding:2px 8px;font-size:11px" onclick="window.showToast&&window.showToast('已切换镜头1素材片段')">替换片段</button>
+                    </div>
+                    <div class="vg-sentence-row" style="border:1.5px solid #e2e8f0;border-radius:8px;padding:8px 10px;display:flex;align-items:center;gap:10px;background:#f8fafc">
+                      <span style="font-size:11.5px;font-weight:700;color:#6366f1;background:#e0e7ff;padding:2px 6px;border-radius:4px;white-space:nowrap">镜头 2</span>
+                      <div style="position:relative;width:56px;height:38px;border-radius:4px;overflow:hidden;flex-shrink:0">
+                        <img referrerPolicy="no-referrer" alt="片段2" src="${endpointDefenseImg}" style="width:100%;height:100%;object-fit:cover" />
+                        <span style="position:absolute;bottom:2px;right:2px;background:rgba(0,0,0,0.6);color:#fff;font-size:9px;padding:0 3px;border-radius:2px">00:04</span>
+                      </div>
+                      <div style="flex:1;min-width:0;font-size:12px;color:#334155;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">【核心卖点】自研AI杀毒双引擎，毫秒级封锁未知勒索...</div>
+                      <button type="button" class="btn o" style="padding:2px 8px;font-size:11px" onclick="window.showToast&&window.showToast('已切换镜头2素材片段')">替换片段</button>
+                    </div>
+                    <div class="vg-sentence-row" style="border:1.5px solid #e2e8f0;border-radius:8px;padding:8px 10px;display:flex;align-items:center;gap:10px;background:#f8fafc">
+                      <span style="font-size:11.5px;font-weight:700;color:#6366f1;background:#e0e7ff;padding:2px 6px;border-radius:4px;white-space:nowrap">镜头 3</span>
+                      <div style="position:relative;width:56px;height:38px;border-radius:4px;overflow:hidden;flex-shrink:0">
+                        <img referrerPolicy="no-referrer" alt="片段3" src="${complianceBadgeImg}" style="width:100%;height:100%;object-fit:cover" />
+                        <span style="position:absolute;bottom:2px;right:2px;background:rgba(0,0,0,0.6);color:#fff;font-size:9px;padding:0 3px;border-radius:2px">00:04</span>
+                      </div>
+                      <div style="flex:1;min-width:0;font-size:12px;color:#334155;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">【实测数据】拦截率高达99.98%，终端资源占用低至3%...</div>
+                      <button type="button" class="btn o" style="padding:2px 8px;font-size:11px" onclick="window.showToast&&window.showToast('已切换镜头3素材片段')">替换片段</button>
+                    </div>
+                    <div class="vg-sentence-row" style="border:1.5px solid #e2e8f0;border-radius:8px;padding:8px 10px;display:flex;align-items:center;gap:10px;background:#f8fafc">
+                      <span style="font-size:11.5px;font-weight:700;color:#6366f1;background:#e0e7ff;padding:2px 6px;border-radius:4px;white-space:nowrap">镜头 4</span>
+                      <div style="position:relative;width:56px;height:38px;border-radius:4px;overflow:hidden;flex-shrink:0">
+                        <img referrerPolicy="no-referrer" alt="片段4" src="${enterpriseCertImg}" style="width:100%;height:100%;object-fit:cover" />
+                        <span style="position:absolute;bottom:2px;right:2px;background:rgba(0,0,0,0.6);color:#fff;font-size:9px;padding:0 3px;border-radius:2px">00:04</span>
+                      </div>
+                      <div style="flex:1;min-width:0;font-size:12px;color:#334155;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">【信任背书】全方位守护企业与个人终端数据资产！</div>
+                      <button type="button" class="btn o" style="padding:2px 8px;font-size:11px" onclick="window.showToast&&window.showToast('已切换镜头4素材片段')">替换片段</button>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div style="flex:1;min-width:0">
-                <div style="display:flex;align-items:center;gap:6px;margin-bottom:2px">
-                  <span id="vgTemplateNameText" style="font-size:12.5px;font-weight:700;color:#0f172a">黄金 3 秒模板</span>
-                  <span class="pill b" style="font-size:10.5px" id="vgTemplateTagText">高完播率</span>
+
+              <!-- ================= 2. 视频字幕面板 (1:1 完美复刻截图) ================= -->
+              <div id="vgSubPanelSubtitle" class="vg-sub-panel" style="display:block">
+                <!-- 1. 素材分组 -->
+                <div style="margin-bottom:20px">
+                  <div style="font-size:13px;font-weight:700;color:#1e293b;margin-bottom:8px;display:flex;align-items:center;gap:4px">
+                    <span style="color:#ef4444;font-size:13px">*</span>
+                    <span>素材分组</span>
+                  </div>
+                  <div style="position:relative">
+                    <select class="ipt" id="vgSubMaterialGroup" style="width:100%;height:38px;padding:0 32px 0 12px;font-size:13px;color:#334155;border:1px solid #e2e8f0;border-radius:6px;background:#ffffff;appearance:none;cursor:pointer">
+                      <option value="all" selected>所有</option>
+                      <option value="factory">360云端安全大脑大屏与防御实测 (10支片段)</option>
+                      <option value="industry">工业互联网安全与等保测评套件 (8支片段)</option>
+                      <option value="product">终端安全防勒索与数据秒级回滚 (12支片段)</option>
+                    </select>
+                    <span style="position:absolute;right:12px;top:50%;transform:translateY(-50%);pointer-events:none;color:#94a3b8;font-size:12px">▼</span>
+                  </div>
                 </div>
-                <div id="vgTemplateDescText" style="font-size:11.5px;color:#64748b;line-height:1.4">开头痛点抓人，核心利益点极速抛出，适合抖音/快手短视频信息流爆款</div>
-              </div>
-              <span style="font-size:11.5px;color:#4f46e5;font-weight:600;white-space:nowrap">查看样片 ↗</span>
-            </div>
-          </div>
 
-          <!-- 3. 转场特效与卡点节奏 (保留不变) -->
-          <div class="fg" style="margin-bottom:14px">
-            <span class="lb"><span style="color:#ef4444">*</span> 转场特效与卡点节奏</span>
-            <select class="ipt" id="vgQuickTransitionSelect">
-              <option value="beat" selected>智能节拍卡点硬切 + 动感缩放</option>
-              <option value="smooth">商业平滑叠化 + 柔和推进</option>
-              <option value="tech">科技感闪白转场 + 数字流光</option>
-            </select>
-          </div>
+                <!-- 2. 文案内容 -->
+                <div style="margin-bottom:24px">
+                  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;flex-wrap:wrap;gap:8px">
+                    <div style="display:flex;align-items:baseline;gap:8px">
+                      <div style="font-size:13px;font-weight:700;color:#1e293b;display:flex;align-items:center;gap:4px">
+                        <span style="color:#ef4444;font-size:13px">*</span>
+                        <span>文案内容</span>
+                      </div>
+                      <span style="font-size:11.5px;color:#94a3b8">
+                        请先选择素材分组，再点击「AI 一键生成」；正文内容来自上方「策划文案」
+                      </span>
+                    </div>
+                    <div style="display:flex;align-items:center;gap:8px">
+                      <!-- 开启原声 Toggle Pill -->
+                      <button type="button" id="vgSubOriginalVoiceBtn" class="vg-pill-toggle active" style="height:26px;padding:0 10px;border-radius:13px;font-size:11.5px;font-weight:600;border:none;background:#6366f1;color:#ffffff;cursor:pointer;display:inline-flex;align-items:center;gap:4px;transition:all 0.16s">
+                        <span>开启原声</span>
+                      </button>
+                      <!-- 倍速 1X Pill -->
+                      <button type="button" id="vgSubSpeedBtn" style="height:26px;padding:0 10px;border-radius:13px;font-size:11.5px;font-weight:600;border:1px solid #c7d2fe;background:#eef2ff;color:#6366f1;cursor:pointer;display:inline-flex;align-items:center;gap:3px;transition:all 0.16s">
+                        <span>1X</span>
+                      </button>
+                      <!-- AI 一键生成 Pill -->
+                      <button type="button" id="vgSubAIGenBtn" style="height:26px;padding:0 12px;border-radius:13px;font-size:11.5px;font-weight:600;border:1px solid #c7d2fe;background:#ffffff;color:#6366f1;cursor:pointer;display:inline-flex;align-items:center;gap:5px;transition:all 0.16s">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 4V2m0 20v-2M8 9l-2-2m14 14-2-2M2 15h2m16 0h2M9 16l-2 2m14-14-2 2"/></svg>
+                        <span>AI 一键生成</span>
+                      </button>
+                    </div>
+                  </div>
 
-          <!-- 4. 口播配音与倍速配置 + BGM选择 (加到同一行) -->
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px">
-            <div class="fg" style="margin-bottom:0">
-              <span class="lb"><span style="color:#ef4444">*</span> 口播配音与倍速配置</span>
-              <div style="display:flex;align-items:center;gap:10px;height:40px;padding:0 12px;border:1px solid #e2e8f0;border-radius:8px;background:#f8fafc">
-                <label style="display:flex;align-items:center;gap:5px;font-size:12.5px;color:#334155;cursor:pointer;white-space:nowrap">
-                  <input type="checkbox" id="vgVoiceToggle" checked style="accent-color:#6366f1" /> 开启素材原声
-                </label>
-                <span style="color:#cbd5e1">|</span>
-                <span style="font-size:12px;color:#64748b;white-space:nowrap">倍速：</span>
-                <select class="ipt" id="vgSpeedSelect" style="height:28px;padding:0 8px;font-size:12px;width:76px">
-                  <option value="0.8">0.8X</option>
-                  <option value="1.0" selected>1.0X</option>
-                  <option value="1.2">1.2X</option>
-                  <option value="1.5">1.5X</option>
-                </select>
+                  <!-- 文案卡片 (紫蓝色激活边框 + 左侧选择视频方块 + 右侧文字框) -->
+                  <div style="border:1.5px solid #6366f1;border-radius:8px;padding:12px;background:#ffffff;position:relative;box-shadow:0 1px 3px rgba(99,102,241,0.06)">
+                    <div style="display:flex;gap:14px;align-items:flex-start">
+                      <!-- 左侧: 选择视频方块 -->
+                      <div id="vgSubPickVideoBtn" style="width:78px;height:78px;border:1.5px dashed #c7d2fe;border-radius:6px;background:#f8fafc;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all 0.16s" title="点击选择或上传视频片段">
+                        <span style="font-size:20px;color:#6366f1;line-height:1;margin-bottom:4px">+</span>
+                        <span style="font-size:11px;color:#6366f1;font-weight:500">选择视频</span>
+                      </div>
+                      <!-- 右侧: 文本输入框 -->
+                      <div style="flex:1;min-width:0">
+                        <textarea id="vgSubScriptInput" rows="3" style="width:100%;border:none;outline:none;resize:none;font-size:13.5px;line-height:1.6;color:#0f172a;font-family:inherit;background:transparent;padding:0" placeholder="请输入字幕文案内容...">123456</textarea>
+                      </div>
+                    </div>
+                    <!-- 卡片底部状态栏: 时间轴 + 字数 + 操作按钮 -->
+                    <div style="display:flex;align-items:center;justify-content:space-between;margin-top:10px;padding-top:8px;border-top:1px dashed #f1f5f9">
+                      <div style="font-size:11px;color:#94a3b8;font-family:monospace" id="vgSubTimeBadge">
+                        00:00 - 00:02
+                      </div>
+                      <div style="display:flex;align-items:center;gap:12px">
+                        <span style="font-size:11px;color:#94a3b8" id="vgSubCharCount">6/200</span>
+                        <!-- 移动/调序图标 -->
+                        <span style="font-size:13px;color:#94a3b8;cursor:pointer" title="调整排序" onclick="window.showToast&&window.showToast('拖拽可调整分段顺序')">✢</span>
+                        <!-- 增加图标 -->
+                        <span style="font-size:14px;color:#94a3b8;cursor:pointer" title="添加新分段" id="vgSubAddSegmentIcon">+</span>
+                        <!-- 删除图标 -->
+                        <span style="font-size:13px;color:#94a3b8;cursor:pointer" title="删除该分段" id="vgSubDeleteSegmentIcon">🗑</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 添加文案按钮 (紫色边框药丸按钮) -->
+                  <div style="margin-top:14px">
+                    <button type="button" id="vgSubAddScriptBtn" style="padding:6px 14px;border-radius:6px;border:1px solid #6366f1;background:#ffffff;color:#6366f1;font-size:12px;font-weight:600;cursor:pointer;display:inline-flex;align-items:center;gap:4px;transition:all 0.16s">
+                      <span>+</span>
+                      <span>添加文案</span>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- 3. 视频比例 -->
+                <div style="margin-bottom:20px">
+                  <div style="font-size:13px;font-weight:700;color:#1e293b;margin-bottom:8px;display:flex;align-items:center;gap:4px">
+                    <span style="color:#ef4444;font-size:13px">*</span>
+                    <span>视频比例</span>
+                  </div>
+                  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+                    <!-- 9:16 竖屏 (默认高亮：紫色边框+浅紫色背景) -->
+                    <div class="vg-ratio-item active" data-vgratio="9:16" id="vgSubRatio916" style="padding:11px 0;text-align:center;border-radius:6px;border:1.5px solid #6366f1;background:#ffffff;color:#6366f1;font-size:12.5px;font-weight:700;cursor:pointer;transition:all 0.16s">
+                      9:16 竖屏
+                    </div>
+                    <!-- 16:9 横屏 -->
+                    <div class="vg-ratio-item" data-vgratio="16:9" id="vgSubRatio169" style="padding:11px 0;text-align:center;border-radius:6px;border:1px solid #e2e8f0;background:#ffffff;color:#475569;font-size:12.5px;font-weight:500;cursor:pointer;transition:all 0.16s">
+                      16:9 横屏
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="fg" style="margin-bottom:0">
-              <span class="lb"><span style="color:#ef4444">*</span> 背景音乐 (BGM) 选择</span>
-              <div style="display:flex;align-items:center;gap:8px;height:40px;padding:0 10px;border:1px solid #e2e8f0;border-radius:8px;background:#f8fafc">
-                <label style="display:flex;align-items:center;gap:5px;font-size:12.5px;color:#334155;cursor:pointer;white-space:nowrap">
-                  <input type="checkbox" id="vgQuickBgmToggle" checked style="accent-color:#6366f1" /> 开启BGM
-                </label>
-                <select class="ipt" id="vgQuickBgmSelect" style="height:28px;padding:0 6px;font-size:12px;flex:1;min-width:0">
+              <!-- ================= 3. 选择声音面板 ================= -->
+              <div id="vgSubPanelVoice" class="vg-sub-panel" style="display:none">
+                <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid #f1f5f9">
+                  <div style="font-size:13px;font-weight:700;color:#1e293b;display:flex;align-items:center;gap:6px">
+                    <span style="color:#6366f1;font-size:11px">■</span>
+                    <span>选择声音 (智能AI超拟真口播音色库)</span>
+                  </div>
+                  <div style="display:flex;align-items:center;gap:12px">
+                    <label style="display:inline-flex;align-items:center;gap:6px;font-size:12px;color:#334155;cursor:pointer">
+                      <input type="checkbox" id="vgVoiceToggle" checked style="accent-color:#6366f1" /> 开启素材原声
+                    </label>
+                    <span style="color:#cbd5e1">|</span>
+                    <label style="display:inline-flex;align-items:center;gap:6px;font-size:12px;color:#10b981;font-weight:600;cursor:pointer">
+                      <input type="checkbox" id="vgVoiceAiToggle" checked style="accent-color:#10b981" /> 开启智能AI配音
+                    </label>
+                  </div>
+                </div>
+
+                <!-- 声音风格标签切换 -->
+                <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;flex-wrap:wrap">
+                  <span style="font-size:12px;color:#64748b">音色风格：</span>
+                  <button type="button" class="vg-voice-filter-tag active" data-vfilter="all" style="padding:3px 10px;border-radius:999px;font-size:11.5px;border:1px solid #4f46e5;background:#eef2ff;color:#4f46e5;font-weight:700;cursor:pointer">全部音色 (6)</button>
+                  <button type="button" class="vg-voice-filter-tag" data-vfilter="biz" style="padding:3px 10px;border-radius:999px;font-size:11.5px;border:1px solid #e2e8f0;background:#fff;color:#64748b;cursor:pointer">沉稳商务</button>
+                  <button type="button" class="vg-voice-filter-tag" data-vfilter="female" style="padding:3px 10px;border-radius:999px;font-size:11.5px;border:1px solid #e2e8f0;background:#fff;color:#64748b;cursor:pointer">知性女声</button>
+                  <button type="button" class="vg-voice-filter-tag" data-vfilter="hot" style="padding:3px 10px;border-radius:999px;font-size:11.5px;border:1px solid #e2e8f0;background:#fff;color:#64748b;cursor:pointer">热血带货</button>
+                  <button type="button" class="vg-voice-filter-tag" data-vfilter="tech" style="padding:3px 10px;border-radius:999px;font-size:11.5px;border:1px solid #e2e8f0;background:#fff;color:#64748b;cursor:pointer">数码科普</button>
+                </div>
+
+                <!-- 6 款精品音色选择卡片网格 -->
+                <div class="vg-voice-cards-grid" id="vgVoiceCardsGrid" style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:16px">
+                  <!-- 卡片 1 (默认选中) -->
+                  <div class="vg-voice-card active" data-voice="v1" data-voicename="360智见-商务云帆" style="border:1.5px solid #6366f1;border-radius:8px;padding:10px 12px;background:#eef2ff;display:flex;align-items:center;justify-content:space-between;cursor:pointer;transition:all 0.16s">
+                    <div style="display:flex;align-items:center;gap:10px">
+                      <div style="width:36px;height:36px;border-radius:50%;background:#4f46e5;color:#fff;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0">👨‍💼</div>
+                      <div>
+                        <div style="font-size:13px;font-weight:700;color:#0f172a;display:flex;align-items:center;gap:6px">
+                          <span>360智见-商务云帆</span>
+                          <span class="pill b" style="font-size:10px;padding:1px 5px">推荐</span>
+                        </div>
+                        <div style="font-size:11.5px;color:#64748b">沉稳大气 · 科技质感 · B2B企业标配</div>
+                      </div>
+                    </div>
+                    <button type="button" class="btn o vg-voice-audition-btn" data-vname="商务云帆" style="padding:3px 8px;font-size:11px;border-radius:6px;background:#fff">🎵 试听</button>
+                  </div>
+
+                  <!-- 卡片 2 -->
+                  <div class="vg-voice-card" data-voice="v2" data-voicename="360智见-知性云雅" style="border:1px solid #e2e8f0;border-radius:8px;padding:10px 12px;background:#ffffff;display:flex;align-items:center;justify-content:space-between;cursor:pointer;transition:all 0.16s">
+                    <div style="display:flex;align-items:center;gap:10px">
+                      <div style="width:36px;height:36px;border-radius:50%;background:#ec4899;color:#fff;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0">👩‍💼</div>
+                      <div>
+                        <div style="font-size:13px;font-weight:700;color:#0f172a">360智见-知性云雅</div>
+                        <div style="font-size:11.5px;color:#64748b">温柔亲和 · 品牌背书 · 咨询科普</div>
+                      </div>
+                    </div>
+                    <button type="button" class="btn o vg-voice-audition-btn" data-vname="知性云雅" style="padding:3px 8px;font-size:11px;border-radius:6px;background:#fff">🎵 试听</button>
+                  </div>
+
+                  <!-- 卡片 3 -->
+                  <div class="vg-voice-card" data-voice="v3" data-voicename="360智见-热血超哥" style="border:1px solid #e2e8f0;border-radius:8px;padding:10px 12px;background:#ffffff;display:flex;align-items:center;justify-content:space-between;cursor:pointer;transition:all 0.16s">
+                    <div style="display:flex;align-items:center;gap:10px">
+                      <div style="width:36px;height:36px;border-radius:50%;background:#ea580c;color:#fff;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0">🔥</div>
+                      <div>
+                        <div style="font-size:13px;font-weight:700;color:#0f172a">360智见-热血超哥</div>
+                        <div style="font-size:11.5px;color:#64748b">极速抓耳 · 爆款带货 · 黄金前3秒破局</div>
+                      </div>
+                    </div>
+                    <button type="button" class="btn o vg-voice-audition-btn" data-vname="热血超哥" style="padding:3px 8px;font-size:11px;border-radius:6px;background:#fff">🎵 试听</button>
+                  </div>
+
+                  <!-- 卡片 4 -->
+                  <div class="vg-voice-card" data-voice="v4" data-voicename="360智见-新锐小宇" style="border:1px solid #e2e8f0;border-radius:8px;padding:10px 12px;background:#ffffff;display:flex;align-items:center;justify-content:space-between;cursor:pointer;transition:all 0.16s">
+                    <div style="display:flex;align-items:center;gap:10px">
+                      <div style="width:36px;height:36px;border-radius:50%;background:#0284c7;color:#fff;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0">💡</div>
+                      <div>
+                        <div style="font-size:13px;font-weight:700;color:#0f172a">360智见-新锐小宇</div>
+                        <div style="font-size:11.5px;color:#64748b">阳光活力 · 数码开箱 · 新新青年</div>
+                      </div>
+                    </div>
+                    <button type="button" class="btn o vg-voice-audition-btn" data-vname="新锐小宇" style="padding:3px 8px;font-size:11px;border-radius:6px;background:#fff">🎵 试听</button>
+                  </div>
+
+                  <!-- 卡片 5 -->
+                  <div class="vg-voice-card" data-voice="v5" data-voicename="360智见-老成沉毅" style="border:1px solid #e2e8f0;border-radius:8px;padding:10px 12px;background:#ffffff;display:flex;align-items:center;justify-content:space-between;cursor:pointer;transition:all 0.16s">
+                    <div style="display:flex;align-items:center;gap:10px">
+                      <div style="width:36px;height:36px;border-radius:50%;background:#475569;color:#fff;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0">🎙️</div>
+                      <div>
+                        <div style="font-size:13px;font-weight:700;color:#0f172a">360智见-老成沉毅</div>
+                        <div style="font-size:11.5px;color:#64748b">深度说理 · 权威解读 · 行业标杆</div>
+                      </div>
+                    </div>
+                    <button type="button" class="btn o vg-voice-audition-btn" data-vname="老成沉毅" style="padding:3px 8px;font-size:11px;border-radius:6px;background:#fff">🎵 试听</button>
+                  </div>
+
+                  <!-- 卡片 6 -->
+                  <div class="vg-voice-card" data-voice="v6" data-voicename="360智见-干练职场" style="border:1px solid #e2e8f0;border-radius:8px;padding:10px 12px;background:#ffffff;display:flex;align-items:center;justify-content:space-between;cursor:pointer;transition:all 0.16s">
+                    <div style="display:flex;align-items:center;gap:10px">
+                      <div style="width:36px;height:36px;border-radius:50%;background:#059669;color:#fff;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0">💼</div>
+                      <div>
+                        <div style="font-size:13px;font-weight:700;color:#0f172a">360智见-干练职场</div>
+                        <div style="font-size:11.5px;color:#64748b">敏捷专业 · 节奏分明 · 方案汇报</div>
+                      </div>
+                    </div>
+                    <button type="button" class="btn o vg-voice-audition-btn" data-vname="干练职场" style="padding:3px 8px;font-size:11px;border-radius:6px;background:#fff">🎵 试听</button>
+                  </div>
+                </div>
+
+                <!-- 语速与音量调节 -->
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:12px 14px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px">
+                  <div class="fg" style="margin-bottom:0">
+                    <span class="lb"><span style="color:#ef4444">*</span> 配音语速倍率</span>
+                    <select class="ipt" id="vgSpeedSelect" style="height:34px">
+                      <option value="0.8">0.8X (慢速叙事)</option>
+                      <option value="1.0" selected>1.0X (标准原速 · 推荐)</option>
+                      <option value="1.2">1.2X (轻快紧凑)</option>
+                      <option value="1.5">1.5X (极速抓耳)</option>
+                    </select>
+                  </div>
+                  <div class="fg" style="margin-bottom:0">
+                    <span class="lb"><span style="color:#ef4444">*</span> 人声音量增益</span>
+                    <div style="display:flex;align-items:center;gap:10px;height:34px">
+                      <input type="range" id="vgVoiceVolSlider" min="50" max="200" value="120" style="flex:1;accent-color:#6366f1" />
+                      <span id="vgVoiceVolValText" style="font-size:12px;font-weight:700;color:#4f46e5;width:42px">120%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ================= 4. 字母样式面板 ================= -->
+              <div id="vgSubPanelStyle" class="vg-sub-panel" style="display:none">
+                <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid #f1f5f9">
+                  <div style="font-size:13px;font-weight:700;color:#1e293b;display:flex;align-items:center;gap:6px">
+                    <span style="color:#6366f1;font-size:11px">■</span>
+                    <span>字母样式 (字幕花字排版定制)</span>
+                  </div>
+                  <span style="font-size:11.5px;color:#10b981;font-weight:600">✓ 点击花字卡片，右侧手机预览实时同步渲染</span>
+                </div>
+
+                <!-- 6 款精选爆款花字预设卡片 -->
+                <div class="vg-style-chips-grid" id="vgStyleChipsGrid" style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:16px">
+                  <!-- 花字 1: 经典白字黑边 -->
+                  <div class="vg-style-chip active" data-style="classic" style="border:1.5px solid #6366f1;border-radius:8px;padding:12px;background:#f5f3ff;box-shadow:0 0 0 1px #6366f1;cursor:pointer;text-align:center;transition:all 0.16s">
+                    <div style="font-size:16px;font-weight:900;color:#ffffff;text-shadow:0 2px 4px rgba(0,0,0,0.9), -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;background:#334155;padding:6px 12px;border-radius:6px;margin-bottom:6px">
+                      经典白字黑边
+                    </div>
+                    <div style="font-size:11.5px;color:#64748b">高对比清晰 · 适配各种背景画面 · 爆款首选</div>
+                  </div>
+
+                  <!-- 花字 2: 爆款小黄字 -->
+                  <div class="vg-style-chip" data-style="yellow" style="border:1px solid #e2e8f0;border-radius:8px;padding:12px;background:#ffffff;cursor:pointer;text-align:center;transition:all 0.16s">
+                    <div style="font-size:16px;font-weight:900;color:#fde047;text-shadow:0 2px 4px rgba(0,0,0,0.9), -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;background:#1e293b;padding:6px 12px;border-radius:6px;margin-bottom:6px">
+                      爆款醒目小黄字
+                    </div>
+                    <div style="font-size:11.5px;color:#64748b">抖音高完播率 · 极度抓眼醒目 · 核心痛点</div>
+                  </div>
+
+                  <!-- 花字 3: 科技荧光蓝 -->
+                  <div class="vg-style-chip" data-style="techblue" style="border:1px solid #e2e8f0;border-radius:8px;padding:12px;background:#ffffff;cursor:pointer;text-align:center;transition:all 0.16s">
+                    <div style="font-size:16px;font-weight:900;color:#38bdf8;text-shadow:0 0 10px #0284c7, 0 0 20px #0369a1;background:#090d16;padding:6px 12px;border-radius:6px;margin-bottom:6px">
+                      科技荧光蓝霓虹
+                    </div>
+                    <div style="font-size:11.5px;color:#64748b">深邃科技感 · 极客商务 · 数字未来风</div>
+                  </div>
+
+                  <!-- 花字 4: 极简毛玻璃 -->
+                  <div class="vg-style-chip" data-style="glass" style="border:1px solid #e2e8f0;border-radius:8px;padding:12px;background:#ffffff;cursor:pointer;text-align:center;transition:all 0.16s">
+                    <div style="font-size:16px;font-weight:800;color:#ffffff;background:rgba(255,255,255,0.25);border:1px solid rgba(255,255,255,0.4);backdrop-filter:blur(6px);padding:6px 12px;border-radius:6px;margin-bottom:6px;box-shadow:0 2px 8px rgba(0,0,0,0.3)">
+                      极简毛玻璃白字
+                    </div>
+                    <div style="font-size:11.5px;color:#64748b">轻奢高级感 · 现代美学 · 适合探厂质感</div>
+                  </div>
+
+                  <!-- 花字 5: 渐变金红 -->
+                  <div class="vg-style-chip" data-style="gradient" style="border:1px solid #e2e8f0;border-radius:8px;padding:12px;background:#ffffff;cursor:pointer;text-align:center;transition:all 0.16s">
+                    <div style="font-size:16px;font-weight:900;background:linear-gradient(135deg,#fbbf24,#ef4444);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-color:#1e293b;padding:6px 12px;border-radius:6px;margin-bottom:6px;text-shadow:0 2px 10px rgba(239,68,68,0.3)">
+                      大促高燃金红渐变
+                    </div>
+                    <div style="font-size:11.5px;color:#64748b">节庆爆单 · 视觉冲击力强 · 限时特惠</div>
+                  </div>
+
+                  <!-- 花字 6: 朋克幻彩紫 -->
+                  <div class="vg-style-chip" data-style="purple" style="border:1px solid #e2e8f0;border-radius:8px;padding:12px;background:#ffffff;cursor:pointer;text-align:center;transition:all 0.16s">
+                    <div style="font-size:16px;font-weight:900;color:#e879f9;text-shadow:0 0 10px #c026d3, 0 0 20px #9333ea;background:#090d16;padding:6px 12px;border-radius:6px;margin-bottom:6px">
+                      潮酷幻彩霓虹紫
+                    </div>
+                    <div style="font-size:11.5px;color:#64748b">年轻化潮流 · 音乐节拍 · 视觉张力</div>
+                  </div>
+                </div>
+
+                <!-- 字体与排版细化配置 -->
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:12px 14px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px">
+                  <div class="fg" style="margin-bottom:0">
+                    <span class="lb"><span style="color:#ef4444">*</span> 字幕选用字体</span>
+                    <select class="ipt" id="vgStyleFontSelect" style="height:34px">
+                      <option value="sans" selected>思源黑体 Heavy (粗壮清晰 · 推荐)</option>
+                      <option value="alipu">阿里巴巴普惠体 (商业无版权风)</option>
+                      <option value="oppo">OPPO Sans Bold (圆润现代科技)</option>
+                      <option value="douyin">抖音美好体 (短视频原生网感)</option>
+                    </select>
+                  </div>
+                  <div class="fg" style="margin-bottom:0">
+                    <span class="lb"><span style="color:#ef4444">*</span> 字幕字号大小</span>
+                    <select class="ipt" id="vgStyleSizeSelect" style="height:34px">
+                      <option value="small">小号 (16px · 紧凑精致)</option>
+                      <option value="medium" selected>标准 (20px · 手机最佳视距)</option>
+                      <option value="large">大号 (24px · 醒目抓人)</option>
+                      <option value="xlarge">特大 (28px · 核心口号)</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ================= 5. 背景音乐面板 ================= -->
+              <div id="vgSubPanelBgm" class="vg-sub-panel" style="display:none">
+                <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid #f1f5f9">
+                  <div style="font-size:13px;font-weight:700;color:#1e293b;display:flex;align-items:center;gap:6px">
+                    <span style="color:#6366f1;font-size:11px">■</span>
+                    <span>背景音乐 (BGM 商用版权音乐库)</span>
+                  </div>
+                  <label style="display:inline-flex;align-items:center;gap:6px;font-size:12.5px;color:#1e293b;font-weight:600;cursor:pointer">
+                    <input type="checkbox" id="vgQuickBgmToggle" checked style="accent-color:#6366f1;width:16px;height:16px" />
+                    <span>开启背景音乐</span>
+                  </label>
+                </div>
+
+                <!-- 音量与混音控制 -->
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;padding:10px 14px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px">
+                  <div class="fg" style="margin-bottom:0">
+                    <span class="lb"><span style="color:#ef4444">*</span> BGM 背景音乐音量</span>
+                    <div style="display:flex;align-items:center;gap:10px;height:34px">
+                      <input type="range" id="vgBgmVolSlider" min="0" max="100" value="25" style="flex:1;accent-color:#6366f1" />
+                      <span id="vgBgmVolValText" style="font-size:12px;font-weight:700;color:#4f46e5;width:36px">25%</span>
+                    </div>
+                  </div>
+                  <div class="fg" style="margin-bottom:0">
+                    <span class="lb"><span style="color:#ef4444">*</span> 智能避让人声</span>
+                    <div style="display:flex;align-items:center;height:34px">
+                      <label style="display:inline-flex;align-items:center;gap:6px;font-size:12px;color:#334155;cursor:pointer">
+                        <input type="checkbox" id="vgBgmDuckingToggle" checked style="accent-color:#6366f1" />
+                        <span>口播出现时自动压低 BGM 12dB (防止掩盖口播)</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 精选 5 首商用版权 BGM 曲目列表 -->
+                <div style="font-size:12.5px;font-weight:700;color:#1e293b;margin-bottom:8px">🎵 精选热播商用曲目 (点击即可试听与一键应用)：</div>
+                <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:14px" id="vgBgmTracksList">
+                  <!-- 曲目 1 (当前默认使用) -->
+                  <div class="vg-bgm-item active" data-bgm="bgm1" data-bgmtitle="极速商界 · 科技领航" style="border:1.5px solid #6366f1;border-radius:8px;padding:10px 12px;background:#eef2ff;display:flex;align-items:center;justify-content:space-between;cursor:pointer;transition:all 0.16s">
+                    <div style="display:flex;align-items:center;gap:10px">
+                      <span style="font-size:18px">💼</span>
+                      <div>
+                        <div style="font-size:13px;font-weight:700;color:#0f172a;display:flex;align-items:center;gap:6px">
+                          <span>《极速商界 · 科技领航》</span>
+                          <span class="pill b" style="font-size:10px;padding:1px 5px">使用中</span>
+                        </div>
+                        <div style="font-size:11.5px;color:#64748b">商务科技节奏 · 128 BPM · 时长 01:15 · 适合企业宣传与产品演示</div>
+                      </div>
+                    </div>
+                    <div style="display:flex;gap:8px">
+                      <button type="button" class="btn o vg-bgm-audition-btn" data-track="极速商界" style="padding:3px 10px;font-size:11.5px;background:#fff">🎵 试听</button>
+                      <button type="button" class="btn vg-bgm-use-btn" data-track="极速商界" style="padding:3px 10px;font-size:11.5px;background:#4f46e5;color:#fff;border:none">✓ 已使用</button>
+                    </div>
+                  </div>
+
+                  <!-- 曲目 2 -->
+                  <div class="vg-bgm-item" data-bgm="bgm2" data-bgmtitle="高燃反转 · 痛点破局" style="border:1px solid #e2e8f0;border-radius:8px;padding:10px 12px;background:#ffffff;display:flex;align-items:center;justify-content:space-between;cursor:pointer;transition:all 0.16s">
+                    <div style="display:flex;align-items:center;gap:10px">
+                      <span style="font-size:18px">🔥</span>
+                      <div>
+                        <div style="font-size:13px;font-weight:700;color:#0f172a">《高燃反转 · 痛点破局》</div>
+                        <div style="font-size:11.5px;color:#64748b">快节奏卡点 · 136 BPM · 时长 00:58 · 黄金3秒爆款信息流</div>
+                      </div>
+                    </div>
+                    <div style="display:flex;gap:8px">
+                      <button type="button" class="btn o vg-bgm-audition-btn" data-track="高燃反转" style="padding:3px 10px;font-size:11.5px;background:#fff">🎵 试听</button>
+                      <button type="button" class="btn o vg-bgm-use-btn" data-track="高燃反转" style="padding:3px 10px;font-size:11.5px">使用</button>
+                    </div>
+                  </div>
+
+                  <!-- 曲目 3 -->
+                  <div class="vg-bgm-item" data-bgm="bgm3" data-bgmtitle="未来脉冲 · 数字前沿" style="border:1px solid #e2e8f0;border-radius:8px;padding:10px 12px;background:#ffffff;display:flex;align-items:center;justify-content:space-between;cursor:pointer;transition:all 0.16s">
+                    <div style="display:flex;align-items:center;gap:10px">
+                      <span style="font-size:18px">🌐</span>
+                      <div>
+                        <div style="font-size:13px;font-weight:700;color:#0f172a">《未来脉冲 · 数字前沿》</div>
+                        <div style="font-size:11.5px;color:#64748b">电子科技律动 · 120 BPM · 时长 01:10 · 智能网联与数字化展厅</div>
+                      </div>
+                    </div>
+                    <div style="display:flex;gap:8px">
+                      <button type="button" class="btn o vg-bgm-audition-btn" data-track="未来脉冲" style="padding:3px 10px;font-size:11.5px;background:#fff">🎵 试听</button>
+                      <button type="button" class="btn o vg-bgm-use-btn" data-track="未来脉冲" style="padding:3px 10px;font-size:11.5px">使用</button>
+                    </div>
+                  </div>
+
+                  <!-- 曲目 4 -->
+                  <div class="vg-bgm-item" data-bgm="bgm4" data-bgmtitle="阳光种草 · 律动轻快" style="border:1px solid #e2e8f0;border-radius:8px;padding:10px 12px;background:#ffffff;display:flex;align-items:center;justify-content:space-between;cursor:pointer;transition:all 0.16s">
+                    <div style="display:flex;align-items:center;gap:10px">
+                      <span style="font-size:18px">✨</span>
+                      <div>
+                        <div style="font-size:13px;font-weight:700;color:#0f172a">《阳光种草 · 律动轻快》</div>
+                        <div style="font-size:11.5px;color:#64748b">轻松欢快 · 114 BPM · 时长 00:45 · 适合生活服务、测评与种草</div>
+                      </div>
+                    </div>
+                    <div style="display:flex;gap:8px">
+                      <button type="button" class="btn o vg-bgm-audition-btn" data-track="阳光种草" style="padding:3px 10px;font-size:11.5px;background:#fff">🎵 试听</button>
+                      <button type="button" class="btn o vg-bgm-use-btn" data-track="阳光种草" style="padding:3px 10px;font-size:11.5px">使用</button>
+                    </div>
+                  </div>
+
+                  <!-- 曲目 5 -->
+                  <div class="vg-bgm-item" data-bgm="bgm5" data-bgmtitle="温暖晨曦 · 品牌叙事" style="border:1px solid #e2e8f0;border-radius:8px;padding:10px 12px;background:#ffffff;display:flex;align-items:center;justify-content:space-between;cursor:pointer;transition:all 0.16s">
+                    <div style="display:flex;align-items:center;gap:10px">
+                      <span style="font-size:18px">🌅</span>
+                      <div>
+                        <div style="font-size:13px;font-weight:700;color:#0f172a">《温暖晨曦 · 品牌叙事》</div>
+                        <div style="font-size:11.5px;color:#64748b">温情治愈 · 95 BPM · 时长 01:30 · 探厂纪实与匠心企业故事</div>
+                      </div>
+                    </div>
+                    <div style="display:flex;gap:8px">
+                      <button type="button" class="btn o vg-bgm-audition-btn" data-track="温暖晨曦" style="padding:3px 10px;font-size:11.5px;background:#fff">🎵 试听</button>
+                      <button type="button" class="btn o vg-bgm-use-btn" data-track="温暖晨曦" style="padding:3px 10px;font-size:11.5px">使用</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 隐藏的传统下拉框以兼容已有逻辑 -->
+                <select class="ipt" id="vgQuickBgmSelect" style="display:none">
                   <option value="bgm1" selected>大气质感商务节奏 (Corporate)</option>
                   <option value="bgm2">现代科技脉冲节奏 (Tech Ambient)</option>
                   <option value="bgm3">轻快科普种草节拍 (Upbeat Cheerful)</option>
-                  <option value="none">无背景音乐 (纯原声/纯口播)</option>
                 </select>
-                <button type="button" id="vgQuickBgmAuditionBtn" class="btn o" style="height:28px;padding:0 8px;font-size:11.5px;border-radius:6px;white-space:nowrap" title="试听当前选中的BGM">
-                  🎵 试听
-                </button>
-              </div>
-            </div>
-          </div>
+                <button type="button" id="vgQuickBgmAuditionBtn" style="display:none"></button>
 
-          <!-- 5. 文案内容 (快剪口播分镜脚本) -->
-          <div class="fg" style="margin-bottom:0">
-            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
-              <span class="lb" style="margin-bottom:0"><span style="color:#ef4444">*</span> 文案内容 (快剪口播分镜脚本)</span>
-              <span style="font-size:11.5px;color:#94a3b8">仅填写口播台词，画面取自素材分组；正文内容来自上方「策划文案」</span>
-            </div>
-            <textarea class="ipt" id="vgSegmentScript" rows="4" style="line-height:1.65" placeholder="仅填写口播台词，画面取自素材分组">360安全科技自主研发云端安全大脑与自研AI杀毒双引擎。毫秒级识别未知勒索与木马威胁，拦截率高达99.98%，全方位守护企业与个人终端数据资产！</textarea>
-          </div>
-        </div>
-
-        <!-- 状态2：Tab=AI生成视频 -> 下方展示AI视频配置面板 (重构左侧菜单 + 面板) -->
-        <div id="vgStateAiPanel" style="display:none;grid-column:span 2;background:#ffffff;border:1px solid #e2e8f0;border-radius:12px;padding:18px 20px">
-          <!-- AI生成提示条 (顶部橙色条专属替换文案) -->
-          <div class="vg-ai-disclaimer-banner" style="background:#fffbeb;border:1px solid #fde68a;color:#92400e;padding:10px 14px;border-radius:8px;font-size:12.5px;display:flex;align-items:center;gap:8px;margin-bottom:14px">
-            <span style="font-size:15px">⚠️</span>
-            <span style="font-weight:600">本视频由AI技术辅助生成，AI生成画面可能存在局限性或不准确性，仅供参考分享；AI生成按时长包计费</span>
-          </div>
-
-          <div style="display:grid;grid-template-columns:145px minmax(0,1fr);gap:16px;align-items:start">
-            <!-- Left Vertical Nav (调整后菜单顺序：1.画面提示词置顶 2.基础设置 3.声音 4.字幕 5.样式 6.BGM) -->
-            <div class="vg-vertical-nav" id="vgVNav">
-              <button type="button" class="vg-vnav-btn active" data-vtab="prompt">
-                <span>🎨</span> 画面提示词
-              </button>
-              <button type="button" class="vg-vnav-btn" data-vtab="basic">
-                <span>⚙️</span> 视频基础设置
-              </button>
-              <button type="button" class="vg-vnav-btn" data-vtab="voice">
-                <span>🎙️</span> 选择声音
-              </button>
-              <button type="button" class="vg-vnav-btn" data-vtab="subtitles">
-                <span>💬</span> 视频字幕
-              </button>
-              <button type="button" class="vg-vnav-btn" data-vtab="styles">
-                <span>🔤</span> 字幕样式
-              </button>
-              <button type="button" class="vg-vnav-btn" data-vtab="bgm">
-                <span>🎧</span> 背景音乐
-              </button>
-            </div>
-
-            <!-- Right Center Config Workspace -->
-            <div class="vg-center-panel" id="vgCenterPanel">
-              <!-- View 1: 画面提示词 (新增，放在最顶部，默认展示) -->
-              <div id="vtabPromptView" style="display:block">
-                <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
-                  <div style="font-size:13.5px;font-weight:750;color:#1e293b">画面提示词</div>
-                  <button type="button" id="vgAiPromptPolishBtn" class="vg-ai-pill-btn" style="padding:3px 10px;font-size:11.5px">
-                    ✨ AI 一键润色镜头提示词
-                  </button>
-                </div>
-                <div style="font-size:12px;color:#94a3b8;margin-bottom:12px">描述画面视觉特征、镜头运动与质感风格；AI 将从零渲染生成连续视频画面</div>
-
-                <div class="fg" style="margin-bottom:10px">
-                  <div class="vg-textarea-counter-wrap">
-                    <textarea class="ipt" id="vgAiPromptInput" rows="5" maxlength="500" style="line-height:1.65" placeholder="描述画面、镜头、光影风格；可附带口播台词。示例：科技机房，网络安全大屏数据流缓慢流动，写实商业质感">科技机房，网络安全大屏数据流缓慢流动，写实商业质感，超清4K分辨率，电影级光影，景深微距特写，冷色调极客氛围。</textarea>
-                    <span class="vg-textarea-counter" id="vgAiPromptCounter">57 / 500</span>
+                <!-- 本地自定义上传 -->
+                <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 14px;border:1.5px dashed #cbd5e1;border-radius:8px;background:#f8fafc">
+                  <div style="display:flex;align-items:center;gap:8px">
+                    <span>📤</span>
+                    <span style="font-size:12px;color:#475569">拥有企业专属原声音频？支持上传自定义本地音频</span>
                   </div>
-                </div>
-
-                <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:14px">
-                  <span style="font-size:11.5px;color:#64748b">快捷镜头词：</span>
-                  <button type="button" class="chip-mini vg-prompt-tag" data-tag="科技机房数据大屏，数字光效流淌">科技机房大屏</button>
-                  <button type="button" class="chip-mini vg-prompt-tag" data-tag="商务办公室，决策人员操作终端实测">商务终端实测</button>
-                  <button type="button" class="chip-mini vg-prompt-tag" data-tag="数字代码雨流光转场，极具未来科技感">数字流光转场</button>
-                  <button type="button" class="chip-mini vg-prompt-tag" data-tag="微距芯片运转光效，电影级真实质感">微距芯片特写</button>
-                  <button type="button" class="chip-mini vg-prompt-tag" data-tag="写实商业广告级光影，4K超清电影画质">商业广告画质</button>
-                </div>
-
-                <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
-                  <div class="fg" style="margin-bottom:0">
-                    <span class="lb"><span style="color:#ef4444">*</span> AI 视频生成模型</span>
-                    <select class="ipt" id="vgAiModelSelect">
-                      <option value="wanxiang" selected>360智见·万象视频大模型 v2.5 (推荐)</option>
-                      <option value="kling">Kling 可灵高动态商业实景模型</option>
-                      <option value="sora">Sora-Turbo 电影级物理世界仿真模型</option>
-                    </select>
-                  </div>
-                  <div class="fg" style="margin-bottom:0">
-                    <span class="lb">画质渲染级别</span>
-                    <select class="ipt" id="vgAiRenderQuality">
-                      <option value="4k" selected>4K 电影级画质 (光线追踪)</option>
-                      <option value="1080p">1080P 超清商业质感</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-
-              <!-- View 2: 视频基础设置 (时长、9:16/16:9、图生图开关) -->
-              <div id="vtabBasicView" style="display:none">
-                <div style="font-size:13.5px;font-weight:750;color:#1e293b;margin-bottom:6px">视频基础设置</div>
-                <div style="font-size:12px;color:#94a3b8;margin-bottom:14px">配置视频时长规格、画幅宽高比与画面参考底图</div>
-
-                <!-- 视频时长：10秒 / 15秒 -->
-                <div class="fg" style="margin-bottom:14px">
-                  <span class="lb"><span style="color:#ef4444">*</span> 视频时长</span>
-                  <div style="display:flex;gap:10px" id="vgDurationOptions">
-                    <button type="button" class="btn active vg-duration-pill" data-duration="10" style="flex:1;padding:10px 14px;border:1.5px solid #4f46e5;background:#eef2ff;color:#4f46e5;font-weight:700;border-radius:8px">
-                      ⏱️ 10 秒 <span style="font-size:11.5px;font-weight:normal;opacity:0.85">(消耗 320 积分)</span>
-                    </button>
-                    <button type="button" class="btn o vg-duration-pill" data-duration="15" style="flex:1;padding:10px 14px;border:1px solid #cbd5e1;background:#ffffff;color:#334155;border-radius:8px">
-                      ⏱️ 15 秒 <span style="font-size:11.5px;font-weight:normal;opacity:0.85">(消耗 480 积分)</span>
-                    </button>
-                  </div>
-                </div>
-
-                <!-- 视频比例：9:16 竖屏 / 16:9 横屏 -->
-                <div class="fg" style="margin-bottom:14px">
-                  <span class="lb"><span style="color:#ef4444">*</span> 视频比例</span>
-                  <div style="display:flex;gap:10px" id="vgRatioOptions">
-                    <button type="button" class="btn active vg-ratio-pill" data-ratio="9:16" style="flex:1;padding:10px 14px;border:1.5px solid #4f46e5;background:#eef2ff;color:#4f46e5;font-weight:700;border-radius:8px">
-                      📱 9:16 竖屏 <span style="font-size:11px;font-weight:normal;opacity:0.85">(抖音 / 快手 / 小红书 / 视频号)</span>
-                    </button>
-                    <button type="button" class="btn o vg-ratio-pill" data-ratio="16:9" style="flex:1;padding:10px 14px;border:1px solid #cbd5e1;background:#ffffff;color:#334155;border-radius:8px">
-                      🖥️ 16:9 横屏 <span style="font-size:11px;font-weight:normal;opacity:0.85">(B站 / 今日头条 / 展厅大屏)</span>
-                    </button>
-                  </div>
-                </div>
-
-                <!-- 画面参考图 (图生视频开关 + 上传框) -->
-                <div class="fg" style="margin-bottom:0">
-                  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
-                    <span class="lb" style="margin-bottom:0"><span style="color:#ef4444">*</span> 画面参考图 (图生视频)</span>
-                    <label style="display:flex;align-items:center;gap:6px;font-size:12.5px;color:#334155;cursor:pointer">
-                      <input type="checkbox" id="vgImg2VidToggle" checked style="accent-color:#6366f1" /> 开启图生视频 (Image-to-Video)
-                    </label>
-                  </div>
-
-                  <div id="vgImg2VidUploadWrap" style="border:1.5px dashed #c7d2fe;border-radius:10px;background:#f8fafc;padding:14px 16px">
-                    <div style="display:flex;align-items:center;gap:14px">
-                      <div style="position:relative;width:96px;height:64px;border-radius:6px;overflow:hidden;border:1px solid #cbd5e1;flex-shrink:0;background:#0f172a">
-                        <img id="vgImg2VidThumb" referrerPolicy="no-referrer" alt="参考图" src="${socScreenImg}" style="width:100%;height:100%;object-fit:cover" />
-                        <span style="position:absolute;bottom:2px;right:2px;background:rgba(0,0,0,0.7);color:#fff;font-size:9.5px;padding:1px 4px;border-radius:3px">已选用</span>
-                      </div>
-                      <div style="flex:1;min-width:0">
-                        <div style="font-size:12.5px;font-weight:700;color:#0f172a;margin-bottom:3px" id="vgImg2VidFileName">360安全大脑可视化防御大屏_底图.jpg</div>
-                        <div style="font-size:11.5px;color:#64748b;margin-bottom:8px">支持 JPG / PNG / WEBP，建议分辨率 ≥ 1080P</div>
-                        <div style="display:flex;align-items:center;gap:8px">
-                          <button type="button" id="vgChangeRefImgBtn" class="btn o" style="padding:3px 10px;font-size:11.5px;border-radius:6px">更换参考图</button>
-                          <span style="font-size:11.5px;color:#64748b">参考图相似权重：<b>75%</b></span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- View 3: 选择声音 (配音音色、口播倍速) -->
-              <div id="vtabVoiceView" style="display:none">
-                <div style="font-size:13px;font-weight:700;color:#1e293b;margin-bottom:6px">选择声音 (AI 拟真数字人配音)</div>
-                <div style="font-size:12px;color:#94a3b8;margin-bottom:12px">点击音色卡片即可切换试听，右侧手机预览实时生效</div>
-
-                <div class="vg-voice-grid" style="margin-bottom:14px">
-                  <div class="vg-voice-card active" data-voice="知性干练商务女声">
-                    <div class="vg-voice-avatar">👩💼</div>
-                    <div style="flex:1;min-width:0">
-                      <div style="font-size:13px;font-weight:700;color:#1e293b">知性干练商务女声</div>
-                      <div style="font-size:11px;color:#64748b">适合企业宣发、产品测评</div>
-                    </div>
-                    <span class="chip-mini on">已选用</span>
-                  </div>
-                  <div class="vg-voice-card" data-voice="浑厚磁性纪录片男声">
-                    <div class="vg-voice-avatar">👨💼</div>
-                    <div style="flex:1;min-width:0">
-                      <div style="font-size:13px;font-weight:700;color:#1e293b">浑厚磁性纪录片男声</div>
-                      <div style="font-size:11px;color:#64748b">适合硬核科技、探厂背书</div>
-                    </div>
-                    <span class="chip-mini">选用</span>
-                  </div>
-                  <div class="vg-voice-card" data-voice="活力种草新媒体女声">
-                    <div class="vg-voice-avatar">👧✨</div>
-                    <div style="flex:1;min-width:0">
-                      <div style="font-size:13px;font-weight:700;color:#1e293b">活力种草新媒体女声</div>
-                      <div style="font-size:11px;color:#64748b">适合痛点种草、避坑科普</div>
-                    </div>
-                    <span class="chip-mini">选用</span>
-                  </div>
-                  <div class="vg-voice-card" data-voice="沉稳权威新闻播音男声">
-                    <div class="vg-voice-avatar">🎙️</div>
-                    <div style="flex:1;min-width:0">
-                      <div style="font-size:13px;font-weight:700;color:#1e293b">沉稳权威新闻播音男声</div>
-                      <div style="font-size:11px;color:#64748b">适合行业报告、合规解读</div>
-                    </div>
-                    <span class="chip-mini">选用</span>
-                  </div>
-                </div>
-
-                <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:12px 14px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px">
-                  <div class="fg" style="margin-bottom:0">
-                    <span class="lb"><span style="color:#ef4444">*</span> 口播倍速调节</span>
-                    <select class="ipt" id="vgAiVoiceSpeed" style="height:34px">
-                      <option value="0.8">0.8X (深沉舒缓)</option>
-                      <option value="1.0" selected>1.0X (标准推荐语速)</option>
-                      <option value="1.2">1.2X (快节奏短视频)</option>
-                      <option value="1.5">1.5X (极速高能带货)</option>
-                    </select>
-                  </div>
-                  <div class="fg" style="margin-bottom:0">
-                    <span class="lb">人声母带级处理</span>
-                    <select class="ipt" style="height:34px">
-                      <option value="studio" selected>智能降噪与人声清晰度增强</option>
-                      <option value="natural">自然原声音场保留</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-
-              <!-- View 4: 视频字幕 (字幕开关、单语/双语、字幕断句) -->
-              <div id="vtabSubtitlesView" style="display:none">
-                <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
-                  <div style="font-size:13.5px;font-weight:750;color:#1e293b">视频字幕设置</div>
-                  <label style="display:flex;align-items:center;gap:6px;font-size:12.5px;color:#334155;cursor:pointer">
-                    <input type="checkbox" id="vgSubtitleToggle" checked style="accent-color:#6366f1" /> 开启视频字幕
-                  </label>
-                </div>
-                <div style="font-size:12px;color:#94a3b8;margin-bottom:12px">AI 大模型根据口播音频音轨毫秒级对齐字幕时间轴</div>
-
-                <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px">
-                  <div class="fg" style="margin-bottom:0">
-                    <span class="lb"><span style="color:#ef4444">*</span> 单语 / 双语选择</span>
-                    <select class="ipt" id="vgSubtitleLangSelect">
-                      <option value="single" selected>单语字幕 (标准中文)</option>
-                      <option value="bilingual">双语对照 (中英双语对照)</option>
-                    </select>
-                  </div>
-                  <div class="fg" style="margin-bottom:0">
-                    <span class="lb"><span style="color:#ef4444">*</span> 字幕智能断句方式</span>
-                    <select class="ipt" id="vgAiSubtitleSplit">
-                      <option value="semantic" selected>AI 语义呼吸断句 (每行 ≤ 14字)</option>
-                      <option value="keyword">核心关键词高亮放大</option>
-                      <option value="rhythm">逐行匀速断句</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="fg" style="margin-bottom:0">
-                  <span class="lb">口播与字幕内容 (实时对齐)</span>
-                  <textarea class="ipt" id="vgAiSubtitleText" rows="4" style="line-height:1.65">360安全科技自主研发云端安全大脑与自研AI杀毒双引擎。毫秒级识别未知勒索与木马威胁，拦截率高达99.98%，全方位守护企业与个人终端数据资产！</textarea>
-                </div>
-              </div>
-
-              <!-- View 5: 字幕样式 (字体、颜色、字号) -->
-              <div id="vtabStylesView" style="display:none">
-                <div style="font-size:13px;font-weight:700;color:#1e293b;margin-bottom:6px">字幕样式 (花字排版与视觉定制)</div>
-                <div style="font-size:12px;color:#94a3b8;margin-bottom:12px">选择高辨识度花字模板，提升短视频前 3 秒视觉停留率</div>
-
-                <div class="vg-style-grid" style="margin-bottom:14px">
-                  <div class="vg-style-chip active" data-style="default">
-                    <div style="font-size:13.5px;font-weight:800;color:#ffffff;background:rgba(15,23,42,0.78);padding:8px;border-radius:6px">经典白字半透黑底</div>
-                    <div style="font-size:11px;color:#64748b;margin-top:4px">清晰易读 · 商务通用</div>
-                  </div>
-                  <div class="vg-style-chip" data-style="yellow">
-                    <div style="font-size:13.5px;font-weight:800;color:#facc15;background:#1e293b;padding:8px;border-radius:6px;text-shadow:0 1px 2px #000">抖音热播黄黑描边</div>
-                    <div style="font-size:11px;color:#64748b;margin-top:4px">短视频爆款 · 极具冲击力</div>
-                  </div>
-                  <div class="vg-style-chip" data-style="karaoke">
-                    <div style="font-size:13.5px;font-weight:800;color:#38bdf8;background:rgba(0,0,0,0.7);padding:8px;border-radius:6px">双色卡拉OK渐变</div>
-                    <div style="font-size:11px;color:#64748b;margin-top:4px">逐字音轨高亮 · 视线聚焦</div>
-                  </div>
-                  <div class="vg-style-chip" data-style="minimal">
-                    <div style="font-size:13.5px;font-weight:800;color:#ffffff;background:#334155;padding:8px;border-radius:6px">商业极简无框字体</div>
-                    <div style="font-size:11px;color:#64748b;margin-top:4px">高级雅致 · 品牌宣传适用</div>
-                  </div>
-                </div>
-
-                <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;padding:12px 14px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px">
-                  <div class="fg" style="margin-bottom:0">
-                    <span class="lb">字体选择</span>
-                    <select class="ipt" id="vgSubtitleFont" style="height:32px">
-                      <option value="pingfang" selected>苹方黑体 (标准)</option>
-                      <option value="source">思源黑体 Heavy</option>
-                      <option value="douyin">抖音热潮超粗黑</option>
-                    </select>
-                  </div>
-                  <div class="fg" style="margin-bottom:0">
-                    <span class="lb">字号大小</span>
-                    <select class="ipt" id="vgSubtitleSize" style="height:32px">
-                      <option value="20">20px (精简)</option>
-                      <option value="24" selected>24px (标准推荐)</option>
-                      <option value="28">28px (醒目大字)</option>
-                      <option value="32">32px (超大标题)</option>
-                    </select>
-                  </div>
-                  <div class="fg" style="margin-bottom:0">
-                    <span class="lb">文字颜色</span>
-                    <select class="ipt" id="vgSubtitleColor" style="height:32px">
-                      <option value="#ffffff" selected>纯白 (#ffffff)</option>
-                      <option value="#facc15">爆款黄 (#facc15)</option>
-                      <option value="#38bdf8">科技青 (#38bdf8)</option>
-                      <option value="#10b981">翡翠绿 (#10b981)</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-
-              <!-- View 6: 背景音乐 (保留现有 BGM 列表) -->
-              <div id="vtabBgmView" style="display:none">
-                <div style="font-size:13px;font-weight:700;color:#1e293b;margin-bottom:6px">背景音乐 (BGM)</div>
-                <div style="font-size:12px;color:#94a3b8;margin-bottom:12px">精选商用版权音乐库，自动根据人声口播做智能闪避</div>
-                <div style="display:grid;gap:8px">
-                  <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 14px;border:1px solid #e2e8f0;border-radius:8px;background:#f8fafc">
-                    <div style="display:flex;align-items:center;gap:8px">
-                      <span style="font-size:16px">🎵</span>
-                      <div>
-                        <div style="font-size:13px;font-weight:700;color:#1e293b">大气质感商务节奏 (Corporate Inspiring)</div>
-                        <div style="font-size:11px;color:#64748b">BPM: 110 · 沉稳专业</div>
-                      </div>
-                    </div>
-                    <button class="chip-mini on" id="bgmBtn1" type="button">当前选用</button>
-                  </div>
-                  <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 14px;border:1px solid #e2e8f0;border-radius:8px;background:#fff">
-                    <div style="display:flex;align-items:center;gap:8px">
-                      <span style="font-size:16px">🎵</span>
-                      <div>
-                        <div style="font-size:13px;font-weight:700;color:#1e293b">现代科技脉冲节奏 (Tech Ambient Future)</div>
-                        <div style="font-size:11px;color:#64748b">BPM: 124 · 极具高级感</div>
-                      </div>
-                    </div>
-                    <button class="chip-mini" type="button">选用</button>
-                  </div>
-                  <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 14px;border:1px solid #e2e8f0;border-radius:8px;background:#fff">
-                    <div style="display:flex;align-items:center;gap:8px">
-                      <span style="font-size:16px">🎵</span>
-                      <div>
-                        <div style="font-size:13px;font-weight:700;color:#1e293b">轻快科普种草节拍 (Upbeat Cheerful)</div>
-                        <div style="font-size:11px;color:#64748b">BPM: 118 · 抓人吸睛</div>
-                      </div>
-                    </div>
-                    <button class="chip-mini" type="button">选用</button>
-                  </div>
+                  <button type="button" class="btn o" style="padding:3px 10px;font-size:11.5px" onclick="window.showToast&&window.showToast('请选择本地 MP3 / WAV 格式音频文件')">选择音频文件</button>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <!-- 状态2：Tab=AI生成视频 -> 下方展示AI视频配置面板 (已去掉红框里的全部内容与功能键，将3个功能键的页面拼接成一页) -->
+        <div id="vgStateAiPanel" style="display:none;background:#ffffff;border:1px solid #e2e8f0;border-radius:12px;padding:20px 24px;overflow:hidden">
+          <!-- 3个功能键的页面拼接成一页的容器 (无任何冗余左侧功能键或多余元素) -->
+          <div class="vg-vcontent-panel" id="vgAiContentScrollArea" style="width:100%;max-height:660px;overflow-y:auto;scroll-behavior:smooth">
+              
+              <!-- ================= 模块 1: 视频生成提示词 ================= -->
+              <div id="vgAiSubPanelPrompt" class="vg-ai-sub-panel" style="display:block;margin-bottom:26px;padding-bottom:24px;border-bottom:1.5px dashed #e2e8f0">
+                <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+                  <div style="font-size:14px;font-weight:750;color:#1e293b;display:flex;align-items:center;gap:6px">
+                    <span style="color:#5438dc;font-size:12px">■</span>
+                    <span>视频生成提示词</span>
+                  </div>
+                  <div style="display:flex;align-items:center;gap:8px">
+                    <button type="button" class="btn o" id="vgAiPromptClearBtn" style="padding:4px 10px;font-size:11.5px;cursor:pointer">↺ 清空提示词</button>
+                    <button type="button" class="vg-ai-pill-btn" id="vgAiPromptEnhanceBtn" style="cursor:pointer">
+                      <span>✨</span> AI 智能润色扩写
+                    </button>
+                  </div>
+                </div>
 
+                <!-- 提示词输入区域 -->
+                <div style="position:relative;margin-bottom:12px">
+                  <textarea id="vgAiPromptTextarea" class="ipt" rows="4" style="width:100%;min-height:98px;padding:10px 12px 28px;font-size:13px;line-height:1.6;border:1.5px solid #c7d2fe;background:#fcfdff;border-radius:8px;resize:vertical" placeholder="请用自然语言详细描述视频画面、镜头景别、光影氛围与动态变化，例如：商业4K实拍大片，360智见GEO数字云安全展厅，全息冷蓝光束环绕流动，高清镜头平滑推入，质感细腻逼真...">商业4K极高清实拍，360智见GEO企业数字化展厅，充满现代科技感与未来感，高动态光影流转，全息安全数据大屏缓慢向前推入，浅景深微距实拍，电影工业级画质。</textarea>
+                  <span id="vgAiPromptCharCount" style="position:absolute;bottom:8px;right:12px;font-size:11px;color:#94a3b8;font-variant-numeric:tabular-nums">71 / 500字</span>
+                </div>
+
+                <!-- 灵感提示词快捷追加 -->
+                <div style="margin-bottom:14px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:10px 12px">
+                  <div style="font-size:12px;font-weight:700;color:#475569;margin-bottom:8px;display:flex;align-items:center;gap:6px">
+                    <span>💡 画面灵感词快捷追加：</span>
+                    <span style="font-size:11px;color:#94a3b8;font-weight:400">（点击标签直接追加至提示词末尾）</span>
+                  </div>
+                  <div id="vgAiInspirationTags" style="display:flex;flex-wrap:wrap;gap:6px">
+                    <span class="vg-insp-tag" style="background:#fff;border:1px solid #cbd5e1;padding:3px 9px;border-radius:6px;font-size:11.5px;color:#334155;cursor:pointer;transition:all 0.15s">4K电影工业质感</span>
+                    <span class="vg-insp-tag" style="background:#fff;border:1px solid #cbd5e1;padding:3px 9px;border-radius:6px;font-size:11.5px;color:#334155;cursor:pointer;transition:all 0.15s">360智见全息数据大屏</span>
+                    <span class="vg-insp-tag" style="background:#fff;border:1px solid #cbd5e1;padding:3px 9px;border-radius:6px;font-size:11.5px;color:#334155;cursor:pointer;transition:all 0.15s">科技蓝冷色调光束</span>
+                    <span class="vg-insp-tag" style="background:#fff;border:1px solid #cbd5e1;padding:3px 9px;border-radius:6px;font-size:11.5px;color:#334155;cursor:pointer;transition:all 0.15s">浅景深微距对焦</span>
+                    <span class="vg-insp-tag" style="background:#fff;border:1px solid #cbd5e1;padding:3px 9px;border-radius:6px;font-size:11.5px;color:#334155;cursor:pointer;transition:all 0.15s">镜头缓慢推进特写</span>
+                    <span class="vg-insp-tag" style="background:#fff;border:1px solid #cbd5e1;padding:3px 9px;border-radius:6px;font-size:11.5px;color:#334155;cursor:pointer;transition:all 0.15s">现代极简商务展厅</span>
+                    <span class="vg-insp-tag" style="background:#fff;border:1px solid #cbd5e1;padding:3px 9px;border-radius:6px;font-size:11.5px;color:#334155;cursor:pointer;transition:all 0.15s">慢动作粒子光效</span>
+                  </div>
+                </div>
+
+                <!-- 负面提示词 -->
+                <div>
+                  <div style="font-size:12px;font-weight:700;color:#64748b;margin-bottom:6px;display:flex;align-items:center;gap:6px">
+                    <span>🚫 负向提示词 (避免出现的画面特征)：</span>
+                  </div>
+                  <input type="text" id="vgAiNegPromptInput" class="ipt" style="width:100%;font-size:12px;color:#64748b;background:#f8fafc" value="低分辨率, 模糊画面, 抖动残影, 肢体畸变, 杂乱文字, 水印, 过度曝光, 噪点颗粒" placeholder="输入不希望在视频中出现的画面特征，用逗号隔开" />
+                </div>
+              </div>
+
+              <!-- ================= 模块 2: 视频设置 ================= -->
+              <div id="vgAiSubPanelSettings" class="vg-ai-sub-panel" style="display:block;margin-bottom:26px;padding-bottom:24px;border-bottom:1.5px dashed #e2e8f0">
+                <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
+                  <div style="font-size:14px;font-weight:750;color:#1e293b;display:flex;align-items:center;gap:6px">
+                    <span style="color:#5438dc;font-size:12px">■</span>
+                    <span>视频设置</span>
+                  </div>
+                  <span style="font-size:11.5px;color:#64748b">配置生成时长包、构图比例、分辨率与运镜动态</span>
+                </div>
+
+                <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-bottom:14px">
+                  <!-- 生成时长包 -->
+                  <div class="fg" style="margin-bottom:0">
+                    <span class="lb"><span style="color:#ef4444">*</span> 生成时长包</span>
+                    <div style="display:flex;gap:8px">
+                      <button type="button" class="vg-duration-pill active" data-duration="10" style="flex:1;padding:8px 10px;border-radius:6px;border:1.5px solid #4f46e5;background:#eef2ff;color:#4f46e5;font-weight:700;font-size:12px;cursor:pointer;text-align:center">10秒 / 320积分</button>
+                      <button type="button" class="vg-duration-pill" data-duration="15" style="flex:1;padding:8px 10px;border-radius:6px;border:1px solid #cbd5e1;background:#fff;color:#334155;font-weight:600;font-size:12px;cursor:pointer;text-align:center">15秒 / 480积分</button>
+                    </div>
+                  </div>
+
+                  <!-- 画面构图比例 -->
+                  <div class="fg" style="margin-bottom:0">
+                    <span class="lb"><span style="color:#ef4444">*</span> 画面构图比例</span>
+                    <div style="display:flex;gap:6px">
+                      <button type="button" class="vg-ratio-pill active" data-ratio="9:16" style="flex:1;padding:8px 6px;border-radius:6px;border:1.5px solid #4f46e5;background:#eef2ff;color:#4f46e5;font-weight:700;font-size:12px;cursor:pointer;text-align:center">9:16 竖屏</button>
+                      <button type="button" class="vg-ratio-pill" data-ratio="16:9" style="flex:1;padding:8px 6px;border-radius:6px;border:1px solid #cbd5e1;background:#fff;color:#334155;font-weight:600;font-size:12px;cursor:pointer;text-align:center">16:9 横屏</button>
+                      <button type="button" class="vg-ratio-pill" data-ratio="1:1" style="flex:1;padding:8px 6px;border-radius:6px;border:1px solid #cbd5e1;background:#fff;color:#334155;font-weight:600;font-size:12px;cursor:pointer;text-align:center">1:1 方形</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-bottom:14px">
+                  <!-- 统一画面风格 -->
+                  <div class="fg" style="margin-bottom:0">
+                    <span class="lb"><span style="color:#ef4444">*</span> 统一画面风格</span>
+                    <select class="ipt" id="vgAiVideoStyleSelect" style="height:38px">
+                      <option value="commercial" selected>商业静物实拍 / 4K电影工业质感</option>
+                      <option value="tech">现代科技蓝光 / 数据可视化</option>
+                      <option value="cinematic">电影级光影 / 浅景深微距实拍</option>
+                      <option value="minimal">高级极简风 / 品牌展厅质感</option>
+                      <option value="cyber">赛博科技霓虹 / 强反差光影</option>
+                    </select>
+                  </div>
+
+                  <!-- 输出分辨率 -->
+                  <div class="fg" style="margin-bottom:0">
+                    <span class="lb"><span style="color:#ef4444">*</span> 输出分辨率</span>
+                    <select class="ipt" id="vgAiVideoResSelect" style="height:38px">
+                      <option value="1080p" selected>1080P 超清 (影视推荐)</option>
+                      <option value="720p">720P 高清 (极速预览)</option>
+                      <option value="4k">4K Ultra HD 院线级 (精细渲染)</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px">
+                  <!-- 镜头运镜模式 -->
+                  <div class="fg" style="margin-bottom:0">
+                    <span class="lb">运镜模式 (Camera Motion)</span>
+                    <select class="ipt" id="vgAiMotionSelect" style="height:38px">
+                      <option value="push" selected>镜头缓慢向前推进 (Push In)</option>
+                      <option value="pull">镜头向后拉出全景 (Pull Out)</option>
+                      <option value="pan">水平缓慢平移环绕 (Pan)</option>
+                      <option value="auto">智能大模型自动运镜</option>
+                      <option value="static">微动静止机位 (Subtle)</option>
+                    </select>
+                  </div>
+
+                  <!-- 运镜动态幅度滑块 -->
+                  <div class="fg" style="margin-bottom:0">
+                    <div style="display:flex;justify-content:space-between;margin-bottom:6px">
+                      <span class="lb" style="margin-bottom:0">动态幅度强度</span>
+                      <span id="vgAiMotionStrengthVal" style="font-size:12px;font-weight:700;color:#4f46e5">5 / 10 (中等运动)</span>
+                    </div>
+                    <input type="range" id="vgAiMotionStrengthSlider" min="1" max="10" value="5" style="width:100%;accent-color:#4f46e5;cursor:pointer" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- ================= 模块 3: 画面参考图(图生视频) ================= -->
+              <div id="vgAiSubPanelImageRef" class="vg-ai-sub-panel" style="display:block">
+                <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+                  <div style="font-size:14px;font-weight:750;color:#1e293b;display:flex;align-items:center;gap:6px">
+                    <span style="color:#5438dc;font-size:12px">■</span>
+                    <span>画面参考图 (图生视频)</span>
+                  </div>
+                  <span style="font-size:11.5px;color:#64748b">上传或选用参考图作为画面基准，AI 将以此生成首帧演变与动态画面</span>
+                </div>
+
+                <!-- 参考演变模式切换 -->
+                <div style="margin-bottom:12px">
+                  <div style="font-size:12px;font-weight:700;color:#475569;margin-bottom:6px">图生视频演变模式：</div>
+                  <div style="display:flex;gap:8px" id="vgAiRefModeGroup">
+                    <button type="button" class="vg-ref-mode-btn active" data-refmode="first_frame" style="padding:6px 12px;border-radius:6px;border:1.5px solid #4f46e5;background:#eef2ff;color:#4f46e5;font-size:12px;font-weight:700;cursor:pointer">首帧精准演变 (以参考图为起点向后生成)</button>
+                    <button type="button" class="vg-ref-mode-btn" data-refmode="style_ref" style="padding:6px 12px;border-radius:6px;border:1px solid #cbd5e1;background:#fff;color:#334155;font-size:12px;font-weight:600;cursor:pointer">风格配色参考 (继承构图与视觉基调)</button>
+                  </div>
+                </div>
+
+                <!-- 上传与已选参考图主展示卡片 -->
+                <div style="display:grid;grid-template-columns:130px minmax(0,1fr);gap:14px;background:#f8fafc;border:1.5px solid #c7d2fe;border-radius:10px;padding:12px 14px;margin-bottom:14px;align-items:center">
+                  <!-- 左侧参考图缩略图 -->
+                  <div style="position:relative;border-radius:8px;overflow:hidden;border:1px solid #e2e8f0;background:#0f172a;height:90px">
+                    <img id="vgAiRefCurrentImg" referrerPolicy="no-referrer" alt="画面参考图" src="${socScreenImg}" style="width:100%;height:100%;object-fit:cover" />
+                    <span style="position:absolute;bottom:4px;right:4px;background:rgba(0,0,0,0.65);color:#fff;font-size:10px;padding:1px 5px;border-radius:4px">当前参考图</span>
+                  </div>
+
+                  <!-- 右侧信息与操作 -->
+                  <div>
+                    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px">
+                      <span id="vgAiRefFileName" style="font-size:13px;font-weight:700;color:#0f172a">360智见GEO数字安全大脑大屏.jpg</span>
+                      <span class="pill g" style="font-size:11px">已载入参考图</span>
+                    </div>
+                    <div style="font-size:11.5px;color:#64748b;margin-bottom:10px">
+                      建议尺寸：1920×1080 或 1080×1920，支持 JPG / PNG / WEBP 格式，大小不超过 10MB
+                    </div>
+                    <div style="display:flex;gap:8px">
+                      <input type="file" id="vgAiRefFileInput" accept="image/*" style="display:none" />
+                      <button type="button" class="btn" id="vgAiRefUploadBtn" style="padding:5px 12px;font-size:11.5px;background:#4f46e5;color:#fff;border:none;border-radius:6px;font-weight:600;cursor:pointer">📂 本地上传参考图</button>
+                      <button type="button" class="btn o" id="vgAiRefClearBtn" style="padding:5px 12px;font-size:11.5px;border-radius:6px;cursor:pointer">🗑 移除参考图</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 快捷选用系统素材参考图 -->
+                <div style="margin-bottom:14px">
+                  <div style="font-size:12px;font-weight:700;color:#475569;margin-bottom:8px">或从素材库快速选用高质感参考图：</div>
+                  <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px" id="vgAiQuickRefLibrary">
+                    <div class="vg-quick-ref-item active" data-img="${socScreenImg}" data-title="360安全大脑指挥大屏" style="border:1.5px solid #4f46e5;border-radius:6px;padding:4px;background:#eef2ff;cursor:pointer;text-align:center">
+                      <img src="${socScreenImg}" alt="360安全大脑指挥大屏" style="width:100%;height:50px;object-fit:cover;border-radius:4px;margin-bottom:3px" />
+                      <div style="font-size:11px;font-weight:600;color:#4f46e5;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">安全大脑大屏</div>
+                    </div>
+                    <div class="vg-quick-ref-item" data-img="${endpointDefenseImg}" data-title="天擎终端防御架构图" style="border:1px solid #cbd5e1;border-radius:6px;padding:4px;background:#fff;cursor:pointer;text-align:center">
+                      <img src="${endpointDefenseImg}" alt="天擎终端防御架构图" style="width:100%;height:50px;object-fit:cover;border-radius:4px;margin-bottom:3px" />
+                      <div style="font-size:11px;color:#334155;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">天擎终端架构</div>
+                    </div>
+                    <div class="vg-quick-ref-item" data-img="${complianceBadgeImg}" data-title="合规安全认证标识" style="border:1px solid #cbd5e1;border-radius:6px;padding:4px;background:#fff;cursor:pointer;text-align:center">
+                      <img src="${complianceBadgeImg}" alt="合规安全认证标识" style="width:100%;height:50px;object-fit:cover;border-radius:4px;margin-bottom:3px" />
+                      <div style="font-size:11px;color:#334155;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">合规安全认证</div>
+                    </div>
+                    <div class="vg-quick-ref-item" data-img="${enterpriseCertImg}" data-title="企业资质展厅背书" style="border:1px solid #cbd5e1;border-radius:6px;padding:4px;background:#fff;cursor:pointer;text-align:center">
+                      <img src="${enterpriseCertImg}" alt="企业资质展厅背书" style="width:100%;height:50px;object-fit:cover;border-radius:4px;margin-bottom:3px" />
+                      <div style="font-size:11px;color:#334155;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">企业资质背书</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 参考图影响权重滑块 -->
+                <div>
+                  <div style="display:flex;justify-content:space-between;margin-bottom:6px">
+                    <span style="font-size:12px;font-weight:700;color:#475569">参考图控制权重 (Image Strength)</span>
+                    <span id="vgAiRefStrengthVal" style="font-size:12px;font-weight:700;color:#4f46e5">75% (强力引导)</span>
+                  </div>
+                  <input type="range" id="vgAiRefStrengthSlider" min="20" max="100" value="75" style="width:100%;accent-color:#4f46e5;cursor:pointer" />
+                  <div style="font-size:11px;color:#94a3b8;margin-top:4px">权重越高，生成视频的首帧、色彩与主体结构越严格忠实于参考图。</div>
+                </div>
+
+              </div>
+
+            </div>
+        </div>
         <!-- 状态3：Tab=上传视频 -> 下方新增上传面板：拖拽上传框、文件选择、上传进度、预览 -->
-        <div id="vgStateUploadPanel" style="display:none;grid-column:span 2;background:#ffffff;border:1px solid #e2e8f0;border-radius:12px;padding:18px 20px">
+        <div id="vgStateUploadPanel" style="display:none;background:#ffffff;border:1px solid #e2e8f0;border-radius:12px;padding:18px 20px">
           <!-- 1. 拖拽上传框 & 文件选择 -->
           <div id="vgUploadDropArea" style="border:2px dashed #93c5fd;border-radius:12px;background:#f8fafc;padding:22px 18px;text-align:center;cursor:pointer;transition:all 0.16s ease;margin-bottom:14px">
             <input type="file" id="vgUploadVideoInput" accept="video/*,image/*" style="display:none" />
@@ -1965,22 +2739,14 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
     </div>
 
     <!-- Bottom Action Dock for Video Creation -->
-    <div class="vg-dock-bar">
-      <div style="display:flex;align-items:center;gap:12px">
-        <span class="pill b" style="font-size:12px">⚡ 剃刀极简模式：全链路毫秒级实时联动</span>
-        <span style="font-size:12px;color:#64748b">修改左侧任何关键词、文案、音色与样式，手机屏幕实时同步呈现</span>
-      </div>
-      <div style="display:flex;align-items:center;gap:10px">
-        <button class="btn" id="vgStartRenderBtn" type="button" style="background:linear-gradient(135deg,#4f46e5,#7c3aed);color:#fff;border:none;box-shadow:0 4px 14px rgba(99,102,241,0.32)">
-          <span>🎬</span> 一键合成短视频 (高清 MP4)
-        </button>
-        <button class="btn o" id="vgSaveDraftBtn" type="button">📥 保存至文库</button>
-        <button class="btn o" id="vgDispatchBtn" type="button" style="border-color:#6366f1;color:#4f46e5;font-weight:700">🚀 一键分发全网矩阵</button>
-      </div>
+    <div class="vg-dock-bar" style="background:#ffffff;border:1px solid #e2e8f0;border-radius:10px;padding:12px 18px;margin-top:16px;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.02)">
+      <button class="btn" id="vgStartRenderBtn" type="button" style="width:100%;height:42px;background:#5438dc;color:#ffffff;font-size:14px;font-weight:700;border:none;border-radius:6px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.16s;box-shadow:0 2px 8px rgba(84,56,220,0.28)">
+        确认提交（按需扣除）
+      </button>
+      <button class="btn o" id="vgSaveDraftBtn" type="button" style="display:none"></button>
+      <button class="btn o" id="vgDispatchBtn" type="button" style="display:none"></button>
     </div>
-  </div>
-
-  <!-- View 2: 图文创作 (1:1 复刻两张截图拼接，无上传图片功能键) -->
+  </div>  <!-- View 2: 图文创作 (1:1 复刻两张截图拼接，无上传图片功能键) -->
   <div id="vgGraphicPanel" style="display:none">
     <!-- 1 策划图文文案 (复刻截图1上半部分) -->
     <div class="card vg-step-card" style="margin-bottom:16px;padding:22px 24px">
@@ -3803,42 +4569,29 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
       </div>
     </div>
   </div>
-</div>`;function f(){if(!window.__appInitialized){window.__appInitialized=!0;try{let e={dash:[`首页概览`,`全网AI搜索场景覆盖与GEO增长数据总览`],inc:[`收录查询`,`精准检测文章在各大AI大模型的收录状态与信源偏好`],kb:[`企业知识库`,`维护企业事实、主体资质、核心业务与产品知识源`],persona:[`人群画像`,`从核心产品反推人群特征、搜索场景与采购决策考量`],kw:[`关键词挖掘`,`基于知识库与语义Agent智能挖掘长尾词与高潜搜索词条`],gen:[`内容创作与用户需求画像建模`,`填写或选择下方「核心关键词 + 长尾关键词」，点击右侧绿色 AI Agent 图标即可智能反推「用户画像 → 搜索场景 → 用户痛点」，并在当前页面直接生成标准 3000 字深度长文。`],videographic:[`视频/图文`,`多模态AI短视频与新媒体图文内容生成中心`],articles:[`发布记录`,`统一沉淀全量自动化生成文章与人工上传文档`],pub:[`文章发布`,`选择私人媒体库或权威矩阵媒体一键分发投稿`],agent:[`我的套餐`,`企业服务套餐余量、功能配额明细与账户余额充值`]};window.__geoSwitchPage=function(t){if(!t)return;let n=document.getElementById(t);if(!n)return;document.querySelectorAll(`.page`).forEach(e=>e.classList.remove(`on`)),n.classList.add(`on`),document.querySelectorAll(`.nav a`).forEach(e=>{let n=e.dataset.p===t;e.classList.toggle(`on`,n),e.setAttribute(`aria-current`,n?`page`:`false`)});let r=e[t]||[`360智见GEO`,`企业AI搜索可见性优化平台`],i=document.getElementById(`headerKicker`),a=document.getElementById(`ht`),o=document.getElementById(`headerSubtitle`);i&&(i.textContent=[`dash`,`inc`].includes(t)?`监测与分析`:[`agent`].includes(t)?`服务与账户`:`GEO 内容增长`,i.style.display=t===`gen`?`none`:``),a&&(a.textContent=r[0]),o&&(o.textContent=r[1]),location.hash.slice(1)!==t&&history.replaceState(null,``,`#`+t),window.scrollTo({top:0,behavior:`instant`})},document.querySelectorAll(`.nav a[data-p]`).forEach(e=>{e.onclick=t=>{t.preventDefault(),window.__geoSwitchPage(e.dataset.p)}}),document.querySelectorAll(`.chip`).forEach(e=>e.onclick=()=>{if(e.parentNode.dataset.multi){e.classList.toggle(`on`);return}[...e.parentNode.children].forEach(e=>e.classList.remove(`on`)),e.classList.add(`on`)}),document.querySelectorAll(`table`).forEach(e=>{if(e.parentElement.classList.contains(`table-scroll`))return;let t=document.createElement(`div`);t.className=`table-scroll`,(e.rows[0]?e.rows[0].cells.length:0)>=7&&t.classList.add(`wide`),e.parentNode.insertBefore(t,e),t.appendChild(e)});let t=document.querySelector(`.toast`)||(()=>{let e=document.createElement(`div`);return e.className=`toast`,document.body.appendChild(e),e})(),n;function r(e){t.textContent=e,t.classList.add(`show`),clearTimeout(n),n=setTimeout(()=>t.classList.remove(`show`),1800)}window.showToast=r;document.querySelectorAll(`.geo-step[data-jump]`).forEach(e=>e.onclick=()=>{let t=e.dataset.jump,n=document.querySelector(`.nav a[data-p="`+t+`"]`);n&&n.click()});let i=document.getElementById(`enterpriseName`),a=document.getElementById(`creditCode`),o=document.getElementById(`industryName`),s=document.getElementById(`businessAddress`),c=document.getElementById(`companyContact`),l=document.getElementById(`companyContactPhone`),u=document.getElementById(`companyContactEmail`),d=document.getElementById(`companyCompletion`),f=document.getElementById(`slotC`),p=document.getElementById(`licenseFileInput`),m=document.getElementById(`licenseFileName`),h=!0,g=!0;function _(){let e=[i,a,o,s,c,l,u].every(e=>e&&e.value.trim()),t=/^[0-9+()\-\s]{6,24}$/.test(l.value.trim()),n=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(u.value.trim());return e&&t&&n&&h}function v(){let e=_();return d.textContent=e?`● 已完成主体认证`:`● 基本信息待完善`,d.style.color=e?`#12835a`:`#a86b10`,d.style.background=e?`#e9f8f1`:`#fff5e3`,d.style.borderColor=e?`#d4eedf`:`#f4ddaf`,f&&(f.value=i.value.trim()),e}[i,a,o,s,c,l,u].forEach(e=>e&&e.addEventListener(`input`,()=>{g=!1,v(),d.textContent=`● 基本信息待保存`,d.style.color=`#a86b10`,d.style.background=`#fff5e3`,d.style.borderColor=`#f4ddaf`})),document.getElementById(`saveCompanyInfo`).onclick=()=>{if(!v()){r(`请补全企业信息、联系人电话/邮箱与营业执照`);return}g=!0,v(),r(`企业基本信息已保存，并同步到内容创作`)},document.getElementById(`licenseUploadBtn`).onclick=()=>p.click(),p.onchange=()=>{let e=p.files&&p.files[0];e&&(m.textContent=e.name,h=!0,g=!1,v(),d.textContent=`● 基本信息待保存`,d.style.color=`#a86b10`,d.style.background=`#fff5e3`,d.style.borderColor=`#f4ddaf`,r(`营业执照已更新，请保存基本信息`))};let y=document.getElementById(`kbUploadModal`),b=document.getElementById(`kbFileInput`),x=document.getElementById(`kbTable`),S=document.getElementById(`kbDocType`),C=document.getElementById(`kbModalTitle`),w=null;function T(){y.classList.remove(`show`),w=null}function ee(e){if(!v()||!g){r(`请先完善并保存企业基本信息`),document.querySelector(`.nav a[data-p="kb"]`).click();return}w=e||null,b.value=``,S.value=e?e.querySelector(`.doc-type`).textContent.trim():``,C.textContent=e?`替换知识库文档`:`上传企业文档`,y.classList.add(`show`)}function E(e){e.querySelector(`.kb-replace`).onclick=()=>ee(e),e.querySelector(`.kb-delete`).onclick=()=>{let t=e.querySelector(`.doc-name`).textContent.trim();(typeof window.confirm===`function`?window.confirm(`确认删除「`+t+`」？`):!0)&&(e.remove(),r(`文档已删除`))}}document.getElementById(`kbUploadTop`).onclick=()=>ee(null),document.querySelectorAll(`#kbTable tr`).forEach((e,t)=>{t>0&&E(e)}),document.getElementById(`kbModalClose`).onclick=T,document.getElementById(`kbModalCancel`).onclick=T,y.addEventListener(`click`,e=>{e.target===y&&T()}),document.addEventListener(`keydown`,e=>{e.key===`Escape`&&y.classList.contains(`show`)&&T()}),document.getElementById(`kbModalConfirm`).onclick=()=>{let e=b.files&&b.files[0],t=S.value;if(!t){r(`请选择文件类型`),S.focus();return}if(!e){r(`请选择要上传的文档`),b.focus();return}if(w)w.querySelector(`.doc-name`).textContent=e.name,w.querySelector(`.doc-type`).textContent=t,r(`文档已替换并重新进入知识库处理`);else{let n=x.insertRow(-1);n.innerHTML=`<td class="doc-name"></td><td class="doc-type"></td><td><div class="op-actions"><button class="action-btn kb-replace"><span class="action-icon">↥</span>上传</button><button class="action-btn danger kb-delete"><span class="action-icon">⌫</span>删除</button></div></td>`,n.querySelector(`.doc-name`).textContent=e.name,n.querySelector(`.doc-type`).textContent=t,E(n),r(`文档已加入企业知识库`)}T()};let te=document.getElementById(`keywordEntities`),D=document.getElementById(`personaCoreKeywordSelect`),ne=document.getElementById(`personaLongTailSelect`),O=document.getElementById(`coreKeywordSelect`),re=document.getElementById(`longTailSelect`);function ie(){return[...new Set((te?.value||``).split(/\n+/).map(e=>e.trim()).filter(Boolean))]}window.getEntities=ie;function ae(){let e=ie(),t=document.getElementById(`entityCountPill`);if(t&&(t.textContent=e.length+` 个核心实体`),O){let t=O.value;O.innerHTML=``,e.forEach(e=>{let t=document.createElement(`option`);t.value=t.textContent=e,O.appendChild(t)}),e.includes(t)&&(O.value=t)}if(D){let t=D.value;D.innerHTML=``,e.forEach(e=>{let t=document.createElement(`option`);t.value=t.textContent=e,D.appendChild(t)}),e.includes(t)&&(D.value=t)}let n=document.getElementById(`kwEntityFilter`);if(n){let t=n.value;n.innerHTML=`<option value="">全部核心实体</option>`,e.forEach(e=>{let t=document.createElement(`option`);t.value=t.textContent=e,n.appendChild(t)}),e.includes(t)&&(n.value=t)}k()}function k(){let e=O?.value||D?.value||``,t=[...document.querySelectorAll(`#longTailTable tr`)].slice(1).filter(t=>t.cells[1]&&t.cells[1].textContent.trim()===e).map(e=>e.cells[0]?.textContent.trim()).filter(Boolean);if(re){if(re.innerHTML=``,t.length)t.forEach(e=>{let t=document.createElement(`option`);t.value=t.textContent=e,re.appendChild(t)});else{let e=document.createElement(`option`);e.textContent=`暂无匹配长尾词`,e.disabled=!0,e.selected=!0,re.appendChild(e)}}if(ne){if(ne.innerHTML=``,t.length)t.forEach(e=>{let t=document.createElement(`option`);t.value=t.textContent=e,ne.appendChild(t)});else{let e=document.createElement(`option`);e.textContent=`暂无匹配长尾词`,e.disabled=!0,e.selected=!0,ne.appendChild(e)}}}window.syncLongTails=k;te?.addEventListener(`input`,()=>{document.getElementById(`persona`)?.classList.remove(`agent-generated`),ae(),typeof applyKwFilters==`function`&&applyKwFilters()}),O?.addEventListener(`change`,()=>{D&&(D.value=O.value),k(),typeof updateGenerationSummary==`function`&&updateGenerationSummary()}),D?.addEventListener(`change`,()=>{O&&(O.value=D.value),k(),typeof updateGenerationSummary==`function`&&updateGenerationSummary()}),ae(),v();let oe=document.getElementById(`personaAgentBtn`),se=document.getElementById(`persona`);oe&&(oe.onclick=()=>{oe.classList.add(`running`),oe.setAttribute(`aria-busy`,`true`),setTimeout(()=>{se?.classList.add(`agent-generated`),oe.classList.remove(`running`),oe.removeAttribute(`aria-busy`),r(`人群画像 Agent 已完成分析`)},650)});let ce=document.getElementById(`prefixSuffixAgent`);ce&&(ce.onclick=()=>{if(!ie().length){r(`请先填写至少一个核心实体`);return}ce.classList.add(`running`),ce.setAttribute(`aria-busy`,`true`);let e=document.getElementById(`agentLastRun`);e&&(e.textContent=`Agent 挖掘中…`),setTimeout(()=>{ce.classList.remove(`running`),ce.removeAttribute(`aria-busy`),e&&(e.textContent=`刚刚已挖掘`),r(`长尾词挖掘 Agent 已完成智能拓词与质检`)},700)});let le=document.getElementById(`mediaLibraryTabs`);le&&(le.addEventListener(`click`,e=>{let t=e.target.closest(`.media-library-tab`);if(!t)return;let n=t.dataset.library;le.querySelectorAll(`.media-library-tab`).forEach(e=>e.classList.toggle(`on`,e===t)),document.querySelectorAll(`#pub .media-library-panel`).forEach(e=>e.classList.toggle(`on`,e.dataset.libraryPanel===n))}),document.querySelectorAll(`#pub .library-alt-table .alt-price`).forEach((e,t)=>e.textContent=(t*11+7)%51));let ue=document.getElementById(`articleTabs`),de=document.getElementById(`articleSearchInput`),fe=`auto`;function pe(){return document.querySelector(`[data-article-panel="`+fe+`"]`)}function me(){let e=pe();if(!e)return;let t=(de?.value||``).trim().toLowerCase(),n=0;e.querySelectorAll(`tbody tr`).forEach(e=>{let r=!t||(e.dataset.title||``).toLowerCase().includes(t);e.style.display=r?``:`none`,r&&n++});let r=e.querySelector(`.article-empty`);r&&r.classList.toggle(`show`,n===0)}window.filterArticleRows=me;ue&&ue.addEventListener(`click`,e=>{let t=e.target.closest(`.article-tab`);t&&(fe=t.dataset.articleTab,ue.querySelectorAll(`.article-tab`).forEach(e=>e.classList.toggle(`on`,e===t)),document.querySelectorAll(`.article-table-panel`).forEach(e=>e.classList.toggle(`on`,e.dataset.articlePanel===fe)),me())}),document.getElementById(`articleSearchBtn`)?.addEventListener(`click`,me),de?.addEventListener(`keydown`,e=>{e.key===`Enter`&&me()}),document.getElementById(`articleSearchReset`)?.addEventListener(`click`,()=>{de.value=``,me()}),document.getElementById(`articles`)?.addEventListener(`click`,e=>{let t=e.target.closest(`.article-view`);if(t){r(`正在打开文章：「`+t.closest(`tr`).querySelector(`.article-title`).textContent.trim()+`」`);return}let n=e.target.closest(`.article-delete`);if(n){let e=n.closest(`tr`),t=e.querySelector(`.article-title`).textContent.trim();(typeof window.confirm===`function`?window.confirm(`确认删除文章「`+t+`」？`):!0)&&(e.remove(),r(`文章已删除`),me(),_e())}});let he=document.getElementById(`articleAddModal`);function ge(e){he?.classList.toggle(`show`,e)}document.getElementById(`articleAddBtn`)?.addEventListener(`click`,()=>ge(!0)),document.getElementById(`articleAddClose`)?.addEventListener(`click`,()=>ge(!1)),document.getElementById(`articleAddCancel`)?.addEventListener(`click`,()=>ge(!1)),he?.addEventListener(`click`,e=>{e.target===he&&ge(!1)});function _e(){let e=document.querySelectorAll(`#uploadedArticleTable tbody tr`).length,t=document.getElementById(`uploadedArticleCount`),n=document.getElementById(`uploadedTotal`);t&&(t.textContent=e),n&&(n.textContent=e)}document.getElementById(`articleAddConfirm`)?.addEventListener(`click`,()=>{let e=document.getElementById(`articleAddTitle`).value.trim();if(!e){r(`请填写文章标题`);return}let t=document.getElementById(`articleAddType`).value,n=document.querySelector(`#uploadedArticleTable tbody`),i=document.createElement(`tr`);i.dataset.title=e;let a=new Date(Math.min(Date.now(),new Date(`2026-07-30T23:59:59`).getTime()));i.innerHTML=`<td class="article-title"></td><td><span class="article-type-pill"></span></td><td><span class="article-publish-none">未发布</span></td><td>`+(a.getFullYear()+`-`+String(a.getMonth()+1).padStart(2,`0`)+`-`+String(a.getDate()).padStart(2,`0`)+` `+String(a.getHours()).padStart(2,`0`)+`:`+String(a.getMinutes()).padStart(2,`0`)+`:`+String(a.getSeconds()).padStart(2,`0`))+`</td><td>—</td><td><div class="article-actions"><button class="article-link article-view">查看</button></div></td>`,i.querySelector(`.article-title`).textContent=e,i.querySelector(`.article-type-pill`).textContent=t,n.prepend(i),document.getElementById(`articleAddTitle`).value=``,document.getElementById(`articleAddContent`).value=``,ge(!1),_e(),r(`文章已添加到「上传的文章」`)}),_e();let ve=document.getElementById(`pubFilterPanel`),ye=document.getElementById(`pubMediaTable`);if(ve&&ye){let e=[...ye.tBodies[0].rows],t=document.getElementById(`pubVisibleCount`),n=document.getElementById(`pubFootCount`),i=document.getElementById(`pubFilterCount`),a=document.getElementById(`pubEmpty`);e.forEach((e,t)=>{let n=(t*7+13)%51;e.dataset.priceValue=String(n),e.querySelector(`.pub-price`).textContent=n});function o(){let e={};return ve.querySelectorAll(`.pub-filter-row`).forEach(t=>{let n=t.querySelector(`.pub-filter-option.on`);e[t.dataset.key]=n?n.dataset.value:`不限`}),e}function s(e,t,n){if(!n||n===`不限`||t===`sort`)return!0;if(t===`price`){let t=Number(e.dataset.priceValue||0);return n===`0~50`?t>=0&&t<=50:n===`50~200`?t>50&&t<=200:n===`200~500`?t>200&&t<=500:n===`500~1000`?t>500&&t<=1e3:n===`1000~2000`?t>1e3&&t<=2e3:n===`2000~5000`?t>2e3&&t<=5e3:n!==`5000以上`||t>5e3}return t===`geo`?n===`所有`||(e.dataset.geo||``).split(`,`).includes(n):(e.dataset[t]||``)===n}function c(t){let n=ye.tBodies[0],r=e.filter(e=>e.style.display!==`none`),i=e.filter(e=>e.style.display===`none`),a={价格升序:[`priceValue`,1],价格降序:[`priceValue`,-1],AI收录率升序:[`ai`,1],AI收录率降序:[`ai`,-1],出稿率升序:[`output`,1],出稿率降序:[`output`,-1],出稿时间升序:[`days`,1],出稿时间降序:[`days`,-1],活跃度升序:[`active`,1],活跃度降序:[`active`,-1]};if(a[t]){let[e,n]=a[t];r.sort((t,r)=>(Number(t.dataset[e])-Number(r.dataset[e]))*n)}[...r,...i].forEach(e=>n.appendChild(e))}function l(){let r=o(),l=(document.querySelector(`[data-media-search="private"] .media-library-search-input`)?.value||``).trim().toLowerCase(),u=0;e.forEach(e=>{let t=(e.querySelector(`.media-name`)?.textContent||``).trim().toLowerCase(),n=Object.entries(r).every(([t,n])=>s(e,t,n))&&(!l||t.includes(l));e.style.display=n?``:`none`,n&&u++}),c(r.sort),t.textContent=u,n.textContent=u,i.textContent=u+` 家媒体`,a.classList.toggle(`show`,u===0)}window.__applyPrivateMediaFilters=l,ve.addEventListener(`click`,e=>{let t=e.target.closest(`.pub-filter-option`);t&&(t.closest(`.pub-filter-row`).querySelectorAll(`.pub-filter-option`).forEach(e=>e.classList.remove(`on`)),t.classList.add(`on`),l())}),document.getElementById(`pubFilterReset`).onclick=()=>{ve.querySelectorAll(`.pub-filter-row`).forEach(e=>{e.querySelectorAll(`.pub-filter-option`).forEach(e=>e.classList.remove(`on`));let t=e.querySelector(`.pub-filter-option[data-value="不限"]`)||e.querySelector(`.pub-filter-option`);t&&t.classList.add(`on`)}),l(),r(`媒体筛选条件已重置`)},l()}document.querySelectorAll(`#pub .media-library-search`).forEach(e=>{let t=e.closest(`.media-library-panel`),n=e.dataset.mediaSearch,r=e.querySelector(`.media-library-search-input`),i=e.querySelector(`.media-library-search-query`),a=e.querySelector(`.media-library-search-reset`);function o(){if(n===`private`){window.__applyPrivateMediaFilters?.();return}let e=(r.value||``).trim().toLowerCase(),i=t.querySelector(`.pub-resource-table`);if(!i)return;let a=0;[...i.tBodies[0].rows].forEach(t=>{let n=(t.querySelector(`.media-name`)?.textContent||``).trim().toLowerCase(),r=!e||n.includes(e);t.style.display=r?``:`none`,r&&a++});let o=t.querySelector(`.pub-resource-meta b`);o&&(o.textContent=a)}i.addEventListener(`click`,o),a.addEventListener(`click`,()=>{r.value=``,o()}),r.addEventListener(`keydown`,e=>{e.key===`Enter`&&o()})}),document.getElementById(`articleCount`);let be=document.getElementById(`startRankingTest`),A=document.getElementById(`rankingResults`),j=document.getElementById(`rankTaskStatus`),xe=document.getElementById(`openDiagnosticReport`),Se=document.getElementById(`diagnosticReportTemplate`);be&&A&&be.addEventListener(`click`,()=>{A.classList.remove(`show`),be.disabled=!0,be.textContent=`检测中…`,j&&(j.className=`rank-task-status running`,j.textContent=`正在调用 6 个 AI 平台并生成排名诊断…`),setTimeout(()=>{A.classList.add(`show`),be.disabled=!1,be.textContent=`重新检测`,j&&(j.className=`rank-task-status done`,j.textContent=`检测完成 · 36 条结果 · 诊断报告已生成`),r(`排名检测完成，诊断报告已生成`),A.scrollIntoView({behavior:`smooth`,block:`start`})},720)});function Ce(){let e=Array.from(document.querySelectorAll(`style`)).map(e=>e.textContent||``).join(`
-`)||``,t=Se?.innerHTML||``;return`<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AI搜索可见性诊断报告 · 360智见GEO</title><link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap"><style>`+e+`
-body.report-window{display:block;min-height:100vh;background:#f3f7f5;padding:0;color:#1f2937}.report-window-top{position:sticky;top:0;z-index:30;height:64px;padding:0 34px;display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid #e6ece9}.report-window-brand{display:flex;align-items:center;gap:11px;font-size:16px;font-weight:800}.report-window-logo{width:30px;height:30px;border-radius:10px;display:grid;place-items:center;background:linear-gradient(145deg,#10b981,#059669);color:#fff}.report-window-meta{font-size:12px;color:#64748b}.report-window-actions{display:flex;align-items:center;gap:10px}.report-print{border:1px solid #dfe5e2;background:#fff;color:#526069;border-radius:9px;padding:7px 13px;font:inherit;font-size:12px;font-weight:650;cursor:pointer}.report-document-wrap{max-width:1320px;margin:0 auto;padding:24px 28px 48px}.report-document-title{margin-bottom:18px}.report-document-title h1{font-size:24px;line-height:1.25;margin-bottom:5px}.report-document-title p{font-size:12.5px;color:#64748b}.report-document-wrap>.card{margin-bottom:16px}.report-window .geo-step{cursor:default}.report-window .chip{cursor:default}@media print{.report-window-top{display:none}.report-document-wrap{max-width:none;padding:0}.card{box-shadow:none!important;break-inside:avoid}}</style></head><body class="report-window"><div class="report-window-top"><div><div class="report-window-brand"><span class="report-window-logo">◎</span>360智见GEO · AI搜索可见性诊断报告</div><div class="report-window-meta">AI搜索收录检测报告 · 第3期 · 2026-07-14</div></div><div class="report-window-actions"><button class="report-print" onclick="window.print()">打印 / 导出 PDF</button></div></div><div class="report-document-wrap"><div class="report-document-title"><h1>AI 搜索可见性诊断报告</h1><p>基于本次 6 个问题 × 6 个 AI 平台的排名 / 品牌曝光检测结果自动生成</p></div>`+t+`</div></body></html>`}xe&&Se&&xe.addEventListener(`click`,()=>{let blob=new Blob([Ce()],{type:`text/html;charset=utf-8`}),url=URL.createObjectURL(blob),a=document.createElement(`a`);a.href=url,a.download=`360智见GEO_AI收录检测报告.html`,document.body.appendChild(a),a.click(),a.remove(),URL.revokeObjectURL(url),r(`已生成并下载收录检测报告`)});let we=document.getElementById(`incModeSwitch`),M=document.getElementById(`incQueryInput`),N=document.getElementById(`incModeHint`),Te=document.getElementById(`incTaskStatus`),Ee=document.getElementById(`startInclusionQuery`),De=document.getElementById(`incUrlResult`),Oe=document.getElementById(`incKeywordResult`),ke=document.getElementById(`incKeywordBadge`),Ae=document.getElementById(`incUrlBadge`),je=document.getElementById(`incMainView`),Me=document.getElementById(`incHistoryView`),Ne=document.getElementById(`incHistoryLink`),Pe=document.getElementById(`incHistoryBack`),Fe={url:`https://www.toutiao.com/article/7482915630...`,keyword:`360终端安全防护`},Ie=`url`;function Le(){De?.classList.remove(`show`),Oe?.classList.remove(`show`),Te&&(Te.className=`inc-task-status`,Te.textContent=`请选择检测类型并提交查询`),Ee&&(Ee.disabled=!1,Ee.innerHTML=`<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><span>立即查询</span>`)}function Re(e,t=!1){[`url`,`keyword`].includes(e)&&(Fe[Ie]=M.value,Ie=e,we&&(we.value=e),M.value=Fe[e],e===`url`?(M.placeholder=`请输入文章 URL`,N.textContent=`URL模式：通过文章链接反查各 AI 平台是否已将该内容纳入可引用信源池。`):(M.placeholder=`请输入行业词、品类词或文章标题`,N.textContent=`关键词模式：统计 AI 回答常引用的信源渠道，并按引用次数形成渠道效果排行。`),t||Le())}we?.addEventListener(`change`,()=>Re(we.value)),document.getElementById(`incPlatformGrid`)?.addEventListener(`click`,e=>{let t=e.target.closest(`.inc-platform-card`);t&&(t.classList.toggle(`on`),document.querySelectorAll(`#incPlatformGrid .inc-platform-card.on`).length||(t.classList.add(`on`),r(`至少保留一个 AI 平台`)))}),Ee?.addEventListener(`click`,()=>{let e=M.value.trim();if(!e){M.focus(),r(Ie===`url`?`请输入待检测 URL`:`请输入查询关键词`);return}let t=[...document.querySelectorAll(`#incPlatformGrid .inc-platform-card.on`)].map(e=>e.dataset.incPlatform);if(!t.length){r(`请至少选择一个 AI 平台`);return}Fe[Ie]=e,De?.classList.remove(`show`),Oe?.classList.remove(`show`),Ee.disabled=!0,Ee.innerHTML=`<span style="display:inline-flex;align-items:center;gap:6px">⏳ 查询中…</span>`,Te.className=`inc-task-status running`,Te.textContent=Ie===`url`?`正在查询 `+t.length+` 个 AI 平台的收录状态…`:`正在统计 `+t.length+` 个 AI 平台的信源引用渠道…`,setTimeout(()=>{Ee.disabled=!1,Ee.innerHTML=`<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"/></svg><span>重新查询</span>`,Te.className=`inc-task-status done`,Ie===`url`?(Ae&&(Ae.textContent=`已检测 `+t.length+` 个平台`),document.querySelectorAll(`#incUrlResult tbody tr`).forEach(e=>e.style.display=t.includes(e.dataset.platform)?``:`none`),De.classList.add(`show`),Te.textContent=`URL 查询完成 · 已生成平台收录状态`,De.scrollIntoView({behavior:`smooth`,block:`start`})):(ke&&(ke.textContent=`关键词：`+e),Oe.classList.add(`show`),Te.textContent=`关键词查询完成 · 已生成 AI 收录渠道效果`,Be(`all`),Oe.scrollIntoView({behavior:`smooth`,block:`start`}))},620)}),document.querySelectorAll(`.inc-view-link`).forEach(e=>e.addEventListener(`click`,()=>r(e.dataset.platform+`：已打开收录详情（原型）`)));function ze(e){je?.classList.toggle(`hidden`,e),Me?.classList.toggle(`show`,e);let t=document.getElementById(`ht`),n=document.getElementById(`headerSubtitle`);e?(t&&(t.textContent=`收录查询 · 历史记录`),n&&(n.textContent=`查看过往AI收录检测任务与结果`)):(t&&(t.textContent=`收录查询`),n&&(n.textContent=`验证文章与关键词是否进入AI可引用信源池`),window.scrollTo({top:0,behavior:`smooth`}))}Ne?.addEventListener(`click`,()=>ze(!0)),Pe?.addEventListener(`click`,()=>ze(!1)),document.querySelectorAll(`.inc-history-report`).forEach(e=>e.addEventListener(`click`,()=>{let t=e.closest(`tr`);if(e.classList.contains(`muted`)){r(`该任务仍在查询中，请稍后查看`);return}let n=t.dataset.historyMode||`url`,i=t.dataset.historyQuery||``;ze(!1),Fe[n]=i,Re(n,!0),M.value=i,Te.className=`inc-task-status done`,n===`url`?(De.classList.add(`show`),Oe.classList.remove(`show`)):(Oe.classList.add(`show`),De.classList.remove(`show`),ke&&(ke.textContent=`关键词：`+i),Be(`all`)),setTimeout(()=>document.querySelector(n===`url`?`#incUrlResult`:`#incKeywordResult`)?.scrollIntoView({behavior:`smooth`,block:`start`}),30)}));function Be(e){let t=[...document.querySelectorAll(`#incChannelTable tbody tr`)],n=0;t.forEach(t=>{let r=e===`all`||(t.dataset.platforms||``).split(`,`).includes(e);if(t.style.display=r?``:`none`,r){n++;let e=t.querySelector(`.inc-rank-cell`);e&&(n===1?e.innerHTML=`<span class="rank-medal gold">1</span>`:n===2?e.innerHTML=`<span class="rank-medal silver">2</span>`:n===3?e.innerHTML=`<span class="rank-medal bronze">3</span>`:e.textContent=n)}})}document.getElementById(`incChannelTabs`)?.addEventListener(`click`,e=>{let t=e.target.closest(`.inc-channel-tab`);t&&(document.querySelectorAll(`#incChannelTabs .inc-channel-tab`).forEach(e=>e.classList.toggle(`on`,e===t)),Be(t.dataset.channelPlatform))}),Be(`all`)}catch(e){console.error(`Error in core script 5:`,e)}try{(()=>{let e=document.getElementById(`pub`),t=document.getElementById(`pubArticlePickerModal`);if(!e||!t)return;let n=t.querySelector(`#pubPickerTableBody`),r=t.querySelector(`#pubPickerSearch`),i=t.querySelector(`#pubPickerEmpty`),a=t.querySelector(`#pubPickerConfirm`),o=t.querySelector(`#pubPickerSelectedTitle`),s=t.querySelector(`#pubPickerMediaName`),c=`auto`,l=null,u=null,d=``;function f(e){let t=document.getElementById(e===`auto`?`autoArticleTable`:`uploadedArticleTable`);return t?[...t.tBodies[0].rows]:[]}function p(){let e=f(`auto`).length,n=f(`uploaded`).length;t.querySelector(`#pubPickerAutoCount`).textContent=e,t.querySelector(`#pubPickerUploadedCount`).textContent=n}function m(){l=null,o.textContent=`暂未选择文章`,a.disabled=!0}function h(e){let t=e.querySelectorAll(`td`);return{title:(t[0]?.textContent||e.dataset.title||``).trim(),type:(t[1]?.textContent||``).trim(),published:(t[2]?.textContent||``).trim(),generated:(t[3]?.textContent||``).trim(),submitted:(t[4]?.textContent||``).trim(),sourceRow:e}}function g(){let e=(r.value||``).trim().toLowerCase();n.innerHTML=``;let t=0;f(c).forEach(r=>{let i=h(r);if(e&&!i.title.toLowerCase().includes(e))return;t++;let s=document.createElement(`tr`);s.className=`pub-picker-row`,s.dataset.articleTitle=i.title,s.innerHTML=`<td class="article-title"></td><td><span class="article-type-pill"></span></td><td></td><td></td><td></td><td><span class="pub-picker-radio" aria-hidden="true"></span></td>`,s.children[0].textContent=i.title,s.querySelector(`.article-type-pill`).textContent=i.type,s.children[2].textContent=i.published,s.children[3].textContent=i.generated,s.children[4].textContent=i.submitted,s.addEventListener(`click`,()=>{n.querySelectorAll(`tr`).forEach(e=>e.classList.remove(`selected`)),s.classList.add(`selected`),l=i,o.textContent=i.title,a.disabled=!1}),n.appendChild(s)}),i.classList.toggle(`show`,t===0)}function _(e){t.classList.toggle(`show`,e),e||(u=null,d=``,m())}function v(e){u=e,d=e.closest(`tr`)?.querySelector(`.media-name`)?.textContent.trim()||`当前媒体`,e.closest(`.media-library-panel`)?.dataset.libraryPanel,s.textContent=d,c=`auto`,r.value=``,t.querySelectorAll(`[data-picker-tab]`).forEach(e=>e.classList.toggle(`on`,e.dataset.pickerTab===`auto`)),m(),p(),g(),_(!0)}e.addEventListener(`click`,e=>{let t=e.target.closest(`.pub-submit`);t&&(e.preventDefault(),e.stopPropagation(),e.stopImmediatePropagation&&e.stopImmediatePropagation(),v(t))},!0),t.querySelector(`#pubPickerClose`).addEventListener(`click`,()=>_(!1)),t.querySelector(`#pubPickerCancel`).addEventListener(`click`,()=>_(!1)),t.addEventListener(`click`,e=>{e.target===t&&_(!1)}),t.querySelector(`#pubPickerTabs`).addEventListener(`click`,e=>{let n=e.target.closest(`[data-picker-tab]`);n&&(c=n.dataset.pickerTab,t.querySelectorAll(`[data-picker-tab]`).forEach(e=>e.classList.toggle(`on`,e===n)),m(),g())}),t.querySelector(`#pubPickerSearchBtn`).addEventListener(`click`,()=>{m(),g()}),t.querySelector(`#pubPickerSearchReset`).addEventListener(`click`,()=>{r.value=``,m(),g()}),r.addEventListener(`keydown`,e=>{e.key===`Enter`&&(m(),g())}),a.addEventListener(`click`,()=>{if(!l)return;let e=new Date(Math.min(Date.now(),new Date(`2026-07-30T23:59:59`).getTime())),t=e.getFullYear(),n=String(e.getMonth()+1).padStart(2,`0`),r=String(e.getDate()).padStart(2,`0`),i=String(e.getHours()).padStart(2,`0`),a=String(e.getMinutes()).padStart(2,`0`),o=String(e.getSeconds()).padStart(2,`0`),s=t+`-`+n+`-`+r+` `+i+`:`+a+`:`+o,c=l.sourceRow;if(c){let e=c.querySelectorAll(`td`);e[2]&&(e[2].innerHTML=`<span class="article-publish-review">审核中</span>`),e[4]&&(e[4].textContent=s),c.dataset.pendingMedia=d,c.dataset.submitTime=s}u&&(u.classList.add(`done`),u.textContent=`已投稿`);let f=l.title,p=d;_(!1),showToast(`「`+f+`」已提交至「`+p+`」，文章状态更新为审核中`)})})()}catch(e){console.error(`Error in picker script 6:`,e)}try{(()=>{document.querySelectorAll(`button:not([type])`).forEach(e=>e.type=`button`);let e=[...document.querySelectorAll(`.nav a[data-p]`)],t={dash:[`首页`,`全网AI搜索场景覆盖与GEO增长数据总览`],inc:[`检测分析`,`验证文章与关键词是否进入AI可引用信源池`],kb:[`GEO 内容增长`,`维护企业事实、资质、案例与问答知识源`],persona:[`GEO 内容增长`,`从核心产品反推人群、场景与购买考量`],kw:[`GEO 内容增长`,`生成并筛选面向AI搜索场景的长尾问题词库`],gen:[``,`填写或选择下方「核心关键词 + 长尾关键词」，点击右侧绿色 AI Agent 图标即可智能反推「用户画像 → 搜索场景 → 用户痛点」，并在当前页面直接生成标准 3000 字深度长文。`],videographic:[`GEO 内容增长`,`使用多模态AI模型，生成短视频或新媒体图文。内容基于大模型训练数据生成，可能存在局限性或不准确性。`],articles:[`GEO 内容增长`,`统一管理自动化文章与人工上传内容`],pub:[`GEO 内容增长`,`按媒体属性与GEO适配度选择信源并投稿`],agent:[`账户中心`,`查看企业服务套餐余量、功能配额明细与账户余额充值`]},n=document.getElementById(`headerKicker`),r=document.getElementById(`headerSubtitle`),htEl=document.getElementById(`ht`);function i(i){let a=t[i]||[`360智见GEO`,`AI 搜索可见性优化平台`];n&&(n.textContent=a[0],n.style.display=i===`gen`?`none`:``),i===`gen`&&htEl&&(htEl.textContent=`内容创作与用户需求画像建模`),r&&(r.textContent=a[1]),e.forEach(e=>e.setAttribute(`aria-current`,e.dataset.p===i?`page`:`false`))}e.forEach(e=>{e.setAttribute(`tabindex`,`0`),e.setAttribute(`role`,`button`),e.title=e.textContent.trim(),e.addEventListener(`click`,()=>{i(e.dataset.p),history.replaceState(null,``,`#`+e.dataset.p)}),e.addEventListener(`keydown`,t=>{(t.key===`Enter`||t.key===` `)&&(t.preventDefault(),e.click())})});let a=location.hash.slice(1),o=e.find(e=>e.dataset.p===a);if(o)o.click();else{let t=e.find(e=>e.classList.contains(`on`));t&&i(t.dataset.p)}function s() {
-  const root = document.getElementById("videographic");
-  if (!root) return;
+</div>`;function f(){if(!window.__appInitialized){window.__appInitialized=!0;try{let e={dash:[`首页概览`,`全网AI搜索场景覆盖与GEO增长数据总览`],inc:[`收录查询`,`精准检测文章在各大AI大模型的收录状态与信源偏好`],kb:[`企业知识库`,`维护企业事实、资质、案例与问答知识源，筑牢 AI 搜索可见性与首推引用依据`],material:[`素材库`,`上传本地图片素材，用于文章配图等场景。素材库总量：100.00GB，当前剩余容量99.97GB，已使用31.0MB。(含创作历史图文/视频容量)`],persona:[`人群画像`,`从核心产品反推人群特征、搜索场景与采购决策考量`],kw:[`关键词挖掘`,`基于知识库与语义Agent智能挖掘长尾词与高潜搜索词条`],gen:[`内容创作与用户需求画像建模`,`填写或选择下方「核心关键词 + 长尾关键词」，点击右侧绿色 AI Agent 图标即可智能反推「用户画像 → 搜索场景 → 用户痛点」，并在当前页面直接生成标准 3000 字深度长文。`],videographic:[`视频/图文`,`多模态AI短视频与新媒体图文内容生成中心`],articles:[`发布记录`,`统一沉淀全量自动化生成文章与人工上传文档`],pub:[`文章发布`,`选择私人媒体库或权威矩阵媒体一键分发投稿`],agent:[`我的套餐`,`企业服务套餐余量、功能配额明细与账户余额充值`]};
+window.__geoSwitchPage=function(t){if(!t)return;let n=document.getElementById(t);if(!n)return;document.querySelectorAll(`.page`).forEach(e=>e.classList.remove(`on`)),n.classList.add(`on`),document.querySelectorAll(`.nav a`).forEach(e=>{let isCurr=e.dataset.p===t;e.classList.toggle(`on`,isCurr),e.setAttribute(`aria-current`,isCurr?`page`:`false`)});let r=e[t]||[`360智见GEO`,`企业AI搜索可见性优化平台`],i=document.getElementById(`headerKicker`),a=document.getElementById(`ht`),o=document.getElementById(`headerSubtitle`);i&&(i.textContent=[`dash`,`inc`].includes(t)?`监测与分析`:t===`material`?`设置`:[`agent`].includes(t)?`服务与账户`:`GEO 内容增长`,i.style.display=t===`gen`?`none`:``),a&&(a.textContent=r[0]),o&&(o.textContent=r[1]),location.hash.slice(1)!==t&&history.replaceState(null,``,`#`+t),window.scrollTo({top:0,behavior:`instant`})};
 
-  // 1. 顶部 Tab 切换：视频创作 vs 图文创作
-  const modeBtns = root.querySelectorAll(".vg-tab-btn");
+(window as any).__switchVgMode = function(mode: string) {
   const vidPanel = document.getElementById("vgVideoPanel");
   const grpPanel = document.getElementById("vgGraphicPanel");
   const topVidActions = document.getElementById("vgVideoTopActions");
   const topGrpActions = document.getElementById("vgGraphicTopActions");
-
-  function switchVgMode(mode) {
-    modeBtns.forEach(btn => {
-      const isActive = btn.dataset.vgMode === mode;
-      btn.classList.toggle("on", isActive);
-      btn.classList.toggle("active", isActive);
-    });
-    if (vidPanel) vidPanel.style.display = mode === "video" ? "block" : "none";
-    if (grpPanel) grpPanel.style.display = mode === "graphic" ? "block" : "none";
-    if (topVidActions) topVidActions.style.display = mode === "video" ? "flex" : "none";
-    if (topGrpActions) topGrpActions.style.display = mode === "graphic" ? "flex" : "none";
-  }
-
-  modeBtns.forEach(btn => {
-    btn.addEventListener("click", () => {
-      const mode = btn.dataset.vgMode || "video";
-      switchVgMode(mode);
-      if (typeof showToast === "function") {
-        showToast(mode === "video" ? "已切换至「视频创作」工作区" : "已切换至「图文创作」工作区");
-      }
-    });
+  document.querySelectorAll(".vg-tab-btn").forEach((btn: any) => {
+    const isActive = btn.dataset.vgMode === mode;
+    btn.classList.toggle("on", isActive);
+    btn.classList.toggle("active", isActive);
   });
+  if (vidPanel) vidPanel.style.display = mode === "video" ? "block" : "none";
+  if (grpPanel) grpPanel.style.display = mode === "graphic" ? "block" : "none";
+  if (topVidActions) topVidActions.style.display = mode === "video" ? "flex" : "none";
+  if (topGrpActions) topGrpActions.style.display = mode === "graphic" ? "flex" : "none";
+  if (typeof (window as any).showToast === "function") {
+    (window as any).showToast(mode === "video" ? "已切换至「视频创作」工作区" : "已切换至「图文创作」工作区");
+  }
+};
 
-  // 2. 视频创作方式 Tabs：视频快剪 vs AI生成视频 vs 上传视频
+(window as any).__switchVideoMethod = function(method: string) {
   const methodTabs = document.querySelectorAll("#vgMethodTabs .vg-method-pill");
   const stQuick = document.getElementById("vgStateQuickPanel");
   const stAi = document.getElementById("vgStateAiPanel");
@@ -3846,8 +4599,347 @@ body.report-window{display:block;min-height:100vh;background:#f3f7f5;padding:0;c
   const badge = document.getElementById("vgVideoStateBadge");
   const alertCost = document.getElementById("vgAlertCost");
   const phoneBottomLabel = document.getElementById("vgPhoneBottomLabel");
+  const phoneSimCard = document.querySelector(".vg-phone-simulator-card") as HTMLElement | null;
+  const studioGrid = document.getElementById("vgStudioGrid");
 
-  function switchVideoMethod(method) {
+  methodTabs.forEach((t: any) => {
+    const isActive = t.dataset.vmethod === method;
+    t.classList.toggle("active", isActive);
+    t.classList.toggle("on", isActive);
+  });
+
+  if (stQuick) stQuick.style.display = method === "quick" ? "block" : "none";
+  if (stAi) stAi.style.display = method === "ai" ? "block" : "none";
+  if (stUpload) stUpload.style.display = method === "upload" ? "block" : "none";
+
+  if (phoneSimCard) {
+    phoneSimCard.style.display = method === "ai" ? "none" : "";
+  }
+  if (studioGrid) {
+    studioGrid.style.gridTemplateColumns = method === "ai" ? "1fr" : "";
+  }
+
+  if (badge) {
+    badge.textContent = method === "ai"
+      ? "当前状态2：AI生成视频面板"
+      : method === "upload"
+      ? "当前状态3：上传视频面板（拖拽上传、进度与预览）"
+      : "当前状态1：视频快剪表单面板（图一样式）";
+  }
+
+  if (alertCost) {
+    if (method === "ai") {
+      alertCost.style.display = "none";
+    } else {
+      alertCost.style.display = "";
+      if (method === "quick") {
+        alertCost.innerHTML = '<span style="font-size:14px" id="vgCostIcon">⚡</span><span id="vgCostText"><strong>快剪计费规则</strong>：1 分钟消耗 50 积分，不满 1 分钟按 1 分钟计费；快剪生成失败不扣积分。</span>';
+      } else if (method === "upload") {
+        alertCost.innerHTML = '<span style="font-size:14px" id="vgCostIcon">⚡</span><span id="vgCostText"><strong>本地成片上传</strong>：上传本地已有成片不消耗积分，支持一键质检与全网矩阵分发。</span>';
+      }
+    }
+  }
+
+  if (phoneBottomLabel) {
+    phoneBottomLabel.textContent = method === "quick"
+      ? "📱 快剪实时渲染预览"
+      : method === "ai"
+      ? "📱 AI 分镜画面预演"
+      : "📱 本地视频上传预览";
+  }
+
+  if (typeof (window as any).showToast === "function") {
+    (window as any).showToast(method === "ai" ? "已切换至「AI 生成视频」面板" : method === "upload" ? "已切换至「上传视频」面板" : "已切换至「视频快剪」面板（图一样式）");
+  }
+};
+(window as any).__switchQuickSubNav = function(subKey: string) {
+  const subBtns = document.querySelectorAll("#vgQuickSubNav .vg-vnav-item");
+  const subPanels: Record<string, HTMLElement | null> = {
+    cut: document.getElementById("vgSubPanelCut"),
+    subtitle: document.getElementById("vgSubPanelSubtitle"),
+    voice: document.getElementById("vgSubPanelVoice"),
+    style: document.getElementById("vgSubPanelStyle"),
+    bgm: document.getElementById("vgSubPanelBgm")
+  };
+  subBtns.forEach((btn: any) => {
+    const isActive = btn.dataset.vsub === subKey;
+    btn.classList.toggle("active", isActive);
+  });
+  Object.keys(subPanels).forEach(key => {
+    const el = subPanels[key];
+    if (el) el.style.display = key === subKey ? "block" : "none";
+  });
+  const subBadge = document.getElementById("vgQuickSubBadge");
+  const names: Record<string, string> = {
+    cut: "视频快剪设置",
+    subtitle: "视频字幕设置",
+    voice: "选择声音与配音",
+    style: "字母/字幕样式定制",
+    bgm: "背景音乐配乐"
+  };
+  if (subBadge && names[subKey]) {
+    subBadge.textContent = "当前功能：" + names[subKey];
+  }
+  if (typeof (window as any).showToast === "function") {
+    (window as any).showToast("已切换至「" + (names[subKey] || subKey) + "」功能界面");
+  }
+};
+
+
+document.addEventListener("click", e => {
+  const t = e.target as HTMLElement;
+  if (!t) return;
+
+  const pill = t.closest(".vg-method-pill") as HTMLElement;
+  if (pill) {
+    const m = pill.dataset.vmethod;
+    if (m && typeof (window as any).__switchVideoMethod === "function") {
+      (window as any).__switchVideoMethod(m);
+    }
+    return;
+  }
+
+  const tabBtn = t.closest(".vg-tab-btn") as HTMLElement;
+  if (tabBtn && tabBtn.closest(".vg-tab-bar")) {
+    const mode = tabBtn.dataset.vgMode;
+    if (mode && typeof (window as any).__switchVgMode === "function") {
+      (window as any).__switchVgMode(mode);
+    }
+    return;
+  }
+});
+
+document.querySelectorAll(`.nav a[data-p]`).forEach(e=>{e.onclick=t=>{t.preventDefault(),window.__geoSwitchPage(e.dataset.p)}}),document.querySelectorAll(`.chip`).forEach(e=>e.onclick=()=>{if(e.parentNode.dataset.multi){e.classList.toggle(`on`);return}[...e.parentNode.children].forEach(e=>e.classList.remove(`on`)),e.classList.add(`on`)}),document.querySelectorAll(`table`).forEach(e=>{if(e.parentElement.classList.contains(`table-scroll`))return;let t=document.createElement(`div`);t.className=`table-scroll`,(e.rows[0]?e.rows[0].cells.length:0)>=7&&t.classList.add(`wide`),e.parentNode.insertBefore(t,e),t.appendChild(e)});let t=document.querySelector(`.toast`)||(()=>{let e=document.createElement(`div`);return e.className=`toast`,document.body.appendChild(e),e})(),n;function r(e){t.textContent=e,t.classList.add(`show`),clearTimeout(n),n=setTimeout(()=>t.classList.remove(`show`),1800)}window.showToast=r;document.querySelectorAll(`.geo-step[data-jump]`).forEach(e=>e.onclick=()=>{let t=e.dataset.jump,n=document.querySelector(`.nav a[data-p="`+t+`"]`);n&&n.click()});let i=document.getElementById(`enterpriseName`),a=document.getElementById(`creditCode`),o=document.getElementById(`industryName`),s=document.getElementById(`businessAddress`),c=document.getElementById(`companyContact`),l=document.getElementById(`companyContactPhone`),u=document.getElementById(`companyContactEmail`),d=document.getElementById(`companyCompletion`),f=document.getElementById(`slotC`),p=document.getElementById(`licenseFileInput`),m=document.getElementById(`licenseFileName`),h=!0,g=!0;function _(){let e=[i,a,o,s,c,l,u].every(e=>e&&e.value.trim()),t=/^[0-9+()\-\s]{6,24}$/.test(l.value.trim()),n=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(u.value.trim());return e&&t&&n&&h}function v(){let e=_();return d.textContent=e?`● 已完成主体认证`:`● 基本信息待完善`,d.style.color=e?`#12835a`:`#a86b10`,d.style.background=e?`#e9f8f1`:`#fff5e3`,d.style.borderColor=e?`#d4eedf`:`#f4ddaf`,f&&(f.value=i.value.trim()),e}[i,a,o,s,c,l,u].forEach(e=>e&&e.addEventListener(`input`,()=>{g=!1,v(),d.textContent=`● 基本信息待保存`,d.style.color=`#a86b10`,d.style.background=`#fff5e3`,d.style.borderColor=`#f4ddaf`})),document.getElementById(`saveCompanyInfo`).onclick=()=>{if(!v()){r(`请补全企业信息、联系人电话/邮箱与营业执照`);return}g=!0,v(),r(`企业基本信息已保存，并同步到内容创作`)},document.getElementById(`licenseUploadBtn`).onclick=()=>p.click(),p.onchange=()=>{let e=p.files&&p.files[0];e&&(m.textContent=e.name,h=!0,g=!1,v(),d.textContent=`● 基本信息待保存`,d.style.color=`#a86b10`,d.style.background=`#fff5e3`,d.style.borderColor=`#f4ddaf`,r(`营业执照已更新，请保存基本信息`))};let y=document.getElementById(`kbUploadModal`),b=document.getElementById(`kbFileInput`),x=document.getElementById(`kbTable`),S=document.getElementById(`kbDocType`),C=document.getElementById(`kbModalTitle`),w=null;function T(){y.classList.remove(`show`),w=null}function ee(e){if(!v()||!g){r(`请先完善并保存企业基本信息`),document.querySelector(`.nav a[data-p="kb"]`)?.click();return}w=e||null,b.value=``,S.value=e?e.querySelector(`.doc-type`).textContent.trim():``,C.textContent=e?`替换知识库文档`:`上传企业文档`,y.classList.add(`show`)}function E(e){e.querySelector(`.kb-replace`).onclick=()=>ee(e),e.querySelector(`.kb-delete`).onclick=()=>{let t=e.querySelector(`.doc-name`).textContent.trim();(typeof window.confirm===`function`?window.confirm(`确认删除「`+t+`」？`):!0)&&(e.remove(),r(`文档已删除`))}}document.getElementById(`kbUploadTop`).onclick=()=>ee(null),document.querySelectorAll(`#kbTable tr`).forEach((e,t)=>{t>0&&E(e)}),document.getElementById(`kbModalClose`).onclick=T,document.getElementById(`kbModalCancel`).onclick=T,y.addEventListener(`click`,e=>{e.target===y&&T()}),document.addEventListener(`keydown`,e=>{e.key===`Escape`&&y.classList.contains(`show`)&&T()}),document.getElementById(`kbModalConfirm`).onclick=()=>{let e=b.files&&b.files[0],t=S.value;if(!t){r(`请选择文件类型`),S.focus();return}if(!e){r(`请选择要上传的文档`),b.focus();return}if(w)w.querySelector(`.doc-name`).textContent=e.name,w.querySelector(`.doc-type`).textContent=t,r(`文档已替换并重新进入知识库处理`);else{let n=x.insertRow(-1);n.innerHTML=`<td class="doc-name"></td><td class="doc-type"></td><td><div class="op-actions"><button class="action-btn kb-replace"><span class="action-icon">↥</span>上传</button><button class="action-btn danger kb-delete"><span class="action-icon">⌫</span>删除</button></div></td>`,n.querySelector(`.doc-name`).textContent=e.name,n.querySelector(`.doc-type`).textContent=t,E(n),r(`文档已加入企业知识库`)}T()};let te=document.getElementById(`keywordEntities`),D=document.getElementById(`personaCoreKeywordSelect`),ne=document.getElementById(`personaLongTailSelect`),O=document.getElementById(`coreKeywordSelect`),re=document.getElementById(`longTailSelect`);function ie(){return[...new Set((te?.value||``).split(/\n+/).map(e=>e.trim()).filter(Boolean))]}window.getEntities=ie;function ae(){let e=ie(),t=document.getElementById(`entityCountPill`);if(t&&(t.textContent=e.length+` 个核心实体`),O){let t=O.value;O.innerHTML=``,e.forEach(e=>{let t=document.createElement(`option`);t.value=t.textContent=e,O.appendChild(t)}),e.includes(t)&&(O.value=t)}if(D){let t=D.value;D.innerHTML=``,e.forEach(e=>{let t=document.createElement(`option`);t.value=t.textContent=e,D.appendChild(t)}),e.includes(t)&&(D.value=t)}let n=document.getElementById(`kwEntityFilter`);if(n){let t=n.value;n.innerHTML=`<option value="">全部核心实体</option>`,e.forEach(e=>{let t=document.createElement(`option`);t.value=t.textContent=e,n.appendChild(t)}),e.includes(t)&&(n.value=t)}k()}function k(){let e=O?.value||D?.value||``,t=[...document.querySelectorAll(`#longTailTable tr`)].slice(1).filter(t=>t.cells[1]&&t.cells[1].textContent.trim()===e).map(e=>e.cells[0]?.textContent.trim()).filter(Boolean);if(re){if(re.innerHTML=``,t.length)t.forEach(e=>{let t=document.createElement(`option`);t.value=t.textContent=e,re.appendChild(t)});else{let e=document.createElement(`option`);e.textContent=`暂无匹配长尾词`,e.disabled=!0,e.selected=!0,re.appendChild(e)}}if(ne){if(ne.innerHTML=``,t.length)t.forEach(e=>{let t=document.createElement(`option`);t.value=t.textContent=e,ne.appendChild(t)});else{let e=document.createElement(`option`);e.textContent=`暂无匹配长尾词`,e.disabled=!0,e.selected=!0,ne.appendChild(e)}}}window.syncLongTails=k;te?.addEventListener(`input`,()=>{document.getElementById(`persona`)?.classList.remove(`agent-generated`),ae(),typeof applyKwFilters==`function`&&applyKwFilters()}),O?.addEventListener(`change`,()=>{D&&(D.value=O.value),k(),typeof updateGenerationSummary==`function`&&updateGenerationSummary()}),D?.addEventListener(`change`,()=>{O&&(O.value=D.value),k(),typeof updateGenerationSummary==`function`&&updateGenerationSummary()}),ae(),v();let oe=document.getElementById(`personaAgentBtn`),se=document.getElementById(`persona`);oe&&(oe.onclick=()=>{oe.classList.add(`running`),oe.setAttribute(`aria-busy`,`true`),setTimeout(()=>{se?.classList.add(`agent-generated`),oe.classList.remove(`running`),oe.removeAttribute(`aria-busy`),r(`人群画像 Agent 已完成分析`)},650)});let ce=document.getElementById(`prefixSuffixAgent`);ce&&(ce.onclick=()=>{if(!ie().length){r(`请先填写至少一个核心实体`);return}ce.classList.add(`running`),ce.setAttribute(`aria-busy`,`true`);let e=document.getElementById(`agentLastRun`);e&&(e.textContent=`Agent 挖掘中…`),setTimeout(()=>{ce.classList.remove(`running`),ce.removeAttribute(`aria-busy`),e&&(e.textContent=`刚刚已挖掘`),r(`长尾词挖掘 Agent 已完成智能拓词与质检`)},700)});let le=document.getElementById(`mediaLibraryTabs`);le&&(le.addEventListener(`click`,e=>{let t=e.target.closest(`.media-library-tab`);if(!t)return;let n=t.dataset.library;le.querySelectorAll(`.media-library-tab`).forEach(e=>e.classList.toggle(`on`,e===t)),document.querySelectorAll(`#pub .media-library-panel`).forEach(e=>e.classList.toggle(`on`,e.dataset.libraryPanel===n))}),document.querySelectorAll(`#pub .library-alt-table .alt-price`).forEach((e,t)=>e.textContent=(t*11+7)%51));let ue=document.getElementById(`articleTabs`),de=document.getElementById(`articleSearchInput`),fe=`auto`;function pe(){return document.querySelector(`[data-article-panel="`+fe+`"]`)}function me(){let e=pe();if(!e)return;let t=(de?.value||``).trim().toLowerCase(),n=0;e.querySelectorAll(`tbody tr`).forEach(e=>{let r=!t||(e.dataset.title||``).toLowerCase().includes(t);e.style.display=r?``:`none`,r&&n++});let r=e.querySelector(`.article-empty`);r&&r.classList.toggle(`show`,n===0)}window.filterArticleRows=me;ue&&ue.addEventListener(`click`,e=>{let t=e.target.closest(`.article-tab`);t&&(fe=t.dataset.articleTab,ue.querySelectorAll(`.article-tab`).forEach(e=>e.classList.toggle(`on`,e===t)),document.querySelectorAll(`.article-table-panel`).forEach(e=>e.classList.toggle(`on`,e.dataset.articlePanel===fe)),me())}),document.getElementById(`articleSearchBtn`)?.addEventListener(`click`,me),de?.addEventListener(`keydown`,e=>{e.key===`Enter`&&me()}),document.getElementById(`articleSearchReset`)?.addEventListener(`click`,()=>{de.value=``,me()}),document.getElementById(`articles`)?.addEventListener(`click`,e=>{let t=e.target.closest(`.article-view`);if(t){r(`正在打开文章：「`+t.closest(`tr`).querySelector(`.article-title`).textContent.trim()+`」`);return}let n=e.target.closest(`.article-delete`);if(n){let e=n.closest(`tr`),t=e.querySelector(`.article-title`).textContent.trim();(typeof window.confirm===`function`?window.confirm(`确认删除文章「`+t+`」？`):!0)&&(e.remove(),r(`文章已删除`),me(),_e())}});let he=document.getElementById(`articleAddModal`);function ge(e){he?.classList.toggle(`show`,e)}document.getElementById(`articleAddBtn`)?.addEventListener(`click`,()=>ge(!0)),document.getElementById(`articleAddClose`)?.addEventListener(`click`,()=>ge(!1)),document.getElementById(`articleAddCancel`)?.addEventListener(`click`,()=>ge(!1)),he?.addEventListener(`click`,e=>{e.target===he&&ge(!1)});function _e(){let e=document.querySelectorAll(`#uploadedArticleTable tbody tr`).length,t=document.getElementById(`uploadedArticleCount`),n=document.getElementById(`uploadedTotal`);t&&(t.textContent=e),n&&(n.textContent=e)}document.getElementById(`articleAddConfirm`)?.addEventListener(`click`,()=>{let e=document.getElementById(`articleAddTitle`).value.trim();if(!e){r(`请填写文章标题`);return}let t=document.getElementById(`articleAddType`).value,n=document.querySelector(`#uploadedArticleTable tbody`),i=document.createElement(`tr`);i.dataset.title=e;let a=new Date(Math.min(Date.now(),new Date(`2026-07-30T23:59:59`).getTime()));i.innerHTML=`<td class="article-title"></td><td><span class="article-type-pill"></span></td><td><span class="article-publish-none">未发布</span></td><td>`+(a.getFullYear()+`-`+String(a.getMonth()+1).padStart(2,`0`)+`-`+String(a.getDate()).padStart(2,`0`)+` `+String(a.getHours()).padStart(2,`0`)+`:`+String(a.getMinutes()).padStart(2,`0`)+`:`+String(a.getSeconds()).padStart(2,`0`))+`</td><td>—</td><td><div class="article-actions"><button class="article-link article-view">查看</button></div></td>`,i.querySelector(`.article-title`).textContent=e,i.querySelector(`.article-type-pill`).textContent=t,n.prepend(i),document.getElementById(`articleAddTitle`).value=``,document.getElementById(`articleAddContent`).value=``,ge(!1),_e(),r(`文章已添加到「上传的文章」`)}),_e();let ve=document.getElementById(`pubFilterPanel`),ye=document.getElementById(`pubMediaTable`);if(ve&&ye){let e=[...ye.tBodies[0].rows],t=document.getElementById(`pubVisibleCount`),n=document.getElementById(`pubFootCount`),i=document.getElementById(`pubFilterCount`),a=document.getElementById(`pubEmpty`);e.forEach((e,t)=>{let n=(t*7+13)%51;e.dataset.priceValue=String(n),e.querySelector(`.pub-price`).textContent=n});function o(){let e={};return ve.querySelectorAll(`.pub-filter-row`).forEach(t=>{let n=t.querySelector(`.pub-filter-option.on`);e[t.dataset.key]=n?n.dataset.value:`不限`}),e}function s(e,t,n){if(!n||n===`不限`||t===`sort`)return!0;if(t===`price`){let t=Number(e.dataset.priceValue||0);return n===`0~50`?t>=0&&t<=50:n===`50~200`?t>50&&t<=200:n===`200~500`?t>200&&t<=500:n===`500~1000`?t>500&&t<=1e3:n===`1000~2000`?t>1e3&&t<=2e3:n===`2000~5000`?t>2e3&&t<=5e3:n!==`5000以上`||t>5e3}return t===`geo`?n===`所有`||(e.dataset.geo||``).split(`,`).includes(n):(e.dataset[t]||``)===n}function c(t){let n=ye.tBodies[0],r=e.filter(e=>e.style.display!==`none`),i=e.filter(e=>e.style.display===`none`),a={价格升序:[`priceValue`,1],价格降序:[`priceValue`,-1],AI收录率升序:[`ai`,1],AI收录率降序:[`ai`,-1],出稿率升序:[`output`,1],出稿率降序:[`output`,-1],出稿时间升序:[`days`,1],出稿时间降序:[`days`,-1],活跃度升序:[`active`,1],活跃度降序:[`active`,-1]};if(a[t]){let[e,n]=a[t];r.sort((t,r)=>(Number(t.dataset[e])-Number(r.dataset[e]))*n)}[...r,...i].forEach(e=>n.appendChild(e))}function l(){let r=o(),l=(document.querySelector(`[data-media-search="private"] .media-library-search-input`)?.value||``).trim().toLowerCase(),u=0;e.forEach(e=>{let t=(e.querySelector(`.media-name`)?.textContent||``).trim().toLowerCase(),n=Object.entries(r).every(([t,n])=>s(e,t,n))&&(!l||t.includes(l));e.style.display=n?``:`none`,n&&u++}),c(r.sort),t.textContent=u,n.textContent=u,i.textContent=u+` 家媒体`,a.classList.toggle(`show`,u===0)}window.__applyPrivateMediaFilters=l,ve.addEventListener(`click`,e=>{let t=e.target.closest(`.pub-filter-option`);t&&(t.closest(`.pub-filter-row`).querySelectorAll(`.pub-filter-option`).forEach(e=>e.classList.remove(`on`)),t.classList.add(`on`),l())}),document.getElementById(`pubFilterReset`).onclick=()=>{ve.querySelectorAll(`.pub-filter-row`).forEach(e=>{e.querySelectorAll(`.pub-filter-option`).forEach(e=>e.classList.remove(`on`));let t=e.querySelector(`.pub-filter-option[data-value="不限"]`)||e.querySelector(`.pub-filter-option`);t&&t.classList.add(`on`)}),l(),r(`媒体筛选条件已重置`)},l()}document.querySelectorAll(`#pub .media-library-search`).forEach(e=>{let t=e.closest(`.media-library-panel`),n=e.dataset.mediaSearch,r=e.querySelector(`.media-library-search-input`),i=e.querySelector(`.media-library-search-query`),a=e.querySelector(`.media-library-search-reset`);function o(){if(n===`private`){window.__applyPrivateMediaFilters?.();return}let e=(r.value||``).trim().toLowerCase(),i=t.querySelector(`.pub-resource-table`);if(!i)return;let a=0;[...i.tBodies[0].rows].forEach(t=>{let n=(t.querySelector(`.media-name`)?.textContent||``).trim().toLowerCase(),r=!e||n.includes(e);t.style.display=r?``:`none`,r&&a++});let o=t.querySelector(`.pub-resource-meta b`);o&&(o.textContent=a)}i.addEventListener(`click`,o),a.addEventListener(`click`,()=>{r.value=``,o()}),r.addEventListener(`keydown`,e=>{e.key===`Enter`&&o()})}),document.getElementById(`articleCount`);let be=document.getElementById(`startRankingTest`),A=document.getElementById(`rankingResults`),j=document.getElementById(`rankTaskStatus`),xe=document.getElementById(`openDiagnosticReport`),Se=document.getElementById(`diagnosticReportTemplate`);be&&A&&be.addEventListener(`click`,()=>{A.classList.remove(`show`),be.disabled=!0,be.textContent=`检测中…`,j&&(j.className=`rank-task-status running`,j.textContent=`正在调用 6 个 AI 平台并生成排名诊断…`),setTimeout(()=>{A.classList.add(`show`),be.disabled=!1,be.textContent=`重新检测`,j&&(j.className=`rank-task-status done`,j.textContent=`检测完成 · 36 条结果 · 诊断报告已生成`),r(`排名检测完成，诊断报告已生成`),A.scrollIntoView({behavior:`smooth`,block:`start`})},720)});function Ce(){let e=Array.from(document.querySelectorAll(`style`)).map(e=>e.textContent||``).join(`
+`)||``,t=Se?.innerHTML||``;return`<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AI搜索可见性诊断报告 · 360智见GEO</title><link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap"><style>`+e+`
+body.report-window{display:block;min-height:100vh;background:#f3f7f5;padding:0;color:#1f2937}.report-window-top{position:sticky;top:0;z-index:30;height:64px;padding:0 34px;display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid #e6ece9}.report-window-brand{display:flex;align-items:center;gap:11px;font-size:16px;font-weight:800}.report-window-logo{width:30px;height:30px;border-radius:10px;display:grid;place-items:center;background:linear-gradient(145deg,#10b981,#059669);color:#fff}.report-window-meta{font-size:12px;color:#64748b}.report-window-actions{display:flex;align-items:center;gap:10px}.report-print{border:1px solid #dfe5e2;background:#fff;color:#526069;border-radius:9px;padding:7px 13px;font:inherit;font-size:12px;font-weight:650;cursor:pointer}.report-document-wrap{max-width:1320px;margin:0 auto;padding:24px 28px 48px}.report-document-title{margin-bottom:18px}.report-document-title h1{font-size:24px;line-height:1.25;margin-bottom:5px}.report-document-title p{font-size:12.5px;color:#64748b}.report-document-wrap>.card{margin-bottom:16px}.report-window .geo-step{cursor:default}.report-window .chip{cursor:default}@media print{.report-window-top{display:none}.report-document-wrap{max-width:none;padding:0}.card{box-shadow:none!important;break-inside:avoid}}</style></head><body class="report-window"><div class="report-window-top"><div><div class="report-window-brand"><span class="report-window-logo">◎</span>360智见GEO · AI搜索可见性诊断报告</div><div class="report-window-meta">AI搜索收录检测报告 · 第3期 · 2026-07-14</div></div><div class="report-window-actions"><button class="report-print" onclick="window.print()">打印 / 导出 PDF</button></div></div><div class="report-document-wrap"><div class="report-document-title"><h1>AI 搜索可见性诊断报告</h1><p>基于本次 6 个问题 × 6 个 AI 平台的排名 / 品牌曝光检测结果自动生成</p></div>`+t+`</div></body></html>`}xe&&Se&&xe.addEventListener(`click`,()=>{let blob=new Blob([Ce()],{type:`text/html;charset=utf-8`}),url=URL.createObjectURL(blob),a=document.createElement(`a`);a.href=url,a.download=`360智见GEO_AI收录检测报告.html`,document.body.appendChild(a),a.click(),a.remove(),URL.revokeObjectURL(url),r(`已生成并下载收录检测报告`)});let we=document.getElementById(`incModeSwitch`),M=document.getElementById(`incQueryInput`),N=document.getElementById(`incModeHint`),Te=document.getElementById(`incTaskStatus`),Ee=document.getElementById(`startInclusionQuery`),De=document.getElementById(`incUrlResult`),Oe=document.getElementById(`incKeywordResult`),ke=document.getElementById(`incKeywordBadge`),Ae=document.getElementById(`incUrlBadge`),je=document.getElementById(`incMainView`),Me=document.getElementById(`incHistoryView`),Ne=document.getElementById(`incHistoryLink`),Pe=document.getElementById(`incHistoryBack`),Fe={url:`https://www.toutiao.com/article/7482915630...`,keyword:`360终端安全防护`},Ie=`url`;function Le(){De?.classList.remove(`show`),Oe?.classList.remove(`show`),Te&&(Te.className=`inc-task-status`,Te.textContent=`请选择检测类型并提交查询`),Ee&&(Ee.disabled=!1,Ee.innerHTML=`<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><span>立即查询</span>`)}function Re(e,t=!1){[`url`,`keyword`].includes(e)&&(Fe[Ie]=M.value,Ie=e,we&&(we.value=e),M.value=Fe[e],e===`url`?(M.placeholder=`请输入文章 URL`,N.textContent=`URL模式：通过文章链接反查各 AI 平台是否已将该内容纳入可引用信源池。`):(M.placeholder=`请输入行业词、品类词或文章标题`,N.textContent=`关键词模式：统计 AI 回答常引用的信源渠道，并按引用次数形成渠道效果排行。`),t||Le())}we?.addEventListener(`change`,()=>Re(we.value)),document.getElementById(`incPlatformGrid`)?.addEventListener(`click`,e=>{let t=e.target.closest(`.inc-platform-card`);t&&(t.classList.toggle(`on`),document.querySelectorAll(`#incPlatformGrid .inc-platform-card.on`).length||(t.classList.add(`on`),r(`至少保留一个 AI 平台`)))}),Ee?.addEventListener(`click`,()=>{let e=M.value.trim();if(!e){M.focus(),r(Ie===`url`?`请输入待检测 URL`:`请输入查询关键词`);return}let t=[...document.querySelectorAll(`#incPlatformGrid .inc-platform-card.on`)].map(e=>e.dataset.incPlatform);if(!t.length){r(`请至少选择一个 AI 平台`);return}Fe[Ie]=e,De?.classList.remove(`show`),Oe?.classList.remove(`show`),Ee.disabled=!0,Ee.innerHTML=`<span style="display:inline-flex;align-items:center;gap:6px">⏳ 查询中…</span>`,Te.className=`inc-task-status running`,Te.textContent=Ie===`url`?`正在查询 `+t.length+` 个 AI 平台的收录状态…`:`正在统计 `+t.length+` 个 AI 平台的信源引用渠道…`,setTimeout(()=>{Ee.disabled=!1,Ee.innerHTML=`<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"/></svg><span>重新查询</span>`,Te.className=`inc-task-status done`,Ie===`url`?(Ae&&(Ae.textContent=`已检测 `+t.length+` 个平台`),document.querySelectorAll(`#incUrlResult tbody tr`).forEach(e=>e.style.display=t.includes(e.dataset.platform)?``:`none`),De.classList.add(`show`),Te.textContent=`URL 查询完成 · 已生成平台收录状态`,De.scrollIntoView({behavior:`smooth`,block:`start`})):(ke&&(ke.textContent=`关键词：`+e),Oe.classList.add(`show`),Te.textContent=`关键词查询完成 · 已生成 AI 收录渠道效果`,Be(`all`),Oe.scrollIntoView({behavior:`smooth`,block:`start`}))},620)}),document.querySelectorAll(`.inc-view-link`).forEach(e=>e.addEventListener(`click`,()=>r(e.dataset.platform+`：已打开收录详情（原型）`)));function ze(e){je?.classList.toggle(`hidden`,e),Me?.classList.toggle(`show`,e);let t=document.getElementById(`ht`),n=document.getElementById(`headerSubtitle`);e?(t&&(t.textContent=`收录查询 · 历史记录`),n&&(n.textContent=`查看过往AI收录检测任务与结果`)):(t&&(t.textContent=`收录查询`),n&&(n.textContent=`验证文章与关键词是否进入AI可引用信源池`),window.scrollTo({top:0,behavior:`smooth`}))}Ne?.addEventListener(`click`,()=>ze(!0)),Pe?.addEventListener(`click`,()=>ze(!1)),document.querySelectorAll(`.inc-history-report`).forEach(e=>e.addEventListener(`click`,()=>{let t=e.closest(`tr`);if(e.classList.contains(`muted`)){r(`该任务仍在查询中，请稍后查看`);return}let n=t.dataset.historyMode||`url`,i=t.dataset.historyQuery||``;ze(!1),Fe[n]=i,Re(n,!0),M.value=i,Te.className=`inc-task-status done`,n===`url`?(De.classList.add(`show`),Oe.classList.remove(`show`)):(Oe.classList.add(`show`),De.classList.remove(`show`),ke&&(ke.textContent=`关键词：`+i),Be(`all`)),setTimeout(()=>document.querySelector(n===`url`?`#incUrlResult`:`#incKeywordResult`)?.scrollIntoView({behavior:`smooth`,block:`start`}),30)}));function Be(e){let t=[...document.querySelectorAll(`#incChannelTable tbody tr`)],n=0;t.forEach(t=>{let r=e===`all`||(t.dataset.platforms||``).split(`,`).includes(e);if(t.style.display=r?``:`none`,r){n++;let e=t.querySelector(`.inc-rank-cell`);e&&(n===1?e.innerHTML=`<span class="rank-medal gold">1</span>`:n===2?e.innerHTML=`<span class="rank-medal silver">2</span>`:n===3?e.innerHTML=`<span class="rank-medal bronze">3</span>`:e.textContent=n)}})}document.getElementById(`incChannelTabs`)?.addEventListener(`click`,e=>{let t=e.target.closest(`.inc-channel-tab`);t&&(document.querySelectorAll(`#incChannelTabs .inc-channel-tab`).forEach(e=>e.classList.toggle(`on`,e===t)),Be(t.dataset.channelPlatform))}),Be(`all`)}catch(e){console.error(`Error in core script 5:`,e)}try{(()=>{let e=document.getElementById(`pub`),t=document.getElementById(`pubArticlePickerModal`);if(!e||!t)return;let n=t.querySelector(`#pubPickerTableBody`),r=t.querySelector(`#pubPickerSearch`),i=t.querySelector(`#pubPickerEmpty`),a=t.querySelector(`#pubPickerConfirm`),o=t.querySelector(`#pubPickerSelectedTitle`),s=t.querySelector(`#pubPickerMediaName`),c=`auto`,l=null,u=null,d=``;function f(e){let t=document.getElementById(e===`auto`?`autoArticleTable`:`uploadedArticleTable`);return t?[...t.tBodies[0].rows]:[]}function p(){let e=f(`auto`).length,n=f(`uploaded`).length;t.querySelector(`#pubPickerAutoCount`).textContent=e,t.querySelector(`#pubPickerUploadedCount`).textContent=n}function m(){l=null,o.textContent=`暂未选择文章`,a.disabled=!0}function h(e){let t=e.querySelectorAll(`td`);return{title:(t[0]?.textContent||e.dataset.title||``).trim(),type:(t[1]?.textContent||``).trim(),published:(t[2]?.textContent||``).trim(),generated:(t[3]?.textContent||``).trim(),submitted:(t[4]?.textContent||``).trim(),sourceRow:e}}function g(){let e=(r.value||``).trim().toLowerCase();n.innerHTML=``;let t=0;f(c).forEach(r=>{let i=h(r);if(e&&!i.title.toLowerCase().includes(e))return;t++;let s=document.createElement(`tr`);s.className=`pub-picker-row`,s.dataset.articleTitle=i.title,s.innerHTML=`<td class="article-title"></td><td><span class="article-type-pill"></span></td><td></td><td></td><td></td><td><span class="pub-picker-radio" aria-hidden="true"></span></td>`,s.children[0].textContent=i.title,s.querySelector(`.article-type-pill`).textContent=i.type,s.children[2].textContent=i.published,s.children[3].textContent=i.generated,s.children[4].textContent=i.submitted,s.addEventListener(`click`,()=>{n.querySelectorAll(`tr`).forEach(e=>e.classList.remove(`selected`)),s.classList.add(`selected`),l=i,o.textContent=i.title,a.disabled=!1}),n.appendChild(s)}),i.classList.toggle(`show`,t===0)}function _(e){t.classList.toggle(`show`,e),e||(u=null,d=``,m())}function v(e){u=e,d=e.closest(`tr`)?.querySelector(`.media-name`)?.textContent.trim()||`当前媒体`,e.closest(`.media-library-panel`)?.dataset.libraryPanel,s.textContent=d,c=`auto`,r.value=``,t.querySelectorAll(`[data-picker-tab]`).forEach(e=>e.classList.toggle(`on`,e.dataset.pickerTab===`auto`)),m(),p(),g(),_(!0)}e.addEventListener(`click`,e=>{let t=e.target.closest(`.pub-submit`);t&&(e.preventDefault(),e.stopPropagation(),e.stopImmediatePropagation&&e.stopImmediatePropagation(),v(t))},!0),t.querySelector(`#pubPickerClose`).addEventListener(`click`,()=>_(!1)),t.querySelector(`#pubPickerCancel`).addEventListener(`click`,()=>_(!1)),t.addEventListener(`click`,e=>{e.target===t&&_(!1)}),t.querySelector(`#pubPickerTabs`).addEventListener(`click`,e=>{let n=e.target.closest(`[data-picker-tab]`);n&&(c=n.dataset.pickerTab,t.querySelectorAll(`[data-picker-tab]`).forEach(e=>e.classList.toggle(`on`,e===n)),m(),g())}),t.querySelector(`#pubPickerSearchBtn`).addEventListener(`click`,()=>{m(),g()}),t.querySelector(`#pubPickerSearchReset`).addEventListener(`click`,()=>{r.value=``,m(),g()}),r.addEventListener(`keydown`,e=>{e.key===`Enter`&&(m(),g())}),a.addEventListener(`click`,()=>{if(!l)return;let e=new Date(Math.min(Date.now(),new Date(`2026-07-30T23:59:59`).getTime())),t=e.getFullYear(),n=String(e.getMonth()+1).padStart(2,`0`),r=String(e.getDate()).padStart(2,`0`),i=String(e.getHours()).padStart(2,`0`),a=String(e.getMinutes()).padStart(2,`0`),o=String(e.getSeconds()).padStart(2,`0`),s=t+`-`+n+`-`+r+` `+i+`:`+a+`:`+o,c=l.sourceRow;if(c){let e=c.querySelectorAll(`td`);e[2]&&(e[2].innerHTML=`<span class="article-publish-review">审核中</span>`),e[4]&&(e[4].textContent=s),c.dataset.pendingMedia=d,c.dataset.submitTime=s}u&&(u.classList.add(`done`),u.textContent=`已投稿`);let f=l.title,p=d;_(!1),showToast(`「`+f+`」已提交至「`+p+`」，文章状态更新为审核中`)})})()}catch(e){console.error(`Error in picker script 6:`,e)}try{(()=>{document.querySelectorAll(`button:not([type])`).forEach(e=>e.type=`button`);let e=[...document.querySelectorAll(`.nav a[data-p]`)],t={dash:[`首页`,`全网AI搜索场景覆盖与GEO增长数据总览`],inc:[`检测分析`,`验证文章与关键词是否进入AI可引用信源池`],kb:[`GEO 内容增长`,`维护企业事实、资质、案例与问答知识源`],material:[`设置`,`上传本地图片素材，用于文章配图等场景。素材库总量：100.00GB，当前剩余容量99.97GB，已使用31.0MB。`],persona:[`GEO 内容增长`,`从核心产品反推人群、场景与购买考量`],kw:[`GEO 内容增长`,`生成并筛选面向AI搜索场景的长尾问题词库`],gen:[``,`填写或选择下方「核心关键词 + 长尾关键词」，点击右侧绿色 AI Agent 图标即可智能反推「用户画像 → 搜索场景 → 用户痛点」，并在当前页面直接生成标准 3000 字深度长文。`],videographic:[`GEO 内容增长`,`使用多模态AI模型，生成短视频或新媒体图文。内容基于大模型训练数据生成，可能存在局限性或不准确性。`],articles:[`GEO 内容增长`,`统一管理自动化文章与人工上传内容`],pub:[`GEO 内容增长`,`按媒体属性与GEO适配度选择信源并投稿`],agent:[`账户中心`,`查看企业服务套餐余量、功能配额明细与账户余额充值`]},n=document.getElementById(`headerKicker`),r=document.getElementById(`headerSubtitle`),htEl=document.getElementById(`ht`);function i(i){let a=t[i]||[`360智见GEO`,`AI 搜索可见性优化平台`];
+    const topH = document.querySelector("header");
+    if (topH) topH.style.display = (i === "material") ? "none" : "";
+n&&(n.textContent=a[0],n.style.display=i===`gen`?`none`:``),i===`gen`&&htEl&&(htEl.textContent=`内容创作与用户需求画像建模`),r&&(r.textContent=a[1]),e.forEach(e=>e.setAttribute(`aria-current`,e.dataset.p===i?`page`:`false`))}e.forEach(e=>{e.setAttribute(`tabindex`,`0`),e.setAttribute(`role`,`button`),e.title=e.textContent.trim(),e.addEventListener(`click`,()=>{i(e.dataset.p),history.replaceState(null,``,`#`+e.dataset.p)}),e.addEventListener(`keydown`,t=>{(t.key===`Enter`||t.key===` `)&&(t.preventDefault(),e.click())})});let a=location.hash.slice(1),o=e.find(e=>e.dataset.p===a);if(o)o.click();else{let t=e.find(e=>e.classList.contains(`on`));t&&i(t.dataset.p)}function s() {
+  
+  // 1:1 素材库交互控制逻辑
+  function initMaterialModule() {
+    const selectAllCb = document.getElementById("matSelectAll");
+    const itemCbs = document.querySelectorAll(".mat-item-check");
+    const cards = document.querySelectorAll(".mat-card-item");
+    const batchGroupBtn = document.getElementById("matBatchGroupBtn");
+    const batchDeleteBtn = document.getElementById("matBatchDeleteBtn");
+    const uploadBtn = document.getElementById("matUploadBtn");
+    const fileIpt = document.getElementById("matFileInput");
+    const newGroupBtn = document.getElementById("matNewGroupBtn");
+    const groupItems = document.querySelectorAll(".mat-group-item");
+    const topTabs = document.querySelectorAll(".mat-top-tab");
+    
+    const lightbox = document.getElementById("matLightboxModal");
+    const modalImg = document.getElementById("matModalImg");
+    const modalTitle = document.getElementById("matModalTitle");
+    const modalClose = document.getElementById("matModalCloseBtn");
+    const copyUrlBtn = document.getElementById("matModalCopyUrlBtn");
+    const applyArticleBtn = document.getElementById("matModalApplyArticleBtn");
+
+    // 全选交互
+    selectAllCb?.addEventListener("change", () => {
+      const checked = selectAllCb.checked;
+      itemCbs.forEach((cb: any) => cb.checked = checked);
+      if (typeof showToast === "function") {
+        showToast(checked ? "已全选当前页 10 个素材" : "已取消全选");
+      }
+    });
+
+    // 单个勾选
+    itemCbs.forEach(cb => {
+      cb.addEventListener("click", (e) => e.stopPropagation());
+    });
+
+    // 卡片点击 -> 弹窗大图预览
+    cards.forEach(card => {
+      card.addEventListener("click", () => {
+        const title = (card as HTMLElement).dataset.title || "素材图片";
+        const img = (card as HTMLElement).dataset.img || "";
+        const size = (card as HTMLElement).dataset.size || "1.0MB";
+        if (modalTitle) modalTitle.textContent = title;
+        if (modalImg) (modalImg as HTMLImageElement).src = img;
+        const metaEl = document.getElementById("matModalMeta");
+        if (metaEl) metaEl.textContent = `分辨率: 1920×1080 · 大小: ${size} · 上传时间: 2025-08-26`;
+        if (lightbox) (lightbox as HTMLElement).style.display = "flex";
+      });
+    });
+
+    modalClose?.addEventListener("click", () => {
+      if (lightbox) (lightbox as HTMLElement).style.display = "none";
+    });
+    lightbox?.addEventListener("click", (e) => {
+      if (e.target === lightbox) (lightbox as HTMLElement).style.display = "none";
+    });
+
+    copyUrlBtn?.addEventListener("click", () => {
+      if (typeof showToast === "function") showToast("✓ 已复制素材高清直链地址至剪贴板");
+    });
+    applyArticleBtn?.addEventListener("click", () => {
+      if (lightbox) (lightbox as HTMLElement).style.display = "none";
+      if (typeof showToast === "function") showToast("✓ 已将该素材设为「内容创作」与「视频/图文」默认配图");
+    });
+
+    // 批量分组
+    batchGroupBtn?.addEventListener("click", () => {
+      const checkedCount = document.querySelectorAll(".mat-item-check:checked").length;
+      if (checkedCount === 0) {
+        if (typeof showToast === "function") showToast("请先在卡片左上角勾选需要分组的素材", "warn");
+        return;
+      }
+      if (typeof showToast === "function") showToast(`✓ 已将选中的 ${checkedCount} 个素材归类至「管道疏通与清洗」分组`);
+    });
+
+    // 批量删除
+    batchDeleteBtn?.addEventListener("click", () => {
+      const checkedBoxes = document.querySelectorAll(".mat-item-check:checked");
+      if (checkedBoxes.length === 0) {
+        if (typeof showToast === "function") showToast("请先勾选需要删除的素材", "warn");
+        return;
+      }
+      checkedBoxes.forEach(cb => {
+        cb.closest(".mat-card-item")?.remove();
+      });
+      selectAllCb && (selectAllCb.checked = false);
+      const remaining = document.querySelectorAll(".mat-card-item").length;
+      const countText = document.getElementById("matTotalCountText");
+      if (countText) countText.textContent = `共 ${remaining} 条`;
+      if (typeof showToast === "function") showToast(`✓ 已成功删除 ${checkedBoxes.length} 个本地素材`);
+    });
+
+    // 上传素材
+    uploadBtn?.addEventListener("click", () => fileIpt?.click());
+    fileIpt?.addEventListener("change", () => {
+      if (fileIpt.files && fileIpt.files.length > 0) {
+        const file = fileIpt.files[0];
+        if (typeof showToast === "function") showToast(`✓ 素材「${file.name}」已成功上传至素材库！`);
+      }
+    });
+
+    // 新建分组
+    newGroupBtn?.addEventListener("click", () => {
+      const groupList = document.getElementById("matGroupList");
+      const name = prompt("请输入新素材分组名称：", "工程实测特写");
+      if (name && groupList) {
+        const div = document.createElement("div");
+        div.className = "mat-group-item";
+        div.style.cssText = "padding:7px 12px;border-radius:6px;color:#64748b;font-size:12.5px;cursor:pointer";
+        div.textContent = `${name} (0)`;
+        div.addEventListener("click", () => {
+          document.querySelectorAll(".mat-group-item").forEach(g => {
+            (g as HTMLElement).style.background = "transparent";
+            (g as HTMLElement).style.color = "#64748b";
+            (g as HTMLElement).style.fontWeight = "normal";
+          });
+          div.style.background = "#f5f3ff";
+          div.style.color = "#6366f1";
+          div.style.fontWeight = "700";
+          if (typeof showToast === "function") showToast(`已切换查看分组：${name}`);
+        });
+        groupList.appendChild(div);
+        if (typeof showToast === "function") showToast(`✓ 已创建新素材分组「${name}」`);
+      }
+    });
+
+    // 分组点击切换
+    groupItems.forEach(item => {
+      item.addEventListener("click", () => {
+        groupItems.forEach(g => {
+          (g as HTMLElement).style.background = "transparent";
+          (g as HTMLElement).style.color = "#64748b";
+          (g as HTMLElement).style.fontWeight = "normal";
+        });
+        (item as HTMLElement).style.background = "#f5f3ff";
+        (item as HTMLElement).style.color = "#6366f1";
+        (item as HTMLElement).style.fontWeight = "700";
+        if (typeof showToast === "function") showToast(`已筛选素材：${item.textContent?.trim()}`);
+      });
+    });
+
+    // 图片 / 视频 Tab
+    topTabs.forEach(tab => {
+      tab.addEventListener("click", () => {
+        topTabs.forEach(t => {
+          (t as HTMLElement).style.color = "#64748b";
+          (t as HTMLElement).style.fontWeight = "500";
+          (t as HTMLElement).style.borderBottom = "2.5px solid transparent";
+        });
+        (tab as HTMLElement).style.color = "#6366f1";
+        (tab as HTMLElement).style.fontWeight = "700";
+        (tab as HTMLElement).style.borderBottom = "2.5px solid #6366f1";
+        const mode = (tab as HTMLElement).dataset.mattab;
+        if (typeof showToast === "function") showToast(mode === "video" ? "已切换至「视频」素材库视图" : "已切换至「图片」素材库视图");
+      });
+    });
+
+
+
+    // 分页切换
+    document.querySelectorAll(".mat-page-btn[data-page]").forEach(pBtn => {
+      pBtn.addEventListener("click", () => {
+        document.querySelectorAll(".mat-page-btn[data-page]").forEach(b => {
+          (b as HTMLElement).style.background = "#fff";
+          (b as HTMLElement).style.color = "#334155";
+          (b as HTMLElement).style.fontWeight = "normal";
+        });
+        (pBtn as HTMLElement).style.background = "#6366f1";
+        (pBtn as HTMLElement).style.color = "#fff";
+        (pBtn as HTMLElement).style.fontWeight = "700";
+        const pg = (pBtn as HTMLElement).dataset.page;
+        const jumpInput = document.getElementById("matJumpInput") as HTMLInputElement;
+        if (jumpInput) jumpInput.value = pg || "1";
+        if (typeof showToast === "function") showToast(`已翻至第 ${pg} 页素材`);
+      });
+    });
+  }
+
+  try { initMaterialModule(); } catch(e) { console.error("initMaterialModule error:", e); }
+
+  const root = document.getElementById("videographic");
+  if (!root) return;
+
+  // 1. 全局工作区切换：视频创作 vs 图文创作
+  window.__switchVgMode = function(mode) {
+    const vidPanel = document.getElementById("vgVideoPanel");
+    const grpPanel = document.getElementById("vgGraphicPanel");
+    const topVidActions = document.getElementById("vgVideoTopActions");
+    const topGrpActions = document.getElementById("vgGraphicTopActions");
+    const modeBtns = root.querySelectorAll(".vg-tab-btn");
+
+    modeBtns.forEach(btn => {
+      const isActive = btn.dataset.vgMode === mode;
+      btn.classList.toggle("on", isActive);
+      btn.classList.toggle("active", isActive);
+    });
+
+    if (vidPanel) vidPanel.style.display = mode === "video" ? "block" : "none";
+    if (grpPanel) grpPanel.style.display = mode === "graphic" ? "block" : "none";
+    if (topVidActions) topVidActions.style.display = mode === "video" ? "flex" : "none";
+    if (topGrpActions) topGrpActions.style.display = mode === "graphic" ? "flex" : "none";
+
+    if (typeof showToast === "function") {
+      showToast(mode === "video" ? "已切换至「视频创作」工作区" : "已切换至「图文创作」工作区");
+    }
+  };
+
+  root.querySelectorAll(".vg-tab-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const m = btn.dataset.vgMode || "video";
+      window.__switchVgMode(m);
+    });
+  });
+
+  // 2. 视频创作方式 Tabs：视频快剪 vs AI生成视频 vs 上传视频
+  window.__switchVideoMethod = function(method) {
+    const methodTabs = document.querySelectorAll("#vgMethodTabs .vg-method-pill");
+    const stQuick = document.getElementById("vgStateQuickPanel");
+    const stAi = document.getElementById("vgStateAiPanel");
+    const stUpload = document.getElementById("vgStateUploadPanel");
+    const badge = document.getElementById("vgVideoStateBadge");
+    const alertCost = document.getElementById("vgAlertCost");
+    const phoneBottomLabel = document.getElementById("vgPhoneBottomLabel");
+    const phoneSimCard = document.querySelector(".vg-phone-simulator-card") as HTMLElement | null;
+    const studioGrid = document.getElementById("vgStudioGrid");
+
     methodTabs.forEach(t => {
       const isActive = t.dataset.vmethod === method;
       t.classList.toggle("active", isActive);
@@ -3858,21 +4950,31 @@ body.report-window{display:block;min-height:100vh;background:#f3f7f5;padding:0;c
     if (stAi) stAi.style.display = method === "ai" ? "block" : "none";
     if (stUpload) stUpload.style.display = method === "upload" ? "block" : "none";
 
+    if (phoneSimCard) {
+      phoneSimCard.style.display = method === "ai" ? "none" : "";
+    }
+    if (studioGrid) {
+      studioGrid.style.gridTemplateColumns = method === "ai" ? "1fr" : "";
+    }
+
     if (badge) {
       badge.textContent = method === "ai"
-        ? "当前状态2：AI生成视频配置面板（BGM、字幕配置）"
+        ? "当前状态2：AI生成视频面板"
         : method === "upload"
         ? "当前状态3：上传视频面板（拖拽上传、进度与预览）"
-        : "当前状态1：视频快剪表单面板";
+        : "当前状态1：视频快剪表单面板（图一样式）";
     }
 
     if (alertCost) {
-      if (method === "quick") {
-        alertCost.innerHTML = '<span style="font-size:14px" id="vgCostIcon">⚡</span><span id="vgCostText"><strong>快剪计费规则</strong>：1 分钟消耗 50 积分，不满 1 分钟按 1 分钟计费；快剪生成失败不扣积分。</span>';
-      } else if (method === "ai") {
-        alertCost.innerHTML = '<span style="font-size:14px" id="vgCostIcon">⚡</span><span id="vgCostText"><strong>AI生成计费规则</strong>：AI生成按时长包计费，10秒320积分 /15秒480积分；生成失败不扣费。本视频由AI技术辅助生成，AI生成画面可能存在局限性或不准确性，仅供参考分享。</span>';
-      } else if (method === "upload") {
-        alertCost.innerHTML = '<span style="font-size:14px" id="vgCostIcon">⚡</span><span id="vgCostText"><strong>本地成片上传</strong>：上传本地已有成片不消耗积分，支持一键质检与全网矩阵分发。</span>';
+      if (method === "ai") {
+        alertCost.style.display = "none";
+      } else {
+        alertCost.style.display = "";
+        if (method === "quick") {
+          alertCost.innerHTML = '<span style="font-size:14px" id="vgCostIcon">⚡</span><span id="vgCostText"><strong>快剪计费规则</strong>：1 分钟消耗 50 积分，不满 1 分钟按 1 分钟计费；快剪生成失败不扣积分。</span>';
+        } else if (method === "upload") {
+          alertCost.innerHTML = '<span style="font-size:14px" id="vgCostIcon">⚡</span><span id="vgCostText"><strong>本地成片上传</strong>：上传本地已有成片不消耗积分，支持一键质检与全网矩阵分发。</span>';
+        }
       }
     }
 
@@ -3880,88 +4982,613 @@ body.report-window{display:block;min-height:100vh;background:#f3f7f5;padding:0;c
       phoneBottomLabel.textContent = method === "quick"
         ? "📱 快剪实时渲染预览"
         : method === "ai"
-        ? "📱 AI 生成画面预演"
+        ? "📱 AI 分镜画面预演"
         : "📱 本地视频上传预览";
+    }
+
+    if (method === "ai") {
+      const scrollArea = document.getElementById("vgAiContentScrollArea");
+      if (scrollArea) {
+        scrollArea.scrollTop = 0;
+      }
+    }
+    if (typeof showToast === "function") {
+      showToast(method === "ai" ? "已切换至「AI 生成视频」面板" : method === "upload" ? "已切换至「上传视频」面板" : "已切换至「视频快剪」面板（图一样式）");
+    }
+  };
+
+  
+  // 视频快剪 5 大功能键交互 (视频快剪 / 视频字幕 / 选择声音 / 字母样式 / 背景音乐)
+  window.__switchQuickSubNav = function(subKey) {
+    const subBtns = document.querySelectorAll("#vgQuickSubNav .vg-vnav-item");
+    const subPanels = {
+      cut: document.getElementById("vgSubPanelCut"),
+      subtitle: document.getElementById("vgSubPanelSubtitle"),
+      voice: document.getElementById("vgSubPanelVoice"),
+      style: document.getElementById("vgSubPanelStyle"),
+      bgm: document.getElementById("vgSubPanelBgm")
+    };
+    subBtns.forEach(btn => {
+      const isActive = btn.dataset.vsub === subKey;
+      btn.classList.toggle("active", isActive);
+    });
+    Object.keys(subPanels).forEach(key => {
+      const el = subPanels[key];
+      if (el) el.style.display = key === subKey ? "block" : "none";
+    });
+    const subBadge = document.getElementById("vgQuickSubBadge");
+    const names = {
+      cut: "视频快剪设置",
+      subtitle: "视频字幕设置",
+      voice: "选择声音与配音",
+      style: "字母/字幕样式定制",
+      bgm: "背景音乐配乐"
+    };
+    if (subBadge && names[subKey]) {
+      subBadge.textContent = "当前功能：" + names[subKey];
+    }
+    if (typeof showToast === "function") {
+      showToast("已切换至「" + (names[subKey] || subKey) + "」功能界面");
+    }
+  };
+
+  document.querySelectorAll("#vgQuickSubNav .vg-vnav-item").forEach(item => {
+    item.addEventListener("click", () => {
+      const sub = item.dataset.vsub || "cut";
+      window.__switchQuickSubNav(sub);
+    });
+  });
+
+  const phoneSubtitleLayer = document.getElementById("vgPhoneSubtitleLayer");
+  const phoneMusicText = document.getElementById("vgPhoneMusicText");
+
+  function playSynthSound(freqs, duration = 0.5) {
+    try {
+      const AudioCtx = window.AudioContext || (window as any).webkitAudioContext;
+      if (!AudioCtx) return;
+      const ctx = new AudioCtx();
+      freqs.forEach((freq, idx) => {
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = "sine";
+        osc.frequency.setValueAtTime(freq, ctx.currentTime + idx * 0.12);
+        gain.gain.setValueAtTime(0.001, ctx.currentTime + idx * 0.12);
+        gain.gain.exponentialRampToValueAtTime(0.18, ctx.currentTime + idx * 0.12 + 0.03);
+        gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + idx * 0.12 + 0.35);
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start(ctx.currentTime + idx * 0.12);
+        osc.stop(ctx.currentTime + idx * 0.12 + 0.4);
+      });
+    } catch (e) {}
+  }
+
+  // 声音卡片点击与试听
+  const voiceCards = document.querySelectorAll(".vg-voice-card");
+  voiceCards.forEach(card => {
+    card.addEventListener("click", (e) => {
+      if ((e.target as HTMLElement).closest(".vg-voice-audition-btn")) return;
+      voiceCards.forEach(c => {
+        c.classList.remove("active");
+        (c as HTMLElement).style.borderColor = "#e2e8f0";
+        (c as HTMLElement).style.background = "#ffffff";
+      });
+      card.classList.add("active");
+      (card as HTMLElement).style.borderColor = "#6366f1";
+      (card as HTMLElement).style.background = "#eef2ff";
+      const vname = card.dataset.voicename || "360智见-商务云帆";
+      if (phoneMusicText) {
+        phoneMusicText.textContent = `🎙️ 配音音色：${vname} · 1.0X`;
+      }
+      playSynthSound([440, 660, 880]);
+      if (typeof showToast === "function") showToast(`已选用声音配音：${vname}`);
+    });
+  });
+
+  document.querySelectorAll(".vg-voice-audition-btn").forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const vname = (btn as HTMLElement).dataset.vname || "商务云帆";
+      playSynthSound([523.25, 659.25, 783.99, 1046.5]);
+      if (typeof showToast === "function") showToast(`🔊 正在试听音色「360智见-${vname}」...`);
+    });
+  });
+
+  // 音色风格筛选标签
+  document.querySelectorAll(".vg-voice-filter-tag").forEach(tag => {
+    tag.addEventListener("click", () => {
+      document.querySelectorAll(".vg-voice-filter-tag").forEach(t => {
+        t.classList.remove("active");
+        (t as HTMLElement).style.borderColor = "#e2e8f0";
+        (t as HTMLElement).style.background = "#ffffff";
+        (t as HTMLElement).style.color = "#64748b";
+        (t as HTMLElement).style.fontWeight = "normal";
+      });
+      tag.classList.add("active");
+      (tag as HTMLElement).style.borderColor = "#4f46e5";
+      (tag as HTMLElement).style.background = "#eef2ff";
+      (tag as HTMLElement).style.color = "#4f46e5";
+      (tag as HTMLElement).style.fontWeight = "700";
+      const filter = (tag as HTMLElement).dataset.vfilter;
+      voiceCards.forEach((c: any) => {
+        if (filter === "all") c.style.display = "flex";
+        else if (filter === "biz") c.style.display = ["v1", "v5", "v6"].includes(c.dataset.voice) ? "flex" : "none";
+        else if (filter === "female") c.style.display = ["v2"].includes(c.dataset.voice) ? "flex" : "none";
+        else if (filter === "hot") c.style.display = ["v3"].includes(c.dataset.voice) ? "flex" : "none";
+        else if (filter === "tech") c.style.display = ["v1", "v4"].includes(c.dataset.voice) ? "flex" : "none";
+      });
+    });
+  });
+
+  // 字母/字幕样式点击交互与实时手机渲染
+  const styleChips = document.querySelectorAll(".vg-style-chip");
+  const STYLE_PRESETS: Record<string, any> = {
+    classic: {
+      color: "#ffffff",
+      textShadow: "0 2px 4px rgba(0,0,0,0.9), -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000",
+      background: "rgba(0,0,0,0.45)",
+      backdropFilter: "none",
+      padding: "3px 10px",
+      borderRadius: "4px",
+      name: "经典白字黑边"
+    },
+    yellow: {
+      color: "#fde047",
+      textShadow: "0 2px 4px rgba(0,0,0,0.9), -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000",
+      background: "rgba(0,0,0,0.55)",
+      backdropFilter: "none",
+      padding: "3px 10px",
+      borderRadius: "4px",
+      name: "爆款醒目小黄字"
+    },
+    techblue: {
+      color: "#38bdf8",
+      textShadow: "0 0 10px #0284c7, 0 0 20px #0369a1",
+      background: "rgba(15,23,42,0.75)",
+      backdropFilter: "none",
+      padding: "3px 10px",
+      borderRadius: "6px",
+      name: "科技荧光蓝"
+    },
+    glass: {
+      color: "#ffffff",
+      textShadow: "0 1px 2px rgba(0,0,0,0.4)",
+      background: "rgba(255,255,255,0.25)",
+      backdropFilter: "blur(8px)",
+      padding: "4px 12px",
+      borderRadius: "8px",
+      name: "极简毛玻璃白字"
+    },
+    gradient: {
+      color: "#fbbf24",
+      textShadow: "0 2px 8px rgba(239,68,68,0.8)",
+      background: "rgba(30,41,59,0.75)",
+      backdropFilter: "none",
+      padding: "3px 10px",
+      borderRadius: "6px",
+      name: "大促金红渐变"
+    },
+    purple: {
+      color: "#e879f9",
+      textShadow: "0 0 10px #c026d3, 0 0 20px #9333ea",
+      background: "rgba(15,23,42,0.75)",
+      backdropFilter: "none",
+      padding: "3px 10px",
+      borderRadius: "6px",
+      name: "潮酷幻彩霓虹紫"
+    }
+  };
+
+  styleChips.forEach(chip => {
+    chip.addEventListener("click", () => {
+      styleChips.forEach(c => {
+        c.classList.remove("active");
+        (c as HTMLElement).style.borderColor = "#e2e8f0";
+        (c as HTMLElement).style.background = "#ffffff";
+        (c as HTMLElement).style.boxShadow = "none";
+      });
+      chip.classList.add("active");
+      (chip as HTMLElement).style.borderColor = "#6366f1";
+      (chip as HTMLElement).style.background = "#f5f3ff";
+      (chip as HTMLElement).style.boxShadow = "0 0 0 1px #6366f1";
+
+      const stKey = (chip as HTMLElement).dataset.style || "classic";
+      const preset = STYLE_PRESETS[stKey] || STYLE_PRESETS.classic;
+      if (phoneSubtitleLayer) {
+        phoneSubtitleLayer.style.color = preset.color;
+        phoneSubtitleLayer.style.textShadow = preset.textShadow;
+        phoneSubtitleLayer.style.background = preset.background;
+        phoneSubtitleLayer.style.backdropFilter = preset.backdropFilter;
+        phoneSubtitleLayer.style.padding = preset.padding;
+        phoneSubtitleLayer.style.borderRadius = preset.borderRadius;
+      }
+      if (typeof showToast === "function") showToast(`已应用字母样式：${preset.name}（手机端实时渲染）`);
+    });
+  });
+
+  // BGM 曲目点击与试听
+  const bgmItems = document.querySelectorAll(".vg-bgm-item");
+  bgmItems.forEach(item => {
+    const useBtn = item.querySelector(".vg-bgm-use-btn");
+    const auditionBtn = item.querySelector(".vg-bgm-audition-btn");
+    const applyBgm = () => {
+      bgmItems.forEach(bi => {
+        bi.classList.remove("active");
+        (bi as HTMLElement).style.borderColor = "#e2e8f0";
+        (bi as HTMLElement).style.background = "#ffffff";
+        const ub = bi.querySelector(".vg-bgm-use-btn");
+        if (ub) {
+          ub.textContent = "使用";
+          (ub as HTMLElement).className = "btn o vg-bgm-use-btn";
+          (ub as HTMLElement).style.background = "";
+          (ub as HTMLElement).style.color = "";
+        }
+      });
+      item.classList.add("active");
+      (item as HTMLElement).style.borderColor = "#6366f1";
+      (item as HTMLElement).style.background = "#eef2ff";
+      if (useBtn) {
+        useBtn.textContent = "✓ 已使用";
+        (useBtn as HTMLElement).className = "btn vg-bgm-use-btn";
+        (useBtn as HTMLElement).style.background = "#4f46e5";
+        (useBtn as HTMLElement).style.color = "#ffffff";
+      }
+      const title = (item as HTMLElement).dataset.bgmtitle || "极速商界 · 科技领航";
+      if (phoneMusicText) {
+        phoneMusicText.textContent = `🎵 背景音乐：${title}`;
+      }
+      playSynthSound([261.63, 329.63, 392.00, 523.25]);
+      if (typeof showToast === "function") showToast(`已应用背景音乐：《${title}》`);
+    };
+
+    useBtn?.addEventListener("click", (e) => {
+      e.stopPropagation();
+      applyBgm();
+    });
+
+    item.addEventListener("click", () => {
+      applyBgm();
+    });
+
+    auditionBtn?.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const track = (auditionBtn as HTMLElement).dataset.track || "BGM";
+      playSynthSound([329.63, 392.00, 493.88, 587.33, 659.25]);
+      if (typeof showToast === "function") showToast(`🎵 正在试听曲目《${track}》...`);
+    });
+  });
+
+  // 全局事件代理保障所有功能键永不失效
+  document.addEventListener("click", (e: any) => {
+    const target = e.target;
+    // 1. 视频快剪内部 5 大功能键
+    const qItem = target.closest("#vgQuickSubNav .vg-vnav-item");
+    if (qItem && qItem.dataset.vsub && typeof (window as any).__switchQuickSubNav === "function") {
+      (window as any).__switchQuickSubNav(qItem.dataset.vsub);
+      return;
+    }
+    // 2. 视频创作方式 Tabs (视频快剪 / AI生成视频 / 上传视频)
+    const mPill = target.closest("#vgMethodTabs .vg-method-pill");
+    if (mPill && mPill.dataset.vmethod && typeof (window as any).__switchVideoMethod === "function") {
+      (window as any).__switchVideoMethod(mPill.dataset.vmethod);
+      return;
+    }
+    // 3. 顶部工作区 Tabs (视频创作 / 图文创作)
+    const modeBtn = target.closest(".vg-tab-btn[data-vg-mode]");
+    if (modeBtn && modeBtn.dataset.vgMode && typeof (window as any).__switchVgMode === "function") {
+      (window as any).__switchVgMode(modeBtn.dataset.vgMode);
+      return;
+    }
+  });
+
+  document.querySelectorAll("#vgMethodTabs .vg-method-pill").forEach(tab => {
+    tab.addEventListener("click", () => {
+      const m = tab.dataset.vmethod || "quick";
+      window.__switchVideoMethod(m);
+    });
+  });
+
+  // 3. 策划文案数据字典与预设联动
+  const coreKw = document.getElementById("vgVideoCoreKeyword");
+  const longTail = document.getElementById("vgVideoLongTail");
+  const vidTitle = document.getElementById("vgVideoTitle");
+  const vidTitleCnt = document.getElementById("vgTitleCounter");
+  const vidTagsIpt = document.getElementById("vgVideoTags");
+  const vidTagsCnt = document.getElementById("vgTagsCounter");
+  const vidTagsWrap = document.getElementById("vgVideoTagPills");
+  const vidContent = document.getElementById("vgVideoContent");
+  const vidContentCnt = document.getElementById("vgContentCounter");
+  const segScript = document.getElementById("vgSegmentScript");
+
+  const PRESETS = {
+    "360安全卫士": {
+      longTail: "360安全卫士极速版与企业版区别测评",
+      title: "2026版360安全卫士深度测评与企业部署方案",
+      tags: ["360安全卫士", "终端安全", "勒索病毒防御", "网络安全"],
+      content: "360安全科技自主研发云端安全大脑与自研AI杀毒双引擎。毫秒级识别未知勒索与木马威胁，拦截率高达99.98%，全方位守护企业与个人终端数据资产！",
+      script: "【前3秒黄金Hook】企业电脑一旦遭遇勒索病毒，数据真的只能被动撕票？\n【核心卖点】360安全卫士2026企业版，首创AI云端大模型沙箱诱捕技术，毫秒级封锁未知变种！\n【硬核实测】实测百万样本恶意脚本，检出率高达99.98%，终端资源占用低至3%。\n【信任号召】全国超千万终端权威部署，支持免费测试部署，点击了解专属解决方案！",
+      scenes: [
+        "高清近景，现代化企业控制中心大屏，深蓝冷色科技光影，360终端防御雷达实时扫描，红蓝警报动态跳动，电影级工业质感，4K微距景深平稳推进。",
+        "极致微距特写，自研AI杀毒双引擎内核芯片高速运转，金色数据光流瞬间封锁恶意勒索程序，柔和科技光晕，极度清晰的硬件结构质感。",
+        "全景视角，网络安全等级保护与权威检测报告并排展示，实时拦截率数据达到99.98%绿色合规标签，运镜稳健后拉，商务专业氛围。",
+        "定格画面，360智见企业级终端安全卫士立体徽标璀璨生辉，右侧浮现「支持免费试用部署 · 专属技术专家1对1支持」，高端品牌质感。"
+      ]
+    },
+    "终端安全防护": {
+      longTail: "企业级终端安全管理系统EDR部署实测",
+      title: "终端安全EDR全网防御：统一策略与威胁秒级阻断",
+      tags: ["终端安全EDR", "资产巡检", "内网合规", "勒索拦截"],
+      content: "构建云管端一体化终端安全防护矩阵，涵盖资产清点、补丁分发、外设管控与微隔离策略，全面阻断APT高级渗透与内网横向移动威胁！",
+      script: "【前3秒Hook】内网一人中招，全员瘫痪？传统杀毒软件早就不够用了！\n【核心卖点】全场景EDR终端联动，全网资产分钟级盘点，行为回溯秒级定位首发感染源！\n【技术背书】通过公安部网络安全等级保护三级认证，金融政企信创环境100%全兼容。\n【行动号召】企业IT运维必备！立即领取企业版100节点免费试用授权！",
+      scenes: [
+        "全景俯瞰，整洁现代的金融企业办公大厅，数百台电脑屏幕同步运行终端安全防护盾标，蓝色数据流在天花板光纤中高速流动。",
+        "特写镜头，管理员界面一键下发USB存储设备管控策略与外设加密白名单，毫秒级生效绿灯常亮，干净利落的UI微动效。",
+        "分屏对比，左侧未部署环境病毒横向蔓延至内网服务器；右侧EDR毫秒级微隔离阻断单点沦陷，高对比工业警示效果。",
+        "电影级定格，360企业级终端安全管理中枢界面定格居中，底部弹出「立即申请企业100点免费体验试用」，专业大气。"
+      ]
+    },
+    "勒索病毒拦截": {
+      longTail: "勒索病毒解密工具与全网实时诱捕系统",
+      title: "遭遇勒索病毒怎么办？AI动态诱捕与数据秒级回滚",
+      tags: ["勒索病毒", "动态诱捕", "文件防篡改", "数据备份"],
+      content: "独家首创勒索病毒动态蜜罐诱捕算法，结合底层驱动级防篡改技术。当恶意程序尝试加密数据时，底层驱动立刻隔离并瞬间回滚原始健康备份！",
+      script: "【前3秒Hook】财务服务器所有核心账目被后缀加密成乱码？别慌，教你绝地翻盘！\n【核心卖点】独家底层驱动级保护，实时监控异常写入，瞬间触发快照无损回滚！\n【安全承诺】连续五年全球顶级黑客大赛实测零击穿，打造企业资产最强保险箱。\n【行动号召】防患于未然！立即部署360勒索防护网，彻底告别巨额敲诈！",
+      scenes: [
+        "暗调近景，电脑桌面文件快速变换为骷髅锁头图标，红色警报频闪营造高危压迫感，随后金色反病毒雷达波横扫全屏清退暗红。",
+        "微距动态，底层文件驱动机制以3D晶体魔方形式重组复原，受损加密数据秒级时光倒流回滚至健康原始状态。",
+        "权威中景，安全大脑知识库展现每日拦截超3000万次攻击的动态热力地图，绿色护盾覆盖全球各大主要节点城市。",
+        "收尾定格，醒目的防勒索赔付保障印章与360智见品牌标识交相辉映，右下角「技术专家极速响应」按钮呼吸高亮。"
+      ]
+    },
+    "AI安全大模型": {
+      longTail: "360智脑安全垂类大模型私有化部署评测",
+      title: "AI安全大模型重构企业安全：7×24小时自主研判与响应",
+      tags: ["AI安全大模型", "360智脑", "安全运营", "智能研判"],
+      content: "依托千亿参数安全专有大模型，实现告警自主秒级初筛、渗透攻击链自动还原、取证溯源报告一键生成，安全运营效率提升高达20倍！",
+      script: "【前3秒Hook】安全运营人员每天处理上万条虚假告警，真正的高危攻击谁来防？\n【核心卖点】360智脑AI安全专有大模型，7×24小时全天候自主研判，告警降噪率达95%！\n【人机协同】自然语言一键生成溯源排查报告，原本需要3天的研判现在只需30秒！\n【行动号召】迈入AI原生安全新纪元！立即预约技术专家私有化方案演示！",
+      scenes: [
+        "深邃科技视角，银色大脑神经元脉络在服务器机房上空凝聚成360智脑数字实体，双眸迸发智慧淡蓝光芒，极具未来感。",
+        "特写镜头，上千条告警日志在AI智能分析流中快速分流归类，绿光标记误报，红光锁定真实攻击IP，界面清晰极简。",
+        "中景运镜，安全分析师输入一句话，系统即刻生成图文并茂的溯源调查报告，文字如光束瀑布般流畅打印成型。",
+        "定格展示，360智脑大模型认证标识在立体粒子光柱中定格，右侧展示「预约专家深度演示DEMO」，视觉高级震撼。"
+      ]
+    },
+    "网络安全等级保护": {
+      longTail: "等保2.0合规整改一站式解决方案与测评指南",
+      title: "等保2.0合规无忧通关：一站式整改、定级与专家护航",
+      tags: ["等保2.0", "合规建设", "定级备案", "网络安全法"],
+      content: "覆盖等保2.0三级全量技术与管理指标，提供定级咨询、差距分析、合规整改方案及权威测评全流程闭环护航，保障企业业务系统安全合规稳健上线！",
+      script: "【前3秒Hook】企业业务系统急需过等保，指标繁琐不知道从何下手？\n【核心卖点】360等保合规专家团全程一对一陪跑，定级、备案、差距分析、整改一站全包！\n【权威护航】超千家行业头部客户通关实绩，整改方案一次性通过率超99%！\n【行动号召】限时免费获取《2026最新等保2.0合规自测清单》与专家诊断机会！",
+      scenes: [
+        "庄重商务全景，现代化企业会议室内专家正在审核等保合规测评表，桌面上整齐陈列三级等保检测权威证书，阳光透过百叶窗。",
+        "细节特写，安全合规整改系统仪表盘各项评分从65分逐步跃升至98分满分，金色「等保三级通过」徽章立体旋转弹出。",
+        "运镜推进，机房服务器机柜冷通道内红蓝指示灯秩序井然，360安全综合网关硬件指示灯规律闪烁，彰显系统坚固可靠。",
+        "定格收尾，中国网络安全等级保护认证印章与360智见服务金牌标识并列，屏幕下方弹出「免费获取专家自测诊断」，极具说服力。"
+      ]
+    }
+  };
+
+  function updateVideoPreviews() {
+    const t = vidTitle ? vidTitle.value.trim() || "2026版360安全卫士深度测评" : "";
+    const tags = vidTagsIpt ? vidTagsIpt.value.trim() : "";
+    const c = vidContent ? vidContent.value.trim() : "";
+
+    const phoneTitle = document.getElementById("vgPhoneTitleText");
+    const phoneTags = document.getElementById("vgPhoneTagsText");
+    const phoneSubtitle = document.getElementById("vgPhoneSubtitleLayer");
+
+    if (phoneTitle) phoneTitle.textContent = t;
+    if (phoneTags) {
+      if (tags) {
+        phoneTags.innerHTML = tags.split(/[\s,，]+/).filter(Boolean).map(x => "<span>" + (x.startsWith("#") ? x : "#" + x) + "</span>").join(" ");
+      } else {
+        const pills = vidTagsWrap ? [...vidTagsWrap.querySelectorAll(".vg-graphic-tag-chip")].map(el => el.dataset.tag) : [];
+        phoneTags.innerHTML = pills.map(p => "<span>#" + p + "</span>").join(" ");
+      }
+    }
+    if (phoneSubtitle) {
+      phoneSubtitle.textContent = c.slice(0, 36) || "360安全科技自主研发安全大脑与终端主动防御";
     }
   }
 
-  methodTabs.forEach(tab => {
-    tab.addEventListener("click", () => {
-      const m = tab.dataset.vmethod || "quick";
-      switchVideoMethod(m);
-      if (typeof showToast === "function") {
-        showToast(m === "ai" ? "已切换至「AI 生成视频」配置面板" : m === "upload" ? "已切换至「上传视频」面板" : "已切换至「视频快剪」表单面板");
+  function applyPreset(kw) {
+    const item = PRESETS[kw] || PRESETS["360安全卫士"];
+    if (longTail) longTail.value = item.longTail;
+    if (vidTitle) {
+      vidTitle.value = item.title;
+      if (vidTitleCnt) vidTitleCnt.textContent = item.title.length + " / 30";
+    }
+    if (vidContent) {
+      vidContent.value = item.content;
+      if (vidContentCnt) vidContentCnt.textContent = item.content.length + " / 150";
+    }
+    if (segScript) segScript.value = item.script;
+
+    if (vidTagsWrap) {
+      vidTagsWrap.innerHTML = item.tags.map(t => `<span class="vg-graphic-tag-chip" data-tag="${t}" style="display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:6px;background:#eff6ff;color:#2563eb;font-size:12px;font-weight:600">#${t} <i class="vg-remove-vid-tag" style="cursor:pointer;font-style:normal;opacity:0.75">×</i></span>`).join("");
+      if (vidTagsCnt) vidTagsCnt.textContent = item.tags.length + " / 5";
+    }
+
+    const sceneTextareas = document.querySelectorAll("#vgAiPromptCardsWrap .vg-ai-scene-prompt");
+    sceneTextareas.forEach((ta, idx) => {
+      if (item.scenes && item.scenes[idx]) {
+        ta.value = item.scenes[idx];
+        const counter = ta.closest(".card")?.querySelector(".vg-textarea-counter");
+        if (counter) counter.textContent = item.scenes[idx].length + " / 200";
       }
     });
-  });
 
-  // 3. AI生成视频: 垂直左侧导航切换 (画面提示词, 基础设置, 选择声音, 视频字幕, 字幕样式, 背景音乐)
-  const vnavBtns = document.querySelectorAll("#vgVNav .vg-vnav-btn");
-  const vtabViews = {
-    prompt: document.getElementById("vtabPromptView"),
-    basic: document.getElementById("vtabBasicView"),
-    voice: document.getElementById("vtabVoiceView"),
-    subtitles: document.getElementById("vtabSubtitlesView"),
-    styles: document.getElementById("vtabStylesView"),
-    bgm: document.getElementById("vtabBgmView")
-  };
+    updateVideoPreviews();
+  }
 
-  function switchAiVNav(tabKey) {
-    vnavBtns.forEach(btn => {
-      const isActive = btn.dataset.vtab === tabKey;
-      btn.classList.toggle("active", isActive);
+  if (coreKw) {
+    coreKw.addEventListener("change", () => {
+      applyPreset(coreKw.value);
+      if (typeof showToast === "function") showToast("已根据「" + coreKw.value + "」自动更新快剪与AI分镜全案文案！");
     });
-    Object.entries(vtabViews).forEach(([k, viewEl]) => {
-      if (viewEl) {
-        viewEl.style.display = k === tabKey ? "block" : "none";
+  }
+
+  const polishBtn = document.getElementById("vgVideoPolishBtn");
+  const emojiBtn = document.getElementById("vgVideoEmojiBtn");
+  const copyBtn = document.getElementById("vgVideoCopyBtn");
+  const clearBtn = document.getElementById("vgVideoClearBtn");
+  const copyAiBtn = document.getElementById("vgCopyAIBtn");
+  const clipBtn = document.getElementById("vgClipBtn");
+  const kwAiBtn = document.getElementById("vgKeywordAIBtn");
+  const superSyncBtn = document.getElementById("vgSuperSyncBtn");
+  const resetAllBtn = document.getElementById("vgResetAllBtn");
+
+  if (polishBtn) {
+    polishBtn.addEventListener("click", () => {
+      if (vidContent) {
+        vidContent.value = "【重磅升级】" + vidContent.value.trim() + " 毫秒响应，筑牢企业安全底座！";
+        if (vidContentCnt) vidContentCnt.textContent = vidContent.value.length + " / 150";
+        updateVideoPreviews();
+      }
+      if (typeof showToast === "function") showToast("✨ 视频正文已完成 AI 润色增强！");
+    });
+  }
+
+  if (emojiBtn) {
+    emojiBtn.addEventListener("click", () => {
+      if (vidContent) {
+        vidContent.value += " 🛡️🚀💡🔥";
+        if (vidContentCnt) vidContentCnt.textContent = vidContent.value.length + " / 150";
+        updateVideoPreviews();
+      }
+      if (typeof showToast === "function") showToast("已插入视频爆款表情符号！");
+    });
+  }
+
+  if (copyBtn) {
+    copyBtn.addEventListener("click", () => {
+      if (vidContent) {
+        navigator.clipboard?.writeText(vidContent.value).catch(() => {});
+        if (typeof showToast === "function") showToast("📋 视频正文已成功复制至剪贴板！");
       }
     });
   }
 
-  vnavBtns.forEach(btn => {
-    btn.addEventListener("click", () => {
-      const k = btn.dataset.vtab || "prompt";
-      switchAiVNav(k);
-      const titleMap = {
-        prompt: "画面提示词配置",
-        basic: "视频基础设置",
-        voice: "选择声音与语速",
-        subtitles: "视频字幕与语言",
-        styles: "字幕排版样式",
-        bgm: "背景音乐与音量"
-      };
-      if (typeof showToast === "function") {
-        showToast("已切换至：" + (titleMap[k] || k));
+  if (clearBtn) {
+    clearBtn.addEventListener("click", () => {
+      if (vidContent) {
+        vidContent.value = "";
+        if (vidContentCnt) vidContentCnt.textContent = "0 / 150";
+        updateVideoPreviews();
+      }
+      if (typeof showToast === "function") showToast("正文内容已清空");
+    });
+  }
+
+  if (copyAiBtn) {
+    copyAiBtn.addEventListener("click", () => {
+      const kw = coreKw ? coreKw.value : "360安全卫士";
+      applyPreset(kw);
+      if (typeof showToast === "function") showToast("✨ AI 已一键重新生成视频标题、正文与口播文案！");
+    });
+  }
+
+  if (kwAiBtn) {
+    kwAiBtn.addEventListener("click", () => {
+      if (longTail && coreKw) {
+        longTail.value = coreKw.value + " 核心卖点与企业实测部署指南";
+        if (typeof showToast === "function") showToast("✨ AI 已为您匹配高潜长尾关键词！");
       }
     });
+  }
+
+  if (clipBtn) {
+    clipBtn.addEventListener("click", () => {
+      if (typeof showToast === "function") showToast("已成功从「企业知识库」剪藏最新官方安全案例与白皮书素材！");
+    });
+  }
+
+  if (superSyncBtn) {
+    superSyncBtn.addEventListener("click", () => {
+      const kw = coreKw ? coreKw.value : "360安全卫士";
+      applyPreset(kw);
+      if (typeof showToast === "function") showToast("✨ 智能全案秒级生成完毕！已同步至快剪、AI分镜与手机模拟器！");
+    });
+  }
+
+  if (resetAllBtn) {
+    resetAllBtn.addEventListener("click", () => {
+      if (coreKw) coreKw.value = "360安全卫士";
+      applyPreset("360安全卫士");
+      if (typeof showToast === "function") showToast("↺ 视频创作工作区已恢复默认配置");
+    });
+  }
+
+  if (vidTagsIpt) {
+    vidTagsIpt.addEventListener("keydown", e => {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        const val = vidTagsIpt.value.trim().replace(/^#/, "");
+        if (!val) return;
+        const currentCount = vidTagsWrap ? vidTagsWrap.querySelectorAll(".vg-graphic-tag-chip").length : 0;
+        if (currentCount >= 5) {
+          if (typeof showToast === "function") showToast("最多添加 5 个话题标签", "warn");
+          return;
+        }
+        const chip = document.createElement("span");
+        chip.className = "vg-graphic-tag-chip";
+        chip.dataset.tag = val;
+        chip.style.cssText = "display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:6px;background:#eff6ff;color:#2563eb;font-size:12px;font-weight:600";
+        chip.innerHTML = `#${val} <i class="vg-remove-vid-tag" style="cursor:pointer;font-style:normal;opacity:0.75">×</i>`;
+        vidTagsWrap?.appendChild(chip);
+        vidTagsIpt.value = "";
+        const updatedCount = vidTagsWrap?.querySelectorAll(".vg-graphic-tag-chip").length || 0;
+        if (vidTagsCnt) vidTagsCnt.textContent = updatedCount + " / 5";
+        updateVideoPreviews();
+        if (typeof showToast === "function") showToast("已添加话题标签：#" + val);
+      }
+    });
+  }
+
+  vidTagsWrap?.addEventListener("click", e => {
+    const rm = e.target.closest(".vg-remove-vid-tag");
+    if (rm) {
+      rm.closest(".vg-graphic-tag-chip")?.remove();
+      const updatedCount = vidTagsWrap.querySelectorAll(".vg-graphic-tag-chip").length;
+      if (vidTagsCnt) vidTagsCnt.textContent = updatedCount + " / 5";
+      updateVideoPreviews();
+      if (typeof showToast === "function") showToast("已移除话题标签");
+    }
   });
 
-  // 4. 快剪素材预览弹窗 & 混剪模板样片详情弹窗
-  const matPreviewModal = document.getElementById("vgMaterialPreviewModal");
-  const tplPreviewModal = document.getElementById("vgTemplatePreviewModal");
+  if (vidTitle) {
+    vidTitle.addEventListener("input", () => {
+      if (vidTitleCnt) vidTitleCnt.textContent = vidTitle.value.length + " / 30";
+      updateVideoPreviews();
+    });
+  }
+  if (vidContent) {
+    vidContent.addEventListener("input", () => {
+      if (vidContentCnt) vidContentCnt.textContent = vidContent.value.length + " / 150";
+      updateVideoPreviews();
+    });
+  }
 
-  // 素材预览弹窗交互
+  // 4. 视频快剪面板交互 (图一样式)
   const previewMatBtn = document.getElementById("vgPreviewMaterialBtn");
-  if (previewMatBtn) {
-    previewMatBtn.addEventListener("click", () => {
-      if (matPreviewModal) matPreviewModal.classList.add("show");
-    });
-  }
+  const matPreviewModal = document.getElementById("vgMaterialPreviewModal");
+  const matConfirmBtn = document.getElementById("vgMaterialModalConfirm");
   const matCloseBtn = document.getElementById("vgMaterialModalClose");
   const matCancelBtn = document.getElementById("vgMaterialModalCancel");
-  const matConfirmBtn = document.getElementById("vgMaterialModalConfirm");
-  [matCloseBtn, matCancelBtn].forEach(b => {
-    if (b) b.addEventListener("click", () => {
-      if (matPreviewModal) matPreviewModal.classList.remove("show");
+
+  if (previewMatBtn && matPreviewModal) {
+    previewMatBtn.addEventListener("click", () => {
+      matPreviewModal.classList.add("show");
     });
-  });
-  if (matConfirmBtn) {
-    matConfirmBtn.addEventListener("click", () => {
-      if (matPreviewModal) matPreviewModal.classList.remove("show");
-      if (typeof showToast === "function") showToast("✓ 已确认应用当前素材分组至剪辑工程");
+    [matCloseBtn, matCancelBtn].forEach(b => {
+      if (b) b.addEventListener("click", () => matPreviewModal.classList.remove("show"));
     });
-  }
-  if (matPreviewModal) {
+    if (matConfirmBtn) {
+      matConfirmBtn.addEventListener("click", () => {
+        matPreviewModal.classList.remove("show");
+        if (typeof showToast === "function") showToast("已选用所勾选的素材包并完成快剪序列排列！");
+      });
+    }
     matPreviewModal.addEventListener("click", e => {
       if (e.target === matPreviewModal) matPreviewModal.classList.remove("show");
     });
@@ -3971,443 +5598,466 @@ body.report-window{display:block;min-height:100vh;background:#f3f7f5;padding:0;c
           c.style.border = "1px solid #e2e8f0";
           c.style.background = "#ffffff";
         });
-        card.style.border = "1.5px solid #4f46e5";
-        card.style.background = "#eff6ff";
-        if (typeof showToast === "function") showToast("▶ 正在播放素材片段预览");
+        card.style.border = "2px solid #4f46e5";
+        card.style.background = "#f5f3ff";
       });
     });
   }
 
-  // 混剪模板样片弹窗交互
   const tplPreviewCard = document.getElementById("vgTemplatePreviewCard");
-  if (tplPreviewCard) {
-    tplPreviewCard.addEventListener("click", () => {
-      if (tplPreviewModal) tplPreviewModal.classList.add("show");
-    });
-  }
+  const tplPreviewModal = document.getElementById("vgTemplatePreviewModal");
+  const tplConfirmBtn = document.getElementById("vgTemplateModalConfirm");
   const tplCloseBtn = document.getElementById("vgTemplateModalClose");
   const tplCancelBtn = document.getElementById("vgTemplateModalCancel");
-  const tplConfirmBtn = document.getElementById("vgTemplateModalConfirm");
-  [tplCloseBtn, tplCancelBtn].forEach(b => {
-    if (b) b.addEventListener("click", () => {
-      if (tplPreviewModal) tplPreviewModal.classList.remove("show");
+  const tplSelect = document.getElementById("vgQuickTemplateSelect");
+
+  if (tplPreviewCard && tplPreviewModal) {
+    tplPreviewCard.addEventListener("click", () => {
+      tplPreviewModal.classList.add("show");
     });
-  });
-  if (tplConfirmBtn) {
-    tplConfirmBtn.addEventListener("click", () => {
-      if (tplPreviewModal) tplPreviewModal.classList.remove("show");
-      if (typeof showToast === "function") showToast("✓ 已选定混剪模板并应用至卡点轨道");
+    [tplCloseBtn, tplCancelBtn].forEach(b => {
+      if (b) b.addEventListener("click", () => tplPreviewModal.classList.remove("show"));
     });
-  }
-  if (tplPreviewModal) {
+    if (tplConfirmBtn) {
+      tplConfirmBtn.addEventListener("click", () => {
+        tplPreviewModal.classList.remove("show");
+        if (typeof showToast === "function") showToast("已应用该混剪模板的分镜卡点规则！");
+      });
+    }
     tplPreviewModal.addEventListener("click", e => {
       if (e.target === tplPreviewModal) tplPreviewModal.classList.remove("show");
     });
   }
 
-  // 5. 混剪模板下拉选择联动预览卡片
-  const tplSelect = document.getElementById("vgQuickTemplateSelect");
   if (tplSelect) {
     tplSelect.addEventListener("change", () => {
       const val = tplSelect.value;
-      const nameEl = document.getElementById("vgTemplateNameText");
-      const tagEl = document.getElementById("vgTemplateTagText");
-      const descEl = document.getElementById("vgTemplateDescText");
-      if (val === "hook3s") {
-        if (nameEl) nameEl.textContent = "黄金 3 秒模板";
-        if (tagEl) tagEl.textContent = "高完播率";
-        if (descEl) descEl.textContent = "开头痛点抓人，核心利益点极速抛出，适合抖音/快手短视频信息流爆款";
-      } else if (val === "factory") {
-        if (nameEl) nameEl.textContent = "源头工厂探厂实测";
-        if (tagEl) tagEl.textContent = "品质背书";
-        if (descEl) descEl.textContent = "车间流水线特写 + 权威证书印章展示，快速建立政企大客户信任度";
+      const nameText = document.getElementById("vgTemplateNameText");
+      const tagText = document.getElementById("vgTemplateTagText");
+      const descText = document.getElementById("vgTemplateDescText");
+      if (val === "factory") {
+        if (nameText) nameText.textContent = "源头工厂实景探厂 + 质检背书混剪";
+        if (tagText) tagText.textContent = "高信任转化";
+        if (descText) descText.textContent = "聚焦车间作业、自动化设备与检测报告，构建权威实拍背书。";
       } else if (val === "compare") {
-        if (nameEl) nameEl.textContent = "竞品对比实测模板";
-        if (tagEl) tagEl.textContent = "硬核说服";
-        if (descEl) descEl.textContent = "传统劣质痛点 vs 优质方案实测，多轨画中画对比，强化选型动机";
+        if (nameText) nameText.textContent = "传统方案对比实测 + 客户案例快剪";
+        if (tagText) tagText.textContent = "痛点击穿";
+        if (descText) descText.textContent = "A/B 画面左右分屏实测对比，精准突出性能与服务优势。";
+      } else {
+        if (nameText) nameText.textContent = "黄金前3秒痛点暴击 + 核心卖点快剪";
+        if (tagText) tagText.textContent = "高完播率";
+        if (descText) descText.textContent = "前3秒以高燃警报抓人眼球，随后快节奏多机位展现核心防护实力。";
       }
+      if (typeof showToast === "function") showToast("已切换混剪模板：" + (nameText ? nameText.textContent : ""));
     });
   }
 
-  // 6. 核心数据字典与文案联动
-  let sData = {
-    "360安全卫士": {
-      longTail: "360安全卫士极速版与企业版区别测评",
-      creativeType: "测评推荐类",
-      title: "2026版360安全卫士深度测评与企业部署方案",
-      tags: "#360安全卫士 #终端安全 #勒索病毒防御 #网络安全",
-      content: "360安全科技自主研发云端安全大脑与自研AI杀毒双引擎。毫秒级识别未知勒索与木马威胁，拦截率高达99.98%，全方位守护企业与个人终端数据资产！",
-      bgImage: socScreenImg
-    },
-    "终端安全防护": {
-      longTail: "企业终端安全防护系统如何选型部署",
-      creativeType: "排行类",
-      title: "2026企业级终端安全EDR厂商推荐与选型对比",
-      tags: "#终端安全防护 #EDR端点响应 #企业网络防护 #360安全",
-      content: "360天擎终端安全管理系统，集防病毒、终端准入合规、补丁分发、微隔离管控于一体。支持十万级终端集中下发策略，满足等级保护三级安全合规标准！",
-      bgImage: endpointDefenseImg
-    },
-    "勒索病毒拦截": {
-      longTail: "服务器如何彻底防范勒索病毒加密勒索",
-      creativeType: "痛点解决方案类",
-      title: "针对LockBit/BlackCat勒索病毒的实时防御白皮书",
-      tags: "#勒索病毒拦截 #360安全大脑 #诱饵防御 #数据备份",
-      content: "360首创文件主动解密防护与底层只读诱饵陷阱。动态阻断进程未授权加密行为，自带云端文件热备份秒级无损回滚，让勒索攻击无所遁形！",
-      bgImage: complianceBadgeImg
-    },
-    "AI安全大模型": {
-      longTail: "企业私有化部署AI大模型安全风控方案",
-      creativeType: "避坑科普类",
-      title: "360智脑安全大模型如何赋能企业安全运营SOC",
-      tags: "#AI安全大模型 #360智脑 #数字安全 #智能告警研判",
-      content: "依托数百亿级安全知识库与攻击样本微调训练。360安全大模型实现海量安全告警秒级智能降噪研判，自动生成处置工单与SOAR联动阻断响应！",
-      bgImage: socScreenImg
-    },
-    "网络安全等级保护": {
-      longTail: "等级保护2.0三级测评整改必备安全产品清单",
-      creativeType: "探厂实测类",
-      title: "2026最新网络安全等保2.0三级合规建设与整改指南",
-      tags: "#等级保护 #合规测评 #下一代防火墙 #360企业安全",
-      content: "360提供等保2.0全流程一体化咨询测评与合规套件支撑，涵盖下一代防火墙、日志审计、堡垒机与数据库审计，最快15个工作日完成达标整改！",
-      bgImage: enterpriseCertImg
+  const segAiBtn = document.getElementById("vgSegmentAIBtn");
+  if (segAiBtn) {
+    segAiBtn.addEventListener("click", () => {
+      const kw = coreKw ? coreKw.value : "360安全卫士";
+      applyPreset(kw);
+      if (typeof showToast === "function") showToast("✨ AI 已重新智能分段快剪口播脚本！");
+    });
+  }
+
+  const quickBgmAuditionBtn = document.getElementById("vgQuickBgmAuditionBtn");
+  if (quickBgmAuditionBtn) {
+    quickBgmAuditionBtn.addEventListener("click", () => {
+      quickBgmAuditionBtn.textContent = "🔊 试听中…";
+      quickBgmAuditionBtn.style.color = "#10b981";
+      if (typeof showToast === "function") showToast("🎵 正在试听快剪背景音乐，口播人声已自动避让");
+      setTimeout(() => {
+        quickBgmAuditionBtn.textContent = "🎧 试听";
+        quickBgmAuditionBtn.style.color = "";
+      }, 2500);
+    });
+  }
+
+  // 5. AI生成视频面板交互 (已彻底去掉红框功能键，3大功能模块拼接为一页展示)
+  (window as any).__switchAiSubNav = function() {
+    const scrollArea = document.getElementById("vgAiContentScrollArea");
+    if (scrollArea) {
+      scrollArea.scrollTo({ top: 0, behavior: "smooth" });
     }
   };
 
-  const coreKw = document.getElementById("vgVideoCoreKeyword");
-  const longTail = document.getElementById("vgVideoLongTail");
-  const creativeType = document.getElementById("vgVideoCreativeType");
-  const vidTitle = document.getElementById("vgVideoTitle");
-  const vidTags = document.getElementById("vgVideoTags");
-  const vidContent = document.getElementById("vgVideoContent");
-  const segScript = document.getElementById("vgSegmentScript");
-  const titleCounter = document.getElementById("vgTitleCounter");
-  const tagsCounter = document.getElementById("vgTagsCounter");
-  const contentCounter = document.getElementById("vgContentCounter");
-  const phoneCanvas = document.getElementById("vgPhoneVideoCanvas");
-  const phoneTitle = document.getElementById("vgPhoneTitleText");
-  const phoneTags = document.getElementById("vgPhoneTagsText");
-  const phoneSubtitle = document.getElementById("vgPhoneSubtitleLayer");
-  const phoneMusic = document.getElementById("vgPhoneMusicText");
-  const phonePlayBtn = document.getElementById("vgPhonePlayBtn");
-
-  function updateVideoPreviews() {
-    const t = vidTitle ? vidTitle.value.trim() || "请输入视频标题" : "";
-    const tags = vidTags ? vidTags.value.trim() || "#热门话题" : "";
-    const c = vidContent ? vidContent.value.trim() || "请输入正文口播内容" : "";
-
-    if (phoneTitle) phoneTitle.textContent = t;
-    if (phoneTags) phoneTags.textContent = tags;
-    if (phoneSubtitle) phoneSubtitle.textContent = c.slice(0, 36) + (c.length > 36 ? "..." : "");
-    if (titleCounter) titleCounter.textContent = t.length + " / 30";
-
-    const tagCount = tags.split(/\\s+/).filter(Boolean).length;
-    if (tagsCounter) tagsCounter.textContent = Math.min(tagCount, 5) + " / 5";
-    if (contentCounter) contentCounter.textContent = c.length + " / 150";
-  }
-
-  function applyKeywordPreset(kw) {
-    const item = sData[kw] || sData["360安全卫士"];
-    if (longTail) longTail.value = item.longTail;
-    if (creativeType) creativeType.value = item.creativeType;
-    if (vidTitle) vidTitle.value = item.title;
-    if (vidTags) vidTags.value = item.tags;
-    if (vidContent) vidContent.value = item.content;
-    if (segScript) segScript.value = item.content;
-    if (phoneCanvas && item.bgImage) phoneCanvas.style.backgroundImage = 'url("' + item.bgImage + '")';
-    updateVideoPreviews();
-  }
-
-  if (coreKw) {
-    coreKw.addEventListener("change", () => {
-      applyKeywordPreset(coreKw.value);
-      if (typeof showToast === "function") showToast("已根据「" + coreKw.value + "」自动更新全案文案与分镜");
-    });
-  }
-  if (vidTitle) vidTitle.addEventListener("input", updateVideoPreviews);
-  if (vidTags) vidTags.addEventListener("input", updateVideoPreviews);
-  if (vidContent) {
-    vidContent.addEventListener("input", () => {
-      if (segScript) segScript.value = vidContent.value;
-      updateVideoPreviews();
-    });
-  }
-  if (segScript) {
-    segScript.addEventListener("input", () => {
-      if (vidContent) vidContent.value = segScript.value;
-      updateVideoPreviews();
+  // 提示词输入框与字数计数
+  const aiPromptTextarea = document.getElementById("vgAiPromptTextarea") as HTMLTextAreaElement | null;
+  const aiPromptCount = document.getElementById("vgAiPromptCharCount");
+  if (aiPromptTextarea && aiPromptCount) {
+    aiPromptTextarea.addEventListener("input", () => {
+      aiPromptCount.textContent = `${aiPromptTextarea.value.length} / 500字`;
     });
   }
 
-  function triggerAiGen(msg) {
-    applyKeywordPreset(coreKw ? coreKw.value : "360安全卫士");
-    if (typeof showToast === "function") showToast(msg || "✨ AI 智能引擎已秒级生成爆款标题、话题标签与口播分镜");
-  }
-
-  const superSyncBtn = document.getElementById("vgSuperSyncBtn");
-  if (superSyncBtn) superSyncBtn.addEventListener("click", () => triggerAiGen("✨ 智能全案秒级生成完毕！已同步至手机模拟器"));
-  const kwAiBtn = document.getElementById("vgKeywordAIBtn");
-  if (kwAiBtn) kwAiBtn.addEventListener("click", () => triggerAiGen());
-  const copyAiBtn = document.getElementById("vgCopyAIBtn");
-  if (copyAiBtn) copyAiBtn.addEventListener("click", () => triggerAiGen());
-  const segAiBtn = document.getElementById("vgSegmentAIBtn");
-  if (segAiBtn) segAiBtn.addEventListener("click", () => triggerAiGen());
-  const clipBtn = document.getElementById("vgClipBtn");
-  if (clipBtn) clipBtn.addEventListener("click", () => {
-    if (typeof showToast === "function") showToast("已从「企业知识库」剪藏最新事实与产品技术参数");
-  });
-  const resetAllBtn = document.getElementById("vgResetAllBtn");
-  if (resetAllBtn) resetAllBtn.addEventListener("click", () => {
-    applyKeywordPreset("360安全卫士");
-    if (typeof showToast === "function") showToast("已重置回默认推荐配置");
-  });
-
-  // 7. AI生成视频: 画面提示词、快捷镜头词、润色增强
-  const aiPromptIpt = document.getElementById("vgAiPromptInput");
-  const aiPromptCounter = document.getElementById("vgAiPromptCounter");
-  if (aiPromptIpt && aiPromptCounter) {
-    aiPromptIpt.addEventListener("input", () => {
-      aiPromptCounter.textContent = aiPromptIpt.value.length + " / 500";
+  // 清空提示词
+  const aiPromptClearBtn = document.getElementById("vgAiPromptClearBtn");
+  if (aiPromptClearBtn && aiPromptTextarea && aiPromptCount) {
+    aiPromptClearBtn.addEventListener("click", () => {
+      aiPromptTextarea.value = "";
+      aiPromptCount.textContent = "0 / 500字";
+      if (typeof showToast === "function") showToast("已清空视频生成提示词");
     });
   }
-  document.querySelectorAll(".vg-prompt-tag").forEach(tagBtn => {
-    tagBtn.addEventListener("click", () => {
-      const tagText = tagBtn.dataset.tag || tagBtn.textContent.trim();
-      if (aiPromptIpt) {
-        const cur = aiPromptIpt.value.trim();
-        aiPromptIpt.value = cur ? cur.replace(/[,，]$/, "") + "，" + tagText : tagText;
-        if (aiPromptCounter) aiPromptCounter.textContent = aiPromptIpt.value.length + " / 500";
-        if (typeof showToast === "function") showToast("已添加镜头词标签：" + tagText);
+
+  // AI 智能润色扩写
+  const aiPromptEnhanceBtn = document.getElementById("vgAiPromptEnhanceBtn");
+  if (aiPromptEnhanceBtn && aiPromptTextarea && aiPromptCount) {
+    aiPromptEnhanceBtn.addEventListener("click", () => {
+      aiPromptEnhanceBtn.innerHTML = "<span>⏳</span> 正在AI扩写润色...";
+      setTimeout(() => {
+        aiPromptTextarea.value = "商业4K极高清实拍，360智见GEO数字安全云中心，全景冷蓝光束纵深穿透，中央全息防御大屏微粒流光涌动，镜头以0.5倍速电影级平缓推进，高反差科技光影，4K超精细材质纹理，浅景深虚化背景。";
+        aiPromptCount.textContent = `${aiPromptTextarea.value.length} / 500字`;
+        aiPromptEnhanceBtn.innerHTML = "<span>✨</span> AI 智能润色扩写";
+        if (typeof showToast === "function") showToast("✨ AI 已成功润色并丰富视频画面细节提示词");
+      }, 600);
+    });
+  }
+
+  // 画面灵感词快捷追加
+  document.querySelectorAll("#vgAiInspirationTags .vg-insp-tag").forEach(tag => {
+    tag.addEventListener("click", () => {
+      if (!aiPromptTextarea) return;
+      const val = tag.textContent?.trim() || "";
+      if (aiPromptTextarea.value.trim().length > 0) {
+        aiPromptTextarea.value += "，" + val;
+      } else {
+        aiPromptTextarea.value = val;
       }
+      if (aiPromptCount) aiPromptCount.textContent = `${aiPromptTextarea.value.length} / 500字`;
+      (tag as HTMLElement).style.borderColor = "#4f46e5";
+      (tag as HTMLElement).style.color = "#4f46e5";
+      (tag as HTMLElement).style.background = "#eef2ff";
+      setTimeout(() => {
+        (tag as HTMLElement).style.borderColor = "#cbd5e1";
+        (tag as HTMLElement).style.color = "#334155";
+        (tag as HTMLElement).style.background = "#fff";
+      }, 1000);
+      if (typeof showToast === "function") showToast(`已追加灵感词：「${val}」`);
     });
   });
-  const aiPolishBtn = document.getElementById("vgAiPromptPolishBtn");
-  if (aiPolishBtn && aiPromptIpt) {
-    aiPolishBtn.addEventListener("click", () => {
-      const cur = aiPromptIpt.value.trim();
-      aiPromptIpt.value = (cur ? cur + "，" : "") + "电影级工业光影渲染，4K超精细景深，运镜平稳推进，真实微距纹理质感";
-      if (aiPromptCounter) aiPromptCounter.textContent = aiPromptIpt.value.length + " / 500";
-      if (typeof showToast === "function") showToast("✨ AI 已一键润色镜头提示词并增强画面渲染参数");
-    });
-  }
 
-  // 8. AI生成视频: 时长包、画幅比例、图生视频
+  // 时长药丸选择
   document.querySelectorAll(".vg-duration-pill").forEach(pill => {
     pill.addEventListener("click", () => {
       document.querySelectorAll(".vg-duration-pill").forEach(p => {
         p.classList.remove("active");
-        p.style.borderColor = "#cbd5e1";
-        p.style.background = "#fff";
-        p.style.color = "#334155";
+        (p as HTMLElement).style.borderColor = "#cbd5e1";
+        (p as HTMLElement).style.background = "#fff";
+        (p as HTMLElement).style.color = "#334155";
       });
       pill.classList.add("active");
-      pill.style.borderColor = "#4f46e5";
-      pill.style.background = "#eef2ff";
-      pill.style.color = "#4f46e5";
-      const dur = pill.dataset.duration || "10";
-      if (typeof showToast === "function") showToast("已设定生成视频时长为：" + dur + " 秒");
+      (pill as HTMLElement).style.borderColor = "#4f46e5";
+      (pill as HTMLElement).style.background = "#eef2ff";
+      (pill as HTMLElement).style.color = "#4f46e5";
+      const dur = (pill as HTMLElement).dataset.duration || "10";
+      if (typeof showToast === "function") {
+        showToast(dur === "15" ? "已选择「15秒时长包 (480积分)」" : "已选择「10秒时长包 (320积分)」");
+      }
     });
   });
+
+  // 画面构图比例
   document.querySelectorAll(".vg-ratio-pill").forEach(pill => {
     pill.addEventListener("click", () => {
       document.querySelectorAll(".vg-ratio-pill").forEach(p => {
         p.classList.remove("active");
-        p.style.borderColor = "#cbd5e1";
-        p.style.background = "#fff";
-        p.style.color = "#334155";
+        (p as HTMLElement).style.borderColor = "#cbd5e1";
+        (p as HTMLElement).style.background = "#fff";
+        (p as HTMLElement).style.color = "#334155";
       });
       pill.classList.add("active");
-      pill.style.borderColor = "#4f46e5";
-      pill.style.background = "#eef2ff";
-      pill.style.color = "#4f46e5";
-      const ratio = pill.dataset.ratio || "9:16";
-      if (typeof showToast === "function") showToast("已设定画幅比例为：" + (ratio === "9:16" ? "9:16 竖屏（抖音/视频号）" : "16:9 横屏（B站/PC端）"));
+      (pill as HTMLElement).style.borderColor = "#4f46e5";
+      (pill as HTMLElement).style.background = "#eef2ff";
+      (pill as HTMLElement).style.color = "#4f46e5";
+      const r = (pill as HTMLElement).dataset.ratio || "9:16";
+      if (typeof showToast === "function") showToast("已设置画面构图比例为「" + r + "」");
     });
   });
-  const img2VidToggle = document.getElementById("vgImg2VidToggle");
-  const img2VidUploadWrap = document.getElementById("vgImg2VidUploadWrap");
-  if (img2VidToggle && img2VidUploadWrap) {
-    img2VidToggle.addEventListener("change", () => {
-      img2VidUploadWrap.style.display = img2VidToggle.checked ? "block" : "none";
-      if (typeof showToast === "function") showToast(img2VidToggle.checked ? "已开启「图生视频」参考画面模式" : "已切换为「纯文本生成视频」模式");
-    });
-  }
-  const changeRefImgBtn = document.getElementById("vgChangeRefImgBtn");
-  if (changeRefImgBtn) {
-    changeRefImgBtn.addEventListener("click", () => {
-      if (typeof showToast === "function") showToast("已从知识库中重新选用高清质检主图作为参考底图");
+
+  // 风格选择
+  const aiStyleSelect = document.getElementById("vgAiVideoStyleSelect") as HTMLSelectElement | null;
+  if (aiStyleSelect) {
+    aiStyleSelect.addEventListener("change", () => {
+      const txt = aiStyleSelect.options[aiStyleSelect.selectedIndex]?.text || aiStyleSelect.value;
+      if (typeof showToast === "function") showToast("已设置统一画面风格为「" + txt + "」");
     });
   }
 
-  // 9. AI生成视频: 声音选择与语速调节
-  document.querySelectorAll(".vg-voice-card").forEach(card => {
-    card.addEventListener("click", () => {
-      document.querySelectorAll(".vg-voice-card").forEach(c => {
-        c.classList.remove("active");
-        c.style.borderColor = "#e2e8f0";
-        c.style.background = "#fff";
-        const dot = c.querySelector(".voice-radio-dot");
-        if (dot) dot.style.display = "none";
-        const chip = c.querySelector(".chip-mini");
-        if (chip) { chip.classList.remove("on"); chip.textContent = "选用"; }
-      });
-      card.classList.add("active");
-      card.style.borderColor = "#4f46e5";
-      card.style.background = "#eef2ff";
-      const dot = card.querySelector(".voice-radio-dot");
-      if (dot) dot.style.display = "block";
-      const chip = card.querySelector(".chip-mini");
-      if (chip) { chip.classList.add("on"); chip.textContent = "已选用"; }
-      const voice = card.dataset.voice || "知性干练商务女声";
-      if (phoneMusic) phoneMusic.textContent = "原声 - 360智见GEO智能播音 · " + voice;
-      if (typeof showToast === "function") showToast("已选用【" + voice + "】作为口播音色，手机端已实时生效");
-    });
-  });
-  const aiVoiceSpeedSelect = document.getElementById("vgAiVoiceSpeed");
-  if (aiVoiceSpeedSelect) {
-    aiVoiceSpeedSelect.addEventListener("change", () => {
-      if (typeof showToast === "function") showToast("口播倍速已设为：" + aiVoiceSpeedSelect.options[aiVoiceSpeedSelect.selectedIndex].text);
+  // 分辨率选择
+  const aiResSelect = document.getElementById("vgAiVideoResSelect") as HTMLSelectElement | null;
+  if (aiResSelect) {
+    aiResSelect.addEventListener("change", () => {
+      const txt = aiResSelect.options[aiResSelect.selectedIndex]?.text || aiResSelect.value;
+      if (typeof showToast === "function") showToast("已设置输出分辨率为「" + txt + "」");
     });
   }
 
-  // 10. AI生成视频: 视频字幕单语/双语与样式卡片
-  const subLangSelect = document.getElementById("vgSubtitleLangSelect");
-  if (subLangSelect) {
-    subLangSelect.addEventListener("change", () => {
-      if (typeof showToast === "function") showToast("已切换字幕语言模式：" + subLangSelect.options[subLangSelect.selectedIndex].text);
+  // 运镜选择
+  const aiMotionSelect = document.getElementById("vgAiMotionSelect") as HTMLSelectElement | null;
+  if (aiMotionSelect) {
+    aiMotionSelect.addEventListener("change", () => {
+      const txt = aiMotionSelect.options[aiMotionSelect.selectedIndex]?.text || aiMotionSelect.value;
+      if (typeof showToast === "function") showToast("已设置运镜模式为「" + txt + "」");
     });
   }
-  const subSplitSelect = document.getElementById("vgAiSubtitleSplit");
-  if (subSplitSelect) {
-    subSplitSelect.addEventListener("change", () => {
-      if (typeof showToast === "function") showToast("已配置断句模式：" + subSplitSelect.options[subSplitSelect.selectedIndex].text);
+
+  // 动态幅度滑块
+  const aiMotionSlider = document.getElementById("vgAiMotionStrengthSlider") as HTMLInputElement | null;
+  const aiMotionVal = document.getElementById("vgAiMotionStrengthVal");
+  if (aiMotionSlider && aiMotionVal) {
+    aiMotionSlider.addEventListener("input", () => {
+      const v = aiMotionSlider.value;
+      const desc = Number(v) <= 3 ? "微小运动" : Number(v) <= 7 ? "中等运动" : "剧烈动态";
+      aiMotionVal.textContent = `${v} / 10 (${desc})`;
     });
   }
-  document.querySelectorAll(".vg-style-chip").forEach(card => {
-    card.addEventListener("click", () => {
-      document.querySelectorAll(".vg-style-chip").forEach(c => {
-        c.classList.remove("active");
+
+  // 图生视频参考演变模式切换
+  document.querySelectorAll("#vgAiRefModeGroup .vg-ref-mode-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      document.querySelectorAll("#vgAiRefModeGroup .vg-ref-mode-btn").forEach(b => {
+        b.classList.remove("active");
+        (b as HTMLElement).style.borderColor = "#cbd5e1";
+        (b as HTMLElement).style.background = "#fff";
+        (b as HTMLElement).style.color = "#334155";
       });
-      card.classList.add("active");
-      const sType = card.dataset.style || "default";
-      if (phoneSubtitle) {
-        phoneSubtitle.className = "vg-phone-subtitle-preview" + (sType === "yellow" ? " style-yellow" : sType === "karaoke" ? " style-karaoke" : "");
+      btn.classList.add("active");
+      (btn as HTMLElement).style.borderColor = "#4f46e5";
+      (btn as HTMLElement).style.background = "#eef2ff";
+      (btn as HTMLElement).style.color = "#4f46e5";
+      const mode = (btn as HTMLElement).dataset.refmode;
+      if (typeof showToast === "function") {
+        showToast(mode === "style_ref" ? "已切换为「风格配色参考模式」" : "已切换为「首帧精准演变模式」");
       }
-      if (typeof showToast === "function") showToast("字幕样式已切换，手机画面已实时呈现");
     });
   });
 
-  // 11. BGM 选择与试听
-  document.querySelectorAll(".bgm-audition-btn").forEach(btn => {
-    btn.addEventListener("click", e => {
-      e.stopPropagation();
-      const bname = btn.dataset.bgm || "商务质感节奏";
-      if (typeof showToast === "function") showToast("正在试听背景音乐：" + bname + " (已同步音量设置)");
-    });
-  });
-  const quickBgmAuditionBtn = document.getElementById("vgQuickBgmAuditionBtn");
-  if (quickBgmAuditionBtn) {
-    quickBgmAuditionBtn.addEventListener("click", () => {
-      const bgmSel = document.getElementById("vgQuickBgmSelect");
-      const opt = bgmSel ? bgmSel.options[bgmSel.selectedIndex] : null;
-      if (typeof showToast === "function") showToast("正在试听背景音乐：" + (opt ? opt.text : "大气质感商务节奏"));
+  // 参考图本地上传
+  const aiRefUploadBtn = document.getElementById("vgAiRefUploadBtn");
+  const aiRefFileInput = document.getElementById("vgAiRefFileInput") as HTMLInputElement | null;
+  const aiRefCurrentImg = document.getElementById("vgAiRefCurrentImg") as HTMLImageElement | null;
+  const aiRefFileName = document.getElementById("vgAiRefFileName");
+  if (aiRefUploadBtn && aiRefFileInput) {
+    aiRefUploadBtn.addEventListener("click", () => aiRefFileInput.click());
+    aiRefFileInput.addEventListener("change", () => {
+      const file = aiRefFileInput.files?.[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = e => {
+          if (aiRefCurrentImg && e.target?.result) {
+            aiRefCurrentImg.src = e.target.result as string;
+          }
+          if (aiRefFileName) {
+            aiRefFileName.textContent = file.name;
+          }
+          if (typeof showToast === "function") showToast(`已载入自定义参考图：「${file.name}」`);
+        };
+        reader.readAsDataURL(file);
+      }
     });
   }
-  document.querySelectorAll("#vtabBgmView .chip-mini").forEach(btn => {
-    btn.addEventListener("click", e => {
-      e.stopPropagation();
-      const bgmName = btn.closest("div")?.querySelector("div > div")?.textContent || "商用背景音乐";
-      document.querySelectorAll("#vtabBgmView .chip-mini").forEach(b => {
-        b.classList.remove("on");
-        b.textContent = "选用";
+
+  // 移除参考图
+  const aiRefClearBtn = document.getElementById("vgAiRefClearBtn");
+  if (aiRefClearBtn && aiRefCurrentImg && aiRefFileName) {
+    aiRefClearBtn.addEventListener("click", () => {
+      aiRefFileName.textContent = "未载入参考图 (将转为纯文本生成)";
+      aiRefCurrentImg.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='70' viewBox='0 0 100 70'%3E%3Crect width='100' height='70' fill='%231e293b'/%3E%3Ctext x='50' y='40' font-size='12' fill='%2364748b' text-anchor='middle'%3E无参考图%3C/text%3E%3C/svg%3E";
+      document.querySelectorAll("#vgAiQuickRefLibrary .vg-quick-ref-item").forEach(item => {
+        item.classList.remove("active");
+        (item as HTMLElement).style.borderColor = "#cbd5e1";
+        (item as HTMLElement).style.background = "#fff";
       });
-      btn.classList.add("on");
-      btn.textContent = "当前选用";
-      if (typeof showToast === "function") showToast("背景音乐已选用并与解说音轨完成智能闪避配置");
+      if (typeof showToast === "function") showToast("已移除参考图，当前将使用纯文本提示词直接生成");
+    });
+  }
+
+  // 快速从素材库选择参考图
+  document.querySelectorAll("#vgAiQuickRefLibrary .vg-quick-ref-item").forEach(item => {
+    item.addEventListener("click", () => {
+      document.querySelectorAll("#vgAiQuickRefLibrary .vg-quick-ref-item").forEach(i => {
+        i.classList.remove("active");
+        (i as HTMLElement).style.borderColor = "#cbd5e1";
+        (i as HTMLElement).style.background = "#fff";
+        const t = i.querySelector("div") as HTMLElement | null;
+        if (t) t.style.color = "#334155";
+      });
+      item.classList.add("active");
+      (item as HTMLElement).style.borderColor = "#4f46e5";
+      (item as HTMLElement).style.background = "#eef2ff";
+      const txt = item.querySelector("div") as HTMLElement | null;
+      if (txt) txt.style.color = "#4f46e5";
+
+      const imgSrc = (item as HTMLElement).dataset.img;
+      const title = (item as HTMLElement).dataset.title || "素材参考图";
+      if (aiRefCurrentImg && imgSrc) aiRefCurrentImg.src = imgSrc;
+      if (aiRefFileName) aiRefFileName.textContent = title + ".jpg";
+      if (typeof showToast === "function") showToast(`已选用参考图：「${title}」`);
     });
   });
 
-  // 12. 底部渲染与分发按钮
-  const renderBtns = [document.getElementById("vgStartRenderBtn"), document.getElementById("vgBottomGlobalGenerateBtn")];
-  renderBtns.forEach(btn => {
-    if (btn) {
-      btn.addEventListener("click", () => {
-        const oldHtml = btn.innerHTML;
-        btn.setAttribute("disabled", "true");
-        btn.innerHTML = "<span>🎬 正在云端渲染 1080P 短视频…</span>";
-        setTimeout(() => {
-          btn.removeAttribute("disabled");
-          btn.innerHTML = oldHtml;
-          if (typeof showToast === "function") showToast("短视频合成成功！已生成 1080P 竖屏 MP4 文件与配套字幕轨");
-        }, 900);
-      });
-    }
-  });
-  const saveBtns = [document.getElementById("vgSaveDraftBtn"), document.getElementById("vgBottomSaveLibBtn")];
-  saveBtns.forEach(btn => {
-    if (btn) {
-      btn.addEventListener("click", () => {
-        if (typeof showToast === "function") showToast("当前短视频文案、音色与分镜脚本已成功沉淀至「发布记录」");
-      });
-    }
-  });
-  const dispatchBtns = [document.getElementById("vgDispatchBtn"), document.getElementById("vgBottomMatrixPublishBtn")];
-  dispatchBtns.forEach(btn => {
-    if (btn) {
-      btn.addEventListener("click", () => {
-        const pubNav = document.querySelector('.nav a[data-p="pub"]');
-        if (pubNav) pubNav.click();
-        if (typeof showToast === "function") showToast("已携带当前短视频跳转至「文章发布」中心");
-      });
-    }
-  });
+  // 参考图权重滑块
+  const aiRefSlider = document.getElementById("vgAiRefStrengthSlider") as HTMLInputElement | null;
+  const aiRefVal = document.getElementById("vgAiRefStrengthVal");
+  if (aiRefSlider && aiRefVal) {
+    aiRefSlider.addEventListener("input", () => {
+      const v = aiRefSlider.value;
+      const desc = Number(v) < 40 ? "轻微参考" : Number(v) < 70 ? "适度引导" : "强力引导";
+      aiRefVal.textContent = `${v}% (${desc})`;
+    });
+  }
 
-  // 13. 手机模拟器播放与点赞
-  let isPhonePlaying = false;
-  let playInterval = null;
-  const playButtons = [document.getElementById("vgPhonePlayBtn"), document.querySelector(".vg-phone-play-btn")];
-  playButtons.forEach(btn => {
-    if (btn) {
-      btn.addEventListener("click", () => {
-        isPhonePlaying = !isPhonePlaying;
-        if (isPhonePlaying) {
-          btn.textContent = "❚❚";
-          btn.style.background = "rgba(99, 102, 241, 0.85)";
-          if (typeof showToast === "function") showToast("▶ 正在模拟短视频口播演示与音波跳动");
-          let idx = 0;
-          const phrases = (vidContent?.value || "360安全科技自主研发云端安全大脑与自研AI杀毒双引擎，毫秒级识别未知勒索与木马威胁。").split("，");
-          playInterval = setInterval(() => {
-            if (isPhonePlaying && phoneSubtitle && phrases.length) {
-              phoneSubtitle.textContent = phrases[idx % phrases.length];
-              idx++;
+  // 6. 本地视频上传面板交互
+  const dropArea = document.getElementById("vgUploadDropArea");
+  const fileInput = document.getElementById("vgUploadVideoInput");
+  const progressWrap = document.getElementById("vgUploadProgressCard");
+  const progressBar = document.getElementById("vgUploadProgressBar");
+  const progressText = document.getElementById("vgUploadPercentText");
+  const uploadedList = document.getElementById("vgUploadedVideosList");
+
+  if (dropArea && fileInput) {
+    dropArea.addEventListener("click", () => fileInput.click());
+    dropArea.addEventListener("dragover", e => {
+      e.preventDefault();
+      dropArea.style.borderColor = "#2563eb";
+      dropArea.style.background = "#eff6ff";
+    });
+    dropArea.addEventListener("dragleave", () => {
+      dropArea.style.borderColor = "#93c5fd";
+      dropArea.style.background = "#f8fafc";
+    });
+    dropArea.addEventListener("drop", e => {
+      e.preventDefault();
+      dropArea.style.borderColor = "#93c5fd";
+      dropArea.style.background = "#f8fafc";
+      if (e.dataTransfer.files?.length) {
+        handleUpload(e.dataTransfer.files[0].name);
+      }
+    });
+    fileInput.addEventListener("change", () => {
+      if (fileInput.files?.length) {
+        handleUpload(fileInput.files[0].name);
+      }
+    });
+
+    function handleUpload(name) {
+      if (progressWrap) progressWrap.style.display = "block";
+      let p = 0;
+      const timer = setInterval(() => {
+        p += 20;
+        if (progressBar) progressBar.style.width = p + "%";
+        if (progressText) progressText.textContent = `上传解析中... ${p}%`;
+        if (p >= 100) {
+          clearInterval(timer);
+          setTimeout(() => {
+            if (progressWrap) progressWrap.style.display = "none";
+            if (uploadedList) {
+              const div = document.createElement("div");
+              div.className = "vg-uploaded-item";
+              div.style.cssText = "display:flex;align-items:center;justify-content:space-between;padding:12px 14px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;margin-bottom:8px";
+              div.innerHTML = `<div style="display:flex;align-items:center;gap:10px"><span>🎬</span><div><div style="font-size:13px;font-weight:700;color:#0f172a">${name}</div><div style="font-size:11.5px;color:#10b981">✓ 质检合格 · 9:16高清竖屏 · 已就绪</div></div></div><span class="pill g" style="font-size:11px">已就绪</span>`;
+              uploadedList.prepend(div);
             }
-          }, 1800);
-        } else {
-          btn.textContent = "▶";
-          btn.style.background = "rgba(0, 0, 0, 0.45)";
-          if (playInterval) clearInterval(playInterval);
-          updateVideoPreviews();
+            if (typeof showToast === "function") showToast(`✅ 本地视频「${name}」已上传成功并通过 AI 质检！`);
+          }, 300);
         }
-      });
+      }, 80);
     }
-  });
-  const likeBtns = [document.getElementById("vgLikeBtn"), document.querySelector(".vg-phone-action")];
-  likeBtns.forEach(btn => {
-    if (btn) {
-      btn.addEventListener("click", () => {
-        const icon = btn.querySelector(".vg-phone-action-icon");
-        const likeCount = document.getElementById("vgLikeCount");
-        if (icon) {
-          icon.style.transform = "scale(1.35)";
-          setTimeout(() => { icon.style.transform = ""; }, 200);
-        }
-        if (likeCount) likeCount.textContent = "11.5w";
-        if (typeof showToast === "function") showToast("❤️ 模拟点赞交互成功！");
-      });
-    }
+  }
+
+  // 7. 底部 Dock 操作条
+  const startRenderBtn = document.getElementById("vgStartRenderBtn");
+  const saveDraftBtn = document.getElementById("vgSaveDraftBtn");
+  const matrixDispatchBtn = document.getElementById("vgDispatchBtn");
+
+  if (startRenderBtn) {
+    startRenderBtn.addEventListener("click", () => {
+      const activeMethod = document.querySelector("#vgMethodTabs .vg-method-pill.active")?.getAttribute("data-vmethod") || "quick";
+      const origText = startRenderBtn.innerHTML;
+      if (activeMethod === "ai") {
+        startRenderBtn.innerHTML = "<span>⚡</span> 正在AI生成视频 (38%)...";
+        startRenderBtn.disabled = true;
+        if (typeof showToast === "function") showToast("🚀 已发起 AI 视频生成任务（按需扣除积分）...");
+        setTimeout(() => {
+          startRenderBtn.innerHTML = "<span>✅</span> AI 视频生成成功！";
+          if (typeof showToast === "function") showToast("🎉 AI 视频已成功生成！");
+          setTimeout(() => {
+            startRenderBtn.innerHTML = origText;
+            startRenderBtn.disabled = false;
+          }, 2000);
+        }, 1500);
+        return;
+      }
+      startRenderBtn.innerHTML = "<span>⚡</span> 正在渲染合成视频 (38%)...";
+      startRenderBtn.disabled = true;
+      if (typeof showToast === "function") showToast("🚀 任务已加入云端高性能渲染队列，预计耗时 15 秒...");
+      setTimeout(() => {
+        startRenderBtn.innerHTML = "<span>✅</span> 视频合成成功！";
+        if (typeof showToast === "function") showToast("🎉 视频已成功生成！可在右侧模拟器预览或一键矩阵分发！");
+        setTimeout(() => {
+          startRenderBtn.innerHTML = origText;
+          startRenderBtn.disabled = false;
+        }, 2000);
+      }, 1500);
+    });
+  }
+
+  if (saveDraftBtn) {
+    saveDraftBtn.addEventListener("click", () => {
+      if (typeof showToast === "function") showToast("💾 视频全案已成功保存至「草稿箱」！");
+    });
+  }
+
+  if (matrixDispatchBtn) {
+    matrixDispatchBtn.addEventListener("click", () => {
+      if (typeof showToast === "function") showToast("🚀 已将该成片推送至抖音、视频号、小红书等 8 大矩阵媒体发布队列！");
+    });
+  }
+
+  // 8. 手机模拟器播放 & 点赞交互
+  const phonePlayBtn = document.getElementById("vgPhonePlayBtn");
+  let isPlaying = false;
+  let playTimer = null;
+
+  if (phonePlayBtn) {
+    phonePlayBtn.addEventListener("click", () => {
+      isPlaying = !isPlaying;
+      const subtitle = document.getElementById("vgPhoneSubtitleLayer");
+      if (isPlaying) {
+        phonePlayBtn.style.opacity = "0";
+        if (typeof showToast === "function") showToast("▶ 模拟器已开始同步播放短视频与音频！");
+        const phrases = [
+          "企业电脑遭遇勒索病毒，数据真的只能被动撕票？",
+          "360自研AI云端安全大脑，毫秒级诱捕未知变种！",
+          "实测百万样本恶意程序，拦截率高达99.98%！",
+          "全国超千万终端权威部署，支持免费测试部署！"
+        ];
+        let idx = 0;
+        playTimer = setInterval(() => {
+          idx++;
+          if (subtitle) subtitle.textContent = phrases[idx % phrases.length];
+        }, 2200);
+      } else {
+        phonePlayBtn.style.opacity = "1";
+        clearInterval(playTimer);
+        if (typeof showToast === "function") showToast("⏸ 视频播放已暂停");
+      }
+    });
+  }
+
+  document.querySelectorAll(".vg-phone-action-item").forEach(item => {
+    item.addEventListener("click", () => {
+      const cnt = item.querySelector(".vg-phone-action-count");
+      if (cnt && !isNaN(parseInt(cnt.textContent))) {
+        cnt.textContent = String(parseInt(cnt.textContent) + 1);
+        if (typeof showToast === "function") showToast("❤️ 模拟器互动已增加点赞！");
+      }
+    });
   });
 
-  // 初始化预览与默认状态
-  updateVideoPreviews();
+  applyPreset("360安全卫士");
 }
 s();
 
@@ -4795,10 +6445,9 @@ function c(){let e=document.getElementById(`themeSwitcherWrap`),t=document.getEl
   document.getElementById(`vgMethodTabs`)?.addEventListener(`click`,e=>{
     let pill=e.target.closest(`.vg-method-pill`);
     if(!pill)return;
-    let badge=document.getElementById(`vgVideoStateBadge`);
     let m=pill.dataset.vmethod;
-    if(badge){
-      badge.textContent=m===`ai`?`当前状态2：AI生成视频配置面板（BGM、字幕配置）`:m===`upload`?`当前状态3：上传视频面板（拖拽上传、进度与预览）`:`当前状态1：视频快剪表单面板`;
+    if(m && typeof (window as any).__switchVideoMethod === `function`){
+      (window as any).__switchVideoMethod(m);
     }
   });
 

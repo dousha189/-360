@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" width="100%" height="100%">
+    <rect width="320" height="220" fill="#e2e8f0"/>
+    <rect x="30" y="30" width="260" height="160" rx="10" fill="#f1f5f9" stroke="#94a3b8" stroke-width="2"/>
+    <ellipse cx="120" cy="130" rx="55" ry="32" fill="#cbd5e1" stroke="#64748b" stroke-width="3"/>
+    <!-- Cleaning agent bottle -->
+    <rect x="210" y="70" width="30" height="65" rx="5" fill="#15803d"/>
+    <rect x="220" y="55" width="10" height="15" fill="#166534"/>
+    <text x="225" y="105" font-family="sans-serif" font-size="10" fill="#fff" text-anchor="middle" font-weight="bold">CLEAN</text>
+    <path d="M 120 120 Q 150 145 210 100" stroke="#22c55e" stroke-width="3" stroke-dasharray="4 4" fill="none"/>
+    <text x="160" y="180" font-family="sans-serif" font-size="12" font-weight="bold" fill="#334155" text-anchor="middle">环保降解管道溶油除垢保洁实测</text>
+  </svg>

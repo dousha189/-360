@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" width="100%" height="100%">
+    <rect width="320" height="220" fill="#0f172a"/>
+    <!-- Heavy pipes -->
+    <rect x="20" y="80" width="280" height="42" fill="#334155" stroke="#64748b" stroke-width="2"/>
+    <circle cx="160" cy="101" r="32" fill="#475569" stroke="#94a3b8" stroke-width="4"/>
+    <!-- Valve handwheel -->
+    <circle cx="160" cy="50" r="24" fill="none" stroke="#ef4444" stroke-width="6"/>
+    <line x1="160" y1="26" x2="160" y2="74" stroke="#ef4444" stroke-width="5"/>
+    <line x1="136" y1="50" x2="184" y2="50" stroke="#ef4444" stroke-width="5"/>
+    <!-- Worker silhouette -->
+    <circle cx="80" cy="135" r="14" fill="#38bdf8"/>
+    <path d="M 68 150 L 92 150 L 96 195 L 64 195 Z" fill="#0284c7"/>
+    <text x="160" y="205" font-family="sans-serif" font-size="12" font-weight="bold" fill="#94a3b8" text-anchor="middle">市政工业大口径高压管阀检修</text>
+  </svg>
