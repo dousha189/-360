@@ -1,8 +1,27 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" width="100%" height="100%">
-    <rect width="320" height="220" fill="#d97706"/>
-    <!-- Commercial kitchen grease trap -->
-    <rect x="40" y="50" width="240" height="120" rx="8" fill="#78350f" stroke="#451a03" stroke-width="3"/>
-    <circle cx="160" cy="110" r="38" fill="#b45309"/>
-    <path d="M 125 110 Q 160 85 195 110 Q 160 135 125 110 Z" fill="#fef3c7" opacity="0.6"/>
-    <text x="160" y="202" font-family="sans-serif" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">餐饮酒店商用隔油池无害化清掏维护</text>
-  </svg>
+  <defs>
+    <linearGradient id="bg9" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#042f2e"/>
+      <stop offset="100%" stop-color="#021c1e"/>
+    </linearGradient>
+    <linearGradient id="cloudGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2dd4bf"/>
+      <stop offset="100%" stop-color="#0d9488"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="220" fill="url(#bg9)"/>
+  <!-- Cloud icon -->
+  <path d="M 120 95 C 110 95 100 85 100 75 C 100 65 110 55 125 55 C 130 42 145 35 160 35 C 180 35 195 48 198 62 C 210 65 218 74 218 85 C 218 95 210 105 195 105 L 120 105 Z" fill="url(#cloudGrad)" opacity="0.85"/>
+  <!-- Scanning ray -->
+  <line x1="160" y1="105" x2="160" y2="155" stroke="#5eead4" stroke-width="2.5" stroke-dasharray="4 2"/>
+  <polygon points="152,150 160,160 168,150" fill="#5eead4"/>
+  <!-- Sample nodes -->
+  <rect x="50" y="125" width="80" height="26" rx="4" fill="#134e4a" stroke="#2dd4bf"/>
+  <text x="90" y="142" font-family="-apple-system, sans-serif" font-size="9" font-weight="bold" fill="#ccfbf1" text-anchor="middle">特征库 100亿+</text>
+  <rect x="190" y="125" width="80" height="26" rx="4" fill="#134e4a" stroke="#2dd4bf"/>
+  <text x="230" y="142" font-family="-apple-system, sans-serif" font-size="9" font-weight="bold" fill="#ccfbf1" text-anchor="middle">秒级云查响应</text>
+  <!-- Bottom info bar -->
+  <rect x="20" y="168" width="280" height="42" rx="6" fill="#0f172a" fill-opacity="0.9" stroke="#1e293b"/>
+  <text x="35" y="186" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="700" fill="#2dd4bf">云端全量病毒查杀引擎与样本遥测</text>
+  <text x="35" y="201" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5" fill="#94a3b8">百亿级样本库实时云查 · 启发式未知木马挖掘</text>
+</svg>

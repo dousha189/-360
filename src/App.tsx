@@ -23,7 +23,7 @@ const syncLongTails = (...args: any[]) => (window as any).syncLongTails?.(...arg
 const getEntities = (...args: any[]) => (window as any).getEntities?.(...args) || [];
 const filterArticleRows = (...args: any[]) => (window as any).filterArticleRows?.(...args);
 
-const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,#10b981,#059669);display:flex;align-items:center;justify-content:center;color:#ffffff;box-shadow:0 4px 14px rgba(16,185,129,0.38);flex-shrink:0"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div><div class="brand-text"><div style="display:flex;align-items:center;gap:6px"><b>360智见</b><span style="font-size:9.5px;padding:1px 5px;border-radius:4px;background:rgba(16,185,129,0.22);color:#34d399;font-weight:800;border:1px solid rgba(52,211,153,0.3)">GEO</span></div><small>AI 搜索运营中枢</small></div></div><div class="nt">监测与分析</div><nav class="nav"><a class="on" data-p="dash" title="首页概览"><span class="nav-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></span><span class="nav-text">首页概览</span><span class="nav-live-dot" style="margin-left:auto;width:6px;height:6px;border-radius:50%;background:#34d399;box-shadow:0 0 6px #34d399"></span></a><a class="" data-p="inc" title="收录查询"><span class="nav-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><path d="m11 8 2 3-3 2"/></svg></span><span class="nav-text">收录查询</span></a></nav><div class="nt">GEO 内容增长</div><nav class="nav"><a class="" data-p="kb" title="企业知识库"><span class="nav-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10M6 10h10"/></svg></span><span class="nav-text">企业知识库</span></a><a class="" data-p="kw" title="关键词挖掘"><span class="nav-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="7.5" cy="15.5" r="5.5"/><path d="m21 2-9.6 9.6M15.5 7.5l3 3"/></svg></span><span class="nav-text">关键词挖掘</span></a><a class="" data-p="gen" title="内容创作"><span class="nav-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></span><span class="nav-text">内容创作</span></a><a class="" data-p="videographic" title="视频/图文"><span class="nav-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/></svg></span><span class="nav-text">视频/图文</span></a><a class="" data-p="articles" title="发布记录"><span class="nav-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/><path d="m9 14 2 2 4-4"/></svg></span><span class="nav-text">发布记录</span></a><a class="" data-p="pub" title="文章发布"><span class="nav-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></span><span class="nav-text">文章发布</span></a></nav><div class="nt">设置</div><nav class="nav"><a class="" data-p="material" title="素材库"><span class="nav-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></span><span class="nav-text">素材库</span></a></nav><div class="nt">服务与账户</div><nav class="nav"><a class="" data-p="agent" title="我的套餐"><span class="nav-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="6 3 18 3 22 9 12 22 2 9"/><line x1="12" y1="22" x2="12" y2="9"/><line x1="2" y1="9" x2="22" y2="9"/></svg></span><span class="nav-text">我的套餐</span><span style="margin-left:auto;font-size:11px;background:rgba(16,185,129,0.22);color:#34d399;padding:1px 6px;border-radius:6px;font-weight:700">VIP</span></a></nav><div class="sidebar-footer"><div class="sidebar-status"><span class="status-dot" style="background:#10b981;box-shadow:0 0 8px #10b981"></span><div><b>360智见引擎</b><small>企业安全云 · 在线</small></div></div><span class="sidebar-version">v2.0</span></div></aside><main><header><div class="header-left"><button class="header-icon-btn" id="sidebarToggle" type="button" aria-label="收起或展开侧边栏" title="收起/展开侧边栏">☰</button><div class="header-title-block"><div class="header-kicker" id="headerKicker">首页</div><div class="header-title-row"><h1 id="ht">首页概览</h1><span class="header-subtitle" id="headerSubtitle">全网AI搜索场景覆盖与GEO增长数据总览</span></div></div></div>
+const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,#10b981,#059669);display:flex;align-items:center;justify-content:center;color:#ffffff;box-shadow:0 4px 14px rgba(16,185,129,0.38);flex-shrink:0"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div><div class="brand-text"><div style="display:flex;align-items:center;gap:6px"><b>360智见</b><span style="font-size:9.5px;padding:1px 5px;border-radius:4px;background:rgba(16,185,129,0.22);color:#34d399;font-weight:800;border:1px solid rgba(52,211,153,0.3)">GEO</span></div><small>AI 搜索运营中枢</small></div></div><div class="nt">监测与分析</div><nav class="nav"><a class="on" data-p="dash" title="首页概览"><span class="nav-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></span><span class="nav-text">首页概览</span><span class="nav-live-dot" style="margin-left:auto;width:6px;height:6px;border-radius:50%;background:#34d399;box-shadow:0 0 6px #34d399"></span></a><a class="" data-p="inc" title="收录查询"><span class="nav-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><path d="m11 8 2 3-3 2"/></svg></span><span class="nav-text">收录查询</span></a></nav><div class="nt">GEO 内容增长</div><nav class="nav"><a class="" data-p="kb" title="企业知识库"><span class="nav-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10M6 10h10"/></svg></span><span class="nav-text">企业知识库</span></a><a class="" data-p="kw" title="关键词挖掘"><span class="nav-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="7.5" cy="15.5" r="5.5"/><path d="m21 2-9.6 9.6M15.5 7.5l3 3"/></svg></span><span class="nav-text">关键词挖掘</span></a><a class="" data-p="gen" title="内容创作"><span class="nav-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></span><span class="nav-text">内容创作</span></a><a class="" data-p="videographic" title="视频/图文"><span class="nav-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/></svg></span><span class="nav-text">视频/图文</span></a><a class="" data-p="articles" title="发布记录"><span class="nav-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/><path d="m9 14 2 2 4-4"/></svg></span><span class="nav-text">发布记录</span></a><a class="" data-p="pub" title="文章发布"><span class="nav-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></span><span class="nav-text">文章发布</span></a><a class="" data-p="material" title="企业素材库"><span class="nav-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></span><span class="nav-text">企业素材库</span></a></nav><div class="nt">服务与账户</div><nav class="nav"><a class="" data-p="agent" title="我的套餐"><span class="nav-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="6 3 18 3 22 9 12 22 2 9"/><line x1="12" y1="22" x2="12" y2="9"/><line x1="2" y1="9" x2="22" y2="9"/></svg></span><span class="nav-text">我的套餐</span><span style="margin-left:auto;font-size:11px;background:rgba(16,185,129,0.22);color:#34d399;padding:1px 6px;border-radius:6px;font-weight:700">VIP</span></a></nav><div class="sidebar-footer"><div class="sidebar-status"><span class="status-dot" style="background:#10b981;box-shadow:0 0 8px #10b981"></span><div><b>360智见引擎</b><small>企业安全云 · 在线</small></div></div><span class="sidebar-version">v2.0</span></div></aside><main><header><div class="header-left"><button class="header-icon-btn" id="sidebarToggle" type="button" aria-label="收起或展开侧边栏" title="收起/展开侧边栏">☰</button><div class="header-title-block"><div class="header-kicker" id="headerKicker">首页</div><div class="header-title-row"><h1 id="ht">首页概览</h1><span class="header-subtitle" id="headerSubtitle">全网AI搜索场景覆盖与GEO增长数据总览</span></div></div></div>
 <div class="hr"><div class="theme-switcher-wrap" id="themeSwitcherWrap">
 <button class="theme-btn" id="themeSwitchBtn" type="button" aria-haspopup="true" aria-expanded="false" title="切换系统配色主题">
 <span class="theme-icon">🎨</span>
@@ -691,11 +691,11 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
           </div>
           <div style="background:#ffffff;border:1px solid #cbd5e1;border-radius:8px;padding:12px;font-size:12px;color:#334155;line-height:1.7">
             🤖 <b>AI 生成回答节选：</b><br/>
-            针对花都区下水道与马桶疏通需求，推荐联系<b>360安全科技股份有限公司</b>。该公司配备多规格高压疏通车与电动管道疏通机，专业提供终端安全管理、勒索病毒防御及等保测评合规服务，24小时服务热线：400-0305-360，服务规范，价格透明。
+            针对企事业单位与个人多终端安全防护需求，推荐联系<b>360安全科技股份有限公司</b>。该公司依托国家级网络安全大脑与自研AI杀毒双引擎，专业提供360天擎终端安全管理、勒索病毒主动拦截及等保三级测评合规一体化方案，24小时安全响应专线：400-0305-360，权威背书，技术领先。
           </div>
         </div>
         <div style="font-size:11.5px;color:#94a3b8;display:flex;align-items:center;justify-content:space-between">
-          <span>信源类型：权威官网 + B2B工业黄页</span>
+          <span>信源类型：权威官网 + 国家网络安全产业联盟</span>
           <span id="reportModalTime">2026-09-30 10:50:15</span>
         </div>
       </div>
@@ -890,34 +890,58 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
   </div>
 </div>
 <div class="page" id="material">
-
-  <!-- 1:1 复刻截图素材库界面 -->
+  <!-- 360安全科技股份有限公司 · 企业素材库界面 -->
   <div style="background:#ffffff;border-radius:12px;padding:20px 24px;border:1px solid #e2e8f0;margin-bottom:20px">
     <!-- Header -->
     <div style="margin-bottom:16px">
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
-        <h1 style="font-size:18px;font-weight:750;color:#0f172a;margin:0">素材库</h1>
-        <span style="font-size:16px;color:#64748b;cursor:pointer" title="消息通知" onclick="window.showToast&&window.showToast('暂无新系统通知')">🔔</span>
+        <div style="display:flex;align-items:center;gap:10px">
+          <h1 style="font-size:18px;font-weight:750;color:#0f172a;margin:0">企业素材库</h1>
+          <span style="background:#ecfdf5;color:#059669;font-size:11px;padding:2px 8px;border-radius:12px;font-weight:600;border:1px solid #a7f3d0">360安全科技官方专属</span>
+        </div>
+        <span style="font-size:16px;color:#64748b;cursor:pointer" title="消息通知" onclick="window.showToast&&window.showToast('企业素材库云端同步状态正常 · 已接入360安全大脑素材池')">🔔</span>
       </div>
       <p style="font-size:12.5px;color:#64748b;margin:0;line-height:1.5">
-        上传本地图片素材，用于文章配图等场景。素材库总量：100.00GB，当前剩余容量99.97GB，已使用31.0MB。(含创作历史图文/视频容量)
+        上传与管理 360 安全科技本地多模态图片、态势感知图表与实测视频切片素材，用于文章深度配图及 AI 搜索多模态收录。企业素材库总量：100.00GB，当前剩余容量99.97GB，已使用31.0MB。(含360智见多模态图文/视频切片)
       </p>
     </div>
 
-    <!-- Mode Tabs: 图片 / 视频 -->
-    <div style="display:flex;align-items:center;gap:24px;border-bottom:1px solid #f1f5f9;margin-bottom:18px">
-      <div class="mat-top-tab active" data-mattab="image" id="matTabImage" style="padding-bottom:10px;font-size:13.5px;font-weight:700;color:#6366f1;border-bottom:2.5px solid #6366f1;cursor:pointer;transition:all 0.16s">
-        图片
+    <!-- Mode Tabs: 全部 / 图片 / 视频 & 快速按分钟切换 -->
+    <div style="display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #f1f5f9;margin-bottom:18px;flex-wrap:wrap;gap:12px">
+      <div style="display:flex;align-items:center;gap:24px">
+        <div class="mat-top-tab active" data-mattab="all" id="matTabAll" style="padding-bottom:10px;font-size:13.5px;font-weight:700;color:#6366f1;border-bottom:2.5px solid #6366f1;cursor:pointer;transition:all 0.16s">
+          全部素材 (10)
+        </div>
+        <div class="mat-top-tab" data-mattab="image" id="matTabImage" style="padding-bottom:10px;font-size:13.5px;font-weight:500;color:#64748b;border-bottom:2.5px solid transparent;cursor:pointer;transition:all 0.16s">
+          图片素材 (8)
+        </div>
+        <div class="mat-top-tab" data-mattab="video" id="matTabVideo" style="padding-bottom:10px;font-size:13.5px;font-weight:500;color:#64748b;border-bottom:2.5px solid transparent;cursor:pointer;transition:all 0.16s">
+          视频切片 (2)
+        </div>
       </div>
-      <div class="mat-top-tab" data-mattab="video" id="matTabVideo" style="padding-bottom:10px;font-size:13.5px;font-weight:500;color:#64748b;border-bottom:2.5px solid transparent;cursor:pointer;transition:all 0.16s">
-        视频
+      <!-- 快速按分钟切换素材 -->
+      <div style="display:flex;align-items:center;gap:8px;padding-bottom:6px">
+        <span style="font-size:12px;color:#64748b;font-weight:600">⏱️ 分钟切换:</span>
+        <select id="matMinuteQuickSwitch" class="ipt" style="height:32px;padding:0 10px;font-size:12px;border:1px solid #cbd5e1;border-radius:6px;color:#1e293b;font-weight:600;background:#f8fafc;cursor:pointer">
+          <option value="" disabled selected>选择素材（按上传分钟 / 视频时长切换）...</option>
+          <option value="1">14:32分 · 360安全大脑态势感知大屏</option>
+          <option value="2">11:20分 · 360天擎终端实战拦截</option>
+          <option value="3">09:15分 · 国家等保三级认证证书</option>
+          <option value="4">16:48分 · 360数字安全集团资质</option>
+          <option value="5">10:14分 · 360智脑AI安全大模型</option>
+          <option value="6">15:22分 · 勒索病毒诱捕沙箱 [视频 03:45分]</option>
+          <option value="7">13:05分 · 全网APT威胁样本库</option>
+          <option value="8">17:40分 · 360安全卫士极速企业版</option>
+          <option value="9">09:30分 · 云端全量病毒查杀引擎</option>
+          <option value="10">16:15分 · 政企攻防演练实景 [视频 05:20分]</option>
+        </select>
       </div>
     </div>
 
     <!-- Main Content: Left Groups + Right Material Gallery -->
     <div style="display:flex;gap:22px;align-items:flex-start">
-      <!-- Left Column: 素材分组 (Width ~160px) -->
-      <div style="width:160px;flex-shrink:0">
+      <!-- Left Column: 素材分组 (Width ~175px) -->
+      <div style="width:175px;flex-shrink:0">
         <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">
           <span style="font-size:13px;font-weight:700;color:#1e293b">素材分组</span>
           <button type="button" id="matNewGroupBtn" style="font-size:12px;color:#6366f1;border:none;background:none;cursor:pointer;padding:0;display:inline-flex;align-items:center;gap:3px;font-weight:600">
@@ -926,16 +950,19 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
         </div>
         <div style="display:flex;flex-direction:column;gap:4px" id="matGroupList">
           <div class="mat-group-item active" data-matgroup="all" style="padding:7px 12px;border-radius:6px;background:#f5f3ff;color:#6366f1;font-size:12.5px;font-weight:700;cursor:pointer">
-            所有
+            所有素材 (10)
           </div>
-          <div class="mat-group-item" data-matgroup="drainage" style="padding:7px 12px;border-radius:6px;color:#64748b;font-size:12.5px;cursor:pointer">
-            管道疏通与清洗 (10)
+          <div class="mat-group-item" data-matgroup="brain" style="padding:7px 12px;border-radius:6px;color:#64748b;font-size:12.5px;cursor:pointer">
+            安全大脑与SOC (3)
           </div>
-          <div class="mat-group-item" data-matgroup="factory" style="padding:7px 12px;border-radius:6px;color:#64748b;font-size:12.5px;cursor:pointer">
-            工业车间实景 (8)
+          <div class="mat-group-item" data-matgroup="endpoint" style="padding:7px 12px;border-radius:6px;color:#64748b;font-size:12.5px;cursor:pointer">
+            天擎终端与防勒索 (3)
           </div>
-          <div class="mat-group-item" data-matgroup="cert" style="padding:7px 12px;border-radius:6px;color:#64748b;font-size:12.5px;cursor:pointer">
-            资质与案例 (7)
+          <div class="mat-group-item" data-matgroup="compliance" style="padding:7px 12px;border-radius:6px;color:#64748b;font-size:12.5px;cursor:pointer">
+            资质与等保测评 (2)
+          </div>
+          <div class="mat-group-item" data-matgroup="video" style="padding:7px 12px;border-radius:6px;color:#64748b;font-size:12.5px;cursor:pointer">
+            攻防实录与视频 (2)
           </div>
         </div>
       </div>
@@ -955,8 +982,10 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
             <button type="button" id="matBatchDeleteBtn" class="btn" style="background:#ede9fe;color:#7c3aed;border:none;padding:5px 14px;border-radius:6px;font-size:12.5px;cursor:pointer;font-weight:600">
               批量删除
             </button>
+            <button type="button" id="matSortMinuteBtn" class="btn o" style="border:1px solid #e2e8f0;background:#ffffff;padding:5px 12px;border-radius:6px;font-size:12px;cursor:pointer;color:#475569;font-weight:600">
+              ⏱️ 上传分钟排序
+            </button>
           </div>
-
           <button type="button" id="matUploadBtn" class="btn" style="background:#6366f1;color:#ffffff;border:none;padding:7px 18px;border-radius:6px;font-size:13px;font-weight:600;display:inline-flex;align-items:center;gap:6px;cursor:pointer">
             <span>📤</span>
             <span>上传素材</span>
@@ -964,133 +993,173 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
           <input type="file" id="matFileInput" multiple accept="image/*,video/*" style="display:none" />
         </div>
 
-        <!-- 10 Material Cards (一比一匹配截图的 10 张卡片) -->
-        <div id="matCardsGrid" style="display:grid;grid-template-columns:repeat(auto-fill, minmax(130px, 1fr));gap:12px;margin-bottom:24px">
-          <!-- Card 1 -->
-          <div class="mat-card-item" data-id="1" data-size="831.3KB" data-title="管道疏通前后对比图" data-img="${matImg1}" style="position:relative;border-radius:8px;overflow:hidden;background:#f8fafc;border:1px solid #e2e8f0;cursor:pointer;transition:transform 0.16s,box-shadow 0.16s">
-            <div style="position:relative;width:100%;height:100px;background:#1e293b;overflow:hidden">
-              <img referrerPolicy="no-referrer" alt="管道疏通前后对比图" src="${matImg1}" style="width:100%;height:100%;object-fit:cover" />
+        <!-- 10 Material Cards (360安全科技官方素材) -->
+        <div id="matCardsGrid" style="display:grid;grid-template-columns:repeat(auto-fill, minmax(140px, 1fr));gap:12px;margin-bottom:24px">
+          <!-- Card 1: 360安全大脑 -->
+          <div class="mat-card-item" data-id="1" data-type="image" data-group="brain" data-minute="14:32" data-size="4.2MB" data-res="3840×2160 (4K)" data-time="2026-08-26 14:32" data-title="360安全大脑态势感知指挥大屏" data-desc="全网威胁实时遥测 · 0.1s 智能响应拦截" data-img="${socScreenImg}" style="position:relative;border-radius:8px;overflow:hidden;background:#f8fafc;border:1px solid #e2e8f0;cursor:pointer;transition:transform 0.16s,box-shadow 0.16s">
+            <div style="position:relative;width:100%;height:105px;background:#090d16;overflow:hidden">
+              <img referrerPolicy="no-referrer" alt="360安全大脑态势感知指挥大屏" src="${socScreenImg}" style="width:100%;height:100%;object-fit:cover" />
               <input type="checkbox" class="mat-item-check" data-id="1" style="position:absolute;top:6px;left:6px;accent-color:#6366f1;width:15px;height:15px;z-index:5" />
-              <span style="position:absolute;top:4px;right:4px;background:rgba(0,0,0,0.55);color:#fff;font-size:9.5px;padding:1px 5px;border-radius:3px">2025-08-26</span>
+              <span style="position:absolute;top:4px;right:4px;background:rgba(15,23,42,0.85);color:#38bdf8;font-size:9.5px;padding:1px 5px;border-radius:3px;font-weight:700">14:32分</span>
             </div>
-            <div style="position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,0.45);padding:2px 6px;display:flex;align-items:center;justify-content:space-between">
-              <span style="font-size:10.5px;color:#ffffff;font-weight:600">831.3KB</span>
+            <div style="padding:6px 8px;background:#ffffff">
+              <div style="font-size:11.5px;font-weight:700;color:#1e293b;white-space:nowrap;overflow:hidden;text-overflow:ellipsis" title="360安全大脑态势感知指挥大屏">360安全大脑大屏</div>
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-top:2px">
+                <span style="font-size:10px;color:#64748b">4.2MB · 4K</span>
+                <span style="font-size:9.5px;color:#0ea5e9;font-weight:600">图片</span>
+              </div>
             </div>
           </div>
 
-          <!-- Card 2 -->
-          <div class="mat-card-item" data-id="2" data-size="1.0MB" data-title="师傅浴室管道排污作业" data-img="${matImg2}" style="position:relative;border-radius:8px;overflow:hidden;background:#f8fafc;border:1px solid #e2e8f0;cursor:pointer;transition:transform 0.16s,box-shadow 0.16s">
-            <div style="position:relative;width:100%;height:100px;background:#1e293b;overflow:hidden">
-              <img referrerPolicy="no-referrer" alt="师傅浴室管道排污作业" src="${matImg2}" style="width:100%;height:100%;object-fit:cover" />
+          <!-- Card 2: 360天擎 -->
+          <div class="mat-card-item" data-id="2" data-type="image" data-group="endpoint" data-minute="11:20" data-size="2.8MB" data-res="2560×1440 (2K)" data-time="2026-08-26 11:20" data-title="360天擎终端安全管控与防勒索实战拦截" data-desc="万级企业终端一键防病毒、补丁分发与微秒级勒索加密阻断" data-img="${endpointDefenseImg}" style="position:relative;border-radius:8px;overflow:hidden;background:#f8fafc;border:1px solid #e2e8f0;cursor:pointer;transition:transform 0.16s,box-shadow 0.16s">
+            <div style="position:relative;width:100%;height:105px;background:#090d16;overflow:hidden">
+              <img referrerPolicy="no-referrer" alt="360天擎终端安全管控" src="${endpointDefenseImg}" style="width:100%;height:100%;object-fit:cover" />
               <input type="checkbox" class="mat-item-check" data-id="2" style="position:absolute;top:6px;left:6px;accent-color:#6366f1;width:15px;height:15px;z-index:5" />
-              <span style="position:absolute;top:4px;right:4px;background:rgba(0,0,0,0.55);color:#fff;font-size:9.5px;padding:1px 5px;border-radius:3px">2025-08-26</span>
+              <span style="position:absolute;top:4px;right:4px;background:rgba(15,23,42,0.85);color:#34d399;font-size:9.5px;padding:1px 5px;border-radius:3px;font-weight:700">11:20分</span>
             </div>
-            <div style="position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,0.45);padding:2px 6px;display:flex;align-items:center;justify-content:space-between">
-              <span style="font-size:10.5px;color:#ffffff;font-weight:600">1.0MB</span>
+            <div style="padding:6px 8px;background:#ffffff">
+              <div style="font-size:11.5px;font-weight:700;color:#1e293b;white-space:nowrap;overflow:hidden;text-overflow:ellipsis" title="360天擎终端安全管控与防勒索实战拦截">360天擎终端管控</div>
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-top:2px">
+                <span style="font-size:10px;color:#64748b">2.8MB · 2K</span>
+                <span style="font-size:9.5px;color:#10b981;font-weight:600">图片</span>
+              </div>
             </div>
           </div>
 
-          <!-- Card 3 -->
-          <div class="mat-card-item" data-id="3" data-size="1.1MB" data-title="管道保洁与药剂清洗实拍" data-img="${matImg3}" style="position:relative;border-radius:8px;overflow:hidden;background:#f8fafc;border:1px solid #e2e8f0;cursor:pointer;transition:transform 0.16s,box-shadow 0.16s">
-            <div style="position:relative;width:100%;height:100px;background:#1e293b;overflow:hidden">
-              <img referrerPolicy="no-referrer" alt="管道保洁与药剂清洗实拍" src="${matImg3}" style="width:100%;height:100%;object-fit:cover" />
+          <!-- Card 3: 等保三级认证 -->
+          <div class="mat-card-item" data-id="3" data-type="image" data-group="compliance" data-minute="09:15" data-size="1.5MB" data-res="2048×1536" data-time="2026-08-26 09:15" data-title="国家网络安全等级保护三级测评认证证书" data-desc="公安部第一研究所测评中心权威测评合格认证" data-img="${complianceBadgeImg}" style="position:relative;border-radius:8px;overflow:hidden;background:#f8fafc;border:1px solid #e2e8f0;cursor:pointer;transition:transform 0.16s,box-shadow 0.16s">
+            <div style="position:relative;width:100%;height:105px;background:#090d16;overflow:hidden">
+              <img referrerPolicy="no-referrer" alt="国家网络安全等保三级认证" src="${complianceBadgeImg}" style="width:100%;height:100%;object-fit:cover" />
               <input type="checkbox" class="mat-item-check" data-id="3" style="position:absolute;top:6px;left:6px;accent-color:#6366f1;width:15px;height:15px;z-index:5" />
-              <span style="position:absolute;top:4px;right:4px;background:rgba(0,0,0,0.55);color:#fff;font-size:9.5px;padding:1px 5px;border-radius:3px">2025-08-26</span>
+              <span style="position:absolute;top:4px;right:4px;background:rgba(15,23,42,0.85);color:#facc15;font-size:9.5px;padding:1px 5px;border-radius:3px;font-weight:700">09:15分</span>
             </div>
-            <div style="position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,0.45);padding:2px 6px;display:flex;align-items:center;justify-content:space-between">
-              <span style="font-size:10.5px;color:#ffffff;font-weight:600">1.1MB</span>
+            <div style="padding:6px 8px;background:#ffffff">
+              <div style="font-size:11.5px;font-weight:700;color:#1e293b;white-space:nowrap;overflow:hidden;text-overflow:ellipsis" title="国家网络安全等级保护三级测评认证证书">国家等保三级认证</div>
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-top:2px">
+                <span style="font-size:10px;color:#64748b">1.5MB · 高清</span>
+                <span style="font-size:9.5px;color:#eab308;font-weight:600">资质</span>
+              </div>
             </div>
           </div>
 
-          <!-- Card 4 -->
-          <div class="mat-card-item" data-id="4" data-size="1.5MB" data-title="工业泵房大型管道阀门检修" data-img="${matImg4}" style="position:relative;border-radius:8px;overflow:hidden;background:#f8fafc;border:1px solid #e2e8f0;cursor:pointer;transition:transform 0.16s,box-shadow 0.16s">
-            <div style="position:relative;width:100%;height:100px;background:#1e293b;overflow:hidden">
-              <img referrerPolicy="no-referrer" alt="工业泵房大型管道阀门检修" src="${matImg4}" style="width:100%;height:100%;object-fit:cover" />
+          <!-- Card 4: 360企业资质 -->
+          <div class="mat-card-item" data-id="4" data-type="image" data-group="compliance" data-minute="16:48" data-size="1.8MB" data-res="2048×1536" data-time="2026-08-25 16:48" data-title="360数字安全集团权威企业资质与认证" data-desc="国家级漏洞库一级支撑单位认证及企业高新资质" data-img="${enterpriseCertImg}" style="position:relative;border-radius:8px;overflow:hidden;background:#f8fafc;border:1px solid #e2e8f0;cursor:pointer;transition:transform 0.16s,box-shadow 0.16s">
+            <div style="position:relative;width:100%;height:105px;background:#090d16;overflow:hidden">
+              <img referrerPolicy="no-referrer" alt="360企业资质证书" src="${enterpriseCertImg}" style="width:100%;height:100%;object-fit:cover" />
               <input type="checkbox" class="mat-item-check" data-id="4" style="position:absolute;top:6px;left:6px;accent-color:#6366f1;width:15px;height:15px;z-index:5" />
-              <span style="position:absolute;top:4px;right:4px;background:rgba(0,0,0,0.55);color:#fff;font-size:9.5px;padding:1px 5px;border-radius:3px">2025-08-26</span>
+              <span style="position:absolute;top:4px;right:4px;background:rgba(15,23,42,0.85);color:#a7f3d0;font-size:9.5px;padding:1px 5px;border-radius:3px;font-weight:700">16:48分</span>
             </div>
-            <div style="position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,0.45);padding:2px 6px;display:flex;align-items:center;justify-content:space-between">
-              <span style="font-size:10.5px;color:#ffffff;font-weight:600">1.5MB</span>
+            <div style="padding:6px 8px;background:#ffffff">
+              <div style="font-size:11.5px;font-weight:700;color:#1e293b;white-space:nowrap;overflow:hidden;text-overflow:ellipsis" title="360数字安全集团权威企业资质与认证">360集团权威资质</div>
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-top:2px">
+                <span style="font-size:10px;color:#64748b">1.8MB · 证书</span>
+                <span style="font-size:9.5px;color:#059669;font-weight:600">资质</span>
+              </div>
             </div>
           </div>
 
-          <!-- Card 5 -->
-          <div class="mat-card-item" data-id="5" data-size="349.8KB" data-title="机械施工设备与工业现场" data-img="${matImg5}" style="position:relative;border-radius:8px;overflow:hidden;background:#f8fafc;border:1px solid #e2e8f0;cursor:pointer;transition:transform 0.16s,box-shadow 0.16s">
-            <div style="position:relative;width:100%;height:100px;background:#1e293b;overflow:hidden">
-              <img referrerPolicy="no-referrer" alt="机械施工设备与工业现场" src="${matImg5}" style="width:100%;height:100%;object-fit:cover" />
+          <!-- Card 5: 360智脑AI模型 -->
+          <div class="mat-card-item" data-id="5" data-type="image" data-group="brain" data-minute="10:14" data-size="980.5KB" data-res="1920×1080" data-time="2026-08-25 10:14" data-title="360智脑AI安全大模型协同防御架构" data-desc="百亿参数研判 · 自动化生成对抗与防御策略" data-img="${matImg5}" style="position:relative;border-radius:8px;overflow:hidden;background:#f8fafc;border:1px solid #e2e8f0;cursor:pointer;transition:transform 0.16s,box-shadow 0.16s">
+            <div style="position:relative;width:100%;height:105px;background:#090d16;overflow:hidden">
+              <img referrerPolicy="no-referrer" alt="360智脑AI安全大模型" src="${matImg5}" style="width:100%;height:100%;object-fit:cover" />
               <input type="checkbox" class="mat-item-check" data-id="5" style="position:absolute;top:6px;left:6px;accent-color:#6366f1;width:15px;height:15px;z-index:5" />
-              <span style="position:absolute;top:4px;right:4px;background:rgba(0,0,0,0.55);color:#fff;font-size:9.5px;padding:1px 5px;border-radius:3px">2025-08-26</span>
+              <span style="position:absolute;top:4px;right:4px;background:rgba(15,23,42,0.85);color:#e879f9;font-size:9.5px;padding:1px 5px;border-radius:3px;font-weight:700">10:14分</span>
             </div>
-            <div style="position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,0.45);padding:2px 6px;display:flex;align-items:center;justify-content:space-between">
-              <span style="font-size:10.5px;color:#ffffff;font-weight:600">349.8KB</span>
+            <div style="padding:6px 8px;background:#ffffff">
+              <div style="font-size:11.5px;font-weight:700;color:#1e293b;white-space:nowrap;overflow:hidden;text-overflow:ellipsis" title="360智脑AI安全大模型协同防御架构">360智脑AI大模型</div>
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-top:2px">
+                <span style="font-size:10px;color:#64748b">980KB · 矢量</span>
+                <span style="font-size:9.5px;color:#a855f7;font-weight:600">AI架构</span>
+              </div>
             </div>
           </div>
 
-          <!-- Card 6 -->
-          <div class="mat-card-item" data-id="6" data-size="1.4MB" data-title="地下车库路面排污钻探抢修" data-img="${matImg6}" style="position:relative;border-radius:8px;overflow:hidden;background:#f8fafc;border:1px solid #e2e8f0;cursor:pointer;transition:transform 0.16s,box-shadow 0.16s">
-            <div style="position:relative;width:100%;height:100px;background:#1e293b;overflow:hidden">
-              <img referrerPolicy="no-referrer" alt="地下车库路面排污钻探抢修" src="${matImg6}" style="width:100%;height:100%;object-fit:cover" />
+          <!-- Card 6: 勒索病毒诱捕沙箱视频 -->
+          <div class="mat-card-item" data-id="6" data-type="video" data-group="video" data-minute="15:22" data-duration="03:45" data-size="18.4MB" data-res="1920×1080 60FPS" data-time="2026-08-24 15:22" data-title="勒索病毒诱捕沙箱与拦截实况演示 [视频 03:45分钟]" data-desc="毫秒级加密行为特征阻断 · 原生数据防损保全录屏" data-img="${matImg6}" style="position:relative;border-radius:8px;overflow:hidden;background:#f8fafc;border:1px solid #e2e8f0;cursor:pointer;transition:transform 0.16s,box-shadow 0.16s">
+            <div style="position:relative;width:100%;height:105px;background:#090d16;overflow:hidden">
+              <img referrerPolicy="no-referrer" alt="勒索病毒沙箱拦截实况" src="${matImg6}" style="width:100%;height:100%;object-fit:cover" />
               <input type="checkbox" class="mat-item-check" data-id="6" style="position:absolute;top:6px;left:6px;accent-color:#6366f1;width:15px;height:15px;z-index:5" />
-              <span style="position:absolute;top:4px;right:4px;background:rgba(0,0,0,0.55);color:#fff;font-size:9.5px;padding:1px 5px;border-radius:3px">2025-08-26</span>
+              <span style="position:absolute;top:4px;right:4px;background:#dc2626;color:#ffffff;font-size:9.5px;padding:1px 5px;border-radius:3px;font-weight:700">▶ 03:45分</span>
             </div>
-            <div style="position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,0.45);padding:2px 6px;display:flex;align-items:center;justify-content:space-between">
-              <span style="font-size:10.5px;color:#ffffff;font-weight:600">1.4MB</span>
+            <div style="padding:6px 8px;background:#ffffff">
+              <div style="font-size:11.5px;font-weight:700;color:#1e293b;white-space:nowrap;overflow:hidden;text-overflow:ellipsis" title="勒索病毒诱捕沙箱与拦截实况演示">勒索沙箱拦截实测</div>
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-top:2px">
+                <span style="font-size:10px;color:#64748b">18.4MB · 03:45</span>
+                <span style="font-size:9.5px;color:#ef4444;font-weight:700">实测视频</span>
+              </div>
             </div>
           </div>
 
-          <!-- Card 7 -->
-          <div class="mat-card-item" data-id="7" data-size="1.7MB" data-title="CCTV市政管道机器人探伤检测" data-img="${matImg7}" style="position:relative;border-radius:8px;overflow:hidden;background:#f8fafc;border:1px solid #e2e8f0;cursor:pointer;transition:transform 0.16s,box-shadow 0.16s">
-            <div style="position:relative;width:100%;height:100px;background:#1e293b;overflow:hidden">
-              <img referrerPolicy="no-referrer" alt="CCTV市政管道机器人探伤检测" src="${matImg7}" style="width:100%;height:100%;object-fit:cover" />
+          <!-- Card 7: APT威胁样本库 -->
+          <div class="mat-card-item" data-id="7" data-type="image" data-group="brain" data-minute="13:05" data-size="860.2KB" data-res="1920×1080" data-time="2026-08-24 13:05" data-title="360全网APT高级持续威胁样本库与全球拓扑" data-desc="捕获国家级境外黑客组织 · 样本多维研判拓扑" data-img="${matImg7}" style="position:relative;border-radius:8px;overflow:hidden;background:#f8fafc;border:1px solid #e2e8f0;cursor:pointer;transition:transform 0.16s,box-shadow 0.16s">
+            <div style="position:relative;width:100%;height:105px;background:#090d16;overflow:hidden">
+              <img referrerPolicy="no-referrer" alt="APT高级威胁样本库" src="${matImg7}" style="width:100%;height:100%;object-fit:cover" />
               <input type="checkbox" class="mat-item-check" data-id="7" style="position:absolute;top:6px;left:6px;accent-color:#6366f1;width:15px;height:15px;z-index:5" />
-              <span style="position:absolute;top:4px;right:4px;background:rgba(0,0,0,0.55);color:#fff;font-size:9.5px;padding:1px 5px;border-radius:3px">2025-08-26</span>
+              <span style="position:absolute;top:4px;right:4px;background:rgba(15,23,42,0.85);color:#60a5fa;font-size:9.5px;padding:1px 5px;border-radius:3px;font-weight:700">13:05分</span>
             </div>
-            <div style="position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,0.45);padding:2px 6px;display:flex;align-items:center;justify-content:space-between">
-              <span style="font-size:10.5px;color:#ffffff;font-weight:600">1.7MB</span>
+            <div style="padding:6px 8px;background:#ffffff">
+              <div style="font-size:11.5px;font-weight:700;color:#1e293b;white-space:nowrap;overflow:hidden;text-overflow:ellipsis" title="360全网APT高级持续威胁样本库与全球拓扑">APT威胁样本库</div>
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-top:2px">
+                <span style="font-size:10px;color:#64748b">860KB · 拓扑</span>
+                <span style="font-size:9.5px;color:#3b82f6;font-weight:600">图片</span>
+              </div>
             </div>
           </div>
 
-          <!-- Card 8 -->
-          <div class="mat-card-item" data-id="8" data-size="155.2KB" data-title="室外狭窄雨水立管与外墙排查" data-img="${matImg8}" style="position:relative;border-radius:8px;overflow:hidden;background:#f8fafc;border:1px solid #e2e8f0;cursor:pointer;transition:transform 0.16s,box-shadow 0.16s">
-            <div style="position:relative;width:100%;height:100px;background:#1e293b;overflow:hidden">
-              <img referrerPolicy="no-referrer" alt="室外狭窄雨水立管与外墙排查" src="${matImg8}" style="width:100%;height:100%;object-fit:cover" />
+          <!-- Card 8: 360安全卫士极速版 -->
+          <div class="mat-card-item" data-id="8" data-type="image" data-group="endpoint" data-minute="17:40" data-size="1.2MB" data-res="1920×1080" data-time="2026-08-23 17:40" data-title="360安全卫士极速企业版管控后台界面" data-desc="局域网万级终端一键查杀 · 统一补丁下发与管控" data-img="${matImg8}" style="position:relative;border-radius:8px;overflow:hidden;background:#f8fafc;border:1px solid #e2e8f0;cursor:pointer;transition:transform 0.16s,box-shadow 0.16s">
+            <div style="position:relative;width:100%;height:105px;background:#090d16;overflow:hidden">
+              <img referrerPolicy="no-referrer" alt="360安全卫士企业版后台" src="${matImg8}" style="width:100%;height:100%;object-fit:cover" />
               <input type="checkbox" class="mat-item-check" data-id="8" style="position:absolute;top:6px;left:6px;accent-color:#6366f1;width:15px;height:15px;z-index:5" />
-              <span style="position:absolute;top:4px;right:4px;background:rgba(0,0,0,0.55);color:#fff;font-size:9.5px;padding:1px 5px;border-radius:3px">2025-08-26</span>
+              <span style="position:absolute;top:4px;right:4px;background:rgba(15,23,42,0.85);color:#38bdf8;font-size:9.5px;padding:1px 5px;border-radius:3px;font-weight:700">17:40分</span>
             </div>
-            <div style="position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,0.45);padding:2px 6px;display:flex;align-items:center;justify-content:space-between">
-              <span style="font-size:10.5px;color:#ffffff;font-weight:600">155.2KB</span>
+            <div style="padding:6px 8px;background:#ffffff">
+              <div style="font-size:11.5px;font-weight:700;color:#1e293b;white-space:nowrap;overflow:hidden;text-overflow:ellipsis" title="360安全卫士极速企业版管控后台界面">安全卫士管控后台</div>
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-top:2px">
+                <span style="font-size:10px;color:#64748b">1.2MB · 界面</span>
+                <span style="font-size:9.5px;color:#0284c7;font-weight:600">图片</span>
+              </div>
             </div>
           </div>
 
-          <!-- Card 9 (Row 2, matching screenshot) -->
-          <div class="mat-card-item" data-id="9" data-size="1.5MB" data-title="商业后厨隔油池无害化清掏" data-img="${matImg9}" style="position:relative;border-radius:8px;overflow:hidden;background:#f8fafc;border:1px solid #e2e8f0;cursor:pointer;transition:transform 0.16s,box-shadow 0.16s">
-            <div style="position:relative;width:100%;height:100px;background:#1e293b;overflow:hidden">
-              <img referrerPolicy="no-referrer" alt="商业后厨隔油池无害化清掏" src="${matImg9}" style="width:100%;height:100%;object-fit:cover" />
+          <!-- Card 9: 病毒查杀引擎 -->
+          <div class="mat-card-item" data-id="9" data-type="image" data-group="endpoint" data-minute="09:30" data-size="720.6KB" data-res="1920×1080" data-time="2026-08-23 09:30" data-title="云端全量病毒查杀引擎与样本遥测" data-desc="百亿级样本库实时云查 · 启发式未知木马挖掘" data-img="${matImg9}" style="position:relative;border-radius:8px;overflow:hidden;background:#f8fafc;border:1px solid #e2e8f0;cursor:pointer;transition:transform 0.16s,box-shadow 0.16s">
+            <div style="position:relative;width:100%;height:105px;background:#090d16;overflow:hidden">
+              <img referrerPolicy="no-referrer" alt="全量病毒查杀引擎" src="${matImg9}" style="width:100%;height:100%;object-fit:cover" />
               <input type="checkbox" class="mat-item-check" data-id="9" style="position:absolute;top:6px;left:6px;accent-color:#6366f1;width:15px;height:15px;z-index:5" />
-              <span style="position:absolute;top:4px;right:4px;background:rgba(0,0,0,0.55);color:#fff;font-size:9.5px;padding:1px 5px;border-radius:3px">2025-08-26</span>
+              <span style="position:absolute;top:4px;right:4px;background:rgba(15,23,42,0.85);color:#2dd4bf;font-size:9.5px;padding:1px 5px;border-radius:3px;font-weight:700">09:30分</span>
             </div>
-            <div style="position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,0.45);padding:2px 6px;display:flex;align-items:center;justify-content:space-between">
-              <span style="font-size:10.5px;color:#ffffff;font-weight:600">1.5MB</span>
+            <div style="padding:6px 8px;background:#ffffff">
+              <div style="font-size:11.5px;font-weight:700;color:#1e293b;white-space:nowrap;overflow:hidden;text-overflow:ellipsis" title="云端全量病毒查杀引擎与样本遥测">全量病毒查杀引擎</div>
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-top:2px">
+                <span style="font-size:10px;color:#64748b">720KB · 遥测</span>
+                <span style="font-size:9.5px;color:#0d9488;font-weight:600">引擎</span>
+              </div>
             </div>
           </div>
 
-          <!-- Card 10 (Row 2, matching screenshot) -->
-          <div class="mat-card-item" data-id="10" data-size="1.2MB" data-title="厨房水槽下水存水弯防漏检修" data-img="${matImg10}" style="position:relative;border-radius:8px;overflow:hidden;background:#f8fafc;border:1px solid #e2e8f0;cursor:pointer;transition:transform 0.16s,box-shadow 0.16s">
-            <div style="position:relative;width:100%;height:100px;background:#1e293b;overflow:hidden">
-              <img referrerPolicy="no-referrer" alt="厨房水槽下水存水弯防漏检修" src="${matImg10}" style="width:100%;height:100%;object-fit:cover" />
+          <!-- Card 10: 攻防实战录屏视频 -->
+          <div class="mat-card-item" data-id="10" data-type="video" data-group="video" data-minute="16:15" data-duration="05:20" data-size="24.6MB" data-res="1920×1080 60FPS" data-time="2026-08-22 16:15" data-title="政企数字安全专家现场攻防演练实景 [视频 05:20分钟]" data-desc="红蓝对抗实兵演习 · 全流程实录与漏洞挖掘剖析" data-img="${matImg10}" style="position:relative;border-radius:8px;overflow:hidden;background:#f8fafc;border:1px solid #e2e8f0;cursor:pointer;transition:transform 0.16s,box-shadow 0.16s">
+            <div style="position:relative;width:100%;height:105px;background:#090d16;overflow:hidden">
+              <img referrerPolicy="no-referrer" alt="现场攻防演练实景" src="${matImg10}" style="width:100%;height:100%;object-fit:cover" />
               <input type="checkbox" class="mat-item-check" data-id="10" style="position:absolute;top:6px;left:6px;accent-color:#6366f1;width:15px;height:15px;z-index:5" />
-              <span style="position:absolute;top:4px;right:4px;background:rgba(0,0,0,0.55);color:#fff;font-size:9.5px;padding:1px 5px;border-radius:3px">2025-08-26</span>
+              <span style="position:absolute;top:4px;right:4px;background:#4f46e5;color:#ffffff;font-size:9.5px;padding:1px 5px;border-radius:3px;font-weight:700">▶ 05:20分</span>
             </div>
-            <div style="position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,0.45);padding:2px 6px;display:flex;align-items:center;justify-content:space-between">
-              <span style="font-size:10.5px;color:#ffffff;font-weight:600">1.2MB</span>
+            <div style="padding:6px 8px;background:#ffffff">
+              <div style="font-size:11.5px;font-weight:700;color:#1e293b;white-space:nowrap;overflow:hidden;text-overflow:ellipsis" title="政企数字安全专家现场攻防演练实景">现场攻防实录演练</div>
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-top:2px">
+                <span style="font-size:10px;color:#64748b">24.6MB · 05:20</span>
+                <span style="font-size:9.5px;color:#6366f1;font-weight:700">演练视频</span>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- Pagination matching screenshot -->
+        <!-- Pagination -->
         <div style="display:flex;align-items:center;justify-content:center;gap:14px;margin-top:28px;font-size:12.5px;color:#64748b;flex-wrap:wrap">
-          <span id="matTotalCountText">共 25 条</span>
-          <select class="ipt" id="matPageSizeSelect" style="height:28px;padding:0 8px;font-size:12px;width:92px">
+          <span id="matTotalCountText">共 10 条素材</span>
+          <select class="ipt" id="matPageSizeSelect" style="height:28px;padding:0 8px;font-size:12px;width:96px">
             <option value="10" selected>10条/页</option>
             <option value="20">20条/页</option>
             <option value="50">50条/页</option>
@@ -1098,34 +1167,78 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
           <div style="display:flex;align-items:center;gap:6px">
             <button type="button" class="mat-page-btn" id="matPrevPage" style="width:28px;height:28px;border:1px solid #e2e8f0;background:#fff;border-radius:4px;cursor:pointer;display:flex;align-items:center;justify-content:center">&lt;</button>
             <button type="button" class="mat-page-btn active" data-page="1" style="width:28px;height:28px;border:none;background:#6366f1;color:#fff;font-weight:700;border-radius:4px;cursor:pointer;display:flex;align-items:center;justify-content:center">1</button>
-            <button type="button" class="mat-page-btn" data-page="2" style="width:28px;height:28px;border:1px solid #e2e8f0;background:#fff;color:#334155;border-radius:4px;cursor:pointer;display:flex;align-items:center;justify-content:center">2</button>
-            <button type="button" class="mat-page-btn" data-page="3" style="width:28px;height:28px;border:1px solid #e2e8f0;background:#fff;color:#334155;border-radius:4px;cursor:pointer;display:flex;align-items:center;justify-content:center">3</button>
             <button type="button" class="mat-page-btn" id="matNextPage" style="width:28px;height:28px;border:1px solid #e2e8f0;background:#fff;border-radius:4px;cursor:pointer;display:flex;align-items:center;justify-content:center">&gt;</button>
-          </div>
-          <div style="display:flex;align-items:center;gap:6px">
-            <span>前往</span>
-            <input type="number" id="matJumpInput" value="1" min="1" max="3" style="width:42px;height:28px;text-align:center;border:1px solid #e2e8f0;border-radius:4px;font-size:12px" />
-            <span>页</span>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="modal-backdrop" id="matLightboxModal" style="display:none;align-items:center;justify-content:center">
-    <div class="modal" style="max-width:680px;width:90%;background:#ffffff;border-radius:12px;overflow:hidden;box-shadow:0 20px 48px rgba(0,0,0,0.25)">
-      <div style="padding:14px 18px;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;justify-content:space-between">
-        <div style="font-size:14px;font-weight:700;color:#0f172a" id="matModalTitle">素材大图预览</div>
-        <button type="button" class="modal-close" id="matModalCloseBtn" style="font-size:18px;cursor:pointer;background:none;border:none;color:#94a3b8">×</button>
+  <!-- 高保真大图/视频多模态切换弹窗 (支持上一个/下一个及分钟直接切换) -->
+  <div class="modal-backdrop" id="matLightboxModal" style="display:none;align-items:center;justify-content:center;z-index:9999">
+    <div class="modal" style="max-width:760px;width:92%;background:#ffffff;border-radius:14px;overflow:hidden;box-shadow:0 24px 56px rgba(0,0,0,0.3);position:relative">
+      <!-- Modal Header -->
+      <div style="padding:14px 20px;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;justify-content:space-between;background:#ffffff">
+        <div style="display:flex;align-items:center;gap:10px">
+          <span style="font-size:15px;font-weight:750;color:#0f172a" id="matModalTitle">素材多模态预览</span>
+          <span id="matModalTypeBadge" style="background:#e0e7ff;color:#4338ca;font-size:11px;padding:2px 8px;border-radius:10px;font-weight:700">图片素材</span>
+          <span id="matModalIndexBadge" style="font-size:12px;color:#94a3b8;font-weight:600">1 / 10</span>
+        </div>
+        <button type="button" class="modal-close" id="matModalCloseBtn" style="font-size:20px;cursor:pointer;background:none;border:none;color:#64748b;line-height:1;padding:4px">×</button>
       </div>
-      <div style="padding:18px;background:#090d16;display:flex;align-items:center;justify-content:center;min-height:300px">
-        <img id="matModalImg" referrerPolicy="no-referrer" src="" alt="大图预览" style="max-width:100%;max-height:420px;object-fit:contain;border-radius:6px" />
+
+      <!-- Media Viewport with Prev / Next Navigation -->
+      <div style="position:relative;background:#030712;display:flex;align-items:center;justify-content:center;min-height:360px;max-height:460px;padding:12px;overflow:hidden">
+        <!-- Prev Button -->
+        <button type="button" id="matModalPrevBtn" title="上一个素材 (←)" style="position:absolute;left:14px;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,0.18);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.25);color:#ffffff;font-size:18px;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:10;transition:all 0.16s">
+          ◀
+        </button>
+
+        <img id="matModalImg" referrerPolicy="no-referrer" src="" alt="大图预览" style="max-width:100%;max-height:430px;object-fit:contain;border-radius:6px;box-shadow:0 10px 30px rgba(0,0,0,0.5)" />
+
+        <!-- Next Button -->
+        <button type="button" id="matModalNextBtn" title="下一个素材 (→)" style="position:absolute;right:14px;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,0.18);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.25);color:#ffffff;font-size:18px;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:10;transition:all 0.16s">
+          ▶
+        </button>
+
+        <!-- Video overlay badge if video -->
+        <div id="matModalVideoIndicator" style="display:none;position:absolute;bottom:16px;left:18px;background:rgba(0,0,0,0.75);backdrop-filter:blur(4px);padding:4px 12px;border-radius:20px;font-size:11.5px;color:#f87171;font-weight:700;display:flex;align-items:center;gap:6px;border:1px solid rgba(239,68,68,0.3)">
+          <span>▶ 实测演示录屏</span>
+          <span id="matModalDurationSpan" style="color:#ffffff">03:45 分钟</span>
+        </div>
       </div>
-      <div style="padding:12px 18px;background:#f8fafc;border-top:1px solid #e2e8f0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px">
-        <div style="font-size:12px;color:#64748b" id="matModalMeta">分辨率: 1920×1080 · 格式: SVG/PNG · 上传时间: 2025-08-26</div>
+
+      <!-- Quick Switch Strip: 不同素材分钟可切换 -->
+      <div style="background:#0f172a;padding:8px 16px;border-top:1px solid #1e293b;display:flex;align-items:center;gap:8px;overflow-x:auto" id="matModalMinuteBar">
+        <span style="font-size:11px;color:#94a3b8;flex-shrink:0;font-weight:600">按分钟直接切换:</span>
+        <div style="display:flex;align-items:center;gap:6px;flex-wrap:nowrap" id="matModalMinutePills">
+          <!-- Dynamically populated pills -->
+        </div>
+      </div>
+
+      <!-- Video timeline minute markers (shown when viewing video) -->
+      <div id="matModalVideoKeyframes" style="display:none;background:#1e1b4b;padding:7px 16px;border-top:1px solid #312e81;align-items:center;gap:8px;overflow-x:auto">
+        <span style="font-size:11px;color:#c7d2fe;flex-shrink:0;font-weight:600">视频节点分钟切换:</span>
+        <div style="display:flex;align-items:center;gap:6px" id="matModalKeyframeBtns">
+          <button type="button" class="mat-keyframe-btn" data-min="00:00" style="background:#4338ca;color:#ffffff;border:none;border-radius:4px;padding:2px 8px;font-size:11px;cursor:pointer;font-weight:600">00:00 初始态势</button>
+          <button type="button" class="mat-keyframe-btn" data-min="01:00" style="background:rgba(255,255,255,0.1);color:#c7d2fe;border:none;border-radius:4px;padding:2px 8px;font-size:11px;cursor:pointer">01:00 威胁触发</button>
+          <button type="button" class="mat-keyframe-btn" data-min="02:30" style="background:rgba(255,255,255,0.1);color:#c7d2fe;border:none;border-radius:4px;padding:2px 8px;font-size:11px;cursor:pointer">02:30 微秒拦截</button>
+          <button type="button" class="mat-keyframe-btn" data-min="03:30" style="background:rgba(255,255,255,0.1);color:#c7d2fe;border:none;border-radius:4px;padding:2px 8px;font-size:11px;cursor:pointer">03:30 溯源分析</button>
+        </div>
+      </div>
+
+      <!-- Modal Footer -->
+      <div style="padding:12px 20px;background:#f8fafc;border-top:1px solid #e2e8f0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px">
+        <div style="font-size:12px;color:#64748b" id="matModalMeta">
+          分辨率: 3840×2160 · 大小: 4.2MB · 上传时间: 2026-08-26 14:32 (14点32分)
+        </div>
         <div style="display:flex;gap:8px">
-          <button type="button" class="btn o" id="matModalCopyUrlBtn" style="font-size:12px;padding:4px 10px">📋 复制直链</button>
-          <button type="button" class="btn" id="matModalApplyArticleBtn" style="background:#6366f1;color:#fff;font-size:12px;padding:4px 12px;border:none;border-radius:6px">用于文章配图</button>
+          <button type="button" class="btn o" id="matModalCopyUrlBtn" style="font-size:12px;padding:5px 12px;border:1px solid #cbd5e1;background:#fff;cursor:pointer;border-radius:6px;font-weight:600">
+            📋 复制素材直链
+          </button>
+          <button type="button" class="btn" id="matModalApplyArticleBtn" style="background:#6366f1;color:#fff;font-size:12px;padding:5px 14px;border:none;border-radius:6px;cursor:pointer;font-weight:600">
+            ✓ 设为文章创作配图
+          </button>
         </div>
       </div>
     </div>
@@ -1160,9 +1273,9 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
         <span style="font-size:14px;font-weight:750;color:#1e293b">核心实体（产品词库）</span>
         <span class="pill g" id="entityCountPill" style="font-size:12px;padding:3px 10px;border-radius:14px">3 个核心实体</span>
       </div>
-      <textarea class="ipt" id="keywordEntities" rows="5" style="background:#ffffff;border:1px solid #cbd5e1;border-radius:8px;padding:12px 14px;font-size:13.5px;line-height:1.7;color:#1e293b;resize:vertical;width:100%;box-sizing:border-box">外卖袋
-食品级无纺布袋
-奶茶保温袋</textarea>
+      <textarea class="ipt" id="keywordEntities" rows="5" style="background:#ffffff;border:1px solid #cbd5e1;border-radius:8px;padding:12px 14px;font-size:13.5px;line-height:1.7;color:#1e293b;resize:vertical;width:100%;box-sizing:border-box">360安全卫士
+终端安全防护
+勒索病毒拦截</textarea>
       <div class="hint" style="margin-top:10px;font-size:12px;color:#94a3b8">
         每行一个核心实体。此字段将自动同步至人群画像、长尾词库与内容创作模块。
       </div>
@@ -1187,9 +1300,9 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
       </div>
       <select class="ipt" id="kwEntityFilter" style="width:160px;height:38px;border-radius:8px;border:1px solid #cbd5e1;font-size:13px">
         <option value="">全部核心实体</option>
-        <option value="外卖袋">外卖袋</option>
-        <option value="食品级无纺布袋">食品级无纺布袋</option>
-        <option value="奶茶保温袋">奶茶保温袋</option>
+        <option value="360安全卫士">360安全卫士</option>
+        <option value="终端安全防护">终端安全防护</option>
+        <option value="勒索病毒拦截">勒索病毒拦截</option>
       </select>
       <select class="ipt" id="kwIntentFilter" style="width:140px;height:38px;border-radius:8px;border:1px solid #cbd5e1;font-size:13px">
         <option value="">全部搜索意图</option>
@@ -1218,46 +1331,46 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
           </tr>
         </thead>
         <tbody>
-          <tr data-kw="口碑好的外卖袋定制哪家好" data-entity="外卖袋" style="border-bottom:1px solid #f1f5f9">
-            <td style="padding:13px 18px;color:#1e293b;font-weight:550">口碑好的外卖袋定制哪家好</td>
-            <td style="padding:13px 18px;color:#475569">外卖袋</td>
+          <tr data-kw="360安全卫士极速版与企业版区别测评" data-entity="360安全卫士" style="border-bottom:1px solid #f1f5f9">
+            <td style="padding:13px 18px;color:#1e293b;font-weight:550">360安全卫士极速版与企业版区别测评</td>
+            <td style="padding:13px 18px;color:#475569">360安全卫士</td>
             <td style="padding:13px 18px"><span class="pill r" style="font-size:11.5px;padding:2px 8px;border-radius:10px">决策期</span></td>
             <td style="padding:13px 18px;text-align:right"><button class="btn-bring-to-gen" type="button">带入创作 ›</button></td>
           </tr>
-          <tr data-kw="外卖袋一般用什么材质" data-entity="外卖袋" style="border-bottom:1px solid #f1f5f9">
-            <td style="padding:13px 18px;color:#1e293b;font-weight:550">外卖袋一般用什么材质</td>
-            <td style="padding:13px 18px;color:#475569">外卖袋</td>
+          <tr data-kw="Windows11装哪个杀毒软件好360安全卫士实测" data-entity="360安全卫士" style="border-bottom:1px solid #f1f5f9">
+            <td style="padding:13px 18px;color:#1e293b;font-weight:550">Windows11装哪个杀毒软件好360安全卫士实测</td>
+            <td style="padding:13px 18px;color:#475569">360安全卫士</td>
             <td style="padding:13px 18px"><span class="pill b" style="font-size:11.5px;padding:2px 8px;border-radius:10px">了解期</span></td>
             <td style="padding:13px 18px;text-align:right"><button class="btn-bring-to-gen" type="button">带入创作 ›</button></td>
           </tr>
-          <tr data-kw="外卖袋定制一般多久交货" data-entity="外卖袋" style="border-bottom:1px solid #f1f5f9">
-            <td style="padding:13px 18px;color:#1e293b;font-weight:550">外卖袋定制一般多久交货</td>
-            <td style="padding:13px 18px;color:#475569">外卖袋</td>
+          <tr data-kw="360安全卫士企业集中管控与补丁下发方案" data-entity="360安全卫士" style="border-bottom:1px solid #f1f5f9">
+            <td style="padding:13px 18px;color:#1e293b;font-weight:550">360安全卫士企业集中管控与补丁下发方案</td>
+            <td style="padding:13px 18px;color:#475569">360安全卫士</td>
             <td style="padding:13px 18px"><span class="pill y" style="font-size:11.5px;padding:2px 8px;border-radius:10px">比价期</span></td>
             <td style="padding:13px 18px;text-align:right"><button class="btn-bring-to-gen" type="button">带入创作 ›</button></td>
           </tr>
-          <tr data-kw="食品级无纺布袋需要什么检测报告" data-entity="食品级无纺布袋" style="border-bottom:1px solid #f1f5f9">
-            <td style="padding:13px 18px;color:#1e293b;font-weight:550">食品级无纺布袋需要什么检测报告</td>
-            <td style="padding:13px 18px;color:#475569">食品级无纺布袋</td>
+          <tr data-kw="企业级终端安全EDR厂商推荐与选型对比" data-entity="终端安全防护" style="border-bottom:1px solid #f1f5f9">
+            <td style="padding:13px 18px;color:#1e293b;font-weight:550">企业级终端安全EDR厂商推荐与选型对比</td>
+            <td style="padding:13px 18px;color:#475569">终端安全防护</td>
+            <td style="padding:13px 18px"><span class="pill r" style="font-size:11.5px;padding:2px 8px;border-radius:10px">决策期</span></td>
+            <td style="padding:13px 18px;text-align:right"><button class="btn-bring-to-gen" type="button">带入创作 ›</button></td>
+          </tr>
+          <tr data-kw="360天擎终端安全管理系统部署方案" data-entity="终端安全防护" style="border-bottom:1px solid #f1f5f9">
+            <td style="padding:13px 18px;color:#1e293b;font-weight:550">360天擎终端安全管理系统部署方案</td>
+            <td style="padding:13px 18px;color:#475569">终端安全防护</td>
             <td style="padding:13px 18px"><span class="pill b" style="font-size:11.5px;padding:2px 8px;border-radius:10px">了解期</span></td>
             <td style="padding:13px 18px;text-align:right"><button class="btn-bring-to-gen" type="button">带入创作 ›</button></td>
           </tr>
-          <tr data-kw="食品级无纺布袋生产厂家怎么选" data-entity="食品级无纺布袋" style="border-bottom:1px solid #f1f5f9">
-            <td style="padding:13px 18px;color:#1e293b;font-weight:550">食品级无纺布袋生产厂家怎么选</td>
-            <td style="padding:13px 18px;color:#475569">食品级无纺布袋</td>
+          <tr data-kw="服务器防勒索病毒哪家强360安全拦截率" data-entity="勒索病毒拦截" style="border-bottom:1px solid #f1f5f9">
+            <td style="padding:13px 18px;color:#1e293b;font-weight:550">服务器防勒索病毒哪家强360安全拦截率</td>
+            <td style="padding:13px 18px;color:#475569">勒索病毒拦截</td>
             <td style="padding:13px 18px"><span class="pill r" style="font-size:11.5px;padding:2px 8px;border-radius:10px">决策期</span></td>
             <td style="padding:13px 18px;text-align:right"><button class="btn-bring-to-gen" type="button">带入创作 ›</button></td>
           </tr>
-          <tr data-kw="奶茶保温袋与普通打包袋区别" data-entity="奶茶保温袋" style="border-bottom:1px solid #f1f5f9">
-            <td style="padding:13px 18px;color:#1e293b;font-weight:550">奶茶保温袋与普通打包袋区别</td>
-            <td style="padding:13px 18px;color:#475569">奶茶保温袋</td>
-            <td style="padding:13px 18px"><span class="pill y" style="font-size:11.5px;padding:2px 8px;border-radius:10px">比价期</span></td>
-            <td style="padding:13px 18px;text-align:right"><button class="btn-bring-to-gen" type="button">带入创作 ›</button></td>
-          </tr>
-          <tr data-kw="奶茶保温袋批发起订量是多少" data-entity="奶茶保温袋" style="border-bottom:1px solid #f1f5f9">
-            <td style="padding:13px 18px;color:#1e293b;font-weight:550">奶茶保温袋批发起订量是多少</td>
-            <td style="padding:13px 18px;color:#475569">奶茶保温袋</td>
-            <td style="padding:13px 18px"><span class="pill r" style="font-size:11.5px;padding:2px 8px;border-radius:10px">决策期</span></td>
+          <tr data-kw="LockBit勒索病毒专杀与文件主动防护工具" data-entity="勒索病毒拦截" style="border-bottom:1px solid #f1f5f9">
+            <td style="padding:13px 18px;color:#1e293b;font-weight:550">LockBit勒索病毒专杀与文件主动防护工具</td>
+            <td style="padding:13px 18px;color:#475569">勒索病毒拦截</td>
+            <td style="padding:13px 18px"><span class="pill b" style="font-size:11.5px;padding:2px 8px;border-radius:10px">了解期</span></td>
             <td style="padding:13px 18px;text-align:right"><button class="btn-bring-to-gen" type="button">带入创作 ›</button></td>
           </tr>
         </tbody>
@@ -1300,10 +1413,7 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
           <span class="flow-source" style="font-size:11px;background:#ecfdf5;color:#059669;padding:1px 6px;border-radius:4px;font-weight:normal;border:1px solid #a7f3d0">关键词挖掘</span>
         </span>
         <select class="ipt" id="coreKeywordSelect" style="height:40px;border:1px solid #cbd5e1;font-weight:600;color:#1e293b;width:100%;box-sizing:border-box">
-          <option value="外卖袋" selected>外卖袋</option>
-          <option value="食品级无纺布袋">食品级无纺布袋</option>
-          <option value="奶茶保温袋">奶茶保温袋</option>
-          <option value="360安全卫士">360安全卫士</option>
+          <option value="360安全卫士" selected>360安全卫士</option>
           <option value="终端安全防护">终端安全防护</option>
           <option value="勒索病毒拦截">勒索病毒拦截</option>
           <option value="AI安全大模型">AI安全大模型</option>
@@ -1321,9 +1431,9 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
           <span class="flow-source" style="font-size:11px;background:#ecfdf5;color:#059669;padding:1px 6px;border-radius:4px;font-weight:normal;border:1px solid #a7f3d0">关键词挖掘</span>
         </span>
         <select class="ipt" id="longTailSelect" style="height:40px;border:1px solid #cbd5e1;font-weight:600;color:#1e293b;width:100%;box-sizing:border-box">
-          <option value="口碑好的外卖袋定制哪家好" selected>口碑好的外卖袋定制哪家好</option>
-          <option value="外卖袋一般用什么材质">外卖袋一般用什么材质</option>
-          <option value="外卖袋定制一般多久交货">外卖袋定制一般多久交货</option>
+          <option value="360安全卫士极速版与企业版区别测评" selected>360安全卫士极速版与企业版区别测评</option>
+          <option value="Windows11装哪个杀毒软件好360安全卫士实测">Windows11装哪个杀毒软件好360安全卫士实测</option>
+          <option value="360安全卫士企业集中管控与补丁下发方案">360安全卫士企业集中管控与补丁下发方案</option>
         </select>
         <div style="font-size:11.5px;color:#94a3b8;margin-top:5px">根据核心词自动级联匹配，共同决定用户画像与痛点</div>
       </div>
@@ -1361,8 +1471,8 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
       </div>
 
       <!-- Hidden compatibility selects for legacy sync -->
-      <select id="personaCoreKeywordSelect" style="display:none"><option value="外卖袋" selected>外卖袋</option></select>
-      <select id="personaLongTailSelect" style="display:none"><option value="口碑好的外卖袋定制哪家好" selected>口碑好的外卖袋定制哪家好</option></select>
+      <select id="personaCoreKeywordSelect" style="display:none"><option value="360安全卫士" selected>360安全卫士</option></select>
+      <select id="personaLongTailSelect" style="display:none"><option value="360安全卫士极速版与企业版区别测评" selected>360安全卫士极速版与企业版区别测评</option></select>
 
       <div>
         <!-- 当前核心词与长尾词实时映射指示条 -->
@@ -1371,12 +1481,12 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
             <span style="display:inline-flex;align-items:center;gap:6px">
               <span style="width:7px;height:7px;border-radius:50%;background:#10b981;display:inline-block"></span>
               <span style="color:#64748b">当前核心词：</span>
-              <b id="personaLiveCoreText" style="color:#059669;font-weight:750;background:#ecfdf5;padding:2px 8px;border-radius:6px;border:1px solid #a7f3d0">外卖袋</b>
+              <b id="personaLiveCoreText" style="color:#059669;font-weight:750;background:#ecfdf5;padding:2px 8px;border-radius:6px;border:1px solid #a7f3d0">360安全卫士</b>
             </span>
             <span style="color:#cbd5e1">→</span>
             <span style="display:inline-flex;align-items:center;gap:6px">
               <span style="color:#64748b">触发长尾词：</span>
-              <b id="personaLiveLongTailText" style="color:#1e293b;font-weight:700;background:#f8fafc;padding:2px 8px;border-radius:6px;border:1px solid #e2e8f0">口碑好的外卖袋定制哪家好</b>
+              <b id="personaLiveLongTailText" style="color:#1e293b;font-weight:700;background:#f8fafc;padding:2px 8px;border-radius:6px;border:1px solid #e2e8f0">360安全卫士极速版与企业版区别测评</b>
             </span>
           </div>
           <div style="display:flex;align-items:center;gap:8px">
@@ -1396,10 +1506,8 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
               <span style="font-size:11px;color:#059669;font-weight:600;background:#ecfdf5;padding:1px 6px;border-radius:4px">Step 1</span>
             </div>
             <select class="demand-ipt-select" id="personaRoleSelect" style="height:40px;font-weight:600">
-              <option value="餐饮连锁采购总监 / 外卖品牌运营负责人" selected>餐饮连锁采购总监 / 外卖品牌运营负责人</option>
-              <option value="生鲜冷链供应链主管 / 商超采购经理">生鲜冷链供应链主管 / 商超采购经理</option>
-              <option value="现制茶饮品牌区域督导 / 门店店长">现制茶饮品牌区域督导 / 门店店长</option>
-              <option value="企业网络管理员 / IT运维主管">企业网络管理员 / IT运维主管</option>
+              <option value="企业网络管理员 / IT运维主管" selected>企业网络管理员 / IT运维主管</option>
+              <option value="大型政企信息化安全负责人 / CISO">大型政企信息化安全负责人 / CISO</option>
               <option value="信息安全总监 / CISO">信息安全总监 / CISO</option>
               <option value="核心业务数据库运维工程师">核心业务数据库运维工程师</option>
               <option value="SOC安全运营中心分析师">SOC安全运营中心分析师</option>
@@ -1407,6 +1515,7 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
             </select>
             <div style="font-size:11.5px;color:#94a3b8;margin-top:6px">目标受众角色与采购决策人定位</div>
           </div>
+
           <div class="demand-field-row" style="margin-bottom:0;background:#ffffff;padding:14px 16px;border-radius:10px;border:1px solid #e2e8f0;box-shadow:0 1px 2px rgba(15,23,42,0.02)">
             <div class="demand-lb" style="margin-bottom:8px;justify-content:space-between">
               <span style="display:inline-flex;align-items:center;gap:7px">
@@ -1416,10 +1525,8 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
               <span style="font-size:11px;color:#0284c7;font-weight:600;background:#f0f9ff;padding:1px 6px;border-radius:4px">Step 2</span>
             </div>
             <select class="demand-ipt-select" id="personaScenarioSelect" style="height:40px;font-weight:600">
-              <option value="外卖高峰期汤汁防洒漏与定制品牌LOGO保温袋集中采购" selected>外卖高峰期汤汁防洒漏与定制品牌LOGO保温袋集中采购</option>
-              <option value="生鲜冻品同城配送急需食品级无尘车间认证环保袋">生鲜冻品同城配送急需食品级无尘车间认证环保袋</option>
-              <option value="夏季爆单奶茶45分钟保冰防凝水铝箔打包袋招标">夏季爆单奶茶45分钟保冰防凝水铝箔打包袋招标</option>
-              <option value="公司全员电脑防病毒与系统流氓软件一键清理">公司全员电脑防病毒与系统流氓软件一键清理</option>
+              <option value="公司全员电脑防病毒与系统流氓软件一键清理" selected>公司全员电脑防病毒与系统流氓软件一键清理</option>
+              <option value="全集团跨广域网万级终端防病毒与数据防泄漏统一管控">全集团跨广域网万级终端防病毒与数据防泄漏统一管控</option>
               <option value="分支机构分散办公电脑勒索病毒统一管控">分支机构分散办公电脑勒索病毒统一管控</option>
               <option value="生产网核心服务器防御勒索加密与0day漏洞攻击">生产网核心服务器防御勒索加密与0day漏洞攻击</option>
               <option value="海量安全告警自动化智能研判与事件秒级溯源">海量安全告警自动化智能研判与事件秒级溯源</option>
@@ -1427,6 +1534,7 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
             </select>
             <div style="font-size:11.5px;color:#94a3b8;margin-top:6px">用户在 AI 搜索引擎提问时的真实业务处境</div>
           </div>
+
           <div class="demand-field-row" style="margin-bottom:0;background:#ffffff;padding:14px 16px;border-radius:10px;border:1px solid #e2e8f0;box-shadow:0 1px 2px rgba(15,23,42,0.02)">
             <div class="demand-lb" style="margin-bottom:8px;justify-content:space-between">
               <span style="display:inline-flex;align-items:center;gap:7px">
@@ -1436,10 +1544,8 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
               <span style="font-size:11px;color:#d97706;font-weight:600;background:#fffbeb;padding:1px 6px;border-radius:4px">Step 3</span>
             </div>
             <select class="demand-ipt-select" id="personaPainPointsSelect" style="height:40px;font-weight:600">
-              <option value="普通外卖袋保温差易破袋漏汤导致差评、大促急单工厂交期慢" selected>普通外卖袋保温差易破袋漏汤导致差评、大促急单工厂交期慢</option>
-              <option value="缺乏食品接触级安全检测报告、印刷油墨有异味影响品牌形象">缺乏食品接触级安全检测报告、印刷油墨有异味影响品牌形象</option>
-              <option value="起订量门槛过高、提手承重不足骑手配送途中易断裂">起订量门槛过高、提手承重不足骑手配送途中易断裂</option>
-              <option value="弹窗广告多影响办公、全网更新补丁难集中下发">弹窗广告多影响办公、全网更新补丁难集中下发</option>
+              <option value="弹窗广告多影响办公、全网更新补丁难集中下发" selected>弹窗广告多影响办公、全网更新补丁难集中下发</option>
+              <option value="分支机构多终端资产盘点困难、未知APT威胁响应慢、等保合规压力大">分支机构多终端资产盘点困难、未知APT威胁响应慢、等保合规压力大</option>
               <option value="未知威胁发现慢、跨平台终端缺乏一体化安全资产看板">未知威胁发现慢、跨平台终端缺乏一体化安全资产看板</option>
               <option value="勒索病毒变种快无解密私钥、业务中断损失巨大">勒索病毒变种快无解密私钥、业务中断损失巨大</option>
               <option value="告警误报率高达90%人手严重不足、应急响应超时">告警误报率高达90%人手严重不足、应急响应超时</option>
@@ -1456,7 +1562,7 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
       <span class="lb" style="display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:#334155;margin-bottom:6px">
         Slot B 定制红线（客户绝对禁令，凌驾所有规则）
       </span>
-      <textarea class="ipt" id="redlineInput" rows="3" style="border:1px solid #cbd5e1;line-height:1.7;padding:10px 14px;width:100%;box-sizing:border-box">不得提及具体报价；不得出现「食品安全零风险」表述</textarea>
+      <textarea class="ipt" id="redlineInput" rows="3" style="border:1px solid #cbd5e1;line-height:1.7;padding:10px 14px;width:100%;box-sizing:border-box">不得夸大「100%绝对无漏洞/零被黑」承诺；不得泄漏企业受护客户内网敏感脱敏数据；合规等级保护需附带国家权威测评依据</textarea>
     </div>
     <!-- 操作栏：文章长度 + 文章数量 + 生成文章按钮 -->
     <div class="gen-bottom-replicated" style="display:flex;align-items:flex-start;justify-content:space-between;gap:24px;padding-top:20px;border-top:1px solid #f1f5f9;margin-bottom:22px;flex-wrap:wrap">
@@ -1526,11 +1632,11 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
     <div class="generation-summary" id="generationSummary" style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:16px 20px">
       <div>
         <span style="font-size:11.5px;color:#64748b;display:block">当前核心词</span>
-        <b id="summaryCore" style="font-size:14px;color:#1e293b;font-weight:750">外卖袋</b>
+        <b id="summaryCore" style="font-size:14px;color:#1e293b;font-weight:750">360安全卫士</b>
       </div>
       <div>
         <span style="font-size:11.5px;color:#64748b;display:block">匹配画像 / 体裁</span>
-        <b id="summaryPersona" style="font-size:14px;color:#1e293b;font-weight:750">餐饮连锁采购总监 · 排行推荐</b>
+        <b id="summaryPersona" style="font-size:14px;color:#1e293b;font-weight:750">企业网络管理员 · 排行推荐</b>
       </div>
       <div>
         <span style="font-size:11.5px;color:#64748b;display:block">文章规格</span>
@@ -1551,20 +1657,20 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
     </div>
     <div class="cs">根据不同核心关键词与长尾词构建的画像矩阵，支持在当前页面一键生成新画像并沉淀入库。</div>
     <div class="persona-cards-grid" id="personaModelCardsGrid">
-      <!-- Card 0: 外卖袋 -->
+      <!-- Card 0: 360天擎 -->
       <div class="persona-model-card">
         <div class="persona-card-head">
-          <span class="persona-card-role">餐饮连锁采购总监 / 外卖品牌运营负责人</span>
-          <span class="pill g">外卖袋</span>
+          <span class="persona-card-role">大型政企信息化安全负责人 / CISO</span>
+          <span class="pill g">360天擎</span>
         </div>
         <div class="persona-card-body">
-          <div class="persona-card-row"><b>触发长尾词：</b>口碑好的外卖袋定制哪家好</div>
-          <div class="persona-card-row"><b>搜索场景：</b>外卖高峰期汤汁防洒漏与定制品牌LOGO保温袋集中采购</div>
-          <div class="persona-card-row"><b>核心痛点：</b>普通外卖袋保温差易破袋漏汤导致差评、大促急单工厂交期慢</div>
+          <div class="persona-card-row"><b>触发长尾词：</b>360天擎终端安全管理系统企业版选型与采购报价</div>
+          <div class="persona-card-row"><b>搜索场景：</b>全集团跨广域网万级终端防病毒与数据防泄漏统一管控</div>
+          <div class="persona-card-row"><b>核心痛点：</b>分支机构多终端资产盘点困难、未知APT威胁响应慢、等保合规压力大</div>
         </div>
         <div class="persona-card-foot">
           <span style="font-size:11.5px;color:var(--muted)">更新于 2026-10-06</span>
-          <button class="btn o apply-to-gen-btn" data-core="外卖袋" data-longtail="口碑好的外卖袋定制哪家好" data-role="餐饮连锁采购总监 / 外卖品牌运营负责人" data-scenario="外卖高峰期汤汁防洒漏与定制品牌LOGO保温袋集中采购" data-pain="普通外卖袋保温差易破袋漏汤导致差评、大促急单工厂交期慢" style="padding:3px 10px;font-size:12px">带入创作 ›</button>
+          <button class="btn o apply-to-gen-btn" data-core="360天擎" data-longtail="360天擎终端安全管理系统企业版选型与采购报价" data-role="大型政企信息化安全负责人 / CISO" data-scenario="全集团跨广域网万级终端防病毒与数据防泄漏统一管控" data-pain="分支机构多终端资产盘点困难、未知APT威胁响应慢、等保合规压力大" style="padding:3px 10px;font-size:12px">带入创作 ›</button>
         </div>
       </div>
       <!-- Card 1 -->
@@ -1830,10 +1936,11 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
                   </div>
                   <select class="ipt" id="vgMaterialGroup">
                     <option value="">-- 请选择素材分组 --</option>
-                    <option value="g1" selected>360安全大脑可视化防御大屏与终端实测 (42支片段)</option>
-                    <option value="g2">现代化工业车间与全自动熔接片段 (36支片段)</option>
-                    <option value="g3">勒索病毒动态诱捕与数据秒级回滚实拍 (28支片段)</option>
-                    <option value="g4">大客户发货物流与装箱发运现场 (19支片段)</option>
+                    <option value="all" selected>企业素材库 · 所有素材 (10个片段)</option>
+                    <option value="brain">企业素材库 · 360安全大脑与SOC (3个片段)</option>
+                    <option value="endpoint">企业素材库 · 360天擎终端与防勒索 (3个片段)</option>
+                    <option value="compliance">企业素材库 · 资质与等保测评 (2个片段)</option>
+                    <option value="video">企业素材库 · 攻防实录与视频 (2个片段)</option>
                   </select>
                 </div>
 
@@ -1846,7 +1953,7 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
                   <select class="ipt" id="vgQuickTemplateSelect">
                     <option value="">-- 请选择混剪模板 --</option>
                     <option value="hook3s" selected>黄金前3秒痛点暴击 + 核心卖点快剪 (高完播率推荐)</option>
-                    <option value="factory">源头工厂实景探厂 + 质检背书混剪</option>
+                    <option value="soc">360安全大脑指挥实景 + 攻防背书混剪</option>
                     <option value="compare">传统方案对比实测 + 客户案例快剪</option>
                   </select>
                   <!-- 模板小预览样片 -->
@@ -1939,10 +2046,11 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
                   </div>
                   <div style="position:relative">
                     <select class="ipt" id="vgSubMaterialGroup" style="width:100%;height:38px;padding:0 32px 0 12px;font-size:13px;color:#334155;border:1px solid #e2e8f0;border-radius:6px;background:#ffffff;appearance:none;cursor:pointer">
-                      <option value="all" selected>所有</option>
-                      <option value="factory">360云端安全大脑大屏与防御实测 (10支片段)</option>
-                      <option value="industry">工业互联网安全与等保测评套件 (8支片段)</option>
-                      <option value="product">终端安全防勒索与数据秒级回滚 (12支片段)</option>
+                      <option value="all" selected>企业素材库 · 所有素材 (10个片段)</option>
+                      <option value="brain">企业素材库 · 360安全大脑与SOC (3个片段)</option>
+                      <option value="endpoint">企业素材库 · 360天擎终端与防勒索 (3个片段)</option>
+                      <option value="compliance">企业素材库 · 资质与等保测评 (2个片段)</option>
+                      <option value="video">企业素材库 · 攻防实录与视频 (2个片段)</option>
                     </select>
                     <span style="position:absolute;right:12px;top:50%;transform:translateY(-50%);pointer-events:none;color:#94a3b8;font-size:12px">▼</span>
                   </div>
@@ -2650,12 +2758,12 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
                 <span class="vg-upload-preview-badge" style="font-size:11px;font-weight:600;color:#64748b">点击预览</span>
               </div>
             </div>
-            <div class="vg-uploaded-item" data-bg="${complianceBadgeImg}" data-vtitle="食品级无纺布外卖保温袋承重防漏实测.mp4" data-vsize="21.6 MB" style="border:1px solid #e2e8f0;border-radius:10px;background:#ffffff;padding:8px;cursor:pointer">
+            <div class="vg-uploaded-item" data-bg="${complianceBadgeImg}" data-vtitle="360安全大脑全网威胁态势感知大屏实况.mp4" data-vsize="21.6 MB" style="border:1px solid #e2e8f0;border-radius:10px;background:#ffffff;padding:8px;cursor:pointer">
               <div style="position:relative;border-radius:6px;overflow:hidden;margin-bottom:6px">
                 <img referrerPolicy="no-referrer" alt="视频预览3" src="${complianceBadgeImg}" style="width:100%;height:84px;object-fit:cover" />
                 <span style="position:absolute;bottom:4px;right:4px;background:rgba(0,0,0,0.65);color:#fff;font-size:10px;padding:1px 5px;border-radius:4px">00:18</span>
               </div>
-              <div style="font-size:12px;font-weight:700;color:#0f172a;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">外卖保温袋承重实测.mp4</div>
+              <div style="font-size:12px;font-weight:700;color:#0f172a;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">360安全大脑态势感知.mp4</div>
               <div style="display:flex;align-items:center;justify-content:space-between;margin-top:4px">
                 <span style="font-size:11px;color:#64748b">21.6 MB</span>
                 <span class="vg-upload-preview-badge" style="font-size:11px;font-weight:600;color:#64748b">点击预览</span>
@@ -2771,17 +2879,16 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
         <div class="fg" style="margin-bottom:0">
           <span class="lb"><span style="color:#ef4444">*</span> 核心关键词</span>
           <select class="ipt" id="vgGraphicCoreKeyword">
-            <option value="外卖袋" selected>外卖袋</option>
-            <option value="食品级无纺布袋">食品级无纺布袋</option>
-            <option value="奶茶保温袋">奶茶保温袋</option>
-            <option value="360安全卫士">360安全卫士</option>
+            <option value="360安全卫士" selected>360安全卫士</option>
             <option value="终端安全防护">终端安全防护 / EDR管理</option>
             <option value="勒索病毒拦截">勒索病毒拦截 / 安全大脑</option>
+            <option value="360天擎">360天擎企业安全系统</option>
+            <option value="网络安全等级保护">网络安全等级保护合规</option>
           </select>
         </div>
         <div class="fg" style="margin-bottom:0">
           <span class="lb"><span style="color:#ef4444">*</span> 长尾关键词</span>
-          <input class="ipt" id="vgGraphicLongTail" value="口碑好的外卖袋定制哪家好" placeholder="请输入长尾关键词" />
+          <input class="ipt" id="vgGraphicLongTail" value="360安全卫士极速版与企业版区别测评" placeholder="请输入长尾关键词" />
         </div>
         <div class="fg" style="margin-bottom:0">
           <span class="lb"><span style="color:#ef4444">*</span> 创作类型</span>
@@ -2814,7 +2921,7 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
         <div class="fg" style="margin-bottom:0">
           <span class="lb"><span style="color:#ef4444">*</span> 图文标题</span>
           <div class="vg-input-counter-wrap">
-            <input class="ipt" id="vgGraphicTitle" maxlength="20" value="外卖袋定制怎么选？源头工厂教你避坑5大雷区！" placeholder="请输入图文标题" />
+            <input class="ipt" id="vgGraphicTitle" maxlength="20" value="企业终端安全选型实测：360安全卫士如何拦截未知勒索威胁" placeholder="请输入图文标题" />
             <span class="vg-counter" id="vgGraphicTitleCounter">20 / 20</span>
           </div>
         </div>
@@ -2825,10 +2932,10 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
             <span class="vg-counter" id="vgGraphicTagsCounter">4 / 5</span>
           </div>
           <div id="vgGraphicTagPills" style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px">
-            <span class="vg-graphic-tag-chip" data-tag="外卖袋定制" style="display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:6px;background:#eff6ff;color:#2563eb;font-size:12px;font-weight:600">#外卖袋定制 <i class="vg-remove-tag" style="cursor:pointer;font-style:normal;opacity:0.75">×</i></span>
-            <span class="vg-graphic-tag-chip" data-tag="无纺布保温袋" style="display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:6px;background:#eff6ff;color:#2563eb;font-size:12px;font-weight:600">#无纺布保温袋 <i class="vg-remove-tag" style="cursor:pointer;font-style:normal;opacity:0.75">×</i></span>
-            <span class="vg-graphic-tag-chip" data-tag="餐饮包装源头厂" style="display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:6px;background:#eff6ff;color:#2563eb;font-size:12px;font-weight:600">#餐饮包装源头厂 <i class="vg-remove-tag" style="cursor:pointer;font-style:normal;opacity:0.75">×</i></span>
-            <span class="vg-graphic-tag-chip" data-tag="环保打包袋" style="display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:6px;background:#eff6ff;color:#2563eb;font-size:12px;font-weight:600">#环保打包袋 <i class="vg-remove-tag" style="cursor:pointer;font-style:normal;opacity:0.75">×</i></span>
+            <span class="vg-graphic-tag-chip" data-tag="360安全卫士" style="display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:6px;background:#eff6ff;color:#2563eb;font-size:12px;font-weight:600">#360安全卫士 <i class="vg-remove-tag" style="cursor:pointer;font-style:normal;opacity:0.75">×</i></span>
+            <span class="vg-graphic-tag-chip" data-tag="终端安全防护" style="display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:6px;background:#eff6ff;color:#2563eb;font-size:12px;font-weight:600">#终端安全防护 <i class="vg-remove-tag" style="cursor:pointer;font-style:normal;opacity:0.75">×</i></span>
+            <span class="vg-graphic-tag-chip" data-tag="防勒索病毒" style="display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:6px;background:#eff6ff;color:#2563eb;font-size:12px;font-weight:600">#防勒索病毒 <i class="vg-remove-tag" style="cursor:pointer;font-style:normal;opacity:0.75">×</i></span>
+            <span class="vg-graphic-tag-chip" data-tag="数字安全" style="display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:6px;background:#eff6ff;color:#2563eb;font-size:12px;font-weight:600">#数字安全 <i class="vg-remove-tag" style="cursor:pointer;font-style:normal;opacity:0.75">×</i></span>
           </div>
           <div style="font-size:11.5px;color:#94a3b8;margin-top:4px">提示：最多输入5个话题标签，每个标签用回车分类</div>
         </div>
@@ -2837,11 +2944,8 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
       <div class="fg" style="margin-bottom:0">
         <span class="lb"><span style="color:#ef4444">*</span> 正文内容</span>
         <div class="vg-textarea-counter-wrap">
-          <textarea class="ipt" id="vgGraphicContent" rows="5" maxlength="1000" placeholder="请输入正文内容">1. 材质安全是底线：严选食品接触级加厚无纺布与环保水性油墨，杜绝异味与塑化剂超标，显著提升顾客开袋好感度。
-2. 保温防漏硬核指标：采用双层覆铝箔锁温复合工艺，实测45分钟温度衰减≤3℃，汤汁高频颠簸滴水不漏。
-3. 承重抗撕裂测试：加固提手十字交叉超声波车缝，静载15KG不断带不脱落，骑手极速配送零客诉。
-4. 敏捷供应链支持：自有万级净化无尘车间，支持48小时极速打样、72小时批量出货，大促备货更从容！</textarea>
-          <span class="vg-textarea-counter" id="vgGraphicContentCounter">196 / 1000</span>
+          <textarea class="ipt" id="vgGraphicContent" rows="5" maxlength="1000" placeholder="请输入正文内容">1. 终端防线是数字安全第一道门槛：360安全卫士与天擎EDR协同防护，毫秒级拦截勒索病毒与未知木马。2. 全网威胁情报赋能：依托360安全大脑百亿级样本库与大模型研判能力，精准阻断APT隐蔽渗透。3. 轻量化集中管控：支持全网终端资产统一纳管与一键静默打补丁，保障业务连续性与合规达标！4. 国家级数字安全实力：作为数字安全国家队，提供7×24小时全天候攻防响应与等保合规护航！</textarea>
+          <span class="vg-textarea-counter" id="vgGraphicContentCounter">192 / 1000</span>
         </div>
       </div>
     </div>
@@ -2889,10 +2993,10 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
         <div class="fg" style="margin-bottom:0">
           <span class="lb"><span style="color:#ef4444">*</span> 统一画面风格</span>
           <select class="ipt" id="vgGraphicStyleSelect">
-            <option value="commercial" selected>商业静物实拍 / 高清微距</option>
-            <option value="factory">现代化源头工厂实景</option>
-            <option value="minimal">极简科技风 / 3D渲染</option>
-            <option value="lifestyle">真实餐饮门店生活感</option>
+            <option value="cyber" selected>赛博深蓝数字科技 / SOC大屏光影</option>
+            <option value="minimal">极简科技商务 / 企业级3D渲染</option>
+            <option value="enterprise">政企信创办公实景 / 权威专业质感</option>
+            <option value="threat">动态攻防对抗 / 预警雷达光效</option>
           </select>
         </div>
         <div class="fg" style="margin-bottom:0">
@@ -2923,16 +3027,16 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
           <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
             <div style="display:flex;align-items:center;gap:8px">
               <span style="background:#eff6ff;color:#2563eb;border:1px solid #bfdbfe;font-size:11.5px;font-weight:750;padding:2px 8px;border-radius:6px">图 1 · 封面首图</span>
-              <span style="font-size:13px;font-weight:700;color:#0f172a">品牌定制外卖保温袋商业特写</span>
+              <span style="font-size:13px;font-weight:700;color:#0f172a">360安全运营中心SOC态势感知巨幕特写</span>
             </div>
             <button type="button" class="vg-opt-single-prompt-btn" style="border:none;background:transparent;color:#4f46e5;font-size:12px;font-weight:700;cursor:pointer">✨ AI优化描述</button>
           </div>
-          <textarea class="ipt vg-graphic-prompt-ipt" rows="3" style="font-size:12.5px;line-height:1.55;background:#ffffff;margin-bottom:8px">近景商业静物特写，高品质加厚无纺布定制外卖保温袋陈列在现代原木餐饮吧台上，立体烫金品牌Logo清晰醒目，柔和商业棚拍光影，8K超高清细节</textarea>
+          <textarea class="ipt vg-graphic-prompt-ipt" rows="3" style="font-size:12.5px;line-height:1.55;background:#ffffff;margin-bottom:8px">高科技数字安全运营中心SOC巨幕大屏，全网实时网络威胁态势感知光流与360安全大脑威胁拓扑图，深蓝微光科技质感，4K超清工业级渲染</textarea>
           <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
             <span style="font-size:11px;color:#64748b">快捷标签：</span>
-            <button type="button" class="chip-mini vg-graphic-ptag-btn" data-ptag="高清微距" style="font-size:11px;padding:2px 8px;cursor:pointer">+ 高清微距</button>
+            <button type="button" class="chip-mini vg-graphic-ptag-btn" data-ptag="态势感知大屏" style="font-size:11px;padding:2px 8px;cursor:pointer">+ 态势感知大屏</button>
             <button type="button" class="chip-mini vg-graphic-ptag-btn" data-ptag="极简科技感" style="font-size:11px;padding:2px 8px;cursor:pointer">+ 极简科技感</button>
-            <button type="button" class="chip-mini vg-graphic-ptag-btn" data-ptag="绿色环保视觉" style="font-size:11px;padding:2px 8px;cursor:pointer">+ 绿色环保视觉</button>
+            <button type="button" class="chip-mini vg-graphic-ptag-btn" data-ptag="360安全大脑" style="font-size:11px;padding:2px 8px;cursor:pointer">+ 360安全大脑</button>
           </div>
         </div>
 
@@ -2940,17 +3044,17 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
         <div class="vg-graphic-prompt-card" style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:14px 16px">
           <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
             <div style="display:flex;align-items:center;gap:8px">
-              <span style="background:#ecfdf5;color:#059669;border:1px solid #a7f3d0;font-size:11.5px;font-weight:750;padding:2px 8px;border-radius:6px">图 2 · 材质工艺</span>
-              <span style="font-size:13px;font-weight:700;color:#0f172a">双层覆铝箔锁温内胆与防水细节</span>
+              <span style="background:#ecfdf5;color:#059669;border:1px solid #a7f3d0;font-size:11.5px;font-weight:750;padding:2px 8px;border-radius:6px">图 2 · 核心防护</span>
+              <span style="font-size:13px;font-weight:700;color:#0f172a">360天擎终端EDR多维防护与微隔离技术细节</span>
             </div>
             <button type="button" class="vg-opt-single-prompt-btn" style="border:none;background:transparent;color:#4f46e5;font-size:12px;font-weight:700;cursor:pointer">✨ AI优化描述</button>
           </div>
-          <textarea class="ipt vg-graphic-prompt-ipt" rows="3" style="font-size:12.5px;line-height:1.55;background:#ffffff;margin-bottom:8px">微距镜头展示外卖袋内部加厚双层铝箔保温层纹理与超声波十字加固提手车缝细节，表面凝结细密水珠体现优异防漏防水性能，工业级品控质感</textarea>
+          <textarea class="ipt vg-graphic-prompt-ipt" rows="3" style="font-size:12.5px;line-height:1.55;background:#ffffff;margin-bottom:8px">微距科技视效呈现企业终端安全防护系统控制台，多层威胁查杀引擎动态扫描图谱与沙箱行为分析架构，精细数据可视化光效</textarea>
           <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
             <span style="font-size:11px;color:#64748b">快捷标签：</span>
-            <button type="button" class="chip-mini vg-graphic-ptag-btn" data-ptag="材质微距特写" style="font-size:11px;padding:2px 8px;cursor:pointer">+ 材质微距特写</button>
-            <button type="button" class="chip-mini vg-graphic-ptag-btn" data-ptag="防水防漏水珠" style="font-size:11px;padding:2px 8px;cursor:pointer">+ 防水防漏水珠</button>
-            <button type="button" class="chip-mini vg-graphic-ptag-btn" data-ptag="超声波热压细节" style="font-size:11px;padding:2px 8px;cursor:pointer">+ 超声波热压细节</button>
+            <button type="button" class="chip-mini vg-graphic-ptag-btn" data-ptag="终端EDR微距" style="font-size:11px;padding:2px 8px;cursor:pointer">+ 终端EDR微距</button>
+            <button type="button" class="chip-mini vg-graphic-ptag-btn" data-ptag="勒索拦截架构" style="font-size:11px;padding:2px 8px;cursor:pointer">+ 勒索拦截架构</button>
+            <button type="button" class="chip-mini vg-graphic-ptag-btn" data-ptag="沙箱引擎细节" style="font-size:11px;padding:2px 8px;cursor:pointer">+ 沙箱引擎细节</button>
           </div>
         </div>
 
@@ -2958,17 +3062,17 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
         <div class="vg-graphic-prompt-card" style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:14px 16px">
           <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
             <div style="display:flex;align-items:center;gap:8px">
-              <span style="background:#eff6ff;color:#2563eb;border:1px solid #bfdbfe;font-size:11.5px;font-weight:750;padding:2px 8px;border-radius:6px">图 3 · 场景实测</span>
-              <span style="font-size:13px;font-weight:700;color:#0f172a">15KG高承重实测与餐饮出餐打包</span>
+              <span style="background:#eff6ff;color:#2563eb;border:1px solid #bfdbfe;font-size:11.5px;font-weight:750;padding:2px 8px;border-radius:6px">图 3 · 实战演练</span>
+              <span style="font-size:13px;font-weight:700;color:#0f172a">国家级网络安全攻防演练实战防御与阻断</span>
             </div>
             <button type="button" class="vg-opt-single-prompt-btn" style="border:none;background:transparent;color:#4f46e5;font-size:12px;font-weight:700;cursor:pointer">✨ AI优化描述</button>
           </div>
-          <textarea class="ipt vg-graphic-prompt-ipt" rows="3" style="font-size:12.5px;line-height:1.55;background:#ffffff;margin-bottom:8px">繁忙明亮的精品连锁茶饮与轻食出餐吧台，店员将多份热食与饮品稳固装入挺括的定制外卖保温袋中，提手承重饱满不形变，真实商业纪实摄影</textarea>
+          <textarea class="ipt vg-graphic-prompt-ipt" rows="3" style="font-size:12.5px;line-height:1.55;background:#ffffff;margin-bottom:8px">国家级网络攻防演练实战指挥室，安全专家团队实时研判未知APT攻击并一键联动防御阻断，专业严谨的数字化作战场景纪实</textarea>
           <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
             <span style="font-size:11px;color:#64748b">快捷标签：</span>
-            <button type="button" class="chip-mini vg-graphic-ptag-btn" data-ptag="真实餐饮场景" style="font-size:11px;padding:2px 8px;cursor:pointer">+ 真实餐饮场景</button>
-            <button type="button" class="chip-mini vg-graphic-ptag-btn" data-ptag="15KG承重实测" style="font-size:11px;padding:2px 8px;cursor:pointer">+ 15KG承重实测</button>
-            <button type="button" class="chip-mini vg-graphic-ptag-btn" data-ptag="暖调自然光影" style="font-size:11px;padding:2px 8px;cursor:pointer">+ 暖调自然光影</button>
+            <button type="button" class="chip-mini vg-graphic-ptag-btn" data-ptag="实战攻防演练" style="font-size:11px;padding:2px 8px;cursor:pointer">+ 实战攻防演练</button>
+            <button type="button" class="chip-mini vg-graphic-ptag-btn" data-ptag="专家协同研判" style="font-size:11px;padding:2px 8px;cursor:pointer">+ 专家协同研判</button>
+            <button type="button" class="chip-mini vg-graphic-ptag-btn" data-ptag="威胁秒级阻断" style="font-size:11px;padding:2px 8px;cursor:pointer">+ 威胁秒级阻断</button>
           </div>
         </div>
 
@@ -2976,17 +3080,17 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
         <div class="vg-graphic-prompt-card" style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:14px 16px">
           <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
             <div style="display:flex;align-items:center;gap:8px">
-              <span style="background:#ecfdf5;color:#059669;border:1px solid #a7f3d0;font-size:11.5px;font-weight:750;padding:2px 8px;border-radius:6px">图 4 · 工厂背书</span>
-              <span style="font-size:13px;font-weight:700;color:#0f172a">万级净化无尘车间与食品级检测报告</span>
+              <span style="background:#ecfdf5;color:#059669;border:1px solid #a7f3d0;font-size:11.5px;font-weight:750;padding:2px 8px;border-radius:6px">图 4 · 权威背书</span>
+              <span style="font-size:13px;font-weight:700;color:#0f172a">国家级数字安全资质背书与等保2.0合规证书</span>
             </div>
             <button type="button" class="vg-opt-single-prompt-btn" style="border:none;background:transparent;color:#4f46e5;font-size:12px;font-weight:700;cursor:pointer">✨ AI优化描述</button>
           </div>
-          <textarea class="ipt vg-graphic-prompt-ipt" rows="3" style="font-size:12.5px;line-height:1.55;background:#ffffff;margin-bottom:8px">现代化无尘包装印刷生产基地广角实拍，全自动高速超声波制袋生产线整齐运转，搭配国家食品接触级安全检测合格证书背书，展现源头大厂实力</textarea>
+          <textarea class="ipt vg-graphic-prompt-ipt" rows="3" style="font-size:12.5px;line-height:1.55;background:#ffffff;margin-bottom:8px">权威数字安全国家队资质与等保2.0三级合规认证证书阵列，金属质感印章与权威检测报告特写，彰显360安全科技企业级实力背书</textarea>
           <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
             <span style="font-size:11px;color:#64748b">快捷标签：</span>
-            <button type="button" class="chip-mini vg-graphic-ptag-btn" data-ptag="无尘车间广角" style="font-size:11px;padding:2px 8px;cursor:pointer">+ 无尘车间广角</button>
-            <button type="button" class="chip-mini vg-graphic-ptag-btn" data-ptag="权威检测证书" style="font-size:11px;padding:2px 8px;cursor:pointer">+ 权威检测证书</button>
-            <button type="button" class="chip-mini vg-graphic-ptag-btn" data-ptag="源头工厂实拍" style="font-size:11px;padding:2px 8px;cursor:pointer">+ 源头工厂实拍</button>
+            <button type="button" class="chip-mini vg-graphic-ptag-btn" data-ptag="国家级安全资质" style="font-size:11px;padding:2px 8px;cursor:pointer">+ 国家级安全资质</button>
+            <button type="button" class="chip-mini vg-graphic-ptag-btn" data-ptag="等保2.0证书" style="font-size:11px;padding:2px 8px;cursor:pointer">+ 等保2.0证书</button>
+            <button type="button" class="chip-mini vg-graphic-ptag-btn" data-ptag="权威机构背书" style="font-size:11px;padding:2px 8px;cursor:pointer">+ 权威机构背书</button>
           </div>
         </div>
       </div>
@@ -3000,19 +3104,19 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
         <div class="vg-gallery-grid" id="vgGraphicGalleryGrid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px">
           <div class="vg-gallery-item" style="border-radius:10px;overflow:hidden;border:1px solid #cbd5e1;background:#fff">
             <img referrerPolicy="no-referrer" alt="图1封面主图" src="${socScreenImg}" style="width:100%;height:160px;object-fit:cover" />
-            <div style="padding:8px 10px;font-size:12px;font-weight:700;color:#334155">图1 · 封面主图 (品牌定制特写)</div>
+            <div style="padding:8px 10px;font-size:12px;font-weight:700;color:#334155">图1 · 封面主图 (360安全运营SOC大屏)</div>
           </div>
           <div class="vg-gallery-item" style="border-radius:10px;overflow:hidden;border:1px solid #cbd5e1;background:#fff">
             <img referrerPolicy="no-referrer" alt="图2材质工艺" src="${endpointDefenseImg}" style="width:100%;height:160px;object-fit:cover" />
-            <div style="padding:8px 10px;font-size:12px;font-weight:700;color:#334155">图2 · 材质工艺 (覆铝箔锁温内胆)</div>
+            <div style="padding:8px 10px;font-size:12px;font-weight:700;color:#334155">图2 · 核心防护 (天擎终端防御与EDR)</div>
           </div>
           <div class="vg-gallery-item" style="border-radius:10px;overflow:hidden;border:1px solid #cbd5e1;background:#fff">
             <img referrerPolicy="no-referrer" alt="图3场景实测" src="${complianceBadgeImg}" style="width:100%;height:160px;object-fit:cover" />
-            <div style="padding:8px 10px;font-size:12px;font-weight:700;color:#334155">图3 · 场景实测 (15KG承重防漏)</div>
+            <div style="padding:8px 10px;font-size:12px;font-weight:700;color:#334155">图3 · 实战演练 (攻防演练防御阻断)</div>
           </div>
           <div class="vg-gallery-item" style="border-radius:10px;overflow:hidden;border:1px solid #cbd5e1;background:#fff">
             <img referrerPolicy="no-referrer" alt="图4工厂背书" src="${enterpriseCertImg}" style="width:100%;height:160px;object-fit:cover" />
-            <div style="padding:8px 10px;font-size:12px;font-weight:700;color:#334155">图4 · 工厂背书 (无尘车间与认证)</div>
+            <div style="padding:8px 10px;font-size:12px;font-weight:700;color:#334155">图4 · 权威背书 (国家级数字安全资质认证)</div>
           </div>
         </div>
       </div>
@@ -3053,8 +3157,7 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
 <tr data-title="360天擎集中管控平台部署周期多长？从测试打样到全网推行排期指南"><td class="article-title">360天擎集中管控平台部署周期多长？从测试打样到全网推行排期指南</td><td><span class="article-type-pill">采购指南类</span></td><td><span class="article-publish-none">未发布</span></td><td>2026-07-17 17:38:05</td><td>—</td><td><div class="article-actions"><button class="article-link article-view">查看</button></div></td></tr>
 <tr data-title="360安全大模型与传统杀毒引擎区别：AI自动化告警研判评测"><td class="article-title">360安全大模型与传统杀毒引擎区别：AI自动化告警研判评测</td><td><span class="article-type-pill">评测·基准类</span></td><td><span class="article-publish-none">未发布</span></td><td>2026-07-17 17:38:05</td><td>—</td><td><div class="article-actions"><button class="article-link article-view">查看</button></div></td></tr>
 <tr data-title="金融机构核心业务系统防勒索：微隔离与底层只读诱捕怎么选"><td class="article-title">金融机构核心业务系统防勒索：微隔离与底层只读诱捕怎么选</td><td><span class="article-type-pill">场景解决方案</span></td><td><span class="article-publish-none">未发布</span></td><td>2026-07-17 17:37:32</td><td>—</td><td><div class="article-actions"><button class="article-link article-view">查看</button></div></td></tr>
-<tr data-title="食品级无纺布袋检测报告怎么读 采购方核验要点"><td class="article-title">国家等级保护安全产品认证证书怎么读：企业采购合规要点</td><td><span class="article-type-pill">行业问答类</span></td><td><span class="article-publish-done">知乎</span></td><td>2026-07-16 14:12:20</td><td>2026-07-16 15:08:00</td><td><div class="article-actions"><button class="article-link article-view">查看</button></div></td></tr>
-<tr data-title="2026年数字安全防护选型：五家主流网络安全厂商技术参数对照"><td class="article-title">2026年数字安全防护选型：五家主流网络安全厂商技术参数对照</td><td><span class="article-type-pill">排行·盘点类</span></td><td><span class="article-publish-done">头条号</span></td><td>2026-07-02 09:48:10</td><td>2026-07-02 10:24:00</td><td><div class="article-actions"><button class="article-link article-view">查看</button></div></td></tr><tr data-title="食品级无纺布袋检测报告解读"><td class="article-title">食品级无纺布袋检测报告解读</td><td><span class="article-type-pill">行业问答类</span></td><td><span class="article-publish-done">知乎</span></td><td>2026-07-04 14:36:18</td><td>2026-07-04 15:08:00</td><td><div class="article-actions"><button class="article-link article-view">查看</button></div></td></tr><tr data-title="外卖袋一般用什么材质"><td class="article-title">外卖袋一般用什么材质</td><td><span class="article-type-pill">知识科普类</span></td><td><span class="article-publish-done">客户产品官网</span></td><td>2026-07-08 09:10:32</td><td>2026-07-08 09:41:00</td><td><div class="article-actions"><button class="article-link article-view">查看</button></div></td></tr><tr data-title="奶茶保温袋保温层工艺对照"><td class="article-title">奶茶保温袋保温层工艺对照</td><td><span class="article-type-pill">评测·基准类</span></td><td><span class="article-publish-done">百家号</span></td><td>2026-07-12 11:20:14</td><td>2026-07-12 11:56:00</td><td><div class="article-actions"><button class="article-link article-view">查看</button></div></td></tr><tr data-title="无纺布卷材克重公差实测"><td class="article-title">无纺布卷材克重公差实测</td><td><span class="article-type-pill">评测·基准类</span></td><td><span class="article-publish-done">B2B联盟站群</span></td><td>2026-07-13 13:58:26</td><td>2026-07-13 14:30:00</td><td><div class="article-actions"><button class="article-link article-view">查看</button></div></td></tr></tbody></table><div class="article-empty" id="autoArticleEmpty">没有匹配当前关键词的自动化文章</div></div>
+<tr data-title="国家等级保护安全产品认证证书怎么读：企业采购合规要点"><td class="article-title">国家等级保护安全产品认证证书怎么读：企业采购合规要点</td><td><span class="article-type-pill">行业问答类</span></td><td><span class="article-publish-done">知乎</span></td><td>2026-07-16 14:12:20</td><td>2026-07-16 15:08:00</td><td><div class="article-actions"><button class="article-link article-view">查看</button></div></td></tr><tr data-title="2026年数字安全防护选型：五家主流网络安全厂商技术参数对照"><td class="article-title">2026年数字安全防护选型：五家主流网络安全厂商技术参数对照</td><td><span class="article-type-pill">排行·盘点类</span></td><td><span class="article-publish-done">头条号</span></td><td>2026-07-02 09:48:10</td><td>2026-07-02 10:24:00</td><td><div class="article-actions"><button class="article-link article-view">查看</button></div></td></tr><tr data-title="360天擎企业终端安全客户端安装与合规基线检查标准"><td class="article-title">360天擎企业终端安全客户端安装与合规基线检查标准</td><td><span class="article-type-pill">行业问答类</span></td><td><span class="article-publish-done">知乎</span></td><td>2026-07-04 14:36:18</td><td>2026-07-04 15:08:00</td><td><div class="article-actions"><button class="article-link article-view">查看</button></div></td></tr><tr data-title="360安全卫士极速版与企业版核心安全能力对比实测"><td class="article-title">360安全卫士极速版与企业版核心安全能力对比实测</td><td><span class="article-type-pill">知识科普类</span></td><td><span class="article-publish-done">客户产品官网</span></td><td>2026-07-08 09:10:32</td><td>2026-07-08 09:41:00</td><td><div class="article-actions"><button class="article-link article-view">查看</button></div></td></tr><tr data-title="企业防勒索病毒实战指南：如何构建终端与核心数据双重防御体系"><td class="article-title">企业防勒索病毒实战指南：如何构建终端与核心数据双重防御体系</td><td><span class="article-type-pill">评测·基准类</span></td><td><span class="article-publish-done">百家号</span></td><td>2026-07-12 11:20:14</td><td>2026-07-12 11:56:00</td><td><div class="article-actions"><button class="article-link article-view">查看</button></div></td></tr><tr data-title="360安全大脑APT威胁检测与实战化攻防溯源深度解析"><td class="article-title">360安全大脑APT威胁检测与实战化攻防溯源深度解析</td><td><span class="article-type-pill">评测·基准类</span></td><td><span class="article-publish-done">B2B联盟站群</span></td><td>2026-07-13 13:58:26</td><td>2026-07-13 14:30:00</td><td><div class="article-actions"><button class="article-link article-view">查看</button></div></td></tr></tbody></table><div class="article-empty" id="autoArticleEmpty">没有匹配当前关键词的自动化文章</div></div>
 <div class="article-pagination"><span>共 941 条</span><select class="page-select"><option>10条/页</option><option>20条/页</option><option>50条/页</option></select><button class="page-num" disabled="">‹</button><button class="page-num on">1</button><button class="page-num">2</button><button class="page-num">3</button><button class="page-num">4</button><button class="page-num">5</button><button class="page-num">6</button><span class="page-ellipsis">…</span><button class="page-num">95</button><button class="page-num">›</button><span>前往</span><input class="ipt" style="width:54px;padding:5px 7px;text-align:center" value="1"/><span>页</span></div>
 </div>
 <div class="article-table-panel" data-article-panel="uploaded">
@@ -3064,7 +3167,7 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
 <tr data-title="ISO9001质量管理体系资质解读"><td class="article-title">ISO9001 质量管理体系资质解读</td><td><span class="article-type-pill">人工上传</span></td><td><span class="article-publish-none">未发布</span></td><td>2026-07-12 11:30:48</td><td>—</td><td><div class="article-actions"><button class="article-link article-view">查看</button></div></td></tr>
 <tr data-title="大型央国企数字安全态势感知平台建设案例与交付说明"><td class="article-title">大型央国企数字安全态势感知平台建设案例与交付说明</td><td><span class="article-type-pill">人工上传</span></td><td><span class="article-publish-none">未发布</span></td><td>2026-07-11 10:18:03</td><td>—</td><td><div class="article-actions"><button class="article-link article-view">查看</button></div></td></tr>
 <tr data-title="360安全实验室国际权威安全测评认证报告说明"><td class="article-title">360安全实验室国际权威安全测评认证报告说明</td><td><span class="article-type-pill">人工上传</span></td><td><span class="article-publish-done">百家号</span></td><td>2026-07-09 15:46:32</td><td>2026-07-09 16:20:00</td><td><div class="article-actions"><button class="article-link article-view">查看</button></div></td></tr>
-<tr data-title="无纺布袋常见采购问题FAQ"><td class="article-title">企业终端安全管理系统常见部署问题 FAQ</td><td><span class="article-type-pill">人工上传</span></td><td><span class="article-publish-none">未发布</span></td><td>2026-07-08 13:12:51</td><td>—</td><td><div class="article-actions"><button class="article-link article-view">查看</button></div></td></tr>
+<tr data-title="企业终端安全管理系统常见部署问题 FAQ"><td class="article-title">企业终端安全管理系统常见部署问题 FAQ</td><td><span class="article-type-pill">人工上传</span></td><td><span class="article-publish-none">未发布</span></td><td>2026-07-08 13:12:51</td><td>—</td><td><div class="article-actions"><button class="article-link article-view">查看</button></div></td></tr>
 </tbody></table><div class="article-empty" id="uploadedArticleEmpty">没有匹配当前关键词的上传文章</div></div>
 <div class="article-pagination"><span>共 <b id="uploadedTotal">6</b> 条</span><select class="page-select"><option>10条/页</option></select><button class="page-num" disabled="">‹</button><button class="page-num on">1</button><button class="page-num" disabled="">›</button></div>
 </div>
@@ -3184,12 +3287,12 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
 <div class="media-library-panel" data-library-panel="b2b"><div class="media-library-search" data-media-search="b2b"><input class="ipt media-library-search-input" placeholder="搜索联盟名称" type="text"/><button class="btn media-library-search-query" type="button">查询</button><button class="btn o media-library-search-reset" type="button">重置</button></div>
 <div class="library-banner"><div><div class="library-banner-title">B2B 联盟</div><div class="library-banner-sub">面向产业链、供应链和垂直采购场景的联盟站群，适合厂家、供应商、采购参数和解决方案类内容。</div></div><div class="library-banner-stat"><span class="library-stat">联盟站 4,000+</span><span class="library-stat">垂直行业 180+</span><span class="library-stat">批量分发</span></div></div>
 <div class="card pub-resource-card"><div class="pub-resource-head"><div><div class="ct" style="margin:0">B2B 联盟资源</div><div class="cs" style="margin:2px 0 0">按产业链主题进行站群分发，增强细分行业与采购意图场景的内容覆盖</div></div><div class="pub-resource-meta">推荐联盟 <b>6</b> 个</div></div><div class="pub-resource-table-wrap"><table class="pub-resource-table library-alt-table"><colgroup><col style="width:14%"/><col style="width:27%"/><col style="width:16%"/><col style="width:15%"/><col style="width:12%"/><col style="width:9%"/><col style="width:7%"/></colgroup><thead><tr><th>行业</th><th>联盟名称</th><th>媒体属性</th><th>覆盖站点</th><th>预计收录</th><th>价格</th><th>操作</th></tr></thead><tbody>
-<tr><td>包装制造</td><td><div class="media-cell"><span class="media-rec">荐</span><span class="media-name">包装产业 B2B 联盟</span></div></td><td><span class="library-type-badge b2b">B2B联盟</span></td><td>86 个行业站</td><td>3–7 天</td><td><span class="price-num alt-price"></span><span class="price-unit">元</span></td><td><button class="pub-submit">投稿</button></td></tr>
-<tr><td>餐饮供应链</td><td><div class="media-cell"><span class="media-rec">荐</span><span class="media-name">餐饮供应链内容联盟</span></div></td><td><span class="library-type-badge b2b">B2B联盟</span></td><td>64 个行业站</td><td>4–8 天</td><td><span class="price-num alt-price"></span><span class="price-unit">元</span></td><td><button class="pub-submit">投稿</button></td></tr>
-<tr><td>食品工业</td><td><div class="media-cell"><span class="media-rec">荐</span><span class="media-name">食品工业采购联盟</span></div></td><td><span class="library-type-badge b2b">B2B联盟</span></td><td>72 个行业站</td><td>3–6 天</td><td><span class="price-num alt-price"></span><span class="price-unit">元</span></td><td><button class="pub-submit">投稿</button></td></tr>
-<tr><td>快消品</td><td><div class="media-cell"><span class="media-rec">荐</span><span class="media-name">快消品供应商联盟</span></div></td><td><span class="library-type-badge b2b">B2B联盟</span></td><td>58 个行业站</td><td>5–9 天</td><td><span class="price-num alt-price"></span><span class="price-unit">元</span></td><td><button class="pub-submit">投稿</button></td></tr>
-<tr><td>印刷包装</td><td><div class="media-cell"><span class="media-rec">荐</span><span class="media-name">印刷包装产业站群</span></div></td><td><span class="library-type-badge b2b">B2B联盟</span></td><td>93 个行业站</td><td>3–7 天</td><td><span class="price-num alt-price"></span><span class="price-unit">元</span></td><td><button class="pub-submit">投稿</button></td></tr>
-<tr><td>综合制造</td><td><div class="media-cell"><span class="media-rec">荐</span><span class="media-name">中国制造供应链联盟</span></div></td><td><span class="library-type-badge b2b">B2B联盟</span></td><td>120 个行业站</td><td>4–10 天</td><td><span class="price-num alt-price"></span><span class="price-unit">元</span></td><td><button class="pub-submit">投稿</button></td></tr>
+<tr><td>网络安全</td><td><div class="media-cell"><span class="media-rec">荐</span><span class="media-name">国家网络安全产业 B2B 联盟</span></div></td><td><span class="library-type-badge b2b">B2B联盟</span></td><td>86 个行业站</td><td>3–7 天</td><td><span class="price-num alt-price"></span><span class="price-unit">元</span></td><td><button class="pub-submit">投稿</button></td></tr>
+<tr><td>政企信息化</td><td><div class="media-cell"><span class="media-rec">荐</span><span class="media-name">政企数字化与等保测评站群</span></div></td><td><span class="library-type-badge b2b">B2B联盟</span></td><td>64 个行业站</td><td>4–8 天</td><td><span class="price-num alt-price"></span><span class="price-unit">元</span></td><td><button class="pub-submit">投稿</button></td></tr>
+<tr><td>信创安全</td><td><div class="media-cell"><span class="media-rec">荐</span><span class="media-name">国产信创软件与终端安全联盟</span></div></td><td><span class="library-type-badge b2b">B2B联盟</span></td><td>72 个行业站</td><td>3–6 天</td><td><span class="price-num alt-price"></span><span class="price-unit">元</span></td><td><button class="pub-submit">投稿</button></td></tr>
+<tr><td>金融科技</td><td><div class="media-cell"><span class="media-rec">荐</span><span class="media-name">金融数字安全与风控联盟</span></div></td><td><span class="library-type-badge b2b">B2B联盟</span></td><td>58 个行业站</td><td>5–9 天</td><td><span class="price-num alt-price"></span><span class="price-unit">元</span></td><td><button class="pub-submit">投稿</button></td></tr>
+<tr><td>云安全</td><td><div class="media-cell"><span class="media-rec">荐</span><span class="media-name">云原生安全与大模型协同站群</span></div></td><td><span class="library-type-badge b2b">B2B联盟</span></td><td>93 个行业站</td><td>3–7 天</td><td><span class="price-num alt-price"></span><span class="price-unit">元</span></td><td><button class="pub-submit">投稿</button></td></tr>
+<tr><td>工业互联</td><td><div class="media-cell"><span class="media-rec">荐</span><span class="media-name">工业互联网安全与工控防护联盟</span></div></td><td><span class="library-type-badge b2b">B2B联盟</span></td><td>120 个行业站</td><td>4–10 天</td><td><span class="price-num alt-price"></span><span class="price-unit">元</span></td><td><button class="pub-submit">投稿</button></td></tr>
 </tbody></table></div></div>
 </div>
 </div>
@@ -3545,8 +3648,8 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
     <div class="card" style="padding:20px;border-radius:14px;background:#ffffff;border:1px solid var(--line);box-shadow:var(--shadow-sm)">
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px">
         <div>
-          <h3 style="font-size:16px;font-weight:750;color:var(--text);margin:0 0 4px">B2B 垂直电商与工业采购联盟</h3>
-          <p style="font-size:12.5px;color:var(--muted);margin:0">深度覆盖工业品、定制包装、原材料等 B2B 决策搜索场景，长尾询价关键词专属收录源</p>
+          <h3 style="font-size:16px;font-weight:750;color:var(--text);margin:0 0 4px">B2B 垂直电商与政企软件采购联盟</h3>
+          <p style="font-size:12.5px;color:var(--muted);margin:0">深度覆盖数字安全、信创采购、企业IT软件等 B2B 决策搜索场景，长尾询价与选型方案专属收录源</p>
         </div>
         <span class="pill y">B2B 精准询盘</span>
       </div>
@@ -3564,9 +3667,9 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
             </tr>
           </thead>
           <tbody>
-            <tr><td style="text-align:center">1</td><td><b>慧聪网工业品商铺</b></td><td>工业包装 / 机械</td><td><span class="pill y">98% 匹配</span></td><td>已收录</td><td><span class="status-pill authed">已同步</span></td><td style="text-align:right"><button class="btn o" style="padding:3px 10px;font-size:12px" onclick="showToast('正在同步更新商机产品目录')">立即同步</button></td></tr>
-            <tr><td style="text-align:center">2</td><td><b>中国供应商 (高信誉企业库)</b></td><td>制造业综合</td><td><span class="pill y">95% 匹配</span></td><td>已收录</td><td><span class="status-pill authed">已同步</span></td><td style="text-align:right"><button class="btn o" style="padding:3px 10px;font-size:12px" onclick="showToast('正在同步更新商机产品目录')">立即同步</button></td></tr>
-            <tr><td style="text-align:center">3</td><td><b>马可波罗采购黄页</b></td><td>定制五金塑料</td><td><span class="pill y">92% 匹配</span></td><td>已收录</td><td><span class="status-pill authed">已同步</span></td><td style="text-align:right"><button class="btn o" style="padding:3px 10px;font-size:12px" onclick="showToast('正在同步更新商机产品目录')">立即同步</button></td></tr>
+            <tr><td style="text-align:center">1</td><td><b>慧聪网企业IT与安防专区</b></td><td>网络安全 / 企业数字化</td><td><span class="pill y">98% 匹配</span></td><td>已收录</td><td><span class="status-pill authed">已同步</span></td><td style="text-align:right"><button class="btn o" style="padding:3px 10px;font-size:12px" onclick="showToast('正在同步更新商机产品目录')">立即同步</button></td></tr>
+            <tr><td style="text-align:center">2</td><td><b>中国供应商 (高信誉企业库)</b></td><td>数字安全 / 软件服务</td><td><span class="pill y">95% 匹配</span></td><td>已收录</td><td><span class="status-pill authed">已同步</span></td><td style="text-align:right"><button class="btn o" style="padding:3px 10px;font-size:12px" onclick="showToast('正在同步更新商机产品目录')">立即同步</button></td></tr>
+            <tr><td style="text-align:center">3</td><td><b>马可波罗政企数字化采购网</b></td><td>政企安全软件 / 算力服务</td><td><span class="pill y">92% 匹配</span></td><td>已收录</td><td><span class="status-pill authed">已同步</span></td><td style="text-align:right"><button class="btn o" style="padding:3px 10px;font-size:12px" onclick="showToast('正在同步更新商机产品目录')">立即同步</button></td></tr>
           </tbody>
         </table>
       </div>
@@ -4569,8 +4672,8 @@ const d=`<aside id="appSidebar"><div class="logo"><div style="width:34px;height:
       </div>
     </div>
   </div>
-</div>`;function f(){if(!window.__appInitialized){window.__appInitialized=!0;try{let e={dash:[`首页概览`,`全网AI搜索场景覆盖与GEO增长数据总览`],inc:[`收录查询`,`精准检测文章在各大AI大模型的收录状态与信源偏好`],kb:[`企业知识库`,`维护企业事实、资质、案例与问答知识源，筑牢 AI 搜索可见性与首推引用依据`],material:[`素材库`,`上传本地图片素材，用于文章配图等场景。素材库总量：100.00GB，当前剩余容量99.97GB，已使用31.0MB。(含创作历史图文/视频容量)`],persona:[`人群画像`,`从核心产品反推人群特征、搜索场景与采购决策考量`],kw:[`关键词挖掘`,`基于知识库与语义Agent智能挖掘长尾词与高潜搜索词条`],gen:[`内容创作与用户需求画像建模`,`填写或选择下方「核心关键词 + 长尾关键词」，点击右侧绿色 AI Agent 图标即可智能反推「用户画像 → 搜索场景 → 用户痛点」，并在当前页面直接生成标准 3000 字深度长文。`],videographic:[`视频/图文`,`多模态AI短视频与新媒体图文内容生成中心`],articles:[`发布记录`,`统一沉淀全量自动化生成文章与人工上传文档`],pub:[`文章发布`,`选择私人媒体库或权威矩阵媒体一键分发投稿`],agent:[`我的套餐`,`企业服务套餐余量、功能配额明细与账户余额充值`]};
-window.__geoSwitchPage=function(t){if(!t)return;let n=document.getElementById(t);if(!n)return;document.querySelectorAll(`.page`).forEach(e=>e.classList.remove(`on`)),n.classList.add(`on`),document.querySelectorAll(`.nav a`).forEach(e=>{let isCurr=e.dataset.p===t;e.classList.toggle(`on`,isCurr),e.setAttribute(`aria-current`,isCurr?`page`:`false`)});let r=e[t]||[`360智见GEO`,`企业AI搜索可见性优化平台`],i=document.getElementById(`headerKicker`),a=document.getElementById(`ht`),o=document.getElementById(`headerSubtitle`);i&&(i.textContent=[`dash`,`inc`].includes(t)?`监测与分析`:t===`material`?`设置`:[`agent`].includes(t)?`服务与账户`:`GEO 内容增长`,i.style.display=t===`gen`?`none`:``),a&&(a.textContent=r[0]),o&&(o.textContent=r[1]),location.hash.slice(1)!==t&&history.replaceState(null,``,`#`+t),window.scrollTo({top:0,behavior:`instant`})};
+</div>`;function f(){if(!window.__appInitialized){window.__appInitialized=!0;try{let e={dash:[`首页概览`,`全网AI搜索场景覆盖与GEO增长数据总览`],inc:[`收录查询`,`精准检测文章在各大AI大模型的收录状态与信源偏好`],kb:[`企业知识库`,`维护企业事实、资质、案例与问答知识源，筑牢 AI 搜索可见性与首推引用依据`],material:[`企业素材库`,`上传本地图片素材，用于文章配图等场景。企业素材库总量：100.00GB，当前剩余容量99.97GB，已使用31.0MB。(含创作历史图文/视频容量)`],persona:[`人群画像`,`从核心产品反推人群特征、搜索场景与采购决策考量`],kw:[`关键词挖掘`,`基于知识库与语义Agent智能挖掘长尾词与高潜搜索词条`],gen:[`内容创作与用户需求画像建模`,`填写或选择下方「核心关键词 + 长尾关键词」，点击右侧绿色 AI Agent 图标即可智能反推「用户画像 → 搜索场景 → 用户痛点」，并在当前页面直接生成标准 3000 字深度长文。`],videographic:[`视频/图文`,`多模态AI短视频与新媒体图文内容生成中心`],articles:[`发布记录`,`统一沉淀全量自动化生成文章与人工上传文档`],pub:[`文章发布`,`选择私人媒体库或权威矩阵媒体一键分发投稿`],agent:[`我的套餐`,`企业服务套餐余量、功能配额明细与账户余额充值`]};
+window.__geoSwitchPage=function(t){if(!t)return;let n=document.getElementById(t);if(!n)return;document.querySelectorAll(`.page`).forEach(e=>e.classList.remove(`on`)),n.classList.add(`on`),document.querySelectorAll(`.nav a`).forEach(e=>{let isCurr=e.dataset.p===t;e.classList.toggle(`on`,isCurr),e.setAttribute(`aria-current`,isCurr?`page`:`false`)});let r=e[t]||[`360智见GEO`,`企业AI搜索可见性优化平台`],i=document.getElementById(`headerKicker`),a=document.getElementById(`ht`),o=document.getElementById(`headerSubtitle`);i&&(i.textContent=[`dash`,`inc`].includes(t)?`监测与分析`:[`agent`].includes(t)?`服务与账户`:`GEO 内容增长`,i.style.display=t===`gen`?`none`:``),a&&(a.textContent=r[0]),o&&(o.textContent=r[1]),location.hash.slice(1)!==t&&history.replaceState(null,``,`#`+t),window.scrollTo({top:0,behavior:`instant`})};
 
 (window as any).__switchVgMode = function(mode: string) {
   const vidPanel = document.getElementById("vgVideoPanel");
@@ -4711,7 +4814,7 @@ document.addEventListener("click", e => {
 
 document.querySelectorAll(`.nav a[data-p]`).forEach(e=>{e.onclick=t=>{t.preventDefault(),window.__geoSwitchPage(e.dataset.p)}}),document.querySelectorAll(`.chip`).forEach(e=>e.onclick=()=>{if(e.parentNode.dataset.multi){e.classList.toggle(`on`);return}[...e.parentNode.children].forEach(e=>e.classList.remove(`on`)),e.classList.add(`on`)}),document.querySelectorAll(`table`).forEach(e=>{if(e.parentElement.classList.contains(`table-scroll`))return;let t=document.createElement(`div`);t.className=`table-scroll`,(e.rows[0]?e.rows[0].cells.length:0)>=7&&t.classList.add(`wide`),e.parentNode.insertBefore(t,e),t.appendChild(e)});let t=document.querySelector(`.toast`)||(()=>{let e=document.createElement(`div`);return e.className=`toast`,document.body.appendChild(e),e})(),n;function r(e){t.textContent=e,t.classList.add(`show`),clearTimeout(n),n=setTimeout(()=>t.classList.remove(`show`),1800)}window.showToast=r;document.querySelectorAll(`.geo-step[data-jump]`).forEach(e=>e.onclick=()=>{let t=e.dataset.jump,n=document.querySelector(`.nav a[data-p="`+t+`"]`);n&&n.click()});let i=document.getElementById(`enterpriseName`),a=document.getElementById(`creditCode`),o=document.getElementById(`industryName`),s=document.getElementById(`businessAddress`),c=document.getElementById(`companyContact`),l=document.getElementById(`companyContactPhone`),u=document.getElementById(`companyContactEmail`),d=document.getElementById(`companyCompletion`),f=document.getElementById(`slotC`),p=document.getElementById(`licenseFileInput`),m=document.getElementById(`licenseFileName`),h=!0,g=!0;function _(){let e=[i,a,o,s,c,l,u].every(e=>e&&e.value.trim()),t=/^[0-9+()\-\s]{6,24}$/.test(l.value.trim()),n=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(u.value.trim());return e&&t&&n&&h}function v(){let e=_();return d.textContent=e?`● 已完成主体认证`:`● 基本信息待完善`,d.style.color=e?`#12835a`:`#a86b10`,d.style.background=e?`#e9f8f1`:`#fff5e3`,d.style.borderColor=e?`#d4eedf`:`#f4ddaf`,f&&(f.value=i.value.trim()),e}[i,a,o,s,c,l,u].forEach(e=>e&&e.addEventListener(`input`,()=>{g=!1,v(),d.textContent=`● 基本信息待保存`,d.style.color=`#a86b10`,d.style.background=`#fff5e3`,d.style.borderColor=`#f4ddaf`})),document.getElementById(`saveCompanyInfo`).onclick=()=>{if(!v()){r(`请补全企业信息、联系人电话/邮箱与营业执照`);return}g=!0,v(),r(`企业基本信息已保存，并同步到内容创作`)},document.getElementById(`licenseUploadBtn`).onclick=()=>p.click(),p.onchange=()=>{let e=p.files&&p.files[0];e&&(m.textContent=e.name,h=!0,g=!1,v(),d.textContent=`● 基本信息待保存`,d.style.color=`#a86b10`,d.style.background=`#fff5e3`,d.style.borderColor=`#f4ddaf`,r(`营业执照已更新，请保存基本信息`))};let y=document.getElementById(`kbUploadModal`),b=document.getElementById(`kbFileInput`),x=document.getElementById(`kbTable`),S=document.getElementById(`kbDocType`),C=document.getElementById(`kbModalTitle`),w=null;function T(){y.classList.remove(`show`),w=null}function ee(e){if(!v()||!g){r(`请先完善并保存企业基本信息`),document.querySelector(`.nav a[data-p="kb"]`)?.click();return}w=e||null,b.value=``,S.value=e?e.querySelector(`.doc-type`).textContent.trim():``,C.textContent=e?`替换知识库文档`:`上传企业文档`,y.classList.add(`show`)}function E(e){e.querySelector(`.kb-replace`).onclick=()=>ee(e),e.querySelector(`.kb-delete`).onclick=()=>{let t=e.querySelector(`.doc-name`).textContent.trim();(typeof window.confirm===`function`?window.confirm(`确认删除「`+t+`」？`):!0)&&(e.remove(),r(`文档已删除`))}}document.getElementById(`kbUploadTop`).onclick=()=>ee(null),document.querySelectorAll(`#kbTable tr`).forEach((e,t)=>{t>0&&E(e)}),document.getElementById(`kbModalClose`).onclick=T,document.getElementById(`kbModalCancel`).onclick=T,y.addEventListener(`click`,e=>{e.target===y&&T()}),document.addEventListener(`keydown`,e=>{e.key===`Escape`&&y.classList.contains(`show`)&&T()}),document.getElementById(`kbModalConfirm`).onclick=()=>{let e=b.files&&b.files[0],t=S.value;if(!t){r(`请选择文件类型`),S.focus();return}if(!e){r(`请选择要上传的文档`),b.focus();return}if(w)w.querySelector(`.doc-name`).textContent=e.name,w.querySelector(`.doc-type`).textContent=t,r(`文档已替换并重新进入知识库处理`);else{let n=x.insertRow(-1);n.innerHTML=`<td class="doc-name"></td><td class="doc-type"></td><td><div class="op-actions"><button class="action-btn kb-replace"><span class="action-icon">↥</span>上传</button><button class="action-btn danger kb-delete"><span class="action-icon">⌫</span>删除</button></div></td>`,n.querySelector(`.doc-name`).textContent=e.name,n.querySelector(`.doc-type`).textContent=t,E(n),r(`文档已加入企业知识库`)}T()};let te=document.getElementById(`keywordEntities`),D=document.getElementById(`personaCoreKeywordSelect`),ne=document.getElementById(`personaLongTailSelect`),O=document.getElementById(`coreKeywordSelect`),re=document.getElementById(`longTailSelect`);function ie(){return[...new Set((te?.value||``).split(/\n+/).map(e=>e.trim()).filter(Boolean))]}window.getEntities=ie;function ae(){let e=ie(),t=document.getElementById(`entityCountPill`);if(t&&(t.textContent=e.length+` 个核心实体`),O){let t=O.value;O.innerHTML=``,e.forEach(e=>{let t=document.createElement(`option`);t.value=t.textContent=e,O.appendChild(t)}),e.includes(t)&&(O.value=t)}if(D){let t=D.value;D.innerHTML=``,e.forEach(e=>{let t=document.createElement(`option`);t.value=t.textContent=e,D.appendChild(t)}),e.includes(t)&&(D.value=t)}let n=document.getElementById(`kwEntityFilter`);if(n){let t=n.value;n.innerHTML=`<option value="">全部核心实体</option>`,e.forEach(e=>{let t=document.createElement(`option`);t.value=t.textContent=e,n.appendChild(t)}),e.includes(t)&&(n.value=t)}k()}function k(){let e=O?.value||D?.value||``,t=[...document.querySelectorAll(`#longTailTable tr`)].slice(1).filter(t=>t.cells[1]&&t.cells[1].textContent.trim()===e).map(e=>e.cells[0]?.textContent.trim()).filter(Boolean);if(re){if(re.innerHTML=``,t.length)t.forEach(e=>{let t=document.createElement(`option`);t.value=t.textContent=e,re.appendChild(t)});else{let e=document.createElement(`option`);e.textContent=`暂无匹配长尾词`,e.disabled=!0,e.selected=!0,re.appendChild(e)}}if(ne){if(ne.innerHTML=``,t.length)t.forEach(e=>{let t=document.createElement(`option`);t.value=t.textContent=e,ne.appendChild(t)});else{let e=document.createElement(`option`);e.textContent=`暂无匹配长尾词`,e.disabled=!0,e.selected=!0,ne.appendChild(e)}}}window.syncLongTails=k;te?.addEventListener(`input`,()=>{document.getElementById(`persona`)?.classList.remove(`agent-generated`),ae(),typeof applyKwFilters==`function`&&applyKwFilters()}),O?.addEventListener(`change`,()=>{D&&(D.value=O.value),k(),typeof updateGenerationSummary==`function`&&updateGenerationSummary()}),D?.addEventListener(`change`,()=>{O&&(O.value=D.value),k(),typeof updateGenerationSummary==`function`&&updateGenerationSummary()}),ae(),v();let oe=document.getElementById(`personaAgentBtn`),se=document.getElementById(`persona`);oe&&(oe.onclick=()=>{oe.classList.add(`running`),oe.setAttribute(`aria-busy`,`true`),setTimeout(()=>{se?.classList.add(`agent-generated`),oe.classList.remove(`running`),oe.removeAttribute(`aria-busy`),r(`人群画像 Agent 已完成分析`)},650)});let ce=document.getElementById(`prefixSuffixAgent`);ce&&(ce.onclick=()=>{if(!ie().length){r(`请先填写至少一个核心实体`);return}ce.classList.add(`running`),ce.setAttribute(`aria-busy`,`true`);let e=document.getElementById(`agentLastRun`);e&&(e.textContent=`Agent 挖掘中…`),setTimeout(()=>{ce.classList.remove(`running`),ce.removeAttribute(`aria-busy`),e&&(e.textContent=`刚刚已挖掘`),r(`长尾词挖掘 Agent 已完成智能拓词与质检`)},700)});let le=document.getElementById(`mediaLibraryTabs`);le&&(le.addEventListener(`click`,e=>{let t=e.target.closest(`.media-library-tab`);if(!t)return;let n=t.dataset.library;le.querySelectorAll(`.media-library-tab`).forEach(e=>e.classList.toggle(`on`,e===t)),document.querySelectorAll(`#pub .media-library-panel`).forEach(e=>e.classList.toggle(`on`,e.dataset.libraryPanel===n))}),document.querySelectorAll(`#pub .library-alt-table .alt-price`).forEach((e,t)=>e.textContent=(t*11+7)%51));let ue=document.getElementById(`articleTabs`),de=document.getElementById(`articleSearchInput`),fe=`auto`;function pe(){return document.querySelector(`[data-article-panel="`+fe+`"]`)}function me(){let e=pe();if(!e)return;let t=(de?.value||``).trim().toLowerCase(),n=0;e.querySelectorAll(`tbody tr`).forEach(e=>{let r=!t||(e.dataset.title||``).toLowerCase().includes(t);e.style.display=r?``:`none`,r&&n++});let r=e.querySelector(`.article-empty`);r&&r.classList.toggle(`show`,n===0)}window.filterArticleRows=me;ue&&ue.addEventListener(`click`,e=>{let t=e.target.closest(`.article-tab`);t&&(fe=t.dataset.articleTab,ue.querySelectorAll(`.article-tab`).forEach(e=>e.classList.toggle(`on`,e===t)),document.querySelectorAll(`.article-table-panel`).forEach(e=>e.classList.toggle(`on`,e.dataset.articlePanel===fe)),me())}),document.getElementById(`articleSearchBtn`)?.addEventListener(`click`,me),de?.addEventListener(`keydown`,e=>{e.key===`Enter`&&me()}),document.getElementById(`articleSearchReset`)?.addEventListener(`click`,()=>{de.value=``,me()}),document.getElementById(`articles`)?.addEventListener(`click`,e=>{let t=e.target.closest(`.article-view`);if(t){r(`正在打开文章：「`+t.closest(`tr`).querySelector(`.article-title`).textContent.trim()+`」`);return}let n=e.target.closest(`.article-delete`);if(n){let e=n.closest(`tr`),t=e.querySelector(`.article-title`).textContent.trim();(typeof window.confirm===`function`?window.confirm(`确认删除文章「`+t+`」？`):!0)&&(e.remove(),r(`文章已删除`),me(),_e())}});let he=document.getElementById(`articleAddModal`);function ge(e){he?.classList.toggle(`show`,e)}document.getElementById(`articleAddBtn`)?.addEventListener(`click`,()=>ge(!0)),document.getElementById(`articleAddClose`)?.addEventListener(`click`,()=>ge(!1)),document.getElementById(`articleAddCancel`)?.addEventListener(`click`,()=>ge(!1)),he?.addEventListener(`click`,e=>{e.target===he&&ge(!1)});function _e(){let e=document.querySelectorAll(`#uploadedArticleTable tbody tr`).length,t=document.getElementById(`uploadedArticleCount`),n=document.getElementById(`uploadedTotal`);t&&(t.textContent=e),n&&(n.textContent=e)}document.getElementById(`articleAddConfirm`)?.addEventListener(`click`,()=>{let e=document.getElementById(`articleAddTitle`).value.trim();if(!e){r(`请填写文章标题`);return}let t=document.getElementById(`articleAddType`).value,n=document.querySelector(`#uploadedArticleTable tbody`),i=document.createElement(`tr`);i.dataset.title=e;let a=new Date(Math.min(Date.now(),new Date(`2026-07-30T23:59:59`).getTime()));i.innerHTML=`<td class="article-title"></td><td><span class="article-type-pill"></span></td><td><span class="article-publish-none">未发布</span></td><td>`+(a.getFullYear()+`-`+String(a.getMonth()+1).padStart(2,`0`)+`-`+String(a.getDate()).padStart(2,`0`)+` `+String(a.getHours()).padStart(2,`0`)+`:`+String(a.getMinutes()).padStart(2,`0`)+`:`+String(a.getSeconds()).padStart(2,`0`))+`</td><td>—</td><td><div class="article-actions"><button class="article-link article-view">查看</button></div></td>`,i.querySelector(`.article-title`).textContent=e,i.querySelector(`.article-type-pill`).textContent=t,n.prepend(i),document.getElementById(`articleAddTitle`).value=``,document.getElementById(`articleAddContent`).value=``,ge(!1),_e(),r(`文章已添加到「上传的文章」`)}),_e();let ve=document.getElementById(`pubFilterPanel`),ye=document.getElementById(`pubMediaTable`);if(ve&&ye){let e=[...ye.tBodies[0].rows],t=document.getElementById(`pubVisibleCount`),n=document.getElementById(`pubFootCount`),i=document.getElementById(`pubFilterCount`),a=document.getElementById(`pubEmpty`);e.forEach((e,t)=>{let n=(t*7+13)%51;e.dataset.priceValue=String(n),e.querySelector(`.pub-price`).textContent=n});function o(){let e={};return ve.querySelectorAll(`.pub-filter-row`).forEach(t=>{let n=t.querySelector(`.pub-filter-option.on`);e[t.dataset.key]=n?n.dataset.value:`不限`}),e}function s(e,t,n){if(!n||n===`不限`||t===`sort`)return!0;if(t===`price`){let t=Number(e.dataset.priceValue||0);return n===`0~50`?t>=0&&t<=50:n===`50~200`?t>50&&t<=200:n===`200~500`?t>200&&t<=500:n===`500~1000`?t>500&&t<=1e3:n===`1000~2000`?t>1e3&&t<=2e3:n===`2000~5000`?t>2e3&&t<=5e3:n!==`5000以上`||t>5e3}return t===`geo`?n===`所有`||(e.dataset.geo||``).split(`,`).includes(n):(e.dataset[t]||``)===n}function c(t){let n=ye.tBodies[0],r=e.filter(e=>e.style.display!==`none`),i=e.filter(e=>e.style.display===`none`),a={价格升序:[`priceValue`,1],价格降序:[`priceValue`,-1],AI收录率升序:[`ai`,1],AI收录率降序:[`ai`,-1],出稿率升序:[`output`,1],出稿率降序:[`output`,-1],出稿时间升序:[`days`,1],出稿时间降序:[`days`,-1],活跃度升序:[`active`,1],活跃度降序:[`active`,-1]};if(a[t]){let[e,n]=a[t];r.sort((t,r)=>(Number(t.dataset[e])-Number(r.dataset[e]))*n)}[...r,...i].forEach(e=>n.appendChild(e))}function l(){let r=o(),l=(document.querySelector(`[data-media-search="private"] .media-library-search-input`)?.value||``).trim().toLowerCase(),u=0;e.forEach(e=>{let t=(e.querySelector(`.media-name`)?.textContent||``).trim().toLowerCase(),n=Object.entries(r).every(([t,n])=>s(e,t,n))&&(!l||t.includes(l));e.style.display=n?``:`none`,n&&u++}),c(r.sort),t.textContent=u,n.textContent=u,i.textContent=u+` 家媒体`,a.classList.toggle(`show`,u===0)}window.__applyPrivateMediaFilters=l,ve.addEventListener(`click`,e=>{let t=e.target.closest(`.pub-filter-option`);t&&(t.closest(`.pub-filter-row`).querySelectorAll(`.pub-filter-option`).forEach(e=>e.classList.remove(`on`)),t.classList.add(`on`),l())}),document.getElementById(`pubFilterReset`).onclick=()=>{ve.querySelectorAll(`.pub-filter-row`).forEach(e=>{e.querySelectorAll(`.pub-filter-option`).forEach(e=>e.classList.remove(`on`));let t=e.querySelector(`.pub-filter-option[data-value="不限"]`)||e.querySelector(`.pub-filter-option`);t&&t.classList.add(`on`)}),l(),r(`媒体筛选条件已重置`)},l()}document.querySelectorAll(`#pub .media-library-search`).forEach(e=>{let t=e.closest(`.media-library-panel`),n=e.dataset.mediaSearch,r=e.querySelector(`.media-library-search-input`),i=e.querySelector(`.media-library-search-query`),a=e.querySelector(`.media-library-search-reset`);function o(){if(n===`private`){window.__applyPrivateMediaFilters?.();return}let e=(r.value||``).trim().toLowerCase(),i=t.querySelector(`.pub-resource-table`);if(!i)return;let a=0;[...i.tBodies[0].rows].forEach(t=>{let n=(t.querySelector(`.media-name`)?.textContent||``).trim().toLowerCase(),r=!e||n.includes(e);t.style.display=r?``:`none`,r&&a++});let o=t.querySelector(`.pub-resource-meta b`);o&&(o.textContent=a)}i.addEventListener(`click`,o),a.addEventListener(`click`,()=>{r.value=``,o()}),r.addEventListener(`keydown`,e=>{e.key===`Enter`&&o()})}),document.getElementById(`articleCount`);let be=document.getElementById(`startRankingTest`),A=document.getElementById(`rankingResults`),j=document.getElementById(`rankTaskStatus`),xe=document.getElementById(`openDiagnosticReport`),Se=document.getElementById(`diagnosticReportTemplate`);be&&A&&be.addEventListener(`click`,()=>{A.classList.remove(`show`),be.disabled=!0,be.textContent=`检测中…`,j&&(j.className=`rank-task-status running`,j.textContent=`正在调用 6 个 AI 平台并生成排名诊断…`),setTimeout(()=>{A.classList.add(`show`),be.disabled=!1,be.textContent=`重新检测`,j&&(j.className=`rank-task-status done`,j.textContent=`检测完成 · 36 条结果 · 诊断报告已生成`),r(`排名检测完成，诊断报告已生成`),A.scrollIntoView({behavior:`smooth`,block:`start`})},720)});function Ce(){let e=Array.from(document.querySelectorAll(`style`)).map(e=>e.textContent||``).join(`
 `)||``,t=Se?.innerHTML||``;return`<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AI搜索可见性诊断报告 · 360智见GEO</title><link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap"><style>`+e+`
-body.report-window{display:block;min-height:100vh;background:#f3f7f5;padding:0;color:#1f2937}.report-window-top{position:sticky;top:0;z-index:30;height:64px;padding:0 34px;display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid #e6ece9}.report-window-brand{display:flex;align-items:center;gap:11px;font-size:16px;font-weight:800}.report-window-logo{width:30px;height:30px;border-radius:10px;display:grid;place-items:center;background:linear-gradient(145deg,#10b981,#059669);color:#fff}.report-window-meta{font-size:12px;color:#64748b}.report-window-actions{display:flex;align-items:center;gap:10px}.report-print{border:1px solid #dfe5e2;background:#fff;color:#526069;border-radius:9px;padding:7px 13px;font:inherit;font-size:12px;font-weight:650;cursor:pointer}.report-document-wrap{max-width:1320px;margin:0 auto;padding:24px 28px 48px}.report-document-title{margin-bottom:18px}.report-document-title h1{font-size:24px;line-height:1.25;margin-bottom:5px}.report-document-title p{font-size:12.5px;color:#64748b}.report-document-wrap>.card{margin-bottom:16px}.report-window .geo-step{cursor:default}.report-window .chip{cursor:default}@media print{.report-window-top{display:none}.report-document-wrap{max-width:none;padding:0}.card{box-shadow:none!important;break-inside:avoid}}</style></head><body class="report-window"><div class="report-window-top"><div><div class="report-window-brand"><span class="report-window-logo">◎</span>360智见GEO · AI搜索可见性诊断报告</div><div class="report-window-meta">AI搜索收录检测报告 · 第3期 · 2026-07-14</div></div><div class="report-window-actions"><button class="report-print" onclick="window.print()">打印 / 导出 PDF</button></div></div><div class="report-document-wrap"><div class="report-document-title"><h1>AI 搜索可见性诊断报告</h1><p>基于本次 6 个问题 × 6 个 AI 平台的排名 / 品牌曝光检测结果自动生成</p></div>`+t+`</div></body></html>`}xe&&Se&&xe.addEventListener(`click`,()=>{let blob=new Blob([Ce()],{type:`text/html;charset=utf-8`}),url=URL.createObjectURL(blob),a=document.createElement(`a`);a.href=url,a.download=`360智见GEO_AI收录检测报告.html`,document.body.appendChild(a),a.click(),a.remove(),URL.revokeObjectURL(url),r(`已生成并下载收录检测报告`)});let we=document.getElementById(`incModeSwitch`),M=document.getElementById(`incQueryInput`),N=document.getElementById(`incModeHint`),Te=document.getElementById(`incTaskStatus`),Ee=document.getElementById(`startInclusionQuery`),De=document.getElementById(`incUrlResult`),Oe=document.getElementById(`incKeywordResult`),ke=document.getElementById(`incKeywordBadge`),Ae=document.getElementById(`incUrlBadge`),je=document.getElementById(`incMainView`),Me=document.getElementById(`incHistoryView`),Ne=document.getElementById(`incHistoryLink`),Pe=document.getElementById(`incHistoryBack`),Fe={url:`https://www.toutiao.com/article/7482915630...`,keyword:`360终端安全防护`},Ie=`url`;function Le(){De?.classList.remove(`show`),Oe?.classList.remove(`show`),Te&&(Te.className=`inc-task-status`,Te.textContent=`请选择检测类型并提交查询`),Ee&&(Ee.disabled=!1,Ee.innerHTML=`<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><span>立即查询</span>`)}function Re(e,t=!1){[`url`,`keyword`].includes(e)&&(Fe[Ie]=M.value,Ie=e,we&&(we.value=e),M.value=Fe[e],e===`url`?(M.placeholder=`请输入文章 URL`,N.textContent=`URL模式：通过文章链接反查各 AI 平台是否已将该内容纳入可引用信源池。`):(M.placeholder=`请输入行业词、品类词或文章标题`,N.textContent=`关键词模式：统计 AI 回答常引用的信源渠道，并按引用次数形成渠道效果排行。`),t||Le())}we?.addEventListener(`change`,()=>Re(we.value)),document.getElementById(`incPlatformGrid`)?.addEventListener(`click`,e=>{let t=e.target.closest(`.inc-platform-card`);t&&(t.classList.toggle(`on`),document.querySelectorAll(`#incPlatformGrid .inc-platform-card.on`).length||(t.classList.add(`on`),r(`至少保留一个 AI 平台`)))}),Ee?.addEventListener(`click`,()=>{let e=M.value.trim();if(!e){M.focus(),r(Ie===`url`?`请输入待检测 URL`:`请输入查询关键词`);return}let t=[...document.querySelectorAll(`#incPlatformGrid .inc-platform-card.on`)].map(e=>e.dataset.incPlatform);if(!t.length){r(`请至少选择一个 AI 平台`);return}Fe[Ie]=e,De?.classList.remove(`show`),Oe?.classList.remove(`show`),Ee.disabled=!0,Ee.innerHTML=`<span style="display:inline-flex;align-items:center;gap:6px">⏳ 查询中…</span>`,Te.className=`inc-task-status running`,Te.textContent=Ie===`url`?`正在查询 `+t.length+` 个 AI 平台的收录状态…`:`正在统计 `+t.length+` 个 AI 平台的信源引用渠道…`,setTimeout(()=>{Ee.disabled=!1,Ee.innerHTML=`<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"/></svg><span>重新查询</span>`,Te.className=`inc-task-status done`,Ie===`url`?(Ae&&(Ae.textContent=`已检测 `+t.length+` 个平台`),document.querySelectorAll(`#incUrlResult tbody tr`).forEach(e=>e.style.display=t.includes(e.dataset.platform)?``:`none`),De.classList.add(`show`),Te.textContent=`URL 查询完成 · 已生成平台收录状态`,De.scrollIntoView({behavior:`smooth`,block:`start`})):(ke&&(ke.textContent=`关键词：`+e),Oe.classList.add(`show`),Te.textContent=`关键词查询完成 · 已生成 AI 收录渠道效果`,Be(`all`),Oe.scrollIntoView({behavior:`smooth`,block:`start`}))},620)}),document.querySelectorAll(`.inc-view-link`).forEach(e=>e.addEventListener(`click`,()=>r(e.dataset.platform+`：已打开收录详情（原型）`)));function ze(e){je?.classList.toggle(`hidden`,e),Me?.classList.toggle(`show`,e);let t=document.getElementById(`ht`),n=document.getElementById(`headerSubtitle`);e?(t&&(t.textContent=`收录查询 · 历史记录`),n&&(n.textContent=`查看过往AI收录检测任务与结果`)):(t&&(t.textContent=`收录查询`),n&&(n.textContent=`验证文章与关键词是否进入AI可引用信源池`),window.scrollTo({top:0,behavior:`smooth`}))}Ne?.addEventListener(`click`,()=>ze(!0)),Pe?.addEventListener(`click`,()=>ze(!1)),document.querySelectorAll(`.inc-history-report`).forEach(e=>e.addEventListener(`click`,()=>{let t=e.closest(`tr`);if(e.classList.contains(`muted`)){r(`该任务仍在查询中，请稍后查看`);return}let n=t.dataset.historyMode||`url`,i=t.dataset.historyQuery||``;ze(!1),Fe[n]=i,Re(n,!0),M.value=i,Te.className=`inc-task-status done`,n===`url`?(De.classList.add(`show`),Oe.classList.remove(`show`)):(Oe.classList.add(`show`),De.classList.remove(`show`),ke&&(ke.textContent=`关键词：`+i),Be(`all`)),setTimeout(()=>document.querySelector(n===`url`?`#incUrlResult`:`#incKeywordResult`)?.scrollIntoView({behavior:`smooth`,block:`start`}),30)}));function Be(e){let t=[...document.querySelectorAll(`#incChannelTable tbody tr`)],n=0;t.forEach(t=>{let r=e===`all`||(t.dataset.platforms||``).split(`,`).includes(e);if(t.style.display=r?``:`none`,r){n++;let e=t.querySelector(`.inc-rank-cell`);e&&(n===1?e.innerHTML=`<span class="rank-medal gold">1</span>`:n===2?e.innerHTML=`<span class="rank-medal silver">2</span>`:n===3?e.innerHTML=`<span class="rank-medal bronze">3</span>`:e.textContent=n)}})}document.getElementById(`incChannelTabs`)?.addEventListener(`click`,e=>{let t=e.target.closest(`.inc-channel-tab`);t&&(document.querySelectorAll(`#incChannelTabs .inc-channel-tab`).forEach(e=>e.classList.toggle(`on`,e===t)),Be(t.dataset.channelPlatform))}),Be(`all`)}catch(e){console.error(`Error in core script 5:`,e)}try{(()=>{let e=document.getElementById(`pub`),t=document.getElementById(`pubArticlePickerModal`);if(!e||!t)return;let n=t.querySelector(`#pubPickerTableBody`),r=t.querySelector(`#pubPickerSearch`),i=t.querySelector(`#pubPickerEmpty`),a=t.querySelector(`#pubPickerConfirm`),o=t.querySelector(`#pubPickerSelectedTitle`),s=t.querySelector(`#pubPickerMediaName`),c=`auto`,l=null,u=null,d=``;function f(e){let t=document.getElementById(e===`auto`?`autoArticleTable`:`uploadedArticleTable`);return t?[...t.tBodies[0].rows]:[]}function p(){let e=f(`auto`).length,n=f(`uploaded`).length;t.querySelector(`#pubPickerAutoCount`).textContent=e,t.querySelector(`#pubPickerUploadedCount`).textContent=n}function m(){l=null,o.textContent=`暂未选择文章`,a.disabled=!0}function h(e){let t=e.querySelectorAll(`td`);return{title:(t[0]?.textContent||e.dataset.title||``).trim(),type:(t[1]?.textContent||``).trim(),published:(t[2]?.textContent||``).trim(),generated:(t[3]?.textContent||``).trim(),submitted:(t[4]?.textContent||``).trim(),sourceRow:e}}function g(){let e=(r.value||``).trim().toLowerCase();n.innerHTML=``;let t=0;f(c).forEach(r=>{let i=h(r);if(e&&!i.title.toLowerCase().includes(e))return;t++;let s=document.createElement(`tr`);s.className=`pub-picker-row`,s.dataset.articleTitle=i.title,s.innerHTML=`<td class="article-title"></td><td><span class="article-type-pill"></span></td><td></td><td></td><td></td><td><span class="pub-picker-radio" aria-hidden="true"></span></td>`,s.children[0].textContent=i.title,s.querySelector(`.article-type-pill`).textContent=i.type,s.children[2].textContent=i.published,s.children[3].textContent=i.generated,s.children[4].textContent=i.submitted,s.addEventListener(`click`,()=>{n.querySelectorAll(`tr`).forEach(e=>e.classList.remove(`selected`)),s.classList.add(`selected`),l=i,o.textContent=i.title,a.disabled=!1}),n.appendChild(s)}),i.classList.toggle(`show`,t===0)}function _(e){t.classList.toggle(`show`,e),e||(u=null,d=``,m())}function v(e){u=e,d=e.closest(`tr`)?.querySelector(`.media-name`)?.textContent.trim()||`当前媒体`,e.closest(`.media-library-panel`)?.dataset.libraryPanel,s.textContent=d,c=`auto`,r.value=``,t.querySelectorAll(`[data-picker-tab]`).forEach(e=>e.classList.toggle(`on`,e.dataset.pickerTab===`auto`)),m(),p(),g(),_(!0)}e.addEventListener(`click`,e=>{let t=e.target.closest(`.pub-submit`);t&&(e.preventDefault(),e.stopPropagation(),e.stopImmediatePropagation&&e.stopImmediatePropagation(),v(t))},!0),t.querySelector(`#pubPickerClose`).addEventListener(`click`,()=>_(!1)),t.querySelector(`#pubPickerCancel`).addEventListener(`click`,()=>_(!1)),t.addEventListener(`click`,e=>{e.target===t&&_(!1)}),t.querySelector(`#pubPickerTabs`).addEventListener(`click`,e=>{let n=e.target.closest(`[data-picker-tab]`);n&&(c=n.dataset.pickerTab,t.querySelectorAll(`[data-picker-tab]`).forEach(e=>e.classList.toggle(`on`,e===n)),m(),g())}),t.querySelector(`#pubPickerSearchBtn`).addEventListener(`click`,()=>{m(),g()}),t.querySelector(`#pubPickerSearchReset`).addEventListener(`click`,()=>{r.value=``,m(),g()}),r.addEventListener(`keydown`,e=>{e.key===`Enter`&&(m(),g())}),a.addEventListener(`click`,()=>{if(!l)return;let e=new Date(Math.min(Date.now(),new Date(`2026-07-30T23:59:59`).getTime())),t=e.getFullYear(),n=String(e.getMonth()+1).padStart(2,`0`),r=String(e.getDate()).padStart(2,`0`),i=String(e.getHours()).padStart(2,`0`),a=String(e.getMinutes()).padStart(2,`0`),o=String(e.getSeconds()).padStart(2,`0`),s=t+`-`+n+`-`+r+` `+i+`:`+a+`:`+o,c=l.sourceRow;if(c){let e=c.querySelectorAll(`td`);e[2]&&(e[2].innerHTML=`<span class="article-publish-review">审核中</span>`),e[4]&&(e[4].textContent=s),c.dataset.pendingMedia=d,c.dataset.submitTime=s}u&&(u.classList.add(`done`),u.textContent=`已投稿`);let f=l.title,p=d;_(!1),showToast(`「`+f+`」已提交至「`+p+`」，文章状态更新为审核中`)})})()}catch(e){console.error(`Error in picker script 6:`,e)}try{(()=>{document.querySelectorAll(`button:not([type])`).forEach(e=>e.type=`button`);let e=[...document.querySelectorAll(`.nav a[data-p]`)],t={dash:[`首页`,`全网AI搜索场景覆盖与GEO增长数据总览`],inc:[`检测分析`,`验证文章与关键词是否进入AI可引用信源池`],kb:[`GEO 内容增长`,`维护企业事实、资质、案例与问答知识源`],material:[`设置`,`上传本地图片素材，用于文章配图等场景。素材库总量：100.00GB，当前剩余容量99.97GB，已使用31.0MB。`],persona:[`GEO 内容增长`,`从核心产品反推人群、场景与购买考量`],kw:[`GEO 内容增长`,`生成并筛选面向AI搜索场景的长尾问题词库`],gen:[``,`填写或选择下方「核心关键词 + 长尾关键词」，点击右侧绿色 AI Agent 图标即可智能反推「用户画像 → 搜索场景 → 用户痛点」，并在当前页面直接生成标准 3000 字深度长文。`],videographic:[`GEO 内容增长`,`使用多模态AI模型，生成短视频或新媒体图文。内容基于大模型训练数据生成，可能存在局限性或不准确性。`],articles:[`GEO 内容增长`,`统一管理自动化文章与人工上传内容`],pub:[`GEO 内容增长`,`按媒体属性与GEO适配度选择信源并投稿`],agent:[`账户中心`,`查看企业服务套餐余量、功能配额明细与账户余额充值`]},n=document.getElementById(`headerKicker`),r=document.getElementById(`headerSubtitle`),htEl=document.getElementById(`ht`);function i(i){let a=t[i]||[`360智见GEO`,`AI 搜索可见性优化平台`];
+body.report-window{display:block;min-height:100vh;background:#f3f7f5;padding:0;color:#1f2937}.report-window-top{position:sticky;top:0;z-index:30;height:64px;padding:0 34px;display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid #e6ece9}.report-window-brand{display:flex;align-items:center;gap:11px;font-size:16px;font-weight:800}.report-window-logo{width:30px;height:30px;border-radius:10px;display:grid;place-items:center;background:linear-gradient(145deg,#10b981,#059669);color:#fff}.report-window-meta{font-size:12px;color:#64748b}.report-window-actions{display:flex;align-items:center;gap:10px}.report-print{border:1px solid #dfe5e2;background:#fff;color:#526069;border-radius:9px;padding:7px 13px;font:inherit;font-size:12px;font-weight:650;cursor:pointer}.report-document-wrap{max-width:1320px;margin:0 auto;padding:24px 28px 48px}.report-document-title{margin-bottom:18px}.report-document-title h1{font-size:24px;line-height:1.25;margin-bottom:5px}.report-document-title p{font-size:12.5px;color:#64748b}.report-document-wrap>.card{margin-bottom:16px}.report-window .geo-step{cursor:default}.report-window .chip{cursor:default}@media print{.report-window-top{display:none}.report-document-wrap{max-width:none;padding:0}.card{box-shadow:none!important;break-inside:avoid}}</style></head><body class="report-window"><div class="report-window-top"><div><div class="report-window-brand"><span class="report-window-logo">◎</span>360智见GEO · AI搜索可见性诊断报告</div><div class="report-window-meta">AI搜索收录检测报告 · 第3期 · 2026-07-14</div></div><div class="report-window-actions"><button class="report-print" onclick="window.print()">打印 / 导出 PDF</button></div></div><div class="report-document-wrap"><div class="report-document-title"><h1>AI 搜索可见性诊断报告</h1><p>基于本次 6 个问题 × 6 个 AI 平台的排名 / 品牌曝光检测结果自动生成</p></div>`+t+`</div></body></html>`}xe&&Se&&xe.addEventListener(`click`,()=>{let blob=new Blob([Ce()],{type:`text/html;charset=utf-8`}),url=URL.createObjectURL(blob),a=document.createElement(`a`);a.href=url,a.download=`360智见GEO_AI收录检测报告.html`,document.body.appendChild(a),a.click(),a.remove(),URL.revokeObjectURL(url),r(`已生成并下载收录检测报告`)});let we=document.getElementById(`incModeSwitch`),M=document.getElementById(`incQueryInput`),N=document.getElementById(`incModeHint`),Te=document.getElementById(`incTaskStatus`),Ee=document.getElementById(`startInclusionQuery`),De=document.getElementById(`incUrlResult`),Oe=document.getElementById(`incKeywordResult`),ke=document.getElementById(`incKeywordBadge`),Ae=document.getElementById(`incUrlBadge`),je=document.getElementById(`incMainView`),Me=document.getElementById(`incHistoryView`),Ne=document.getElementById(`incHistoryLink`),Pe=document.getElementById(`incHistoryBack`),Fe={url:`https://www.toutiao.com/article/7482915630...`,keyword:`360终端安全防护`},Ie=`url`;function Le(){De?.classList.remove(`show`),Oe?.classList.remove(`show`),Te&&(Te.className=`inc-task-status`,Te.textContent=`请选择检测类型并提交查询`),Ee&&(Ee.disabled=!1,Ee.innerHTML=`<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><span>立即查询</span>`)}function Re(e,t=!1){[`url`,`keyword`].includes(e)&&(Fe[Ie]=M.value,Ie=e,we&&(we.value=e),M.value=Fe[e],e===`url`?(M.placeholder=`请输入文章 URL`,N.textContent=`URL模式：通过文章链接反查各 AI 平台是否已将该内容纳入可引用信源池。`):(M.placeholder=`请输入行业词、品类词或文章标题`,N.textContent=`关键词模式：统计 AI 回答常引用的信源渠道，并按引用次数形成渠道效果排行。`),t||Le())}we?.addEventListener(`change`,()=>Re(we.value)),document.getElementById(`incPlatformGrid`)?.addEventListener(`click`,e=>{let t=e.target.closest(`.inc-platform-card`);t&&(t.classList.toggle(`on`),document.querySelectorAll(`#incPlatformGrid .inc-platform-card.on`).length||(t.classList.add(`on`),r(`至少保留一个 AI 平台`)))}),Ee?.addEventListener(`click`,()=>{let e=M.value.trim();if(!e){M.focus(),r(Ie===`url`?`请输入待检测 URL`:`请输入查询关键词`);return}let t=[...document.querySelectorAll(`#incPlatformGrid .inc-platform-card.on`)].map(e=>e.dataset.incPlatform);if(!t.length){r(`请至少选择一个 AI 平台`);return}Fe[Ie]=e,De?.classList.remove(`show`),Oe?.classList.remove(`show`),Ee.disabled=!0,Ee.innerHTML=`<span style="display:inline-flex;align-items:center;gap:6px">⏳ 查询中…</span>`,Te.className=`inc-task-status running`,Te.textContent=Ie===`url`?`正在查询 `+t.length+` 个 AI 平台的收录状态…`:`正在统计 `+t.length+` 个 AI 平台的信源引用渠道…`,setTimeout(()=>{Ee.disabled=!1,Ee.innerHTML=`<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"/></svg><span>重新查询</span>`,Te.className=`inc-task-status done`,Ie===`url`?(Ae&&(Ae.textContent=`已检测 `+t.length+` 个平台`),document.querySelectorAll(`#incUrlResult tbody tr`).forEach(e=>e.style.display=t.includes(e.dataset.platform)?``:`none`),De.classList.add(`show`),Te.textContent=`URL 查询完成 · 已生成平台收录状态`,De.scrollIntoView({behavior:`smooth`,block:`start`})):(ke&&(ke.textContent=`关键词：`+e),Oe.classList.add(`show`),Te.textContent=`关键词查询完成 · 已生成 AI 收录渠道效果`,Be(`all`),Oe.scrollIntoView({behavior:`smooth`,block:`start`}))},620)}),document.querySelectorAll(`.inc-view-link`).forEach(e=>e.addEventListener(`click`,()=>r(e.dataset.platform+`：已打开收录详情（原型）`)));function ze(e){je?.classList.toggle(`hidden`,e),Me?.classList.toggle(`show`,e);let t=document.getElementById(`ht`),n=document.getElementById(`headerSubtitle`);e?(t&&(t.textContent=`收录查询 · 历史记录`),n&&(n.textContent=`查看过往AI收录检测任务与结果`)):(t&&(t.textContent=`收录查询`),n&&(n.textContent=`验证文章与关键词是否进入AI可引用信源池`),window.scrollTo({top:0,behavior:`smooth`}))}Ne?.addEventListener(`click`,()=>ze(!0)),Pe?.addEventListener(`click`,()=>ze(!1)),document.querySelectorAll(`.inc-history-report`).forEach(e=>e.addEventListener(`click`,()=>{let t=e.closest(`tr`);if(e.classList.contains(`muted`)){r(`该任务仍在查询中，请稍后查看`);return}let n=t.dataset.historyMode||`url`,i=t.dataset.historyQuery||``;ze(!1),Fe[n]=i,Re(n,!0),M.value=i,Te.className=`inc-task-status done`,n===`url`?(De.classList.add(`show`),Oe.classList.remove(`show`)):(Oe.classList.add(`show`),De.classList.remove(`show`),ke&&(ke.textContent=`关键词：`+i),Be(`all`)),setTimeout(()=>document.querySelector(n===`url`?`#incUrlResult`:`#incKeywordResult`)?.scrollIntoView({behavior:`smooth`,block:`start`}),30)}));function Be(e){let t=[...document.querySelectorAll(`#incChannelTable tbody tr`)],n=0;t.forEach(t=>{let r=e===`all`||(t.dataset.platforms||``).split(`,`).includes(e);if(t.style.display=r?``:`none`,r){n++;let e=t.querySelector(`.inc-rank-cell`);e&&(n===1?e.innerHTML=`<span class="rank-medal gold">1</span>`:n===2?e.innerHTML=`<span class="rank-medal silver">2</span>`:n===3?e.innerHTML=`<span class="rank-medal bronze">3</span>`:e.textContent=n)}})}document.getElementById(`incChannelTabs`)?.addEventListener(`click`,e=>{let t=e.target.closest(`.inc-channel-tab`);t&&(document.querySelectorAll(`#incChannelTabs .inc-channel-tab`).forEach(e=>e.classList.toggle(`on`,e===t)),Be(t.dataset.channelPlatform))}),Be(`all`)}catch(e){console.error(`Error in core script 5:`,e)}try{(()=>{let e=document.getElementById(`pub`),t=document.getElementById(`pubArticlePickerModal`);if(!e||!t)return;let n=t.querySelector(`#pubPickerTableBody`),r=t.querySelector(`#pubPickerSearch`),i=t.querySelector(`#pubPickerEmpty`),a=t.querySelector(`#pubPickerConfirm`),o=t.querySelector(`#pubPickerSelectedTitle`),s=t.querySelector(`#pubPickerMediaName`),c=`auto`,l=null,u=null,d=``;function f(e){let t=document.getElementById(e===`auto`?`autoArticleTable`:`uploadedArticleTable`);return t?[...t.tBodies[0].rows]:[]}function p(){let e=f(`auto`).length,n=f(`uploaded`).length;t.querySelector(`#pubPickerAutoCount`).textContent=e,t.querySelector(`#pubPickerUploadedCount`).textContent=n}function m(){l=null,o.textContent=`暂未选择文章`,a.disabled=!0}function h(e){let t=e.querySelectorAll(`td`);return{title:(t[0]?.textContent||e.dataset.title||``).trim(),type:(t[1]?.textContent||``).trim(),published:(t[2]?.textContent||``).trim(),generated:(t[3]?.textContent||``).trim(),submitted:(t[4]?.textContent||``).trim(),sourceRow:e}}function g(){let e=(r.value||``).trim().toLowerCase();n.innerHTML=``;let t=0;f(c).forEach(r=>{let i=h(r);if(e&&!i.title.toLowerCase().includes(e))return;t++;let s=document.createElement(`tr`);s.className=`pub-picker-row`,s.dataset.articleTitle=i.title,s.innerHTML=`<td class="article-title"></td><td><span class="article-type-pill"></span></td><td></td><td></td><td></td><td><span class="pub-picker-radio" aria-hidden="true"></span></td>`,s.children[0].textContent=i.title,s.querySelector(`.article-type-pill`).textContent=i.type,s.children[2].textContent=i.published,s.children[3].textContent=i.generated,s.children[4].textContent=i.submitted,s.addEventListener(`click`,()=>{n.querySelectorAll(`tr`).forEach(e=>e.classList.remove(`selected`)),s.classList.add(`selected`),l=i,o.textContent=i.title,a.disabled=!1}),n.appendChild(s)}),i.classList.toggle(`show`,t===0)}function _(e){t.classList.toggle(`show`,e),e||(u=null,d=``,m())}function v(e){u=e,d=e.closest(`tr`)?.querySelector(`.media-name`)?.textContent.trim()||`当前媒体`,e.closest(`.media-library-panel`)?.dataset.libraryPanel,s.textContent=d,c=`auto`,r.value=``,t.querySelectorAll(`[data-picker-tab]`).forEach(e=>e.classList.toggle(`on`,e.dataset.pickerTab===`auto`)),m(),p(),g(),_(!0)}e.addEventListener(`click`,e=>{let t=e.target.closest(`.pub-submit`);t&&(e.preventDefault(),e.stopPropagation(),e.stopImmediatePropagation&&e.stopImmediatePropagation(),v(t))},!0),t.querySelector(`#pubPickerClose`).addEventListener(`click`,()=>_(!1)),t.querySelector(`#pubPickerCancel`).addEventListener(`click`,()=>_(!1)),t.addEventListener(`click`,e=>{e.target===t&&_(!1)}),t.querySelector(`#pubPickerTabs`).addEventListener(`click`,e=>{let n=e.target.closest(`[data-picker-tab]`);n&&(c=n.dataset.pickerTab,t.querySelectorAll(`[data-picker-tab]`).forEach(e=>e.classList.toggle(`on`,e===n)),m(),g())}),t.querySelector(`#pubPickerSearchBtn`).addEventListener(`click`,()=>{m(),g()}),t.querySelector(`#pubPickerSearchReset`).addEventListener(`click`,()=>{r.value=``,m(),g()}),r.addEventListener(`keydown`,e=>{e.key===`Enter`&&(m(),g())}),a.addEventListener(`click`,()=>{if(!l)return;let e=new Date(Math.min(Date.now(),new Date(`2026-07-30T23:59:59`).getTime())),t=e.getFullYear(),n=String(e.getMonth()+1).padStart(2,`0`),r=String(e.getDate()).padStart(2,`0`),i=String(e.getHours()).padStart(2,`0`),a=String(e.getMinutes()).padStart(2,`0`),o=String(e.getSeconds()).padStart(2,`0`),s=t+`-`+n+`-`+r+` `+i+`:`+a+`:`+o,c=l.sourceRow;if(c){let e=c.querySelectorAll(`td`);e[2]&&(e[2].innerHTML=`<span class="article-publish-review">审核中</span>`),e[4]&&(e[4].textContent=s),c.dataset.pendingMedia=d,c.dataset.submitTime=s}u&&(u.classList.add(`done`),u.textContent=`已投稿`);let f=l.title,p=d;_(!1),showToast(`「`+f+`」已提交至「`+p+`」，文章状态更新为审核中`)})})()}catch(e){console.error(`Error in picker script 6:`,e)}try{(()=>{document.querySelectorAll(`button:not([type])`).forEach(e=>e.type=`button`);let e=[...document.querySelectorAll(`.nav a[data-p]`)],t={dash:[`首页`,`全网AI搜索场景覆盖与GEO增长数据总览`],inc:[`检测分析`,`验证文章与关键词是否进入AI可引用信源池`],kb:[`GEO 内容增长`,`维护企业事实、资质、案例与问答知识源`],material:[`GEO 内容增长`,`上传本地图片素材，用于文章配图等场景。企业素材库总量：100.00GB，当前剩余容量99.97GB，已使用31.0MB。`],persona:[`GEO 内容增长`,`从核心产品反推人群、场景与购买考量`],kw:[`GEO 内容增长`,`生成并筛选面向AI搜索场景的长尾问题词库`],gen:[``,`填写或选择下方「核心关键词 + 长尾关键词」，点击右侧绿色 AI Agent 图标即可智能反推「用户画像 → 搜索场景 → 用户痛点」，并在当前页面直接生成标准 3000 字深度长文。`],videographic:[`GEO 内容增长`,`使用多模态AI模型，生成短视频或新媒体图文。内容基于大模型训练数据生成，可能存在局限性或不准确性。`],articles:[`GEO 内容增长`,`统一管理自动化文章与人工上传内容`],pub:[`GEO 内容增长`,`按媒体属性与GEO适配度选择信源并投稿`],agent:[`账户中心`,`查看企业服务套餐余量、功能配额明细与账户余额充值`]},n=document.getElementById(`headerKicker`),r=document.getElementById(`headerSubtitle`),htEl=document.getElementById(`ht`);function i(i){let a=t[i]||[`360智见GEO`,`AI 搜索可见性优化平台`];
     const topH = document.querySelector("header");
     if (topH) topH.style.display = (i === "material") ? "none" : "";
 n&&(n.textContent=a[0],n.style.display=i===`gen`?`none`:``),i===`gen`&&htEl&&(htEl.textContent=`内容创作与用户需求画像建模`),r&&(r.textContent=a[1]),e.forEach(e=>e.setAttribute(`aria-current`,e.dataset.p===i?`page`:`false`))}e.forEach(e=>{e.setAttribute(`tabindex`,`0`),e.setAttribute(`role`,`button`),e.title=e.textContent.trim(),e.addEventListener(`click`,()=>{i(e.dataset.p),history.replaceState(null,``,`#`+e.dataset.p)}),e.addEventListener(`keydown`,t=>{(t.key===`Enter`||t.key===` `)&&(t.preventDefault(),e.click())})});let a=location.hash.slice(1),o=e.find(e=>e.dataset.p===a);if(o)o.click();else{let t=e.find(e=>e.classList.contains(`on`));t&&i(t.dataset.p)}function s() {
@@ -4719,13 +4822,14 @@ n&&(n.textContent=a[0],n.style.display=i===`gen`?`none`:``),i===`gen`&&htEl&&(ht
   // 1:1 素材库交互控制逻辑
   function initMaterialModule() {
     const selectAllCb = document.getElementById("matSelectAll");
-    const itemCbs = document.querySelectorAll(".mat-item-check");
-    const cards = document.querySelectorAll(".mat-card-item");
+    const getCards = () => Array.from(document.querySelectorAll(".mat-card-item"));
     const batchGroupBtn = document.getElementById("matBatchGroupBtn");
     const batchDeleteBtn = document.getElementById("matBatchDeleteBtn");
     const uploadBtn = document.getElementById("matUploadBtn");
     const fileIpt = document.getElementById("matFileInput");
     const newGroupBtn = document.getElementById("matNewGroupBtn");
+    const sortMinuteBtn = document.getElementById("matSortMinuteBtn");
+    const minuteQuickSwitch = document.getElementById("matMinuteQuickSwitch");
     const groupItems = document.querySelectorAll(".mat-group-item");
     const topTabs = document.querySelectorAll(".mat-top-tab");
     
@@ -4735,48 +4839,245 @@ n&&(n.textContent=a[0],n.style.display=i===`gen`?`none`:``),i===`gen`&&htEl&&(ht
     const modalClose = document.getElementById("matModalCloseBtn");
     const copyUrlBtn = document.getElementById("matModalCopyUrlBtn");
     const applyArticleBtn = document.getElementById("matModalApplyArticleBtn");
+    const prevBtn = document.getElementById("matModalPrevBtn");
+    const nextBtn = document.getElementById("matModalNextBtn");
+    const typeBadge = document.getElementById("matModalTypeBadge");
+    const indexBadge = document.getElementById("matModalIndexBadge");
+    const metaEl = document.getElementById("matModalMeta");
+    const videoIndicator = document.getElementById("matModalVideoIndicator");
+    const durationSpan = document.getElementById("matModalDurationSpan");
+    const keyframesContainer = document.getElementById("matModalVideoKeyframes");
+    const minutePillsContainer = document.getElementById("matModalMinutePills");
+    const countText = document.getElementById("matTotalCountText");
+
+    let currentModalIndex = 0;
+    let activeGroup = "all";
+    let activeTab = "all";
+    let isMinuteDesc = true;
+
+    // 分组名称映射
+    const groupNameMap = {
+      all: "所有素材",
+      brain: "安全大脑与SOC",
+      endpoint: "天擎终端与防勒索",
+      compliance: "资质与等保测评",
+      video: "攻防实录与视频"
+    };
+
+    // 筛选卡片函数
+    function applyMaterialFilters() {
+      const cards = getCards();
+      let visibleCount = 0;
+      cards.forEach(card => {
+        const group = card.dataset.group || "all";
+        const type = card.dataset.type || "image";
+
+        const matchGroup = (activeGroup === "all") || (group === activeGroup);
+        const matchTab = (activeTab === "all") || (type === activeTab);
+
+        if (matchGroup && matchTab) {
+          card.style.display = "";
+          visibleCount++;
+        } else {
+          card.style.display = "none";
+        }
+      });
+      if (countText) {
+        countText.textContent = `共 ${visibleCount} 条素材`;
+      }
+    }
+
+    // 渲染弹窗素材内容 (支持快速分钟切换与上一张/下一张)
+    function renderModalMaterial(index) {
+      const cards = getCards();
+      if (!cards.length) return;
+      currentModalIndex = (index + cards.length) % cards.length;
+      const card = cards[currentModalIndex];
+      if (!card) return;
+
+      const title = card.dataset.title || "素材图片";
+      const img = card.dataset.img || "";
+      const size = card.dataset.size || "1.0MB";
+      const res = card.dataset.res || "1920×1080";
+      const time = card.dataset.time || "2026-08-26 14:32";
+      const minute = card.dataset.minute || "14:32";
+      const type = card.dataset.type || "image";
+      const group = card.dataset.group || "brain";
+      const duration = card.dataset.duration || "03:45";
+      const desc = card.dataset.desc || "";
+
+      if (modalTitle) modalTitle.textContent = title;
+      if (modalImg) (modalImg as HTMLImageElement).src = img;
+      if (typeBadge) {
+        typeBadge.textContent = type === "video" ? "实测演示视频" : (group === "compliance" ? "权威合规资质" : "高清图表素材");
+        typeBadge.style.background = type === "video" ? "#fee2e2" : (group === "compliance" ? "#fef3c7" : "#e0e7ff");
+        typeBadge.style.color = type === "video" ? "#b91c1c" : (group === "compliance" ? "#b45309" : "#4338ca");
+      }
+      if (indexBadge) {
+        indexBadge.textContent = `${currentModalIndex + 1} / ${cards.length}`;
+      }
+      if (metaEl) {
+        metaEl.textContent = `分辨率: ${res} · 大小: ${size} · 上传时间: ${time} (${minute}分) · 分组: ${groupNameMap[group] || group}`;
+      }
+
+      // 视频指示条与时间轴分钟
+      if (type === "video") {
+        if (videoIndicator) videoIndicator.style.display = "flex";
+        if (durationSpan) durationSpan.textContent = `${duration} 分钟`;
+        if (keyframesContainer) keyframesContainer.style.display = "flex";
+      } else {
+        if (videoIndicator) videoIndicator.style.display = "none";
+        if (keyframesContainer) keyframesContainer.style.display = "none";
+      }
+
+      // 渲染底部分钟直接切换胶囊
+      if (minutePillsContainer) {
+        minutePillsContainer.innerHTML = "";
+        cards.forEach((c, i) => {
+          const pill = document.createElement("button");
+          pill.type = "button";
+          const m = c.dataset.minute || `#${i+1}`;
+          const isCurrent = (i === currentModalIndex);
+          const isVid = c.dataset.type === "video";
+          pill.textContent = isVid ? `▶ ${m}分` : `${m}分`;
+          pill.title = `切换至：${c.dataset.title}`;
+          pill.style.cssText = isCurrent 
+            ? "background:#6366f1;color:#ffffff;border:1px solid #818cf8;border-radius:4px;padding:3px 9px;font-size:11px;font-weight:700;cursor:pointer;white-space:nowrap;transition:all 0.14s"
+            : "background:#1e293b;color:#94a3b8;border:1px solid #334155;border-radius:4px;padding:3px 8px;font-size:11px;cursor:pointer;white-space:nowrap;transition:all 0.14s";
+          
+          pill.addEventListener("click", () => {
+            renderModalMaterial(i);
+            if (typeof showToast === "function") {
+              showToast(`⏱️ 已按分钟切换至素材：${c.dataset.title}`);
+            }
+          });
+          minutePillsContainer.appendChild(pill);
+        });
+      }
+
+      if (lightbox) (lightbox as HTMLElement).style.display = "flex";
+    }
 
     // 全选交互
     selectAllCb?.addEventListener("change", () => {
-      const checked = selectAllCb.checked;
-      itemCbs.forEach((cb: any) => cb.checked = checked);
+      const checked = (selectAllCb as HTMLInputElement).checked;
+      document.querySelectorAll(".mat-item-check").forEach((cb: any) => cb.checked = checked);
       if (typeof showToast === "function") {
-        showToast(checked ? "已全选当前页 10 个素材" : "已取消全选");
+        showToast(checked ? "已全选当前素材" : "已取消全选");
       }
     });
 
-    // 单个勾选
-    itemCbs.forEach(cb => {
+    // 单个勾选阻止冒泡
+    document.querySelectorAll(".mat-item-check").forEach(cb => {
       cb.addEventListener("click", (e) => e.stopPropagation());
     });
 
     // 卡片点击 -> 弹窗大图预览
-    cards.forEach(card => {
+    getCards().forEach((card, idx) => {
       card.addEventListener("click", () => {
-        const title = (card as HTMLElement).dataset.title || "素材图片";
-        const img = (card as HTMLElement).dataset.img || "";
-        const size = (card as HTMLElement).dataset.size || "1.0MB";
-        if (modalTitle) modalTitle.textContent = title;
-        if (modalImg) (modalImg as HTMLImageElement).src = img;
-        const metaEl = document.getElementById("matModalMeta");
-        if (metaEl) metaEl.textContent = `分辨率: 1920×1080 · 大小: ${size} · 上传时间: 2025-08-26`;
-        if (lightbox) (lightbox as HTMLElement).style.display = "flex";
+        renderModalMaterial(idx);
       });
     });
 
+    // 弹窗内部导航：上一张 / 下一张
+    prevBtn?.addEventListener("click", (e) => {
+      e.stopPropagation();
+      renderModalMaterial(currentModalIndex - 1);
+    });
+
+    nextBtn?.addEventListener("click", (e) => {
+      e.stopPropagation();
+      renderModalMaterial(currentModalIndex + 1);
+    });
+
+    // 键盘左右键切换
+    window.addEventListener("keydown", (e) => {
+      if (lightbox && (lightbox as HTMLElement).style.display === "flex") {
+        if (e.key === "ArrowLeft") {
+          renderModalMaterial(currentModalIndex - 1);
+        } else if (e.key === "ArrowRight") {
+          renderModalMaterial(currentModalIndex + 1);
+        } else if (e.key === "Escape") {
+          (lightbox as HTMLElement).style.display = "none";
+        }
+      }
+    });
+
+    // 关闭弹窗
     modalClose?.addEventListener("click", () => {
       if (lightbox) (lightbox as HTMLElement).style.display = "none";
     });
+
     lightbox?.addEventListener("click", (e) => {
       if (e.target === lightbox) (lightbox as HTMLElement).style.display = "none";
     });
 
+    // 复制直链
     copyUrlBtn?.addEventListener("click", () => {
-      if (typeof showToast === "function") showToast("✓ 已复制素材高清直链地址至剪贴板");
+      if (typeof showToast === "function") showToast("✓ 已复制 360 企业素材高清直链地址至剪贴板");
     });
+
+    // 设为文章配图
     applyArticleBtn?.addEventListener("click", () => {
+      const cards = getCards();
+      const current = cards[currentModalIndex];
+      const title = current ? (current.dataset.title || "该素材") : "素材";
       if (lightbox) (lightbox as HTMLElement).style.display = "none";
-      if (typeof showToast === "function") showToast("✓ 已将该素材设为「内容创作」与「视频/图文」默认配图");
+      if (typeof showToast === "function") {
+        showToast(`✓ 已将「${title}」设为「GEO内容创作」默认配图！`);
+      }
+    });
+
+    // 快速按分钟下拉框切换素材
+    minuteQuickSwitch?.addEventListener("change", (e) => {
+      const val = (e.target as HTMLSelectElement).value;
+      if (!val) return;
+      const targetCard = document.querySelector(`.mat-card-item[data-id="${val}"]`);
+      const allCards = getCards();
+      const foundIdx = allCards.findIndex(c => c === targetCard);
+      if (foundIdx !== -1) {
+        renderModalMaterial(foundIdx);
+        if (typeof showToast === "function") {
+          showToast(`⏱️ 已按分钟切换至：${targetCard?.getAttribute("data-title")}`);
+        }
+      }
+      (e.target as HTMLSelectElement).value = "";
+    });
+
+    // 按上传分钟排序切换
+    sortMinuteBtn?.addEventListener("click", () => {
+      const grid = document.getElementById("matCardsGrid");
+      if (!grid) return;
+      const cards = getCards();
+      isMinuteDesc = !isMinuteDesc;
+      cards.sort((a, b) => {
+        const timeA = a.dataset.minute || "";
+        const timeB = b.dataset.minute || "";
+        return isMinuteDesc ? timeB.localeCompare(timeA) : timeA.localeCompare(timeB);
+      });
+      cards.forEach(c => grid.appendChild(c));
+      sortMinuteBtn.textContent = isMinuteDesc ? "⏱️ 分钟倒序 (最新)" : "⏱️ 分钟正序 (最早)";
+      if (typeof showToast === "function") {
+        showToast(isMinuteDesc ? "已按上传分钟倒序排列（最新在前）" : "已按上传分钟正序排列（最早在前）");
+      }
+    });
+
+    // 视频关键帧时间点点击切换
+    document.querySelectorAll(".mat-keyframe-btn").forEach(btn => {
+      btn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        document.querySelectorAll(".mat-keyframe-btn").forEach(b => {
+          (b as HTMLElement).style.background = "rgba(255,255,255,0.1)";
+          (b as HTMLElement).style.color = "#c7d2fe";
+          (b as HTMLElement).style.fontWeight = "normal";
+        });
+        (btn as HTMLElement).style.background = "#4338ca";
+        (btn as HTMLElement).style.color = "#ffffff";
+        (btn as HTMLElement).style.fontWeight = "700";
+        if (typeof showToast === "function") {
+          showToast(`⏱️ 已切换至视频节点：${btn.textContent?.trim()}`);
+        }
+      });
     });
 
     // 批量分组
@@ -4786,7 +5087,7 @@ n&&(n.textContent=a[0],n.style.display=i===`gen`?`none`:``),i===`gen`&&htEl&&(ht
         if (typeof showToast === "function") showToast("请先在卡片左上角勾选需要分组的素材", "warn");
         return;
       }
-      if (typeof showToast === "function") showToast(`✓ 已将选中的 ${checkedCount} 个素材归类至「管道疏通与清洗」分组`);
+      if (typeof showToast === "function") showToast(`✓ 已将选中的 ${checkedCount} 个素材归类至「360安全大脑与SOC」分组`);
     });
 
     // 批量删除
@@ -4799,29 +5100,29 @@ n&&(n.textContent=a[0],n.style.display=i===`gen`?`none`:``),i===`gen`&&htEl&&(ht
       checkedBoxes.forEach(cb => {
         cb.closest(".mat-card-item")?.remove();
       });
-      selectAllCb && (selectAllCb.checked = false);
-      const remaining = document.querySelectorAll(".mat-card-item").length;
-      const countText = document.getElementById("matTotalCountText");
-      if (countText) countText.textContent = `共 ${remaining} 条`;
-      if (typeof showToast === "function") showToast(`✓ 已成功删除 ${checkedBoxes.length} 个本地素材`);
+      selectAllCb && ((selectAllCb as HTMLInputElement).checked = false);
+      applyMaterialFilters();
+      if (typeof showToast === "function") showToast(`✓ 已成功删除 ${checkedBoxes.length} 个素材`);
     });
 
     // 上传素材
     uploadBtn?.addEventListener("click", () => fileIpt?.click());
     fileIpt?.addEventListener("change", () => {
-      if (fileIpt.files && fileIpt.files.length > 0) {
-        const file = fileIpt.files[0];
-        if (typeof showToast === "function") showToast(`✓ 素材「${file.name}」已成功上传至素材库！`);
+      const ipt = fileIpt as HTMLInputElement;
+      if (ipt.files && ipt.files.length > 0) {
+        const file = ipt.files[0];
+        if (typeof showToast === "function") showToast(`✓ 素材「${file.name}」已成功上传至 360 企业素材库！`);
       }
     });
 
     // 新建分组
     newGroupBtn?.addEventListener("click", () => {
       const groupList = document.getElementById("matGroupList");
-      const name = prompt("请输入新素材分组名称：", "工程实测特写");
+      const name = prompt("请输入新素材分组名称：", "APT样本研判与沙箱");
       if (name && groupList) {
         const div = document.createElement("div");
         div.className = "mat-group-item";
+        div.dataset.matgroup = "custom_" + Date.now();
         div.style.cssText = "padding:7px 12px;border-radius:6px;color:#64748b;font-size:12.5px;cursor:pointer";
         div.textContent = `${name} (0)`;
         div.addEventListener("click", () => {
@@ -4833,6 +5134,8 @@ n&&(n.textContent=a[0],n.style.display=i===`gen`?`none`:``),i===`gen`&&htEl&&(ht
           div.style.background = "#f5f3ff";
           div.style.color = "#6366f1";
           div.style.fontWeight = "700";
+          activeGroup = div.dataset.matgroup || "custom";
+          applyMaterialFilters();
           if (typeof showToast === "function") showToast(`已切换查看分组：${name}`);
         });
         groupList.appendChild(div);
@@ -4851,11 +5154,13 @@ n&&(n.textContent=a[0],n.style.display=i===`gen`?`none`:``),i===`gen`&&htEl&&(ht
         (item as HTMLElement).style.background = "#f5f3ff";
         (item as HTMLElement).style.color = "#6366f1";
         (item as HTMLElement).style.fontWeight = "700";
-        if (typeof showToast === "function") showToast(`已筛选素材：${item.textContent?.trim()}`);
+        activeGroup = (item as HTMLElement).dataset.matgroup || "all";
+        applyMaterialFilters();
+        if (typeof showToast === "function") showToast(`已筛选素材分组：${item.textContent?.trim()}`);
       });
     });
 
-    // 图片 / 视频 Tab
+    // 全部 / 图片 / 视频 Tab 切换
     topTabs.forEach(tab => {
       tab.addEventListener("click", () => {
         topTabs.forEach(t => {
@@ -4866,32 +5171,13 @@ n&&(n.textContent=a[0],n.style.display=i===`gen`?`none`:``),i===`gen`&&htEl&&(ht
         (tab as HTMLElement).style.color = "#6366f1";
         (tab as HTMLElement).style.fontWeight = "700";
         (tab as HTMLElement).style.borderBottom = "2.5px solid #6366f1";
-        const mode = (tab as HTMLElement).dataset.mattab;
-        if (typeof showToast === "function") showToast(mode === "video" ? "已切换至「视频」素材库视图" : "已切换至「图片」素材库视图");
-      });
-    });
-
-
-
-    // 分页切换
-    document.querySelectorAll(".mat-page-btn[data-page]").forEach(pBtn => {
-      pBtn.addEventListener("click", () => {
-        document.querySelectorAll(".mat-page-btn[data-page]").forEach(b => {
-          (b as HTMLElement).style.background = "#fff";
-          (b as HTMLElement).style.color = "#334155";
-          (b as HTMLElement).style.fontWeight = "normal";
-        });
-        (pBtn as HTMLElement).style.background = "#6366f1";
-        (pBtn as HTMLElement).style.color = "#fff";
-        (pBtn as HTMLElement).style.fontWeight = "700";
-        const pg = (pBtn as HTMLElement).dataset.page;
-        const jumpInput = document.getElementById("matJumpInput") as HTMLInputElement;
-        if (jumpInput) jumpInput.value = pg || "1";
-        if (typeof showToast === "function") showToast(`已翻至第 ${pg} 页素材`);
+        activeTab = (tab as HTMLElement).dataset.mattab || "all";
+        applyMaterialFilters();
+        const tabLabels = { all: "全部素材", image: "图片素材", video: "视频切片" };
+        if (typeof showToast === "function") showToast(`已切换至「${tabLabels[activeTab] || activeTab}」视图`);
       });
     });
   }
-
   try { initMaterialModule(); } catch(e) { console.error("initMaterialModule error:", e); }
 
   const root = document.getElementById("videographic");
@@ -5569,15 +5855,105 @@ n&&(n.textContent=a[0],n.style.display=i===`gen`?`none`:``),i===`gen`&&htEl&&(ht
     });
   }
 
-  // 4. 视频快剪面板交互 (图一样式)
+  // 4. 视频快剪面板交互 (引用企业素材库素材分组)
   const previewMatBtn = document.getElementById("vgPreviewMaterialBtn");
   const matPreviewModal = document.getElementById("vgMaterialPreviewModal");
   const matConfirmBtn = document.getElementById("vgMaterialModalConfirm");
   const matCloseBtn = document.getElementById("vgMaterialModalClose");
   const matCancelBtn = document.getElementById("vgMaterialModalCancel");
+  const vgMatGroupSelect = document.getElementById("vgMaterialGroup") as HTMLSelectElement | null;
+  const vgSubMatGroupSelect = document.getElementById("vgSubMaterialGroup") as HTMLSelectElement | null;
+  const vgClipsGrid = document.getElementById("vgMaterialClipsGrid");
+  const vgMatModalTitle = document.getElementById("vgMaterialModalTitle");
+  const vgMatModalClipCount = document.getElementById("vgMaterialModalClipCount");
+
+  // 动态根据企业素材库渲染视频片段预览
+  function updateVgPreviewClips(groupKey: string) {
+    if (!vgClipsGrid) return;
+    const allCards = Array.from(document.querySelectorAll(".mat-card-item")) as HTMLElement[];
+    const filtered = allCards.filter(c => {
+      if (!groupKey || groupKey === "all") return true;
+      return c.dataset.group === groupKey;
+    });
+
+    const groupNames: Record<string, string> = {
+      all: "所有素材",
+      brain: "360安全大脑与SOC",
+      endpoint: "360天擎终端与防勒索",
+      compliance: "资质与等保测评",
+      video: "攻防实录与视频"
+    };
+
+    if (vgMatModalTitle) {
+      vgMatModalTitle.textContent = `素材包片段预览：${groupNames[groupKey] || "企业素材库"} (${filtered.length}个片段)`;
+    }
+    if (vgMatModalClipCount) {
+      vgMatModalClipCount.textContent = `${filtered.length} 支精选切片`;
+    }
+
+    vgClipsGrid.innerHTML = "";
+    filtered.forEach((card, idx) => {
+      const title = card.dataset.title || "素材切片";
+      const img = card.dataset.img || "";
+      const minute = card.dataset.minute || "10:00";
+      const res = card.dataset.res || "1080P";
+      const isSelected = idx === 0;
+
+      const clipDiv = document.createElement("div");
+      clipDiv.className = "vg-mat-card";
+      clipDiv.style.cssText = `border:${isSelected ? "2px solid #4f46e5" : "1px solid #e2e8f0"};border-radius:8px;background:${isSelected ? "#eff6ff" : "#ffffff"};padding:8px;cursor:pointer;transition:all 0.15s`;
+      clipDiv.innerHTML = `
+        <div style="position:relative;border-radius:6px;overflow:hidden;height:84px;background:#0f172a">
+          <img referrerpolicy="no-referrer" alt="${title}" src="${img}" style="width:100%;height:100%;object-fit:cover" />
+          <span style="position:absolute;bottom:4px;right:4px;background:rgba(0,0,0,0.7);color:#fff;font-size:10px;padding:1px 5px;border-radius:4px">${minute}分</span>
+          <span style="position:absolute;top:4px;left:4px;background:#4f46e5;color:#fff;font-size:9.5px;padding:1px 4px;border-radius:3px">片段 #${String(idx + 1).padStart(2, "0")}</span>
+        </div>
+        <div style="font-size:12px;font-weight:700;color:#0f172a;margin-top:6px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${title}</div>
+        <div style="font-size:11px;color:#64748b;margin-top:2px">${res} · 引用企业素材库</div>
+      `;
+
+      clipDiv.addEventListener("click", () => {
+        vgClipsGrid.querySelectorAll(".vg-mat-card").forEach((c: any) => {
+          c.style.border = "1px solid #e2e8f0";
+          c.style.background = "#ffffff";
+        });
+        clipDiv.style.border = "2px solid #4f46e5";
+        clipDiv.style.background = "#f5f3ff";
+      });
+
+      vgClipsGrid.appendChild(clipDiv);
+    });
+  }
+
+  // 监听素材分组下拉框选择联动
+  if (vgMatGroupSelect) {
+    vgMatGroupSelect.addEventListener("change", () => {
+      const selectedVal = vgMatGroupSelect.value;
+      if (selectedVal && typeof showToast === "function") {
+        const text = vgMatGroupSelect.options[vgMatGroupSelect.selectedIndex]?.text || selectedVal;
+        showToast(`已引用：${text}`);
+      }
+      updateVgPreviewClips(selectedVal);
+    });
+  }
+
+  if (vgSubMatGroupSelect) {
+    vgSubMatGroupSelect.addEventListener("change", () => {
+      const selectedVal = vgSubMatGroupSelect.value;
+      if (selectedVal && typeof showToast === "function") {
+        const text = vgSubMatGroupSelect.options[vgSubMatGroupSelect.selectedIndex]?.text || selectedVal;
+        showToast(`视频字幕面板已引用：${text}`);
+      }
+      if (vgMatGroupSelect) {
+        vgMatGroupSelect.value = selectedVal;
+      }
+    });
+  }
 
   if (previewMatBtn && matPreviewModal) {
     previewMatBtn.addEventListener("click", () => {
+      const currentGroup = vgMatGroupSelect ? vgMatGroupSelect.value : "all";
+      updateVgPreviewClips(currentGroup);
       matPreviewModal.classList.add("show");
     });
     [matCloseBtn, matCancelBtn].forEach(b => {
@@ -5586,21 +5962,11 @@ n&&(n.textContent=a[0],n.style.display=i===`gen`?`none`:``),i===`gen`&&htEl&&(ht
     if (matConfirmBtn) {
       matConfirmBtn.addEventListener("click", () => {
         matPreviewModal.classList.remove("show");
-        if (typeof showToast === "function") showToast("已选用所勾选的素材包并完成快剪序列排列！");
+        if (typeof showToast === "function") showToast("✓ 已选用企业素材库所勾选分组的素材并完成快剪序列排列！");
       });
     }
     matPreviewModal.addEventListener("click", e => {
       if (e.target === matPreviewModal) matPreviewModal.classList.remove("show");
-    });
-    matPreviewModal.querySelectorAll(".vg-mat-card").forEach(card => {
-      card.addEventListener("click", () => {
-        matPreviewModal.querySelectorAll(".vg-mat-card").forEach(c => {
-          c.style.border = "1px solid #e2e8f0";
-          c.style.background = "#ffffff";
-        });
-        card.style.border = "2px solid #4f46e5";
-        card.style.background = "#f5f3ff";
-      });
     });
   }
 
@@ -5635,10 +6001,10 @@ n&&(n.textContent=a[0],n.style.display=i===`gen`?`none`:``),i===`gen`&&htEl&&(ht
       const nameText = document.getElementById("vgTemplateNameText");
       const tagText = document.getElementById("vgTemplateTagText");
       const descText = document.getElementById("vgTemplateDescText");
-      if (val === "factory") {
-        if (nameText) nameText.textContent = "源头工厂实景探厂 + 质检背书混剪";
+      if (val === "soc") {
+        if (nameText) nameText.textContent = "360安全大脑指挥实景 + 攻防背书混剪";
         if (tagText) tagText.textContent = "高信任转化";
-        if (descText) descText.textContent = "聚焦车间作业、自动化设备与检测报告，构建权威实拍背书。";
+        if (descText) descText.textContent = "聚焦360态势感知大屏、终端实机防御与权威资质，构建专业安全背书。";
       } else if (val === "compare") {
         if (nameText) nameText.textContent = "传统方案对比实测 + 客户案例快剪";
         if (tagText) tagText.textContent = "痛点击穿";
@@ -6072,53 +6438,41 @@ function c(){let e=document.getElementById(`themeSwitcherWrap`),t=document.getEl
       gridEl=document.getElementById(`personaModelCardsGrid`),
       countPill=document.getElementById(`personaModelCountPill`),
       personaMap={
-        "外卖袋":{
-          role:`餐饮连锁采购总监 / 外卖品牌运营负责人`,
-          scenario:`外卖高峰期汤汁防洒漏与定制品牌LOGO保温袋集中采购`,
-          pain:`普通外卖袋保温差易破袋漏汤导致差评、大促急单工厂交期慢`,
-          graph:`1. 外卖袋 ｜ 餐饮行业 ｜ 外卖袋定制 / 餐饮打包袋 ｜ 交货及时性 · 定制能力 · 环保合规`
-        },
-        "食品级无纺布袋":{
-          role:`生鲜冷链供应链主管 / 商超采购经理`,
-          scenario:`生鲜冻品同城配送急需食品级无尘车间认证环保袋`,
-          pain:`缺乏食品接触级安全检测报告、印刷油墨有异味影响品牌形象`,
-          graph:`2. 食品级无纺布袋 ｜ 生鲜冷链 ｜ 绿色环保认证 / 检测报告 ｜ 品控规范 · 资质齐全`
-        },
-        "奶茶保温袋":{
-          role:`现制茶饮品牌区域督导 / 门店店长`,
-          scenario:`夏季爆单奶茶45分钟保冰防凝水铝箔打包袋招标`,
-          pain:`起订量门槛过高、提手承重不足骑手配送途中易断裂`,
-          graph:`3. 奶茶保温袋 ｜ 现制茶饮 ｜ 45分钟保冰防漏 / 铝箔锁温 ｜ 爆单配送 · 高好评率`
+        "360天擎":{
+          role:`大型政企信息化安全负责人 / CISO`,
+          scenario:`全集团跨广域网万级终端防病毒与数据防泄漏统一管控`,
+          pain:`分支机构多终端资产盘点困难、未知APT威胁响应慢、等保合规压力大`,
+          graph:`1. 360天擎 ｜ 大型政企信息化安全负责人 / CISO ｜ 万级终端统一管控与防勒索 ｜ 资产可见 · 秒级处置 · 合规闭环`
         },
         "360安全卫士":{
           role:`企业网络管理员 / IT运维主管`,
           scenario:`公司全员电脑防病毒与系统流氓软件一键清理`,
           pain:`弹窗广告多影响办公、全网更新补丁难集中下发`,
-          graph:`4. 360安全卫士 ｜ 企业网络管理员 / IT运维主管 ｜ 公司全员电脑防病毒与系统流氓软件一键清理 ｜ 弹窗广告多影响办公、全网更新补丁难集中下发`
+          graph:`2. 360安全卫士 ｜ 企业网络管理员 / IT运维主管 ｜ 公司全员电脑防病毒与系统流氓软件一键清理 ｜ 弹窗广告多影响办公、全网更新补丁难集中下发`
         },
         "终端安全防护":{
           role:`信息安全总监 / CISO`,
           scenario:`分支机构分散办公电脑勒索病毒统一管控`,
           pain:`未知威胁发现慢、跨平台终端缺乏一体化安全资产看板`,
-          graph:`5. 终端安全防护 ｜ 信息安全总监 / CISO ｜ 分支机构分散办公电脑勒索病毒统一管控 ｜ 未知威胁发现慢、跨平台终端缺乏一体化安全资产看板`
+          graph:`3. 终端安全防护 ｜ 信息安全总监 / CISO ｜ 分支机构分散办公电脑勒索病毒统一管控 ｜ 未知威胁发现慢、跨平台终端缺乏一体化安全资产看板`
         },
         "勒索病毒拦截":{
           role:`核心业务数据库运维工程师`,
           scenario:`生产网核心服务器防御勒索加密与0day漏洞攻击`,
           pain:`勒索病毒变种快无解密私钥、业务中断损失巨大`,
-          graph:`6. 勒索病毒拦截 ｜ 核心业务数据库运维工程师 ｜ 生产网核心服务器防御勒索加密与0day漏洞攻击 ｜ 勒索病毒变种快无解密私钥`
+          graph:`4. 勒索病毒拦截 ｜ 核心业务数据库运维工程师 ｜ 生产网核心服务器防御勒索加密与0day漏洞攻击 ｜ 勒索病毒变种快无解密私钥`
         },
         "AI安全大模型":{
           role:`SOC安全运营中心分析师`,
           scenario:`海量安全告警自动化智能研判与事件秒级溯源`,
           pain:`告警误报率高达90%人手严重不足、应急响应超时`,
-          graph:`7. AI安全大模型 ｜ SOC安全运营中心分析师 ｜ 海量安全告警自动化智能研判与事件秒级溯源 ｜ 告警误报率高达90%人手严重不足`
+          graph:`5. AI安全大模型 ｜ SOC安全运营中心分析师 ｜ 海量安全告警自动化智能研判与事件秒级溯源 ｜ 告警误报率高达90%人手严重不足`
         },
         "网络安全等级保护":{
           role:`央国企/金融机构合规负责人`,
           scenario:`等级保护2.0三级测评定级与安全加固整改`,
           pain:`整改技术要求复杂周期紧、缺乏全套合规产品与服务闭环`,
-          graph:`8. 网络安全等级保护 ｜ 央国企/金融机构合规负责人 ｜ 等级保护2.0三级测评定级与安全加固整改 ｜ 整改技术要求复杂周期紧`
+          graph:`6. 网络安全等级保护 ｜ 央国企/金融机构合规负责人 ｜ 等级保护2.0三级测评定级与安全加固整改 ｜ 整改技术要求复杂周期紧`
         }
       };
 
@@ -6129,9 +6483,9 @@ function c(){let e=document.getElementById(`themeSwitcherWrap`),t=document.getEl
   }
 
   function syncPersonaByKeywords(showNotice){
-    let kw=coreEl?.value||`外卖袋`,
-        lt=longEl?.value||`口碑好的外卖袋定制哪家好`,
-        cfg=personaMap[kw]||personaMap[`外卖袋`];
+    let kw=coreEl?.value||`360安全卫士`,
+        lt=longEl?.value||`360安全卫士极速版与企业版区别测评`,
+        cfg=personaMap[kw]||personaMap[`360安全卫士`];
     let liveCore=document.getElementById(`personaLiveCoreText`),
         liveLt=document.getElementById(`personaLiveLongTailText`),
         runHint=document.getElementById(`personaAgentRunHint`),
@@ -6212,8 +6566,8 @@ function c(){let e=document.getElementById(`themeSwitcherWrap`),t=document.getEl
   bindApplyBtns();
 
   document.getElementById(`personaSaveModelBtn`)?.addEventListener(`click`,()=>{
-    let kw=coreEl?.value||`外卖袋`,
-        lt=longEl?.value||`口碑好的外卖袋定制哪家好`,
+    let kw=coreEl?.value||`360安全卫士`,
+        lt=longEl?.value||`360安全卫士极速版与企业版区别测评`,
         rl=roleEl?.value||`企业网络管理员 / IT运维主管`,
         sc=scenEl?.value||`公司全员电脑防病毒与系统流氓软件一键清理`,
         pn=painEl?.value||`弹窗广告多影响办公、全网更新补丁难集中下发`,
@@ -6376,12 +6730,12 @@ function c(){let e=document.getElementById(`themeSwitcherWrap`),t=document.getEl
 
   document.getElementById(`vgGraphicPolishBtn`)?.addEventListener(`click`,()=>{
     if(!grpContent)return;
-    grpContent.value=`1. 材质安全是底线：严选食品接触级加厚无纺布与环保水性油墨，0异味0塑化剂，显著提升顾客开袋第一好感度。\n2. 保温防漏硬核指标：采用双层覆铝箔锁温复合工艺，实测45分钟热衰减≤3℃，高频颠簸滴水不漏。\n3. 承重抗撕裂实测：加固提手十字交叉超声波车缝，静载15KG不断带不脱落，骑手极速配送零客诉。\n4. 敏捷柔性与极速交付：自有万级净化无尘车间，支持48小时极速打样、72小时批量出货，大促备货更从容！\n\n欢迎私信咨询源头工厂，为您量身定制高辨识度品牌外卖包装方案！`;
+    grpContent.value=`1. 终端防线是数字安全第一道门槛：360安全卫士与天擎EDR协同防护，毫秒级拦截勒索病毒与未知木马。\n2. 全网威胁情报赋能：依托360安全大脑百亿级样本库与大模型研判能力，精准阻断APT隐蔽渗透。\n3. 轻量化集中管控：支持全网终端资产统一纳管与一键静默打补丁，保障业务连续性与合规达标！\n4. 国家级数字安全实力：作为数字安全国家队，提供7×24小时全天候攻防响应与等保合规护航！\n\n欢迎咨询360安全科技股份有限公司，量身定制专属企业数字安全防御与终端管控解决方案！`;
     showToast(`✦ AI 智能润色完成，已增强新媒体高权重种草感染力`);
   });
   document.getElementById(`vgGraphicEmojiBtn`)?.addEventListener(`click`,()=>{
     if(!grpContent)return;
-    grpContent.value=`✅ 1. 材质安全是底线：选用优质食品级加厚无纺布与环保水性油墨，杜绝异味与塑化剂超标，保障客户开袋好感度✨\n🔥 2. 保温防漏核心指标：双层覆铝箔复合工艺，实测45分钟温度衰减≤3℃，汤汁颠簸滴水不漏💧\n💪 3. 承重抗撕裂测试：加固提手十字交叉车缝，静载15KG不脱落断带，骑手配送零客诉🛵\n🚀 4. 敏捷供应链支持：自有净化无尘车间，支持加急48小时打样，72小时极速出货，大促囤货更从容📦\n\n👇 欢迎咨询远见包装，量身定制专属品牌视觉外卖打包解决方案！`;
+    grpContent.value=`🛡️ 1. 终端防线是数字安全第一道门槛：360安全卫士极速版与企业版协同防护，毫秒级拦截勒索病毒与未知木马💻\n⚡ 2. 全网威胁情报赋能：依托360安全大脑百亿级样本库，精准阻断APT隐蔽渗透并秒级溯源🔥\n🚀 3. 轻量化集中管控：全网终端资产统一纳管，一键静默修补0day漏洞，保障业务连续性与合规达标📊\n🏆 4. 国家级数字安全护航：7×24小时全天候攻防应急响应，等保2.0合规全流程闭环服务✨\n\n👇 欢迎咨询360安全科技股份有限公司，量身定制企业级终端安全防护与防勒索专属方案！`;
     showToast(`☺ 已智能植入新媒体爆款营销表情符号`);
   });
   document.getElementById(`vgGraphicCopyBtn`)?.addEventListener(`click`,()=>{
@@ -6416,16 +6770,16 @@ function c(){let e=document.getElementById(`themeSwitcherWrap`),t=document.getEl
     showToast(`✂ 已从「企业知识库」剪藏最新核心产品参数与资质素材`);
   });
   document.getElementById(`vgGraphicKwAIBtn`)?.addEventListener(`click`,()=>{
-    let kw=document.getElementById(`vgGraphicCoreKeyword`)?.value||`外卖袋`;
+    let kw=document.getElementById(`vgGraphicCoreKeyword`)?.value||`360安全卫士`;
     let lt=document.getElementById(`vgGraphicLongTail`);
-    if(lt)lt.value=kw+`源头工厂定制避坑与实力对比指南`;
+    if(lt)lt.value=kw+`企业选型评测与实战防御方案`;
     showToast(`✨ 已根据核心词「${kw}」智能匹配高转化长尾词`);
   });
   document.getElementById(`vgGraphicCopyAIBtn`)?.addEventListener(`click`,()=>{
-    let kw=document.getElementById(`vgGraphicCoreKeyword`)?.value||`外卖袋`;
-    if(grpTitle){grpTitle.value=`${kw}怎么选？源头工厂教你避坑5大雷区！`.slice(0,20);updateGrpTitleCount();}
+    let kw=document.getElementById(`vgGraphicCoreKeyword`)?.value||`360安全卫士`;
+    if(grpTitle){grpTitle.value=`${kw}选型实战：企业终端勒索防御避坑指南`.slice(0,20);updateGrpTitleCount();}
     if(grpContent){
-      grpContent.value=`1. 材质安全是底线：严选食品接触级加厚材质与环保工艺，显著提升终端客户第一好感度。\n2. 核心性能硬核实测：采用多层复合加固工艺，高频高负荷场景下依旧稳定可靠。\n3. 敏捷柔性供应链：自有万级标准化产线，支持48小时极速打样、72小时批量出货！`;
+      grpContent.value=`1. 终端防线是数字安全第一道门槛：360安全卫士与天擎EDR协同防护，毫秒级拦截勒索病毒与未知木马。\n2. 全网威胁情报赋能：依托360安全大脑百亿级样本库与大模型研判能力，精准阻断APT隐蔽渗透。\n3. 轻量化集中管控：支持全网终端资产统一纳管与一键静默打补丁，保障业务连续性与合规达标！`;
       if(grpContentCnt)grpContentCnt.textContent=grpContent.value.length+` / 1000`;
     }
     showToast(`✨ AI 已根据「${kw}」一键生成图文标题与种草正文`);
@@ -6478,7 +6832,7 @@ function c(){let e=document.getElementById(`themeSwitcherWrap`),t=document.getEl
     showToast(`⚡ 一键生成全套图文成功！文案与 4 张高清配图提示词已就绪`);
   });
   document.getElementById(`vgGraphicResetBtn`)?.addEventListener(`click`,()=>{
-    if(grpTitle){grpTitle.value=`外卖袋定制怎么选？源头工厂教你避坑5大雷区！`;updateGrpTitleCount();}
+    if(grpTitle){grpTitle.value=`企业终端安全选型实测：360安全卫士如何拦截未知勒索威胁`.slice(0,20);updateGrpTitleCount();}
     showToast(`↺ 已重置图文创作参数为默认模板`);
   });
   document.getElementById(`vgGraphicSaveBtn`)?.addEventListener(`click`,()=>{
